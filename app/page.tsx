@@ -68,6 +68,11 @@ interface CloudProgressSnapshot {
   updatedAt: number;
 }
 
+interface LearningInsights {
+  learnedDays: Record<string, number>;
+  learnedWordsByTopic: Record<string, string[]>;
+}
+
 // ==========================================
 // INDEXEDDB HELPER (Offline Storage)
 // ==========================================
@@ -309,6 +314,7 @@ export default function LingoApp() {
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [cloudSyncReady, setCloudSyncReady] = useState(false);
   const [lastCloudSyncAt, setLastCloudSyncAt] = useState(0);
+  const [learningInsights, setLearningInsights] = useState<LearningInsights>({ learnedDays: {}, learnedWordsByTopic: {} });
   const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
 
   // Init & Load Data
@@ -323,6 +329,8 @@ export default function LingoApp() {
     if (savedSettings) setSettings(JSON.parse(savedSettings));
     const savedAuthUser = localStorage.getItem('lingoAuthUser');
     if (savedAuthUser) setAuthUser(JSON.parse(savedAuthUser));
+    const savedInsights = localStorage.getItem('lingoLearningInsights');
+    if (savedInsights) setLearningInsights(JSON.parse(savedInsights));
     
     setIsLoaded(true);
     setCloudSyncReady(true);
@@ -344,6 +352,10 @@ export default function LingoApp() {
   useEffect(() => {
     localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
   }, [authUser]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoLearningInsights', JSON.stringify(learningInsights));
+  }, [learningInsights]);
 
 
   useEffect(() => {
@@ -426,6 +438,26 @@ export default function LingoApp() {
       document.body.appendChild(script);
     }
   }, [isAuthOpen, googleClientId]);
+
+
+  const onLearnedWord = (topicTitle: string, word: string) => {
+    const todayKey = new Date().toISOString().slice(0, 10);
+    setLearningInsights(prev => {
+      const existingWords = prev.learnedWordsByTopic[topicTitle] || [];
+      const nextWords = existingWords.includes(word) ? existingWords : [...existingWords, word];
+
+      return {
+        learnedDays: {
+          ...prev.learnedDays,
+          [todayKey]: (prev.learnedDays[todayKey] || 0) + 1,
+        },
+        learnedWordsByTopic: {
+          ...prev.learnedWordsByTopic,
+          [topicTitle]: nextWords,
+        },
+      };
+    });
+  };
 
   const checkStreak = (currentStats: UserStats) => {
     const today = new Date().toDateString();
@@ -617,9 +649,9 @@ export default function LingoApp() {
           </div>
         ) : (
           <>
-            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} />}
+            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} onLearnedWord={onLearnedWord} />}
             {activeTab === 'uebungen' && <TabUebungen pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
-            {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} />}
+            {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} learningInsights={learningInsights} />}
             {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang)} gradient={gradient} />}
           </>
         )}
@@ -666,13 +698,16 @@ export default function LingoApp() {
 // KOMPONENTEN FÜR TABS
 // ==========================================
 
-function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
+function TabHeute({ pack, speak, addXP, gradient, isPremiumUser, onLearnedWord }: any) {
   const [queue, setQueue] = useState<VocabItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [selectedTopicId, setSelectedTopicId] = useState('all');
 
   const topics = getTopicsFromPack(pack);
+  const activeTopic = selectedTopicId === 'all'
+    ? { title: 'Alle Themen', vocab: getVocabFromPack(pack) }
+    : topics.find(topic => topic.id === selectedTopicId) || { title: 'Thema', vocab: [] };
 
   const buildQueueForTopic = (topicId: string) => {
     const topicVocab = topicId === 'all'
@@ -723,6 +758,7 @@ function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
 
   const handleAnswer = (known: boolean) => {
     addXP(known ? 10 : 2, known);
+    if (known) onLearnedWord(activeTopic.title, card.de);
     setIsFlipped(false);
 
     const nextIndex = currentIndex + 1;
@@ -754,6 +790,15 @@ function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
               {topic.icon || '📘'} {topic.title}
             </button>
           ))}
+        </div>
+
+        <div className="mb-4 bg-white border border-gray-100 rounded-2xl p-3">
+          <div className="text-xs font-bold uppercase tracking-wider opacity-60 mb-2">Wörter im aktiven Thema: {activeTopic.title}</div>
+          <div className="flex flex-wrap gap-2 max-h-28 overflow-y-auto">
+            {activeTopic.vocab.map((item: VocabItem) => (
+              <span key={item.de} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{item.de}</span>
+            ))}
+          </div>
         </div>
 
         <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -921,9 +966,23 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   );
 }
 
-function TabProfil({ stats, gradient }: any) {
+function TabProfil({ stats, gradient, learningInsights }: any) {
   const accuracy = stats.totalAnswers === 0 ? 0 : Math.round((stats.correctAnswers / stats.totalAnswers) * 100);
-  
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [calendarDate, setCalendarDate] = useState(new Date());
+
+  const monthStart = new Date(calendarDate.getFullYear(), calendarDate.getMonth(), 1);
+  const monthEnd = new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 0);
+  const firstWeekday = (monthStart.getDay() + 6) % 7;
+  const totalDays = monthEnd.getDate();
+
+  const dayCells = Array.from({ length: firstWeekday + totalDays }, (_, i) => {
+    if (i < firstWeekday) return null;
+    const day = i - firstWeekday + 1;
+    const dateKey = `${calendarDate.getFullYear()}-${String(calendarDate.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return { day, dateKey, learnedCount: learningInsights?.learnedDays?.[dateKey] || 0 };
+  });
+
   return (
     <div className="mt-4 space-y-6">
       <div className="text-center">
@@ -936,9 +995,52 @@ function TabProfil({ stats, gradient }: any) {
 
       <div className="grid grid-cols-2 gap-4">
         <StatBox title="XP Gesamt" value={stats.xp} icon="⭐" />
-        <StatBox title="Tages-Streak" value={stats.streak} icon="🔥" />
+        <button onClick={() => setShowCalendar(prev => !prev)} className="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center text-gray-900">
+          <div className="text-3xl mb-2">🔥</div>
+          <div className="text-2xl font-black">{stats.streak}</div>
+          <div className="text-xs font-bold opacity-50 uppercase mt-1">Tages-Streak</div>
+        </button>
         <StatBox title="Gelernte Wörter" value={stats.learnedWords} icon="📚" />
         <StatBox title="Genauigkeit" value={`${accuracy}%`} icon="🎯" />
+      </div>
+
+      {showCalendar && (
+        <div className="bg-white p-6 rounded-3xl shadow-sm text-gray-900">
+          <div className="flex items-center justify-between mb-4">
+            <button onClick={() => setCalendarDate(new Date(calendarDate.getFullYear(), calendarDate.getMonth() - 1, 1))} className="px-3 py-1 rounded-lg bg-gray-100">←</button>
+            <h3 className="font-bold">{calendarDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}</h3>
+            <button onClick={() => setCalendarDate(new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 1))} className="px-3 py-1 rounded-lg bg-gray-100">→</button>
+          </div>
+          <div className="grid grid-cols-7 gap-2 text-xs text-center font-bold opacity-60 mb-2">
+            {['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => <div key={d}>{d}</div>)}
+          </div>
+          <div className="grid grid-cols-7 gap-2 text-sm">
+            {dayCells.map((cell, idx) => cell ? (
+              <div key={idx} className={`rounded-lg p-2 text-center ${cell.learnedCount > 0 ? 'bg-green-100 text-green-800 font-bold' : 'bg-gray-50 text-gray-500'}`}>
+                {cell.day}
+              </div>
+            ) : <div key={idx}></div>)}
+          </div>
+        </div>
+      )}
+
+      <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
+        <h3 className="font-bold text-lg mb-4">Gelernte Wörter nach Themen</h3>
+        <div className="space-y-4">
+          {Object.keys(learningInsights?.learnedWordsByTopic || {}).length === 0 && (
+            <p className="text-sm opacity-70">Noch keine Wörter als gelernt markiert.</p>
+          )}
+          {Object.entries(learningInsights?.learnedWordsByTopic || {}).map(([topic, words]) => (
+            <div key={topic}>
+              <h4 className="font-bold mb-2">{topic}</h4>
+              <div className="flex flex-wrap gap-2">
+                {(words as string[]).map(word => (
+                  <span key={word} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{word}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
