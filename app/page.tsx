@@ -17,12 +17,22 @@ interface SentenceItem {
   x: string;
 }
 
+interface TopicItem {
+  id: string;
+  title: string;
+  icon?: string;
+  level?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  vocab: VocabItem[];
+}
+
 interface LanguagePack {
   version: number;
   lang: string;
   level: string;
-  vocab: VocabItem[];
-  sentences: SentenceItem[];
+  vocab?: VocabItem[];
+  topics?: TopicItem[];
+  sentences?: SentenceItem[];
 }
 
 interface UserStats {
@@ -108,13 +118,51 @@ const fetchPackFromPublicFolder = async (lang: string): Promise<LanguagePack | n
     const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
     if (!response.ok) return null;
 
-    const pack = (await response.json()) as LanguagePack;
-    if (!pack?.lang || !Array.isArray(pack?.vocab)) return null;
+    const pack = normalizePack((await response.json()) as LanguagePack);
+    if (!pack) return null;
 
     return pack;
   } catch {
     return null;
   }
+};
+
+
+const getVocabFromPack = (pack: LanguagePack | null): VocabItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) {
+    return pack.topics.flatMap(topic => topic.vocab || []);
+  }
+  return Array.isArray(pack.vocab) ? pack.vocab : [];
+};
+
+const getTopicsFromPack = (pack: LanguagePack | null): TopicItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) return pack.topics;
+
+  const fallbackVocab = Array.isArray(pack.vocab) ? pack.vocab : [];
+  if (fallbackVocab.length === 0) return [];
+
+  return [{
+    id: 'all',
+    title: 'Allgemein',
+    icon: '📘',
+    level: pack.level,
+    difficulty: 'easy',
+    vocab: fallbackVocab,
+  }];
+};
+
+const normalizePack = (pack: LanguagePack): LanguagePack | null => {
+  const hasLegacyVocab = Array.isArray(pack?.vocab) && pack.vocab.length > 0;
+  const hasTopics = Array.isArray(pack?.topics) && pack.topics.length > 0;
+  if (!pack?.lang || (!hasLegacyVocab && !hasTopics)) return null;
+  return {
+    ...pack,
+    vocab: hasLegacyVocab ? pack.vocab : undefined,
+    topics: hasTopics ? pack.topics : undefined,
+    sentences: Array.isArray(pack.sentences) ? pack.sentences : [],
+  };
 };
 
 // ==========================================
@@ -276,7 +324,7 @@ export default function LingoApp() {
           </div>
         ) : (
           <>
-            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
+            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} />}
             {activeTab === 'uebungen' && <TabUebungen pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
             {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} />}
             {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang)} gradient={gradient} />}
@@ -301,65 +349,122 @@ export default function LingoApp() {
 // KOMPONENTEN FÜR TABS
 // ==========================================
 
-function TabHeute({ pack, speak, addXP, gradient }: any) {
+function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
   const [queue, setQueue] = useState<VocabItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [selectedTopicId, setSelectedTopicId] = useState('all');
+
+  const topics = getTopicsFromPack(pack);
+
+  const buildQueueForTopic = (topicId: string) => {
+    const topicVocab = topicId === 'all'
+      ? getVocabFromPack(pack)
+      : topics.find(topic => topic.id === topicId)?.vocab || [];
+
+    const shuffled = [...topicVocab].sort(() => 0.5 - Math.random());
+    setQueue(shuffled);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  };
 
   useEffect(() => {
-    if (pack?.vocab) {
-      // Simple SRS Simulation: Shuffle and take top 20
-      const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random()).slice(0, 20);
-      setQueue(shuffled);
-      setCurrentIndex(0);
-      setIsFlipped(false);
-    }
+    const hasAllTopic = topics.some(topic => topic.id === 'all');
+    const defaultTopicId = hasAllTopic ? 'all' : (topics[0]?.id || 'all');
+    setSelectedTopicId(defaultTopicId);
+    buildQueueForTopic(defaultTopicId);
   }, [pack]);
 
+  useEffect(() => {
+    buildQueueForTopic(selectedTopicId);
+  }, [selectedTopicId]);
+
   if (queue.length === 0) return <div>Lade Karten...</div>;
-  if (currentIndex >= queue.length) return (
-    <div className="text-center mt-20 animate-bounce">
-      <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
-      <p>Komm morgen wieder für mehr XP.</p>
-    </div>
-  );
 
   const card = queue[currentIndex];
+
+  if (!card) {
+    if (isPremiumUser) {
+      return (
+        <div className="text-center mt-20">
+          <h2 className="text-3xl font-bold mb-2">Weiter geht's! 🚀</h2>
+          <p className="opacity-80 mb-6">Als Premium lernst du ohne Limit. Starte einfach die nächste Runde.</p>
+          <button onClick={() => buildQueueForTopic(selectedTopicId)} className={`px-6 py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>
+            Nächste Runde starten
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="text-center mt-20 animate-bounce">
+        <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
+        <p>Komm morgen wieder für mehr XP.</p>
+      </div>
+    );
+  }
 
   const handleAnswer = (known: boolean) => {
     addXP(known ? 10 : 2, known);
     setIsFlipped(false);
-    setCurrentIndex(prev => prev + 1);
+
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= queue.length && isPremiumUser) {
+      buildQueueForTopic(selectedTopicId);
+      return;
+    }
+
+    setCurrentIndex(nextIndex);
     if ('vibrate' in navigator) navigator.vibrate(known ? [50, 50] : [100]);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full mt-10">
-      <div className="w-full mb-4 bg-gray-200 rounded-full h-2.5">
-        <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+    <div className="flex flex-col items-center justify-center h-full mt-6">
+      <div className="w-full mb-4">
+        <div className="flex flex-wrap gap-2 mb-4">
+          <button
+            onClick={() => setSelectedTopicId('all')}
+            className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === 'all' ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+          >
+            🌍 Alle Themen
+          </button>
+          {topics.filter(topic => topic.id !== 'all').map(topic => (
+            <button
+              key={topic.id}
+              onClick={() => setSelectedTopicId(topic.id)}
+              className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === topic.id ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+            >
+              {topic.icon || '📘'} {topic.title}
+            </button>
+          ))}
+        </div>
+
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+        </div>
       </div>
-      
-      <div 
+
+      <div
         className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white border-2 border-indigo-200' : 'bg-white'} text-gray-900`}
         onClick={() => !isFlipped && setIsFlipped(true)}
       >
         <div className="text-gray-400 mb-2 uppercase tracking-widest text-sm font-bold">Deutsch</div>
         <h2 className="text-3xl font-bold mb-4">{card.de}</h2>
-        
+
         {isFlipped ? (
           <div className="animate-fade-in mt-6 pt-6 border-t border-gray-100 w-full">
-             <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
-             <h2 className="text-3xl font-bold text-indigo-600 mb-4">{card.x}</h2>
-             {card.ex && (
-               <div className="mt-4 p-4 bg-indigo-50 rounded-xl italic opacity-90 text-sm text-gray-900">
-                 <p>{card.ex}</p>
-                 <p className="mt-1 font-semibold">{card.exTr}</p>
-               </div>
-             )}
-             <div className="flex space-x-4 mt-6 justify-center">
-                <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🇩🇪 🔊</button>
-                <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🎯 🔊</button>
-             </div>
+            <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
+            <h2 className="text-3xl font-bold text-indigo-600 mb-4">{card.x}</h2>
+            {card.ex && (
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl italic opacity-90 text-sm text-gray-900">
+                <p>{card.ex}</p>
+                <p className="mt-1 font-semibold">{card.exTr}</p>
+              </div>
+            )}
+            <div className="flex space-x-4 mt-6 justify-center">
+              <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🇩🇪 🔊</button>
+              <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🎯 🔊</button>
+            </div>
           </div>
         ) : (
           <p className="mt-10 opacity-50 animate-pulse">Tippe zum Aufdecken</p>
@@ -381,8 +486,9 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   const [options, setOptions] = useState<string[]>([]);
   
   const generateQuestion = () => {
-    if (!pack?.vocab || pack.vocab.length < 4) return;
-    const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random());
+    const vocab = getVocabFromPack(pack);
+    if (vocab.length < 4) return;
+    const shuffled = [...vocab].sort(() => 0.5 - Math.random());
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
     const allOptions = [correct.x, ...wrongs].sort(() => 0.5 - Math.random());
@@ -477,9 +583,10 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     const reader = new FileReader();
     reader.onload = async (event) => {
       try {
-        const pack = JSON.parse(event.target?.result as string) as LanguagePack;
-        await savePackToDB(pack);
-        setMsg(`Paket ${pack.lang} erfolgreich geladen!`);
+        const parsed = normalizePack(JSON.parse(event.target?.result as string) as LanguagePack);
+        if (!parsed) throw new Error('Invalid pack');
+        await savePackToDB(parsed);
+        setMsg(`Paket ${parsed.lang} erfolgreich geladen!`);
         onPackChange();
       } catch (err) {
         setMsg('Fehler beim Lesen der JSON-Datei.');
@@ -492,9 +599,10 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     try {
       setMsg('Lade...');
       const res = await fetch(url);
-      const pack = await res.json();
-      await savePackToDB(pack);
-      setMsg(`Paket ${pack.lang} heruntergeladen!`);
+      const parsed = normalizePack(await res.json() as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} heruntergeladen!`);
       onPackChange();
     } catch (err) {
       setMsg('Fehler beim Download der URL.');
@@ -513,9 +621,10 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
       const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
       if (!response.ok) throw new Error('Datei nicht gefunden');
 
-      const pack = (await response.json()) as LanguagePack;
-      await savePackToDB(pack);
-      setMsg(`Paket ${pack.lang} aus /public/packs geladen.`);
+      const parsed = normalizePack((await response.json()) as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} aus /public/packs geladen.`);
       onPackChange();
     } catch {
       setMsg(`Konnte ${fileName} in /public/packs nicht laden.`);

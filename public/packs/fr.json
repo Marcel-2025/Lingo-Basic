@@ -1,15 +1,659 @@
 {
-  "version": 1,
+  "version": 2,
   "lang": "FR",
-  "level": "Beginner",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Wasser",
+          "x": "eau",
+          "ex": "Wasser ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Brot",
+          "x": "pain",
+          "ex": "Brot ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Milch",
+          "x": "lait",
+          "ex": "Milch ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Kaffee",
+          "x": "café",
+          "ex": "Kaffee ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Tee",
+          "x": "thé",
+          "ex": "Tee ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Apfel",
+          "x": "pomme",
+          "ex": "Apfel ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Banane",
+          "x": "banane",
+          "ex": "Banane ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Reis",
+          "x": "riz",
+          "ex": "Reis ist wichtig im Thema Essen & Trinken."
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Flughafen",
+          "x": "aéroport",
+          "ex": "Flughafen ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Bahnhof",
+          "x": "gare",
+          "ex": "Bahnhof ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Ticket",
+          "x": "billet",
+          "ex": "Ticket ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Hotel",
+          "x": "hôtel",
+          "ex": "Hotel ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Straße",
+          "x": "rue",
+          "ex": "Straße ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Karte",
+          "x": "carte",
+          "ex": "Karte ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Koffer",
+          "x": "valise",
+          "ex": "Koffer ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Pass",
+          "x": "passeport",
+          "ex": "Pass ist wichtig im Thema Reisen & Orientierung."
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Haus",
+          "x": "maison",
+          "ex": "Haus ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Zimmer",
+          "x": "chambre",
+          "ex": "Zimmer ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Küche",
+          "x": "cuisine",
+          "ex": "Küche ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Badezimmer",
+          "x": "salle de bain",
+          "ex": "Badezimmer ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Fenster",
+          "x": "fenêtre",
+          "ex": "Fenster ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Tür",
+          "x": "porte",
+          "ex": "Tür ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Tisch",
+          "x": "table",
+          "ex": "Tisch ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Stuhl",
+          "x": "chaise",
+          "ex": "Stuhl ist wichtig im Thema Zuhause."
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Arbeit",
+          "x": "travail",
+          "ex": "Arbeit ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Büro",
+          "x": "bureau",
+          "ex": "Büro ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Chef",
+          "x": "chef",
+          "ex": "Chef ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Kollege",
+          "x": "collègue",
+          "ex": "Kollege ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Meeting",
+          "x": "réunion",
+          "ex": "Meeting ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Projekt",
+          "x": "projet",
+          "ex": "Projekt ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "E-Mail",
+          "x": "e-mail",
+          "ex": "E-Mail ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Pause",
+          "x": "pause",
+          "ex": "Pause ist wichtig im Thema Beruf & Alltag."
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Arzt",
+          "x": "médecin",
+          "ex": "Arzt ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Krankenhaus",
+          "x": "hôpital",
+          "ex": "Krankenhaus ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Medizin",
+          "x": "médicament",
+          "ex": "Medizin ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Schmerz",
+          "x": "douleur",
+          "ex": "Schmerz ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Fieber",
+          "x": "fièvre",
+          "ex": "Fieber ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Hilfe",
+          "x": "aide",
+          "ex": "Hilfe ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Termin",
+          "x": "rendez-vous",
+          "ex": "Termin ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Rezept",
+          "x": "ordonnance",
+          "ex": "Rezept ist wichtig im Thema Gesundheit."
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Laden",
+          "x": "magasin",
+          "ex": "Laden ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Preis",
+          "x": "prix",
+          "ex": "Preis ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Geld",
+          "x": "argent",
+          "ex": "Geld ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Kasse",
+          "x": "caisse",
+          "ex": "Kasse ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Rabatt",
+          "x": "remise",
+          "ex": "Rabatt ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Kunde",
+          "x": "client",
+          "ex": "Kunde ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Verkäufer",
+          "x": "vendeur",
+          "ex": "Verkäufer ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Tüte",
+          "x": "sac",
+          "ex": "Tüte ist wichtig im Thema Einkaufen."
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": "hard",
+      "vocab": [
+        {
+          "de": "Mutter",
+          "x": "mère",
+          "ex": "Mutter ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Vater",
+          "x": "père",
+          "ex": "Vater ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Bruder",
+          "x": "frère",
+          "ex": "Bruder ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Schwester",
+          "x": "sœur",
+          "ex": "Schwester ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Freund",
+          "x": "ami",
+          "ex": "Freund ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Kind",
+          "x": "enfant",
+          "ex": "Kind ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Familie",
+          "x": "famille",
+          "ex": "Familie ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Name",
+          "x": "nom",
+          "ex": "Name ist wichtig im Thema Familie & Freunde."
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": "hard",
+      "vocab": [
+        {
+          "de": "Heute",
+          "x": "aujourd'hui",
+          "ex": "Heute ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Morgen",
+          "x": "demain",
+          "ex": "Morgen ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Gestern",
+          "x": "hier",
+          "ex": "Gestern ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Woche",
+          "x": "semaine",
+          "ex": "Woche ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Monat",
+          "x": "mois",
+          "ex": "Monat ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Jahr",
+          "x": "an",
+          "ex": "Jahr ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Lernen",
+          "x": "apprendre",
+          "ex": "Lernen ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Sprache",
+          "x": "langue",
+          "ex": "Sprache ist wichtig im Thema Zeit & Lernen."
+        }
+      ]
+    }
+  ],
   "vocab": [
-    { "de": "Hallo", "x": "Bonjour" },
-    { "de": "Danke", "x": "Merci" },
-    { "de": "Wasser", "x": "Eau" },
-    { "de": "Haus", "x": "Maison" },
-    { "de": "Buch", "x": "Livre" }
+    {
+      "de": "Wasser",
+      "x": "eau"
+    },
+    {
+      "de": "Brot",
+      "x": "pain"
+    },
+    {
+      "de": "Milch",
+      "x": "lait"
+    },
+    {
+      "de": "Kaffee",
+      "x": "café"
+    },
+    {
+      "de": "Tee",
+      "x": "thé"
+    },
+    {
+      "de": "Apfel",
+      "x": "pomme"
+    },
+    {
+      "de": "Banane",
+      "x": "banane"
+    },
+    {
+      "de": "Reis",
+      "x": "riz"
+    },
+    {
+      "de": "Flughafen",
+      "x": "aéroport"
+    },
+    {
+      "de": "Bahnhof",
+      "x": "gare"
+    },
+    {
+      "de": "Ticket",
+      "x": "billet"
+    },
+    {
+      "de": "Hotel",
+      "x": "hôtel"
+    },
+    {
+      "de": "Straße",
+      "x": "rue"
+    },
+    {
+      "de": "Karte",
+      "x": "carte"
+    },
+    {
+      "de": "Koffer",
+      "x": "valise"
+    },
+    {
+      "de": "Pass",
+      "x": "passeport"
+    },
+    {
+      "de": "Haus",
+      "x": "maison"
+    },
+    {
+      "de": "Zimmer",
+      "x": "chambre"
+    },
+    {
+      "de": "Küche",
+      "x": "cuisine"
+    },
+    {
+      "de": "Badezimmer",
+      "x": "salle de bain"
+    },
+    {
+      "de": "Fenster",
+      "x": "fenêtre"
+    },
+    {
+      "de": "Tür",
+      "x": "porte"
+    },
+    {
+      "de": "Tisch",
+      "x": "table"
+    },
+    {
+      "de": "Stuhl",
+      "x": "chaise"
+    },
+    {
+      "de": "Arbeit",
+      "x": "travail"
+    },
+    {
+      "de": "Büro",
+      "x": "bureau"
+    },
+    {
+      "de": "Chef",
+      "x": "chef"
+    },
+    {
+      "de": "Kollege",
+      "x": "collègue"
+    },
+    {
+      "de": "Meeting",
+      "x": "réunion"
+    },
+    {
+      "de": "Projekt",
+      "x": "projet"
+    },
+    {
+      "de": "E-Mail",
+      "x": "e-mail"
+    },
+    {
+      "de": "Pause",
+      "x": "pause"
+    },
+    {
+      "de": "Arzt",
+      "x": "médecin"
+    },
+    {
+      "de": "Krankenhaus",
+      "x": "hôpital"
+    },
+    {
+      "de": "Medizin",
+      "x": "médicament"
+    },
+    {
+      "de": "Schmerz",
+      "x": "douleur"
+    },
+    {
+      "de": "Fieber",
+      "x": "fièvre"
+    },
+    {
+      "de": "Hilfe",
+      "x": "aide"
+    },
+    {
+      "de": "Termin",
+      "x": "rendez-vous"
+    },
+    {
+      "de": "Rezept",
+      "x": "ordonnance"
+    },
+    {
+      "de": "Laden",
+      "x": "magasin"
+    },
+    {
+      "de": "Preis",
+      "x": "prix"
+    },
+    {
+      "de": "Geld",
+      "x": "argent"
+    },
+    {
+      "de": "Kasse",
+      "x": "caisse"
+    },
+    {
+      "de": "Rabatt",
+      "x": "remise"
+    },
+    {
+      "de": "Kunde",
+      "x": "client"
+    },
+    {
+      "de": "Verkäufer",
+      "x": "vendeur"
+    },
+    {
+      "de": "Tüte",
+      "x": "sac"
+    },
+    {
+      "de": "Mutter",
+      "x": "mère"
+    },
+    {
+      "de": "Vater",
+      "x": "père"
+    },
+    {
+      "de": "Bruder",
+      "x": "frère"
+    },
+    {
+      "de": "Schwester",
+      "x": "sœur"
+    },
+    {
+      "de": "Freund",
+      "x": "ami"
+    },
+    {
+      "de": "Kind",
+      "x": "enfant"
+    },
+    {
+      "de": "Familie",
+      "x": "famille"
+    },
+    {
+      "de": "Name",
+      "x": "nom"
+    },
+    {
+      "de": "Heute",
+      "x": "aujourd'hui"
+    },
+    {
+      "de": "Morgen",
+      "x": "demain"
+    },
+    {
+      "de": "Gestern",
+      "x": "hier"
+    },
+    {
+      "de": "Woche",
+      "x": "semaine"
+    },
+    {
+      "de": "Monat",
+      "x": "mois"
+    },
+    {
+      "de": "Jahr",
+      "x": "an"
+    },
+    {
+      "de": "Lernen",
+      "x": "apprendre"
+    },
+    {
+      "de": "Sprache",
+      "x": "langue"
+    }
   ],
   "sentences": [
-    { "de": "Das ist sehr gut.", "x": "C'est très bien." }
+    {
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "apprendre"
+    },
+    {
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "langue"
+    }
   ]
 }
