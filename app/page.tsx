@@ -54,6 +54,14 @@ interface AppSettings {
   isDarkMode: boolean;
 }
 
+interface AuthUser {
+  localId: string;
+  email: string;
+  displayName?: string;
+  idToken: string;
+  refreshToken: string;
+}
+
 // ==========================================
 // INDEXEDDB HELPER (Offline Storage)
 // ==========================================
@@ -183,6 +191,13 @@ export default function LingoApp() {
   });
   
   const [currentPack, setCurrentPack] = useState<LanguagePack | null>(null);
+  const [authUser, setAuthUser] = useState<AuthUser | null>(null);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isSignupMode, setIsSignupMode] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [authMsg, setAuthMsg] = useState('');
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   // Init & Load Data
   useEffect(() => {
@@ -194,6 +209,8 @@ export default function LingoApp() {
       checkStreak(parsedStats);
     }
     if (savedSettings) setSettings(JSON.parse(savedSettings));
+    const savedAuthUser = localStorage.getItem('lingoAuthUser');
+    if (savedAuthUser) setAuthUser(JSON.parse(savedAuthUser));
     
     setIsLoaded(true);
   }, []);
@@ -210,6 +227,25 @@ export default function LingoApp() {
       loadPack(settings.targetLang);
     }
   }, [settings.targetLang, isLoaded]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
+  }, [authUser]);
+
+  useEffect(() => {
+    if (!isAuthOpen || !GOOGLE_CLIENT_ID || !isAuthConfigured()) return;
+    if (typeof window === 'undefined') return;
+
+    const scriptId = 'google-identity-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, [isAuthOpen]);
 
   const checkStreak = (currentStats: UserStats) => {
     const today = new Date().toDateString();
@@ -288,6 +324,73 @@ export default function LingoApp() {
     return { base, gradient };
   };
 
+  const handleEmailAuth = async () => {
+    if (!isAuthConfigured()) {
+      setAuthMsg('Firebase API Key fehlt. Bitte .env.local prüfen.');
+      return;
+    }
+    if (!email || !password) {
+      setAuthMsg('Bitte E-Mail und Passwort ausfüllen.');
+      return;
+    }
+
+    try {
+      setIsAuthLoading(true);
+      const user = await authWithEmailAndPassword(email, password, isSignupMode);
+      setAuthUser(user);
+      setAuthMsg(`Willkommen ${user.displayName || user.email}!`);
+      setIsAuthOpen(false);
+      setPassword('');
+    } catch (error) {
+      setAuthMsg(`Login fehlgeschlagen: ${(error as Error).message}`);
+    } finally {
+      setIsAuthLoading(false);
+    }
+  };
+
+  const handleGoogleAuth = async () => {
+    if (!isAuthConfigured() || !GOOGLE_CLIENT_ID) {
+      setAuthMsg('Google Login benötigt NEXT_PUBLIC_GOOGLE_CLIENT_ID (Firebase API Key ist bereits gesetzt).');
+      return;
+    }
+    const googleApi = (window as any).google;
+    if (!googleApi?.accounts?.id) {
+      setAuthMsg('Google SDK lädt noch. Bitte in 2-3 Sekunden erneut klicken.');
+      return;
+    }
+
+    try {
+      setIsAuthLoading(true);
+      await new Promise<void>((resolve, reject) => {
+        googleApi.accounts.id.initialize({
+          client_id: GOOGLE_CLIENT_ID,
+          callback: async (response: { credential?: string }) => {
+            try {
+              if (!response.credential) throw new Error('GOOGLE_CREDENTIAL_MISSING');
+              const user = await authWithGoogleCredential(response.credential);
+              setAuthUser(user);
+              setAuthMsg(`Willkommen ${user.displayName || user.email}!`);
+              setIsAuthOpen(false);
+              resolve();
+            } catch (err) {
+              reject(err);
+            }
+          },
+        });
+        googleApi.accounts.id.prompt();
+      });
+    } catch (error) {
+      setAuthMsg(`Google Login fehlgeschlagen: ${(error as Error).message}`);
+    } finally {
+      setIsAuthLoading(false);
+    }
+  };
+
+  const logout = () => {
+    setAuthUser(null);
+    setAuthMsg('Du wurdest ausgeloggt.');
+  };
+
   if (!isLoaded) return <div className="min-h-screen flex items-center justify-center">Lade Lingo...</div>;
 
   const { base, gradient } = getThemeClasses();
@@ -302,6 +405,11 @@ export default function LingoApp() {
             <span>Lingo</span>
           </div>
           <div className="flex space-x-4 font-semibold">
+            {authUser ? (
+              <button onClick={logout} className="flex items-center bg-white/20 px-2 py-1 rounded-lg">👤 {authUser.email}</button>
+            ) : (
+              <button onClick={() => setIsAuthOpen(true)} className="flex items-center bg-white/20 px-2 py-1 rounded-lg">Login</button>
+            )}
             <div className="flex items-center">🔥 {stats.streak}</div>
             <div className="flex items-center">⭐ {stats.xp} XP</div>
             <div className="flex items-center bg-white/20 px-2 py-1 rounded-lg">Lvl {stats.level}</div>
@@ -341,6 +449,30 @@ export default function LingoApp() {
           <NavButton icon="⚙️" label="Settings" isActive={activeTab === 'settings'} onClick={() => setActiveTab('settings')} gradient={gradient} />
         </div>
       </nav>
+
+      {isAuthOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="w-full max-w-md bg-white rounded-3xl p-6 text-gray-900 shadow-2xl">
+            <h3 className="text-2xl font-bold mb-2">{isSignupMode ? 'Registrieren' : 'Einloggen'}</h3>
+            <p className="text-sm opacity-70 mb-4">Mit E-Mail/Passwort oder Google anmelden.</p>
+            <div className="space-y-3">
+              <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="E-Mail" className="w-full p-3 rounded-xl bg-gray-100 outline-none" />
+              <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Passwort" className="w-full p-3 rounded-xl bg-gray-100 outline-none" />
+              <button disabled={isAuthLoading} onClick={handleEmailAuth} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>
+                {isAuthLoading ? 'Bitte warten...' : (isSignupMode ? 'Account erstellen' : 'Mit E-Mail einloggen')}
+              </button>
+              <button disabled={isAuthLoading} onClick={handleGoogleAuth} className="w-full py-3 rounded-xl font-bold bg-gray-100">
+                Mit Google einloggen
+              </button>
+              <button onClick={() => setIsSignupMode(!isSignupMode)} className="w-full text-sm text-indigo-600 font-bold">
+                {isSignupMode ? 'Schon einen Account? Jetzt einloggen' : 'Noch kein Account? Jetzt registrieren'}
+              </button>
+              <button onClick={() => setIsAuthOpen(false)} className="w-full text-sm opacity-70">Schließen</button>
+              {authMsg && <p className="text-xs font-bold text-center text-indigo-600">{authMsg}</p>}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
