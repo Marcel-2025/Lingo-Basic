@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "lang": "ES",
+  "level": "Beginner",
+  "vocab": [
+    { "de": "Hallo", "x": "Hola" },
+    { "de": "Danke", "x": "Gracias" },
+    { "de": "Wasser", "x": "Agua" },
+    { "de": "Haus", "x": "Casa" },
+    { "de": "Buch", "x": "Libro" }
+  ],
+  "sentences": [
+    { "de": "Ich lerne Spanisch.", "x": "Aprendo español." }
+  ]
+}

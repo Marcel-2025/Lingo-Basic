@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "lang": "RU",
+  "level": "Beginner",
+  "vocab": [
+    { "de": "Hallo", "x": "Привет" },
+    { "de": "Danke", "x": "Спасибо" },
+    { "de": "Wasser", "x": "Вода" },
+    { "de": "Haus", "x": "Дом" },
+    { "de": "Buch", "x": "Книга" }
+  ],
+  "sentences": [
+    { "de": "Guten Morgen.", "x": "Доброе утро." }
+  ]
+}

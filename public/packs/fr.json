@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "lang": "FR",
+  "level": "Beginner",
+  "vocab": [
+    { "de": "Hallo", "x": "Bonjour" },
+    { "de": "Danke", "x": "Merci" },
+    { "de": "Wasser", "x": "Eau" },
+    { "de": "Haus", "x": "Maison" },
+    { "de": "Buch", "x": "Livre" }
+  ],
+  "sentences": [
+    { "de": "Das ist sehr gut.", "x": "C'est très bien." }
+  ]
+}

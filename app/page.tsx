@@ -49,6 +49,13 @@ interface AppSettings {
 // ==========================================
 const DB_NAME = 'LingoDB';
 const STORE_NAME = 'packs';
+const PUBLIC_PACKS_PATH = '/packs';
+const PACK_FILE_BY_LANG: Record<string, string> = {
+  EN: 'en.json',
+  ES: 'es.json',
+  FR: 'fr.json',
+  RU: 'ru.json',
+};
 
 const initDB = (): Promise<IDBDatabase> => {
   return new Promise((resolve, reject) => {
@@ -91,6 +98,23 @@ const deletePackFromDB = async (lang: string) => {
     tx.oncomplete = resolve;
     tx.onerror = reject;
   });
+};
+
+const fetchPackFromPublicFolder = async (lang: string): Promise<LanguagePack | null> => {
+  const fileName = PACK_FILE_BY_LANG[lang];
+  if (!fileName) return null;
+
+  try {
+    const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
+    if (!response.ok) return null;
+
+    const pack = (await response.json()) as LanguagePack;
+    if (!pack?.lang || !Array.isArray(pack?.vocab)) return null;
+
+    return pack;
+  } catch {
+    return null;
+  }
 };
 
 // ==========================================
@@ -158,8 +182,20 @@ export default function LingoApp() {
   };
 
   const loadPack = async (lang: string) => {
-    const pack = await getPackFromDB(lang);
-    setCurrentPack(pack);
+    const cachedPack = await getPackFromDB(lang);
+    if (cachedPack) {
+      setCurrentPack(cachedPack);
+      return;
+    }
+
+    const publicPack = await fetchPackFromPublicFolder(lang);
+    if (publicPack) {
+      await savePackToDB(publicPack);
+      setCurrentPack(publicPack);
+      return;
+    }
+
+    setCurrentPack(null);
   };
 
   // Gamification Logic
@@ -465,6 +501,27 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     }
   };
 
+  const loadFromProjectFolder = async () => {
+    const fileName = PACK_FILE_BY_LANG[settings.targetLang];
+    if (!fileName) {
+      setMsg(`Für ${settings.targetLang} ist keine Datei in /public/packs hinterlegt.`);
+      return;
+    }
+
+    try {
+      setMsg(`Lade ${fileName} aus /public/packs ...`);
+      const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Datei nicht gefunden');
+
+      const pack = (await response.json()) as LanguagePack;
+      await savePackToDB(pack);
+      setMsg(`Paket ${pack.lang} aus /public/packs geladen.`);
+      onPackChange();
+    } catch {
+      setMsg(`Konnte ${fileName} in /public/packs nicht laden.`);
+    }
+  };
+
   const clearCache = async () => {
     await deletePackFromDB(settings.targetLang);
     setMsg(`${settings.targetLang} Paket gelöscht.`);
@@ -519,6 +576,12 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
       <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
         <h3 className="font-bold text-lg">Inhalte verwalten</h3>
         
+        <div>
+           <label className="block text-sm font-bold opacity-70 mb-2">Direkt aus /public/packs laden</label>
+           <button onClick={loadFromProjectFolder} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Pack für {settings.targetLang} laden</button>
+           <p className="text-xs opacity-60 mt-2">Erwartete Datei: /public/packs/{PACK_FILE_BY_LANG[settings.targetLang] || 'nicht definiert'}</p>
+        </div>
+
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Aus JSON Datei importieren</label>
            <input type="file" accept=".json" ref={fileInputRef} onChange={handleFileUpload} className="hidden" />

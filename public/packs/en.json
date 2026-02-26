@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lang": "EN",
+  "level": "Beginner",
+  "vocab": [
+    { "de": "Hallo", "x": "Hello", "ex": "Hallo, wie geht's?", "exTr": "Hello, how are you?" },
+    { "de": "Danke", "x": "Thank you", "ex": "Danke für deine Hilfe.", "exTr": "Thank you for your help." },
+    { "de": "Wasser", "x": "Water", "ex": "Ich trinke Wasser.", "exTr": "I drink water." },
+    { "de": "Haus", "x": "House", "ex": "Das Haus ist groß.", "exTr": "The house is big." },
+    { "de": "Buch", "x": "Book", "ex": "Das Buch ist spannend.", "exTr": "The book is exciting." }
+  ],
+  "sentences": [
+    { "de": "Ich lerne jeden Tag.", "x": "I learn every day." },
+    { "de": "Wo ist der Bahnhof?", "x": "Where is the train station?" }
+  ]
+}
