@@ -517,7 +517,6 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   const generateQuestion = () => {
     const vocab = getVocabFromPack(pack);
     if (vocab.length < 4) return;
-
     const shuffled = [...vocab].sort(() => 0.5 - Math.random());
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
@@ -591,8 +590,7 @@ function TabUebungen({ pack, addXP, gradient }: any) {
           <button
             key={i}
             onClick={() => handleSelect(opt)}
-            disabled={isLocked}
-            className={`p-5 text-lg font-semibold rounded-2xl shadow-sm border-2 active:scale-95 transition-all ${getOptionClasses(opt)} ${isLocked ? 'cursor-not-allowed' : ''}`}
+            className="p-5 text-lg font-semibold bg-white text-gray-900 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
           >
             {opt}
           </button>
