@@ -74,6 +74,17 @@ const PACK_FILE_BY_LANG: Record<string, string> = {
   FR: 'fr.json',
   RU: 'ru.json',
 };
+const FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyBJvSmyrnnuCcwkDdAp7zym9ipiY3treRo',
+  authDomain: 'lingo-basic.firebaseapp.com',
+  projectId: 'lingo-basic',
+  storageBucket: 'lingo-basic.firebasestorage.app',
+  messagingSenderId: '788312123831',
+  appId: '1:788312123831:web:7362d5b04144459318e032',
+  measurementId: 'G-SM96NW3DRS',
+};
+
+const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || FIREBASE_CONFIG.apiKey;
 
 const initDB = (): Promise<IDBDatabase> => {
   return new Promise((resolve, reject) => {
@@ -173,6 +184,49 @@ const normalizePack = (pack: LanguagePack): LanguagePack | null => {
   };
 };
 
+const isAuthConfigured = () => FIREBASE_API_KEY.length > 0;
+
+const firebaseAuthRequest = async (endpoint: string, payload: Record<string, unknown>) => {
+  const response = await fetch(`https://identitytoolkit.googleapis.com/v1/${endpoint}?key=${FIREBASE_API_KEY}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data?.error?.message || 'AUTH_FAILED');
+  }
+  return data;
+};
+
+const authWithEmailAndPassword = async (email: string, password: string, isSignup: boolean): Promise<AuthUser> => {
+  const endpoint = isSignup ? 'accounts:signUp' : 'accounts:signInWithPassword';
+  const result = await firebaseAuthRequest(endpoint, { email, password, returnSecureToken: true });
+  return {
+    localId: result.localId,
+    email: result.email,
+    displayName: result.displayName || email,
+    idToken: result.idToken,
+    refreshToken: result.refreshToken,
+  };
+};
+
+const authWithGoogleCredential = async (credential: string): Promise<AuthUser> => {
+  const result = await firebaseAuthRequest('accounts:signInWithIdp', {
+    postBody: `id_token=${credential}&providerId=google.com`,
+    requestUri: typeof window !== 'undefined' ? window.location.origin : 'http://localhost',
+    returnSecureToken: true,
+    returnIdpCredential: true,
+  });
+  return {
+    localId: result.localId,
+    email: result.email,
+    displayName: result.displayName || result.email,
+    idToken: result.idToken,
+    refreshToken: result.refreshToken,
+  };
+};
+
 // ==========================================
 // HAUPTKOMPONENTE (APP)
 // ==========================================
@@ -198,6 +252,7 @@ export default function LingoApp() {
   const [password, setPassword] = useState('');
   const [authMsg, setAuthMsg] = useState('');
   const [isAuthLoading, setIsAuthLoading] = useState(false);
+  const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
 
   // Init & Load Data
   useEffect(() => {
@@ -233,7 +288,7 @@ export default function LingoApp() {
   }, [authUser]);
 
   useEffect(() => {
-    if (!isAuthOpen || !GOOGLE_CLIENT_ID || !isAuthConfigured()) return;
+    if (!isAuthOpen || !googleClientId || !isAuthConfigured()) return;
     if (typeof window === 'undefined') return;
 
     const scriptId = 'google-identity-script';
@@ -245,7 +300,7 @@ export default function LingoApp() {
       script.defer = true;
       document.body.appendChild(script);
     }
-  }, [isAuthOpen]);
+  }, [isAuthOpen, googleClientId]);
 
   const checkStreak = (currentStats: UserStats) => {
     const today = new Date().toDateString();
@@ -349,7 +404,7 @@ export default function LingoApp() {
   };
 
   const handleGoogleAuth = async () => {
-    if (!isAuthConfigured() || !GOOGLE_CLIENT_ID) {
+    if (!isAuthConfigured() || !googleClientId) {
       setAuthMsg('Google Login benötigt NEXT_PUBLIC_GOOGLE_CLIENT_ID (Firebase API Key ist bereits gesetzt).');
       return;
     }
@@ -363,7 +418,7 @@ export default function LingoApp() {
       setIsAuthLoading(true);
       await new Promise<void>((resolve, reject) => {
         googleApi.accounts.id.initialize({
-          client_id: GOOGLE_CLIENT_ID,
+          client_id: googleClientId,
           callback: async (response: { credential?: string }) => {
             try {
               if (!response.credential) throw new Error('GOOGLE_CREDENTIAL_MISSING');
@@ -649,6 +704,7 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   const generateQuestion = () => {
     const vocab = getVocabFromPack(pack);
     if (vocab.length < 4) return;
+
     const shuffled = [...vocab].sort(() => 0.5 - Math.random());
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
@@ -722,7 +778,8 @@ function TabUebungen({ pack, addXP, gradient }: any) {
           <button
             key={i}
             onClick={() => handleSelect(opt)}
-            className="p-5 text-lg font-semibold bg-white text-gray-900 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
+            disabled={isLocked}
+            className={`p-5 text-lg font-semibold rounded-2xl shadow-sm border-2 active:scale-95 transition-all ${getOptionClasses(opt)} ${isLocked ? 'cursor-not-allowed' : ''}`}
           >
             {opt}
           </button>
