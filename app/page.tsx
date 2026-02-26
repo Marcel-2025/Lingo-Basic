@@ -335,12 +335,12 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
 
   return (
     <div className="flex flex-col items-center justify-center h-full mt-10">
-      <div className="w-full mb-4 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div className="w-full mb-4 bg-gray-200 rounded-full h-2.5">
         <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
       </div>
       
       <div 
-        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white dark:bg-gray-800 border-2 border-indigo-200' : 'bg-white dark:bg-gray-800'}`}
+        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white border-2 border-indigo-200' : 'bg-white'} text-gray-900`}
         onClick={() => !isFlipped && setIsFlipped(true)}
       >
         <div className="text-gray-400 mb-2 uppercase tracking-widest text-sm font-bold">Deutsch</div>
@@ -349,16 +349,16 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
         {isFlipped ? (
           <div className="animate-fade-in mt-6 pt-6 border-t border-gray-100 w-full">
              <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
-             <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{card.x}</h2>
+             <h2 className="text-3xl font-bold text-indigo-600 mb-4">{card.x}</h2>
              {card.ex && (
-               <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl italic opacity-80 text-sm">
+               <div className="mt-4 p-4 bg-indigo-50 rounded-xl italic opacity-90 text-sm text-gray-900">
                  <p>{card.ex}</p>
                  <p className="mt-1 font-semibold">{card.exTr}</p>
                </div>
              )}
              <div className="flex space-x-4 mt-6 justify-center">
-                <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🇩🇪 🔊</button>
-                <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🎯 🔊</button>
+                <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🇩🇪 🔊</button>
+                <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🎯 🔊</button>
              </div>
           </div>
         ) : (
@@ -368,7 +368,7 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
 
       {isFlipped && (
         <div className="flex space-x-4 mt-8 w-full max-w-md">
-          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-600 dark:bg-red-900/30 hover:bg-red-200 transition">Noch üben</button>
+          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-700 hover:bg-red-200 transition">Noch üben</button>
           <button onClick={() => handleAnswer(true)} className={`flex-1 py-4 rounded-2xl font-bold text-white bg-gradient-to-r ${gradient} shadow-lg hover:opacity-90 transition`}>Gewusst</button>
         </div>
       )}
@@ -420,7 +420,7 @@ function TabUebungen({ pack, addXP, gradient }: any) {
           <button 
             key={i} 
             onClick={() => handleSelect(opt)}
-            className="p-5 text-lg font-semibold bg-white dark:bg-gray-800 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
+            className="p-5 text-lg font-semibold bg-white text-gray-900 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
           >
             {opt}
           </button>
@@ -436,7 +436,7 @@ function TabProfil({ stats, gradient }: any) {
   return (
     <div className="mt-4 space-y-6">
       <div className="text-center">
-        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white dark:border-gray-800`}>
+        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white`}>
           🦉
         </div>
         <h2 className="text-3xl font-bold">Level {stats.level}</h2>
@@ -450,7 +450,7 @@ function TabProfil({ stats, gradient }: any) {
         <StatBox title="Genauigkeit" value={`${accuracy}%`} icon="🎯" />
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm mt-6">
+      <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
         <h3 className="font-bold text-lg mb-4">Achievements</h3>
         <ul className="space-y-3">
           <Achievement name="Erster Schritt" done={stats.xp > 0} />
@@ -532,11 +532,11 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     <div className="mt-4 space-y-6 pb-10">
       <h2 className="text-3xl font-bold mb-6">Einstellungen</h2>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <div>
           <label className="block text-sm font-bold opacity-70 mb-2">Zielsprache (für Pack)</label>
           <select 
-            className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none"
+            className="w-full p-3 rounded-xl bg-gray-100 outline-none text-gray-900"
             value={settings.targetLang}
             onChange={(e) => { updateSetting('targetLang', e.target.value); onPackChange(); }}
           >
@@ -554,7 +554,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
               <button 
                 key={t}
                 onClick={() => updateSetting('theme', t)}
-                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 dark:bg-gray-700`}
+                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 text-gray-900`}
               >
                 {t}
               </button>
@@ -573,7 +573,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <h3 className="font-bold text-lg">Inhalte verwalten</h3>
         
         <div>
@@ -585,20 +585,20 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Aus JSON Datei importieren</label>
            <input type="file" accept=".json" ref={fileInputRef} onChange={handleFileUpload} className="hidden" />
-           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 dark:bg-gray-700 rounded-xl font-semibold">Datei auswählen</button>
+           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 rounded-xl font-semibold text-gray-900">Datei auswählen</button>
         </div>
 
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Von URL importieren</label>
            <div className="flex space-x-2">
-             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none" />
+             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 outline-none text-gray-900" />
              <button onClick={loadFromURL} className={`px-4 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Laden</button>
            </div>
         </div>
         
         {msg && <p className="text-sm font-bold text-green-500">{msg}</p>}
 
-        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-500 bg-red-50 dark:bg-red-900/20 rounded-xl font-bold">Zwischenspeicher löschen</button>
+        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-600 bg-red-50 rounded-xl font-bold">Zwischenspeicher löschen</button>
       </div>
     </div>
   );
@@ -610,7 +610,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
 
 function NavButton({ icon, label, isActive, onClick, gradient }: any) {
   return (
-    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>
+    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-500 hover:bg-gray-100'}`}>
       <span className="text-2xl mb-1">{icon}</span>
       <span className="text-[10px] font-bold uppercase tracking-wider">{label}</span>
     </button>
@@ -619,7 +619,7 @@ function NavButton({ icon, label, isActive, onClick, gradient }: any) {
 
 function StatBox({ title, value, icon }: any) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
+    <div className="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center text-gray-900">
       <div className="text-3xl mb-2">{icon}</div>
       <div className="text-2xl font-black">{value}</div>
       <div className="text-xs font-bold opacity-50 uppercase mt-1">{title}</div>
@@ -629,8 +629,8 @@ function StatBox({ title, value, icon }: any) {
 
 function Achievement({ name, done, subtitle }: any) {
   return (
-    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50 dark:bg-green-900/20' : 'opacity-40 grayscale'}`}>
-      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`}>
+    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50' : 'opacity-40 grayscale'}`}>
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200' : 'bg-gray-200'}`}>
         {done ? '🏆' : '🔒'}
       </div>
       <div>
