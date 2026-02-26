@@ -484,7 +484,36 @@ function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
 function TabUebungen({ pack, addXP, gradient }: any) {
   const [questionCode, setQuestionCode] = useState<VocabItem | null>(null);
   const [options, setOptions] = useState<string[]>([]);
-  
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
+  const [isLocked, setIsLocked] = useState(false);
+
+  const playFeedbackTone = (success: boolean) => {
+    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    if (!AudioCtx) return;
+
+    const ctx = new AudioCtx();
+    const oscillator = ctx.createOscillator();
+    const gainNode = ctx.createGain();
+
+    oscillator.type = success ? 'sine' : 'sawtooth';
+    oscillator.frequency.value = success ? 740 : 220;
+
+    gainNode.gain.setValueAtTime(0.001, ctx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.15, ctx.currentTime + 0.01);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.22);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(ctx.destination);
+
+    oscillator.start();
+    oscillator.stop(ctx.currentTime + 0.24);
+
+    oscillator.onended = () => {
+      ctx.close().catch(() => undefined);
+    };
+  };
+
   const generateQuestion = () => {
     const vocab = getVocabFromPack(pack);
     if (vocab.length < 4) return;
@@ -492,23 +521,52 @@ function TabUebungen({ pack, addXP, gradient }: any) {
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
     const allOptions = [correct.x, ...wrongs].sort(() => 0.5 - Math.random());
-    
+
     setQuestionCode(correct);
     setOptions(allOptions);
+    setSelectedOption(null);
+    setIsAnswerCorrect(null);
+    setIsLocked(false);
   };
 
   useEffect(() => { generateQuestion(); }, [pack]);
 
   const handleSelect = (opt: string) => {
-    const isCorrect = opt === questionCode?.x;
-    if (isCorrect) {
+    if (isLocked || !questionCode) return;
+
+    setSelectedOption(opt);
+    const correct = opt === questionCode.x;
+    setIsAnswerCorrect(correct);
+    setIsLocked(true);
+
+    if (correct) {
       addXP(15, true);
       if ('vibrate' in navigator) navigator.vibrate([30, 30]);
     } else {
       addXP(0, false);
-      if ('vibrate' in navigator) navigator.vibrate(200);
+      if ('vibrate' in navigator) navigator.vibrate([120]);
     }
-    generateQuestion();
+
+    playFeedbackTone(correct);
+    window.setTimeout(() => {
+      generateQuestion();
+    }, 900);
+  };
+
+  const getOptionClasses = (opt: string) => {
+    if (!isLocked || !questionCode) {
+      return 'bg-white text-gray-900 border-transparent hover:border-indigo-400';
+    }
+
+    if (opt === questionCode.x) {
+      return 'bg-green-100 text-green-800 border-green-400';
+    }
+
+    if (opt === selectedOption && opt !== questionCode.x) {
+      return 'bg-red-100 text-red-800 border-red-400';
+    }
+
+    return 'bg-white/70 text-gray-500 border-transparent';
   };
 
   if (!questionCode) return <div>Paket benötigt mind. 4 Vokabeln für Multiple Choice.</div>;
@@ -516,15 +574,21 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   return (
     <div className="mt-6 flex flex-col items-center">
       <h2 className="text-xl font-bold opacity-70 mb-8 uppercase tracking-wider">Welches Wort passt?</h2>
-      
-      <div className="text-4xl font-extrabold mb-12 text-center break-words w-full">
+
+      <div className="text-4xl font-extrabold mb-6 text-center break-words w-full">
         {questionCode.de}
       </div>
 
+      {isLocked && (
+        <p className={`mb-6 text-sm font-bold ${isAnswerCorrect ? 'text-green-700' : 'text-red-700'}`}>
+          {isAnswerCorrect ? 'Richtig! Stark gemacht ✅' : `Nicht ganz. Richtig ist: ${questionCode.x}`}
+        </p>
+      )}
+
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
         {options.map((opt, i) => (
-          <button 
-            key={i} 
+          <button
+            key={i}
             onClick={() => handleSelect(opt)}
             className="p-5 text-lg font-semibold bg-white text-gray-900 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
           >
@@ -532,6 +596,8 @@ function TabUebungen({ pack, addXP, gradient }: any) {
           </button>
         ))}
       </div>
+
+      <p className="mt-5 text-xs opacity-60">Antwort-Farben: Grün = richtig, Rot = falsch</p>
     </div>
   );
 }
