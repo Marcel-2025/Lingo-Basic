@@ -74,7 +74,17 @@ const PACK_FILE_BY_LANG: Record<string, string> = {
   FR: 'fr.json',
   RU: 'ru.json',
 };
-const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '';
+const FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyBJvSmyrnnuCcwkDdAp7zym9ipiY3treRo',
+  authDomain: 'lingo-basic.firebaseapp.com',
+  projectId: 'lingo-basic',
+  storageBucket: 'lingo-basic.firebasestorage.app',
+  messagingSenderId: '788312123831',
+  appId: '1:788312123831:web:7362d5b04144459318e032',
+  measurementId: 'G-SM96NW3DRS',
+};
+
+const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || FIREBASE_CONFIG.apiKey;
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
 
 const initDB = (): Promise<IDBDatabase> => {
@@ -371,7 +381,7 @@ export default function LingoApp() {
 
   const handleEmailAuth = async () => {
     if (!isAuthConfigured()) {
-      setAuthMsg('Firebase ist noch nicht konfiguriert. Bitte .env.local setzen.');
+      setAuthMsg('Firebase API Key fehlt. Bitte .env.local prüfen.');
       return;
     }
     if (!email || !password) {
@@ -395,7 +405,7 @@ export default function LingoApp() {
 
   const handleGoogleAuth = async () => {
     if (!isAuthConfigured() || !GOOGLE_CLIENT_ID) {
-      setAuthMsg('Google Login benötigt NEXT_PUBLIC_FIREBASE_API_KEY und NEXT_PUBLIC_GOOGLE_CLIENT_ID.');
+      setAuthMsg('Google Login benötigt NEXT_PUBLIC_GOOGLE_CLIENT_ID (Firebase API Key ist bereits gesetzt).');
       return;
     }
     const googleApi = (window as any).google;
