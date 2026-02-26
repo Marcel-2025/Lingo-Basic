@@ -1,0 +1,659 @@
+{
+  "version": 2,
+  "lang": "ES",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Wasser",
+          "x": "agua",
+          "ex": "Wasser ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Brot",
+          "x": "pan",
+          "ex": "Brot ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Milch",
+          "x": "leche",
+          "ex": "Milch ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Kaffee",
+          "x": "café",
+          "ex": "Kaffee ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Tee",
+          "x": "té",
+          "ex": "Tee ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Apfel",
+          "x": "manzana",
+          "ex": "Apfel ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Banane",
+          "x": "plátano",
+          "ex": "Banane ist wichtig im Thema Essen & Trinken."
+        },
+        {
+          "de": "Reis",
+          "x": "arroz",
+          "ex": "Reis ist wichtig im Thema Essen & Trinken."
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Flughafen",
+          "x": "aeropuerto",
+          "ex": "Flughafen ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Bahnhof",
+          "x": "estación",
+          "ex": "Bahnhof ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Ticket",
+          "x": "billete",
+          "ex": "Ticket ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Hotel",
+          "x": "hotel",
+          "ex": "Hotel ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Straße",
+          "x": "calle",
+          "ex": "Straße ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Karte",
+          "x": "mapa",
+          "ex": "Karte ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Koffer",
+          "x": "maleta",
+          "ex": "Koffer ist wichtig im Thema Reisen & Orientierung."
+        },
+        {
+          "de": "Pass",
+          "x": "pasaporte",
+          "ex": "Pass ist wichtig im Thema Reisen & Orientierung."
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": "easy",
+      "vocab": [
+        {
+          "de": "Haus",
+          "x": "casa",
+          "ex": "Haus ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Zimmer",
+          "x": "habitación",
+          "ex": "Zimmer ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Küche",
+          "x": "cocina",
+          "ex": "Küche ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Badezimmer",
+          "x": "baño",
+          "ex": "Badezimmer ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Fenster",
+          "x": "ventana",
+          "ex": "Fenster ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Tür",
+          "x": "puerta",
+          "ex": "Tür ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Tisch",
+          "x": "mesa",
+          "ex": "Tisch ist wichtig im Thema Zuhause."
+        },
+        {
+          "de": "Stuhl",
+          "x": "silla",
+          "ex": "Stuhl ist wichtig im Thema Zuhause."
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Arbeit",
+          "x": "trabajo",
+          "ex": "Arbeit ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Büro",
+          "x": "oficina",
+          "ex": "Büro ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Chef",
+          "x": "jefe",
+          "ex": "Chef ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Kollege",
+          "x": "colega",
+          "ex": "Kollege ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Meeting",
+          "x": "reunión",
+          "ex": "Meeting ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Projekt",
+          "x": "proyecto",
+          "ex": "Projekt ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "E-Mail",
+          "x": "correo",
+          "ex": "E-Mail ist wichtig im Thema Beruf & Alltag."
+        },
+        {
+          "de": "Pause",
+          "x": "pausa",
+          "ex": "Pause ist wichtig im Thema Beruf & Alltag."
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Arzt",
+          "x": "médico",
+          "ex": "Arzt ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Krankenhaus",
+          "x": "hospital",
+          "ex": "Krankenhaus ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Medizin",
+          "x": "medicina",
+          "ex": "Medizin ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Schmerz",
+          "x": "dolor",
+          "ex": "Schmerz ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Fieber",
+          "x": "fiebre",
+          "ex": "Fieber ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Hilfe",
+          "x": "ayuda",
+          "ex": "Hilfe ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Termin",
+          "x": "cita",
+          "ex": "Termin ist wichtig im Thema Gesundheit."
+        },
+        {
+          "de": "Rezept",
+          "x": "receta",
+          "ex": "Rezept ist wichtig im Thema Gesundheit."
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": "medium",
+      "vocab": [
+        {
+          "de": "Laden",
+          "x": "tienda",
+          "ex": "Laden ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Preis",
+          "x": "precio",
+          "ex": "Preis ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Geld",
+          "x": "dinero",
+          "ex": "Geld ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Kasse",
+          "x": "caja",
+          "ex": "Kasse ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Rabatt",
+          "x": "descuento",
+          "ex": "Rabatt ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Kunde",
+          "x": "cliente",
+          "ex": "Kunde ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Verkäufer",
+          "x": "vendedor",
+          "ex": "Verkäufer ist wichtig im Thema Einkaufen."
+        },
+        {
+          "de": "Tüte",
+          "x": "bolsa",
+          "ex": "Tüte ist wichtig im Thema Einkaufen."
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": "hard",
+      "vocab": [
+        {
+          "de": "Mutter",
+          "x": "madre",
+          "ex": "Mutter ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Vater",
+          "x": "padre",
+          "ex": "Vater ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Bruder",
+          "x": "hermano",
+          "ex": "Bruder ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Schwester",
+          "x": "hermana",
+          "ex": "Schwester ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Freund",
+          "x": "amigo",
+          "ex": "Freund ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Kind",
+          "x": "niño",
+          "ex": "Kind ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Familie",
+          "x": "familia",
+          "ex": "Familie ist wichtig im Thema Familie & Freunde."
+        },
+        {
+          "de": "Name",
+          "x": "nombre",
+          "ex": "Name ist wichtig im Thema Familie & Freunde."
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": "hard",
+      "vocab": [
+        {
+          "de": "Heute",
+          "x": "hoy",
+          "ex": "Heute ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Morgen",
+          "x": "mañana",
+          "ex": "Morgen ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Gestern",
+          "x": "ayer",
+          "ex": "Gestern ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Woche",
+          "x": "semana",
+          "ex": "Woche ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Monat",
+          "x": "mes",
+          "ex": "Monat ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Jahr",
+          "x": "año",
+          "ex": "Jahr ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Lernen",
+          "x": "aprender",
+          "ex": "Lernen ist wichtig im Thema Zeit & Lernen."
+        },
+        {
+          "de": "Sprache",
+          "x": "idioma",
+          "ex": "Sprache ist wichtig im Thema Zeit & Lernen."
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "de": "Wasser",
+      "x": "agua"
+    },
+    {
+      "de": "Brot",
+      "x": "pan"
+    },
+    {
+      "de": "Milch",
+      "x": "leche"
+    },
+    {
+      "de": "Kaffee",
+      "x": "café"
+    },
+    {
+      "de": "Tee",
+      "x": "té"
+    },
+    {
+      "de": "Apfel",
+      "x": "manzana"
+    },
+    {
+      "de": "Banane",
+      "x": "plátano"
+    },
+    {
+      "de": "Reis",
+      "x": "arroz"
+    },
+    {
+      "de": "Flughafen",
+      "x": "aeropuerto"
+    },
+    {
+      "de": "Bahnhof",
+      "x": "estación"
+    },
+    {
+      "de": "Ticket",
+      "x": "billete"
+    },
+    {
+      "de": "Hotel",
+      "x": "hotel"
+    },
+    {
+      "de": "Straße",
+      "x": "calle"
+    },
+    {
+      "de": "Karte",
+      "x": "mapa"
+    },
+    {
+      "de": "Koffer",
+      "x": "maleta"
+    },
+    {
+      "de": "Pass",
+      "x": "pasaporte"
+    },
+    {
+      "de": "Haus",
+      "x": "casa"
+    },
+    {
+      "de": "Zimmer",
+      "x": "habitación"
+    },
+    {
+      "de": "Küche",
+      "x": "cocina"
+    },
+    {
+      "de": "Badezimmer",
+      "x": "baño"
+    },
+    {
+      "de": "Fenster",
+      "x": "ventana"
+    },
+    {
+      "de": "Tür",
+      "x": "puerta"
+    },
+    {
+      "de": "Tisch",
+      "x": "mesa"
+    },
+    {
+      "de": "Stuhl",
+      "x": "silla"
+    },
+    {
+      "de": "Arbeit",
+      "x": "trabajo"
+    },
+    {
+      "de": "Büro",
+      "x": "oficina"
+    },
+    {
+      "de": "Chef",
+      "x": "jefe"
+    },
+    {
+      "de": "Kollege",
+      "x": "colega"
+    },
+    {
+      "de": "Meeting",
+      "x": "reunión"
+    },
+    {
+      "de": "Projekt",
+      "x": "proyecto"
+    },
+    {
+      "de": "E-Mail",
+      "x": "correo"
+    },
+    {
+      "de": "Pause",
+      "x": "pausa"
+    },
+    {
+      "de": "Arzt",
+      "x": "médico"
+    },
+    {
+      "de": "Krankenhaus",
+      "x": "hospital"
+    },
+    {
+      "de": "Medizin",
+      "x": "medicina"
+    },
+    {
+      "de": "Schmerz",
+      "x": "dolor"
+    },
+    {
+      "de": "Fieber",
+      "x": "fiebre"
+    },
+    {
+      "de": "Hilfe",
+      "x": "ayuda"
+    },
+    {
+      "de": "Termin",
+      "x": "cita"
+    },
+    {
+      "de": "Rezept",
+      "x": "receta"
+    },
+    {
+      "de": "Laden",
+      "x": "tienda"
+    },
+    {
+      "de": "Preis",
+      "x": "precio"
+    },
+    {
+      "de": "Geld",
+      "x": "dinero"
+    },
+    {
+      "de": "Kasse",
+      "x": "caja"
+    },
+    {
+      "de": "Rabatt",
+      "x": "descuento"
+    },
+    {
+      "de": "Kunde",
+      "x": "cliente"
+    },
+    {
+      "de": "Verkäufer",
+      "x": "vendedor"
+    },
+    {
+      "de": "Tüte",
+      "x": "bolsa"
+    },
+    {
+      "de": "Mutter",
+      "x": "madre"
+    },
+    {
+      "de": "Vater",
+      "x": "padre"
+    },
+    {
+      "de": "Bruder",
+      "x": "hermano"
+    },
+    {
+      "de": "Schwester",
+      "x": "hermana"
+    },
+    {
+      "de": "Freund",
+      "x": "amigo"
+    },
+    {
+      "de": "Kind",
+      "x": "niño"
+    },
+    {
+      "de": "Familie",
+      "x": "familia"
+    },
+    {
+      "de": "Name",
+      "x": "nombre"
+    },
+    {
+      "de": "Heute",
+      "x": "hoy"
+    },
+    {
+      "de": "Morgen",
+      "x": "mañana"
+    },
+    {
+      "de": "Gestern",
+      "x": "ayer"
+    },
+    {
+      "de": "Woche",
+      "x": "semana"
+    },
+    {
+      "de": "Monat",
+      "x": "mes"
+    },
+    {
+      "de": "Jahr",
+      "x": "año"
+    },
+    {
+      "de": "Lernen",
+      "x": "aprender"
+    },
+    {
+      "de": "Sprache",
+      "x": "idioma"
+    }
+  ],
+  "sentences": [
+    {
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "aprender"
+    },
+    {
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "idioma"
+    }
+  ]
+}

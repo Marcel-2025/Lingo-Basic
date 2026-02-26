@@ -17,12 +17,22 @@ interface SentenceItem {
   x: string;
 }
 
+interface TopicItem {
+  id: string;
+  title: string;
+  icon?: string;
+  level?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  vocab: VocabItem[];
+}
+
 interface LanguagePack {
   version: number;
   lang: string;
   level: string;
-  vocab: VocabItem[];
-  sentences: SentenceItem[];
+  vocab?: VocabItem[];
+  topics?: TopicItem[];
+  sentences?: SentenceItem[];
 }
 
 interface UserStats {
@@ -49,6 +59,13 @@ interface AppSettings {
 // ==========================================
 const DB_NAME = 'LingoDB';
 const STORE_NAME = 'packs';
+const PUBLIC_PACKS_PATH = '/packs';
+const PACK_FILE_BY_LANG: Record<string, string> = {
+  EN: 'en.json',
+  ES: 'es.json',
+  FR: 'fr.json',
+  RU: 'ru.json',
+};
 
 const initDB = (): Promise<IDBDatabase> => {
   return new Promise((resolve, reject) => {
@@ -91,6 +108,61 @@ const deletePackFromDB = async (lang: string) => {
     tx.oncomplete = resolve;
     tx.onerror = reject;
   });
+};
+
+const fetchPackFromPublicFolder = async (lang: string): Promise<LanguagePack | null> => {
+  const fileName = PACK_FILE_BY_LANG[lang];
+  if (!fileName) return null;
+
+  try {
+    const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
+    if (!response.ok) return null;
+
+    const pack = normalizePack((await response.json()) as LanguagePack);
+    if (!pack) return null;
+
+    return pack;
+  } catch {
+    return null;
+  }
+};
+
+
+const getVocabFromPack = (pack: LanguagePack | null): VocabItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) {
+    return pack.topics.flatMap(topic => topic.vocab || []);
+  }
+  return Array.isArray(pack.vocab) ? pack.vocab : [];
+};
+
+const getTopicsFromPack = (pack: LanguagePack | null): TopicItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) return pack.topics;
+
+  const fallbackVocab = Array.isArray(pack.vocab) ? pack.vocab : [];
+  if (fallbackVocab.length === 0) return [];
+
+  return [{
+    id: 'all',
+    title: 'Allgemein',
+    icon: '📘',
+    level: pack.level,
+    difficulty: 'easy',
+    vocab: fallbackVocab,
+  }];
+};
+
+const normalizePack = (pack: LanguagePack): LanguagePack | null => {
+  const hasLegacyVocab = Array.isArray(pack?.vocab) && pack.vocab.length > 0;
+  const hasTopics = Array.isArray(pack?.topics) && pack.topics.length > 0;
+  if (!pack?.lang || (!hasLegacyVocab && !hasTopics)) return null;
+  return {
+    ...pack,
+    vocab: hasLegacyVocab ? pack.vocab : undefined,
+    topics: hasTopics ? pack.topics : undefined,
+    sentences: Array.isArray(pack.sentences) ? pack.sentences : [],
+  };
 };
 
 // ==========================================
@@ -158,8 +230,20 @@ export default function LingoApp() {
   };
 
   const loadPack = async (lang: string) => {
-    const pack = await getPackFromDB(lang);
-    setCurrentPack(pack);
+    const cachedPack = await getPackFromDB(lang);
+    if (cachedPack) {
+      setCurrentPack(cachedPack);
+      return;
+    }
+
+    const publicPack = await fetchPackFromPublicFolder(lang);
+    if (publicPack) {
+      await savePackToDB(publicPack);
+      setCurrentPack(publicPack);
+      return;
+    }
+
+    setCurrentPack(null);
   };
 
   // Gamification Logic
@@ -240,7 +324,7 @@ export default function LingoApp() {
           </div>
         ) : (
           <>
-            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
+            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} />}
             {activeTab === 'uebungen' && <TabUebungen pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
             {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} />}
             {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang)} gradient={gradient} />}
@@ -265,65 +349,122 @@ export default function LingoApp() {
 // KOMPONENTEN FÜR TABS
 // ==========================================
 
-function TabHeute({ pack, speak, addXP, gradient }: any) {
+function TabHeute({ pack, speak, addXP, gradient, isPremiumUser }: any) {
   const [queue, setQueue] = useState<VocabItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [selectedTopicId, setSelectedTopicId] = useState('all');
+
+  const topics = getTopicsFromPack(pack);
+
+  const buildQueueForTopic = (topicId: string) => {
+    const topicVocab = topicId === 'all'
+      ? getVocabFromPack(pack)
+      : topics.find(topic => topic.id === topicId)?.vocab || [];
+
+    const shuffled = [...topicVocab].sort(() => 0.5 - Math.random());
+    setQueue(shuffled);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  };
 
   useEffect(() => {
-    if (pack?.vocab) {
-      // Simple SRS Simulation: Shuffle and take top 20
-      const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random()).slice(0, 20);
-      setQueue(shuffled);
-      setCurrentIndex(0);
-      setIsFlipped(false);
-    }
+    const hasAllTopic = topics.some(topic => topic.id === 'all');
+    const defaultTopicId = hasAllTopic ? 'all' : (topics[0]?.id || 'all');
+    setSelectedTopicId(defaultTopicId);
+    buildQueueForTopic(defaultTopicId);
   }, [pack]);
 
+  useEffect(() => {
+    buildQueueForTopic(selectedTopicId);
+  }, [selectedTopicId]);
+
   if (queue.length === 0) return <div>Lade Karten...</div>;
-  if (currentIndex >= queue.length) return (
-    <div className="text-center mt-20 animate-bounce">
-      <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
-      <p>Komm morgen wieder für mehr XP.</p>
-    </div>
-  );
 
   const card = queue[currentIndex];
+
+  if (!card) {
+    if (isPremiumUser) {
+      return (
+        <div className="text-center mt-20">
+          <h2 className="text-3xl font-bold mb-2">Weiter geht's! 🚀</h2>
+          <p className="opacity-80 mb-6">Als Premium lernst du ohne Limit. Starte einfach die nächste Runde.</p>
+          <button onClick={() => buildQueueForTopic(selectedTopicId)} className={`px-6 py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>
+            Nächste Runde starten
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="text-center mt-20 animate-bounce">
+        <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
+        <p>Komm morgen wieder für mehr XP.</p>
+      </div>
+    );
+  }
 
   const handleAnswer = (known: boolean) => {
     addXP(known ? 10 : 2, known);
     setIsFlipped(false);
-    setCurrentIndex(prev => prev + 1);
+
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= queue.length && isPremiumUser) {
+      buildQueueForTopic(selectedTopicId);
+      return;
+    }
+
+    setCurrentIndex(nextIndex);
     if ('vibrate' in navigator) navigator.vibrate(known ? [50, 50] : [100]);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full mt-10">
-      <div className="w-full mb-4 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+    <div className="flex flex-col items-center justify-center h-full mt-6">
+      <div className="w-full mb-4">
+        <div className="flex flex-wrap gap-2 mb-4">
+          <button
+            onClick={() => setSelectedTopicId('all')}
+            className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === 'all' ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+          >
+            🌍 Alle Themen
+          </button>
+          {topics.filter(topic => topic.id !== 'all').map(topic => (
+            <button
+              key={topic.id}
+              onClick={() => setSelectedTopicId(topic.id)}
+              className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === topic.id ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+            >
+              {topic.icon || '📘'} {topic.title}
+            </button>
+          ))}
+        </div>
+
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+        </div>
       </div>
-      
-      <div 
-        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white dark:bg-gray-800 border-2 border-indigo-200' : 'bg-white dark:bg-gray-800'}`}
+
+      <div
+        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white border-2 border-indigo-200' : 'bg-white'} text-gray-900`}
         onClick={() => !isFlipped && setIsFlipped(true)}
       >
         <div className="text-gray-400 mb-2 uppercase tracking-widest text-sm font-bold">Deutsch</div>
         <h2 className="text-3xl font-bold mb-4">{card.de}</h2>
-        
+
         {isFlipped ? (
           <div className="animate-fade-in mt-6 pt-6 border-t border-gray-100 w-full">
-             <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
-             <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{card.x}</h2>
-             {card.ex && (
-               <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl italic opacity-80 text-sm">
-                 <p>{card.ex}</p>
-                 <p className="mt-1 font-semibold">{card.exTr}</p>
-               </div>
-             )}
-             <div className="flex space-x-4 mt-6 justify-center">
-                <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🇩🇪 🔊</button>
-                <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🎯 🔊</button>
-             </div>
+            <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
+            <h2 className="text-3xl font-bold text-indigo-600 mb-4">{card.x}</h2>
+            {card.ex && (
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl italic opacity-90 text-sm text-gray-900">
+                <p>{card.ex}</p>
+                <p className="mt-1 font-semibold">{card.exTr}</p>
+              </div>
+            )}
+            <div className="flex space-x-4 mt-6 justify-center">
+              <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🇩🇪 🔊</button>
+              <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🎯 🔊</button>
+            </div>
           </div>
         ) : (
           <p className="mt-10 opacity-50 animate-pulse">Tippe zum Aufdecken</p>
@@ -332,7 +473,7 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
 
       {isFlipped && (
         <div className="flex space-x-4 mt-8 w-full max-w-md">
-          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-600 dark:bg-red-900/30 hover:bg-red-200 transition">Noch üben</button>
+          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-700 hover:bg-red-200 transition">Noch üben</button>
           <button onClick={() => handleAnswer(true)} className={`flex-1 py-4 rounded-2xl font-bold text-white bg-gradient-to-r ${gradient} shadow-lg hover:opacity-90 transition`}>Gewusst</button>
         </div>
       )}
@@ -345,8 +486,9 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   const [options, setOptions] = useState<string[]>([]);
   
   const generateQuestion = () => {
-    if (!pack?.vocab || pack.vocab.length < 4) return;
-    const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random());
+    const vocab = getVocabFromPack(pack);
+    if (vocab.length < 4) return;
+    const shuffled = [...vocab].sort(() => 0.5 - Math.random());
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
     const allOptions = [correct.x, ...wrongs].sort(() => 0.5 - Math.random());
@@ -384,7 +526,7 @@ function TabUebungen({ pack, addXP, gradient }: any) {
           <button 
             key={i} 
             onClick={() => handleSelect(opt)}
-            className="p-5 text-lg font-semibold bg-white dark:bg-gray-800 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
+            className="p-5 text-lg font-semibold bg-white text-gray-900 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
           >
             {opt}
           </button>
@@ -400,7 +542,7 @@ function TabProfil({ stats, gradient }: any) {
   return (
     <div className="mt-4 space-y-6">
       <div className="text-center">
-        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white dark:border-gray-800`}>
+        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white`}>
           🦉
         </div>
         <h2 className="text-3xl font-bold">Level {stats.level}</h2>
@@ -414,7 +556,7 @@ function TabProfil({ stats, gradient }: any) {
         <StatBox title="Genauigkeit" value={`${accuracy}%`} icon="🎯" />
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm mt-6">
+      <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
         <h3 className="font-bold text-lg mb-4">Achievements</h3>
         <ul className="space-y-3">
           <Achievement name="Erster Schritt" done={stats.xp > 0} />
@@ -441,9 +583,10 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     const reader = new FileReader();
     reader.onload = async (event) => {
       try {
-        const pack = JSON.parse(event.target?.result as string) as LanguagePack;
-        await savePackToDB(pack);
-        setMsg(`Paket ${pack.lang} erfolgreich geladen!`);
+        const parsed = normalizePack(JSON.parse(event.target?.result as string) as LanguagePack);
+        if (!parsed) throw new Error('Invalid pack');
+        await savePackToDB(parsed);
+        setMsg(`Paket ${parsed.lang} erfolgreich geladen!`);
         onPackChange();
       } catch (err) {
         setMsg('Fehler beim Lesen der JSON-Datei.');
@@ -456,12 +599,35 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     try {
       setMsg('Lade...');
       const res = await fetch(url);
-      const pack = await res.json();
-      await savePackToDB(pack);
-      setMsg(`Paket ${pack.lang} heruntergeladen!`);
+      const parsed = normalizePack(await res.json() as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} heruntergeladen!`);
       onPackChange();
     } catch (err) {
       setMsg('Fehler beim Download der URL.');
+    }
+  };
+
+  const loadFromProjectFolder = async () => {
+    const fileName = PACK_FILE_BY_LANG[settings.targetLang];
+    if (!fileName) {
+      setMsg(`Für ${settings.targetLang} ist keine Datei in /public/packs hinterlegt.`);
+      return;
+    }
+
+    try {
+      setMsg(`Lade ${fileName} aus /public/packs ...`);
+      const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Datei nicht gefunden');
+
+      const parsed = normalizePack((await response.json()) as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} aus /public/packs geladen.`);
+      onPackChange();
+    } catch {
+      setMsg(`Konnte ${fileName} in /public/packs nicht laden.`);
     }
   };
 
@@ -475,11 +641,11 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     <div className="mt-4 space-y-6 pb-10">
       <h2 className="text-3xl font-bold mb-6">Einstellungen</h2>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <div>
           <label className="block text-sm font-bold opacity-70 mb-2">Zielsprache (für Pack)</label>
           <select 
-            className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none"
+            className="w-full p-3 rounded-xl bg-gray-100 outline-none text-gray-900"
             value={settings.targetLang}
             onChange={(e) => { updateSetting('targetLang', e.target.value); onPackChange(); }}
           >
@@ -497,7 +663,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
               <button 
                 key={t}
                 onClick={() => updateSetting('theme', t)}
-                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 dark:bg-gray-700`}
+                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 text-gray-900`}
               >
                 {t}
               </button>
@@ -516,26 +682,32 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <h3 className="font-bold text-lg">Inhalte verwalten</h3>
         
         <div>
+           <label className="block text-sm font-bold opacity-70 mb-2">Direkt aus /public/packs laden</label>
+           <button onClick={loadFromProjectFolder} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Pack für {settings.targetLang} laden</button>
+           <p className="text-xs opacity-60 mt-2">Erwartete Datei: /public/packs/{PACK_FILE_BY_LANG[settings.targetLang] || 'nicht definiert'}</p>
+        </div>
+
+        <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Aus JSON Datei importieren</label>
            <input type="file" accept=".json" ref={fileInputRef} onChange={handleFileUpload} className="hidden" />
-           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 dark:bg-gray-700 rounded-xl font-semibold">Datei auswählen</button>
+           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 rounded-xl font-semibold text-gray-900">Datei auswählen</button>
         </div>
 
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Von URL importieren</label>
            <div className="flex space-x-2">
-             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none" />
+             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 outline-none text-gray-900" />
              <button onClick={loadFromURL} className={`px-4 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Laden</button>
            </div>
         </div>
         
         {msg && <p className="text-sm font-bold text-green-500">{msg}</p>}
 
-        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-500 bg-red-50 dark:bg-red-900/20 rounded-xl font-bold">Zwischenspeicher löschen</button>
+        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-600 bg-red-50 rounded-xl font-bold">Zwischenspeicher löschen</button>
       </div>
     </div>
   );
@@ -547,7 +719,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
 
 function NavButton({ icon, label, isActive, onClick, gradient }: any) {
   return (
-    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>
+    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-500 hover:bg-gray-100'}`}>
       <span className="text-2xl mb-1">{icon}</span>
       <span className="text-[10px] font-bold uppercase tracking-wider">{label}</span>
     </button>
@@ -556,7 +728,7 @@ function NavButton({ icon, label, isActive, onClick, gradient }: any) {
 
 function StatBox({ title, value, icon }: any) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
+    <div className="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center text-gray-900">
       <div className="text-3xl mb-2">{icon}</div>
       <div className="text-2xl font-black">{value}</div>
       <div className="text-xs font-bold opacity-50 uppercase mt-1">{title}</div>
@@ -566,8 +738,8 @@ function StatBox({ title, value, icon }: any) {
 
 function Achievement({ name, done, subtitle }: any) {
   return (
-    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50 dark:bg-green-900/20' : 'opacity-40 grayscale'}`}>
-      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`}>
+    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50' : 'opacity-40 grayscale'}`}>
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200' : 'bg-gray-200'}`}>
         {done ? '🏆' : '🔒'}
       </div>
       <div>
