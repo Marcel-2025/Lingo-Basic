@@ -32,6 +32,15 @@ interface TopicItem {
   vocab: VocabItem[];
 }
 
+interface TopicItem {
+  id: string;
+  title: string;
+  icon?: string;
+  level?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  vocab: VocabItem[];
+}
+
 interface LanguagePack {
   version: number;
   lang: string;
@@ -530,6 +539,116 @@ export default function LingoApp() {
       const existingWords = prev.learnedWordsByTopic[topicTitle] || [];
       const safeWordLabel = `${wordItem.de}${wordItem.id ? ` (#${wordItem.id})` : ''}`;
       const nextWords = existingWords.includes(safeWordLabel) ? existingWords : [...existingWords, safeWordLabel];
+
+      return {
+        learnedDays: {
+          ...prev.learnedDays,
+          [todayKey]: (prev.learnedDays[todayKey] || 0) + 1,
+        },
+        learnedWordsByTopic: {
+          ...prev.learnedWordsByTopic,
+          [topicTitle]: nextWords,
+        },
+      };
+    });
+  };
+
+  useEffect(() => {
+    localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
+  }, [authUser]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoLearningInsights', JSON.stringify(learningInsights));
+  }, [learningInsights]);
+
+
+  useEffect(() => {
+    if (!authUser) {
+      setCloudSyncReady(true);
+      return;
+    }
+
+    const hydrateCloudProgress = async () => {
+      try {
+        const cloud = await loadCloudProgress(authUser);
+        const localStatsRaw = localStorage.getItem('lingoStats');
+        const localSettingsRaw = localStorage.getItem('lingoSettings');
+
+        const localStats = localStatsRaw ? (JSON.parse(localStatsRaw) as UserStats) : null;
+        const localSettings = localSettingsRaw ? (JSON.parse(localSettingsRaw) as AppSettings) : null;
+        const localUpdatedAt = Number(localStorage.getItem('lingoStatsUpdatedAt') || 0);
+
+        if (!cloud) {
+          if (localStats && localSettings) {
+            await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          }
+          setCloudSyncReady(true);
+          return;
+        }
+
+        if (localStats && localSettings && localUpdatedAt > cloud.updatedAt) {
+          await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          setLastCloudSyncAt(Date.now());
+        } else {
+          setStats(cloud.stats);
+          setSettings(cloud.settings);
+          localStorage.setItem('lingoStats', JSON.stringify(cloud.stats));
+          localStorage.setItem('lingoSettings', JSON.stringify(cloud.settings));
+          localStorage.setItem('lingoStatsUpdatedAt', String(cloud.updatedAt || Date.now()));
+          setLastCloudSyncAt(cloud.updatedAt || Date.now());
+        }
+      } catch (error) {
+        setAuthMsg(`Cloud Sync Fehler: ${(error as Error).message}`);
+      } finally {
+        setCloudSyncReady(true);
+      }
+    };
+
+    setCloudSyncReady(false);
+    hydrateCloudProgress();
+  }, [authUser]);
+
+  useEffect(() => {
+    if (!isLoaded || !cloudSyncReady) return;
+
+    const now = Date.now();
+    localStorage.setItem('lingoStatsUpdatedAt', String(now));
+
+    if (!authUser) return;
+
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        await saveCloudProgress(authUser, { stats, settings, updatedAt: now });
+        setLastCloudSyncAt(now);
+      } catch {
+        // keep local progress, retry on next state update
+      }
+    }, 600);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [stats, settings, authUser, isLoaded, cloudSyncReady]);
+
+  useEffect(() => {
+    if (!isAuthOpen || !googleClientId || !isAuthConfigured()) return;
+    if (typeof window === 'undefined') return;
+
+    const scriptId = 'google-identity-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, [isAuthOpen, googleClientId]);
+
+
+  const onLearnedWord = (topicTitle: string, word: string) => {
+    const todayKey = new Date().toISOString().slice(0, 10);
+    setLearningInsights(prev => {
+      const existingWords = prev.learnedWordsByTopic[topicTitle] || [];
+      const nextWords = existingWords.includes(word) ? existingWords : [...existingWords, word];
 
       return {
         learnedDays: {
