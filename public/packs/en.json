@@ -1,0 +1,1373 @@
+{
+  "version": 2,
+  "lang": "EN",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Wasser",
+          "x": "water",
+          "ex": "Wasser ist wichtig im Thema Essen & Trinken.",
+          "exTr": "water is important in topic Essen & Trinken.",
+          "id": "food_01_wasser",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Brot",
+          "x": "bread",
+          "ex": "Brot ist wichtig im Thema Essen & Trinken.",
+          "exTr": "bread is important in topic Essen & Trinken.",
+          "id": "food_01_brot",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Milch",
+          "x": "milk",
+          "ex": "Milch ist wichtig im Thema Essen & Trinken.",
+          "exTr": "milk is important in topic Essen & Trinken.",
+          "id": "food_01_milch",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Kaffee",
+          "x": "coffee",
+          "ex": "Kaffee ist wichtig im Thema Essen & Trinken.",
+          "exTr": "coffee is important in topic Essen & Trinken.",
+          "id": "food_01_kaffee",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Tee",
+          "x": "tea",
+          "ex": "Tee ist wichtig im Thema Essen & Trinken.",
+          "exTr": "tea is important in topic Essen & Trinken.",
+          "id": "food_01_tee",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Apfel",
+          "x": "apple",
+          "ex": "Apfel ist wichtig im Thema Essen & Trinken.",
+          "exTr": "apple is important in topic Essen & Trinken.",
+          "id": "food_01_apfel",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Banane",
+          "x": "banana",
+          "ex": "Banane ist wichtig im Thema Essen & Trinken.",
+          "exTr": "banana is important in topic Essen & Trinken.",
+          "id": "food_01_banane",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Reis",
+          "x": "rice",
+          "ex": "Reis ist wichtig im Thema Essen & Trinken.",
+          "exTr": "rice is important in topic Essen & Trinken.",
+          "id": "food_01_reis",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Flughafen",
+          "x": "airport",
+          "ex": "Flughafen ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "airport is important in topic Reisen & Orientierung.",
+          "id": "travel_02_flughafen",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Bahnhof",
+          "x": "train station",
+          "ex": "Bahnhof ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "train station is important in topic Reisen & Orientierung.",
+          "id": "travel_02_bahnhof",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Ticket",
+          "x": "ticket",
+          "ex": "Ticket ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "ticket is important in topic Reisen & Orientierung.",
+          "id": "travel_02_ticket",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Hotel",
+          "x": "hotel",
+          "ex": "Hotel ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "hotel is important in topic Reisen & Orientierung.",
+          "id": "travel_02_hotel",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Straße",
+          "x": "street",
+          "ex": "Straße ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "street is important in topic Reisen & Orientierung.",
+          "id": "travel_02_stra_e",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Karte",
+          "x": "map",
+          "ex": "Karte ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "map is important in topic Reisen & Orientierung.",
+          "id": "travel_02_karte",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Koffer",
+          "x": "suitcase",
+          "ex": "Koffer ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "suitcase is important in topic Reisen & Orientierung.",
+          "id": "travel_02_koffer",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Pass",
+          "x": "passport",
+          "ex": "Pass ist wichtig im Thema Reisen & Orientierung.",
+          "exTr": "passport is important in topic Reisen & Orientierung.",
+          "id": "travel_02_pass",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Haus",
+          "x": "house",
+          "ex": "Haus ist wichtig im Thema Zuhause.",
+          "exTr": "house is important in topic Zuhause.",
+          "id": "home_03_haus",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Zimmer",
+          "x": "room",
+          "ex": "Zimmer ist wichtig im Thema Zuhause.",
+          "exTr": "room is important in topic Zuhause.",
+          "id": "home_03_zimmer",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Küche",
+          "x": "kitchen",
+          "ex": "Küche ist wichtig im Thema Zuhause.",
+          "exTr": "kitchen is important in topic Zuhause.",
+          "id": "home_03_kuche",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Badezimmer",
+          "x": "bathroom",
+          "ex": "Badezimmer ist wichtig im Thema Zuhause.",
+          "exTr": "bathroom is important in topic Zuhause.",
+          "id": "home_03_badezimmer",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Fenster",
+          "x": "window",
+          "ex": "Fenster ist wichtig im Thema Zuhause.",
+          "exTr": "window is important in topic Zuhause.",
+          "id": "home_03_fenster",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Tür",
+          "x": "door",
+          "ex": "Tür ist wichtig im Thema Zuhause.",
+          "exTr": "door is important in topic Zuhause.",
+          "id": "home_03_tur",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Tisch",
+          "x": "table",
+          "ex": "Tisch ist wichtig im Thema Zuhause.",
+          "exTr": "table is important in topic Zuhause.",
+          "id": "home_03_tisch",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Stuhl",
+          "x": "chair",
+          "ex": "Stuhl ist wichtig im Thema Zuhause.",
+          "exTr": "chair is important in topic Zuhause.",
+          "id": "home_03_stuhl",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Arbeit",
+          "x": "work",
+          "ex": "Arbeit ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "work is important in topic Beruf & Alltag.",
+          "id": "work_04_arbeit",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Büro",
+          "x": "office",
+          "ex": "Büro ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "office is important in topic Beruf & Alltag.",
+          "id": "work_04_buro",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Chef",
+          "x": "boss",
+          "ex": "Chef ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "boss is important in topic Beruf & Alltag.",
+          "id": "work_04_chef",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Kollege",
+          "x": "colleague",
+          "ex": "Kollege ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "colleague is important in topic Beruf & Alltag.",
+          "id": "work_04_kollege",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Meeting",
+          "x": "meeting",
+          "ex": "Meeting ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "meeting is important in topic Beruf & Alltag.",
+          "id": "work_04_meeting",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Projekt",
+          "x": "project",
+          "ex": "Projekt ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "project is important in topic Beruf & Alltag.",
+          "id": "work_04_projekt",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "E-Mail",
+          "x": "email",
+          "ex": "E-Mail ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "email is important in topic Beruf & Alltag.",
+          "id": "work_04_e_mail",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Pause",
+          "x": "break",
+          "ex": "Pause ist wichtig im Thema Beruf & Alltag.",
+          "exTr": "break is important in topic Beruf & Alltag.",
+          "id": "work_04_pause",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Arzt",
+          "x": "doctor",
+          "ex": "Arzt ist wichtig im Thema Gesundheit.",
+          "exTr": "doctor is important in topic Gesundheit.",
+          "id": "health_05_arzt",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Krankenhaus",
+          "x": "hospital",
+          "ex": "Krankenhaus ist wichtig im Thema Gesundheit.",
+          "exTr": "hospital is important in topic Gesundheit.",
+          "id": "health_05_krankenhaus",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Medizin",
+          "x": "medicine",
+          "ex": "Medizin ist wichtig im Thema Gesundheit.",
+          "exTr": "medicine is important in topic Gesundheit.",
+          "id": "health_05_medizin",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Schmerz",
+          "x": "pain",
+          "ex": "Schmerz ist wichtig im Thema Gesundheit.",
+          "exTr": "pain is important in topic Gesundheit.",
+          "id": "health_05_schmerz",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Fieber",
+          "x": "fever",
+          "ex": "Fieber ist wichtig im Thema Gesundheit.",
+          "exTr": "fever is important in topic Gesundheit.",
+          "id": "health_05_fieber",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Hilfe",
+          "x": "help",
+          "ex": "Hilfe ist wichtig im Thema Gesundheit.",
+          "exTr": "help is important in topic Gesundheit.",
+          "id": "health_05_hilfe",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Termin",
+          "x": "appointment",
+          "ex": "Termin ist wichtig im Thema Gesundheit.",
+          "exTr": "appointment is important in topic Gesundheit.",
+          "id": "health_05_termin",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Rezept",
+          "x": "prescription",
+          "ex": "Rezept ist wichtig im Thema Gesundheit.",
+          "exTr": "prescription is important in topic Gesundheit.",
+          "id": "health_05_rezept",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Laden",
+          "x": "shop",
+          "ex": "Laden ist wichtig im Thema Einkaufen.",
+          "exTr": "shop is important in topic Einkaufen.",
+          "id": "shopping_06_laden",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Preis",
+          "x": "price",
+          "ex": "Preis ist wichtig im Thema Einkaufen.",
+          "exTr": "price is important in topic Einkaufen.",
+          "id": "shopping_06_preis",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Geld",
+          "x": "money",
+          "ex": "Geld ist wichtig im Thema Einkaufen.",
+          "exTr": "money is important in topic Einkaufen.",
+          "id": "shopping_06_geld",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Kasse",
+          "x": "checkout",
+          "ex": "Kasse ist wichtig im Thema Einkaufen.",
+          "exTr": "checkout is important in topic Einkaufen.",
+          "id": "shopping_06_kasse",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Rabatt",
+          "x": "discount",
+          "ex": "Rabatt ist wichtig im Thema Einkaufen.",
+          "exTr": "discount is important in topic Einkaufen.",
+          "id": "shopping_06_rabatt",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Kunde",
+          "x": "customer",
+          "ex": "Kunde ist wichtig im Thema Einkaufen.",
+          "exTr": "customer is important in topic Einkaufen.",
+          "id": "shopping_06_kunde",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Verkäufer",
+          "x": "seller",
+          "ex": "Verkäufer ist wichtig im Thema Einkaufen.",
+          "exTr": "seller is important in topic Einkaufen.",
+          "id": "shopping_06_verkaufer",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Tüte",
+          "x": "bag",
+          "ex": "Tüte ist wichtig im Thema Einkaufen.",
+          "exTr": "bag is important in topic Einkaufen.",
+          "id": "shopping_06_tute",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "de": "Mutter",
+          "x": "mother",
+          "ex": "Mutter ist wichtig im Thema Familie & Freunde.",
+          "exTr": "mother is important in topic Familie & Freunde.",
+          "id": "family_07_mutter",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Vater",
+          "x": "father",
+          "ex": "Vater ist wichtig im Thema Familie & Freunde.",
+          "exTr": "father is important in topic Familie & Freunde.",
+          "id": "family_07_vater",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Bruder",
+          "x": "brother",
+          "ex": "Bruder ist wichtig im Thema Familie & Freunde.",
+          "exTr": "brother is important in topic Familie & Freunde.",
+          "id": "family_07_bruder",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Schwester",
+          "x": "sister",
+          "ex": "Schwester ist wichtig im Thema Familie & Freunde.",
+          "exTr": "sister is important in topic Familie & Freunde.",
+          "id": "family_07_schwester",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Freund",
+          "x": "friend",
+          "ex": "Freund ist wichtig im Thema Familie & Freunde.",
+          "exTr": "friend is important in topic Familie & Freunde.",
+          "id": "family_07_freund",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Kind",
+          "x": "child",
+          "ex": "Kind ist wichtig im Thema Familie & Freunde.",
+          "exTr": "child is important in topic Familie & Freunde.",
+          "id": "family_07_kind",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Familie",
+          "x": "family",
+          "ex": "Familie ist wichtig im Thema Familie & Freunde.",
+          "exTr": "family is important in topic Familie & Freunde.",
+          "id": "family_07_familie",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Name",
+          "x": "name",
+          "ex": "Name ist wichtig im Thema Familie & Freunde.",
+          "exTr": "name is important in topic Familie & Freunde.",
+          "id": "family_07_name",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "de": "Heute",
+          "x": "today",
+          "ex": "Heute ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "today is important in topic Zeit & Lernen.",
+          "id": "time_08_heute",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Morgen",
+          "x": "tomorrow",
+          "ex": "Morgen ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "tomorrow is important in topic Zeit & Lernen.",
+          "id": "time_08_morgen",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Gestern",
+          "x": "yesterday",
+          "ex": "Gestern ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "yesterday is important in topic Zeit & Lernen.",
+          "id": "time_08_gestern",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Woche",
+          "x": "week",
+          "ex": "Woche ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "week is important in topic Zeit & Lernen.",
+          "id": "time_08_woche",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Monat",
+          "x": "month",
+          "ex": "Monat ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "month is important in topic Zeit & Lernen.",
+          "id": "time_08_monat",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Jahr",
+          "x": "year",
+          "ex": "Jahr ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "year is important in topic Zeit & Lernen.",
+          "id": "time_08_jahr",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Lernen",
+          "x": "to learn",
+          "ex": "Lernen ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "to learn is important in topic Zeit & Lernen.",
+          "id": "time_08_lernen",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Sprache",
+          "x": "language",
+          "ex": "Sprache ist wichtig im Thema Zeit & Lernen.",
+          "exTr": "language is important in topic Zeit & Lernen.",
+          "id": "time_08_sprache",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "de": "Wasser",
+      "x": "water",
+      "id": "general_wasser",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Brot",
+      "x": "bread",
+      "id": "general_brot",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Milch",
+      "x": "milk",
+      "id": "general_milch",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kaffee",
+      "x": "coffee",
+      "id": "general_kaffee",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tee",
+      "x": "tea",
+      "id": "general_tee",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Apfel",
+      "x": "apple",
+      "id": "general_apfel",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Banane",
+      "x": "banana",
+      "id": "general_banane",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Reis",
+      "x": "rice",
+      "id": "general_reis",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Flughafen",
+      "x": "airport",
+      "id": "general_flughafen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Bahnhof",
+      "x": "train station",
+      "id": "general_bahnhof",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Ticket",
+      "x": "ticket",
+      "id": "general_ticket",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Hotel",
+      "x": "hotel",
+      "id": "general_hotel",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Straße",
+      "x": "street",
+      "id": "general_stra_e",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Karte",
+      "x": "map",
+      "id": "general_karte",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Koffer",
+      "x": "suitcase",
+      "id": "general_koffer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Pass",
+      "x": "passport",
+      "id": "general_pass",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Haus",
+      "x": "house",
+      "id": "general_haus",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Zimmer",
+      "x": "room",
+      "id": "general_zimmer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Küche",
+      "x": "kitchen",
+      "id": "general_kuche",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Badezimmer",
+      "x": "bathroom",
+      "id": "general_badezimmer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Fenster",
+      "x": "window",
+      "id": "general_fenster",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tür",
+      "x": "door",
+      "id": "general_tur",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tisch",
+      "x": "table",
+      "id": "general_tisch",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Stuhl",
+      "x": "chair",
+      "id": "general_stuhl",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Arbeit",
+      "x": "work",
+      "id": "general_arbeit",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Büro",
+      "x": "office",
+      "id": "general_buro",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Chef",
+      "x": "boss",
+      "id": "general_chef",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kollege",
+      "x": "colleague",
+      "id": "general_kollege",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Meeting",
+      "x": "meeting",
+      "id": "general_meeting",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Projekt",
+      "x": "project",
+      "id": "general_projekt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "E-Mail",
+      "x": "email",
+      "id": "general_e_mail",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Pause",
+      "x": "break",
+      "id": "general_pause",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Arzt",
+      "x": "doctor",
+      "id": "general_arzt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Krankenhaus",
+      "x": "hospital",
+      "id": "general_krankenhaus",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Medizin",
+      "x": "medicine",
+      "id": "general_medizin",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Schmerz",
+      "x": "pain",
+      "id": "general_schmerz",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Fieber",
+      "x": "fever",
+      "id": "general_fieber",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Hilfe",
+      "x": "help",
+      "id": "general_hilfe",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Termin",
+      "x": "appointment",
+      "id": "general_termin",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Rezept",
+      "x": "prescription",
+      "id": "general_rezept",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Laden",
+      "x": "shop",
+      "id": "general_laden",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Preis",
+      "x": "price",
+      "id": "general_preis",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Geld",
+      "x": "money",
+      "id": "general_geld",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kasse",
+      "x": "checkout",
+      "id": "general_kasse",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Rabatt",
+      "x": "discount",
+      "id": "general_rabatt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kunde",
+      "x": "customer",
+      "id": "general_kunde",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Verkäufer",
+      "x": "seller",
+      "id": "general_verkaufer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tüte",
+      "x": "bag",
+      "id": "general_tute",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Mutter",
+      "x": "mother",
+      "id": "general_mutter",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Vater",
+      "x": "father",
+      "id": "general_vater",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Bruder",
+      "x": "brother",
+      "id": "general_bruder",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Schwester",
+      "x": "sister",
+      "id": "general_schwester",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Freund",
+      "x": "friend",
+      "id": "general_freund",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kind",
+      "x": "child",
+      "id": "general_kind",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Familie",
+      "x": "family",
+      "id": "general_familie",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Name",
+      "x": "name",
+      "id": "general_name",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Heute",
+      "x": "today",
+      "id": "general_heute",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Morgen",
+      "x": "tomorrow",
+      "id": "general_morgen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Gestern",
+      "x": "yesterday",
+      "id": "general_gestern",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Woche",
+      "x": "week",
+      "id": "general_woche",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Monat",
+      "x": "month",
+      "id": "general_monat",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Jahr",
+      "x": "year",
+      "id": "general_jahr",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Lernen",
+      "x": "to learn",
+      "id": "general_lernen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Sprache",
+      "x": "language",
+      "id": "general_sprache",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "translations": {
+        "en": "to learn"
+      },
+      "focusWord": "",
+      "x": "to learn"
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "translations": {
+        "en": "language"
+      },
+      "focusWord": "",
+      "x": "language"
+    }
+  ]
+}

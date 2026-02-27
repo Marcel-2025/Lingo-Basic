@@ -1,0 +1,1309 @@
+{
+  "version": 2,
+  "lang": "RU",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Wasser",
+          "x": "вода",
+          "ex": "Wasser ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_wasser",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Brot",
+          "x": "хлеб",
+          "ex": "Brot ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_brot",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Milch",
+          "x": "молоко",
+          "ex": "Milch ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_milch",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Kaffee",
+          "x": "кофе",
+          "ex": "Kaffee ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_kaffee",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Tee",
+          "x": "чай",
+          "ex": "Tee ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_tee",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Apfel",
+          "x": "яблоко",
+          "ex": "Apfel ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_apfel",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Banane",
+          "x": "банан",
+          "ex": "Banane ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_banane",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "de": "Reis",
+          "x": "рис",
+          "ex": "Reis ist wichtig im Thema Essen & Trinken.",
+          "id": "food_01_reis",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Flughafen",
+          "x": "аэропорт",
+          "ex": "Flughafen ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_flughafen",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Bahnhof",
+          "x": "вокзал",
+          "ex": "Bahnhof ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_bahnhof",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Ticket",
+          "x": "билет",
+          "ex": "Ticket ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_ticket",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Hotel",
+          "x": "отель",
+          "ex": "Hotel ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_hotel",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Straße",
+          "x": "улица",
+          "ex": "Straße ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_stra_e",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Karte",
+          "x": "карта",
+          "ex": "Karte ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_karte",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Koffer",
+          "x": "чемодан",
+          "ex": "Koffer ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_koffer",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "de": "Pass",
+          "x": "паспорт",
+          "ex": "Pass ist wichtig im Thema Reisen & Orientierung.",
+          "id": "travel_02_pass",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "de": "Haus",
+          "x": "дом",
+          "ex": "Haus ist wichtig im Thema Zuhause.",
+          "id": "home_03_haus",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Zimmer",
+          "x": "комната",
+          "ex": "Zimmer ist wichtig im Thema Zuhause.",
+          "id": "home_03_zimmer",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Küche",
+          "x": "кухня",
+          "ex": "Küche ist wichtig im Thema Zuhause.",
+          "id": "home_03_kuche",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Badezimmer",
+          "x": "ванная",
+          "ex": "Badezimmer ist wichtig im Thema Zuhause.",
+          "id": "home_03_badezimmer",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Fenster",
+          "x": "окно",
+          "ex": "Fenster ist wichtig im Thema Zuhause.",
+          "id": "home_03_fenster",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Tür",
+          "x": "дверь",
+          "ex": "Tür ist wichtig im Thema Zuhause.",
+          "id": "home_03_tur",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Tisch",
+          "x": "стол",
+          "ex": "Tisch ist wichtig im Thema Zuhause.",
+          "id": "home_03_tisch",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "de": "Stuhl",
+          "x": "стул",
+          "ex": "Stuhl ist wichtig im Thema Zuhause.",
+          "id": "home_03_stuhl",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Arbeit",
+          "x": "работа",
+          "ex": "Arbeit ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_arbeit",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Büro",
+          "x": "офис",
+          "ex": "Büro ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_buro",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Chef",
+          "x": "начальник",
+          "ex": "Chef ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_chef",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Kollege",
+          "x": "коллега",
+          "ex": "Kollege ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_kollege",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Meeting",
+          "x": "встреча",
+          "ex": "Meeting ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_meeting",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Projekt",
+          "x": "проект",
+          "ex": "Projekt ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_projekt",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "E-Mail",
+          "x": "электронная почта",
+          "ex": "E-Mail ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_e_mail",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "de": "Pause",
+          "x": "перерыв",
+          "ex": "Pause ist wichtig im Thema Beruf & Alltag.",
+          "id": "work_04_pause",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Arzt",
+          "x": "врач",
+          "ex": "Arzt ist wichtig im Thema Gesundheit.",
+          "id": "health_05_arzt",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Krankenhaus",
+          "x": "больница",
+          "ex": "Krankenhaus ist wichtig im Thema Gesundheit.",
+          "id": "health_05_krankenhaus",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Medizin",
+          "x": "лекарство",
+          "ex": "Medizin ist wichtig im Thema Gesundheit.",
+          "id": "health_05_medizin",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Schmerz",
+          "x": "боль",
+          "ex": "Schmerz ist wichtig im Thema Gesundheit.",
+          "id": "health_05_schmerz",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Fieber",
+          "x": "жар",
+          "ex": "Fieber ist wichtig im Thema Gesundheit.",
+          "id": "health_05_fieber",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Hilfe",
+          "x": "помощь",
+          "ex": "Hilfe ist wichtig im Thema Gesundheit.",
+          "id": "health_05_hilfe",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Termin",
+          "x": "прием",
+          "ex": "Termin ist wichtig im Thema Gesundheit.",
+          "id": "health_05_termin",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "de": "Rezept",
+          "x": "рецепт",
+          "ex": "Rezept ist wichtig im Thema Gesundheit.",
+          "id": "health_05_rezept",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "de": "Laden",
+          "x": "магазин",
+          "ex": "Laden ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_laden",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Preis",
+          "x": "цена",
+          "ex": "Preis ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_preis",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Geld",
+          "x": "деньги",
+          "ex": "Geld ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_geld",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Kasse",
+          "x": "касса",
+          "ex": "Kasse ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_kasse",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Rabatt",
+          "x": "скидка",
+          "ex": "Rabatt ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_rabatt",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Kunde",
+          "x": "клиент",
+          "ex": "Kunde ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_kunde",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Verkäufer",
+          "x": "продавец",
+          "ex": "Verkäufer ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_verkaufer",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "de": "Tüte",
+          "x": "пакет",
+          "ex": "Tüte ist wichtig im Thema Einkaufen.",
+          "id": "shopping_06_tute",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "de": "Mutter",
+          "x": "мать",
+          "ex": "Mutter ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_mutter",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Vater",
+          "x": "отец",
+          "ex": "Vater ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_vater",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Bruder",
+          "x": "брат",
+          "ex": "Bruder ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_bruder",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Schwester",
+          "x": "сестра",
+          "ex": "Schwester ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_schwester",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Freund",
+          "x": "друг",
+          "ex": "Freund ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_freund",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Kind",
+          "x": "ребенок",
+          "ex": "Kind ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_kind",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Familie",
+          "x": "семья",
+          "ex": "Familie ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_familie",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "de": "Name",
+          "x": "имя",
+          "ex": "Name ist wichtig im Thema Familie & Freunde.",
+          "id": "family_07_name",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "de": "Heute",
+          "x": "сегодня",
+          "ex": "Heute ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_heute",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Morgen",
+          "x": "завтра",
+          "ex": "Morgen ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_morgen",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Gestern",
+          "x": "вчера",
+          "ex": "Gestern ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_gestern",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Woche",
+          "x": "неделя",
+          "ex": "Woche ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_woche",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Monat",
+          "x": "месяц",
+          "ex": "Monat ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_monat",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Jahr",
+          "x": "год",
+          "ex": "Jahr ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_jahr",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Lernen",
+          "x": "учить",
+          "ex": "Lernen ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_lernen",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "de": "Sprache",
+          "x": "язык",
+          "ex": "Sprache ist wichtig im Thema Zeit & Lernen.",
+          "id": "time_08_sprache",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "de": "Wasser",
+      "x": "вода",
+      "id": "general_wasser",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Brot",
+      "x": "хлеб",
+      "id": "general_brot",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Milch",
+      "x": "молоко",
+      "id": "general_milch",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kaffee",
+      "x": "кофе",
+      "id": "general_kaffee",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tee",
+      "x": "чай",
+      "id": "general_tee",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Apfel",
+      "x": "яблоко",
+      "id": "general_apfel",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Banane",
+      "x": "банан",
+      "id": "general_banane",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Reis",
+      "x": "рис",
+      "id": "general_reis",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Flughafen",
+      "x": "аэропорт",
+      "id": "general_flughafen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Bahnhof",
+      "x": "вокзал",
+      "id": "general_bahnhof",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Ticket",
+      "x": "билет",
+      "id": "general_ticket",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Hotel",
+      "x": "отель",
+      "id": "general_hotel",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Straße",
+      "x": "улица",
+      "id": "general_stra_e",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Karte",
+      "x": "карта",
+      "id": "general_karte",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Koffer",
+      "x": "чемодан",
+      "id": "general_koffer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Pass",
+      "x": "паспорт",
+      "id": "general_pass",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Haus",
+      "x": "дом",
+      "id": "general_haus",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Zimmer",
+      "x": "комната",
+      "id": "general_zimmer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Küche",
+      "x": "кухня",
+      "id": "general_kuche",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Badezimmer",
+      "x": "ванная",
+      "id": "general_badezimmer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Fenster",
+      "x": "окно",
+      "id": "general_fenster",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tür",
+      "x": "дверь",
+      "id": "general_tur",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tisch",
+      "x": "стол",
+      "id": "general_tisch",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Stuhl",
+      "x": "стул",
+      "id": "general_stuhl",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Arbeit",
+      "x": "работа",
+      "id": "general_arbeit",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Büro",
+      "x": "офис",
+      "id": "general_buro",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Chef",
+      "x": "начальник",
+      "id": "general_chef",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kollege",
+      "x": "коллега",
+      "id": "general_kollege",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Meeting",
+      "x": "встреча",
+      "id": "general_meeting",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Projekt",
+      "x": "проект",
+      "id": "general_projekt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "E-Mail",
+      "x": "электронная почта",
+      "id": "general_e_mail",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Pause",
+      "x": "перерыв",
+      "id": "general_pause",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Arzt",
+      "x": "врач",
+      "id": "general_arzt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Krankenhaus",
+      "x": "больница",
+      "id": "general_krankenhaus",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Medizin",
+      "x": "лекарство",
+      "id": "general_medizin",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Schmerz",
+      "x": "боль",
+      "id": "general_schmerz",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Fieber",
+      "x": "жар",
+      "id": "general_fieber",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Hilfe",
+      "x": "помощь",
+      "id": "general_hilfe",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Termin",
+      "x": "прием",
+      "id": "general_termin",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Rezept",
+      "x": "рецепт",
+      "id": "general_rezept",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Laden",
+      "x": "магазин",
+      "id": "general_laden",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Preis",
+      "x": "цена",
+      "id": "general_preis",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Geld",
+      "x": "деньги",
+      "id": "general_geld",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kasse",
+      "x": "касса",
+      "id": "general_kasse",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Rabatt",
+      "x": "скидка",
+      "id": "general_rabatt",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kunde",
+      "x": "клиент",
+      "id": "general_kunde",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Verkäufer",
+      "x": "продавец",
+      "id": "general_verkaufer",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Tüte",
+      "x": "пакет",
+      "id": "general_tute",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Mutter",
+      "x": "мать",
+      "id": "general_mutter",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Vater",
+      "x": "отец",
+      "id": "general_vater",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Bruder",
+      "x": "брат",
+      "id": "general_bruder",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Schwester",
+      "x": "сестра",
+      "id": "general_schwester",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Freund",
+      "x": "друг",
+      "id": "general_freund",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Kind",
+      "x": "ребенок",
+      "id": "general_kind",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Familie",
+      "x": "семья",
+      "id": "general_familie",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Name",
+      "x": "имя",
+      "id": "general_name",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Heute",
+      "x": "сегодня",
+      "id": "general_heute",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Morgen",
+      "x": "завтра",
+      "id": "general_morgen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Gestern",
+      "x": "вчера",
+      "id": "general_gestern",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Woche",
+      "x": "неделя",
+      "id": "general_woche",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Monat",
+      "x": "месяц",
+      "id": "general_monat",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Jahr",
+      "x": "год",
+      "id": "general_jahr",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Lernen",
+      "x": "учить",
+      "id": "general_lernen",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "de": "Sprache",
+      "x": "язык",
+      "id": "general_sprache",
+      "difficulty": 1,
+      "tags": [
+        "general"
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "translations": {
+        "ru": "учить"
+      },
+      "focusWord": "",
+      "x": "учить"
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "translations": {
+        "ru": "язык"
+      },
+      "focusWord": "",
+      "x": "язык"
+    }
+  ]
+}

@@ -6,23 +6,39 @@ import React, { useState, useEffect, useRef } from 'react';
 // TYPEN & INTERFACES
 // ==========================================
 interface VocabItem {
+  id?: string;
   de: string;
   x: string;
   ex?: string;
   exTr?: string;
+  difficulty?: 1 | 2 | 3;
+  tags?: string[];
 }
 
 interface SentenceItem {
+  id: string;
   de: string;
-  x: string;
+  x?: string;
+  translations?: Record<string, string>;
+  focusWord?: string;
+}
+
+interface TopicItem {
+  id: string;
+  title: string;
+  icon?: string;
+  level?: string;
+  difficulty?: 1 | 2 | 3;
+  vocab: VocabItem[];
 }
 
 interface LanguagePack {
   version: number;
   lang: string;
   level: string;
-  vocab: VocabItem[];
-  sentences: SentenceItem[];
+  vocab?: VocabItem[];
+  topics?: TopicItem[];
+  sentences?: SentenceItem[];
 }
 
 interface UserStats {
@@ -39,9 +55,29 @@ interface UserStats {
 interface AppSettings {
   targetLang: string;
   difficulty: string;
+  contentLevel: 'A1' | 'A2' | 'B1';
   dailyGoal: number;
   theme: 'Ocean' | 'Sunset' | 'Lime' | 'Grape';
   isDarkMode: boolean;
+}
+
+interface AuthUser {
+  localId: string;
+  email: string;
+  displayName?: string;
+  idToken: string;
+  refreshToken: string;
+}
+
+interface CloudProgressSnapshot {
+  stats: UserStats;
+  settings: AppSettings;
+  updatedAt: number;
+}
+
+interface LearningInsights {
+  learnedDays: Record<string, number>;
+  learnedWordsByTopic: Record<string, string[]>;
 }
 
 // ==========================================
@@ -49,6 +85,22 @@ interface AppSettings {
 // ==========================================
 const DB_NAME = 'LingoDB';
 const STORE_NAME = 'packs';
+const PUBLIC_PACKS_PATH = '/packs';
+const SUPPORTED_LANGS = ['EN', 'ES', 'FR', 'RU', 'IT'] as const;
+
+const getPackPath = (lang: string, level: string) => `${PUBLIC_PACKS_PATH}/${lang.toLowerCase()}/${level.toLowerCase()}.json`;
+const getLegacyPackPath = (lang: string) => `${PUBLIC_PACKS_PATH}/${lang.toLowerCase()}.json`;
+const FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyBJvSmyrnnuCcwkDdAp7zym9ipiY3treRo',
+  authDomain: 'lingo-basic.firebaseapp.com',
+  projectId: 'lingo-basic',
+  storageBucket: 'lingo-basic.firebasestorage.app',
+  messagingSenderId: '788312123831',
+  appId: '1:788312123831:web:7362d5b04144459318e032',
+  measurementId: 'G-SM96NW3DRS',
+};
+
+const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || FIREBASE_CONFIG.apiKey;
 
 const initDB = (): Promise<IDBDatabase> => {
   return new Promise((resolve, reject) => {
@@ -93,6 +145,222 @@ const deletePackFromDB = async (lang: string) => {
   });
 };
 
+const fetchPackFromPublicFolder = async (lang: string, level: string): Promise<LanguagePack | null> => {
+  if (!SUPPORTED_LANGS.includes(lang as (typeof SUPPORTED_LANGS)[number])) return null;
+
+  try {
+    const levelPath = getPackPath(lang, level);
+    let response = await fetch(levelPath, { cache: 'no-store' });
+
+    if (!response.ok) {
+      response = await fetch(getLegacyPackPath(lang), { cache: 'no-store' });
+      if (!response.ok) return null;
+    }
+
+    const pack = normalizePack((await response.json()) as LanguagePack);
+    if (!pack) return null;
+
+    return pack;
+  } catch {
+    return null;
+  }
+};
+
+
+const getVocabFromPack = (pack: LanguagePack | null): VocabItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) {
+    return pack.topics.flatMap(topic => topic.vocab || []);
+  }
+  return Array.isArray(pack.vocab) ? pack.vocab : [];
+};
+
+
+const toDifficultyNumber = (difficulty: unknown): 1 | 2 | 3 => {
+  if (difficulty === 1 || difficulty === 2 || difficulty === 3) return difficulty;
+  if (difficulty === 'easy') return 1;
+  if (difficulty === 'medium') return 2;
+  if (difficulty === 'hard') return 3;
+  return 1;
+};
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+
+const buildWordId = (topicId: string, item: VocabItem, index: number) => {
+  if (item.id) return item.id;
+  const base = slugify(item.de || item.x || `word_${index}`);
+  return `${topicId}_${base || index}`;
+};
+
+const getTopicsFromPack = (pack: LanguagePack | null): TopicItem[] => {
+  if (!pack) return [];
+  if (Array.isArray(pack.topics) && pack.topics.length > 0) return pack.topics;
+
+  const fallbackVocab = Array.isArray(pack.vocab) ? pack.vocab : [];
+  if (fallbackVocab.length === 0) return [];
+
+  return [{
+    id: 'all',
+    title: 'Allgemein',
+    icon: '📘',
+    level: pack.level,
+    difficulty: 1,
+    vocab: fallbackVocab,
+  }];
+};
+
+const normalizePack = (pack: LanguagePack): LanguagePack | null => {
+  const hasLegacyVocab = Array.isArray(pack?.vocab) && pack.vocab.length > 0;
+  const hasTopics = Array.isArray(pack?.topics) && pack.topics.length > 0;
+  if (!pack?.lang || (!hasLegacyVocab && !hasTopics)) return null;
+
+  const normalizedTopics: TopicItem[] | undefined = hasTopics
+    ? (pack.topics || []).map((topic, topicIndex) => {
+        const topicId = topic.id || `topic_${topicIndex + 1}`;
+        const topicDifficulty = toDifficultyNumber((topic as any).difficulty);
+        const normalizedVocab = (topic.vocab || []).map((item, index) => ({
+          ...item,
+          id: buildWordId(topicId, item, index),
+          difficulty: toDifficultyNumber(item.difficulty ?? topicDifficulty),
+          tags: item.tags && item.tags.length > 0 ? item.tags : [slugify(topic.title) || topicId],
+        }));
+
+        return {
+          ...topic,
+          id: topicId,
+          difficulty: topicDifficulty,
+          vocab: normalizedVocab,
+        };
+      })
+    : undefined;
+
+  const normalizedVocab = hasLegacyVocab
+    ? (pack.vocab || []).map((item, index) => ({
+        ...item,
+        id: item.id || `general_${slugify(item.de || item.x || String(index))}`,
+        difficulty: toDifficultyNumber(item.difficulty),
+        tags: item.tags && item.tags.length > 0 ? item.tags : ['general'],
+      }))
+    : undefined;
+
+  const langKey = pack.lang.toLowerCase();
+  const normalizedSentences: SentenceItem[] = (Array.isArray(pack.sentences) ? pack.sentences : []).map((sentence: SentenceItem, index) => {
+    const translations = sentence.translations || (sentence.x ? { [langKey]: sentence.x } : undefined);
+    return {
+      id: sentence.id || `sent_${String(index + 1).padStart(3, '0')}`,
+      de: sentence.de,
+      x: sentence.x,
+      translations,
+      focusWord: sentence.focusWord,
+    };
+  });
+
+  return {
+    ...pack,
+    vocab: normalizedVocab,
+    topics: normalizedTopics,
+    sentences: normalizedSentences,
+  };
+};
+
+const isAuthConfigured = () => FIREBASE_API_KEY.length > 0;
+
+const firebaseAuthRequest = async (endpoint: string, payload: Record<string, unknown>) => {
+  const response = await fetch(`https://identitytoolkit.googleapis.com/v1/${endpoint}?key=${FIREBASE_API_KEY}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data?.error?.message || 'AUTH_FAILED');
+  }
+  return data;
+};
+
+const authWithEmailAndPassword = async (email: string, password: string, isSignup: boolean): Promise<AuthUser> => {
+  const endpoint = isSignup ? 'accounts:signUp' : 'accounts:signInWithPassword';
+  const result = await firebaseAuthRequest(endpoint, { email, password, returnSecureToken: true });
+  return {
+    localId: result.localId,
+    email: result.email,
+    displayName: result.displayName || email,
+    idToken: result.idToken,
+    refreshToken: result.refreshToken,
+  };
+};
+
+const authWithGoogleCredential = async (credential: string): Promise<AuthUser> => {
+  const result = await firebaseAuthRequest('accounts:signInWithIdp', {
+    postBody: `id_token=${credential}&providerId=google.com`,
+    requestUri: typeof window !== 'undefined' ? window.location.origin : 'http://localhost',
+    returnSecureToken: true,
+    returnIdpCredential: true,
+  });
+  return {
+    localId: result.localId,
+    email: result.email,
+    displayName: result.displayName || result.email,
+    idToken: result.idToken,
+    refreshToken: result.refreshToken,
+  };
+};
+
+
+const getProgressDocUrl = (uid: string) => `https://firestore.googleapis.com/v1/projects/${FIREBASE_CONFIG.projectId}/databases/(default)/documents/userProgress/${uid}`;
+
+const loadCloudProgress = async (user: AuthUser): Promise<CloudProgressSnapshot | null> => {
+  const response = await fetch(getProgressDocUrl(user.localId), {
+    headers: {
+      Authorization: `Bearer ${user.idToken}`,
+    },
+  });
+
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error('CLOUD_LOAD_FAILED');
+
+  const data = await response.json();
+  const fields = data?.fields;
+  const statsJson = fields?.statsJson?.stringValue;
+  const settingsJson = fields?.settingsJson?.stringValue;
+  const updatedAt = Number(fields?.updatedAt?.integerValue || 0);
+
+  if (!statsJson || !settingsJson) return null;
+
+  return {
+    stats: JSON.parse(statsJson) as UserStats,
+    settings: JSON.parse(settingsJson) as AppSettings,
+    updatedAt,
+  };
+};
+
+const saveCloudProgress = async (user: AuthUser, snapshot: CloudProgressSnapshot) => {
+  const response = await fetch(`${getProgressDocUrl(user.localId)}?updateMask.fieldPaths=statsJson&updateMask.fieldPaths=settingsJson&updateMask.fieldPaths=updatedAt`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${user.idToken}`,
+    },
+    body: JSON.stringify({
+      fields: {
+        statsJson: { stringValue: JSON.stringify(snapshot.stats) },
+        settingsJson: { stringValue: JSON.stringify(snapshot.settings) },
+        updatedAt: { integerValue: String(snapshot.updatedAt) },
+      },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('CLOUD_SAVE_FAILED');
+  }
+};
+
 // ==========================================
 // HAUPTKOMPONENTE (APP)
 // ==========================================
@@ -107,10 +375,21 @@ export default function LingoApp() {
   });
   
   const [settings, setSettings] = useState<AppSettings>({
-    targetLang: 'EN', difficulty: 'Beginner', dailyGoal: 20, theme: 'Ocean', isDarkMode: false
+    targetLang: 'EN', difficulty: 'Beginner', contentLevel: 'A1', dailyGoal: 20, theme: 'Ocean', isDarkMode: false
   });
   
   const [currentPack, setCurrentPack] = useState<LanguagePack | null>(null);
+  const [authUser, setAuthUser] = useState<AuthUser | null>(null);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isSignupMode, setIsSignupMode] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [authMsg, setAuthMsg] = useState('');
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
+  const [cloudSyncReady, setCloudSyncReady] = useState(false);
+  const [lastCloudSyncAt, setLastCloudSyncAt] = useState(0);
+  const [learningInsights, setLearningInsights] = useState<LearningInsights>({ learnedDays: {}, learnedWordsByTopic: {} });
+  const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
 
   // Init & Load Data
   useEffect(() => {
@@ -121,9 +400,24 @@ export default function LingoApp() {
       const parsedStats = JSON.parse(savedStats);
       checkStreak(parsedStats);
     }
-    if (savedSettings) setSettings(JSON.parse(savedSettings));
+    if (savedSettings) {
+      const parsedSettings = JSON.parse(savedSettings) as Partial<AppSettings>;
+      setSettings({
+        targetLang: parsedSettings.targetLang || 'EN',
+        difficulty: parsedSettings.difficulty || 'Beginner',
+        contentLevel: parsedSettings.contentLevel || 'A1',
+        dailyGoal: parsedSettings.dailyGoal || 20,
+        theme: parsedSettings.theme || 'Ocean',
+        isDarkMode: parsedSettings.isDarkMode || false,
+      });
+    }
+    const savedAuthUser = localStorage.getItem('lingoAuthUser');
+    if (savedAuthUser) setAuthUser(JSON.parse(savedAuthUser));
+    const savedInsights = localStorage.getItem('lingoLearningInsights');
+    if (savedInsights) setLearningInsights(JSON.parse(savedInsights));
     
     setIsLoaded(true);
+    setCloudSyncReady(true);
   }, []);
 
   useEffect(() => {
@@ -135,9 +429,120 @@ export default function LingoApp() {
 
   useEffect(() => {
     if (isLoaded) {
-      loadPack(settings.targetLang);
+      loadPack(settings.targetLang, settings.contentLevel);
     }
-  }, [settings.targetLang, isLoaded]);
+  }, [settings.targetLang, settings.contentLevel, isLoaded]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
+  }, [authUser]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoLearningInsights', JSON.stringify(learningInsights));
+  }, [learningInsights]);
+
+
+  useEffect(() => {
+    if (!authUser) {
+      setCloudSyncReady(true);
+      return;
+    }
+
+    const hydrateCloudProgress = async () => {
+      try {
+        const cloud = await loadCloudProgress(authUser);
+        const localStatsRaw = localStorage.getItem('lingoStats');
+        const localSettingsRaw = localStorage.getItem('lingoSettings');
+
+        const localStats = localStatsRaw ? (JSON.parse(localStatsRaw) as UserStats) : null;
+        const localSettings = localSettingsRaw ? (JSON.parse(localSettingsRaw) as AppSettings) : null;
+        const localUpdatedAt = Number(localStorage.getItem('lingoStatsUpdatedAt') || 0);
+
+        if (!cloud) {
+          if (localStats && localSettings) {
+            await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          }
+          setCloudSyncReady(true);
+          return;
+        }
+
+        if (localStats && localSettings && localUpdatedAt > cloud.updatedAt) {
+          await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          setLastCloudSyncAt(Date.now());
+        } else {
+          setStats(cloud.stats);
+          setSettings(cloud.settings);
+          localStorage.setItem('lingoStats', JSON.stringify(cloud.stats));
+          localStorage.setItem('lingoSettings', JSON.stringify(cloud.settings));
+          localStorage.setItem('lingoStatsUpdatedAt', String(cloud.updatedAt || Date.now()));
+          setLastCloudSyncAt(cloud.updatedAt || Date.now());
+        }
+      } catch (error) {
+        setAuthMsg(`Cloud Sync Fehler: ${(error as Error).message}`);
+      } finally {
+        setCloudSyncReady(true);
+      }
+    };
+
+    setCloudSyncReady(false);
+    hydrateCloudProgress();
+  }, [authUser]);
+
+  useEffect(() => {
+    if (!isLoaded || !cloudSyncReady) return;
+
+    const now = Date.now();
+    localStorage.setItem('lingoStatsUpdatedAt', String(now));
+
+    if (!authUser) return;
+
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        await saveCloudProgress(authUser, { stats, settings, updatedAt: now });
+        setLastCloudSyncAt(now);
+      } catch {
+        // keep local progress, retry on next state update
+      }
+    }, 600);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [stats, settings, authUser, isLoaded, cloudSyncReady]);
+
+  useEffect(() => {
+    if (!isAuthOpen || !googleClientId || !isAuthConfigured()) return;
+    if (typeof window === 'undefined') return;
+
+    const scriptId = 'google-identity-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, [isAuthOpen, googleClientId]);
+
+
+  const onLearnedWord = (topicTitle: string, wordItem: VocabItem) => {
+    const todayKey = new Date().toISOString().slice(0, 10);
+    setLearningInsights(prev => {
+      const existingWords = prev.learnedWordsByTopic[topicTitle] || [];
+      const safeWordLabel = `${wordItem.de}${wordItem.id ? ` (#${wordItem.id})` : ''}`;
+      const nextWords = existingWords.includes(safeWordLabel) ? existingWords : [...existingWords, safeWordLabel];
+
+      return {
+        learnedDays: {
+          ...prev.learnedDays,
+          [todayKey]: (prev.learnedDays[todayKey] || 0) + 1,
+        },
+        learnedWordsByTopic: {
+          ...prev.learnedWordsByTopic,
+          [topicTitle]: nextWords,
+        },
+      };
+    });
+  };
 
   const checkStreak = (currentStats: UserStats) => {
     const today = new Date().toDateString();
@@ -157,9 +562,21 @@ export default function LingoApp() {
     }
   };
 
-  const loadPack = async (lang: string) => {
-    const pack = await getPackFromDB(lang);
-    setCurrentPack(pack);
+  const loadPack = async (lang: string, level: AppSettings['contentLevel']) => {
+    const cachedPack = await getPackFromDB(lang);
+    if (cachedPack) {
+      setCurrentPack(cachedPack);
+      return;
+    }
+
+    const publicPack = await fetchPackFromPublicFolder(lang, level);
+    if (publicPack) {
+      await savePackToDB(publicPack);
+      setCurrentPack(publicPack);
+      return;
+    }
+
+    setCurrentPack(null);
   };
 
   // Gamification Logic
@@ -187,7 +604,7 @@ export default function LingoApp() {
     if (!window.speechSynthesis) return;
     const utterance = new SpeechSynthesisUtterance(text);
     // Map internal codes to BCP 47
-    const langMap: Record<string, string> = { 'DE': 'de-DE', 'EN': 'en-US', 'ES': 'es-ES', 'FR': 'fr-FR', 'RU': 'ru-RU' };
+    const langMap: Record<string, string> = { 'DE': 'de-DE', 'EN': 'en-US', 'ES': 'es-ES', 'FR': 'fr-FR', 'RU': 'ru-RU', 'IT': 'it-IT' };
     utterance.lang = langMap[langCode] || langMap[settings.targetLang] || 'en-US';
     window.speechSynthesis.speak(utterance);
   };
@@ -204,6 +621,75 @@ export default function LingoApp() {
     return { base, gradient };
   };
 
+  const handleEmailAuth = async () => {
+    if (!isAuthConfigured()) {
+      setAuthMsg('Firebase API Key fehlt. Bitte .env.local prüfen.');
+      return;
+    }
+    if (!email || !password) {
+      setAuthMsg('Bitte E-Mail und Passwort ausfüllen.');
+      return;
+    }
+
+    try {
+      setIsAuthLoading(true);
+      const user = await authWithEmailAndPassword(email, password, isSignupMode);
+      setAuthUser(user);
+      setAuthMsg(`Willkommen ${user.displayName || user.email}!`);
+      setIsAuthOpen(false);
+      setPassword('');
+    } catch (error) {
+      setAuthMsg(`Login fehlgeschlagen: ${(error as Error).message}`);
+    } finally {
+      setIsAuthLoading(false);
+    }
+  };
+
+  const handleGoogleAuth = async () => {
+    if (!isAuthConfigured() || !googleClientId) {
+      setAuthMsg('Google Login benötigt NEXT_PUBLIC_GOOGLE_CLIENT_ID (Firebase API Key ist bereits gesetzt).');
+      return;
+    }
+    const googleApi = (window as any).google;
+    if (!googleApi?.accounts?.id) {
+      setAuthMsg('Google SDK lädt noch. Bitte in 2-3 Sekunden erneut klicken.');
+      return;
+    }
+
+    try {
+      setIsAuthLoading(true);
+      await new Promise<void>((resolve, reject) => {
+        googleApi.accounts.id.initialize({
+          client_id: googleClientId,
+          callback: async (response: { credential?: string }) => {
+            try {
+              if (!response.credential) throw new Error('GOOGLE_CREDENTIAL_MISSING');
+              const user = await authWithGoogleCredential(response.credential);
+              setAuthUser(user);
+              setAuthMsg(`Willkommen ${user.displayName || user.email}!`);
+              setIsAuthOpen(false);
+              resolve();
+            } catch (err) {
+              reject(err);
+            }
+          },
+        });
+        googleApi.accounts.id.prompt();
+      });
+    } catch (error) {
+      setAuthMsg(`Google Login fehlgeschlagen: ${(error as Error).message}`);
+    } finally {
+      setIsAuthLoading(false);
+    }
+  };
+
+  const logout = () => {
+    setAuthUser(null);
+    setCloudSyncReady(true);
+    setLastCloudSyncAt(0);
+    setAuthMsg('Du wurdest ausgeloggt.');
+  };
+
   if (!isLoaded) return <div className="min-h-screen flex items-center justify-center">Lade Lingo...</div>;
 
   const { base, gradient } = getThemeClasses();
@@ -218,10 +704,18 @@ export default function LingoApp() {
             <span>Lingo</span>
           </div>
           <div className="flex space-x-4 font-semibold">
+            {authUser ? (
+              <button onClick={logout} className="flex items-center bg-white/20 px-2 py-1 rounded-lg">👤 {authUser.email}</button>
+            ) : (
+              <button onClick={() => setIsAuthOpen(true)} className="flex items-center bg-white/20 px-2 py-1 rounded-lg">Login</button>
+            )}
             <div className="flex items-center">🔥 {stats.streak}</div>
             <div className="flex items-center">⭐ {stats.xp} XP</div>
             <div className="flex items-center bg-white/20 px-2 py-1 rounded-lg">Lvl {stats.level}</div>
           </div>
+          {authUser && (
+            <div className="text-[11px] mt-2 opacity-80">☁️ Sync {cloudSyncReady ? (lastCloudSyncAt ? 'aktiv' : 'bereit') : 'lädt...'}</div>
+          )}
         </div>
       </header>
 
@@ -240,10 +734,10 @@ export default function LingoApp() {
           </div>
         ) : (
           <>
-            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
+            {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} onLearnedWord={onLearnedWord} />}
             {activeTab === 'uebungen' && <TabUebungen pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
-            {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} />}
-            {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang)} gradient={gradient} />}
+            {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} learningInsights={learningInsights} />}
+            {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang, settings.contentLevel)} gradient={gradient} />}
           </>
         )}
       </main>
@@ -257,6 +751,30 @@ export default function LingoApp() {
           <NavButton icon="⚙️" label="Settings" isActive={activeTab === 'settings'} onClick={() => setActiveTab('settings')} gradient={gradient} />
         </div>
       </nav>
+
+      {isAuthOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="w-full max-w-md bg-white rounded-3xl p-6 text-gray-900 shadow-2xl">
+            <h3 className="text-2xl font-bold mb-2">{isSignupMode ? 'Registrieren' : 'Einloggen'}</h3>
+            <p className="text-sm opacity-70 mb-4">Mit E-Mail/Passwort oder Google anmelden.</p>
+            <div className="space-y-3">
+              <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="E-Mail" className="w-full p-3 rounded-xl bg-gray-100 outline-none" />
+              <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Passwort" className="w-full p-3 rounded-xl bg-gray-100 outline-none" />
+              <button disabled={isAuthLoading} onClick={handleEmailAuth} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>
+                {isAuthLoading ? 'Bitte warten...' : (isSignupMode ? 'Account erstellen' : 'Mit E-Mail einloggen')}
+              </button>
+              <button disabled={isAuthLoading} onClick={handleGoogleAuth} className="w-full py-3 rounded-xl font-bold bg-gray-100">
+                Mit Google einloggen
+              </button>
+              <button onClick={() => setIsSignupMode(!isSignupMode)} className="w-full text-sm text-indigo-600 font-bold">
+                {isSignupMode ? 'Schon einen Account? Jetzt einloggen' : 'Noch kein Account? Jetzt registrieren'}
+              </button>
+              <button onClick={() => setIsAuthOpen(false)} className="w-full text-sm opacity-70">Schließen</button>
+              {authMsg && <p className="text-xs font-bold text-center text-indigo-600">{authMsg}</p>}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -265,65 +783,135 @@ export default function LingoApp() {
 // KOMPONENTEN FÜR TABS
 // ==========================================
 
-function TabHeute({ pack, speak, addXP, gradient }: any) {
+function TabHeute({ pack, speak, addXP, gradient, isPremiumUser, onLearnedWord }: any) {
   const [queue, setQueue] = useState<VocabItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [selectedTopicId, setSelectedTopicId] = useState('all');
+
+  const topics = getTopicsFromPack(pack);
+  const activeTopic = selectedTopicId === 'all'
+    ? { title: 'Alle Themen', vocab: getVocabFromPack(pack) }
+    : topics.find(topic => topic.id === selectedTopicId) || { title: 'Thema', vocab: [] };
+
+  const buildQueueForTopic = (topicId: string) => {
+    const topicVocab = topicId === 'all'
+      ? getVocabFromPack(pack)
+      : topics.find(topic => topic.id === topicId)?.vocab || [];
+
+    const shuffled = [...topicVocab].sort(() => 0.5 - Math.random());
+    setQueue(shuffled);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+  };
 
   useEffect(() => {
-    if (pack?.vocab) {
-      // Simple SRS Simulation: Shuffle and take top 20
-      const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random()).slice(0, 20);
-      setQueue(shuffled);
-      setCurrentIndex(0);
-      setIsFlipped(false);
-    }
+    const hasAllTopic = topics.some(topic => topic.id === 'all');
+    const defaultTopicId = hasAllTopic ? 'all' : (topics[0]?.id || 'all');
+    setSelectedTopicId(defaultTopicId);
+    buildQueueForTopic(defaultTopicId);
   }, [pack]);
 
+  useEffect(() => {
+    buildQueueForTopic(selectedTopicId);
+  }, [selectedTopicId]);
+
   if (queue.length === 0) return <div>Lade Karten...</div>;
-  if (currentIndex >= queue.length) return (
-    <div className="text-center mt-20 animate-bounce">
-      <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
-      <p>Komm morgen wieder für mehr XP.</p>
-    </div>
-  );
 
   const card = queue[currentIndex];
 
+  if (!card) {
+    if (isPremiumUser) {
+      return (
+        <div className="text-center mt-20">
+          <h2 className="text-3xl font-bold mb-2">Weiter geht's! 🚀</h2>
+          <p className="opacity-80 mb-6">Als Premium lernst du ohne Limit. Starte einfach die nächste Runde.</p>
+          <button onClick={() => buildQueueForTopic(selectedTopicId)} className={`px-6 py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>
+            Nächste Runde starten
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="text-center mt-20 animate-bounce">
+        <h2 className="text-3xl font-bold mb-2">Tagesziel erreicht! 🎉</h2>
+        <p>Komm morgen wieder für mehr XP.</p>
+      </div>
+    );
+  }
+
   const handleAnswer = (known: boolean) => {
     addXP(known ? 10 : 2, known);
+    if (known) onLearnedWord(activeTopic.title, card);
     setIsFlipped(false);
-    setCurrentIndex(prev => prev + 1);
+
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= queue.length && isPremiumUser) {
+      buildQueueForTopic(selectedTopicId);
+      return;
+    }
+
+    setCurrentIndex(nextIndex);
     if ('vibrate' in navigator) navigator.vibrate(known ? [50, 50] : [100]);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full mt-10">
-      <div className="w-full mb-4 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+    <div className="flex flex-col items-center justify-center h-full mt-6">
+      <div className="w-full mb-4">
+        <div className="flex flex-wrap gap-2 mb-4">
+          <button
+            onClick={() => setSelectedTopicId('all')}
+            className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === 'all' ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+          >
+            🌍 Alle Themen
+          </button>
+          {topics.filter(topic => topic.id !== 'all').map(topic => (
+            <button
+              key={topic.id}
+              onClick={() => setSelectedTopicId(topic.id)}
+              className={`px-3 py-2 rounded-xl text-sm font-semibold ${selectedTopicId === topic.id ? `text-white bg-gradient-to-r ${gradient}` : 'bg-white text-gray-700 border border-gray-200'}`}
+            >
+              {topic.icon || '📘'} {topic.title}
+            </button>
+          ))}
+        </div>
+
+        <div className="mb-4 bg-white border border-gray-100 rounded-2xl p-3">
+          <div className="text-xs font-bold uppercase tracking-wider opacity-60 mb-2">Wörter im aktiven Thema: {activeTopic.title}</div>
+          <div className="flex flex-wrap gap-2 max-h-28 overflow-y-auto">
+            {activeTopic.vocab.map((item: VocabItem) => (
+              <span key={item.id || item.de} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{item.de}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${(currentIndex / queue.length) * 100}%` }}></div>
+        </div>
       </div>
-      
-      <div 
-        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white dark:bg-gray-800 border-2 border-indigo-200' : 'bg-white dark:bg-gray-800'}`}
+
+      <div
+        className={`w-full max-w-md min-h-[300px] p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 transform ${isFlipped ? 'bg-white border-2 border-indigo-200' : 'bg-white'} text-gray-900`}
         onClick={() => !isFlipped && setIsFlipped(true)}
       >
         <div className="text-gray-400 mb-2 uppercase tracking-widest text-sm font-bold">Deutsch</div>
         <h2 className="text-3xl font-bold mb-4">{card.de}</h2>
-        
+
         {isFlipped ? (
           <div className="animate-fade-in mt-6 pt-6 border-t border-gray-100 w-full">
-             <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
-             <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{card.x}</h2>
-             {card.ex && (
-               <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl italic opacity-80 text-sm">
-                 <p>{card.ex}</p>
-                 <p className="mt-1 font-semibold">{card.exTr}</p>
-               </div>
-             )}
-             <div className="flex space-x-4 mt-6 justify-center">
-                <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🇩🇪 🔊</button>
-                <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-xl hover:scale-110 transition">🎯 🔊</button>
-             </div>
+            <div className="text-indigo-400 mb-2 uppercase tracking-widest text-sm font-bold">Zielsprache</div>
+            <h2 className="text-3xl font-bold text-indigo-600 mb-4">{card.x}</h2>
+            {card.ex && (
+              <div className="mt-4 p-4 bg-indigo-50 rounded-xl italic opacity-90 text-sm text-gray-900">
+                <p>{card.ex}</p>
+                <p className="mt-1 font-semibold">{card.exTr}</p>
+              </div>
+            )}
+            <div className="flex space-x-4 mt-6 justify-center">
+              <button onClick={(e) => { e.stopPropagation(); speak(card.de, 'DE'); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🇩🇪 🔊</button>
+              <button onClick={(e) => { e.stopPropagation(); speak(card.x, pack.lang); }} className="p-3 bg-indigo-50 rounded-full text-xl hover:scale-110 transition text-gray-900">🎯 🔊</button>
+            </div>
           </div>
         ) : (
           <p className="mt-10 opacity-50 animate-pulse">Tippe zum Aufdecken</p>
@@ -332,7 +920,7 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
 
       {isFlipped && (
         <div className="flex space-x-4 mt-8 w-full max-w-md">
-          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-600 dark:bg-red-900/30 hover:bg-red-200 transition">Noch üben</button>
+          <button onClick={() => handleAnswer(false)} className="flex-1 py-4 rounded-2xl font-bold bg-red-100 text-red-700 hover:bg-red-200 transition">Noch üben</button>
           <button onClick={() => handleAnswer(true)} className={`flex-1 py-4 rounded-2xl font-bold text-white bg-gradient-to-r ${gradient} shadow-lg hover:opacity-90 transition`}>Gewusst</button>
         </div>
       )}
@@ -343,30 +931,90 @@ function TabHeute({ pack, speak, addXP, gradient }: any) {
 function TabUebungen({ pack, addXP, gradient }: any) {
   const [questionCode, setQuestionCode] = useState<VocabItem | null>(null);
   const [options, setOptions] = useState<string[]>([]);
-  
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
+  const [isLocked, setIsLocked] = useState(false);
+
+  const playFeedbackTone = (success: boolean) => {
+    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    if (!AudioCtx) return;
+
+    const ctx = new AudioCtx();
+    const oscillator = ctx.createOscillator();
+    const gainNode = ctx.createGain();
+
+    oscillator.type = success ? 'sine' : 'sawtooth';
+    oscillator.frequency.value = success ? 740 : 220;
+
+    gainNode.gain.setValueAtTime(0.001, ctx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.15, ctx.currentTime + 0.01);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.22);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(ctx.destination);
+
+    oscillator.start();
+    oscillator.stop(ctx.currentTime + 0.24);
+
+    oscillator.onended = () => {
+      ctx.close().catch(() => undefined);
+    };
+  };
+
   const generateQuestion = () => {
-    if (!pack?.vocab || pack.vocab.length < 4) return;
-    const shuffled = [...pack.vocab].sort(() => 0.5 - Math.random());
+    const vocab = getVocabFromPack(pack);
+    if (vocab.length < 4) return;
+
+    const shuffled = [...vocab].sort(() => 0.5 - Math.random());
     const correct = shuffled[0];
     const wrongs = shuffled.slice(1, 4).map(v => v.x);
     const allOptions = [correct.x, ...wrongs].sort(() => 0.5 - Math.random());
-    
+
     setQuestionCode(correct);
     setOptions(allOptions);
+    setSelectedOption(null);
+    setIsAnswerCorrect(null);
+    setIsLocked(false);
   };
 
   useEffect(() => { generateQuestion(); }, [pack]);
 
   const handleSelect = (opt: string) => {
-    const isCorrect = opt === questionCode?.x;
-    if (isCorrect) {
+    if (isLocked || !questionCode) return;
+
+    setSelectedOption(opt);
+    const correct = opt === questionCode.x;
+    setIsAnswerCorrect(correct);
+    setIsLocked(true);
+
+    if (correct) {
       addXP(15, true);
       if ('vibrate' in navigator) navigator.vibrate([30, 30]);
     } else {
       addXP(0, false);
-      if ('vibrate' in navigator) navigator.vibrate(200);
+      if ('vibrate' in navigator) navigator.vibrate([120]);
     }
-    generateQuestion();
+
+    playFeedbackTone(correct);
+    window.setTimeout(() => {
+      generateQuestion();
+    }, 900);
+  };
+
+  const getOptionClasses = (opt: string) => {
+    if (!isLocked || !questionCode) {
+      return 'bg-white text-gray-900 border-transparent hover:border-indigo-400';
+    }
+
+    if (opt === questionCode.x) {
+      return 'bg-green-100 text-green-800 border-green-400';
+    }
+
+    if (opt === selectedOption && opt !== questionCode.x) {
+      return 'bg-red-100 text-red-800 border-red-400';
+    }
+
+    return 'bg-white/70 text-gray-500 border-transparent';
   };
 
   if (!questionCode) return <div>Paket benötigt mind. 4 Vokabeln für Multiple Choice.</div>;
@@ -374,33 +1022,56 @@ function TabUebungen({ pack, addXP, gradient }: any) {
   return (
     <div className="mt-6 flex flex-col items-center">
       <h2 className="text-xl font-bold opacity-70 mb-8 uppercase tracking-wider">Welches Wort passt?</h2>
-      
-      <div className="text-4xl font-extrabold mb-12 text-center break-words w-full">
+
+      <div className="text-4xl font-extrabold mb-6 text-center break-words w-full">
         {questionCode.de}
       </div>
 
+      {isLocked && (
+        <p className={`mb-6 text-sm font-bold ${isAnswerCorrect ? 'text-green-700' : 'text-red-700'}`}>
+          {isAnswerCorrect ? 'Richtig! Stark gemacht ✅' : `Nicht ganz. Richtig ist: ${questionCode.x}`}
+        </p>
+      )}
+
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
         {options.map((opt, i) => (
-          <button 
-            key={i} 
+          <button
+            key={i}
             onClick={() => handleSelect(opt)}
-            className="p-5 text-lg font-semibold bg-white dark:bg-gray-800 rounded-2xl shadow-sm border-2 border-transparent hover:border-indigo-400 active:scale-95 transition-all"
+            disabled={isLocked}
+            className={`p-5 text-lg font-semibold rounded-2xl shadow-sm border-2 active:scale-95 transition-all ${getOptionClasses(opt)} ${isLocked ? 'cursor-not-allowed' : ''}`}
           >
             {opt}
           </button>
         ))}
       </div>
+
+      <p className="mt-5 text-xs opacity-60">Antwort-Farben: Grün = richtig, Rot = falsch</p>
     </div>
   );
 }
 
-function TabProfil({ stats, gradient }: any) {
+function TabProfil({ stats, gradient, learningInsights }: any) {
   const accuracy = stats.totalAnswers === 0 ? 0 : Math.round((stats.correctAnswers / stats.totalAnswers) * 100);
-  
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [calendarDate, setCalendarDate] = useState(new Date());
+
+  const monthStart = new Date(calendarDate.getFullYear(), calendarDate.getMonth(), 1);
+  const monthEnd = new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 0);
+  const firstWeekday = (monthStart.getDay() + 6) % 7;
+  const totalDays = monthEnd.getDate();
+
+  const dayCells = Array.from({ length: firstWeekday + totalDays }, (_, i) => {
+    if (i < firstWeekday) return null;
+    const day = i - firstWeekday + 1;
+    const dateKey = `${calendarDate.getFullYear()}-${String(calendarDate.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return { day, dateKey, learnedCount: learningInsights?.learnedDays?.[dateKey] || 0 };
+  });
+
   return (
     <div className="mt-4 space-y-6">
       <div className="text-center">
-        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white dark:border-gray-800`}>
+        <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-r ${gradient} flex items-center justify-center text-5xl text-white shadow-xl mb-4 border-4 border-white`}>
           🦉
         </div>
         <h2 className="text-3xl font-bold">Level {stats.level}</h2>
@@ -409,12 +1080,55 @@ function TabProfil({ stats, gradient }: any) {
 
       <div className="grid grid-cols-2 gap-4">
         <StatBox title="XP Gesamt" value={stats.xp} icon="⭐" />
-        <StatBox title="Tages-Streak" value={stats.streak} icon="🔥" />
+        <button onClick={() => setShowCalendar(prev => !prev)} className="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center text-gray-900">
+          <div className="text-3xl mb-2">🔥</div>
+          <div className="text-2xl font-black">{stats.streak}</div>
+          <div className="text-xs font-bold opacity-50 uppercase mt-1">Tages-Streak</div>
+        </button>
         <StatBox title="Gelernte Wörter" value={stats.learnedWords} icon="📚" />
         <StatBox title="Genauigkeit" value={`${accuracy}%`} icon="🎯" />
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm mt-6">
+      {showCalendar && (
+        <div className="bg-white p-6 rounded-3xl shadow-sm text-gray-900">
+          <div className="flex items-center justify-between mb-4">
+            <button onClick={() => setCalendarDate(new Date(calendarDate.getFullYear(), calendarDate.getMonth() - 1, 1))} className="px-3 py-1 rounded-lg bg-gray-100">←</button>
+            <h3 className="font-bold">{calendarDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}</h3>
+            <button onClick={() => setCalendarDate(new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 1))} className="px-3 py-1 rounded-lg bg-gray-100">→</button>
+          </div>
+          <div className="grid grid-cols-7 gap-2 text-xs text-center font-bold opacity-60 mb-2">
+            {['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => <div key={d}>{d}</div>)}
+          </div>
+          <div className="grid grid-cols-7 gap-2 text-sm">
+            {dayCells.map((cell, idx) => cell ? (
+              <div key={idx} className={`rounded-lg p-2 text-center ${cell.learnedCount > 0 ? 'bg-green-100 text-green-800 font-bold' : 'bg-gray-50 text-gray-500'}`}>
+                {cell.day}
+              </div>
+            ) : <div key={idx}></div>)}
+          </div>
+        </div>
+      )}
+
+      <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
+        <h3 className="font-bold text-lg mb-4">Gelernte Wörter nach Themen</h3>
+        <div className="space-y-4">
+          {Object.keys(learningInsights?.learnedWordsByTopic || {}).length === 0 && (
+            <p className="text-sm opacity-70">Noch keine Wörter als gelernt markiert.</p>
+          )}
+          {Object.entries(learningInsights?.learnedWordsByTopic || {}).map(([topic, words]) => (
+            <div key={topic}>
+              <h4 className="font-bold mb-2">{topic}</h4>
+              <div className="flex flex-wrap gap-2">
+                {(words as string[]).map(word => (
+                  <span key={word} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{word}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white p-6 rounded-3xl shadow-sm mt-6 text-gray-900">
         <h3 className="font-bold text-lg mb-4">Achievements</h3>
         <ul className="space-y-3">
           <Achievement name="Erster Schritt" done={stats.xp > 0} />
@@ -441,9 +1155,10 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     const reader = new FileReader();
     reader.onload = async (event) => {
       try {
-        const pack = JSON.parse(event.target?.result as string) as LanguagePack;
-        await savePackToDB(pack);
-        setMsg(`Paket ${pack.lang} erfolgreich geladen!`);
+        const parsed = normalizePack(JSON.parse(event.target?.result as string) as LanguagePack);
+        if (!parsed) throw new Error('Invalid pack');
+        await savePackToDB(parsed);
+        setMsg(`Paket ${parsed.lang} erfolgreich geladen!`);
         onPackChange();
       } catch (err) {
         setMsg('Fehler beim Lesen der JSON-Datei.');
@@ -456,12 +1171,33 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     try {
       setMsg('Lade...');
       const res = await fetch(url);
-      const pack = await res.json();
-      await savePackToDB(pack);
-      setMsg(`Paket ${pack.lang} heruntergeladen!`);
+      const parsed = normalizePack(await res.json() as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} heruntergeladen!`);
       onPackChange();
     } catch (err) {
       setMsg('Fehler beim Download der URL.');
+    }
+  };
+
+  const loadFromProjectFolder = async () => {
+    try {
+      const levelPath = getPackPath(settings.targetLang, settings.contentLevel);
+      const legacyPath = getLegacyPackPath(settings.targetLang);
+      setMsg(`Lade ${levelPath} ...`);
+
+      let response = await fetch(levelPath, { cache: 'no-store' });
+      if (!response.ok) response = await fetch(legacyPath, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Datei nicht gefunden');
+
+      const parsed = normalizePack((await response.json()) as LanguagePack);
+      if (!parsed) throw new Error('Invalid pack');
+      await savePackToDB(parsed);
+      setMsg(`Paket ${parsed.lang} (${settings.contentLevel}) aus /public/packs geladen.`);
+      onPackChange();
+    } catch {
+      setMsg(`Konnte ${settings.targetLang}/${settings.contentLevel} in /public/packs nicht laden.`);
     }
   };
 
@@ -475,11 +1211,11 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
     <div className="mt-4 space-y-6 pb-10">
       <h2 className="text-3xl font-bold mb-6">Einstellungen</h2>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <div>
           <label className="block text-sm font-bold opacity-70 mb-2">Zielsprache (für Pack)</label>
           <select 
-            className="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none"
+            className="w-full p-3 rounded-xl bg-gray-100 outline-none text-gray-900"
             value={settings.targetLang}
             onChange={(e) => { updateSetting('targetLang', e.target.value); onPackChange(); }}
           >
@@ -487,6 +1223,20 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
             <option value="ES">Spanisch</option>
             <option value="FR">Französisch</option>
             <option value="RU">Russisch</option>
+            <option value="IT">Italienisch</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold opacity-70 mb-2">Content-Level</label>
+          <select
+            className="w-full p-3 rounded-xl bg-gray-100 outline-none text-gray-900"
+            value={settings.contentLevel}
+            onChange={(e) => { updateSetting('contentLevel', e.target.value); onPackChange(); }}
+          >
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
           </select>
         </div>
 
@@ -497,7 +1247,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
               <button 
                 key={t}
                 onClick={() => updateSetting('theme', t)}
-                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 dark:bg-gray-700`}
+                className={`flex-1 py-2 rounded-lg text-sm font-bold ${settings.theme === t ? 'ring-2 ring-indigo-500' : 'opacity-50'} bg-gray-100 text-gray-900`}
               >
                 {t}
               </button>
@@ -516,26 +1266,32 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-sm space-y-4">
+      <div className="bg-white p-6 rounded-3xl shadow-sm space-y-4 text-gray-900">
         <h3 className="font-bold text-lg">Inhalte verwalten</h3>
         
         <div>
+           <label className="block text-sm font-bold opacity-70 mb-2">Direkt aus /public/packs laden</label>
+           <button onClick={loadFromProjectFolder} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Pack für {settings.targetLang} laden</button>
+           <p className="text-xs opacity-60 mt-2">Erwartete Datei: {getPackPath(settings.targetLang, settings.contentLevel)}</p>
+        </div>
+
+        <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Aus JSON Datei importieren</label>
            <input type="file" accept=".json" ref={fileInputRef} onChange={handleFileUpload} className="hidden" />
-           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 dark:bg-gray-700 rounded-xl font-semibold">Datei auswählen</button>
+           <button onClick={() => fileInputRef.current?.click()} className="w-full py-3 bg-gray-100 rounded-xl font-semibold text-gray-900">Datei auswählen</button>
         </div>
 
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Von URL importieren</label>
            <div className="flex space-x-2">
-             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 dark:bg-gray-700 outline-none" />
+             <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="flex-1 p-3 rounded-xl bg-gray-100 outline-none text-gray-900" />
              <button onClick={loadFromURL} className={`px-4 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Laden</button>
            </div>
         </div>
         
         {msg && <p className="text-sm font-bold text-green-500">{msg}</p>}
 
-        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-500 bg-red-50 dark:bg-red-900/20 rounded-xl font-bold">Zwischenspeicher löschen</button>
+        <button onClick={clearCache} className="w-full py-3 mt-4 text-red-600 bg-red-50 rounded-xl font-bold">Zwischenspeicher löschen</button>
       </div>
     </div>
   );
@@ -547,7 +1303,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
 
 function NavButton({ icon, label, isActive, onClick, gradient }: any) {
   return (
-    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>
+    <button onClick={onClick} className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all ${isActive ? `text-white bg-gradient-to-r ${gradient} shadow-lg -translate-y-2` : 'text-gray-500 hover:bg-gray-100'}`}>
       <span className="text-2xl mb-1">{icon}</span>
       <span className="text-[10px] font-bold uppercase tracking-wider">{label}</span>
     </button>
@@ -556,7 +1312,7 @@ function NavButton({ icon, label, isActive, onClick, gradient }: any) {
 
 function StatBox({ title, value, icon }: any) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
+    <div className="bg-white p-4 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center text-gray-900">
       <div className="text-3xl mb-2">{icon}</div>
       <div className="text-2xl font-black">{value}</div>
       <div className="text-xs font-bold opacity-50 uppercase mt-1">{title}</div>
@@ -566,8 +1322,8 @@ function StatBox({ title, value, icon }: any) {
 
 function Achievement({ name, done, subtitle }: any) {
   return (
-    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50 dark:bg-green-900/20' : 'opacity-40 grayscale'}`}>
-      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`}>
+    <li className={`flex items-center p-3 rounded-2xl ${done ? 'bg-green-50' : 'opacity-40 grayscale'}`}>
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4 ${done ? 'bg-green-200' : 'bg-gray-200'}`}>
         {done ? '🏆' : '🔒'}
       </div>
       <div>
