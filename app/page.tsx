@@ -6,15 +6,30 @@ import React, { useState, useEffect, useRef } from 'react';
 // TYPEN & INTERFACES
 // ==========================================
 interface VocabItem {
+  id?: string;
   de: string;
   x: string;
   ex?: string;
   exTr?: string;
+  difficulty?: 1 | 2 | 3;
+  tags?: string[];
 }
 
 interface SentenceItem {
+  id: string;
   de: string;
-  x: string;
+  x?: string;
+  translations?: Record<string, string>;
+  focusWord?: string;
+}
+
+interface TopicItem {
+  id: string;
+  title: string;
+  icon?: string;
+  level?: string;
+  difficulty?: 1 | 2 | 3;
+  vocab: VocabItem[];
 }
 
 interface TopicItem {
@@ -49,6 +64,7 @@ interface UserStats {
 interface AppSettings {
   targetLang: string;
   difficulty: string;
+  contentLevel: 'A1' | 'A2' | 'B1';
   dailyGoal: number;
   theme: 'Ocean' | 'Sunset' | 'Lime' | 'Grape';
   isDarkMode: boolean;
@@ -79,12 +95,10 @@ interface LearningInsights {
 const DB_NAME = 'LingoDB';
 const STORE_NAME = 'packs';
 const PUBLIC_PACKS_PATH = '/packs';
-const PACK_FILE_BY_LANG: Record<string, string> = {
-  EN: 'en.json',
-  ES: 'es.json',
-  FR: 'fr.json',
-  RU: 'ru.json',
-};
+const SUPPORTED_LANGS = ['EN', 'ES', 'FR', 'RU', 'IT'] as const;
+
+const getPackPath = (lang: string, level: string) => `${PUBLIC_PACKS_PATH}/${lang.toLowerCase()}/${level.toLowerCase()}.json`;
+const getLegacyPackPath = (lang: string) => `${PUBLIC_PACKS_PATH}/${lang.toLowerCase()}.json`;
 const FIREBASE_CONFIG = {
   apiKey: 'AIzaSyBJvSmyrnnuCcwkDdAp7zym9ipiY3treRo',
   authDomain: 'lingo-basic.firebaseapp.com',
@@ -140,13 +154,17 @@ const deletePackFromDB = async (lang: string) => {
   });
 };
 
-const fetchPackFromPublicFolder = async (lang: string): Promise<LanguagePack | null> => {
-  const fileName = PACK_FILE_BY_LANG[lang];
-  if (!fileName) return null;
+const fetchPackFromPublicFolder = async (lang: string, level: string): Promise<LanguagePack | null> => {
+  if (!SUPPORTED_LANGS.includes(lang as (typeof SUPPORTED_LANGS)[number])) return null;
 
   try {
-    const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
-    if (!response.ok) return null;
+    const levelPath = getPackPath(lang, level);
+    let response = await fetch(levelPath, { cache: 'no-store' });
+
+    if (!response.ok) {
+      response = await fetch(getLegacyPackPath(lang), { cache: 'no-store' });
+      if (!response.ok) return null;
+    }
 
     const pack = normalizePack((await response.json()) as LanguagePack);
     if (!pack) return null;
@@ -166,6 +184,29 @@ const getVocabFromPack = (pack: LanguagePack | null): VocabItem[] => {
   return Array.isArray(pack.vocab) ? pack.vocab : [];
 };
 
+
+const toDifficultyNumber = (difficulty: unknown): 1 | 2 | 3 => {
+  if (difficulty === 1 || difficulty === 2 || difficulty === 3) return difficulty;
+  if (difficulty === 'easy') return 1;
+  if (difficulty === 'medium') return 2;
+  if (difficulty === 'hard') return 3;
+  return 1;
+};
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+
+const buildWordId = (topicId: string, item: VocabItem, index: number) => {
+  if (item.id) return item.id;
+  const base = slugify(item.de || item.x || `word_${index}`);
+  return `${topicId}_${base || index}`;
+};
+
 const getTopicsFromPack = (pack: LanguagePack | null): TopicItem[] => {
   if (!pack) return [];
   if (Array.isArray(pack.topics) && pack.topics.length > 0) return pack.topics;
@@ -178,7 +219,7 @@ const getTopicsFromPack = (pack: LanguagePack | null): TopicItem[] => {
     title: 'Allgemein',
     icon: '📘',
     level: pack.level,
-    difficulty: 'easy',
+    difficulty: 1,
     vocab: fallbackVocab,
   }];
 };
@@ -187,11 +228,53 @@ const normalizePack = (pack: LanguagePack): LanguagePack | null => {
   const hasLegacyVocab = Array.isArray(pack?.vocab) && pack.vocab.length > 0;
   const hasTopics = Array.isArray(pack?.topics) && pack.topics.length > 0;
   if (!pack?.lang || (!hasLegacyVocab && !hasTopics)) return null;
+
+  const normalizedTopics: TopicItem[] | undefined = hasTopics
+    ? (pack.topics || []).map((topic, topicIndex) => {
+        const topicId = topic.id || `topic_${topicIndex + 1}`;
+        const topicDifficulty = toDifficultyNumber((topic as any).difficulty);
+        const normalizedVocab = (topic.vocab || []).map((item, index) => ({
+          ...item,
+          id: buildWordId(topicId, item, index),
+          difficulty: toDifficultyNumber(item.difficulty ?? topicDifficulty),
+          tags: item.tags && item.tags.length > 0 ? item.tags : [slugify(topic.title) || topicId],
+        }));
+
+        return {
+          ...topic,
+          id: topicId,
+          difficulty: topicDifficulty,
+          vocab: normalizedVocab,
+        };
+      })
+    : undefined;
+
+  const normalizedVocab = hasLegacyVocab
+    ? (pack.vocab || []).map((item, index) => ({
+        ...item,
+        id: item.id || `general_${slugify(item.de || item.x || String(index))}`,
+        difficulty: toDifficultyNumber(item.difficulty),
+        tags: item.tags && item.tags.length > 0 ? item.tags : ['general'],
+      }))
+    : undefined;
+
+  const langKey = pack.lang.toLowerCase();
+  const normalizedSentences: SentenceItem[] = (Array.isArray(pack.sentences) ? pack.sentences : []).map((sentence: SentenceItem, index) => {
+    const translations = sentence.translations || (sentence.x ? { [langKey]: sentence.x } : undefined);
+    return {
+      id: sentence.id || `sent_${String(index + 1).padStart(3, '0')}`,
+      de: sentence.de,
+      x: sentence.x,
+      translations,
+      focusWord: sentence.focusWord,
+    };
+  });
+
   return {
     ...pack,
-    vocab: hasLegacyVocab ? pack.vocab : undefined,
-    topics: hasTopics ? pack.topics : undefined,
-    sentences: Array.isArray(pack.sentences) ? pack.sentences : [],
+    vocab: normalizedVocab,
+    topics: normalizedTopics,
+    sentences: normalizedSentences,
   };
 };
 
@@ -301,7 +384,7 @@ export default function LingoApp() {
   });
   
   const [settings, setSettings] = useState<AppSettings>({
-    targetLang: 'EN', difficulty: 'Beginner', dailyGoal: 20, theme: 'Ocean', isDarkMode: false
+    targetLang: 'EN', difficulty: 'Beginner', contentLevel: 'A1', dailyGoal: 20, theme: 'Ocean', isDarkMode: false
   });
   
   const [currentPack, setCurrentPack] = useState<LanguagePack | null>(null);
@@ -326,7 +409,17 @@ export default function LingoApp() {
       const parsedStats = JSON.parse(savedStats);
       checkStreak(parsedStats);
     }
-    if (savedSettings) setSettings(JSON.parse(savedSettings));
+    if (savedSettings) {
+      const parsedSettings = JSON.parse(savedSettings) as Partial<AppSettings>;
+      setSettings({
+        targetLang: parsedSettings.targetLang || 'EN',
+        difficulty: parsedSettings.difficulty || 'Beginner',
+        contentLevel: parsedSettings.contentLevel || 'A1',
+        dailyGoal: parsedSettings.dailyGoal || 20,
+        theme: parsedSettings.theme || 'Ocean',
+        isDarkMode: parsedSettings.isDarkMode || false,
+      });
+    }
     const savedAuthUser = localStorage.getItem('lingoAuthUser');
     if (savedAuthUser) setAuthUser(JSON.parse(savedAuthUser));
     const savedInsights = localStorage.getItem('lingoLearningInsights');
@@ -345,9 +438,120 @@ export default function LingoApp() {
 
   useEffect(() => {
     if (isLoaded) {
-      loadPack(settings.targetLang);
+      loadPack(settings.targetLang, settings.contentLevel);
     }
-  }, [settings.targetLang, isLoaded]);
+  }, [settings.targetLang, settings.contentLevel, isLoaded]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
+  }, [authUser]);
+
+  useEffect(() => {
+    localStorage.setItem('lingoLearningInsights', JSON.stringify(learningInsights));
+  }, [learningInsights]);
+
+
+  useEffect(() => {
+    if (!authUser) {
+      setCloudSyncReady(true);
+      return;
+    }
+
+    const hydrateCloudProgress = async () => {
+      try {
+        const cloud = await loadCloudProgress(authUser);
+        const localStatsRaw = localStorage.getItem('lingoStats');
+        const localSettingsRaw = localStorage.getItem('lingoSettings');
+
+        const localStats = localStatsRaw ? (JSON.parse(localStatsRaw) as UserStats) : null;
+        const localSettings = localSettingsRaw ? (JSON.parse(localSettingsRaw) as AppSettings) : null;
+        const localUpdatedAt = Number(localStorage.getItem('lingoStatsUpdatedAt') || 0);
+
+        if (!cloud) {
+          if (localStats && localSettings) {
+            await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          }
+          setCloudSyncReady(true);
+          return;
+        }
+
+        if (localStats && localSettings && localUpdatedAt > cloud.updatedAt) {
+          await saveCloudProgress(authUser, { stats: localStats, settings: localSettings, updatedAt: Date.now() });
+          setLastCloudSyncAt(Date.now());
+        } else {
+          setStats(cloud.stats);
+          setSettings(cloud.settings);
+          localStorage.setItem('lingoStats', JSON.stringify(cloud.stats));
+          localStorage.setItem('lingoSettings', JSON.stringify(cloud.settings));
+          localStorage.setItem('lingoStatsUpdatedAt', String(cloud.updatedAt || Date.now()));
+          setLastCloudSyncAt(cloud.updatedAt || Date.now());
+        }
+      } catch (error) {
+        setAuthMsg(`Cloud Sync Fehler: ${(error as Error).message}`);
+      } finally {
+        setCloudSyncReady(true);
+      }
+    };
+
+    setCloudSyncReady(false);
+    hydrateCloudProgress();
+  }, [authUser]);
+
+  useEffect(() => {
+    if (!isLoaded || !cloudSyncReady) return;
+
+    const now = Date.now();
+    localStorage.setItem('lingoStatsUpdatedAt', String(now));
+
+    if (!authUser) return;
+
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        await saveCloudProgress(authUser, { stats, settings, updatedAt: now });
+        setLastCloudSyncAt(now);
+      } catch {
+        // keep local progress, retry on next state update
+      }
+    }, 600);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [stats, settings, authUser, isLoaded, cloudSyncReady]);
+
+  useEffect(() => {
+    if (!isAuthOpen || !googleClientId || !isAuthConfigured()) return;
+    if (typeof window === 'undefined') return;
+
+    const scriptId = 'google-identity-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://accounts.google.com/gsi/client';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, [isAuthOpen, googleClientId]);
+
+
+  const onLearnedWord = (topicTitle: string, wordItem: VocabItem) => {
+    const todayKey = new Date().toISOString().slice(0, 10);
+    setLearningInsights(prev => {
+      const existingWords = prev.learnedWordsByTopic[topicTitle] || [];
+      const safeWordLabel = `${wordItem.de}${wordItem.id ? ` (#${wordItem.id})` : ''}`;
+      const nextWords = existingWords.includes(safeWordLabel) ? existingWords : [...existingWords, safeWordLabel];
+
+      return {
+        learnedDays: {
+          ...prev.learnedDays,
+          [todayKey]: (prev.learnedDays[todayKey] || 0) + 1,
+        },
+        learnedWordsByTopic: {
+          ...prev.learnedWordsByTopic,
+          [topicTitle]: nextWords,
+        },
+      };
+    });
+  };
 
   useEffect(() => {
     localStorage.setItem('lingoAuthUser', JSON.stringify(authUser));
@@ -477,14 +681,14 @@ export default function LingoApp() {
     }
   };
 
-  const loadPack = async (lang: string) => {
+  const loadPack = async (lang: string, level: AppSettings['contentLevel']) => {
     const cachedPack = await getPackFromDB(lang);
     if (cachedPack) {
       setCurrentPack(cachedPack);
       return;
     }
 
-    const publicPack = await fetchPackFromPublicFolder(lang);
+    const publicPack = await fetchPackFromPublicFolder(lang, level);
     if (publicPack) {
       await savePackToDB(publicPack);
       setCurrentPack(publicPack);
@@ -519,7 +723,7 @@ export default function LingoApp() {
     if (!window.speechSynthesis) return;
     const utterance = new SpeechSynthesisUtterance(text);
     // Map internal codes to BCP 47
-    const langMap: Record<string, string> = { 'DE': 'de-DE', 'EN': 'en-US', 'ES': 'es-ES', 'FR': 'fr-FR', 'RU': 'ru-RU' };
+    const langMap: Record<string, string> = { 'DE': 'de-DE', 'EN': 'en-US', 'ES': 'es-ES', 'FR': 'fr-FR', 'RU': 'ru-RU', 'IT': 'it-IT' };
     utterance.lang = langMap[langCode] || langMap[settings.targetLang] || 'en-US';
     window.speechSynthesis.speak(utterance);
   };
@@ -652,7 +856,7 @@ export default function LingoApp() {
             {activeTab === 'heute' && <TabHeute pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} isPremiumUser={true} onLearnedWord={onLearnedWord} />}
             {activeTab === 'uebungen' && <TabUebungen pack={currentPack!} speak={speak} addXP={addXP} gradient={gradient} />}
             {activeTab === 'profil' && <TabProfil stats={stats} gradient={gradient} learningInsights={learningInsights} />}
-            {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang)} gradient={gradient} />}
+            {activeTab === 'settings' && <TabSettings settings={settings} setSettings={setSettings} onPackChange={() => loadPack(settings.targetLang, settings.contentLevel)} gradient={gradient} />}
           </>
         )}
       </main>
@@ -758,7 +962,7 @@ function TabHeute({ pack, speak, addXP, gradient, isPremiumUser, onLearnedWord }
 
   const handleAnswer = (known: boolean) => {
     addXP(known ? 10 : 2, known);
-    if (known) onLearnedWord(activeTopic.title, card.de);
+    if (known) onLearnedWord(activeTopic.title, card);
     setIsFlipped(false);
 
     const nextIndex = currentIndex + 1;
@@ -796,7 +1000,7 @@ function TabHeute({ pack, speak, addXP, gradient, isPremiumUser, onLearnedWord }
           <div className="text-xs font-bold uppercase tracking-wider opacity-60 mb-2">Wörter im aktiven Thema: {activeTopic.title}</div>
           <div className="flex flex-wrap gap-2 max-h-28 overflow-y-auto">
             {activeTopic.vocab.map((item: VocabItem) => (
-              <span key={item.de} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{item.de}</span>
+              <span key={item.id || item.de} className="px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-semibold">{item.de}</span>
             ))}
           </div>
         </div>
@@ -1097,24 +1301,22 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
   };
 
   const loadFromProjectFolder = async () => {
-    const fileName = PACK_FILE_BY_LANG[settings.targetLang];
-    if (!fileName) {
-      setMsg(`Für ${settings.targetLang} ist keine Datei in /public/packs hinterlegt.`);
-      return;
-    }
-
     try {
-      setMsg(`Lade ${fileName} aus /public/packs ...`);
-      const response = await fetch(`${PUBLIC_PACKS_PATH}/${fileName}`, { cache: 'no-store' });
+      const levelPath = getPackPath(settings.targetLang, settings.contentLevel);
+      const legacyPath = getLegacyPackPath(settings.targetLang);
+      setMsg(`Lade ${levelPath} ...`);
+
+      let response = await fetch(levelPath, { cache: 'no-store' });
+      if (!response.ok) response = await fetch(legacyPath, { cache: 'no-store' });
       if (!response.ok) throw new Error('Datei nicht gefunden');
 
       const parsed = normalizePack((await response.json()) as LanguagePack);
       if (!parsed) throw new Error('Invalid pack');
       await savePackToDB(parsed);
-      setMsg(`Paket ${parsed.lang} aus /public/packs geladen.`);
+      setMsg(`Paket ${parsed.lang} (${settings.contentLevel}) aus /public/packs geladen.`);
       onPackChange();
     } catch {
-      setMsg(`Konnte ${fileName} in /public/packs nicht laden.`);
+      setMsg(`Konnte ${settings.targetLang}/${settings.contentLevel} in /public/packs nicht laden.`);
     }
   };
 
@@ -1140,6 +1342,20 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
             <option value="ES">Spanisch</option>
             <option value="FR">Französisch</option>
             <option value="RU">Russisch</option>
+            <option value="IT">Italienisch</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold opacity-70 mb-2">Content-Level</label>
+          <select
+            className="w-full p-3 rounded-xl bg-gray-100 outline-none text-gray-900"
+            value={settings.contentLevel}
+            onChange={(e) => { updateSetting('contentLevel', e.target.value); onPackChange(); }}
+          >
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
           </select>
         </div>
 
@@ -1175,7 +1391,7 @@ function TabSettings({ settings, setSettings, onPackChange, gradient }: any) {
         <div>
            <label className="block text-sm font-bold opacity-70 mb-2">Direkt aus /public/packs laden</label>
            <button onClick={loadFromProjectFolder} className={`w-full py-3 rounded-xl text-white font-bold bg-gradient-to-r ${gradient}`}>Pack für {settings.targetLang} laden</button>
-           <p className="text-xs opacity-60 mt-2">Erwartete Datei: /public/packs/{PACK_FILE_BY_LANG[settings.targetLang] || 'nicht definiert'}</p>
+           <p className="text-xs opacity-60 mt-2">Erwartete Datei: {getPackPath(settings.targetLang, settings.contentLevel)}</p>
         </div>
 
         <div>
