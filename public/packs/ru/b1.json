@@ -1,0 +1,397 @@
+{
+  "version": 3,
+  "lang": "RU",
+  "level": "B1",
+  "topics": [
+    {
+      "id": "career_01",
+      "title": "Beruf & Karriere",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "career_01_application",
+          "de": "Bewerbung",
+          "x": "заявление о приёме на работу",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_responsibility",
+          "de": "Verantwortung",
+          "x": "ответственность",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_experience",
+          "de": "Erfahrung",
+          "x": "опыт",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_decide",
+          "de": "Entscheiden",
+          "x": "решать",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_negotiate",
+          "de": "Verhandeln",
+          "x": "вести переговоры",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_reliable",
+          "de": "Zuverlässig",
+          "x": "надёжный",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society_02",
+      "title": "Gesellschaft",
+      "icon": "🤝",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "society_02_community",
+          "de": "Gemeinschaft",
+          "x": "сообщество",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_equality",
+          "de": "Gleichberechtigung",
+          "x": "равенство",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_support",
+          "de": "Unterstützung",
+          "x": "поддержка",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_volunteer",
+          "de": "Freiwilliger",
+          "x": "волонтёр",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_rule",
+          "de": "Regel",
+          "x": "правило",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_trust",
+          "de": "Vertrauen",
+          "x": "доверие",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_03",
+      "title": "Reisen & Erlebnisse",
+      "icon": "🧭",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "travel_03_itinerary",
+          "de": "Reiseroute",
+          "x": "маршрут",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_accommodation",
+          "de": "Unterkunft",
+          "x": "жильё",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_change_trains",
+          "de": "Umsteigen",
+          "x": "делать пересадку",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_discover",
+          "de": "Entdecken",
+          "x": "открывать",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_recommend",
+          "de": "Empfehlen",
+          "x": "рекомендовать",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_unforgettable",
+          "de": "Unvergesslich",
+          "x": "незабываемый",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opinion_04",
+      "title": "Meinungen & Argumente",
+      "icon": "💡",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "opinion_04_opinion",
+          "de": "Meinung",
+          "x": "мнение",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_claim",
+          "de": "Behaupten",
+          "x": "утверждать",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_justify",
+          "de": "Begründen",
+          "x": "обосновывать",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compare",
+          "de": "Vergleichen",
+          "x": "сравнивать",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_influence",
+          "de": "Beeinflussen",
+          "x": "влиять",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_convince",
+          "de": "Überzeugen",
+          "x": "убеждать",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_05",
+      "title": "Umwelt & Zukunft",
+      "icon": "🌱",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "environment_05_resource",
+          "de": "Ressource",
+          "x": "ресурс",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_avoid",
+          "de": "Vermeiden",
+          "x": "избегать",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_reuse",
+          "de": "Wiederverwenden",
+          "x": "использовать повторно",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_pollute",
+          "de": "Verschmutzen",
+          "x": "загрязнять",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_sustainable",
+          "de": "Nachhaltig",
+          "x": "устойчивый",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_protect",
+          "de": "Schützen",
+          "x": "защищать",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital_06",
+      "title": "Digitaler Alltag",
+      "icon": "💻",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "digital_06_data_privacy",
+          "de": "Datenschutz",
+          "x": "защита данных",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_notification",
+          "de": "Benachrichtigung",
+          "x": "уведомление",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_download",
+          "de": "Herunterladen",
+          "x": "скачивать",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_upload",
+          "de": "Hochladen",
+          "x": "загружать",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_update",
+          "de": "Aktualisieren",
+          "x": "обновлять",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_password",
+          "de": "Passwort",
+          "x": "пароль",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Eine gute Lösung berücksichtigt verschiedene Perspektiven.",
+      "x": "Хорошее решение учитывает разные точки зрения.",
+      "translations": {
+        "ru": "Хорошее решение учитывает разные точки зрения."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Wir sollten unsere Ressourcen verantwortungsvoll nutzen.",
+      "x": "Мы должны ответственно использовать наши ресурсы.",
+      "translations": {
+        "ru": "Мы должны ответственно использовать наши ресурсы."
+      }
+    }
+  ]
+}
