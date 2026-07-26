@@ -59,16 +59,25 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
 
   return (
     <div className="mt-4 flex flex-col items-center">
-      <div className="mb-6 w-full overflow-x-auto pb-2">
-        <div className="mb-3 flex gap-2">
-          <button type="button" onClick={() => buildQueue("all")} className={`whitespace-nowrap rounded-xl px-3 py-2 text-sm font-bold ${selectedTopicId === "all" ? `bg-gradient-to-r ${gradient} text-white` : "bg-white text-gray-700"}`}>
-            🌍 Alle Themen
-          </button>
-          {pack.topics.map((topic) => (
-            <button key={topic.id} type="button" onClick={() => buildQueue(topic.id)} className={`whitespace-nowrap rounded-xl px-3 py-2 text-sm font-bold ${selectedTopicId === topic.id ? `bg-gradient-to-r ${gradient} text-white` : "bg-white text-gray-700"}`}>
-              {topic.icon} {topic.title}
-            </button>
-          ))}
+      <div className="mb-6 w-full">
+        <div className="mb-3 rounded-2xl bg-white p-3 text-gray-900 shadow-sm">
+          <label className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-gray-500" htmlFor="topic-selector">
+            Kategorie auswählen ({pack.topics.length})
+          </label>
+          <select
+            id="topic-selector"
+            value={selectedTopicId}
+            onChange={(event) => buildQueue(event.target.value)}
+            className="w-full rounded-xl bg-gray-100 px-3 py-3 text-sm font-bold text-gray-900 outline-none transition focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="all">🌍 Alle Themen ({getVocabFromPack(pack).length} Wörter)</option>
+            {pack.topics.map((topic) => (
+              <option key={topic.id} value={topic.id}>
+                {topic.icon} {topic.title} ({topic.vocab.length} Wörter)
+              </option>
+            ))}
+          </select>
+          <p className="mt-2 text-xs text-gray-500">Alle Kategorien sind hier jederzeit direkt auswählbar.</p>
         </div>
         <div className="rounded-2xl bg-white p-3 text-gray-900 shadow-sm">
           <p className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500">{activeTopic.title}</p>

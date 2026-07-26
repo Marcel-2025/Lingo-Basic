@@ -1,0 +1,397 @@
+{
+  "version": 3,
+  "lang": "EN",
+  "level": "A2",
+  "topics": [
+    {
+      "id": "daily_01",
+      "title": "Tagesablauf",
+      "icon": "⏰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "daily_01_wake_up",
+          "de": "Aufwachen",
+          "x": "wake up",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_have_breakfast",
+          "de": "Frühstücken",
+          "x": "have breakfast",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_get_dressed",
+          "de": "Sich anziehen",
+          "x": "get dressed",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_cook",
+          "de": "Kochen",
+          "x": "cook",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_tidy_up",
+          "de": "Aufräumen",
+          "x": "tidy up",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_rest",
+          "de": "Sich ausruhen",
+          "x": "rest",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "city_02",
+      "title": "Stadt & Nachbarschaft",
+      "icon": "🏙️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "city_02_intersection",
+          "de": "Kreuzung",
+          "x": "intersection",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_traffic_light",
+          "de": "Ampel",
+          "x": "traffic light",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pavement",
+          "de": "Bürgersteig",
+          "x": "pavement",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_neighborhood",
+          "de": "Nachbarschaft",
+          "x": "neighborhood",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_library",
+          "de": "Bücherei",
+          "x": "library",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_market",
+          "de": "Markt",
+          "x": "market",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication_03",
+      "title": "Kommunikation",
+      "icon": "💬",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "communication_03_ask",
+          "de": "Fragen",
+          "x": "ask",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_answer",
+          "de": "Antworten",
+          "x": "answer",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_explain",
+          "de": "Erklären",
+          "x": "explain",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_agree",
+          "de": "Zustimmen",
+          "x": "agree",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_reject",
+          "de": "Ablehnen",
+          "x": "reject",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_repeat",
+          "de": "Wiederholen",
+          "x": "repeat",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature_04",
+      "title": "Natur & Wetter",
+      "icon": "🌦️",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "nature_04_weather",
+          "de": "Wetter",
+          "x": "weather",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_cloud",
+          "de": "Wolke",
+          "x": "cloud",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_wind",
+          "de": "Wind",
+          "x": "wind",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_forest",
+          "de": "Wald",
+          "x": "forest",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_river",
+          "de": "Fluss",
+          "x": "river",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_mountain",
+          "de": "Berg",
+          "x": "mountain",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "feelings_05",
+      "title": "Gefühle & Charakter",
+      "icon": "✨",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "feelings_05_satisfied",
+          "de": "Zufrieden",
+          "x": "satisfied",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_nervous",
+          "de": "Nervös",
+          "x": "nervous",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_surprised",
+          "de": "Überrascht",
+          "x": "surprised",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_proud",
+          "de": "Stolz",
+          "x": "proud",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_relaxed",
+          "de": "Entspannt",
+          "x": "relaxed",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_patient",
+          "de": "Geduldig",
+          "x": "patient",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education_06",
+      "title": "Lernen & Bildung",
+      "icon": "📚",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "education_06_course",
+          "de": "Kurs",
+          "x": "course",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_task",
+          "de": "Aufgabe",
+          "x": "task",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_exam",
+          "de": "Prüfung",
+          "x": "exam",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_practise",
+          "de": "Üben",
+          "x": "practise",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_understand",
+          "de": "Verstehen",
+          "x": "understand",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_progress",
+          "de": "Fortschreiten",
+          "x": "progress",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich möchte meine Meinung klar erklären.",
+      "x": "I would like to explain my opinion clearly.",
+      "translations": {
+        "en": "I would like to explain my opinion clearly."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Am Wochenende gehe ich oft auf den Markt.",
+      "x": "I often go to the market at the weekend.",
+      "translations": {
+        "en": "I often go to the market at the weekend."
+      }
+    }
+  ]
+}
