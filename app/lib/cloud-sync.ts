@@ -1,5 +1,6 @@
 import { DEFAULT_INSIGHTS, DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { getFirebaseProjectId } from "@/app/lib/firebase-auth";
+import { isCefrLevel, isLanguageCode } from "@/app/lib/languages";
 import type { AuthUser, CloudProgressSnapshot, LearningInsights, UserStats, AppSettings } from "@/app/lib/types";
 
 type FirestoreFields = Record<string, { stringValue?: string; integerValue?: string }>;
@@ -25,10 +26,36 @@ export const normalizeStats = (input: Partial<UserStats> | undefined): UserStats
   level: Number.isFinite(input?.level) ? Math.max(1, Number(input?.level)) : DEFAULT_STATS.level,
 });
 
-export const normalizeSettings = (input: Partial<AppSettings> | undefined): AppSettings => ({
-  ...getDefaultSettings(),
-  ...input,
-});
+const normalizeDifficulty = (value: unknown): AppSettings["difficulty"] => {
+  if (value === 1 || value === 2 || value === 3 || value === "all") return value;
+  if (typeof value !== "string") return "all";
+
+  const legacyValue = value.trim().toLowerCase();
+  if (["beginner", "easy", "einfach"].includes(legacyValue)) return 1;
+  if (["intermediate", "medium", "mittel"].includes(legacyValue)) return 2;
+  if (["advanced", "hard", "schwer"].includes(legacyValue)) return 3;
+  return "all";
+};
+
+export const normalizeSettings = (input: Partial<AppSettings> | undefined): AppSettings => {
+  const defaults = getDefaultSettings();
+  const targetLang = typeof input?.targetLang === "string" ? input.targetLang.toUpperCase() : "";
+  const contentLevel = typeof input?.contentLevel === "string" ? input.contentLevel.toUpperCase() : "";
+  const dailyGoal = Number(input?.dailyGoal);
+  const themes: AppSettings["theme"][] = ["Ocean", "Sunset", "Lime", "Grape"];
+  const theme = input?.theme;
+
+  return {
+    ...defaults,
+    targetLang: isLanguageCode(targetLang) ? targetLang : defaults.targetLang,
+    contentLevel: isCefrLevel(contentLevel) ? contentLevel : defaults.contentLevel,
+    difficulty: normalizeDifficulty(input?.difficulty),
+    dailyGoal: Number.isFinite(dailyGoal) ? Math.min(200, Math.max(1, Math.round(dailyGoal))) : defaults.dailyGoal,
+    theme: themes.includes(theme as AppSettings["theme"]) ? theme as AppSettings["theme"] : defaults.theme,
+    isDarkMode: typeof input?.isDarkMode === "boolean" ? input.isDarkMode : defaults.isDarkMode,
+    timeZone: typeof input?.timeZone === "string" && input.timeZone ? input.timeZone : defaults.timeZone,
+  };
+};
 
 export const normalizeInsights = (input: Partial<LearningInsights> | undefined): LearningInsights => ({
   ...DEFAULT_INSIGHTS,

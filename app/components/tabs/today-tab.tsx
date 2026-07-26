@@ -51,8 +51,8 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
   if (!card) {
     return (
       <div className="mt-20 text-center">
-        <h2 className="mb-2 text-3xl font-bold">Tagesziel erreicht! 🎉</h2>
-        <p>Komm morgen wieder für mehr XP.</p>
+        <h2 className="mb-2 text-3xl font-bold">Keine Lernkarten verfügbar</h2>
+        <p>Für diese Auswahl stehen keine Wörter bereit. Wähle in den Einstellungen einen anderen Lernmodus oder ein anderes Thema.</p>
       </div>
     );
   }
