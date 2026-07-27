@@ -7,11 +7,14 @@ interface PremiumModalProps {
   user: AuthUser | null;
   entitlement: EntitlementState;
   gradient: string;
+  isRestoring: boolean;
   onClose: () => void;
   onLogin: () => void;
+  onRestore: () => void;
+  restoreMessage: string;
 }
 
-export function PremiumModal({ user, entitlement, gradient, onClose, onLogin }: PremiumModalProps) {
+export function PremiumModal({ user, entitlement, gradient, isRestoring, onClose, onLogin, onRestore, restoreMessage }: PremiumModalProps) {
   const nativePlatform = isNativePlatform();
 
   const startCheckout = (plan: (typeof PREMIUM_OFFERS)[number]["plan"]) => {
@@ -62,6 +65,8 @@ export function PremiumModal({ user, entitlement, gradient, onClose, onLogin }: 
                 </button>
               );
             })}
+            {user && !nativePlatform && <button type="button" onClick={onRestore} disabled={isRestoring} className="w-full rounded-xl border border-gray-200 py-3 text-sm font-bold text-gray-700 transition hover:bg-gray-50 disabled:cursor-wait disabled:opacity-70">{isRestoring ? "Kauf wird geprüft…" : "Kauf wiederherstellen"}</button>}
+            {restoreMessage && <p className="rounded-xl bg-blue-50 p-3 text-center text-xs font-medium text-blue-900">{restoreMessage}</p>}
           </div>
         )}
 
