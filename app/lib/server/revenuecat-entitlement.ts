@@ -1,5 +1,5 @@
 import type { EntitlementPlan } from "@/app/lib/types";
-import { getFirebaseAdminDb } from "@/app/lib/server/firebase-admin";
+import { firestoreInteger, firestoreNull, firestoreString, getFirestoreUpdatedAt, writeFirestoreDocument } from "@/app/lib/server/firebase-admin";
 
 interface RevenueCatEntitlementInput {
   environment?: string | null;
@@ -19,23 +19,19 @@ export const getRevenueCatPlan = (productId: string | null | undefined, expiresA
 };
 
 export const syncRevenueCatEntitlement = async ({ userId, status, expiresAt, updatedAt, productId, eventId, store, environment }: RevenueCatEntitlementInput) => {
-  const database = getFirebaseAdminDb();
-  const reference = database.collection("userEntitlements").doc(userId);
-  await database.runTransaction(async (transaction) => {
-    const current = await transaction.get(reference);
-    const currentUpdatedAt = Number(current.get("updatedAt") ?? 0);
-    if (currentUpdatedAt > updatedAt) return;
+  const documentPath = `userEntitlements/${userId}`;
+  const currentUpdatedAt = await getFirestoreUpdatedAt(documentPath);
+  if (currentUpdatedAt > updatedAt) return;
 
-    transaction.set(reference, {
-      plan: status === "active" ? getRevenueCatPlan(productId, expiresAt) : "free",
-      status,
-      source: "revenuecat",
-      expiresAt,
-      updatedAt,
-      providerEventId: eventId ?? null,
-      providerProductId: productId ?? null,
-      providerStore: store ?? null,
-      providerEnvironment: environment ?? null,
-    }, { merge: true });
+  await writeFirestoreDocument(documentPath, {
+    plan: firestoreString(status === "active" ? getRevenueCatPlan(productId, expiresAt) : "free"),
+    status: firestoreString(status),
+    source: firestoreString("revenuecat"),
+    expiresAt: expiresAt === null ? firestoreNull() : firestoreInteger(expiresAt),
+    updatedAt: firestoreInteger(updatedAt),
+    providerEventId: eventId ? firestoreString(eventId) : firestoreNull(),
+    providerProductId: productId ? firestoreString(productId) : firestoreNull(),
+    providerStore: store ? firestoreString(store) : firestoreNull(),
+    providerEnvironment: environment ? firestoreString(environment) : firestoreNull(),
   });
 };
