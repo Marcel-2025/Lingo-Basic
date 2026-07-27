@@ -63,7 +63,10 @@ export async function POST(request: Request) {
       environment: null,
     });
   } catch (error) {
-    console.error("Premium-Status konnte nicht in Firestore gespeichert werden.", error);
+    console.error("ENTITLEMENT_SYNC_FAILED", {
+      error: error instanceof Error ? error.message : "Unbekannter Fehler",
+      name: error instanceof Error ? error.name : undefined,
+    });
     return NextResponse.json({ error: "Premium-Status konnte nicht in Firestore gespeichert werden. Prüfe die Firebase-Admin-Konfiguration in Vercel." }, { status: 500 });
   }
 
