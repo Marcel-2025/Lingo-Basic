@@ -1,5 +1,4 @@
 import { cert, getApps, initializeApp } from "firebase-admin/app";
-import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 const getFirebaseAdminApp = () => {
@@ -33,4 +32,22 @@ const getFirebaseAdminApp = () => {
 
 export const getFirebaseAdminDb = () => getFirestore(getFirebaseAdminApp());
 
-export const verifyFirebaseIdToken = (idToken: string) => getAuth(getFirebaseAdminApp()).verifyIdToken(idToken);
+type FirebaseAccountLookupResponse = { users?: Array<{ localId?: string }> };
+
+export const verifyFirebaseIdToken = async (idToken: string) => {
+  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+  if (!apiKey) throw new Error("FIREBASE_WEB_API_KEY_MISSING");
+
+  const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${encodeURIComponent(apiKey)}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ idToken }),
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error(`FIREBASE_ID_TOKEN_INVALID: ${response.status}`);
+
+  const payload = (await response.json()) as FirebaseAccountLookupResponse;
+  const uid = payload.users?.[0]?.localId;
+  if (!uid) throw new Error("FIREBASE_ID_TOKEN_UID_MISSING");
+  return { uid };
+};

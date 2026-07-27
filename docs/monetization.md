@@ -76,6 +76,8 @@ Never expose the webhook signing secret, the RevenueCat secret key, Stripe secre
 
 The Premium dialog includes **Kauf wiederherstellen**. It sends the logged-in user's Firebase ID token to a server-only route, which verifies the token and queries RevenueCat's current subscriber record. This protects users whose purchase occurred before a webhook was configured or whose initial webhook delivery failed.
 
+The restore route verifies the Firebase ID token using Firebase Authentication's `accounts:lookup` endpoint. This avoids bundling Firebase Admin Auth in the Vercel function; Firebase Admin is still used server-side for the Firestore entitlement write.
+
 Create a **v1 secret API key** in RevenueCat Project Settings → API Keys and store it as `REVENUECAT_V1_SECRET_API_KEY` in the hosting provider. It must never be a `NEXT_PUBLIC_` variable.
 
 If the restore action reports that no purchase is found, compare the Firebase Authentication UID with the RevenueCat App User ID. They must be identical. A purchase created with a placeholder such as `Marcel` belongs to that RevenueCat customer and must be transferred in RevenueCat before it can be restored for the Firebase user.
