@@ -52,15 +52,20 @@ export async function POST(request: Request) {
   const premium = subscriber.subscriber?.entitlements?.premium;
   const expiresAt = toTimestamp(premium?.expires_date_ms);
   const isActive = Boolean(premium) && (expiresAt === null || expiresAt > Date.now());
-  await syncRevenueCatEntitlement({
-    userId,
-    status: isActive ? "active" : "expired",
-    expiresAt,
-    updatedAt: Date.now(),
-    productId: premium?.product_identifier,
-    store: premium?.store,
-    environment: null,
-  });
+  try {
+    await syncRevenueCatEntitlement({
+      userId,
+      status: isActive ? "active" : "expired",
+      expiresAt,
+      updatedAt: Date.now(),
+      productId: premium?.product_identifier,
+      store: premium?.store,
+      environment: null,
+    });
+  } catch (error) {
+    console.error("Premium-Status konnte nicht in Firestore gespeichert werden.", error);
+    return NextResponse.json({ error: "Premium-Status konnte nicht in Firestore gespeichert werden. Prüfe die Firebase-Admin-Konfiguration in Vercel." }, { status: 500 });
+  }
 
   return NextResponse.json({ active: isActive });
 }

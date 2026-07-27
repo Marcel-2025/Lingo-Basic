@@ -79,7 +79,13 @@ export default function LingoApp() {
         method: "POST",
         headers: { Authorization: `Bearer ${auth.user.idToken}` },
       });
-      const result = (await response.json()) as { active?: boolean; error?: string };
+      const responseText = await response.text();
+      let result: { active?: boolean; error?: string } = {};
+      try {
+        result = JSON.parse(responseText) as { active?: boolean; error?: string };
+      } catch {
+        if (!response.ok) throw new Error("Der Premium-Server hat keine gültige Antwort geliefert. Prüfe die Vercel-Logs.");
+      }
       if (!response.ok) throw new Error(result.error ?? "Kauf konnte nicht wiederhergestellt werden.");
       premium.refresh();
       setRestorePremiumMessage(result.active ? "Premium wurde wiederhergestellt. Die Ansicht wird aktualisiert." : "Für dieses Lingo-Konto wurde kein aktiver Premium-Kauf gefunden.");
