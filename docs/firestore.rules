@@ -5,5 +5,12 @@ service cloud.firestore {
     match /userProgress/{userId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
+
+    // Entitlements are written only by a verified Stripe/Google Play/RevenueCat webhook
+    // running with Firebase Admin credentials. The browser may only read its own status.
+    match /userEntitlements/{userId} {
+      allow get: if request.auth != null && request.auth.uid == userId;
+      allow list, create, update, delete: if false;
+    }
   }
 }

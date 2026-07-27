@@ -2,25 +2,26 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { AuthModal } from "@/app/components/auth-modal";
+import { PremiumModal } from "@/app/components/premium-modal";
 import { ServiceWorkerRegistration } from "@/app/components/service-worker-registration";
 import { ExercisesTab } from "@/app/components/tabs/exercises-tab";
 import { ProfileTab } from "@/app/components/tabs/profile-tab";
 import { SettingsTab } from "@/app/components/tabs/settings-tab";
 import { TodayTab } from "@/app/components/tabs/today-tab";
 import { NavButton } from "@/app/components/ui";
+import { FREE_DAILY_LEARNING_LIMIT } from "@/app/lib/billing";
 import { SUPPORTED_LANGUAGES } from "@/app/lib/languages";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { getLevelFromXp, recordActivity } from "@/app/lib/utils";
 import { useAuth } from "@/app/hooks/use-auth";
 import { useCloudSync } from "@/app/hooks/use-cloud-sync";
+import { useEntitlement } from "@/app/hooks/use-entitlement";
 import { useLanguagePack } from "@/app/hooks/use-language-pack";
 import { useLearningHistory } from "@/app/hooks/use-learning-history";
 import { useProgress } from "@/app/hooks/use-progress";
 import type { LanguagePack, TopicItem, VocabItem } from "@/app/lib/types";
 
 type TabName = "heute" | "uebungen" | "profil" | "settings";
-
-const PREMIUM_ENABLED = true;
 
 const getThemeClasses = (theme: "Ocean" | "Sunset" | "Lime" | "Grape", isDarkMode: boolean) => {
   const gradients = {
@@ -43,9 +44,12 @@ const filterPackByDifficulty = (pack: LanguagePack, difficulty: "all" | 1 | 2 | 
 export default function LingoApp() {
   const [activeTab, setActiveTab] = useState<TabName>("heute");
   const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isPremiumOpen, setIsPremiumOpen] = useState(false);
   const progress = useProgress();
   const auth = useAuth();
-  const { pack, loadState, reload, importPack, clearCurrentCache } = useLanguagePack(progress.settings.targetLang, progress.settings.contentLevel);
+  const premium = useEntitlement(auth.user);
+  const effectiveContentLevel = premium.entitlement.isPremium ? progress.settings.contentLevel : "A1";
+  const { pack, loadState, reload, importPack, clearCurrentCache } = useLanguagePack(progress.settings.targetLang, effectiveContentLevel);
   const history = useLearningHistory(progress.learningInsights, progress.updateInsights);
   const { base, gradient } = getThemeClasses(progress.settings.theme, progress.settings.isDarkMode);
   const cloud = useCloudSync({
@@ -57,6 +61,8 @@ export default function LingoApp() {
   });
 
   const activePack = useMemo(() => pack ? filterPackByDifficulty(pack, progress.settings.difficulty) : null, [pack, progress.settings.difficulty]);
+  const completedToday = progress.learningInsights.learnedDays[progress.getTodayKey()] ?? 0;
+  const dailyLimit = premium.entitlement.isPremium ? progress.settings.dailyGoal : FREE_DAILY_LEARNING_LIMIT;
 
   const speak = useCallback((text: string, language: "DE" | LanguagePack["lang"]) => {
     if (!("speechSynthesis" in window)) return;
@@ -116,6 +122,7 @@ export default function LingoApp() {
           <div className="flex items-center gap-2 text-xl font-bold"><span className="text-3xl" aria-hidden="true">🦉</span><span>Lingo</span></div>
           <div className="flex items-center gap-3 text-sm font-semibold">
             {auth.user ? <button type="button" onClick={auth.logout} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.email}</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
+            <button type="button" onClick={() => setIsPremiumOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👑 {premium.entitlement.isPremium ? "Premium" : "Upgrade"}</button>
             <span>🔥 {progress.stats.streak}</span><span>⭐ {progress.stats.xp} XP</span><span className="rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
           </div>
           {auth.user && <div className="w-full text-right text-[11px] opacity-80">☁️ Sync {syncLabels[cloud.status]}{cloud.message ? ` · ${cloud.message}` : ""}</div>}
@@ -124,15 +131,16 @@ export default function LingoApp() {
 
       <main className="mx-auto w-full max-w-2xl flex-1 overflow-y-auto p-4 pb-24">
         {!activePack && activeTab !== "settings" ? <div className="mt-20 text-center"><h2 className="mb-4 text-2xl font-bold">{loadState.status === "loading" ? "Sprachpaket wird geladen…" : "Sprachpaket nicht verfügbar"}</h2><p className="mb-6 opacity-80">{loadState.message ?? `Für ${progress.settings.targetLang} ${progress.settings.contentLevel} sind noch keine Inhalte vorhanden.`}</p><button type="button" onClick={() => setActiveTab("settings")} className={`rounded-xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg`}>Zu den Einstellungen</button></div> : <>
-          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={PREMIUM_ENABLED} />}
-          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} />}
+          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={premium.entitlement.isPremium} dailyLimit={dailyLimit} completedToday={completedToday} onUpgrade={() => setIsPremiumOpen(true)} />}
+          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} isPremiumUser={premium.entitlement.isPremium} dailyLimit={dailyLimit} completedToday={completedToday} gradient={gradient} onUpgrade={() => setIsPremiumOpen(true)} />}
           {activeTab === "profil" && <ProfileTab stats={progress.stats} learningInsights={progress.learningInsights} pack={pack} gradient={gradient} />}
-          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} reloadPack={reload} clearCurrentCache={clearCurrentCache} importPack={importPack} />}
+          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} reloadPack={reload} clearCurrentCache={clearCurrentCache} importPack={importPack} entitlement={premium.entitlement} onUpgrade={() => setIsPremiumOpen(true)} />}
         </>}
       </main>
 
       <nav className={`fixed bottom-0 w-full p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] ${progress.settings.isDarkMode ? "bg-gray-800" : "bg-white"}`} aria-label="Hauptnavigation"><div className="mx-auto flex max-w-2xl justify-around"><NavButton icon="📚" label="Heute" isActive={activeTab === "heute"} onClick={() => setActiveTab("heute")} gradient={gradient} /><NavButton icon="🎮" label="Übungen" isActive={activeTab === "uebungen"} onClick={() => setActiveTab("uebungen")} gradient={gradient} /><NavButton icon="👤" label="Profil" isActive={activeTab === "profil"} onClick={() => setActiveTab("profil")} gradient={gradient} /><NavButton icon="⚙️" label="Settings" isActive={activeTab === "settings"} onClick={() => setActiveTab("settings")} gradient={gradient} /></div></nav>
       {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} />}
+      {isPremiumOpen && <PremiumModal user={auth.user} entitlement={premium.entitlement} gradient={gradient} onClose={() => setIsPremiumOpen(false)} onLogin={() => { setIsPremiumOpen(false); setIsAuthOpen(true); }} />}
     </div>
   );
 }
