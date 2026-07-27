@@ -80,6 +80,12 @@ Create a **v1 secret API key** in RevenueCat Project Settings → API Keys and s
 
 If the restore action reports that no purchase is found, compare the Firebase Authentication UID with the RevenueCat App User ID. They must be identical. A purchase created with a placeholder such as `Marcel` belongs to that RevenueCat customer and must be transferred in RevenueCat before it can be restored for the Firebase user.
 
+If restore returns an error, inspect Vercel Runtime Logs for one of these safe diagnostic labels. They never print secret values:
+
+- `FIREBASE_ADMIN_CONFIGURATION_MISSING`: one or more Firebase Admin environment variables are missing.
+- `FIREBASE_ADMIN_INITIALIZATION_FAILED`: the project, client email, or private key is malformed.
+- `ENTITLEMENT_SYNC_FAILED`: Firestore rejected the write; check the service account's Firestore IAM role and the accompanying error message.
+
 ## Test sequence
 
 1. Create a Sandbox Purchase Link in RevenueCat and set the sandbox URL template in the hosting environment.
