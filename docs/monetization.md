@@ -2,17 +2,43 @@
 
 ## Product model
 
-Lingo starts without ads. Free users receive A1 and 20 learning steps per day. Premium subscribers receive unlimited learning plus A2 and B1. A separate one-time `ad_free_lifetime` product only removes future optional advertising; it does not unlock Premium content.
+Lingo starts without ads. Free users receive A1 and 20 learning steps per day. Premium subscribers receive unlimited learning plus A2 and B1.
 
-| Product | Entitlement plan | Platform |
+| Product | Entitlement plan | RevenueCat package |
 | --- | --- | --- |
-| Premium monthly | `premium_monthly` | Stripe web checkout / Google Play subscription |
-| Premium yearly | `premium_yearly` | Stripe web checkout / Google Play subscription |
-| Ad-free forever | `ad_free_lifetime` | Stripe web checkout / Google Play one-time product |
+| Premium monthly | `premium_monthly` | `$rc_monthly` |
+| Premium yearly | `premium_yearly` | `$rc_annual` |
+| Premium lifetime | `premium_lifetime` | `$rc_lifetime` |
+
+All three RevenueCat products grant the single `premium` entitlement. The lifetime product deliberately unlocks all Premium features permanently.
+
+## RevenueCat and Stripe web checkout
+
+Lingo uses a RevenueCat Web Purchase Link backed by Stripe Billing. The checkout link is not stored with a hard-coded user name. When an authenticated user selects a package, Lingo builds this URL dynamically:
+
+```text
+https://pay.rev.cat/<purchase-link-token>/<firebaseUid>/checkout?package_id=$rc_monthly
+```
+
+Use the purchase-link template only as the environment-variable value, without the Firebase UID and without `/checkout`:
+
+```text
+NEXT_PUBLIC_BILLING_ENABLED=true
+NEXT_PUBLIC_REVENUECAT_BILLING_ENVIRONMENT=sandbox
+NEXT_PUBLIC_REVENUECAT_PURCHASE_LINK_SANDBOX_TEMPLATE=https://pay.rev.cat/<sandbox-token>
+```
+
+Set the production template only after the sandbox test works. Never distribute the sandbox URL publicly: it permits test purchases without real money.
 
 ## Secure entitlement flow
 
-The client never writes a Premium flag. A verified billing backend writes this Firestore document:
+The client never writes a Premium flag. RevenueCat sends a signed webhook to:
+
+```text
+https://<your-domain>/api/webhooks/revenuecat
+```
+
+The handler verifies the HMAC signature and optional authorization header, then writes the current state to:
 
 `userEntitlements/{firebaseUid}`
 
@@ -20,40 +46,43 @@ The client never writes a Premium flag. A verified billing backend writes this F
 {
   "plan": "premium_yearly",
   "status": "active",
-  "source": "stripe",
+  "source": "revenuecat",
   "expiresAt": 1798761600000,
   "updatedAt": 1767225600000
 }
 ```
 
-Allowed values:
-
-- `plan`: `free`, `premium_monthly`, `premium_yearly`, `ad_free_lifetime`
-- `status`: `active`, `trialing`, `cancelled`, `expired`, `unknown`
-- `source`: `none`, `stripe`, `google_play`, `revenuecat`
-
 Deploy the rules in `docs/firestore.rules`. The browser can read only its own entitlement; only a server using Firebase Admin credentials may create or change it.
 
-## Stripe web checkout
-
-1. Create monthly, yearly and one-time products in Stripe.
-2. Create a protected server-side Stripe webhook. It must verify Stripe's webhook signature, identify the matching Firebase user, and update `userEntitlements/{uid}` with Firebase Admin SDK credentials.
-3. Configure these public Payment Link URLs in the hosting provider only after the webhook is live:
+### Required server environment variables
 
 ```text
-NEXT_PUBLIC_BILLING_ENABLED=true
-NEXT_PUBLIC_STRIPE_PREMIUM_MONTHLY_CHECKOUT_URL=
-NEXT_PUBLIC_STRIPE_PREMIUM_YEARLY_CHECKOUT_URL=
-NEXT_PUBLIC_STRIPE_AD_FREE_LIFETIME_CHECKOUT_URL=
+REVENUECAT_WEBHOOK_AUTHORIZATION=<long-random-value>
+REVENUECAT_WEBHOOK_SIGNING_SECRET=<RevenueCat-HMAC-secret>
+REVENUECAT_PREMIUM_MONTHLY_PRODUCT_ID=<Stripe-product-id>
+REVENUECAT_PREMIUM_YEARLY_PRODUCT_ID=<Stripe-product-id>
+REVENUECAT_PREMIUM_LIFETIME_PRODUCT_ID=<Stripe-product-id>
+FIREBASE_ADMIN_PROJECT_ID=<Firebase-project-id>
+FIREBASE_ADMIN_CLIENT_EMAIL=<service-account-email>
+FIREBASE_ADMIN_PRIVATE_KEY=<service-account-private-key-with-escaped-newlines>
 ```
 
-Never expose `STRIPE_SECRET_KEY`, Firebase Admin credentials or webhook secrets to the browser or commit them to Git.
+In RevenueCat, add a webhook for both `SANDBOX` and `PRODUCTION`, enable HMAC signing, and set the same authorization value. Filter for lifecycle events, including `INITIAL_PURCHASE`, `RENEWAL`, `PRODUCT_CHANGE`, `UNCANCELLATION`, `EXPIRATION`, and `REFUND`.
+
+Never expose the webhook signing secret, the RevenueCat secret key, Stripe secret keys, or Firebase Admin credentials to the browser or commit them to Git.
+
+## Test sequence
+
+1. Create a Sandbox Purchase Link in RevenueCat and set the sandbox URL template in the hosting environment.
+2. Sign in to Lingo. The app automatically appends the Firebase user ID to the checkout URL.
+3. Select a package and use Stripe's sandbox test card `4242 4242 4242 4242`.
+4. Confirm the RevenueCat webhook arrives with `environment: SANDBOX`.
+5. Reload Lingo. The `premium` entitlement should unlock unlimited learning and A2/B1.
+6. Repeat for a cancellation and expiration/refund event before enabling production.
 
 ## Android / Google Play
 
-For an Android app distributed through Google Play, Premium subscriptions and the ad-free purchase are digital products. Configure them with Google Play Billing (or a provider such as RevenueCat that verifies Google Play purchases) and let its verified server webhook write the same entitlement document. Do not link to Stripe checkout from the Play-distributed Android app.
-
-The current UI intentionally does not initiate an Android purchase until Google Play Billing or RevenueCat is connected. This avoids charging users before verified entitlements are available.
+For an Android app distributed through Google Play, Premium subscriptions and the lifetime product are digital products. Configure them with Google Play Billing and RevenueCat. Give RevenueCat the same Firebase UID as its App User ID and let the same verified webhook update `userEntitlements`. Do not link to Stripe checkout from the Play-distributed Android app.
 
 ## Advertising later
 

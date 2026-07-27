@@ -19,12 +19,12 @@ export function PremiumModal({ user, entitlement, gradient, onClose, onLogin }: 
       onLogin();
       return;
     }
-    const checkoutUrl = getWebCheckoutUrl(plan);
+    const checkoutUrl = getWebCheckoutUrl(plan, user.localId);
     if (checkoutUrl && !nativePlatform) window.location.assign(checkoutUrl);
   };
 
   const checkoutAvailable = (plan: (typeof PREMIUM_OFFERS)[number]["plan"]) =>
-    Boolean(user && !nativePlatform && getWebCheckoutUrl(plan));
+    Boolean(user && !nativePlatform && getWebCheckoutUrl(plan, user.localId));
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="premium-title">

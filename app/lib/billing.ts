@@ -20,22 +20,33 @@ export const PREMIUM_OFFERS: Array<{
     badge: "Beste Wahl",
   },
   {
-    plan: "ad_free_lifetime",
-    title: "Werbefrei für immer",
-    description: "Einmal kaufen und künftige optionale Werbung dauerhaft ausblenden.",
+    plan: "premium_lifetime",
+    title: "Premium lebenslang",
+    description: "Einmal kaufen und alle Premium-Vorteile dauerhaft behalten.",
   },
 ];
 
-const checkoutLinks: Partial<Record<Exclude<EntitlementPlan, "free">, string>> = {
-  premium_monthly: process.env.NEXT_PUBLIC_STRIPE_PREMIUM_MONTHLY_CHECKOUT_URL,
-  premium_yearly: process.env.NEXT_PUBLIC_STRIPE_PREMIUM_YEARLY_CHECKOUT_URL,
-  ad_free_lifetime: process.env.NEXT_PUBLIC_STRIPE_AD_FREE_LIFETIME_CHECKOUT_URL,
+const packageIds: Record<Exclude<EntitlementPlan, "free">, string> = {
+  premium_monthly: "$rc_monthly",
+  premium_yearly: "$rc_annual",
+  premium_lifetime: "$rc_lifetime",
 };
 
-export const isWebCheckoutEnabled = () => process.env.NEXT_PUBLIC_BILLING_ENABLED === "true";
+const getPurchaseLinkTemplate = () => {
+  const environment = process.env.NEXT_PUBLIC_REVENUECAT_BILLING_ENVIRONMENT;
+  return environment === "sandbox"
+    ? process.env.NEXT_PUBLIC_REVENUECAT_PURCHASE_LINK_SANDBOX_TEMPLATE
+    : process.env.NEXT_PUBLIC_REVENUECAT_PURCHASE_LINK_PRODUCTION_TEMPLATE;
+};
 
-export const getWebCheckoutUrl = (plan: Exclude<EntitlementPlan, "free">) =>
-  isWebCheckoutEnabled() ? checkoutLinks[plan] : undefined;
+export const isWebCheckoutEnabled = () =>
+  process.env.NEXT_PUBLIC_BILLING_ENABLED === "true" && Boolean(getPurchaseLinkTemplate());
+
+export const getWebCheckoutUrl = (plan: Exclude<EntitlementPlan, "free">, appUserId: string) => {
+  const template = getPurchaseLinkTemplate()?.replace(/\/$/, "");
+  if (!isWebCheckoutEnabled() || !template || !appUserId) return undefined;
+  return `${template}/${encodeURIComponent(appUserId)}/checkout?package_id=${encodeURIComponent(packageIds[plan])}`;
+};
 
 export const isNativePlatform = () => {
   if (typeof window === "undefined") return false;
