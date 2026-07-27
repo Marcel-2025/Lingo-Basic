@@ -1,7 +1,7 @@
 import { getFirebaseProjectId, isFirebaseConfigured } from "@/app/lib/firebase-auth";
 import type { AuthUser, EntitlementPlan, EntitlementSource, EntitlementState, EntitlementStatus, UserEntitlement } from "@/app/lib/types";
 
-type FirestoreFields = Record<string, { stringValue?: string; integerValue?: string; nullValue?: null }>;
+type FirestoreFields = Record<string, { stringValue?: string; integerValue?: string; doubleValue?: number | string; nullValue?: null }>;
 
 export const FREE_ENTITLEMENT: UserEntitlement = {
   plan: "free",
@@ -11,12 +11,12 @@ export const FREE_ENTITLEMENT: UserEntitlement = {
   updatedAt: 0,
 };
 
-const plans: EntitlementPlan[] = ["free", "premium_monthly", "premium_yearly", "ad_free_lifetime"];
+const plans: EntitlementPlan[] = ["free", "premium_monthly", "premium_yearly", "premium_lifetime"];
 const statuses: EntitlementStatus[] = ["active", "trialing", "cancelled", "expired", "unknown"];
 const sources: EntitlementSource[] = ["none", "stripe", "google_play", "revenuecat"];
 
 const asString = (value: string | undefined, fallback: string) => value?.trim() || fallback;
-const asNumber = (value: string | undefined) => {
+const asNumber = (value: number | string | undefined) => {
   const parsed = Number(value);
   return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
 };
@@ -39,8 +39,8 @@ export const toEntitlementState = (input: Partial<UserEntitlement> | undefined, 
   const entitlement = normalizeEntitlement(input);
   const hasNotExpired = entitlement.expiresAt === null || entitlement.expiresAt > now;
   const isActive = hasNotExpired && ["active", "trialing", "cancelled"].includes(entitlement.status);
-  const isPremium = isActive && ["premium_monthly", "premium_yearly"].includes(entitlement.plan);
-  const isAdFree = isPremium || (isActive && entitlement.plan === "ad_free_lifetime");
+  const isPremium = isActive && ["premium_monthly", "premium_yearly", "premium_lifetime"].includes(entitlement.plan);
+  const isAdFree = isPremium;
   return { ...entitlement, isPremium, isAdFree };
 };
 
@@ -66,7 +66,7 @@ export const loadEntitlement = async (user: AuthUser): Promise<EntitlementState>
     plan: asString(fields.plan?.stringValue, "free") as EntitlementPlan,
     status: asString(fields.status?.stringValue, "active") as EntitlementStatus,
     source: asString(fields.source?.stringValue, "none") as EntitlementSource,
-    expiresAt: fields.expiresAt?.nullValue === null ? null : asNumber(fields.expiresAt?.integerValue),
-    updatedAt: asNumber(fields.updatedAt?.integerValue),
+    expiresAt: fields.expiresAt?.nullValue === null ? null : asNumber(fields.expiresAt?.integerValue ?? fields.expiresAt?.doubleValue),
+    updatedAt: asNumber(fields.updatedAt?.integerValue ?? fields.updatedAt?.doubleValue),
   });
 };

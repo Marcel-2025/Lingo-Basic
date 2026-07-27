@@ -86,7 +86,7 @@ export interface AuthUser {
   expiresAt: number;
 }
 
-export type EntitlementPlan = "free" | "premium_monthly" | "premium_yearly" | "ad_free_lifetime";
+export type EntitlementPlan = "free" | "premium_monthly" | "premium_yearly" | "premium_lifetime";
 
 export type EntitlementStatus = "active" | "trialing" | "cancelled" | "expired" | "unknown";
 
