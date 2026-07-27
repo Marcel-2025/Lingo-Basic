@@ -45,6 +45,8 @@ export default function LingoApp() {
   const [activeTab, setActiveTab] = useState<TabName>("heute");
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isPremiumOpen, setIsPremiumOpen] = useState(false);
+  const [isRestoringPremium, setIsRestoringPremium] = useState(false);
+  const [restorePremiumMessage, setRestorePremiumMessage] = useState("");
   const progress = useProgress();
   const auth = useAuth();
   const premium = useEntitlement(auth.user);
@@ -63,6 +65,30 @@ export default function LingoApp() {
   const activePack = useMemo(() => pack ? filterPackByDifficulty(pack, progress.settings.difficulty) : null, [pack, progress.settings.difficulty]);
   const completedToday = progress.learningInsights.learnedDays[progress.getTodayKey()] ?? 0;
   const dailyLimit = premium.entitlement.isPremium ? progress.settings.dailyGoal : FREE_DAILY_LEARNING_LIMIT;
+
+  const restorePremium = useCallback(async () => {
+    if (!auth.user) {
+      setIsPremiumOpen(false);
+      setIsAuthOpen(true);
+      return;
+    }
+    setIsRestoringPremium(true);
+    setRestorePremiumMessage("");
+    try {
+      const response = await fetch("/api/entitlements/restore", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${auth.user.idToken}` },
+      });
+      const result = (await response.json()) as { active?: boolean; error?: string };
+      if (!response.ok) throw new Error(result.error ?? "Kauf konnte nicht wiederhergestellt werden.");
+      premium.refresh();
+      setRestorePremiumMessage(result.active ? "Premium wurde wiederhergestellt. Die Ansicht wird aktualisiert." : "Für dieses Lingo-Konto wurde kein aktiver Premium-Kauf gefunden.");
+    } catch (error) {
+      setRestorePremiumMessage(error instanceof Error ? error.message : "Kauf konnte nicht wiederhergestellt werden.");
+    } finally {
+      setIsRestoringPremium(false);
+    }
+  }, [auth.user, premium]);
 
   const speak = useCallback((text: string, language: "DE" | LanguagePack["lang"]) => {
     if (!("speechSynthesis" in window)) return;
@@ -140,7 +166,7 @@ export default function LingoApp() {
 
       <nav className={`fixed bottom-0 w-full p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] ${progress.settings.isDarkMode ? "bg-gray-800" : "bg-white"}`} aria-label="Hauptnavigation"><div className="mx-auto flex max-w-2xl justify-around"><NavButton icon="📚" label="Heute" isActive={activeTab === "heute"} onClick={() => setActiveTab("heute")} gradient={gradient} /><NavButton icon="🎮" label="Übungen" isActive={activeTab === "uebungen"} onClick={() => setActiveTab("uebungen")} gradient={gradient} /><NavButton icon="👤" label="Profil" isActive={activeTab === "profil"} onClick={() => setActiveTab("profil")} gradient={gradient} /><NavButton icon="⚙️" label="Settings" isActive={activeTab === "settings"} onClick={() => setActiveTab("settings")} gradient={gradient} /></div></nav>
       {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} />}
-      {isPremiumOpen && <PremiumModal user={auth.user} entitlement={premium.entitlement} gradient={gradient} onClose={() => setIsPremiumOpen(false)} onLogin={() => { setIsPremiumOpen(false); setIsAuthOpen(true); }} />}
+      {isPremiumOpen && <PremiumModal user={auth.user} entitlement={premium.entitlement} gradient={gradient} isRestoring={isRestoringPremium} onClose={() => setIsPremiumOpen(false)} onLogin={() => { setIsPremiumOpen(false); setIsAuthOpen(true); }} onRestore={restorePremium} restoreMessage={restorePremiumMessage} />}
     </div>
   );
 }

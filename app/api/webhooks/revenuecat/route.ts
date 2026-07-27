@@ -1,7 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { cert, getApps, initializeApp } from "firebase-admin/app";
-import { getFirestore } from "firebase-admin/firestore";
 import { NextResponse } from "next/server";
+import { syncRevenueCatEntitlement } from "@/app/lib/server/revenuecat-entitlement";
 
 export const runtime = "nodejs";
 
@@ -33,24 +32,6 @@ const activeEventTypes = new Set([
 const revokedEventTypes = new Set(["EXPIRATION", "REFUND", "SUBSCRIPTION_PAUSED"]);
 
 const hasPremiumEntitlement = (event: RevenueCatEvent) => event.entitlement_ids?.includes("premium") ?? false;
-
-const getFirebaseAdminDb = () => {
-  const projectId = process.env.FIREBASE_ADMIN_PROJECT_ID ?? process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
-  const clientEmail = process.env.FIREBASE_ADMIN_CLIENT_EMAIL;
-  const privateKey = process.env.FIREBASE_ADMIN_PRIVATE_KEY?.replace(/\\n/g, "\n");
-  if (!projectId || !clientEmail || !privateKey) throw new Error("Firebase-Admin-Variablen sind nicht vollständig konfiguriert.");
-
-  if (!getApps().length) {
-    initializeApp({ credential: cert({ projectId, clientEmail, privateKey }) });
-  }
-  return getFirestore();
-};
-
-const getPlan = (event: RevenueCatEvent) => {
-  if (event.product_id === process.env.REVENUECAT_PREMIUM_YEARLY_PRODUCT_ID) return "premium_yearly" as const;
-  if (event.product_id === process.env.REVENUECAT_PREMIUM_LIFETIME_PRODUCT_ID || event.expiration_at_ms === null) return "premium_lifetime" as const;
-  return "premium_monthly" as const;
-};
 
 const verifySignature = (rawBody: string, signatureHeader: string | null) => {
   const secret = process.env.REVENUECAT_WEBHOOK_SIGNING_SECRET;
@@ -100,25 +81,16 @@ export async function POST(request: Request) {
   if (!isActivation && !isRevocation) return NextResponse.json({ received: true });
 
   try {
-    const database = getFirebaseAdminDb();
-    const reference = database.collection("userEntitlements").doc(userId);
     const updatedAt = Number.isFinite(event.event_timestamp_ms) ? Number(event.event_timestamp_ms) : Date.now();
-    await database.runTransaction(async (transaction) => {
-      const current = await transaction.get(reference);
-      const currentUpdatedAt = Number(current.get("updatedAt") ?? 0);
-      if (currentUpdatedAt > updatedAt) return;
-
-      transaction.set(reference, {
-        plan: isRevocation ? "free" : getPlan(event),
-        status: isRevocation ? "expired" : "active",
-        source: "revenuecat",
-        expiresAt: isRevocation ? Number(event.expiration_at_ms ?? updatedAt) : (event.expiration_at_ms ?? null),
-        updatedAt,
-        providerEventId: event.id ?? null,
-        providerProductId: event.product_id ?? null,
-        providerStore: event.store ?? null,
-        providerEnvironment: event.environment ?? null,
-      }, { merge: true });
+    await syncRevenueCatEntitlement({
+      userId,
+      status: isRevocation ? "expired" : "active",
+      expiresAt: isRevocation ? Number(event.expiration_at_ms ?? updatedAt) : (event.expiration_at_ms ?? null),
+      updatedAt,
+      productId: event.product_id,
+      eventId: event.id,
+      store: event.store,
+      environment: event.environment,
     });
   } catch (error) {
     console.error("RevenueCat webhook konnte nicht verarbeitet werden.", error);
