@@ -9,11 +9,14 @@ interface TodayTabProps {
   pack: LanguagePack;
   gradient: string;
   isPremiumUser: boolean;
+  dailyLimit: number;
+  completedToday: number;
   speak: (text: string, language: "DE" | LanguagePack["lang"]) => void;
   onAnswer: (word: VocabItem, topic: TopicItem, known: boolean) => void;
+  onUpgrade: () => void;
 }
 
-export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: TodayTabProps) {
+export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedToday, speak, onAnswer, onUpgrade }: TodayTabProps) {
   const [selectedTopicId, setSelectedTopicId] = useState("all");
   const [queue, setQueue] = useState<VocabItem[]>(() => shuffle(getVocabFromPack(pack)));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,6 +26,7 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
     ? { id: "all", title: "Alle Themen", difficulty: 1, vocab: getVocabFromPack(pack) }
     : pack.topics.find((topic) => topic.id === selectedTopicId) ?? { id: "all", title: "Alle Themen", difficulty: 1, vocab: getVocabFromPack(pack) };
   const card = queue[currentIndex];
+  const hasReachedDailyLimit = !isPremiumUser && completedToday >= dailyLimit;
 
   const buildQueue = (topicId: string) => {
     const vocab = topicId === "all" ? getVocabFromPack(pack) : pack.topics.find((topic) => topic.id === topicId)?.vocab ?? [];
@@ -38,7 +42,7 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
     onAnswer(card, topic, known);
     if ("vibrate" in navigator) navigator.vibrate(known ? [50, 50] : [100]);
     const nextIndex = currentIndex + 1;
-    if (nextIndex >= queue.length && isPremiumUser) {
+    if (nextIndex >= queue.length) {
       setQueue(shuffle(activeTopic.vocab));
       setCurrentIndex(0);
       setIsFlipped(false);
@@ -47,6 +51,17 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
     setCurrentIndex(nextIndex);
     setIsFlipped(false);
   };
+
+  if (hasReachedDailyLimit) {
+    return (
+      <div className="mt-16 rounded-3xl bg-white p-8 text-center text-gray-900 shadow-sm">
+        <div className="text-4xl" aria-hidden="true">🎉</div>
+        <h2 className="mt-3 text-3xl font-bold">Tagesziel erreicht!</h2>
+        <p className="mt-2 text-gray-600">Du hast heute {completedToday} von {dailyLimit} kostenlosen Lernschritten geschafft.</p>
+        <button type="button" onClick={onUpgrade} className={`mt-6 rounded-2xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>Premium: unbegrenzt weiterlernen</button>
+      </div>
+    );
+  }
 
   if (!card) {
     return (

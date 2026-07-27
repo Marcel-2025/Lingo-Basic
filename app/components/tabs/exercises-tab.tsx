@@ -21,9 +21,14 @@ const createQuestion = (pack: LanguagePack): Question | null => {
 interface ExercisesTabProps {
   pack: LanguagePack;
   onAnswer: (word: VocabItem, correct: boolean) => void;
+  isPremiumUser: boolean;
+  dailyLimit: number;
+  completedToday: number;
+  gradient: string;
+  onUpgrade: () => void;
 }
 
-export function ExercisesTab({ pack, onAnswer }: ExercisesTabProps) {
+export function ExercisesTab({ pack, onAnswer, isPremiumUser, dailyLimit, completedToday, gradient, onUpgrade }: ExercisesTabProps) {
   const [question, setQuestion] = useState<Question | null>(() => createQuestion(pack));
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isLocked, setIsLocked] = useState(false);
@@ -61,6 +66,9 @@ export function ExercisesTab({ pack, onAnswer }: ExercisesTabProps) {
     }, 900);
   };
 
+  if (!isPremiumUser && completedToday >= dailyLimit) {
+    return <div className="mt-16 rounded-3xl bg-white p-8 text-center text-gray-900 shadow-sm"><div className="text-4xl" aria-hidden="true">🎯</div><h2 className="mt-3 text-2xl font-bold">Dein Tagesziel ist geschafft</h2><p className="mt-2 text-gray-600">Mit Premium kannst du heute unbegrenzt weiterüben.</p><button type="button" onClick={onUpgrade} className={`mt-6 rounded-2xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>Premium entdecken</button></div>;
+  }
   if (!question) return <div className="mt-10 text-center">Dieses Pack benötigt mindestens vier unterschiedliche Vokabeln für Multiple Choice.</div>;
   const isCorrect = selectedOption === question.word.x;
   const optionClasses = (option: string) => {

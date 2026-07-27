@@ -86,6 +86,25 @@ export interface AuthUser {
   expiresAt: number;
 }
 
+export type EntitlementPlan = "free" | "premium_monthly" | "premium_yearly" | "ad_free_lifetime";
+
+export type EntitlementStatus = "active" | "trialing" | "cancelled" | "expired" | "unknown";
+
+export type EntitlementSource = "none" | "stripe" | "google_play" | "revenuecat";
+
+export interface UserEntitlement {
+  plan: EntitlementPlan;
+  status: EntitlementStatus;
+  source: EntitlementSource;
+  expiresAt: number | null;
+  updatedAt: number;
+}
+
+export interface EntitlementState extends UserEntitlement {
+  isPremium: boolean;
+  isAdFree: boolean;
+}
+
 export interface CloudProgressSnapshot {
   schemaVersion: number;
   stats: UserStats;
