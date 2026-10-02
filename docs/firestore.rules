@@ -18,6 +18,13 @@ service cloud.firestore {
         && request.resource.data.learningInsightsJson.size() < 900000;
     }
 
+    // Entitlements are written only by a verified Stripe/Google Play/RevenueCat webhook
+    // running with Firebase Admin credentials. The browser may only read its own status.
+    match /userEntitlements/{userId} {
+      allow get: if request.auth != null && request.auth.uid == userId;
+      allow list, create, update, delete: if false;
+    }
+
     // Everything else is closed.
     match /{document=**} {
       allow read, write: if false;

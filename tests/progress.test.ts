@@ -4,6 +4,8 @@ import { createQuestion } from "@/app/lib/exercises";
 import { normalizePack } from "@/app/lib/pack-normalization";
 import { mergeProgressSnapshots, normalizeDateKey, normalizeInsights, normalizeProgressSnapshot, normalizeSettings, normalizeStats } from "@/app/lib/progress";
 import { isWordLearned, isWordMastered, recordLearningInInsights } from "@/app/hooks/use-learning-history";
+import { getEffectiveEntitlement } from "@/app/lib/premium";
+import { FREE_ENTITLEMENT_STATE } from "@/app/lib/entitlements";
 import { getDateKey, getLevelFromXp, reconcileStreak, recordActivity, shiftDateKey, shuffle } from "@/app/lib/utils";
 import type { CloudProgressSnapshot } from "@/app/lib/types";
 
@@ -21,6 +23,13 @@ describe("storage normalization", () => {
       learnedWordsByTopic: {},
       masteredWordIds: ["a"],
     });
+  });
+
+  it("migrates legacy learning settings", () => {
+    expect(normalizeSettings({ targetLang: "it", contentLevel: "b1", difficulty: "beginner" })).toMatchObject({ targetLang: "IT", contentLevel: "B1", difficulty: 1 });
+    expect(normalizeSettings({ difficulty: "mittel" }).difficulty).toBe(2);
+    expect(normalizeSettings({ difficulty: "advanced" }).difficulty).toBe(3);
+    expect(normalizeSettings({ difficulty: "2" }).difficulty).toBe(2);
   });
 
   it("migrates legacy learned words stored as strings", () => {
@@ -190,5 +199,15 @@ describe("firestore mapping", async () => {
     expect(parsed.stats.xp).toBe(0);
     expect(parsed.updatedAt).toBe(7);
     expect(parsed.storedSchemaVersion).toBe(1);
+  });
+});
+
+describe("premium configuration", () => {
+  it("treats everyone as premium while PREMIUM_FOR_ALL is active", () => {
+    expect(getEffectiveEntitlement(FREE_ENTITLEMENT_STATE, true).isPremium).toBe(true);
+  });
+
+  it("uses the real entitlement when PREMIUM_FOR_ALL is disabled", () => {
+    expect(getEffectiveEntitlement(FREE_ENTITLEMENT_STATE, false).isPremium).toBe(false);
   });
 });

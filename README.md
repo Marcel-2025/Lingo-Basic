@@ -24,7 +24,8 @@ app/
     firebase-auth.ts       Identity Toolkit + Secure Token + Google Identity Services
     cloud-sync.ts          Firestore REST (`userProgress/{uid}`)
     exercises.ts           UI-unabhängige Übungslogik
-    premium.ts             Zentrale Premium-Entscheidung
+    premium.ts             Zentrale Premium-Entscheidung (PREMIUM_FOR_ALL + Entitlement)
+    entitlements.ts, billing.ts  Entitlement-Status (userEntitlements/{uid}) und RevenueCat-Checkout
 content/master/en/         EN-Master (Quelle für Topic- und Word-IDs)
 public/packs/{lang}/{level}.json   Ausgelieferte Packs
 scripts/                   Pack-Build und Validierung
@@ -75,9 +76,11 @@ NEXT_PUBLIC_FIREBASE_API_KEY=
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=
-# optional: false testet das Free-Verhalten (Tagesziel als Limit)
+# Premium für alle, solange Billing nicht live ist; "false" erzwingt echte Entitlements
 NEXT_PUBLIC_PREMIUM_FOR_ALL=true
 ```
+
+Billing/RevenueCat-Variablen und Entitlements: siehe [docs/monetization.md](docs/monetization.md). Die Premium-Entscheidung läuft ausschließlich über `getEffectiveEntitlement` in `app/lib/premium.ts`.
 
 Ohne diese Werte läuft die App vollständig im Gastmodus.
 
@@ -99,4 +102,4 @@ Sitzungen: Gespeichert werden nur `localId`, E-Mail, Anzeigename, ID-Token, Refr
 
 - `public/manifest.webmanifest`, Icons 192/512, Apple-Touch-Icon, Metadata in `app/layout.tsx`.
 - `public/sw.js` cached nur die App-Shell und die gehashten `/_next/static`-Assets und wird nur im Production-Build registriert. Packs liegen ausschließlich in IndexedDB, damit es keinen zweiten Pack-Cache gibt.
-- Für Capacitor wird `output: "export"` benötigt; der Build ist damit kompatibel.
+- Für Capacitor wird `output: "export"` benötigt. Achtung: Die API-Routen aus `app/api/` (Entitlement-Restore, RevenueCat-Webhook) sind mit einem statischen Export nicht kompatibel und müssen dafür separat (z. B. auf Vercel) gehostet werden.

@@ -71,15 +71,31 @@ export const normalizeStats = (input: unknown): UserStats => {
   };
 };
 
+/** Accepts numeric values and legacy labels from older app versions ("beginner", "easy", "einfach", …). */
+const normalizeSettingsDifficulty = (value: unknown): AppSettings["difficulty"] => {
+  if (value === "all" || value === 1 || value === 2 || value === 3) return value;
+  if (typeof value === "number" || (typeof value === "string" && /^[123]$/.test(value.trim()))) {
+    const numeric = Number(value);
+    if (numeric === 1 || numeric === 2 || numeric === 3) return numeric;
+  }
+  if (typeof value !== "string") return "all";
+  const legacy = value.trim().toLowerCase();
+  if (["beginner", "easy", "einfach"].includes(legacy)) return 1;
+  if (["intermediate", "medium", "mittel"].includes(legacy)) return 2;
+  if (["advanced", "hard", "schwer"].includes(legacy)) return 3;
+  return "all";
+};
+
 export const normalizeSettings = (input: unknown): AppSettings => {
   const raw = asRecord(input);
   const defaults = getDefaultSettings();
-  const difficulty = raw.difficulty === "all" ? "all" : Number(raw.difficulty);
   const dailyGoal = asCount(raw.dailyGoal, defaults.dailyGoal);
+  const targetLang = typeof raw.targetLang === "string" ? raw.targetLang.trim().toUpperCase() : "";
+  const contentLevel = typeof raw.contentLevel === "string" ? raw.contentLevel.trim().toUpperCase() : "";
   return {
-    targetLang: isLanguageCode(raw.targetLang) ? raw.targetLang : defaults.targetLang,
-    contentLevel: isCefrLevel(raw.contentLevel) ? raw.contentLevel : defaults.contentLevel,
-    difficulty: difficulty === "all" || difficulty === 1 || difficulty === 2 || difficulty === 3 ? difficulty : defaults.difficulty,
+    targetLang: isLanguageCode(targetLang) ? targetLang : defaults.targetLang,
+    contentLevel: isCefrLevel(contentLevel) ? contentLevel : defaults.contentLevel,
+    difficulty: normalizeSettingsDifficulty(raw.difficulty),
     dailyGoal: Math.min(200, Math.max(1, dailyGoal || defaults.dailyGoal)),
     theme: THEMES.includes(raw.theme as ThemeName) ? (raw.theme as ThemeName) : defaults.theme,
     isDarkMode: typeof raw.isDarkMode === "boolean" ? raw.isDarkMode : defaults.isDarkMode,

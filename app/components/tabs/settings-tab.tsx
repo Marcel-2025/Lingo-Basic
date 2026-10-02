@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { FREE_DAILY_LEARNING_LIMIT } from "@/app/lib/billing";
 import { SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
-import type { AppSettings, LanguagePack, PackLoadState, PackOrigin } from "@/app/lib/types";
+import type { AppSettings, EntitlementState, LanguagePack, PackLoadState, PackOrigin } from "@/app/lib/types";
 
 const URL_IMPORT_TIMEOUT_MS = 15_000;
 
@@ -15,6 +16,9 @@ interface SettingsTabProps {
   clearCurrentCache: () => Promise<void>;
   clearAllCaches: () => Promise<void>;
   importPack: (input: unknown, origin?: PackOrigin) => Promise<{ pack: LanguagePack; warnings: string[] }>;
+  /** Effective entitlement (see app/lib/premium.ts). */
+  entitlement: EntitlementState;
+  onUpgrade: () => void;
 }
 
 const SOURCE_LABELS: Record<NonNullable<PackLoadState["source"]>, string> = {
@@ -42,7 +46,8 @@ function Toggle({ label, checked, gradient, onChange }: ToggleProps) {
   );
 }
 
-export function SettingsTab({ settings, gradient, loadState, updateSettings, reloadPack, clearCurrentCache, clearAllCaches, importPack }: SettingsTabProps) {
+export function SettingsTab({ settings, gradient, loadState, updateSettings, reloadPack, clearCurrentCache, clearAllCaches, importPack, entitlement, onUpgrade }: SettingsTabProps) {
+  const effectiveLevel = entitlement.isPremium ? settings.contentLevel : "A1";
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [url, setUrl] = useState("");
   const [message, setMessage] = useState("");
@@ -120,13 +125,13 @@ export function SettingsTab({ settings, gradient, loadState, updateSettings, rel
 
   const reload = () => runBusy(async () => {
     await reloadPack();
-    setMessage(`Pack für ${SUPPORTED_LANGUAGES[settings.targetLang].label} ${settings.contentLevel} wurde neu geladen.`);
+    setMessage(`Pack für ${SUPPORTED_LANGUAGES[settings.targetLang].label} ${effectiveLevel} wurde neu geladen.`);
   });
 
   const clearCache = () => runBusy(async () => {
     try {
       await clearCurrentCache();
-      setMessage(`Der Cache für ${SUPPORTED_LANGUAGES[settings.targetLang].label} ${settings.contentLevel} wurde gelöscht und neu geladen.`);
+      setMessage(`Der Cache für ${SUPPORTED_LANGUAGES[settings.targetLang].label} ${effectiveLevel} wurde gelöscht und neu geladen.`);
     } catch {
       setMessage("Der Cache konnte nicht gelöscht werden.");
     }
@@ -144,17 +149,21 @@ export function SettingsTab({ settings, gradient, loadState, updateSettings, rel
   return (
     <div className="mt-4 space-y-6 pb-10">
       <h2 className="mb-6 text-3xl font-bold">Einstellungen</h2>
+      <section className="rounded-3xl bg-white p-6 text-gray-900 shadow-sm">
+        <div className="flex items-start justify-between gap-4"><div><p className="text-sm font-bold uppercase tracking-wide text-indigo-700">Lingo Premium</p><h3 className="mt-1 text-xl font-bold">{entitlement.isPremium ? "Premium ist aktiv" : entitlement.isAdFree ? "Werbefrei ist aktiv" : "Kostenloser Lernplan"}</h3><p className="mt-2 text-sm text-gray-600">{entitlement.isPremium ? "Du kannst unbegrenzt lernen und alle Level verwenden." : `${FREE_DAILY_LEARNING_LIMIT} kostenlose Lernschritte pro Tag, A1 und alle Basisfunktionen.`}</p></div><span className="text-3xl" aria-hidden="true">👑</span></div>
+        {!entitlement.isPremium && <button type="button" onClick={onUpgrade} className={`mt-5 w-full rounded-xl bg-gradient-to-r ${gradient} py-3 font-bold text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>Premium freischalten</button>}
+      </section>
       <section className="space-y-4 rounded-3xl bg-white p-6 text-gray-900 shadow-sm">
         <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="target-language">Zielsprache</label><select id="target-language" className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" value={settings.targetLang} onChange={(event) => setSetting("targetLang", event.target.value as AppSettings["targetLang"])}>{Object.entries(SUPPORTED_LANGUAGES).map(([code, language]) => <option key={code} value={code}>{language.label}</option>)}</select></div>
-        <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="content-level">Content-Level</label><select id="content-level" className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" value={settings.contentLevel} onChange={(event) => setSetting("contentLevel", event.target.value as AppSettings["contentLevel"])}>{SUPPORTED_LEVELS.map((level) => <option key={level} value={level}>{level}</option>)}</select><p className={`mt-2 text-xs font-semibold ${loadState.status === "error" ? "text-red-700" : "text-gray-600"}`} role="status" aria-live="polite">{loadState.status === "loading" ? "Pack wird geladen…" : loadState.status === "error" ? loadState.message : loadState.status === "ready" ? `✓ Verfügbar${loadState.source ? ` · ${SOURCE_LABELS[loadState.source]}` : ""}` : ""}</p></div>
+        <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="content-level">Content-Level</label><select id="content-level" disabled={!entitlement.isPremium} className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500 disabled:cursor-not-allowed disabled:opacity-60" value={effectiveLevel} onChange={(event) => setSetting("contentLevel", event.target.value as AppSettings["contentLevel"])}>{SUPPORTED_LEVELS.map((level) => <option key={level} value={level} disabled={!entitlement.isPremium && level !== "A1"}>{level}{entitlement.isPremium ? "" : level === "A1" ? " · Kostenlos" : " · Premium"}</option>)}</select>{!entitlement.isPremium && <p className="mt-2 text-xs text-gray-600">A2 und B1 werden mit Premium freigeschaltet.</p>}<p className={`mt-2 text-xs font-semibold ${loadState.status === "error" ? "text-red-700" : "text-gray-600"}`} role="status" aria-live="polite">{loadState.status === "loading" ? "Pack wird geladen…" : loadState.status === "error" ? loadState.message : loadState.status === "ready" ? `✓ Verfügbar${loadState.source ? ` · ${SOURCE_LABELS[loadState.source]}` : ""}` : ""}</p></div>
         <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="difficulty">Lernmodus</label><select id="difficulty" className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" value={settings.difficulty} onChange={(event) => setSetting("difficulty", event.target.value === "all" ? "all" : Number(event.target.value) as 1 | 2 | 3)}><option value="all">Alle Schwierigkeiten</option><option value="1">Einfach</option><option value="2">Mittel</option><option value="3">Schwer</option></select></div>
-        <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="daily-goal">Tagesziel (Karten)</label><input id="daily-goal" type="number" min="1" max="200" value={settings.dailyGoal} onChange={(event) => setSetting("dailyGoal", Math.min(200, Math.max(1, Number(event.target.value) || 1)))} className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" /></div>
+        <div><label className="mb-2 block text-sm font-bold opacity-70" htmlFor="daily-goal">Tagesziel (Karten)</label><input id="daily-goal" type="number" min="1" max="200" disabled={!entitlement.isPremium} value={entitlement.isPremium ? settings.dailyGoal : FREE_DAILY_LEARNING_LIMIT} onChange={(event) => setSetting("dailyGoal", Math.min(200, Math.max(1, Number(event.target.value) || 1)))} className="w-full rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500 disabled:cursor-not-allowed disabled:opacity-60" />{!entitlement.isPremium && <p className="mt-2 text-xs text-gray-600">Premium erlaubt ein eigenes Tagesziel und unbegrenztes Lernen.</p>}</div>
         <div><p className="mb-2 text-sm font-bold opacity-70">Farbschema</p><div className="flex gap-2">{(["Ocean", "Sunset", "Lime", "Grape"] as const).map((theme) => <button key={theme} type="button" onClick={() => setSetting("theme", theme)} className={`flex-1 rounded-lg bg-gray-100 py-2 text-sm font-bold text-gray-900 focus-visible:outline-2 focus-visible:outline-indigo-500 ${settings.theme === theme ? "ring-2 ring-indigo-500" : "opacity-50"}`}>{theme}</button>)}</div></div>
         <Toggle label="Dark Mode" checked={settings.isDarkMode} gradient={gradient} onChange={(value) => setSetting("isDarkMode", value)} />
         <Toggle label="Feedback-Töne" checked={settings.soundEnabled} gradient={gradient} onChange={(value) => setSetting("soundEnabled", value)} />
         <Toggle label="Vibration" checked={settings.vibrationEnabled} gradient={gradient} onChange={(value) => setSetting("vibrationEnabled", value)} />
       </section>
-      <section className="space-y-4 rounded-3xl bg-white p-6 text-gray-900 shadow-sm"><h3 className="text-lg font-bold">Inhalte verwalten</h3><div><p className="mb-2 text-sm font-bold opacity-70">Pack aus diesem Projekt laden</p><button type="button" disabled={isBusy} onClick={() => void reload()} className={`w-full rounded-xl bg-gradient-to-r ${gradient} py-3 font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:cursor-wait disabled:opacity-60`}>Pack für {SUPPORTED_LANGUAGES[settings.targetLang].label} {settings.contentLevel} laden</button><p className="mt-1 text-xs opacity-60">Ersetzt ein importiertes Pack für dieses Level durch die Projektversion.</p></div><div><p className="mb-2 text-sm font-bold opacity-70">Aus JSON-Datei importieren</p><input ref={fileInputRef} type="file" accept="application/json,.json" onChange={handleFileUpload} className="hidden" /><button type="button" disabled={isBusy} onClick={() => fileInputRef.current?.click()} className="w-full rounded-xl bg-gray-100 py-3 font-semibold text-gray-900 focus-visible:outline-2 focus-visible:outline-indigo-500 disabled:opacity-60">Datei auswählen</button></div><div><p className="mb-2 text-sm font-bold opacity-70">Von URL importieren</p><div className="flex gap-2"><input type="url" value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://…/a1.json" className="min-w-0 flex-1 rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" /><button type="button" disabled={isBusy || !url} onClick={() => void loadFromUrl()} className={`rounded-xl bg-gradient-to-r ${gradient} px-4 font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-60`}>{isBusy ? "…" : "Laden"}</button></div></div><div className="mt-4 grid gap-2 sm:grid-cols-2"><button type="button" disabled={isBusy} onClick={() => void clearCache()} className="w-full rounded-xl bg-red-50 py-3 font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-red-600 disabled:opacity-60">Cache für dieses Level löschen</button><button type="button" disabled={isBusy} onClick={() => void clearAll()} className="w-full rounded-xl bg-red-50 py-3 font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-red-600 disabled:opacity-60">Alle Packs löschen</button></div>{message && <p role="status" className="text-sm font-semibold text-indigo-700">{message}</p>}</section>
+      <section className="space-y-4 rounded-3xl bg-white p-6 text-gray-900 shadow-sm"><h3 className="text-lg font-bold">Inhalte verwalten</h3><div><p className="mb-2 text-sm font-bold opacity-70">Pack aus diesem Projekt laden</p><button type="button" disabled={isBusy} onClick={() => void reload()} className={`w-full rounded-xl bg-gradient-to-r ${gradient} py-3 font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:cursor-wait disabled:opacity-60`}>Pack für {SUPPORTED_LANGUAGES[settings.targetLang].label} {effectiveLevel} laden</button><p className="mt-1 text-xs opacity-60">Ersetzt ein importiertes Pack für dieses Level durch die Projektversion.</p></div><div><p className="mb-2 text-sm font-bold opacity-70">Aus JSON-Datei importieren</p><input ref={fileInputRef} type="file" accept="application/json,.json" onChange={handleFileUpload} className="hidden" /><button type="button" disabled={isBusy} onClick={() => fileInputRef.current?.click()} className="w-full rounded-xl bg-gray-100 py-3 font-semibold text-gray-900 focus-visible:outline-2 focus-visible:outline-indigo-500 disabled:opacity-60">Datei auswählen</button></div><div><p className="mb-2 text-sm font-bold opacity-70">Von URL importieren</p><div className="flex gap-2"><input type="url" value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://…/a1.json" className="min-w-0 flex-1 rounded-xl bg-gray-100 p-3 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500" /><button type="button" disabled={isBusy || !url} onClick={() => void loadFromUrl()} className={`rounded-xl bg-gradient-to-r ${gradient} px-4 font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-60`}>{isBusy ? "…" : "Laden"}</button></div></div><div className="mt-4 grid gap-2 sm:grid-cols-2"><button type="button" disabled={isBusy} onClick={() => void clearCache()} className="w-full rounded-xl bg-red-50 py-3 font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-red-600 disabled:opacity-60">Cache für dieses Level löschen</button><button type="button" disabled={isBusy} onClick={() => void clearAll()} className="w-full rounded-xl bg-red-50 py-3 font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-red-600 disabled:opacity-60">Alle Packs löschen</button></div>{message && <p role="status" className="text-sm font-semibold text-indigo-700">{message}</p>}</section>
     </div>
   );
 }

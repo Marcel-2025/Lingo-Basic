@@ -2,18 +2,21 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { AuthModal } from "@/app/components/auth-modal";
+import { PremiumModal } from "@/app/components/premium-modal";
 import { ServiceWorkerRegistration } from "@/app/components/service-worker-registration";
 import { ExercisesTab } from "@/app/components/tabs/exercises-tab";
 import { ProfileTab } from "@/app/components/tabs/profile-tab";
 import { SettingsTab } from "@/app/components/tabs/settings-tab";
 import { TodayTab } from "@/app/components/tabs/today-tab";
 import { NavButton } from "@/app/components/ui";
+import { FREE_DAILY_LEARNING_LIMIT } from "@/app/lib/billing";
 import { SUPPORTED_LANGUAGES } from "@/app/lib/languages";
-import { isPremiumUser } from "@/app/lib/premium";
+import { getEffectiveEntitlement } from "@/app/lib/premium";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { getLevelFromXp, recordActivity } from "@/app/lib/utils";
 import { useAuth } from "@/app/hooks/use-auth";
 import { useCloudSync } from "@/app/hooks/use-cloud-sync";
+import { useEntitlement } from "@/app/hooks/use-entitlement";
 import { useLanguagePack } from "@/app/hooks/use-language-pack";
 import { useLearningHistory } from "@/app/hooks/use-learning-history";
 import { useProgress } from "@/app/hooks/use-progress";
@@ -42,9 +45,17 @@ const filterPackByDifficulty = (pack: LanguagePack, difficulty: "all" | 1 | 2 | 
 export default function LingoApp() {
   const [activeTab, setActiveTab] = useState<TabName>("heute");
   const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isPremiumOpen, setIsPremiumOpen] = useState(false);
+  const [isRestoringPremium, setIsRestoringPremium] = useState(false);
+  const [restorePremiumMessage, setRestorePremiumMessage] = useState("");
   const progress = useProgress();
   const auth = useAuth();
-  const { pack, loadState, reload, importPack, clearCurrentCache, clearAllCaches } = useLanguagePack(progress.settings.targetLang, progress.settings.contentLevel);
+  const premium = useEntitlement(auth.user);
+  // Single premium decision point: real entitlement, or everyone while NEXT_PUBLIC_PREMIUM_FOR_ALL is active.
+  const entitlement = getEffectiveEntitlement(premium.entitlement);
+  const isPremium = entitlement.isPremium;
+  const effectiveContentLevel = isPremium ? progress.settings.contentLevel : "A1";
+  const { pack, loadState, reload, importPack, clearCurrentCache, clearAllCaches } = useLanguagePack(progress.settings.targetLang, effectiveContentLevel);
   const history = useLearningHistory(progress.learningInsights, progress.updateInsights);
   const { base, gradient } = getThemeClasses(progress.settings.theme, progress.settings.isDarkMode);
   const cloud = useCloudSync({
@@ -55,11 +66,42 @@ export default function LingoApp() {
     updateUser: auth.updateUser,
     onSessionExpired: auth.logout,
   });
-  const isPremium = isPremiumUser({ isLoggedIn: Boolean(auth.user) });
   const { updateStats, getTodayKey } = progress;
   const { timeZone } = progress.settings;
 
   const activePack = useMemo(() => pack ? filterPackByDifficulty(pack, progress.settings.difficulty) : null, [pack, progress.settings.difficulty]);
+  const completedToday = progress.learningInsights.learnedDays[getTodayKey()] ?? 0;
+  const dailyLimit = isPremium ? progress.settings.dailyGoal : FREE_DAILY_LEARNING_LIMIT;
+
+  const restorePremium = useCallback(async () => {
+    if (!auth.user) {
+      setIsPremiumOpen(false);
+      setIsAuthOpen(true);
+      return;
+    }
+    setIsRestoringPremium(true);
+    setRestorePremiumMessage("");
+    try {
+      const response = await fetch("/api/entitlements/restore", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${auth.user.idToken}` },
+      });
+      const responseText = await response.text();
+      let result: { active?: boolean; error?: string } = {};
+      try {
+        result = JSON.parse(responseText) as { active?: boolean; error?: string };
+      } catch {
+        if (!response.ok) throw new Error("Der Premium-Server hat keine gültige Antwort geliefert. Prüfe die Vercel-Logs.");
+      }
+      if (!response.ok) throw new Error(result.error ?? "Kauf konnte nicht wiederhergestellt werden.");
+      premium.refresh();
+      setRestorePremiumMessage(result.active ? "Premium wurde wiederhergestellt. Die Ansicht wird aktualisiert." : "Für dieses Lingo-Konto wurde kein aktiver Premium-Kauf gefunden.");
+    } catch (error) {
+      setRestorePremiumMessage(error instanceof Error ? error.message : "Kauf konnte nicht wiederhergestellt werden.");
+    } finally {
+      setIsRestoringPremium(false);
+    }
+  }, [auth.user, premium]);
 
   const speak = useCallback((text: string, language: "DE" | LanguagePack["lang"]) => {
     if (!("speechSynthesis" in window)) return;
@@ -122,7 +164,7 @@ export default function LingoApp() {
           <div className="flex items-center gap-2 text-xl font-bold"><span className="text-3xl" aria-hidden="true">🦉</span><span>Lingo Pro</span></div>
           <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
             {auth.user ? <button type="button" onClick={() => auth.logout()} title={`Angemeldet als ${auth.user.email}`} className="max-w-[9rem] truncate rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.displayName || auth.user.email} · Logout</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
-            <span className="whitespace-nowrap">🔥 {progress.stats.streak}</span><span className="whitespace-nowrap">⭐ {progress.stats.xp} XP</span><span className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
+            <button type="button" onClick={() => setIsPremiumOpen(true)} className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👑 {isPremium ? "Premium" : "Upgrade"}</button><span className="whitespace-nowrap">🔥 {progress.stats.streak}</span><span className="whitespace-nowrap">⭐ {progress.stats.xp} XP</span><span className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
           </div>
           {auth.user && <div className="flex w-full items-center justify-end gap-2 text-[11px]" role="status" aria-live="polite"><span className="opacity-90">☁️ Sync {syncLabels[cloud.status]}{cloud.message ? ` · ${cloud.message}` : ""}</span>{(cloud.status === "error" || cloud.status === "pending") && <button type="button" onClick={cloud.retry} className="rounded-md bg-white/25 px-2 py-0.5 font-bold focus-visible:outline-2 focus-visible:outline-white">Erneut versuchen</button>}</div>}
           {!auth.user && auth.message && <div className="w-full text-right text-[11px] opacity-90" role="status">{auth.message}</div>}
@@ -131,15 +173,16 @@ export default function LingoApp() {
 
       <main className="mx-auto w-full max-w-2xl flex-1 overflow-y-auto p-4 pb-24">
         {!activePack && activeTab !== "settings" ? <div className="mt-20 text-center"><h2 className="mb-4 text-2xl font-bold">{loadState.status === "loading" ? "Sprachpaket wird geladen…" : "Sprachpaket nicht verfügbar"}</h2><p className="mb-6 opacity-80">{loadState.message ?? `Für ${progress.settings.targetLang} ${progress.settings.contentLevel} sind noch keine Inhalte vorhanden.`}</p><button type="button" onClick={() => setActiveTab("settings")} className={`rounded-xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg`}>Zu den Einstellungen</button></div> : <>
-          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={isPremium} dailyGoal={progress.settings.dailyGoal} vibrationEnabled={progress.settings.vibrationEnabled} />}
-          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} soundEnabled={progress.settings.soundEnabled} vibrationEnabled={progress.settings.vibrationEnabled} />}
+          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={isPremium} dailyLimit={dailyLimit} completedToday={completedToday} vibrationEnabled={progress.settings.vibrationEnabled} onUpgrade={() => setIsPremiumOpen(true)} />}
+          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} soundEnabled={progress.settings.soundEnabled} vibrationEnabled={progress.settings.vibrationEnabled} isPremiumUser={isPremium} dailyLimit={dailyLimit} completedToday={completedToday} gradient={gradient} onUpgrade={() => setIsPremiumOpen(true)} />}
           {activeTab === "profil" && <ProfileTab stats={progress.stats} learningInsights={progress.learningInsights} pack={pack} gradient={gradient} timeZone={timeZone} />}
-          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} loadState={loadState} reloadPack={reload} clearCurrentCache={clearCurrentCache} clearAllCaches={clearAllCaches} importPack={importPack} />}
+          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} loadState={loadState} reloadPack={reload} clearCurrentCache={clearCurrentCache} clearAllCaches={clearAllCaches} importPack={importPack} entitlement={entitlement} onUpgrade={() => setIsPremiumOpen(true)} />}
         </>}
       </main>
 
       <nav className={`fixed bottom-0 w-full p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] ${progress.settings.isDarkMode ? "bg-gray-800" : "bg-white"}`} aria-label="Hauptnavigation"><div className="mx-auto flex max-w-2xl justify-around"><NavButton icon="📚" label="Heute" isActive={activeTab === "heute"} onClick={() => setActiveTab("heute")} gradient={gradient} /><NavButton icon="🎮" label="Übungen" isActive={activeTab === "uebungen"} onClick={() => setActiveTab("uebungen")} gradient={gradient} /><NavButton icon="👤" label="Profil" isActive={activeTab === "profil"} onClick={() => setActiveTab("profil")} gradient={gradient} /><NavButton icon="⚙️" label="Settings" isActive={activeTab === "settings"} onClick={() => setActiveTab("settings")} gradient={gradient} /></div></nav>
       {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} onGoogleCredential={auth.loginWithGoogleCredential} onCancelGoogle={auth.cancelGoogleLogin} />}
+      {isPremiumOpen && <PremiumModal user={auth.user} entitlement={entitlement} gradient={gradient} isRestoring={isRestoringPremium} onClose={() => setIsPremiumOpen(false)} onLogin={() => { setIsPremiumOpen(false); setIsAuthOpen(true); }} onRestore={restorePremium} restoreMessage={restorePremiumMessage} />}
     </div>
   );
 }
