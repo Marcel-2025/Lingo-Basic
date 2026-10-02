@@ -4,6 +4,7 @@ export const STORAGE_KEYS = {
   insights: "lingoLearningInsights",
   authUser: "lingoAuthUser",
   updatedAt: "lingoProgressUpdatedAt",
+  syncMarker: "lingoCloudSyncMarker",
 } as const;
 
 const getStorage = () => (typeof window === "undefined" ? null : window.localStorage);

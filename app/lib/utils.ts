@@ -20,24 +20,27 @@ export const getDateKey = (date = new Date(), timeZone = "UTC") => {
   return `${valueFor("year")}-${valueFor("month")}-${valueFor("day")}`;
 };
 
-export const getYesterdayKey = (timeZone: string) => {
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  return getDateKey(yesterday, timeZone);
+/** Shifts a `YYYY-MM-DD` calendar key by whole days. Pure calendar arithmetic, independent of DST and device time zone. */
+export const shiftDateKey = (dateKey: string, days: number) => {
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day + days));
+  return date.toISOString().slice(0, 10);
 };
 
-export const reconcileStreak = (stats: UserStats, timeZone: string): UserStats => {
+export const getYesterdayKey = (timeZone: string, now = new Date()) => shiftDateKey(getDateKey(now, timeZone), -1);
+
+export const reconcileStreak = (stats: UserStats, timeZone: string, now = new Date()): UserStats => {
   if (!stats.lastActiveDate) return stats;
-  const today = getDateKey(new Date(), timeZone);
-  const yesterday = getYesterdayKey(timeZone);
+  const today = getDateKey(now, timeZone);
+  const yesterday = shiftDateKey(today, -1);
   if (stats.lastActiveDate === today || stats.lastActiveDate === yesterday) return stats;
   return { ...stats, streak: 0 };
 };
 
-export const recordActivity = (stats: UserStats, timeZone: string): UserStats => {
-  const today = getDateKey(new Date(), timeZone);
+export const recordActivity = (stats: UserStats, timeZone: string, now = new Date()): UserStats => {
+  const today = getDateKey(now, timeZone);
   if (stats.lastActiveDate === today) return stats;
-  const yesterday = getYesterdayKey(timeZone);
+  const yesterday = shiftDateKey(today, -1);
   return {
     ...stats,
     streak: stats.lastActiveDate === yesterday ? stats.streak + 1 : 1,

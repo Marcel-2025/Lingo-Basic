@@ -13,7 +13,6 @@
           "id": "food_01_water",
           "de": "Wasser",
           "x": "agua",
-          "ex": "Wasser ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -23,7 +22,6 @@
           "id": "food_01_bread",
           "de": "Brot",
           "x": "pan",
-          "ex": "Brot ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -33,7 +31,6 @@
           "id": "food_01_milk",
           "de": "Milch",
           "x": "leche",
-          "ex": "Milch ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -43,7 +40,6 @@
           "id": "food_01_coffee",
           "de": "Kaffee",
           "x": "café",
-          "ex": "Kaffee ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -53,7 +49,6 @@
           "id": "food_01_tea",
           "de": "Tee",
           "x": "té",
-          "ex": "Tee ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -63,7 +58,6 @@
           "id": "food_01_apple",
           "de": "Apfel",
           "x": "manzana",
-          "ex": "Apfel ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -73,7 +67,6 @@
           "id": "food_01_banana",
           "de": "Banane",
           "x": "plátano",
-          "ex": "Banane ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -83,7 +76,6 @@
           "id": "food_01_rice",
           "de": "Reis",
           "x": "arroz",
-          "ex": "Reis ist wichtig im Thema Essen & Trinken.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -101,7 +93,6 @@
           "id": "travel_02_airport",
           "de": "Flughafen",
           "x": "aeropuerto",
-          "ex": "Flughafen ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -111,7 +102,6 @@
           "id": "travel_02_train_station",
           "de": "Bahnhof",
           "x": "estación",
-          "ex": "Bahnhof ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -121,7 +111,6 @@
           "id": "travel_02_ticket",
           "de": "Ticket",
           "x": "billete",
-          "ex": "Ticket ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -131,7 +120,6 @@
           "id": "travel_02_hotel",
           "de": "Hotel",
           "x": "hotel",
-          "ex": "Hotel ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -141,7 +129,6 @@
           "id": "travel_02_street",
           "de": "Straße",
           "x": "calle",
-          "ex": "Straße ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -151,7 +138,6 @@
           "id": "travel_02_map",
           "de": "Karte",
           "x": "mapa",
-          "ex": "Karte ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -161,7 +147,6 @@
           "id": "travel_02_suitcase",
           "de": "Koffer",
           "x": "maleta",
-          "ex": "Koffer ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -171,7 +156,6 @@
           "id": "travel_02_passport",
           "de": "Pass",
           "x": "pasaporte",
-          "ex": "Pass ist wichtig im Thema Reisen & Orientierung.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -189,7 +173,6 @@
           "id": "home_03_house",
           "de": "Haus",
           "x": "casa",
-          "ex": "Haus ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -199,7 +182,6 @@
           "id": "home_03_room",
           "de": "Zimmer",
           "x": "habitación",
-          "ex": "Zimmer ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -209,7 +191,6 @@
           "id": "home_03_kitchen",
           "de": "Küche",
           "x": "cocina",
-          "ex": "Küche ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -219,7 +200,6 @@
           "id": "home_03_bathroom",
           "de": "Badezimmer",
           "x": "baño",
-          "ex": "Badezimmer ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -229,7 +209,6 @@
           "id": "home_03_window",
           "de": "Fenster",
           "x": "ventana",
-          "ex": "Fenster ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -239,7 +218,6 @@
           "id": "home_03_door",
           "de": "Tür",
           "x": "puerta",
-          "ex": "Tür ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -249,7 +227,6 @@
           "id": "home_03_table",
           "de": "Tisch",
           "x": "mesa",
-          "ex": "Tisch ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -259,7 +236,6 @@
           "id": "home_03_chair",
           "de": "Stuhl",
           "x": "silla",
-          "ex": "Stuhl ist wichtig im Thema Zuhause.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -277,7 +253,6 @@
           "id": "work_04_work",
           "de": "Arbeit",
           "x": "trabajo",
-          "ex": "Arbeit ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -287,7 +262,6 @@
           "id": "work_04_office",
           "de": "Büro",
           "x": "oficina",
-          "ex": "Büro ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -297,7 +271,6 @@
           "id": "work_04_boss",
           "de": "Chef",
           "x": "jefe",
-          "ex": "Chef ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -307,7 +280,6 @@
           "id": "work_04_colleague",
           "de": "Kollege",
           "x": "colega",
-          "ex": "Kollege ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -317,7 +289,6 @@
           "id": "work_04_meeting",
           "de": "Meeting",
           "x": "reunión",
-          "ex": "Meeting ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -327,7 +298,6 @@
           "id": "work_04_project",
           "de": "Projekt",
           "x": "proyecto",
-          "ex": "Projekt ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -337,7 +307,6 @@
           "id": "work_04_email",
           "de": "E-Mail",
           "x": "correo",
-          "ex": "E-Mail ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -347,7 +316,6 @@
           "id": "work_04_break",
           "de": "Pause",
           "x": "pausa",
-          "ex": "Pause ist wichtig im Thema Beruf & Alltag.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -365,7 +333,6 @@
           "id": "health_05_doctor",
           "de": "Arzt",
           "x": "médico",
-          "ex": "Arzt ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -375,7 +342,6 @@
           "id": "health_05_hospital",
           "de": "Krankenhaus",
           "x": "hospital",
-          "ex": "Krankenhaus ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -385,7 +351,6 @@
           "id": "health_05_medicine",
           "de": "Medizin",
           "x": "medicina",
-          "ex": "Medizin ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -395,7 +360,6 @@
           "id": "health_05_pain",
           "de": "Schmerz",
           "x": "dolor",
-          "ex": "Schmerz ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -405,7 +369,6 @@
           "id": "health_05_fever",
           "de": "Fieber",
           "x": "fiebre",
-          "ex": "Fieber ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -415,7 +378,6 @@
           "id": "health_05_help",
           "de": "Hilfe",
           "x": "ayuda",
-          "ex": "Hilfe ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -425,7 +387,6 @@
           "id": "health_05_appointment",
           "de": "Termin",
           "x": "cita",
-          "ex": "Termin ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -435,7 +396,6 @@
           "id": "health_05_prescription",
           "de": "Rezept",
           "x": "receta",
-          "ex": "Rezept ist wichtig im Thema Gesundheit.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -453,7 +413,6 @@
           "id": "shopping_06_shop",
           "de": "Laden",
           "x": "tienda",
-          "ex": "Laden ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -463,7 +422,6 @@
           "id": "shopping_06_price",
           "de": "Preis",
           "x": "precio",
-          "ex": "Preis ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -473,7 +431,6 @@
           "id": "shopping_06_money",
           "de": "Geld",
           "x": "dinero",
-          "ex": "Geld ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -483,7 +440,6 @@
           "id": "shopping_06_checkout",
           "de": "Kasse",
           "x": "caja",
-          "ex": "Kasse ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -493,7 +449,6 @@
           "id": "shopping_06_discount",
           "de": "Rabatt",
           "x": "descuento",
-          "ex": "Rabatt ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -503,7 +458,6 @@
           "id": "shopping_06_customer",
           "de": "Kunde",
           "x": "cliente",
-          "ex": "Kunde ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -513,7 +467,6 @@
           "id": "shopping_06_seller",
           "de": "Verkäufer",
           "x": "vendedor",
-          "ex": "Verkäufer ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -523,7 +476,6 @@
           "id": "shopping_06_bag",
           "de": "Tüte",
           "x": "bolsa",
-          "ex": "Tüte ist wichtig im Thema Einkaufen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -541,7 +493,6 @@
           "id": "family_07_mother",
           "de": "Mutter",
           "x": "madre",
-          "ex": "Mutter ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -551,7 +502,6 @@
           "id": "family_07_father",
           "de": "Vater",
           "x": "padre",
-          "ex": "Vater ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -561,7 +511,6 @@
           "id": "family_07_brother",
           "de": "Bruder",
           "x": "hermano",
-          "ex": "Bruder ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -571,7 +520,6 @@
           "id": "family_07_sister",
           "de": "Schwester",
           "x": "hermana",
-          "ex": "Schwester ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -581,7 +529,6 @@
           "id": "family_07_friend",
           "de": "Freund",
           "x": "amigo",
-          "ex": "Freund ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -591,7 +538,6 @@
           "id": "family_07_child",
           "de": "Kind",
           "x": "niño",
-          "ex": "Kind ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -601,7 +547,6 @@
           "id": "family_07_family",
           "de": "Familie",
           "x": "familia",
-          "ex": "Familie ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -611,7 +556,6 @@
           "id": "family_07_name",
           "de": "Name",
           "x": "nombre",
-          "ex": "Name ist wichtig im Thema Familie & Freunde.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -629,7 +573,6 @@
           "id": "time_08_today",
           "de": "Heute",
           "x": "hoy",
-          "ex": "Heute ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -639,7 +582,6 @@
           "id": "time_08_tomorrow",
           "de": "Morgen",
           "x": "mañana",
-          "ex": "Morgen ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -649,7 +591,6 @@
           "id": "time_08_yesterday",
           "de": "Gestern",
           "x": "ayer",
-          "ex": "Gestern ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -659,7 +600,6 @@
           "id": "time_08_week",
           "de": "Woche",
           "x": "semana",
-          "ex": "Woche ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -669,7 +609,6 @@
           "id": "time_08_month",
           "de": "Monat",
           "x": "mes",
-          "ex": "Monat ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -679,7 +618,6 @@
           "id": "time_08_year",
           "de": "Jahr",
           "x": "año",
-          "ex": "Jahr ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -689,7 +627,6 @@
           "id": "time_08_to_learn",
           "de": "Lernen",
           "x": "aprender",
-          "ex": "Lernen ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -699,7 +636,6 @@
           "id": "time_08_language",
           "de": "Sprache",
           "x": "idioma",
-          "ex": "Sprache ist wichtig im Thema Zeit & Lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"

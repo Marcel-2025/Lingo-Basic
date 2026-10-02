@@ -9,6 +9,7 @@ import { SettingsTab } from "@/app/components/tabs/settings-tab";
 import { TodayTab } from "@/app/components/tabs/today-tab";
 import { NavButton } from "@/app/components/ui";
 import { SUPPORTED_LANGUAGES } from "@/app/lib/languages";
+import { isPremiumUser } from "@/app/lib/premium";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { getLevelFromXp, recordActivity } from "@/app/lib/utils";
 import { useAuth } from "@/app/hooks/use-auth";
@@ -16,13 +17,11 @@ import { useCloudSync } from "@/app/hooks/use-cloud-sync";
 import { useLanguagePack } from "@/app/hooks/use-language-pack";
 import { useLearningHistory } from "@/app/hooks/use-learning-history";
 import { useProgress } from "@/app/hooks/use-progress";
-import type { LanguagePack, TopicItem, VocabItem } from "@/app/lib/types";
+import type { LanguagePack, ThemeName, TopicItem, VocabItem } from "@/app/lib/types";
 
 type TabName = "heute" | "uebungen" | "profil" | "settings";
 
-const PREMIUM_ENABLED = true;
-
-const getThemeClasses = (theme: "Ocean" | "Sunset" | "Lime" | "Grape", isDarkMode: boolean) => {
+const getThemeClasses = (theme: ThemeName, isDarkMode: boolean) => {
   const gradients = {
     Ocean: "from-blue-500 to-cyan-400",
     Sunset: "from-orange-500 to-red-500",
@@ -45,7 +44,7 @@ export default function LingoApp() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const progress = useProgress();
   const auth = useAuth();
-  const { pack, loadState, reload, importPack, clearCurrentCache } = useLanguagePack(progress.settings.targetLang, progress.settings.contentLevel);
+  const { pack, loadState, reload, importPack, clearCurrentCache, clearAllCaches } = useLanguagePack(progress.settings.targetLang, progress.settings.contentLevel);
   const history = useLearningHistory(progress.learningInsights, progress.updateInsights);
   const { base, gradient } = getThemeClasses(progress.settings.theme, progress.settings.isDarkMode);
   const cloud = useCloudSync({
@@ -54,7 +53,11 @@ export default function LingoApp() {
     snapshot: progress.snapshot,
     applyCloudSnapshot: progress.applyCloudSnapshot,
     updateUser: auth.updateUser,
+    onSessionExpired: auth.logout,
   });
+  const isPremium = isPremiumUser({ isLoggedIn: Boolean(auth.user) });
+  const { updateStats, getTodayKey } = progress;
+  const { timeZone } = progress.settings;
 
   const activePack = useMemo(() => pack ? filterPackByDifficulty(pack, progress.settings.difficulty) : null, [pack, progress.settings.difficulty]);
 
@@ -67,8 +70,8 @@ export default function LingoApp() {
   }, []);
 
   const updateStatsForAnswer = useCallback((xp: number, correct: boolean, learnedDelta: number, masteredDelta: number) => {
-    progress.updateStats((previous) => {
-      const activeStats = recordActivity(previous, progress.settings.timeZone);
+    updateStats((previous) => {
+      const activeStats = recordActivity(previous, timeZone);
       const nextXp = activeStats.xp + xp;
       return {
         ...activeStats,
@@ -80,59 +83,63 @@ export default function LingoApp() {
         totalAnswers: activeStats.totalAnswers + 1,
       };
     });
-  }, [progress]);
+  }, [timeZone, updateStats]);
 
+  // Learning progress is tracked by stable word ID + target language, never by visible text.
   const handleFlashcardAnswer = useCallback((word: VocabItem, topic: TopicItem, known: boolean) => {
-    const alreadyLearned = history.hasLearnedWord(topic.id, word.id);
-    const alreadyMastered = history.hasMasteredWord(word.id);
+    if (!pack) return;
+    const alreadyLearned = history.hasLearnedWord(topic.id, word.id, pack.lang);
+    const alreadyMastered = history.hasMasteredWord(word.id, pack.lang);
     if (known) {
-      history.recordLearning({ topicId: topic.id, word: { id: word.id, de: word.de, x: word.x }, mastered: true, dateKey: progress.getTodayKey() });
+      history.recordLearning({ topicId: topic.id, word: { id: word.id, de: word.de, x: word.x, lang: pack.lang }, mastered: true, dateKey: getTodayKey() });
     } else {
-      history.recordActivityDay(progress.getTodayKey());
+      history.recordActivityDay(getTodayKey());
     }
     updateStatsForAnswer(known ? 10 : 2, known, known && !alreadyLearned ? 1 : 0, known && !alreadyMastered ? 1 : 0);
-  }, [history, progress, updateStatsForAnswer]);
+  }, [getTodayKey, history, pack, updateStatsForAnswer]);
 
   const handleExerciseAnswer = useCallback((word: VocabItem, correct: boolean) => {
-    const topic = pack ? findTopicForWord(pack, word.id) : undefined;
-    const alreadyLearned = topic ? history.hasLearnedWord(topic.id, word.id) : true;
+    if (!pack) return;
+    const topic = findTopicForWord(pack, word.id);
+    const alreadyLearned = topic ? history.hasLearnedWord(topic.id, word.id, pack.lang) : true;
     if (correct && topic) {
-      history.recordLearning({ topicId: topic.id, word: { id: word.id, de: word.de, x: word.x }, dateKey: progress.getTodayKey() });
+      history.recordLearning({ topicId: topic.id, word: { id: word.id, de: word.de, x: word.x, lang: pack.lang }, dateKey: getTodayKey() });
     } else {
-      history.recordActivityDay(progress.getTodayKey());
+      history.recordActivityDay(getTodayKey());
     }
     updateStatsForAnswer(correct ? 15 : 0, correct, correct && !alreadyLearned ? 1 : 0, 0);
-  }, [history, pack, progress, updateStatsForAnswer]);
+  }, [getTodayKey, history, pack, updateStatsForAnswer]);
 
-  const syncLabels = { loading: "lädt…", ready: "bereit", syncing: "aktiv", error: "Fehler", offline: "lokal" } as const;
+  const syncLabels = { loading: "lädt…", ready: "synchron", syncing: "speichert…", pending: "ausstehend", error: "Fehler", offline: "lokal" } as const;
 
-  if (!progress.isLoaded || !auth.isReady) return <div className="flex min-h-screen items-center justify-center bg-gray-50 text-gray-900">Lade Lingo…</div>;
+  if (!progress.isLoaded || !auth.isReady) return <div className="flex min-h-screen items-center justify-center bg-gray-50 text-gray-900">Lade Lingo Pro…</div>;
 
   return (
     <div className={`flex min-h-screen flex-col font-sans transition-colors duration-300 ${base}`}>
       <ServiceWorkerRegistration />
       <header className={`rounded-b-3xl bg-gradient-to-r ${gradient} p-4 text-white shadow-md`}>
         <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-xl font-bold"><span className="text-3xl" aria-hidden="true">🦉</span><span>Lingo</span></div>
-          <div className="flex items-center gap-3 text-sm font-semibold">
-            {auth.user ? <button type="button" onClick={auth.logout} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.email}</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
-            <span>🔥 {progress.stats.streak}</span><span>⭐ {progress.stats.xp} XP</span><span className="rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
+          <div className="flex items-center gap-2 text-xl font-bold"><span className="text-3xl" aria-hidden="true">🦉</span><span>Lingo Pro</span></div>
+          <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
+            {auth.user ? <button type="button" onClick={() => auth.logout()} title={`Angemeldet als ${auth.user.email}`} className="max-w-[9rem] truncate rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.displayName || auth.user.email} · Logout</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
+            <span className="whitespace-nowrap">🔥 {progress.stats.streak}</span><span className="whitespace-nowrap">⭐ {progress.stats.xp} XP</span><span className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
           </div>
-          {auth.user && <div className="w-full text-right text-[11px] opacity-80">☁️ Sync {syncLabels[cloud.status]}{cloud.message ? ` · ${cloud.message}` : ""}</div>}
+          {auth.user && <div className="flex w-full items-center justify-end gap-2 text-[11px]" role="status" aria-live="polite"><span className="opacity-90">☁️ Sync {syncLabels[cloud.status]}{cloud.message ? ` · ${cloud.message}` : ""}</span>{(cloud.status === "error" || cloud.status === "pending") && <button type="button" onClick={cloud.retry} className="rounded-md bg-white/25 px-2 py-0.5 font-bold focus-visible:outline-2 focus-visible:outline-white">Erneut versuchen</button>}</div>}
+          {!auth.user && auth.message && <div className="w-full text-right text-[11px] opacity-90" role="status">{auth.message}</div>}
         </div>
       </header>
 
       <main className="mx-auto w-full max-w-2xl flex-1 overflow-y-auto p-4 pb-24">
         {!activePack && activeTab !== "settings" ? <div className="mt-20 text-center"><h2 className="mb-4 text-2xl font-bold">{loadState.status === "loading" ? "Sprachpaket wird geladen…" : "Sprachpaket nicht verfügbar"}</h2><p className="mb-6 opacity-80">{loadState.message ?? `Für ${progress.settings.targetLang} ${progress.settings.contentLevel} sind noch keine Inhalte vorhanden.`}</p><button type="button" onClick={() => setActiveTab("settings")} className={`rounded-xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg`}>Zu den Einstellungen</button></div> : <>
-          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={PREMIUM_ENABLED} />}
-          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} />}
-          {activeTab === "profil" && <ProfileTab stats={progress.stats} learningInsights={progress.learningInsights} pack={pack} gradient={gradient} />}
-          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} reloadPack={reload} clearCurrentCache={clearCurrentCache} importPack={importPack} />}
+          {activeTab === "heute" && activePack && <TodayTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} speak={speak} onAnswer={handleFlashcardAnswer} gradient={gradient} isPremiumUser={isPremium} dailyGoal={progress.settings.dailyGoal} vibrationEnabled={progress.settings.vibrationEnabled} />}
+          {activeTab === "uebungen" && activePack && <ExercisesTab key={`${activePack.lang}:${activePack.level}:${progress.settings.difficulty}`} pack={activePack} onAnswer={handleExerciseAnswer} soundEnabled={progress.settings.soundEnabled} vibrationEnabled={progress.settings.vibrationEnabled} />}
+          {activeTab === "profil" && <ProfileTab stats={progress.stats} learningInsights={progress.learningInsights} pack={pack} gradient={gradient} timeZone={timeZone} />}
+          {activeTab === "settings" && <SettingsTab settings={progress.settings} updateSettings={progress.updateSettings} gradient={gradient} loadState={loadState} reloadPack={reload} clearCurrentCache={clearCurrentCache} clearAllCaches={clearAllCaches} importPack={importPack} />}
         </>}
       </main>
 
       <nav className={`fixed bottom-0 w-full p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] ${progress.settings.isDarkMode ? "bg-gray-800" : "bg-white"}`} aria-label="Hauptnavigation"><div className="mx-auto flex max-w-2xl justify-around"><NavButton icon="📚" label="Heute" isActive={activeTab === "heute"} onClick={() => setActiveTab("heute")} gradient={gradient} /><NavButton icon="🎮" label="Übungen" isActive={activeTab === "uebungen"} onClick={() => setActiveTab("uebungen")} gradient={gradient} /><NavButton icon="👤" label="Profil" isActive={activeTab === "profil"} onClick={() => setActiveTab("profil")} gradient={gradient} /><NavButton icon="⚙️" label="Settings" isActive={activeTab === "settings"} onClick={() => setActiveTab("settings")} gradient={gradient} /></div></nav>
-      {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} />}
+      {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} onGoogleCredential={auth.loginWithGoogleCredential} onCancelGoogle={auth.cancelGoogleLogin} />}
     </div>
   );
 }

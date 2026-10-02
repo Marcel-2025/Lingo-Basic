@@ -9,13 +9,21 @@ interface TodayTabProps {
   pack: LanguagePack;
   gradient: string;
   isPremiumUser: boolean;
+  /** Free users get `dailyGoal` cards per session; premium users can keep learning. */
+  dailyGoal: number;
+  vibrationEnabled: boolean;
   speak: (text: string, language: "DE" | LanguagePack["lang"]) => void;
   onAnswer: (word: VocabItem, topic: TopicItem, known: boolean) => void;
 }
 
-export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: TodayTabProps) {
+export function TodayTab({ pack, gradient, isPremiumUser, dailyGoal, vibrationEnabled, speak, onAnswer }: TodayTabProps) {
+  const createQueue = (vocab: VocabItem[]) => {
+    const shuffled = shuffle(vocab);
+    return isPremiumUser ? shuffled : shuffled.slice(0, Math.max(1, dailyGoal));
+  };
   const [selectedTopicId, setSelectedTopicId] = useState("all");
-  const [queue, setQueue] = useState<VocabItem[]>(() => shuffle(getVocabFromPack(pack)));
+  const [queue, setQueue] = useState<VocabItem[]>(() => createQueue(getVocabFromPack(pack)));
+  const [round, setRound] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -27,7 +35,8 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
   const buildQueue = (topicId: string) => {
     const vocab = topicId === "all" ? getVocabFromPack(pack) : pack.topics.find((topic) => topic.id === topicId)?.vocab ?? [];
     setSelectedTopicId(topicId);
-    setQueue(shuffle(vocab));
+    setQueue(createQueue(vocab));
+    setRound(1);
     setCurrentIndex(0);
     setIsFlipped(false);
   };
@@ -36,10 +45,11 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
     if (!card) return;
     const topic = pack.topics.find((entry) => entry.vocab.some((word) => word.id === card.id)) ?? activeTopic;
     onAnswer(card, topic, known);
-    if ("vibrate" in navigator) navigator.vibrate(known ? [50, 50] : [100]);
+    if (vibrationEnabled && "vibrate" in navigator) navigator.vibrate(known ? [50, 50] : [100]);
     const nextIndex = currentIndex + 1;
     if (nextIndex >= queue.length && isPremiumUser) {
-      setQueue(shuffle(activeTopic.vocab));
+      setQueue(createQueue(activeTopic.vocab));
+      setRound((value) => value + 1);
       setCurrentIndex(0);
       setIsFlipped(false);
       return;
@@ -52,7 +62,8 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
     return (
       <div className="mt-20 text-center">
         <h2 className="mb-2 text-3xl font-bold">Tagesziel erreicht! 🎉</h2>
-        <p>Komm morgen wieder für mehr XP.</p>
+        <p className="mb-6">Du hast {queue.length} Karten gelernt. Komm morgen wieder für mehr XP.</p>
+        <button type="button" onClick={() => buildQueue(selectedTopicId)} className={`rounded-xl bg-gradient-to-r ${gradient} px-6 py-3 font-bold text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>Noch eine Runde</button>
       </div>
     );
   }
@@ -88,7 +99,7 @@ export function TodayTab({ pack, gradient, isPremiumUser, speak, onAnswer }: Tod
       </div>
 
       <div className="mb-6 w-full">
-        <div className="mb-2 flex justify-between text-sm font-semibold opacity-70"><span>Fortschritt</span><span>{Math.min(currentIndex + 1, queue.length)} / {queue.length}</span></div>
+        <div className="mb-2 flex justify-between text-sm font-semibold opacity-70"><span>Fortschritt{isPremiumUser && round > 1 ? ` · Runde ${round}` : ""}</span><span>{Math.min(currentIndex + 1, queue.length)} / {queue.length}</span></div>
         <div className="h-2.5 rounded-full bg-gray-200"><div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${((currentIndex + 1) / queue.length) * 100}%` }} /></div>
       </div>
 

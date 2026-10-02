@@ -1,5 +1,5 @@
 import { getPackKey } from "@/app/lib/languages";
-import type { CefrLevel, LanguageCode, LanguagePack } from "@/app/lib/types";
+import type { CefrLevel, LanguageCode, LanguagePack, PackOrigin } from "@/app/lib/types";
 
 const DB_NAME = "LingoDB";
 const DB_VERSION = 2;
@@ -10,10 +10,22 @@ interface CachedPack {
   packKey: string;
   pack: LanguagePack;
   cachedAt: number;
+  /** "import" marks user-imported packs, which must not be overwritten by the public pack on the next load. */
+  origin?: PackOrigin;
 }
 
+/**
+ * Schema history:
+ * - v1: store "packs" keyed by `lang` (one pack per language → levels overwrote each other).
+ * - v2: store "packCache" keyed by `${lang}:${level}`. v1 entries are only reused if their level matches
+ *   and are copied into v2 on first read.
+ */
 const openDatabase = (): Promise<IDBDatabase> =>
   new Promise((resolve, reject) => {
+    if (typeof indexedDB === "undefined") {
+      reject(new Error("IndexedDB ist in diesem Browser nicht verfügbar."));
+      return;
+    }
     const request = indexedDB.open(DB_NAME, DB_VERSION);
     request.onupgradeneeded = () => {
       const database = request.result;
@@ -39,18 +51,18 @@ export const getPackFromDB = async (lang: LanguageCode, level: CefrLevel) => {
   const database = await openDatabase();
   try {
     const cached = await readValue<CachedPack>(database, PACK_STORE_NAME, getPackKey(lang, level));
-    if (cached?.pack) return { pack: cached.pack, source: "cache" as const };
+    if (cached?.pack) return { pack: cached.pack, source: "cache" as const, origin: cached.origin ?? "network" };
 
     // Migration path for version 1: only reuse a legacy cache entry if its actual level matches.
     const legacy = await readValue<LanguagePack>(database, LEGACY_STORE_NAME, lang);
-    if (legacy?.level === level && legacy.lang === lang) return { pack: legacy, source: "legacy" as const };
+    if (legacy?.level === level && legacy.lang === lang) return { pack: legacy, source: "legacy" as const, origin: "network" as const };
     return null;
   } finally {
     database.close();
   }
 };
 
-export const savePackToDB = async (pack: LanguagePack) => {
+export const savePackToDB = async (pack: LanguagePack, origin: PackOrigin = "network") => {
   const database = await openDatabase();
   try {
     await new Promise<void>((resolve, reject) => {
@@ -59,6 +71,7 @@ export const savePackToDB = async (pack: LanguagePack) => {
         packKey: getPackKey(pack.lang, pack.level),
         pack,
         cachedAt: Date.now(),
+        origin,
       } satisfies CachedPack);
       transaction.oncomplete = () => resolve();
       transaction.onerror = () => reject(transaction.error ?? new Error("IndexedDB-Speichern fehlgeschlagen."));

@@ -1,111 +1,162 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { deletePackFromDB, getPackFromDB, savePackToDB } from "@/app/lib/indexed-db";
-import { getLegacyPackPath, getPackPath } from "@/app/lib/languages";
+import { clearAllPacksFromDB, deletePackFromDB, getPackFromDB, savePackToDB } from "@/app/lib/indexed-db";
+import { getLegacyPackPath, getPackPath, SUPPORTED_LANGUAGES } from "@/app/lib/languages";
 import { normalizePack } from "@/app/lib/pack-normalization";
-import type { CefrLevel, LanguageCode, LanguagePack, PackLoadState } from "@/app/lib/types";
+import type { CefrLevel, LanguageCode, LanguagePack, PackLoadState, PackOrigin } from "@/app/lib/types";
 
-const parseResponse = async (response: Response) => {
-  const json = (await response.json()) as unknown;
+class PackUnavailableError extends Error {}
+
+const parsePackJson = (json: unknown) => {
   const result = normalizePack(json);
-  if (!result.pack) throw new Error(result.errors.join(" ") || "Das Sprachpaket ist ungültig.");
-  return result.pack;
+  if (!result.pack) throw new Error(result.errors.slice(0, 3).join(" ") || "Das Sprachpaket ist ungültig.");
+  return result;
 };
 
+const fetchJson = async (url: string) => {
+  const response = await fetch(url, { cache: "no-store" });
+  if (response.status === 404) throw new PackUnavailableError();
+  if (!response.ok) throw new Error(`Das Sprachpaket konnte nicht geladen werden (HTTP ${response.status}).`);
+  try {
+    return (await response.json()) as unknown;
+  } catch {
+    throw new Error("Das Sprachpaket enthält kein gültiges JSON.");
+  }
+};
+
+const describe = (lang: LanguageCode, level: CefrLevel) => `${SUPPORTED_LANGUAGES[lang].label} ${level}`;
+
+interface LoadOptions {
+  /** Ignore an imported pack and fetch the public one from /packs (explicit user action). */
+  forcePublic?: boolean;
+}
+
+/**
+ * Offline-first pack loading:
+ * 1. IndexedDB cache for `${lang}:${level}` (imported packs take precedence and are not overwritten),
+ * 2. /packs/{lang}/{level}.json, validated + normalized, then cached,
+ * 3. legacy /packs/{lang}.json only if its declared level matches,
+ * 4. otherwise the cache, or a clear "not available" state.
+ */
 export const useLanguagePack = (lang: LanguageCode, level: CefrLevel) => {
   const [pack, setPack] = useState<LanguagePack | null>(null);
   const [loadState, setLoadState] = useState<PackLoadState>({ status: "idle" });
   const requestIdRef = useRef(0);
 
-  const load = useCallback(async () => {
+  const load = useCallback(async ({ forcePublic = false }: LoadOptions = {}) => {
     const requestId = requestIdRef.current + 1;
     requestIdRef.current = requestId;
     const isCurrentRequest = () => requestId === requestIdRef.current;
     setLoadState({ status: "loading" });
+    // Never show a pack of a different language/level while the new one loads.
+    setPack((current) => (current && current.lang === lang && current.level === level ? current : null));
 
     let cachedPack: LanguagePack | null = null;
     try {
       const cached = await getPackFromDB(lang, level);
-      if (cached) {
-        const normalized = normalizePack(cached.pack);
-        if (normalized.pack) {
-          cachedPack = normalized.pack;
+      const normalized = cached ? normalizePack(cached.pack) : null;
+      if (cached && normalized?.pack && normalized.pack.lang === lang && normalized.pack.level === level) {
+        cachedPack = normalized.pack;
+        if (cached.source === "legacy") await savePackToDB(cachedPack, "network");
+        if (cached.origin === "import" && !forcePublic) {
           if (isCurrentRequest()) {
             setPack(cachedPack);
-            setLoadState({ status: "ready", source: cached.source, message: "Offline-Cache wird verwendet." });
+            setLoadState({ status: "ready", source: "import", message: "Importiertes Pack aus dem Offline-Speicher." });
           }
-          if (cached.source === "legacy") await savePackToDB(cachedPack);
+          return;
+        }
+        if (isCurrentRequest()) {
+          setPack(cachedPack);
+          setLoadState({ status: "ready", source: "cache", message: "Offline-Cache wird verwendet." });
         }
       }
     } catch {
-      // Continue with the public pack. A browser may reject IndexedDB in private mode.
+      // IndexedDB can be unavailable (private mode). Continue with the network.
     }
 
+    let failure: unknown = null;
     try {
-      const response = await fetch(getPackPath(lang, level), { cache: "no-store" });
-      if (!response.ok) throw new Error(`Für ${lang} ${level} ist noch kein Pack verfügbar.`);
-      const loadedPack = await parseResponse(response);
+      const loadedPack = parsePackJson(await fetchJson(getPackPath(lang, level))).pack!;
       if (loadedPack.lang !== lang || loadedPack.level !== level) {
-        throw new Error(`Das geladene Pack passt nicht zu ${lang} ${level}.`);
+        throw new Error(`Die Datei ${getPackPath(lang, level)} enthält ${loadedPack.lang} ${loadedPack.level} statt ${lang} ${level}.`);
       }
-      await savePackToDB(loadedPack);
+      try {
+        await savePackToDB(loadedPack, "network");
+      } catch {
+        // The pack still works for this session without a cache.
+      }
       if (isCurrentRequest()) {
         setPack(loadedPack);
         setLoadState({ status: "ready", source: "network" });
       }
       return;
-    } catch (networkError) {
+    } catch (error) {
+      failure = error;
+    }
+
+    // Legacy flat files (/packs/en.json) are only accepted if their real level matches.
+    if (failure instanceof PackUnavailableError) {
       try {
-        const legacyResponse = await fetch(getLegacyPackPath(lang), { cache: "no-store" });
-        if (legacyResponse.ok) {
-          const legacyPack = await parseResponse(legacyResponse);
-          if (legacyPack.level === level && legacyPack.lang === lang) {
-            await savePackToDB(legacyPack);
-            if (isCurrentRequest()) {
-              setPack(legacyPack);
-              setLoadState({ status: "ready", source: "legacy", message: "Ein kompatibles Legacy-Pack wurde geladen." });
-            }
-            return;
+        const legacyPack = parsePackJson(await fetchJson(getLegacyPackPath(lang))).pack!;
+        if (legacyPack.level === level && legacyPack.lang === lang) {
+          try {
+            await savePackToDB(legacyPack, "network");
+          } catch {
+            // See above.
           }
+          if (isCurrentRequest()) {
+            setPack(legacyPack);
+            setLoadState({ status: "ready", source: "legacy", message: "Ein kompatibles Legacy-Pack wurde geladen." });
+          }
+          return;
         }
       } catch {
-        // The cache below remains the offline fallback.
-      }
-
-      if (isCurrentRequest()) {
-        if (cachedPack) {
-          setLoadState({ status: "ready", source: "cache", message: "Offline: gespeichertes Pack wird verwendet." });
-        } else {
-          setPack(null);
-          setLoadState({
-            status: "error",
-            message: networkError instanceof Error ? networkError.message : `Für ${lang} ${level} ist kein Pack verfügbar.`,
-          });
-        }
+        // Fall through to the cache / error state.
       }
     }
+
+    if (!isCurrentRequest()) return;
+    if (cachedPack) {
+      setLoadState({ status: "ready", source: "cache", message: "Offline: gespeichertes Pack wird verwendet." });
+      return;
+    }
+    setPack(null);
+    const message = failure instanceof PackUnavailableError
+      ? `${describe(lang, level)} ist noch nicht verfügbar. Wähle ein anderes Level oder importiere ein Pack.`
+      : failure instanceof TypeError
+        ? `Keine Verbindung und kein gespeichertes Pack für ${describe(lang, level)}.`
+        : failure instanceof Error ? failure.message : `Für ${describe(lang, level)} ist kein Pack verfügbar.`;
+    setLoadState({ status: "error", message });
   }, [lang, level]);
 
   useEffect(() => {
-    void load();
+    const timeoutId = window.setTimeout(() => void load(), 0);
+    return () => window.clearTimeout(timeoutId);
   }, [load]);
 
-  const importPack = useCallback(async (input: unknown, source: "import" | "network" = "import") => {
-    const result = normalizePack(input);
-    if (!result.pack) throw new Error(result.errors.join(" ") || "Das Sprachpaket ist ungültig.");
-    await savePackToDB(result.pack);
-    if (result.pack.lang === lang && result.pack.level === level) {
-      setPack(result.pack);
-      setLoadState({ status: "ready", source, message: result.warnings[0] });
+  const importPack = useCallback(async (input: unknown, origin: PackOrigin = "import") => {
+    const result = parsePackJson(input);
+    const importedPack = result.pack!;
+    await savePackToDB(importedPack, origin);
+    if (importedPack.lang === lang && importedPack.level === level) {
+      setPack(importedPack);
+      setLoadState({ status: "ready", source: origin, message: result.warnings[0] });
     }
-    return { pack: result.pack, warnings: result.warnings };
+    return { pack: importedPack, warnings: result.warnings };
   }, [lang, level]);
+
+  const reloadPublicPack = useCallback(() => load({ forcePublic: true }), [load]);
 
   const clearCurrentCache = useCallback(async () => {
     await deletePackFromDB(lang, level);
-    await load();
+    await load({ forcePublic: true });
   }, [lang, level, load]);
 
-  return { pack, loadState, reload: load, importPack, clearCurrentCache };
+  const clearAllCaches = useCallback(async () => {
+    await clearAllPacksFromDB();
+    await load({ forcePublic: true });
+  }, [load]);
+
+  return { pack, loadState, reload: reloadPublicPack, importPack, clearCurrentCache, clearAllCaches };
 };

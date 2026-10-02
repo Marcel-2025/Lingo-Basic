@@ -62,6 +62,8 @@ export interface AppSettings {
   dailyGoal: number;
   theme: ThemeName;
   isDarkMode: boolean;
+  soundEnabled: boolean;
+  vibrationEnabled: boolean;
   timeZone: string;
 }
 
@@ -69,11 +71,14 @@ export interface LearnedWord {
   id: string;
   de: string;
   x: string;
+  /** Zielsprache, in der das Wort gelernt wurde. Fehlt nur bei Legacy-Einträgen. */
+  lang?: LanguageCode;
 }
 
 export interface LearningInsights {
   learnedDays: Record<string, number>;
   learnedWordsByTopic: Record<string, LearnedWord[]>;
+  /** Einträge im Format `${lang}:${wordId}`; Legacy-Einträge bestehen nur aus der Word-ID. */
   masteredWordIds: string[];
 }
 
@@ -100,8 +105,10 @@ export interface PackNormalizationResult {
   warnings: string[];
 }
 
+export type PackOrigin = "network" | "import";
+
 export interface PackLoadState {
   status: "idle" | "loading" | "ready" | "error";
-  source?: "cache" | "network" | "legacy" | "import";
+  source?: PackOrigin | "cache" | "legacy";
   message?: string;
 }
