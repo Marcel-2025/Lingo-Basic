@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { isNativePlatform } from "@/app/lib/billing";
 
 /**
  * Registers the offline shell in production only. In development a service worker would serve stale
@@ -11,7 +12,8 @@ export function ServiceWorkerRegistration() {
     if (!("serviceWorker" in navigator)) return;
     const register = async () => {
       try {
-        if (process.env.NODE_ENV !== "production") {
+        // In the Capacitor app all files are already bundled locally; a service worker would only add a second cache.
+        if (process.env.NODE_ENV !== "production" || isNativePlatform()) {
           const registrations = await navigator.serviceWorker.getRegistrations();
           await Promise.all(registrations.map((registration) => registration.unregister()));
           return;

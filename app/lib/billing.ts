@@ -48,6 +48,15 @@ export const getWebCheckoutUrl = (plan: Exclude<EntitlementPlan, "free">, appUse
   return `${template}/${encodeURIComponent(appUserId)}/checkout?package_id=${encodeURIComponent(packageIds[plan])}`;
 };
 
+/**
+ * API routes run only on the deployed web backend. Inside the Capacitor app the page is served from
+ * https://localhost, so API calls need the absolute backend URL (NEXT_PUBLIC_API_BASE_URL, e.g. https://lingo.example.com).
+ */
+export const getApiUrl = (pathname: string) => {
+  const base = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "").replace(/\/$/, "");
+  return `${base}${pathname}`;
+};
+
 export const isNativePlatform = () => {
   if (typeof window === "undefined") return false;
   const capacitor = (window as Window & { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor;

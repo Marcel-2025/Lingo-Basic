@@ -9,7 +9,7 @@ import { ProfileTab } from "@/app/components/tabs/profile-tab";
 import { SettingsTab } from "@/app/components/tabs/settings-tab";
 import { TodayTab } from "@/app/components/tabs/today-tab";
 import { NavButton } from "@/app/components/ui";
-import { FREE_DAILY_LEARNING_LIMIT } from "@/app/lib/billing";
+import { FREE_DAILY_LEARNING_LIMIT, getApiUrl } from "@/app/lib/billing";
 import { SUPPORTED_LANGUAGES } from "@/app/lib/languages";
 import { getEffectiveEntitlement } from "@/app/lib/premium";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
@@ -82,7 +82,7 @@ export default function LingoApp() {
     setIsRestoringPremium(true);
     setRestorePremiumMessage("");
     try {
-      const response = await fetch("/api/entitlements/restore", {
+      const response = await fetch(getApiUrl("/api/entitlements/restore"), {
         method: "POST",
         headers: { Authorization: `Bearer ${auth.user.idToken}` },
       });

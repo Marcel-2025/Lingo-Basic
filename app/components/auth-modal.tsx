@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { isNativePlatform } from "@/app/lib/billing";
 import { GooglePromptError, isFirebaseConfigured, isGoogleConfigured, renderGoogleButton } from "@/app/lib/firebase-auth";
 
 interface AuthModalProps {
@@ -22,7 +23,9 @@ export function AuthModal({ gradient, initialMessage, onClose, onEmailAuth, onGo
   const [showGoogleButton, setShowGoogleButton] = useState(false);
   const googleButtonRef = useRef<HTMLDivElement>(null);
   const firebaseReady = isFirebaseConfigured();
-  const googleReady = isGoogleConfigured();
+  // Google blocks its web sign-in inside embedded WebViews (Capacitor). Native Google sign-in needs a plugin.
+  const [isNativeApp] = useState(() => isNativePlatform());
+  const googleReady = isGoogleConfigured() && !isNativeApp;
   const isLoading = pending !== null;
 
   const runAuth = async (kind: "email" | "google", action: () => Promise<unknown>) => {
@@ -95,7 +98,8 @@ export function AuthModal({ gradient, initialMessage, onClose, onEmailAuth, onGo
               Mit Google einloggen
             </button>
           )}
-          {firebaseReady && !googleReady && <p className="text-center text-xs text-gray-600">Google-Login ist nicht konfiguriert (NEXT_PUBLIC_GOOGLE_CLIENT_ID fehlt).</p>}
+          {isNativeApp && <p className="text-center text-xs text-gray-600">Google-Login ist in der Android-App noch nicht verfügbar. Bitte nutze E-Mail und Passwort.</p>}
+          {!isNativeApp && firebaseReady && !googleReady && <p className="text-center text-xs text-gray-600">Google-Login ist nicht konfiguriert (NEXT_PUBLIC_GOOGLE_CLIENT_ID fehlt).</p>}
           {showGoogleButton && <div ref={googleButtonRef} className="flex min-h-11 justify-center" />}
           <button type="button" onClick={() => setIsSignup((value) => !value)} className="w-full text-sm font-bold text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-500">{isSignup ? "Schon einen Account? Jetzt einloggen" : "Noch kein Account? Jetzt registrieren"}</button>
           <button type="button" onClick={onClose} disabled={pending === "email"} className="w-full text-sm text-gray-600 focus-visible:outline-2 focus-visible:outline-indigo-500">Schließen</button>
