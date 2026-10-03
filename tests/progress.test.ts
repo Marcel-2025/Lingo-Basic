@@ -184,18 +184,21 @@ describe("exercises", () => {
 });
 
 describe("firestore mapping", async () => {
-  const { parseFirestoreProgress, toFirestoreFields } = await import("@/app/lib/cloud-sync");
+  const { parseProgressDocument, toProgressDocument } = await import("@/app/lib/cloud-sync");
 
-  it("round-trips a snapshot through Firestore fields", () => {
+  it("round-trips a snapshot through the Firestore document", () => {
     const original = snapshot({ updatedAt: 1234, stats: normalizeStats({ xp: 120 }) });
-    const parsed = parseFirestoreProgress(toFirestoreFields(original));
+    const document = toProgressDocument(original);
+    expect(Object.keys(document).sort()).toEqual(["learningInsightsJson", "schemaVersion", "settingsJson", "statsJson", "updatedAt"]);
+    expect(Number.isInteger(document.updatedAt) && Number.isInteger(document.schemaVersion)).toBe(true);
+    const parsed = parseProgressDocument(document);
     expect(parsed.stats.xp).toBe(120);
     expect(parsed.updatedAt).toBe(1234);
     expect(parsed.storedSchemaVersion).toBe(PROGRESS_SCHEMA_VERSION);
   });
 
   it("tolerates corrupt JSON fields", () => {
-    const parsed = parseFirestoreProgress({ statsJson: { stringValue: "{broken" }, updatedAt: { integerValue: "7" } });
+    const parsed = parseProgressDocument({ statsJson: "{broken", updatedAt: 7 });
     expect(parsed.stats.xp).toBe(0);
     expect(parsed.updatedAt).toBe(7);
     expect(parsed.storedSchemaVersion).toBe(1);
@@ -209,5 +212,16 @@ describe("premium configuration", () => {
 
   it("uses the real entitlement when PREMIUM_FOR_ALL is disabled", () => {
     expect(getEffectiveEntitlement(FREE_ENTITLEMENT_STATE, false).isPremium).toBe(false);
+  });
+});
+
+describe("phone number normalization", async () => {
+  const { normalizePhoneNumber } = await import("@/app/lib/firebase-auth");
+
+  it("converts German formats to E.164", () => {
+    expect(normalizePhoneNumber("0151 234 567 89")).toBe("+4915123456789");
+    expect(normalizePhoneNumber("0049 151 2345678")).toBe("+491512345678");
+    expect(normalizePhoneNumber("+43 660 1234567")).toBe("+436601234567");
+    expect(normalizePhoneNumber("(0151) 23-45/678")).toBe("+4915123456 78".replace(" ", ""));
   });
 });

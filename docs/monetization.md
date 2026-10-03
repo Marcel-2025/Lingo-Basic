@@ -52,7 +52,7 @@ The handler verifies the HMAC signature and optional authorization header, then 
 }
 ```
 
-Deploy the rules in `docs/firestore.rules`. The browser can read only its own entitlement; only a server using Firebase Admin credentials may create or change it.
+Deploy the rules in `firestore.rules` (`npx -y firebase-tools@latest deploy --only firestore`). The browser can read only its own entitlement; only a server using Firebase Admin credentials may create or change it.
 
 ### Required server environment variables
 

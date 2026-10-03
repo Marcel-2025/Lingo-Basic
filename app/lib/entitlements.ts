@@ -1,4 +1,4 @@
-import { getFirebaseProjectId, isFirebaseConfigured } from "@/app/lib/firebase-auth";
+import { getFirebaseProjectId, isFirebaseConfigured } from "@/app/lib/firebase";
 import type { AuthUser, EntitlementPlan, EntitlementSource, EntitlementState, EntitlementStatus, UserEntitlement } from "@/app/lib/types";
 
 type FirestoreFields = Record<string, { stringValue?: string; integerValue?: string; doubleValue?: number | string; nullValue?: null }>;

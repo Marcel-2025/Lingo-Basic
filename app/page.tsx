@@ -63,7 +63,6 @@ export default function LingoApp() {
     isReady: progress.isLoaded && auth.isReady,
     snapshot: progress.snapshot,
     applyCloudSnapshot: progress.applyCloudSnapshot,
-    updateUser: auth.updateUser,
     onSessionExpired: auth.logout,
   });
   const { updateStats, getTodayKey } = progress;
@@ -163,7 +162,7 @@ export default function LingoApp() {
         <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xl font-bold"><span className="text-3xl" aria-hidden="true">🦉</span><span>Lingo Pro</span></div>
           <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
-            {auth.user ? <button type="button" onClick={() => auth.logout()} title={`Angemeldet als ${auth.user.email}`} className="max-w-[9rem] truncate rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.displayName || auth.user.email} · Logout</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
+            {auth.user ? <button type="button" onClick={() => auth.logout()} title={`Angemeldet als ${auth.user.email || auth.user.phoneNumber || auth.user.displayName}`} className="max-w-[9rem] truncate rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👤 {auth.user.displayName || auth.user.email} · Logout</button> : <button type="button" onClick={() => setIsAuthOpen(true)} className="rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">Login</button>}
             <button type="button" onClick={() => setIsPremiumOpen(true)} className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1 focus-visible:outline-2 focus-visible:outline-white">👑 {isPremium ? "Premium" : "Upgrade"}</button><span className="whitespace-nowrap">🔥 {progress.stats.streak}</span><span className="whitespace-nowrap">⭐ {progress.stats.xp} XP</span><span className="whitespace-nowrap rounded-lg bg-white/20 px-2 py-1">Lvl {progress.stats.level}</span>
           </div>
           {auth.user && <div className="flex w-full items-center justify-end gap-2 text-[11px]" role="status" aria-live="polite"><span className="opacity-90">☁️ Sync {syncLabels[cloud.status]}{cloud.message ? ` · ${cloud.message}` : ""}</span>{(cloud.status === "error" || cloud.status === "pending") && <button type="button" onClick={cloud.retry} className="rounded-md bg-white/25 px-2 py-0.5 font-bold focus-visible:outline-2 focus-visible:outline-white">Erneut versuchen</button>}</div>}
@@ -181,7 +180,7 @@ export default function LingoApp() {
       </main>
 
       <nav className={`fixed bottom-0 w-full p-4 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] ${progress.settings.isDarkMode ? "bg-gray-800" : "bg-white"}`} aria-label="Hauptnavigation"><div className="mx-auto flex max-w-2xl justify-around"><NavButton icon="📚" label="Heute" isActive={activeTab === "heute"} onClick={() => setActiveTab("heute")} gradient={gradient} /><NavButton icon="🎮" label="Übungen" isActive={activeTab === "uebungen"} onClick={() => setActiveTab("uebungen")} gradient={gradient} /><NavButton icon="👤" label="Profil" isActive={activeTab === "profil"} onClick={() => setActiveTab("profil")} gradient={gradient} /><NavButton icon="⚙️" label="Settings" isActive={activeTab === "settings"} onClick={() => setActiveTab("settings")} gradient={gradient} /></div></nav>
-      {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} onGoogleCredential={auth.loginWithGoogleCredential} onCancelGoogle={auth.cancelGoogleLogin} />}
+      {isAuthOpen && <AuthModal gradient={gradient} initialMessage={auth.message} onClose={() => setIsAuthOpen(false)} onEmailAuth={auth.loginWithEmail} onGoogleAuth={auth.loginWithGoogle} onRequestPhoneCode={auth.requestPhoneCode} />}
       {isPremiumOpen && <PremiumModal user={auth.user} entitlement={entitlement} gradient={gradient} isRestoring={isRestoringPremium} onClose={() => setIsPremiumOpen(false)} onLogin={() => { setIsPremiumOpen(false); setIsAuthOpen(true); }} onRestore={restorePremium} restoreMessage={restorePremiumMessage} />}
     </div>
   );

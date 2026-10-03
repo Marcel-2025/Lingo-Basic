@@ -82,12 +82,14 @@ export interface LearningInsights {
   masteredWordIds: string[];
 }
 
+/** Snapshot of the signed-in Firebase user. The session itself is managed by the Firebase Auth SDK. */
 export interface AuthUser {
   localId: string;
   email: string;
   displayName?: string;
+  phoneNumber?: string;
+  /** Current Firebase ID token (refreshed automatically by the SDK), used for calls to the own backend. */
   idToken: string;
-  refreshToken: string;
   expiresAt: number;
 }
 

@@ -1,0 +1,88 @@
+rules_version = '2';
+
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: userProgress
+// Document ID: Firebase Auth UID of the owner
+// Fields (no other fields allowed):
+//   - schemaVersion: int (required, 1..1000) - version of the progress schema
+//   - statsJson: string (required, <= 20 KB) - JSON of XP, level, streak, answer counters
+//   - settingsJson: string (required, <= 20 KB) - JSON of language, level, theme, sound/vibration settings
+//   - learningInsightsJson: string (required, < 900 KB) - JSON of learning days and learned word IDs
+//   - updatedAt: int (required, >= 0) - client timestamp (ms) used for merging devices
+// Access: only the owner may read and write; documents contain personal learning data.
+//
+// Collection: userEntitlements
+// Document ID: Firebase Auth UID of the owner
+// Fields: plan, status, source, expiresAt, updatedAt
+// Access: written exclusively by the backend (RevenueCat webhook with Firebase Admin credentials, which bypass
+// these rules). Clients may only read their own entitlement and can never grant themselves premium.
+//
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // -------------------------------------------------------------
+    // Helper Functions
+    // -------------------------------------------------------------
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function isBoundedString(value, maxLen) {
+      return value is string && value.size() > 0 && value.size() <= maxLen;
+    }
+
+    // -------------------------------------------------------------
+    // Domain Validators (used for create AND update)
+    // -------------------------------------------------------------
+    function isValidUserProgress(data) {
+      let fields = ['schemaVersion', 'statsJson', 'settingsJson', 'learningInsightsJson', 'updatedAt'];
+      return hasOnlyAllowedFields(fields)
+        && hasRequiredFields(fields)
+        && data.schemaVersion is int && data.schemaVersion >= 1 && data.schemaVersion <= 1000
+        && isBoundedString(data.statsJson, 20000)
+        && isBoundedString(data.settingsJson, 20000)
+        && isBoundedString(data.learningInsightsJson, 900000)
+        && data.updatedAt is int && data.updatedAt >= 0;
+    }
+
+    // -------------------------------------------------------------
+    // userProgress/{userId}: personal data, owner only
+    // -------------------------------------------------------------
+    match /userProgress/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create, update: if isOwner(userId) && isValidUserProgress(request.resource.data);
+      allow delete: if isOwner(userId);
+    }
+
+    // -------------------------------------------------------------
+    // userEntitlements/{userId}: read-only for the owner
+    // -------------------------------------------------------------
+    match /userEntitlements/{userId} {
+      allow get: if isOwner(userId);
+      allow list, create, update, delete: if false;
+    }
+
+    // Default deny for everything else.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

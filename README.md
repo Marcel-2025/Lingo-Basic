@@ -13,7 +13,7 @@ app/
     use-progress.ts        Stats/Settings/Insights, LocalStorage-Persistenz, updatedAt
     use-language-pack.ts   Offline-first Pack-Laden (IndexedDB → /packs → Legacy → Cache)
     use-learning-history.ts Lernhistorie per Word-ID + Sprache
-    use-auth.ts            Firebase-Sitzung inkl. Wiederherstellung + Token-Refresh
+    use-auth.ts            Firebase-Sitzung (onIdTokenChanged)
     use-cloud-sync.ts      Merge beim Login, debounced Upload, Retry-Puffer
   lib/
     types.ts               Versioniertes Datenmodell
@@ -21,7 +21,8 @@ app/
     pack-normalization.ts  Einzige Stelle für Pack-Validierung/-Normalisierung
     progress.ts            Normalisierung + konfliktfreier Merge von Fortschritt
     indexed-db.ts          Pack-Cache (Key `${lang}:${level}`)
-    firebase-auth.ts       Identity Toolkit + Secure Token + Google Identity Services
+    firebase.ts            Firebase-Initialisierung (App, Auth, Firestore)
+    firebase-auth.ts       E-Mail, Google, Telefon (JS SDK + native Capacitor-Plugin)
     cloud-sync.ts          Firestore REST (`userProgress/{uid}`)
     exercises.ts           UI-unabhängige Übungslogik
     premium.ts             Zentrale Premium-Entscheidung (PREMIUM_FOR_ALL + Entitlement)
@@ -67,34 +68,60 @@ npm run build
 
 Hinweis: Die früheren automatisch erzeugten A1-Beispielsätze („Wasser ist wichtig im Thema …“) wurden entfernt, weil sie keinen Lernwert hatten. `ex`/`exTr` sind optional und sollten mit echten Sätzen neu gepflegt werden.
 
-## Firebase und Google Login (optional)
+## Firebase-Backend (Projekt `lingo-basic`)
 
-Kopiere `.env.example` nach `.env.local` und setze die Werte nur dort:
+Firebase ist optional: Ohne Konfiguration läuft die App vollständig im Gastmodus. Mit Konfiguration nutzt sie das **Firebase JS SDK (v12, modular)** für Authentication und Cloud Firestore.
+
+| Datei | Zweck |
+|-|-|
+| `app/lib/firebase.ts` | Initialisierung von App, Auth (IndexedDB-Persistenz) und Firestore (Offline-Cache) |
+| `app/lib/firebase-auth.ts` | E-Mail/Passwort, Google, Telefonnummer; deutsche Fehlermeldungen |
+| `app/lib/cloud-sync.ts` | Lesen/Schreiben von `userProgress/{uid}` |
+| `firebase.json`, `.firebaserc` | CLI-Konfiguration: Auth-Provider, Firestore-Regeln, Datenbank-Region `eur3` |
+| `firestore.rules` | Sicherheitsregeln (nur der Besitzer darf seine Daten lesen/schreiben) |
+| `android/app/google-services.json` | Konfiguration der Android-App `dev.flondy.lingo` |
+
+### Anmeldemethoden
+
+- **E-Mail/Passwort**: JS SDK auf allen Plattformen.
+- **Google**: im Browser per Popup; in der Android-App nativ über `@capacitor-firebase/authentication` (Credential Manager). Das native ID-Token wird per `signInWithCredential` an das JS SDK übergeben (`skipNativeAuth`).
+- **Telefonnummer**: im Browser mit unsichtbarem reCAPTCHA, in der Android-App nativ (Play Integrity, SMS-Auto-Erkennung). Nummern im deutschen Format (`0151 …`) werden nach E.164 (`+49151…`) umgewandelt.
+
+Das JS SDK ist die einzige Quelle der Sitzung: Token-Refresh, Offline-Start und Logout funktionieren überall gleich.
+
+### Einrichtung
+
+`.env.example` nach `.env.local` kopieren und die Werte der Web-App „Lingo-Basic“ eintragen (`npx -y firebase-tools@latest apps:sdkconfig WEB <APP_ID>`):
 
 ```bash
 NEXT_PUBLIC_FIREBASE_API_KEY=
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_GOOGLE_CLIENT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
 # Premium für alle, solange Billing nicht live ist; "false" erzwingt echte Entitlements
 NEXT_PUBLIC_PREMIUM_FOR_ALL=true
 ```
 
+Backend-Konfiguration deployen (E-Mail/Passwort, Google, Firestore-Regeln):
+
+```bash
+npx -y firebase-tools@latest deploy --only auth,firestore
+```
+
+Nur in der Firebase-Konsole möglich:
+
+- **Telefon-Login aktivieren**: Authentication → Sign-in method → Phone.
+- **Web-Domain freigeben**: Authentication → Settings → Authorized domains (z. B. die Vercel-Domain).
+
+Android-Signatur: Debug-Builds verwenden `android/app/lingo-debug.keystore` (SHA-1 `2E:9B:4A:E3:AB:5E:16:43:88:A6:13:7F:46:18:90:EE:53:87:62:EF`, in Firebase hinterlegt). Für Play-Store-Releases muss der SHA-1/SHA-256 des Release- bzw. Play-App-Signing-Schlüssels zusätzlich hinterlegt werden.
+
 Billing/RevenueCat-Variablen und Entitlements: siehe [docs/monetization.md](docs/monetization.md). Die Premium-Entscheidung läuft ausschließlich über `getEffectiveEntitlement` in `app/lib/premium.ts`.
-
-Ohne diese Werte läuft die App vollständig im Gastmodus.
-
-Einrichtung:
-
-1. Firebase Authentication: Provider **E-Mail/Passwort** und **Google** aktivieren; Entwicklungs- und Produktionsdomain unter *Authorized domains* eintragen.
-2. Google Cloud Console → OAuth-Client (Web): alle Origins (z. B. `http://localhost:3000`, Produktionsdomain) als *Authorized JavaScript origins* eintragen. Fehlt eine Origin, meldet die App `origin_mismatch` verständlich.
-3. Firestore anlegen und die Regeln aus [docs/firestore.rules](docs/firestore.rules) deployen.
-
-Sitzungen: Gespeichert werden nur `localId`, E-Mail, Anzeigename, ID-Token, Refresh-Token und Ablaufzeit. Das ID-Token wird fünf Minuten vor Ablauf über `securetoken.googleapis.com` mit dem Refresh-Token erneuert; bei 401/403 von Firestore wird einmal erzwungen erneuert. Ein Offline-Start meldet niemanden ab.
 
 ## Cloud-Sync
 
-- Dokument `userProgress/{uid}` mit `schemaVersion`, `statsJson`, `settingsJson`, `learningInsightsJson`, `updatedAt`.
+- Firestore-Dokument `userProgress/{uid}` (Firebase SDK, Offline-Cache) mit `schemaVersion`, `statsJson`, `settingsJson`, `learningInsightsJson`, `updatedAt`.
 - Beim Login werden lokaler und Cloud-Stand **zusammengeführt**: Settings vom neueren Stand, Lernhistorie (Tage, Wörter, gemeisterte IDs) als Vereinigung, Zähler (XP, Antworten, gelernte Wörter) als Maximum, Streak vom Stand mit dem späteren Aktivitätsdatum. Es werden keine Daten still gelöscht.
 - Änderungen werden lokal sofort gespeichert und nach 1,2 s in die Cloud geschrieben. Fehlgeschlagene Uploads bleiben „ausstehend“ (Marker in LocalStorage überlebt Neustarts) und werden mit Backoff, beim Wiederherstellen der Verbindung oder per „Erneut versuchen“ nachgeholt.
 

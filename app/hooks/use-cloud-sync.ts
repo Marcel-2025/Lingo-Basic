@@ -13,7 +13,6 @@ interface UseCloudSyncOptions {
   isReady: boolean;
   snapshot: CloudProgressSnapshot;
   applyCloudSnapshot: (snapshot: CloudProgressSnapshot) => void;
-  updateUser: (user: AuthUser) => void;
   onSessionExpired: (message: string) => void;
 }
 
@@ -38,7 +37,7 @@ const readSyncedAt = (uid: string) => {
  * - Failed uploads stay "pending": the marker in LocalStorage survives reloads and retries run with backoff
  *   and whenever the browser comes back online.
  */
-export const useCloudSync = ({ user, isReady, snapshot, applyCloudSnapshot, updateUser, onSessionExpired }: UseCloudSyncOptions) => {
+export const useCloudSync = ({ user, isReady, snapshot, applyCloudSnapshot, onSessionExpired }: UseCloudSyncOptions) => {
   const [status, setStatus] = useState<CloudSyncStatus>("offline");
   const [message, setMessage] = useState("");
   const [retryToken, setRetryToken] = useState(0);
@@ -47,13 +46,13 @@ export const useCloudSync = ({ user, isReady, snapshot, applyCloudSnapshot, upda
   const hydratedUidRef = useRef<string | null>(null);
   const isRunningRef = useRef(false);
   const retryCountRef = useRef(0);
-  const callbacksRef = useRef({ applyCloudSnapshot, updateUser, onSessionExpired });
+  const callbacksRef = useRef({ applyCloudSnapshot, onSessionExpired });
   const userId = user?.localId ?? null;
 
   useEffect(() => {
     snapshotRef.current = snapshot;
     userRef.current = user;
-    callbacksRef.current = { applyCloudSnapshot, updateUser, onSessionExpired };
+    callbacksRef.current = { applyCloudSnapshot, onSessionExpired };
   });
 
   const markSynced = (uid: string, syncedAt: number) => writeStoredJson<SyncMarker>(STORAGE_KEYS.syncMarker, { uid, syncedAt });
@@ -82,23 +81,19 @@ export const useCloudSync = ({ user, isReady, snapshot, applyCloudSnapshot, upda
     const sessionUser = userRef.current;
     if (!sessionUser || isRunningRef.current) return;
     isRunningRef.current = true;
-    const onUserRefreshed = (nextUser: AuthUser) => {
-      userRef.current = nextUser;
-      callbacksRef.current.updateUser(nextUser);
-    };
     try {
       if (hydratedUidRef.current !== sessionUser.localId) {
         setStatus("loading");
-        const cloud = await loadCloudProgress(sessionUser, onUserRefreshed);
+        const cloud = await loadCloudProgress(sessionUser);
         const local = snapshotRef.current;
         if (!cloud) {
           const firstSnapshot = { ...local, updatedAt: local.updatedAt || Date.now() };
-          await saveCloudProgress(userRef.current ?? sessionUser, firstSnapshot, onUserRefreshed);
+          await saveCloudProgress(sessionUser, firstSnapshot);
           markSynced(sessionUser.localId, firstSnapshot.updatedAt);
         } else {
           const merged = mergeProgressSnapshots(local, { ...cloud, schemaVersion: cloud.storedSchemaVersion });
           if (merged.localChanged) callbacksRef.current.applyCloudSnapshot(merged.snapshot);
-          if (merged.cloudChanged) await saveCloudProgress(userRef.current ?? sessionUser, merged.snapshot, onUserRefreshed);
+          if (merged.cloudChanged) await saveCloudProgress(sessionUser, merged.snapshot);
           markSynced(sessionUser.localId, merged.snapshot.updatedAt);
         }
         hydratedUidRef.current = sessionUser.localId;
@@ -106,14 +101,16 @@ export const useCloudSync = ({ user, isReady, snapshot, applyCloudSnapshot, upda
         const current = snapshotRef.current;
         if (current.updatedAt > readSyncedAt(sessionUser.localId)) {
           setStatus("syncing");
-          await saveCloudProgress(userRef.current ?? sessionUser, current, onUserRefreshed);
+          await saveCloudProgress(sessionUser, current);
           markSynced(sessionUser.localId, current.updatedAt);
         }
       }
       retryCountRef.current = 0;
       setMessage("");
       // Another change may have arrived while the request was running.
-      setStatus(snapshotRef.current.updatedAt > readSyncedAt(sessionUser.localId) ? "pending" : "ready");
+      const hasNewerChanges = snapshotRef.current.updatedAt > readSyncedAt(sessionUser.localId);
+      setStatus(hasNewerChanges ? "pending" : "ready");
+      if (hasNewerChanges) window.setTimeout(() => setRetryToken((value) => value + 1), SAVE_DEBOUNCE_MS);
     } catch (error) {
       handleError(error);
     } finally {

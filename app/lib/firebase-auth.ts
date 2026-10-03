@@ -1,309 +1,229 @@
+import { FirebaseError } from "firebase/app";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  PhoneAuthProvider,
+  RecaptchaVerifier,
+  signInWithCredential,
+  signInWithEmailAndPassword,
+  signInWithPhoneNumber,
+  signInWithPopup,
+  signOut,
+  type User,
+} from "firebase/auth";
+import { isNativePlatform } from "@/app/lib/billing";
+import { getFirebaseAuth, isFirebaseConfigured } from "@/app/lib/firebase";
 import type { AuthUser } from "@/app/lib/types";
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? "",
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
-  googleClientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "",
-};
+export { getFirebaseProjectId, isFirebaseConfigured } from "@/app/lib/firebase";
 
-interface FirebaseAuthResponse {
-  localId?: string;
-  email?: string;
-  displayName?: string;
-  idToken?: string;
-  refreshToken?: string;
-  expiresIn?: string;
-}
+/**
+ * Firebase Authentication (modular JS SDK) with three providers:
+ * - Email/password: JS SDK on every platform.
+ * - Google: popup in the browser; native Credential Manager in the Android app (@capacitor-firebase/authentication,
+ *   skipNativeAuth) whose ID token is exchanged for a Firebase session in the JS SDK.
+ * - Phone: invisible reCAPTCHA + SMS in the browser; native SMS verification (Play Integrity) in the Android app.
+ * The JS SDK is the single source of truth for the session, so Firestore and token refresh work the same everywhere.
+ */
 
-interface FirebaseRefreshResponse {
-  user_id?: string;
-  id_token?: string;
-  refresh_token?: string;
-  expires_in?: string;
-}
-
-interface GoogleCredentialResponse {
-  credential?: string;
-}
-
-interface GooglePromptNotification {
-  isNotDisplayed?: () => boolean;
-  getNotDisplayedReason?: () => string;
-  isSkippedMoment?: () => boolean;
-  getSkippedReason?: () => string;
-}
-
-interface GoogleButtonConfiguration {
-  type?: "standard" | "icon";
-  theme?: "outline" | "filled_blue" | "filled_black";
-  size?: "large" | "medium" | "small";
-  text?: "signin_with" | "signup_with" | "continue_with";
-  shape?: "rectangular" | "pill";
-  width?: number;
-  locale?: string;
-}
-
-interface GoogleIdentityApi {
-  accounts: {
-    id: {
-      initialize: (configuration: {
-        client_id: string;
-        callback: (response: GoogleCredentialResponse) => void;
-        cancel_on_tap_outside?: boolean;
-      }) => void;
-      prompt: (listener?: (notification: GooglePromptNotification) => void) => void;
-      renderButton: (element: HTMLElement, configuration: GoogleButtonConfiguration) => void;
-      cancel: () => void;
-    };
-  };
-}
-
-declare global {
-  interface Window {
-    google?: GoogleIdentityApi;
-  }
-}
-
-/** Distinguishes temporary network problems from real authentication failures. */
 export class AuthRequestError extends Error {
-  constructor(message: string, readonly kind: "network" | "auth" | "config", readonly code = "") {
+  constructor(message: string, readonly kind: "network" | "auth" | "config" | "cancelled", readonly code = "") {
     super(message);
     this.name = "AuthRequestError";
   }
 }
 
-/** Thrown when Google One Tap cannot be shown; `useButtonFallback` signals that the rendered Google button may still work. */
-export class GooglePromptError extends Error {
-  constructor(message: string, readonly reason: string, readonly useButtonFallback: boolean) {
-    super(message);
-    this.name = "GooglePromptError";
-  }
-}
-
 export const isNetworkAuthError = (error: unknown) => error instanceof AuthRequestError && error.kind === "network";
 
-let googleScriptPromise: Promise<void> | null = null;
-let initializedGoogleClientId = "";
-let googleCredentialListener: ((response: GoogleCredentialResponse) => void) | null = null;
-let pendingGoogleReject: ((error: Error) => void) | null = null;
+export const isGoogleConfigured = () => isFirebaseConfigured();
+export const isPhoneConfigured = () => isFirebaseConfigured();
 
-export const getFirebaseProjectId = () => firebaseConfig.projectId;
-export const isFirebaseConfigured = () => Boolean(firebaseConfig.apiKey && firebaseConfig.projectId);
-export const isGoogleConfigured = () => Boolean(isFirebaseConfigured() && firebaseConfig.googleClientId);
+const AUTH_ERROR_MESSAGES: Record<string, string> = {
+  "auth/email-already-in-use": "Diese E-Mail-Adresse wird bereits verwendet.",
+  "auth/invalid-email": "Die E-Mail-Adresse ist ungültig.",
+  "auth/invalid-credential": "E-Mail oder Passwort ist nicht korrekt.",
+  "auth/wrong-password": "E-Mail oder Passwort ist nicht korrekt.",
+  "auth/user-not-found": "Kein Konto mit dieser E-Mail-Adresse gefunden.",
+  "auth/weak-password": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+  "auth/user-disabled": "Dieses Konto wurde deaktiviert.",
+  "auth/too-many-requests": "Zu viele Versuche. Bitte versuche es später erneut.",
+  "auth/operation-not-allowed": "Diese Anmeldemethode ist in Firebase nicht aktiviert.",
+  "auth/unauthorized-domain": "Diese Domain ist in Firebase nicht für die Anmeldung freigegeben (Authentication → Settings → Authorized domains).",
+  "auth/popup-blocked": "Das Google-Fenster wurde vom Browser blockiert. Bitte Pop-ups erlauben.",
+  "auth/popup-closed-by-user": "Google-Anmeldung abgebrochen.",
+  "auth/cancelled-popup-request": "Google-Anmeldung abgebrochen.",
+  "auth/account-exists-with-different-credential": "Für diese E-Mail existiert bereits ein Konto mit einer anderen Anmeldemethode.",
+  "auth/invalid-phone-number": "Die Telefonnummer ist ungültig. Bitte im Format +49 151 2345678 eingeben.",
+  "auth/missing-phone-number": "Bitte gib deine Telefonnummer ein.",
+  "auth/invalid-verification-code": "Der SMS-Code ist nicht korrekt.",
+  "auth/code-expired": "Der SMS-Code ist abgelaufen. Bitte fordere einen neuen an.",
+  "auth/quota-exceeded": "Das SMS-Kontingent ist erschöpft. Bitte später erneut versuchen.",
+  "auth/captcha-check-failed": "Die reCAPTCHA-Prüfung ist fehlgeschlagen. Bitte erneut versuchen.",
+  "auth/invalid-app-credential": "Die App konnte nicht verifiziert werden (reCAPTCHA / Play Integrity). Bitte erneut versuchen.",
+  "auth/user-token-expired": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
+};
 
-const createAuthUser = (result: FirebaseAuthResponse, fallbackEmail = ""): AuthUser => {
-  if (!result.localId || !result.idToken || !result.refreshToken) throw new Error("Firebase hat keine vollständige Sitzung zurückgegeben.");
-  const expiresInMs = Math.max(0, Number(result.expiresIn ?? 3600) * 1000);
+export const toAuthError = (error: unknown): AuthRequestError => {
+  if (error instanceof AuthRequestError) return error;
+  if (error instanceof FirebaseError) {
+    if (error.code === "auth/network-request-failed") {
+      return new AuthRequestError("Keine Verbindung zum Anmeldedienst. Bitte prüfe deine Internetverbindung.", "network", error.code);
+    }
+    const cancelled = error.code === "auth/popup-closed-by-user" || error.code === "auth/cancelled-popup-request";
+    return new AuthRequestError(AUTH_ERROR_MESSAGES[error.code] ?? `Anmeldung fehlgeschlagen (${error.code}).`, cancelled ? "cancelled" : "auth", error.code);
+  }
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  if (/cancel/i.test(message)) return new AuthRequestError("Anmeldung abgebrochen.", "cancelled");
+  if (/developer console|28444|\b10\b/i.test(message)) {
+    return new AuthRequestError("Google-Login ist für diese App-Signatur nicht freigegeben. Der SHA-1-Fingerabdruck muss in Firebase hinterlegt sein.", "config");
+  }
+  if (/no credentials|no.*account/i.test(message)) return new AuthRequestError("Auf diesem Gerät ist kein Google-Konto angemeldet.", "auth");
+  return new AuthRequestError(message || "Die Anmeldung ist fehlgeschlagen.", "auth");
+};
+
+const requireConfig = () => {
+  if (!isFirebaseConfigured()) throw new AuthRequestError("Login ist nicht konfiguriert (Firebase-Umgebungsvariablen fehlen).", "config");
+  return getFirebaseAuth();
+};
+
+export const toAuthUser = async (user: User): Promise<AuthUser> => {
+  const token = await user.getIdTokenResult();
   return {
-    localId: result.localId,
-    email: result.email ?? fallbackEmail,
-    displayName: result.displayName || result.email || fallbackEmail,
-    idToken: result.idToken,
-    refreshToken: result.refreshToken,
-    expiresAt: Date.now() + expiresInMs,
+    localId: user.uid,
+    email: user.email ?? "",
+    displayName: user.displayName || user.email || user.phoneNumber || undefined,
+    phoneNumber: user.phoneNumber ?? undefined,
+    idToken: token.token,
+    expiresAt: Date.parse(token.expirationTime) || Date.now() + 3_600_000,
   };
-};
-
-const FIREBASE_ERROR_MESSAGES: Record<string, string> = {
-  EMAIL_EXISTS: "Diese E-Mail-Adresse wird bereits verwendet.",
-  EMAIL_NOT_FOUND: "Kein Konto mit dieser E-Mail-Adresse gefunden.",
-  INVALID_EMAIL: "Die E-Mail-Adresse ist ungültig.",
-  INVALID_PASSWORD: "Das Passwort ist nicht korrekt.",
-  INVALID_LOGIN_CREDENTIALS: "E-Mail oder Passwort ist nicht korrekt.",
-  WEAK_PASSWORD: "Das Passwort muss mindestens 6 Zeichen lang sein.",
-  USER_DISABLED: "Dieses Konto wurde deaktiviert.",
-  USER_NOT_FOUND: "Das Konto existiert nicht mehr. Bitte melde dich erneut an.",
-  TOO_MANY_ATTEMPTS_TRY_LATER: "Zu viele Versuche. Bitte versuche es später erneut.",
-  OPERATION_NOT_ALLOWED: "Diese Anmeldemethode ist in Firebase nicht aktiviert.",
-  INVALID_IDP_RESPONSE: "Die Google-Anmeldung wurde abgelehnt. Prüfe die freigegebene Domain in Firebase.",
-  ORIGIN_MISMATCH: "Diese Domain ist nicht für den Google-Login freigegeben (origin_mismatch).",
-  TOKEN_EXPIRED: "Die Sitzung ist abgelaufen. Bitte melde dich erneut an.",
-  INVALID_REFRESH_TOKEN: "Die Sitzung ist abgelaufen. Bitte melde dich erneut an.",
-};
-
-const getFirebaseErrorCode = (data: unknown) => {
-  const raw = typeof data === "object" && data !== null && "error" in data
-    ? (data as { error?: { message?: string } | string }).error
-    : undefined;
-  const message = typeof raw === "string" ? raw : raw?.message ?? "AUTH_FAILED";
-  // Firebase sometimes appends details: "WEAK_PASSWORD : Password should be at least 6 characters".
-  return String(message).split(" ")[0].toUpperCase();
-};
-
-const getFirebaseError = (data: unknown) => {
-  const code = getFirebaseErrorCode(data);
-  return new AuthRequestError(FIREBASE_ERROR_MESSAGES[code] ?? `Anmeldung fehlgeschlagen (${code}).`, "auth", code);
-};
-
-const fetchAuthEndpoint = async (url: string, init: RequestInit) => {
-  let response: Response;
-  try {
-    response = await fetch(url, init);
-  } catch {
-    throw new AuthRequestError("Keine Verbindung zum Anmeldedienst. Bitte prüfe deine Internetverbindung.", "network");
-  }
-  let data: unknown = null;
-  try {
-    data = await response.json();
-  } catch {
-    // Non-JSON error bodies are handled through the status code below.
-  }
-  if (!response.ok) {
-    if (response.status >= 500) throw new AuthRequestError("Der Anmeldedienst ist vorübergehend nicht erreichbar.", "network");
-    throw getFirebaseError(data);
-  }
-  return data;
-};
-
-const firebaseAuthRequest = async (endpoint: string, payload: Record<string, unknown>) => {
-  if (!firebaseConfig.apiKey) throw new AuthRequestError("Firebase ist nicht konfiguriert. NEXT_PUBLIC_FIREBASE_API_KEY fehlt.", "config");
-  return (await fetchAuthEndpoint(`https://identitytoolkit.googleapis.com/v1/${endpoint}?key=${firebaseConfig.apiKey}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  })) as FirebaseAuthResponse;
 };
 
 export const authWithEmailAndPassword = async (email: string, password: string, isSignup: boolean) => {
-  const endpoint = isSignup ? "accounts:signUp" : "accounts:signInWithPassword";
-  const result = await firebaseAuthRequest(endpoint, { email, password, returnSecureToken: true });
-  return createAuthUser(result, email);
-};
-
-export const authWithGoogleCredential = async (credential: string) => {
-  const result = await firebaseAuthRequest("accounts:signInWithIdp", {
-    postBody: `id_token=${encodeURIComponent(credential)}&providerId=google.com`,
-    requestUri: window.location.origin,
-    returnSecureToken: true,
-    returnIdpCredential: true,
-  });
-  return createAuthUser(result);
-};
-
-export const refreshAuthToken = async (user: AuthUser): Promise<AuthUser> => {
-  if (!firebaseConfig.apiKey) throw new AuthRequestError("Firebase ist nicht konfiguriert. NEXT_PUBLIC_FIREBASE_API_KEY fehlt.", "config");
-  if (!user.refreshToken) throw new AuthRequestError("Die Sitzung ist abgelaufen. Bitte melde dich erneut an.", "auth", "MISSING_REFRESH_TOKEN");
-  const data = (await fetchAuthEndpoint(`https://securetoken.googleapis.com/v1/token?key=${firebaseConfig.apiKey}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: user.refreshToken }),
-  })) as FirebaseRefreshResponse;
-  if (!data.id_token || !data.refresh_token) throw getFirebaseError(data);
-  return {
-    ...user,
-    localId: data.user_id ?? user.localId,
-    idToken: data.id_token,
-    refreshToken: data.refresh_token,
-    expiresAt: Date.now() + Math.max(0, Number(data.expires_in ?? 3600) * 1000),
-  };
-};
-
-/** Refreshes the Firebase ID token five minutes before expiry (ID tokens are valid for one hour). */
-export const ensureFreshAuthToken = async (user: AuthUser, force = false) => {
-  const refreshThreshold = 5 * 60 * 1000;
-  return !force && user.expiresAt > Date.now() + refreshThreshold ? user : refreshAuthToken(user);
-};
-
-const loadGoogleScript = () => {
-  if (window.google?.accounts.id) return Promise.resolve();
-  if (googleScriptPromise) return googleScriptPromise;
-  googleScriptPromise = new Promise<void>((resolve, reject) => {
-    const existing = document.getElementById("google-identity-script") as HTMLScriptElement | null;
-    const script = existing ?? document.createElement("script");
-    script.id = "google-identity-script";
-    script.src = "https://accounts.google.com/gsi/client";
-    script.async = true;
-    script.defer = true;
-    script.addEventListener("load", () => resolve(), { once: true });
-    script.addEventListener("error", () => {
-      googleScriptPromise = null;
-      script.remove();
-      reject(new Error("Google Identity Services konnte nicht geladen werden. Bist du online?"));
-    }, { once: true });
-    if (!existing) document.body.appendChild(script);
-  });
-  return googleScriptPromise;
-};
-
-/** Loads GIS and initializes it exactly once per client ID. All credentials are routed through one listener. */
-const ensureGoogleInitialized = async () => {
-  if (!firebaseConfig.googleClientId) {
-    throw new AuthRequestError("Google-Login ist nicht konfiguriert: NEXT_PUBLIC_GOOGLE_CLIENT_ID fehlt.", "config");
+  const auth = requireConfig();
+  try {
+    const credential = isSignup
+      ? await createUserWithEmailAndPassword(auth, email.trim(), password)
+      : await signInWithEmailAndPassword(auth, email.trim(), password);
+    return credential.user;
+  } catch (error) {
+    throw toAuthError(error);
   }
-  if (!isFirebaseConfigured()) {
-    throw new AuthRequestError("Google-Login benötigt zusätzlich die Firebase-Konfiguration (API-Key und Projekt-ID).", "config");
+};
+
+export const authWithGoogle = async () => {
+  const auth = requireConfig();
+  try {
+    if (isNativePlatform()) {
+      const { FirebaseAuthentication } = await import("@capacitor-firebase/authentication");
+      const result = await FirebaseAuthentication.signInWithGoogle({ skipNativeAuth: true });
+      const idToken = result.credential?.idToken;
+      if (!idToken) throw new AuthRequestError("Google hat kein Anmeldetoken zurückgegeben.", "auth");
+      return (await signInWithCredential(auth, GoogleAuthProvider.credential(idToken))).user;
+    }
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    return (await signInWithPopup(auth, provider)).user;
+  } catch (error) {
+    throw toAuthError(error);
   }
-  await loadGoogleScript();
-  const google = window.google;
-  if (!google?.accounts.id) throw new Error("Google Identity Services ist noch nicht bereit.");
-  if (initializedGoogleClientId !== firebaseConfig.googleClientId) {
-    google.accounts.id.initialize({
-      client_id: firebaseConfig.googleClientId,
-      callback: (response) => googleCredentialListener?.(response),
-      cancel_on_tap_outside: true,
-    });
-    initializedGoogleClientId = firebaseConfig.googleClientId;
-  }
-  return google;
 };
 
-const GOOGLE_NOT_DISPLAYED_MESSAGES: Record<string, string> = {
-  unregistered_origin: "Diese Domain ist nicht als JavaScript-Origin für die Google Client ID freigegeben (origin_mismatch). Trage sie in der Google Cloud Console ein.",
-  invalid_client: "Die Google Client ID ist ungültig. Prüfe NEXT_PUBLIC_GOOGLE_CLIENT_ID.",
-  missing_client_id: "Google-Login ist nicht konfiguriert: NEXT_PUBLIC_GOOGLE_CLIENT_ID fehlt.",
-  secure_http_required: "Google-Login benötigt HTTPS (oder localhost).",
-  browser_not_supported: "Dieser Browser unterstützt Google One Tap nicht.",
+/** Normalizes German-style input ("0151 234…", "0049…") to E.164 ("+49151234…"). */
+export const normalizePhoneNumber = (input: string, defaultCountryCode = "+49") => {
+  const compact = input.replace(/[\s()/.-]/g, "");
+  if (compact.startsWith("+")) return compact;
+  if (compact.startsWith("00")) return `+${compact.slice(2)}`;
+  if (compact.startsWith("0")) return `${defaultCountryCode}${compact.slice(1)}`;
+  return compact ? `${defaultCountryCode}${compact}` : "";
 };
 
-const settlePendingGoogleRequest = () => {
-  googleCredentialListener = null;
-  pendingGoogleReject = null;
+export interface PhoneVerification {
+  /** Confirms the SMS code and signs the user in. */
+  confirm: (code: string) => Promise<User>;
+  /** Code read automatically from the SMS (Android only), if available. */
+  autoRetrievedCode?: string;
+}
+
+let recaptchaVerifier: RecaptchaVerifier | null = null;
+
+const resetRecaptcha = () => {
+  recaptchaVerifier?.clear();
+  recaptchaVerifier = null;
 };
 
-export const requestGoogleCredential = async () => {
-  const google = await ensureGoogleInitialized();
-  pendingGoogleReject?.(new Error("Die vorherige Google-Anmeldung wurde ersetzt."));
-
-  return new Promise<string>((resolve, reject) => {
-    pendingGoogleReject = (error) => {
-      settlePendingGoogleRequest();
-      reject(error);
+const startNativePhoneSignIn = async (phoneNumber: string): Promise<PhoneVerification> => {
+  const auth = requireConfig();
+  const { FirebaseAuthentication } = await import("@capacitor-firebase/authentication");
+  await FirebaseAuthentication.removeAllListeners();
+  return new Promise<PhoneVerification>((resolve, reject) => {
+    let verificationId = "";
+    const verification: PhoneVerification = {
+      confirm: async (code) => {
+        if (!verificationId) throw new AuthRequestError("Bitte fordere zuerst einen SMS-Code an.", "auth");
+        try {
+          return (await signInWithCredential(auth, PhoneAuthProvider.credential(verificationId, code.trim()))).user;
+        } catch (error) {
+          throw toAuthError(error);
+        }
+      },
     };
-    googleCredentialListener = (response) => {
-      settlePendingGoogleRequest();
-      if (response.credential) resolve(response.credential);
-      else reject(new Error("Google hat kein Anmeldetoken zurückgegeben."));
-    };
-
-    google.accounts.id.prompt((notification) => {
-      // With FedCM some of these methods are no longer provided, so every call is optional.
-      if (notification.isNotDisplayed?.()) {
-        const reason = notification.getNotDisplayedReason?.() ?? "unknown";
-        const message = GOOGLE_NOT_DISPLAYED_MESSAGES[reason];
-        pendingGoogleReject?.(new GooglePromptError(
-          message ?? "Google One Tap ist gerade nicht verfügbar. Nutze den Google-Button unten.",
-          reason,
-          !message,
-        ));
-      } else if (notification.isSkippedMoment?.()) {
-        const reason = notification.getSkippedReason?.() ?? "unknown";
-        pendingGoogleReject?.(new GooglePromptError("Google-Anmeldung wurde abgebrochen. Du kannst den Google-Button unten verwenden.", reason, true));
-      }
+    void FirebaseAuthentication.addListener("phoneCodeSent", (event) => {
+      verificationId = event.verificationId;
+      resolve(verification);
     });
+    void FirebaseAuthentication.addListener("phoneVerificationCompleted", (event) => {
+      if (event.verificationCode) verification.autoRetrievedCode = event.verificationCode;
+    });
+    void FirebaseAuthentication.addListener("phoneVerificationFailed", (event) => {
+      reject(toAuthError(new Error(event.message)));
+    });
+    FirebaseAuthentication.signInWithPhoneNumber({ phoneNumber, skipNativeAuth: true }).catch((error: unknown) => reject(toAuthError(error)));
   });
 };
 
-export const cancelGoogleCredentialRequest = () => {
-  window.google?.accounts.id.cancel();
-  pendingGoogleReject?.(new Error("Google-Anmeldung abgebrochen."));
+/**
+ * Starts phone sign-in and sends the SMS. In the browser an invisible reCAPTCHA is rendered into `recaptchaContainer`
+ * (required by Firebase to prevent SMS abuse).
+ */
+export const startPhoneSignIn = async (rawPhoneNumber: string, recaptchaContainer: HTMLElement | null): Promise<PhoneVerification> => {
+  const phoneNumber = normalizePhoneNumber(rawPhoneNumber);
+  if (!/^\+[1-9]\d{6,14}$/.test(phoneNumber)) {
+    throw new AuthRequestError(AUTH_ERROR_MESSAGES["auth/invalid-phone-number"], "auth", "auth/invalid-phone-number");
+  }
+  if (isNativePlatform()) return startNativePhoneSignIn(phoneNumber);
+
+  const auth = requireConfig();
+  if (!recaptchaContainer) throw new AuthRequestError("reCAPTCHA konnte nicht geladen werden.", "config");
+  try {
+    resetRecaptcha();
+    recaptchaVerifier = new RecaptchaVerifier(auth, recaptchaContainer, { size: "invisible" });
+    const confirmation = await signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier);
+    return {
+      confirm: async (code) => {
+        try {
+          return (await confirmation.confirm(code.trim())).user;
+        } catch (error) {
+          throw toAuthError(error);
+        } finally {
+          resetRecaptcha();
+        }
+      },
+    };
+  } catch (error) {
+    resetRecaptcha();
+    throw toAuthError(error);
+  }
 };
 
-/** Renders the official Google button as a robust fallback when One Tap is suppressed. */
-export const renderGoogleButton = async (element: HTMLElement, onCredential: (credential: string) => void) => {
-  const google = await ensureGoogleInitialized();
-  googleCredentialListener = (response) => {
-    if (response.credential) onCredential(response.credential);
-  };
-  google.accounts.id.renderButton(element, { theme: "outline", size: "large", text: "continue_with", shape: "pill", locale: "de", width: Math.min(element.clientWidth || 320, 400) });
+export const signOutEverywhere = async () => {
+  if (!isFirebaseConfigured()) return;
+  await signOut(getFirebaseAuth());
+  if (isNativePlatform()) {
+    try {
+      const { FirebaseAuthentication } = await import("@capacitor-firebase/authentication");
+      await FirebaseAuthentication.signOut();
+    } catch {
+      // The native layer has no session when skipNativeAuth is used; nothing to clean up.
+    }
+  }
 };

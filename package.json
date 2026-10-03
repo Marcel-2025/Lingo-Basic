@@ -16,9 +16,11 @@
     "android:open": "cap open android"
   },
   "dependencies": {
+    "@capacitor-firebase/authentication": "^8.5.2",
     "@capacitor/android": "^8.2.0",
     "@capacitor/cli": "^8.2.0",
     "@capacitor/core": "^8.2.0",
+    "firebase": "^12.19.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
