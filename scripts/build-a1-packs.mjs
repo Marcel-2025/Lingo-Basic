@@ -29,6 +29,8 @@ const sentenceTranslations = {
   IT: ["Studio 30 minuti ogni giorno.", "Imparare una lingua richiede pazienza."],
 };
 
+const isPlaceholderExample = (value) => typeof value === "string" && /ist wichtig im Thema/i.test(value);
+
 const slugify = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
 
 // The original JSON files were saved through a Latin-1 round-trip. This repairs those strings once while retaining every source word.
@@ -65,8 +67,9 @@ const createPack = (source, lang, masterWordIds, translations = null) => {
           id,
           de: word.de,
           x,
-          ...(word.ex ? { ex: word.ex } : {}),
-          ...(!translations && word.exTr ? { exTr: word.exTr } : {}),
+          // Template sentences ("X ist wichtig im Thema …") carry no learning value and are not exported.
+          ...(word.ex && !isPlaceholderExample(word.ex) ? { ex: word.ex } : {}),
+          ...(!translations && word.exTr && !isPlaceholderExample(word.ex) ? { exTr: word.exTr } : {}),
           difficulty: difficultyMap[word.difficulty] ?? difficultyMap[topic.difficulty] ?? 1,
           tags: [slugify(topic.title)],
         };

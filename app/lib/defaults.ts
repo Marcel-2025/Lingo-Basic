@@ -1,7 +1,7 @@
 import { DEFAULT_LANGUAGE, DEFAULT_LEVEL } from "@/app/lib/languages";
 import type { AppSettings, LearningInsights, UserStats } from "@/app/lib/types";
 
-export const PROGRESS_SCHEMA_VERSION = 2;
+export const PROGRESS_SCHEMA_VERSION = 3;
 
 export const DEFAULT_STATS: UserStats = {
   xp: 0,
@@ -21,6 +21,8 @@ export const getDefaultSettings = (): AppSettings => ({
   dailyGoal: 20,
   theme: "Ocean",
   isDarkMode: false,
+  soundEnabled: true,
+  vibrationEnabled: true,
   timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",
 });
 

@@ -17,7 +17,7 @@ export function NavButton({ icon, label, isActive, onClick, gradient }: NavButto
       type="button"
       onClick={onClick}
       className={`flex h-16 w-16 flex-col items-center justify-center rounded-2xl transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 ${
-        isActive ? `-translate-y-2 bg-gradient-to-r ${gradient} text-white shadow-lg` : "text-gray-500 hover:bg-gray-100"
+        isActive ? `-translate-y-2 bg-gradient-to-r ${gradient} text-white shadow-lg` : "text-gray-500 hover:bg-gray-500/10"
       }`}
       aria-current={isActive ? "page" : undefined}
     >
@@ -32,19 +32,20 @@ interface StatBoxProps {
   value: ReactNode;
   icon: string;
   onClick?: () => void;
+  ariaExpanded?: boolean;
 }
 
-export function StatBox({ title, value, icon, onClick }: StatBoxProps) {
+export function StatBox({ title, value, icon, onClick, ariaExpanded }: StatBoxProps) {
   const content = (
     <>
       <div className="mb-2 text-3xl" aria-hidden="true">{icon}</div>
       <div className="text-2xl font-black">{value}</div>
-      <div className="mt-1 text-xs font-bold uppercase opacity-50">{title}</div>
+      <div className="mt-1 text-xs font-bold uppercase text-gray-500">{title}</div>
     </>
   );
   const className = "flex flex-col items-center justify-center rounded-3xl bg-white p-4 text-center text-gray-900 shadow-sm";
   return onClick ? (
-    <button type="button" onClick={onClick} className={`${className} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>
+    <button type="button" onClick={onClick} aria-expanded={ariaExpanded} className={`${className} transition hover:shadow-md active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}>
       {content}
     </button>
   ) : <div className={className}>{content}</div>;
@@ -63,8 +64,8 @@ export function Achievement({ name, done, subtitle }: AchievementProps) {
         {done ? "🏆" : "🔒"}
       </div>
       <div>
-        <div className="font-bold">{name}</div>
-        {subtitle && <div className="text-xs opacity-70">{subtitle}</div>}
+        <div className="font-bold">{name}{done && <span className="sr-only"> (erreicht)</span>}</div>
+        {subtitle && <div className="text-xs text-gray-600">{subtitle}</div>}
       </div>
     </li>
   );

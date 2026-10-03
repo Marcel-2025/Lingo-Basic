@@ -78,7 +78,9 @@ const normalizeVocab = (
   }
 
   const suppliedId = asTrimmedString(raw.id);
-  const fallbackId = `${topic.id}_${slugify(x)}`;
+  // German is the shared source language, so a de-based slug yields the same fallback ID in every target language
+  // (also for non-Latin scripts such as Russian, where an x-based slug would be empty).
+  const fallbackId = `${topic.id}_${slugify(de)}`;
   const id = getUniqueId(suppliedId || fallbackId, usedIds);
   if (!suppliedId) warnings.push(`${topic.id}.vocab[${index}] erhielt die generierte ID ${id}.`);
   if (suppliedId && id !== suppliedId) warnings.push(`Doppelte Word-ID ${suppliedId} wurde zu ${id} normalisiert.`);

@@ -11,14 +11,16 @@ interface TodayTabProps {
   isPremiumUser: boolean;
   dailyLimit: number;
   completedToday: number;
+  vibrationEnabled: boolean;
   speak: (text: string, language: "DE" | LanguagePack["lang"]) => void;
   onAnswer: (word: VocabItem, topic: TopicItem, known: boolean) => void;
   onUpgrade: () => void;
 }
 
-export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedToday, speak, onAnswer, onUpgrade }: TodayTabProps) {
+export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedToday, vibrationEnabled, speak, onAnswer, onUpgrade }: TodayTabProps) {
   const [selectedTopicId, setSelectedTopicId] = useState("all");
   const [queue, setQueue] = useState<VocabItem[]>(() => shuffle(getVocabFromPack(pack)));
+  const [round, setRound] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -32,6 +34,7 @@ export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedT
     const vocab = topicId === "all" ? getVocabFromPack(pack) : pack.topics.find((topic) => topic.id === topicId)?.vocab ?? [];
     setSelectedTopicId(topicId);
     setQueue(shuffle(vocab));
+    setRound(1);
     setCurrentIndex(0);
     setIsFlipped(false);
   };
@@ -40,10 +43,11 @@ export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedT
     if (!card) return;
     const topic = pack.topics.find((entry) => entry.vocab.some((word) => word.id === card.id)) ?? activeTopic;
     onAnswer(card, topic, known);
-    if ("vibrate" in navigator) navigator.vibrate(known ? [50, 50] : [100]);
+    if (vibrationEnabled && "vibrate" in navigator) navigator.vibrate(known ? [50, 50] : [100]);
     const nextIndex = currentIndex + 1;
     if (nextIndex >= queue.length) {
       setQueue(shuffle(activeTopic.vocab));
+      setRound((value) => value + 1);
       setCurrentIndex(0);
       setIsFlipped(false);
       return;
@@ -103,7 +107,7 @@ export function TodayTab({ pack, gradient, isPremiumUser, dailyLimit, completedT
       </div>
 
       <div className="mb-6 w-full">
-        <div className="mb-2 flex justify-between text-sm font-semibold opacity-70"><span>Fortschritt</span><span>{Math.min(currentIndex + 1, queue.length)} / {queue.length}</span></div>
+        <div className="mb-2 flex justify-between text-sm font-semibold opacity-70"><span>Fortschritt{round > 1 ? ` · Runde ${round}` : ""}{!isPremiumUser ? ` · heute ${completedToday}/${dailyLimit}` : ""}</span><span>{Math.min(currentIndex + 1, queue.length)} / {queue.length}</span></div>
         <div className="h-2.5 rounded-full bg-gray-200"><div className={`h-2.5 rounded-full bg-gradient-to-r ${gradient}`} style={{ width: `${((currentIndex + 1) / queue.length) * 100}%` }} /></div>
       </div>
 

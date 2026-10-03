@@ -1,9 +1,21 @@
 rules_version = '2';
 
+// Lingo Pro: each user may only read and write their own progress document.
+// Deploy with: firebase deploy --only firestore:rules
 service cloud.firestore {
   match /databases/{database}/documents {
     match /userProgress/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, delete: if request.auth != null && request.auth.uid == userId;
+
+      allow create, update: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(['schemaVersion', 'statsJson', 'settingsJson', 'learningInsightsJson', 'updatedAt'])
+        && request.resource.data.schemaVersion is int
+        && request.resource.data.updatedAt is int
+        && request.resource.data.statsJson is string
+        && request.resource.data.settingsJson is string
+        && request.resource.data.learningInsightsJson is string
+        && request.resource.data.learningInsightsJson.size() < 900000;
     }
 
     // Entitlements are written only by a verified Stripe/Google Play/RevenueCat webhook
@@ -11,6 +23,11 @@ service cloud.firestore {
     match /userEntitlements/{userId} {
       allow get: if request.auth != null && request.auth.uid == userId;
       allow list, create, update, delete: if false;
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }

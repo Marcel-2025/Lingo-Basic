@@ -1,25 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { getVocabFromPack } from "@/app/lib/pack-normalization";
-import { shuffle } from "@/app/lib/utils";
+import { useEffect, useRef, useState } from "react";
+import { ANSWER_LOCK_MS, createQuestion, type Question } from "@/app/lib/exercises";
 import type { LanguagePack, VocabItem } from "@/app/lib/types";
-
-interface Question {
-  word: VocabItem;
-  options: string[];
-}
-
-const createQuestion = (pack: LanguagePack): Question | null => {
-  const vocab = getVocabFromPack(pack);
-  if (vocab.length < 4) return null;
-  const word = shuffle(vocab)[0];
-  const distractors = shuffle(vocab.filter((entry) => entry.id !== word.id && entry.x !== word.x)).slice(0, 3).map((entry) => entry.x);
-  return distractors.length === 3 ? { word, options: shuffle([word.x, ...distractors]) } : null;
-};
 
 interface ExercisesTabProps {
   pack: LanguagePack;
+  soundEnabled: boolean;
+  vibrationEnabled: boolean;
   onAnswer: (word: VocabItem, correct: boolean) => void;
   isPremiumUser: boolean;
   dailyLimit: number;
@@ -28,15 +16,25 @@ interface ExercisesTabProps {
   onUpgrade: () => void;
 }
 
-export function ExercisesTab({ pack, onAnswer, isPremiumUser, dailyLimit, completedToday, gradient, onUpgrade }: ExercisesTabProps) {
+export function ExercisesTab({ pack, soundEnabled, vibrationEnabled, onAnswer, isPremiumUser, dailyLimit, completedToday, gradient, onUpgrade }: ExercisesTabProps) {
   const [question, setQuestion] = useState<Question | null>(() => createQuestion(pack));
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isLocked, setIsLocked] = useState(false);
+  const timeoutRef = useRef<number | null>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
 
+  useEffect(() => () => {
+    if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
+    void audioContextRef.current?.close();
+  }, []);
+
+  // Audio is only created inside a click handler, so browsers allow playback (autoplay policy).
   const playFeedbackTone = (success: boolean) => {
     const AudioContextConstructor = window.AudioContext ?? window.webkitAudioContext;
     if (!AudioContextConstructor) return;
-    const context = new AudioContextConstructor();
+    const context = audioContextRef.current ?? new AudioContextConstructor();
+    audioContextRef.current = context;
+    if (context.state === "suspended") void context.resume();
     const oscillator = context.createOscillator();
     const gain = context.createGain();
     oscillator.type = success ? "sine" : "sawtooth";
@@ -48,7 +46,6 @@ export function ExercisesTab({ pack, onAnswer, isPremiumUser, dailyLimit, comple
     gain.connect(context.destination);
     oscillator.start();
     oscillator.stop(context.currentTime + 0.24);
-    oscillator.onended = () => void context.close();
   };
 
   const handleSelect = (option: string) => {
@@ -57,13 +54,21 @@ export function ExercisesTab({ pack, onAnswer, isPremiumUser, dailyLimit, comple
     setSelectedOption(option);
     setIsLocked(true);
     onAnswer(question.word, correct);
-    if ("vibrate" in navigator) navigator.vibrate(correct ? [30, 30] : [120]);
-    playFeedbackTone(correct);
-    window.setTimeout(() => {
-      setQuestion(createQuestion(pack));
+    if (vibrationEnabled && "vibrate" in navigator) navigator.vibrate(correct ? [30, 30] : [120]);
+    if (soundEnabled) {
+      try {
+        playFeedbackTone(correct);
+      } catch {
+        // Audio feedback is optional.
+      }
+    }
+    const previousWordId = question.word.id;
+    timeoutRef.current = window.setTimeout(() => {
+      setQuestion(createQuestion(pack, previousWordId));
       setSelectedOption(null);
       setIsLocked(false);
-    }, 900);
+      timeoutRef.current = null;
+    }, ANSWER_LOCK_MS);
   };
 
   if (!isPremiumUser && completedToday >= dailyLimit) {
@@ -82,8 +87,8 @@ export function ExercisesTab({ pack, onAnswer, isPremiumUser, dailyLimit, comple
     <div className="mt-6 flex flex-col items-center">
       <h2 className="mb-8 text-xl font-bold uppercase tracking-wider opacity-70">Welches Wort passt?</h2>
       <div className="mb-6 w-full break-words text-center text-4xl font-extrabold">{question.word.de}</div>
-      {isLocked && <p className={`mb-6 text-sm font-bold ${isCorrect ? "text-green-700" : "text-red-700"}`}>{isCorrect ? "Richtig! Stark gemacht ✅" : `Nicht ganz. Richtig ist: ${question.word.x}`}</p>}
-      <div className="grid w-full max-w-md grid-cols-1 gap-4">{question.options.map((option) => <button key={option} type="button" onClick={() => handleSelect(option)} disabled={isLocked} className={`rounded-2xl border-2 p-5 text-lg font-semibold shadow-sm transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 ${optionClasses(option)} ${isLocked ? "cursor-not-allowed" : "active:scale-95"}`}>{option}</button>)}</div>
+      <div className="mb-6 min-h-9" role="status" aria-live="assertive">{isLocked && <p className={`rounded-xl px-3 py-2 text-sm font-bold ${isCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>{isCorrect ? "Richtig! Stark gemacht ✅" : `Nicht ganz. Richtig ist: ${question.word.x}`}</p>}</div>
+      <div className="grid w-full max-w-md grid-cols-1 gap-4">{question.options.map((option) => <button key={option} type="button" onClick={() => handleSelect(option)} disabled={isLocked} aria-label={isLocked && option === question.word.x ? `${option} (richtige Antwort)` : option} className={`rounded-2xl border-2 p-5 text-lg font-semibold shadow-sm transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 ${optionClasses(option)} ${isLocked ? "cursor-not-allowed" : "active:scale-95"}`}>{option}</button>)}</div>
       <p className="mt-5 text-xs opacity-60">Antwort-Farben: Grün = richtig, Rot = falsch</p>
     </div>
   );

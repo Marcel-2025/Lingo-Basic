@@ -1,9 +1,13 @@
 {
-  "name": "Lingo – Sprachen lernen",
-  "short_name": "Lingo",
+  "id": "/",
+  "name": "Lingo Pro – Sprachen lernen",
+  "short_name": "Lingo Pro",
   "description": "Offline-fähige Sprachlern-App für Vokabeln, Übungen und Lernfortschritt.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["education"],
   "background_color": "#f9fafb",
   "theme_color": "#0ea5e9",
   "lang": "de",
@@ -12,13 +16,13 @@
       "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }

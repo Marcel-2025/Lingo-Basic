@@ -1,29 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { normalizeInsights, normalizeSettings, normalizeStats } from "@/app/lib/cloud-sync";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { normalizeInsights, normalizeSettings, normalizeStats } from "@/app/lib/progress";
 import { DEFAULT_INSIGHTS, DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { getDateKey, reconcileStreak } from "@/app/lib/utils";
 import { readStoredJson, readStoredNumber, STORAGE_KEYS, writeStoredJson, writeStoredNumber } from "@/app/lib/storage";
 import type { AppSettings, CloudProgressSnapshot, LearningInsights, UserStats } from "@/app/lib/types";
-
-const migrateInsights = (value: unknown): LearningInsights => {
-  const normalized = normalizeInsights(value as Partial<LearningInsights> | undefined);
-  const learnedWordsByTopic = Object.fromEntries(
-    Object.entries(normalized.learnedWordsByTopic).map(([topicId, entries]) => [
-      topicId,
-      Array.isArray(entries)
-        ? entries.map((entry, index) => {
-            if (typeof entry === "string") {
-              return { id: `legacy_${topicId}_${index + 1}`, de: entry, x: "" };
-            }
-            return entry;
-          })
-        : [],
-    ]),
-  );
-  return { ...normalized, learnedWordsByTopic };
-};
 
 export const useProgress = () => {
   const [stats, setStats] = useState<UserStats>(DEFAULT_STATS);
@@ -37,14 +19,12 @@ export const useProgress = () => {
     const hydrate = async () => {
       await Promise.resolve();
       if (!isMounted) return;
-      const storedSettings = normalizeSettings(readStoredJson(STORAGE_KEYS.settings, getDefaultSettings()));
-      const storedStats = reconcileStreak(
-        normalizeStats(readStoredJson(STORAGE_KEYS.stats, DEFAULT_STATS)),
-        storedSettings.timeZone,
-      );
+      // Every stored value is normalized: corrupt or outdated LocalStorage data falls back to defaults instead of crashing.
+      const storedSettings = normalizeSettings(readStoredJson<unknown>(STORAGE_KEYS.settings, null));
+      const storedStats = reconcileStreak(normalizeStats(readStoredJson<unknown>(STORAGE_KEYS.stats, null)), storedSettings.timeZone);
       setSettings(storedSettings);
       setStats(storedStats);
-      setLearningInsights(migrateInsights(readStoredJson(STORAGE_KEYS.insights, DEFAULT_INSIGHTS)));
+      setLearningInsights(normalizeInsights(readStoredJson<unknown>(STORAGE_KEYS.insights, null)));
       setUpdatedAt(readStoredNumber(STORAGE_KEYS.updatedAt));
       setIsLoaded(true);
     };
@@ -80,19 +60,22 @@ export const useProgress = () => {
   }, [markChanged]);
 
   const applyCloudSnapshot = useCallback((snapshot: CloudProgressSnapshot) => {
-    setStats(normalizeStats(snapshot.stats));
-    setSettings(normalizeSettings(snapshot.settings));
-    setLearningInsights(migrateInsights(snapshot.learningInsights));
+    const nextSettings = normalizeSettings(snapshot.settings);
+    setStats(reconcileStreak(normalizeStats(snapshot.stats), nextSettings.timeZone));
+    setSettings(nextSettings);
+    setLearningInsights(normalizeInsights(snapshot.learningInsights));
     setUpdatedAt(snapshot.updatedAt);
   }, []);
 
-  const snapshot: CloudProgressSnapshot = {
+  const snapshot = useMemo<CloudProgressSnapshot>(() => ({
     schemaVersion: PROGRESS_SCHEMA_VERSION,
     stats,
     settings,
     learningInsights,
     updatedAt,
-  };
+  }), [learningInsights, settings, stats, updatedAt]);
+
+  const getTodayKey = useCallback(() => getDateKey(new Date(), settings.timeZone), [settings.timeZone]);
 
   return {
     stats,
@@ -105,6 +88,6 @@ export const useProgress = () => {
     updateSettings,
     updateInsights,
     applyCloudSnapshot,
-    getTodayKey: () => getDateKey(new Date(), settings.timeZone),
+    getTodayKey,
   };
 };
