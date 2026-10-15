@@ -1,13 +1,14 @@
 import type { ConfirmationResult } from "@react-native-firebase/auth";
+import * as AppleAuthentication from "expo-apple-authentication";
 import { router } from "expo-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { GradientButton } from "~/components/ui";
-import { confirmPhoneCode, signInWithEmail, signInWithGoogle, startPhoneSignIn } from "~/lib/firebase";
+import { confirmPhoneCode, isAppleSignInAvailable, signInWithApple, signInWithEmail, signInWithGoogle, startPhoneSignIn } from "~/lib/firebase";
 
 type Method = "email" | "phone";
-type Pending = "email" | "google" | "phone-send" | "phone-confirm" | null;
+type Pending = "email" | "google" | "apple" | "phone-send" | "phone-confirm" | null;
 
 export default function LoginScreen() {
   const insets = useSafeAreaInsets();
@@ -20,7 +21,14 @@ export default function LoginScreen() {
   const [confirmation, setConfirmation] = useState<ConfirmationResult | null>(null);
   const [pending, setPending] = useState<Pending>(null);
   const [message, setMessage] = useState("");
+  const [appleAvailable, setAppleAvailable] = useState(false);
   const isLoading = pending !== null;
+
+  useEffect(() => {
+    let active = true;
+    void isAppleSignInAvailable().then((available) => { if (active) setAppleAvailable(available); }).catch(() => undefined);
+    return () => { active = false; };
+  }, []);
 
   const run = async (kind: Exclude<Pending, null>, action: () => Promise<unknown>, close = true) => {
     setPending(kind);
@@ -43,6 +51,18 @@ export default function LoginScreen() {
       <ScrollView contentContainerClassName="p-6" contentContainerStyle={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24 }} keyboardShouldPersistTaps="handled">
         <Text className="mb-2 text-2xl font-bold text-gray-900">{method === "email" && isSignup ? "Registrieren" : "Einloggen"}</Text>
         <Text className="mb-6 text-sm text-gray-600">Optional: Mit einem Konto wird dein Fortschritt zwischen Geräten synchronisiert. Ohne Login bleibt alles auf diesem Gerät.</Text>
+
+        {appleAvailable ? (
+          <View className={`mb-3 ${isLoading ? "opacity-60" : ""}`} pointerEvents={isLoading ? "none" : "auto"}>
+            <AppleAuthentication.AppleAuthenticationButton
+              buttonType={AppleAuthentication.AppleAuthenticationButtonType.CONTINUE}
+              buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.BLACK}
+              cornerRadius={12}
+              style={{ height: 48, width: "100%" }}
+              onPress={() => void run("apple", signInWithApple)}
+            />
+          </View>
+        ) : null}
 
         <Pressable accessibilityRole="button" disabled={isLoading} onPress={() => void run("google", signInWithGoogle)} className={`mb-4 flex-row items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 shadow-sm ${isLoading ? "opacity-60" : "active:opacity-70"}`}>
           <Text className="text-lg font-black text-blue-600">G</Text>

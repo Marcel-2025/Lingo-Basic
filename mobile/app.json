@@ -16,7 +16,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.flondy.lingua",
-      "googleServicesFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "usesAppleSignIn": true,
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "dev.flondy.lingua",
@@ -55,7 +60,8 @@
         {
           "microphonePermission": false
         }
-      ]
+      ],
+      "expo-apple-authentication"
     ],
     "experiments": {
       "typedRoutes": false,

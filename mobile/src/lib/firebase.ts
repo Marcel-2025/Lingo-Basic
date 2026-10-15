@@ -4,6 +4,7 @@ import {
   getAuth,
   getIdToken,
   GoogleAuthProvider,
+  OAuthProvider,
   onAuthStateChanged,
   signInWithCredential,
   signInWithEmailAndPassword,
@@ -13,6 +14,9 @@ import {
   type User,
 } from "@react-native-firebase/auth";
 import { deleteDoc, doc, getDoc, getFirestore, setDoc } from "@react-native-firebase/firestore";
+import * as AppleAuthentication from "expo-apple-authentication";
+import * as Crypto from "expo-crypto";
+import { Platform } from "react-native";
 import { GoogleSignin, isErrorWithCode, isSuccessResponse, statusCodes } from "@react-native-google-signin/google-signin";
 import { parseProgressDocument, toProgressDocument, USER_PROGRESS_COLLECTION } from "@/app/lib/progress-document";
 import type { CloudProgressSnapshot } from "@/app/lib/types";
@@ -99,6 +103,29 @@ export const signInWithGoogle = async () => {
     if (!idToken) throw new AuthError("Google hat kein Anmeldetoken zurückgegeben.");
     return await signInWithCredential(auth(), GoogleAuthProvider.credential(idToken));
   } catch (error) {
+    throw toAuthError(error);
+  }
+};
+
+/** Sign in with Apple is only offered on iOS (App Store guideline 4.8 requires it next to Google login). */
+export const isAppleSignInAvailable = async () => Platform.OS === "ios" && (await AppleAuthentication.isAvailableAsync());
+
+export const signInWithApple = async () => {
+  try {
+    // Apple receives the SHA-256 hash of the nonce, Firebase the raw value to verify the token.
+    const rawNonce = Crypto.randomUUID();
+    const hashedNonce = await Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, rawNonce);
+    const result = await AppleAuthentication.signInAsync({
+      requestedScopes: [AppleAuthentication.AppleAuthenticationScope.FULL_NAME, AppleAuthentication.AppleAuthenticationScope.EMAIL],
+      nonce: hashedNonce,
+    });
+    if (!result.identityToken) throw new AuthError("Apple hat kein Anmeldetoken zurückgegeben.");
+    const credential = new OAuthProvider("apple.com").credential({ idToken: result.identityToken, rawNonce });
+    return await signInWithCredential(auth(), credential);
+  } catch (error) {
+    if (typeof error === "object" && error && "code" in error && (error as { code: unknown }).code === "ERR_REQUEST_CANCELED") {
+      throw new AuthError("Apple-Anmeldung abgebrochen.", "cancelled");
+    }
     throw toAuthError(error);
   }
 };

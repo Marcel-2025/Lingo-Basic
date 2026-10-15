@@ -11,7 +11,7 @@ mobile/
     (tabs)/uebungen.tsx  Übungen – Multiple Choice
     (tabs)/profil.tsx    Profil – Stats, Kalender, gelernte Wörter, Achievements
     (tabs)/settings.tsx  Settings – Sprache/Level/Theme, Pack-Import, Konto (inkl. Löschen)
-    login.tsx            E-Mail/Passwort, Google, Telefon (SMS)
+    login.tsx            Apple (nur iOS), Google, E-Mail/Passwort, Telefon (SMS)
     privacy.tsx          Datenschutzerklärung
   src/state/             App-Zustand (Fortschritt, Sync) und Sprachpaket
   src/lib/               Firebase (React Native Firebase), Speicher, Feedback, gebündelte Packs
@@ -37,6 +37,31 @@ Expo Go reicht nicht (native Firebase-Module) – es wird immer ein Development 
 
 Neue Sprache oder neues Level: JSON unter `public/packs/{lang}/{level}.json` ablegen, dann im Repo-Root `node scripts/generate-mobile-packs.mjs` ausführen.
 
+## Auf dem Mac weiterarbeiten (iOS)
+
+Einmalig einrichten:
+
+1. **Xcode** aus dem Mac App Store installieren, einmal öffnen (Komponenten installieren lassen) und unter Xcode → Settings → Accounts mit der Apple-ID anmelden.
+2. **Homebrew** (https://brew.sh), dann `brew install node watchman cocoapods`.
+3. Repo klonen: `git clone https://github.com/Marcel-2025/Lingo-Basic.git` und `git checkout live-version`.
+
+App auf Simulator oder iPhone starten:
+
+```bash
+cd Lingo-Basic/mobile
+npm install
+npx expo run:ios                 # Simulator
+npx expo run:ios --device        # angeschlossenes iPhone (einmalig in Xcode Signing-Team wählen)
+```
+
+Der Ordner `ios/` wird von `expo prebuild` erzeugt und ist nicht im Repo – Änderungen an nativen Einstellungen gehören in `app.json`, nicht in Xcode. `npm run prebuild` erzeugt ihn bei Bedarf neu.
+
+Vor dem ersten App-Store-Upload:
+
+- Apple Developer Program (kostenpflichtig, jährlich) und in App Store Connect eine App mit Bundle-ID `dev.flondy.lingua` anlegen.
+- Firebase: Anbieter **Apple** aktivieren. Für Telefon-Login auf iOS zusätzlich einen APNs-Schlüssel (Apple Developer → Keys) in Firebase → Projekteinstellungen → Cloud Messaging hochladen; ohne ihn fällt Firebase auf eine reCAPTCHA-Prüfung zurück.
+- Build + Upload: `npx eas-cli@latest build --platform ios --profile production` und `npx eas-cli@latest submit --platform ios` – oder in Xcode über Product → Archive.
+
 ## Builds für die Stores
 
 Empfohlen ist EAS (Cloud-Builds, auch iOS ohne Mac):
@@ -55,4 +80,4 @@ Lokal (Android): `npx expo prebuild --platform android` und dann `cd android && 
 
 - Kontolöschung in der App (Settings → Konto) und Datenschutzerklärung (Settings, Login) sind vorhanden – Pflicht bei Google Play und Apple.
 - Keine Käufe, keine Werbung, kein Werbe-ID-Zugriff (`AD_ID` ist blockiert). Store-Eintrag darf nichts anderes versprechen.
-- iOS: Wer „Mit Google anmelden“ anbietet, muss laut App Review Guideline 4.8 auch „Mit Apple anmelden“ anbieten. Das ist vor einer App-Store-Einreichung noch einzubauen.
+- iOS: „Mit Apple anmelden“ ist eingebaut (Guideline 4.8, Pflicht neben Google-Login). In Firebase muss dafür unter Authentication → Sign-in method der Anbieter **Apple** aktiviert werden.

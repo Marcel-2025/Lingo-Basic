@@ -29,7 +29,7 @@ export default function PrivacyScreen() {
         Du kannst Lingua vollständig ohne Konto nutzen. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Einstellungen) wird dann nur auf deinem Gerät gespeichert und nicht übertragen.
       </Section>
       <Section title="Mit Konto (optional)">
-        Wenn du dich anmeldest, verarbeiten wir je nach Anmeldemethode deine E-Mail-Adresse, deine Telefonnummer oder deinen Google-Kontonamen sowie eine Nutzer-ID. Dein Lernfortschritt wird dann zusätzlich in der Cloud gespeichert, damit du ihn auf mehreren Geräten nutzen kannst. Dafür nutzen wir Firebase Authentication und Cloud Firestore von Google (Google Ireland Ltd.); die Daten liegen in der EU (Region eur3).
+        Wenn du dich anmeldest, verarbeiten wir je nach Anmeldemethode deine E-Mail-Adresse, deine Telefonnummer, deinen Google-Kontonamen oder die von „Mit Apple anmelden“ übermittelten Angaben (Name, ggf. anonymisierte E-Mail) sowie eine Nutzer-ID. Dein Lernfortschritt wird dann zusätzlich in der Cloud gespeichert, damit du ihn auf mehreren Geräten nutzen kannst. Dafür nutzen wir Firebase Authentication und Cloud Firestore von Google (Google Ireland Ltd.); die Daten liegen in der EU (Region eur3).
       </Section>
       <Section title="Zweck und Rechtsgrundlage">
         Die Daten werden ausschließlich verwendet, um dich anzumelden und deinen Lernfortschritt zu synchronisieren (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO). Es gibt keine Werbung, kein Tracking und keine Weitergabe an Dritte zu Werbezwecken.
