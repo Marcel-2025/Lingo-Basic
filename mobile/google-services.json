@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "788312123831",
+    "project_id": "lingo-basic",
+    "storage_bucket": "lingo-basic.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788312123831:android:073de227681704c118e032",
+        "android_client_info": {
+          "package_name": "dev.flondy.lingua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788312123831-gueboqdmvpefrs96qha8lesuu843nkf7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.flondy.lingua",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "788312123831-sjbea8606vmd5dub0o9lmk9j4aidql5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_gfrWT3iL4I2Y9o4YNI6whCx9tSgDYsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788312123831-sjbea8606vmd5dub0o9lmk9j4aidql5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
