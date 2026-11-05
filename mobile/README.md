@@ -1,4 +1,4 @@
-# Lingua – native App (Expo / React Native)
+# Lingo Pro – native App (Expo / React Native)
 
 Native Android- und iOS-App von Lingo Pro. Gleiches Design wie die Web-App (Tailwind-Klassen über NativeWind, gleiche Theme-Verläufe Ocean/Sunset/Lime/Grape), aber echte native Oberfläche statt WebView.
 
@@ -19,7 +19,7 @@ mobile/
 
 Die Lernlogik wird **nicht dupliziert**: Normalisierung, Packs, Fortschritt/Merge, Übungen und Lernhistorie kommen aus `../app/lib` (gemeinsam mit der Web-App), die Sprachpakete aus `../public/packs` (werden in die App eingebaut → komplett offline).
 
-- App-ID: `dev.flondy.lingua` (Android und iOS), Name „Lingua“
+- App-ID: `dev.flondy.lingua` (Android und iOS), Name „Lingo Pro“ (App-ID bleibt `dev.flondy.lingua`, weil `dev.flondy.lingo` bei Google Play gesperrt ist)
 - Firebase-Projekt `lingo-basic`: Android-App `1:788312123831:android:073de227681704c118e032`, iOS-App `1:788312123831:ios:b19df74cb9cc1c6b18e032`
 - `google-services.json` / `GoogleService-Info.plist` liegen hier und werden beim Prebuild eingebunden.
 
@@ -61,6 +61,18 @@ Vor dem ersten App-Store-Upload:
 - Apple Developer Program (kostenpflichtig, jährlich) und in App Store Connect eine App mit Bundle-ID `dev.flondy.lingua` anlegen.
 - Firebase: Anbieter **Apple** aktivieren. Für Telefon-Login auf iOS zusätzlich einen APNs-Schlüssel (Apple Developer → Keys) in Firebase → Projekteinstellungen → Cloud Messaging hochladen; ohne ihn fällt Firebase auf eine reCAPTCHA-Prüfung zurück.
 - Build + Upload: `npx eas-cli@latest build --platform ios --profile production` und `npx eas-cli@latest submit --platform ios` – oder in Xcode über Product → Archive.
+
+## Tablets
+
+- Ab 600 dp kürzerer Bildschirmseite gilt ein Gerät als Tablet (`src/lib/responsive.ts`). Tablets drehen frei, Handys bleiben im Hochformat.
+- Querformat: Navigationsleiste links, kompakter Kopf, einklappbare Seitenleiste (Heute: Tagesziel, Sitzung, Themen, Wortliste, Beispielsätze; Übungen: Serie, Treffer, letzte Antworten), Profil und Settings zweispaltig.
+- Hochformat: Navigation unten, Inhalt mittig mit maximaler Breite; Lernkarten bleiben bewusst kompakt (max. 520 dp).
+- Lernhilfen: Richtung DE ↔ Zielsprache, automatisches und langsames Vorlesen, Wort aus der Liste als Nächstes lernen, Wortbilder.
+
+## Inhalte und Bilder
+
+Vokabeln, Lernmodus und Level werden in `content/vokabeln.csv` gepflegt (Anleitung: `content/LIESMICH.md`).
+Wortbilder erzeugt `scripts/generate_word_images.py` mit dem lokalen ComfyUI; danach `node scripts/generate-mobile-packs.mjs`.
 
 ## Builds für die Stores
 

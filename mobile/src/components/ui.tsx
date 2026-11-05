@@ -35,6 +35,34 @@ export function SoftButton({ label, onPress, disabled, tone = "gray", className 
   );
 }
 
+/** Small round icon button (speech, toggles). */
+export function IconButton({ icon, label, onPress, active, className }: { icon: string; label: string; onPress: () => void; active?: boolean; className?: string }) {
+  return (
+    <Pressable accessibilityRole="button" accessibilityLabel={label} accessibilityState={{ selected: !!active }} onPress={onPress} hitSlop={6} className={`items-center justify-center rounded-full px-3 py-2 active:opacity-60 ${active ? "bg-indigo-600" : "bg-indigo-50"} ${className ?? ""}`}>
+      <Text className={`text-base ${active ? "text-white" : "text-indigo-700"}`}>{icon}</Text>
+    </Pressable>
+  );
+}
+
+/** Pill toggle used in tool bars ("DE → EN", "Langsam", …). */
+export function Chip({ label, active, onPress, accessibilityLabel }: { label: string; active?: boolean; onPress: () => void; accessibilityLabel?: string }) {
+  return (
+    <Pressable accessibilityRole="button" accessibilityLabel={accessibilityLabel ?? label} accessibilityState={{ selected: !!active }} onPress={onPress} className={`rounded-full border px-3 py-1.5 active:opacity-70 ${active ? "border-indigo-600 bg-indigo-600" : "border-gray-200 bg-white"}`}>
+      <Text className={`text-xs font-bold ${active ? "text-white" : "text-gray-700"}`}>{label}</Text>
+    </Pressable>
+  );
+}
+
+/** Horizontal progress bar in the theme gradient. */
+export function ProgressBar({ value, className }: { value: number; className?: string }) {
+  const pct = Math.max(0, Math.min(1, value)) * 100;
+  return (
+    <View className={`h-2.5 overflow-hidden rounded-full bg-gray-200 ${className ?? ""}`}>
+      <Gradient className="h-2.5 rounded-full" style={{ width: `${pct}%` }} />
+    </View>
+  );
+}
+
 export function Card({ children, className }: { children: ReactNode; className?: string }) {
   return <View className={`rounded-3xl bg-white p-5 shadow-sm ${className ?? ""}`}>{children}</View>;
 }
@@ -104,7 +132,7 @@ export function SelectField<T extends string | number>({ label, value, options, 
       </Pressable>
       <Modal visible={isOpen} transparent animationType="slide" onRequestClose={() => setIsOpen(false)}>
         <Pressable className="flex-1 bg-black/40" onPress={() => setIsOpen(false)} accessibilityLabel="Auswahl schließen" />
-        <View className="max-h-[70%] rounded-t-3xl bg-white px-4 pt-4" style={{ paddingBottom: insets.bottom + 16 }}>
+        <View className="max-h-[70%] w-full max-w-[560px] self-center rounded-t-3xl bg-white px-4 pt-4" style={{ paddingBottom: insets.bottom + 16 }}>
           <Text className="mb-3 text-lg font-bold text-gray-900">{label}</Text>
           <ScrollView>
             {options.map((option) => (

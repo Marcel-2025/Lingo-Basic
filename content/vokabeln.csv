@@ -1,0 +1,137 @@
+﻿level;thema_id;thema;thema_icon;thema_lernmodus;wort_id;lernmodus;tags;de;en;es;fr;it;ru;beispiel_de;bild;bild_prompt
+A1;food_01;Essen & Trinken;🍎;1;food_01_water;1;essen_trinken;Wasser;water;agua;eau;acqua;вода;;;water
+A1;food_01;Essen & Trinken;🍎;1;food_01_bread;1;essen_trinken;Brot;bread;pan;pain;pane;хлеб;;;bread
+A1;food_01;Essen & Trinken;🍎;1;food_01_milk;1;essen_trinken;Milch;milk;leche;lait;latte;молоко;;;milk
+A1;food_01;Essen & Trinken;🍎;1;food_01_coffee;1;essen_trinken;Kaffee;coffee;café;café;caffè;кофе;;;coffee
+A1;food_01;Essen & Trinken;🍎;1;food_01_tea;1;essen_trinken;Tee;tea;té;thé;tè;чай;;;tea
+A1;food_01;Essen & Trinken;🍎;1;food_01_apple;1;essen_trinken;Apfel;apple;manzana;pomme;mela;яблоко;;;apple
+A1;food_01;Essen & Trinken;🍎;1;food_01_banana;1;essen_trinken;Banane;banana;plátano;banane;banana;банан;;;banana
+A1;food_01;Essen & Trinken;🍎;1;food_01_rice;1;essen_trinken;Reis;rice;arroz;riz;riso;рис;;;rice
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_airport;1;reisen_orientierung;Flughafen;airport;aeropuerto;aéroport;aeroporto;аэропорт;;;airport
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_train_station;1;reisen_orientierung;Bahnhof;train station;estación;gare;stazione ferroviaria;вокзал;;;train station
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_ticket;1;reisen_orientierung;Ticket;ticket;billete;billet;biglietto;билет;;;ticket
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_hotel;1;reisen_orientierung;Hotel;hotel;hotel;hôtel;hotel;отель;;;hotel
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_street;1;reisen_orientierung;Straße;street;calle;rue;strada;улица;;;street
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_map;1;reisen_orientierung;Karte;map;mapa;carte;mappa;карта;;;map
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_suitcase;1;reisen_orientierung;Koffer;suitcase;maleta;valise;valigia;чемодан;;;suitcase
+A1;travel_02;Reisen & Orientierung;✈️;1;travel_02_passport;1;reisen_orientierung;Pass;passport;pasaporte;passeport;passaporto;паспорт;;;passport
+A1;home_03;Zuhause;🏠;1;home_03_house;1;zuhause;Haus;house;casa;maison;casa;дом;;;house
+A1;home_03;Zuhause;🏠;1;home_03_room;1;zuhause;Zimmer;room;habitación;chambre;stanza;комната;;;room
+A1;home_03;Zuhause;🏠;1;home_03_kitchen;1;zuhause;Küche;kitchen;cocina;cuisine;cucina;кухня;;;kitchen
+A1;home_03;Zuhause;🏠;1;home_03_bathroom;1;zuhause;Badezimmer;bathroom;baño;salle de bain;bagno;ванная;;;bathroom
+A1;home_03;Zuhause;🏠;1;home_03_window;1;zuhause;Fenster;window;ventana;fenêtre;finestra;окно;;;window
+A1;home_03;Zuhause;🏠;1;home_03_door;1;zuhause;Tür;door;puerta;porte;porta;дверь;;;door
+A1;home_03;Zuhause;🏠;1;home_03_table;1;zuhause;Tisch;table;mesa;table;tavolo;стол;;;table
+A1;home_03;Zuhause;🏠;1;home_03_chair;1;zuhause;Stuhl;chair;silla;chaise;sedia;стул;;;chair
+A1;work_04;Beruf & Alltag;💼;2;work_04_work;2;beruf_alltag;Arbeit;work;trabajo;travail;lavoro;работа;;;work
+A1;work_04;Beruf & Alltag;💼;2;work_04_office;2;beruf_alltag;Büro;office;oficina;bureau;ufficio;офис;;;office
+A1;work_04;Beruf & Alltag;💼;2;work_04_boss;2;beruf_alltag;Chef;boss;jefe;chef;capo;начальник;;;boss
+A1;work_04;Beruf & Alltag;💼;2;work_04_colleague;2;beruf_alltag;Kollege;colleague;colega;collègue;collega;коллега;;;colleague
+A1;work_04;Beruf & Alltag;💼;2;work_04_meeting;2;beruf_alltag;Meeting;meeting;reunión;réunion;riunione;встреча;;;meeting
+A1;work_04;Beruf & Alltag;💼;2;work_04_project;2;beruf_alltag;Projekt;project;proyecto;projet;progetto;проект;;;project
+A1;work_04;Beruf & Alltag;💼;2;work_04_email;2;beruf_alltag;E-Mail;email;correo;e-mail;e-mail;электронная почта;;;email
+A1;work_04;Beruf & Alltag;💼;2;work_04_break;2;beruf_alltag;Pause;break;pausa;pause;pausa;перерыв;;;break
+A1;health_05;Gesundheit;🩺;2;health_05_doctor;2;gesundheit;Arzt;doctor;médico;médecin;medico;врач;;;doctor
+A1;health_05;Gesundheit;🩺;2;health_05_hospital;2;gesundheit;Krankenhaus;hospital;hospital;hôpital;ospedale;больница;;;hospital
+A1;health_05;Gesundheit;🩺;2;health_05_medicine;2;gesundheit;Medizin;medicine;medicina;médicament;medicina;лекарство;;;medicine
+A1;health_05;Gesundheit;🩺;2;health_05_pain;2;gesundheit;Schmerz;pain;dolor;douleur;dolore;боль;;;pain
+A1;health_05;Gesundheit;🩺;2;health_05_fever;2;gesundheit;Fieber;fever;fiebre;fièvre;febbre;жар;;;fever
+A1;health_05;Gesundheit;🩺;2;health_05_help;2;gesundheit;Hilfe;help;ayuda;aide;aiuto;помощь;;;help
+A1;health_05;Gesundheit;🩺;2;health_05_appointment;2;gesundheit;Termin;appointment;cita;rendez-vous;appuntamento;прием;;;appointment
+A1;health_05;Gesundheit;🩺;2;health_05_prescription;2;gesundheit;Rezept;prescription;receta;ordonnance;ricetta;рецепт;;;prescription
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_shop;2;einkaufen;Laden;shop;tienda;magasin;negozio;магазин;;;shop
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_price;2;einkaufen;Preis;price;precio;prix;prezzo;цена;;;price
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_money;2;einkaufen;Geld;money;dinero;argent;denaro;деньги;;;money
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_checkout;2;einkaufen;Kasse;checkout;caja;caisse;cassa;касса;;;checkout
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_discount;2;einkaufen;Rabatt;discount;descuento;remise;sconto;скидка;;;discount
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_customer;2;einkaufen;Kunde;customer;cliente;client;cliente;клиент;;;customer
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_seller;2;einkaufen;Verkäufer;seller;vendedor;vendeur;venditore;продавец;;;seller
+A1;shopping_06;Einkaufen;🛒;2;shopping_06_bag;2;einkaufen;Tüte;bag;bolsa;sac;borsa;пакет;;;bag
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_mother;3;familie_freunde;Mutter;mother;madre;mère;madre;мать;;;mother
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_father;3;familie_freunde;Vater;father;padre;père;padre;отец;;;father
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_brother;3;familie_freunde;Bruder;brother;hermano;frère;fratello;брат;;;brother
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_sister;3;familie_freunde;Schwester;sister;hermana;sœur;sorella;сестра;;;sister
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_friend;3;familie_freunde;Freund;friend;amigo;ami;amico;друг;;;friend
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_child;3;familie_freunde;Kind;child;niño;enfant;bambino;ребенок;;;child
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_family;3;familie_freunde;Familie;family;familia;famille;famiglia;семья;;;family
+A1;family_07;Familie & Freunde;👨‍👩‍👧;3;family_07_name;3;familie_freunde;Name;name;nombre;nom;nome;имя;;;name
+A1;time_08;Zeit & Lernen;⏰;3;time_08_today;3;zeit_lernen;Heute;today;hoy;aujourd'hui;oggi;сегодня;;;today
+A1;time_08;Zeit & Lernen;⏰;3;time_08_tomorrow;3;zeit_lernen;Morgen;tomorrow;mañana;demain;domani;завтра;;;tomorrow
+A1;time_08;Zeit & Lernen;⏰;3;time_08_yesterday;3;zeit_lernen;Gestern;yesterday;ayer;hier;ieri;вчера;;;yesterday
+A1;time_08;Zeit & Lernen;⏰;3;time_08_week;3;zeit_lernen;Woche;week;semana;semaine;settimana;неделя;;;week
+A1;time_08;Zeit & Lernen;⏰;3;time_08_month;3;zeit_lernen;Monat;month;mes;mois;mese;месяц;;;month
+A1;time_08;Zeit & Lernen;⏰;3;time_08_year;3;zeit_lernen;Jahr;year;año;an;anno;год;;;year
+A1;time_08;Zeit & Lernen;⏰;3;time_08_to_learn;3;zeit_lernen;Lernen;to learn;aprender;apprendre;imparare;учить;;;to learn
+A1;time_08;Zeit & Lernen;⏰;3;time_08_language;3;zeit_lernen;Sprache;language;idioma;langue;lingua;язык;;;language
+A2;daily_01;Tagesablauf;⏰;1;daily_01_wake_up;1;tagesablauf;Aufwachen;wake up;despertarse;se réveiller;svegliarsi;просыпаться;;;wake up
+A2;daily_01;Tagesablauf;⏰;1;daily_01_have_breakfast;1;tagesablauf;Frühstücken;have breakfast;desayunar;prendre le petit-déjeuner;fare colazione;завтракать;;;have breakfast
+A2;daily_01;Tagesablauf;⏰;1;daily_01_get_dressed;1;tagesablauf;Sich anziehen;get dressed;vestirse;s'habiller;vestirsi;одеваться;;;get dressed
+A2;daily_01;Tagesablauf;⏰;1;daily_01_cook;1;tagesablauf;Kochen;cook;cocinar;cuisiner;cucinare;готовить;;;cook
+A2;daily_01;Tagesablauf;⏰;1;daily_01_tidy_up;1;tagesablauf;Aufräumen;tidy up;ordenar;ranger;riordinare;убирать;;;tidy up
+A2;daily_01;Tagesablauf;⏰;1;daily_01_rest;1;tagesablauf;Sich ausruhen;rest;descansar;se reposer;riposare;отдыхать;;;rest
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_intersection;1;stadt_nachbarschaft;Kreuzung;intersection;cruce;carrefour;incrocio;перекрёсток;;;intersection
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_traffic_light;1;stadt_nachbarschaft;Ampel;traffic light;semáforo;feu de circulation;semaforo;светофор;;;traffic light
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_pavement;1;stadt_nachbarschaft;Bürgersteig;pavement;acera;trottoir;marciapiede;тротуар;;;pavement
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_neighborhood;1;stadt_nachbarschaft;Nachbarschaft;neighborhood;barrio;quartier;quartiere;район;;;neighborhood
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_library;1;stadt_nachbarschaft;Bücherei;library;biblioteca;bibliothèque;biblioteca;библиотека;;;library
+A2;city_02;Stadt & Nachbarschaft;🏙️;1;city_02_market;1;stadt_nachbarschaft;Markt;market;mercado;marché;mercato;рынок;;;market
+A2;communication_03;Kommunikation;💬;1;communication_03_ask;1;kommunikation;Fragen;ask;preguntar;demander;chiedere;спрашивать;;;ask
+A2;communication_03;Kommunikation;💬;1;communication_03_answer;1;kommunikation;Antworten;answer;responder;répondre;rispondere;отвечать;;;answer
+A2;communication_03;Kommunikation;💬;1;communication_03_explain;1;kommunikation;Erklären;explain;explicar;expliquer;spiegare;объяснять;;;explain
+A2;communication_03;Kommunikation;💬;1;communication_03_agree;1;kommunikation;Zustimmen;agree;estar de acuerdo;être d'accord;essere d'accordo;соглашаться;;;agree
+A2;communication_03;Kommunikation;💬;1;communication_03_reject;1;kommunikation;Ablehnen;reject;rechazar;refuser;rifiutare;отклонять;;;reject
+A2;communication_03;Kommunikation;💬;1;communication_03_repeat;1;kommunikation;Wiederholen;repeat;repetir;répéter;ripetere;повторять;;;repeat
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_weather;2;natur_wetter;Wetter;weather;tiempo;météo;tempo;погода;;;weather
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_cloud;2;natur_wetter;Wolke;cloud;nube;nuage;nuvola;облако;;;cloud
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_wind;2;natur_wetter;Wind;wind;viento;vent;vento;ветер;;;wind
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_forest;2;natur_wetter;Wald;forest;bosque;forêt;foresta;лес;;;forest
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_river;2;natur_wetter;Fluss;river;río;rivière;fiume;река;;;river
+A2;nature_04;Natur & Wetter;🌦️;2;nature_04_mountain;2;natur_wetter;Berg;mountain;montaña;montagne;montagna;гора;;;mountain
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_satisfied;2;gef_hle_charakter;Zufrieden;satisfied;satisfecho;satisfait;soddisfatto;довольный;;;satisfied
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_nervous;2;gef_hle_charakter;Nervös;nervous;nervioso;nerveux;nervoso;нервный;;;nervous
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_surprised;2;gef_hle_charakter;Überrascht;surprised;sorprendido;surpris;sorpreso;удивлённый;;;surprised
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_proud;2;gef_hle_charakter;Stolz;proud;orgulloso;fier;orgoglioso;гордый;;;proud
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_relaxed;2;gef_hle_charakter;Entspannt;relaxed;relajado;détendu;rilassato;расслабленный;;;relaxed
+A2;feelings_05;Gefühle & Charakter;✨;2;feelings_05_patient;2;gef_hle_charakter;Geduldig;patient;paciente;patient;paziente;терпеливый;;;patient
+A2;education_06;Lernen & Bildung;📚;2;education_06_course;2;lernen_bildung;Kurs;course;curso;cours;corso;курс;;;course
+A2;education_06;Lernen & Bildung;📚;2;education_06_task;2;lernen_bildung;Aufgabe;task;tarea;tâche;compito;задание;;;task
+A2;education_06;Lernen & Bildung;📚;2;education_06_exam;2;lernen_bildung;Prüfung;exam;examen;examen;esame;экзамен;;;exam
+A2;education_06;Lernen & Bildung;📚;2;education_06_practise;2;lernen_bildung;Üben;practise;practicar;s'entraîner;esercitarsi;тренироваться;;;practise
+A2;education_06;Lernen & Bildung;📚;2;education_06_understand;2;lernen_bildung;Verstehen;understand;comprender;comprendre;capire;понимать;;;understand
+A2;education_06;Lernen & Bildung;📚;2;education_06_progress;2;lernen_bildung;Fortschreiten;progress;progresar;progresser;progredire;продвигаться;;;progress
+B1;career_01;Beruf & Karriere;💼;2;career_01_application;2;beruf_karriere;Bewerbung;application;solicitud de empleo;candidature;candidatura;заявление о приёме на работу;;;application
+B1;career_01;Beruf & Karriere;💼;2;career_01_responsibility;2;beruf_karriere;Verantwortung;responsibility;responsabilidad;responsabilité;responsabilità;ответственность;;;responsibility
+B1;career_01;Beruf & Karriere;💼;2;career_01_experience;2;beruf_karriere;Erfahrung;experience;experiencia;expérience;esperienza;опыт;;;experience
+B1;career_01;Beruf & Karriere;💼;2;career_01_decide;2;beruf_karriere;Entscheiden;decide;decidir;décider;decidere;решать;;;decide
+B1;career_01;Beruf & Karriere;💼;2;career_01_negotiate;2;beruf_karriere;Verhandeln;negotiate;negociar;négocier;negoziare;вести переговоры;;;negotiate
+B1;career_01;Beruf & Karriere;💼;2;career_01_reliable;2;beruf_karriere;Zuverlässig;reliable;fiable;fiable;affidabile;надёжный;;;reliable
+B1;society_02;Gesellschaft;🤝;2;society_02_community;2;gesellschaft;Gemeinschaft;community;comunidad;communauté;comunità;сообщество;;;community
+B1;society_02;Gesellschaft;🤝;2;society_02_equality;2;gesellschaft;Gleichberechtigung;equality;igualdad;égalité;uguaglianza;равенство;;;equality
+B1;society_02;Gesellschaft;🤝;2;society_02_support;2;gesellschaft;Unterstützung;support;apoyo;soutien;sostegno;поддержка;;;support
+B1;society_02;Gesellschaft;🤝;2;society_02_volunteer;2;gesellschaft;Freiwilliger;volunteer;voluntario;bénévole;volontario;волонтёр;;;volunteer
+B1;society_02;Gesellschaft;🤝;2;society_02_rule;2;gesellschaft;Regel;rule;regla;règle;regola;правило;;;rule
+B1;society_02;Gesellschaft;🤝;2;society_02_trust;2;gesellschaft;Vertrauen;trust;confianza;confiance;fiducia;доверие;;;trust
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_itinerary;2;reisen_erlebnisse;Reiseroute;itinerary;itinerario;itinéraire;itinerario;маршрут;;;itinerary
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_accommodation;2;reisen_erlebnisse;Unterkunft;accommodation;alojamiento;hébergement;alloggio;жильё;;;accommodation
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_change_trains;2;reisen_erlebnisse;Umsteigen;change trains;hacer transbordo;faire une correspondance;fare un cambio;делать пересадку;;;change trains
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_discover;2;reisen_erlebnisse;Entdecken;discover;descubrir;découvrir;scoprire;открывать;;;discover
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_recommend;2;reisen_erlebnisse;Empfehlen;recommend;recomendar;recommander;consigliare;рекомендовать;;;recommend
+B1;travel_03;Reisen & Erlebnisse;🧭;2;travel_03_unforgettable;2;reisen_erlebnisse;Unvergesslich;unforgettable;inolvidable;inoubliable;indimenticabile;незабываемый;;;unforgettable
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_opinion;3;meinungen_argumente;Meinung;opinion;opinión;opinion;opinione;мнение;;;opinion
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_claim;3;meinungen_argumente;Behaupten;claim;afirmar;affirmer;affermare;утверждать;;;claim
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_justify;3;meinungen_argumente;Begründen;justify;justificar;justifier;giustificare;обосновывать;;;justify
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_compare;3;meinungen_argumente;Vergleichen;compare;comparar;comparer;confrontare;сравнивать;;;compare
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_influence;3;meinungen_argumente;Beeinflussen;influence;influir;influencer;influenzare;влиять;;;influence
+B1;opinion_04;Meinungen & Argumente;💡;3;opinion_04_convince;3;meinungen_argumente;Überzeugen;convince;convencer;convaincre;convincere;убеждать;;;convince
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_resource;3;umwelt_zukunft;Ressource;resource;recurso;ressource;risorsa;ресурс;;;resource
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_avoid;3;umwelt_zukunft;Vermeiden;avoid;evitar;éviter;evitare;избегать;;;avoid
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_reuse;3;umwelt_zukunft;Wiederverwenden;reuse;reutilizar;réutiliser;riutilizzare;использовать повторно;;;reuse
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_pollute;3;umwelt_zukunft;Verschmutzen;pollute;contaminar;polluer;inquinare;загрязнять;;;pollute
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_sustainable;3;umwelt_zukunft;Nachhaltig;sustainable;sostenible;durable;sostenibile;устойчивый;;;sustainable
+B1;environment_05;Umwelt & Zukunft;🌱;3;environment_05_protect;3;umwelt_zukunft;Schützen;protect;proteger;protéger;proteggere;защищать;;;protect
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_data_privacy;3;digitaler_alltag;Datenschutz;data privacy;privacidad de datos;protection des données;privacy dei dati;защита данных;;;data privacy
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_notification;3;digitaler_alltag;Benachrichtigung;notification;notificación;notification;notifica;уведомление;;;notification
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_download;3;digitaler_alltag;Herunterladen;download;descargar;télécharger;scaricare;скачивать;;;download
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_upload;3;digitaler_alltag;Hochladen;upload;subir;téléverser;caricare;загружать;;;upload
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_update;3;digitaler_alltag;Aktualisieren;update;actualizar;mettre à jour;aggiornare;обновлять;;;update
+B1;digital_06;Digitaler Alltag;💻;3;digital_06_password;3;digitaler_alltag;Passwort;password;contraseña;mot de passe;password;пароль;;;password

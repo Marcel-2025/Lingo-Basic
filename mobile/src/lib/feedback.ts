@@ -28,7 +28,7 @@ export const vibrate = (correct: boolean) => {
   void Haptics.notificationAsync(correct ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Error).catch(() => undefined);
 };
 
-export const speak = (text: string, language: "DE" | LanguageCode) => {
+export const speak = (text: string, language: "DE" | LanguageCode, options: { slow?: boolean } = {}) => {
   Speech.stop();
-  Speech.speak(text, { language: language === "DE" ? "de-DE" : SUPPORTED_LANGUAGES[language].speechCode });
+  Speech.speak(text, { language: language === "DE" ? "de-DE" : SUPPORTED_LANGUAGES[language].speechCode, rate: options.slow ? 0.55 : 1 });
 };

@@ -21,12 +21,12 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 export default function PrivacyScreen() {
   const insets = useSafeAreaInsets();
   return (
-    <ScrollView className="flex-1 bg-white" contentContainerClassName="p-6" contentContainerStyle={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24 }}>
+    <ScrollView className="flex-1 bg-white" contentContainerClassName="p-6" contentContainerStyle={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24, width: "100%", maxWidth: 560, alignSelf: "center" }}>
       <Text className="text-2xl font-bold text-gray-900">Datenschutzerklärung</Text>
       <Text className="mt-1 text-xs text-gray-500">Stand: Oktober 2026</Text>
 
       <Section title="Ohne Konto">
-        Du kannst Lingua vollständig ohne Konto nutzen. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Einstellungen) wird dann nur auf deinem Gerät gespeichert und nicht übertragen.
+        Du kannst Lingo Pro vollständig ohne Konto nutzen. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Einstellungen) wird dann nur auf deinem Gerät gespeichert und nicht übertragen.
       </Section>
       <Section title="Mit Konto (optional)">
         Wenn du dich anmeldest, verarbeiten wir je nach Anmeldemethode deine E-Mail-Adresse, deine Telefonnummer, deinen Google-Kontonamen oder die von „Mit Apple anmelden“ übermittelten Angaben (Name, ggf. anonymisierte E-Mail) sowie eine Nutzer-ID. Dein Lernfortschritt wird dann zusätzlich in der Cloud gespeichert, damit du ihn auf mehreren Geräten nutzen kannst. Dafür nutzen wir Firebase Authentication und Cloud Firestore von Google (Google Ireland Ltd.); die Daten liegen in der EU (Region eur3).
