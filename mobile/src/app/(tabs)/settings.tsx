@@ -113,7 +113,7 @@ export default function SettingsScreen() {
           onChange={setUiLang}
           options={(Object.keys(SUPPORTED_LANGUAGES) as LanguageCode[]).map((code) => ({ value: code, label: `${t(`languages.${code}`)} · ${SUPPORTED_LANGUAGES[code].label}` }))}
         />
-        <Text className="mt-2 text-xs text-gray-600">{t("settings.appLanguageHint")}</Text>
+        <Text className="mt-2 text-xs text-gray-600 dark:text-blue-100/85">{t("settings.appLanguageHint")}</Text>
       </View>
       <SelectField<LanguageCode>
         label={t("settings.targetLanguage")}
@@ -123,7 +123,7 @@ export default function SettingsScreen() {
       />
       <View>
         <SelectField label={t("settings.contentLevel")} value={settings.contentLevel} onChange={(value) => set("contentLevel", value)} options={SUPPORTED_LEVELS.map((level) => ({ value: level, label: level }))} />
-        <Text className={`mt-2 text-xs font-semibold ${pack ? "text-gray-600" : "text-red-700"}`} accessibilityLiveRegion="polite">
+        <Text className={`mt-2 text-xs font-semibold ${pack ? "text-gray-600 dark:text-blue-100/85" : "text-red-700 dark:text-red-200"}`} accessibilityLiveRegion="polite">
           {levelStatus}
         </Text>
       </View>
@@ -139,7 +139,7 @@ export default function SettingsScreen() {
         ]}
       />
       <View>
-        <Text className="mb-2 text-sm font-bold text-gray-600">{t("settings.dailyGoal")}</Text>
+        <Text className="mb-2 text-sm font-bold text-gray-600 dark:text-blue-100/85">{t("settings.dailyGoal")}</Text>
         <TextInput
           value={dailyGoal}
           onChangeText={setDailyGoal}
@@ -150,11 +150,11 @@ export default function SettingsScreen() {
           }}
           keyboardType="number-pad"
           accessibilityLabel={t("settings.dailyGoalLabel")}
-          className="rounded-xl bg-gray-100 p-3 text-gray-900"
+          className="rounded-xl bg-gray-100 dark:bg-white/10 p-3 text-gray-900 dark:text-white"
         />
       </View>
       <View>
-        <Text className="mb-2 text-sm font-bold text-gray-600">{t("settings.theme")}</Text>
+        <Text className="mb-2 text-sm font-bold text-gray-600 dark:text-blue-100/85">{t("settings.theme")}</Text>
         <View className="flex-row gap-2">
           {THEMES.map((theme) => (
             <Pressable
@@ -162,9 +162,9 @@ export default function SettingsScreen() {
               accessibilityRole="button"
               accessibilityState={{ selected: settings.theme === theme }}
               onPress={() => set("theme", theme)}
-              className={`flex-1 items-center rounded-lg bg-gray-100 py-2 ${settings.theme === theme ? "border-2 border-indigo-500" : "opacity-50"}`}
+              className={`flex-1 items-center rounded-lg bg-gray-100 dark:bg-white/10 py-2 ${settings.theme === theme ? "border-2 border-indigo-500 dark:border-mint-400" : "opacity-50"}`}
             >
-              <Text className="text-sm font-bold text-gray-900">{theme}</Text>
+              <Text className="text-sm font-bold text-gray-900 dark:text-white">{theme}</Text>
             </Pressable>
           ))}
         </View>
@@ -187,8 +187,8 @@ export default function SettingsScreen() {
   const reminderTime = `${String(reminders.hour).padStart(2, "0")}:${String(reminders.minute).padStart(2, "0")}`;
   const reminderCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">{t("settings.reminderTitle")}</Text>
-      <Text className="text-sm text-gray-600">{t("settings.reminderText")}</Text>
+      <Text className="text-lg font-bold text-gray-900 dark:text-white">{t("settings.reminderTitle")}</Text>
+      <Text className="text-sm text-gray-600 dark:text-blue-100/85">{t("settings.reminderText")}</Text>
       <Toggle label={t("settings.reminderOn")} value={reminders.enabled} onChange={(value) => void applyReminders({ enabled: value })} />
       <SelectField<string>
         label={t("settings.time")}
@@ -201,8 +201,8 @@ export default function SettingsScreen() {
   );
   const contentCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">{t("settings.contentTitle")}</Text>
-      <Text className="text-sm text-gray-600">{t("settings.contentText")}</Text>
+      <Text className="text-lg font-bold text-gray-900 dark:text-white">{t("settings.contentTitle")}</Text>
+      <Text className="text-sm text-gray-600 dark:text-blue-100/85">{t("settings.contentText")}</Text>
       <GradientButton label={t("settings.importJson")} onPress={() => void importFromFile()} disabled={isBusy} />
       {source === "import" ? (
         <SoftButton
@@ -233,25 +233,25 @@ export default function SettingsScreen() {
   );
   const premiumCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">{isPremium ? t("settings.premiumActive") : t("settings.premium")}</Text>
-      <Text className="text-sm text-gray-600">{isPremium ? t("settings.premiumActiveText") : t("settings.premiumText")}</Text>
+      <Text className="text-lg font-bold text-gray-900 dark:text-white">{isPremium ? t("settings.premiumActive") : t("settings.premium")}</Text>
+      <Text className="text-sm text-gray-600 dark:text-blue-100/85">{isPremium ? t("settings.premiumActiveText") : t("settings.premiumText")}</Text>
       <GradientButton label={isPremium ? t("settings.managePremium") : t("settings.viewPremium")} onPress={() => router.push("/premium")} />
     </Card>
   );
   const accountCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">{t("settings.dataTitle")}</Text>
-      <Text className="text-sm text-gray-600">{t("settings.dataText")}</Text>
+      <Text className="text-lg font-bold text-gray-900 dark:text-white">{t("settings.dataTitle")}</Text>
+      <Text className="text-sm text-gray-600 dark:text-blue-100/85">{t("settings.dataText")}</Text>
       <GradientButton label={t("settings.backup")} onPress={() => void exportBackup()} disabled={isBusy} />
       <SoftButton label={t("settings.restore")} disabled={isBusy} onPress={() => void importBackup()} />
       <SoftButton label={t("settings.deleteAll")} tone="red" disabled={isBusy} onPress={confirmReset} />
       <Pressable accessibilityRole="link" onPress={() => router.push("/privacy")} className="py-2">
-        <Text className="text-center text-sm font-bold text-indigo-700">{t("settings.privacy")}</Text>
+        <Text className="text-center text-sm font-bold text-indigo-700 dark:text-mint-300">{t("settings.privacy")}</Text>
       </Pressable>
     </Card>
   );
   const status = message ? (
-    <Text accessibilityLiveRegion="polite" className={`text-sm font-semibold ${settings.isDarkMode ? "text-indigo-200" : "text-indigo-700"}`}>
+    <Text accessibilityLiveRegion="polite" className={`text-sm font-semibold ${settings.isDarkMode ? "text-indigo-200" : "text-indigo-700 dark:text-mint-300"}`}>
       {message}
     </Text>
   ) : null;

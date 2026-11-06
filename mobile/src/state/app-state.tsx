@@ -5,6 +5,7 @@ import { applyStreakFreeze, applyXpBonus } from "@/app/lib/premium-benefits";
 import { getDateKey, getLevelFromXp, reconcileStreak, recordActivity } from "@/app/lib/utils";
 import type { AppSettings, CloudProgressSnapshot, LearningInsights, UserStats } from "@/app/lib/types";
 import { getLocales } from "expo-localization";
+import { colorScheme } from "nativewind";
 import { getDefaultTargetFor, isLanguageCode } from "@/app/lib/languages";
 import { setLanguage, t } from "~/i18n";
 import { usePurchases } from "~/lib/purchases";
@@ -79,6 +80,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setLanguage(settings.uiLang);
   }, [settings.uiLang]);
+  // NativeWind's `dark:` variants follow the in-app toggle, not the system setting.
+  useEffect(() => {
+    colorScheme.set(settings.isDarkMode ? "dark" : "light");
+  }, [settings.isDarkMode]);
 
   useEffect(() => {
     if (!isLoaded) return;

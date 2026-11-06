@@ -2,6 +2,7 @@ import { Tabs, type BottomTabBarProps } from "expo-router/js-tabs";
 import { Image, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AppHeader } from "~/components/app-header";
+import { ScreenBackground } from "~/components/screen-background";
 import { Gradient, useScreenColors } from "~/components/ui";
 import { useT, type TranslationKey } from "~/i18n";
 import { useResponsive } from "~/lib/responsive";
@@ -31,7 +32,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
     const content = (
       <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-14"} items-center justify-center`}>
         <Text className="mb-1 text-2xl">{tab.icon}</Text>
-        <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500"}`}>{t(tab.label)}</Text>
+        <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500 dark:text-blue-200/75"}`}>{t(tab.label)}</Text>
       </View>
     );
     return (
@@ -69,7 +70,17 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
 export default function TabsLayout() {
   const { isWide } = useResponsive();
   return (
-    <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ header: () => <AppHeader />, tabBarPosition: isWide ? "left" : "bottom" }}>
+    <Tabs
+      tabBar={(props) => <TabBar {...props} />}
+      screenOptions={{ header: () => <AppHeader />, tabBarPosition: isWide ? "left" : "bottom", sceneStyle: { backgroundColor: "transparent" } }}
+      // Every tab paints its own sky, so inactive tabs never shine through (they are only hidden on native).
+      screenLayout={({ children }) => (
+        <View className="flex-1">
+          <ScreenBackground />
+          {children}
+        </View>
+      )}
+    >
       <Tabs.Screen name="index" />
       <Tabs.Screen name="uebungen" />
       <Tabs.Screen name="stadt" />

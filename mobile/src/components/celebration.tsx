@@ -10,7 +10,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from "react-native-reanimated";
-import { Gradient } from "~/components/ui";
+import { useScreenColors } from "~/components/ui";
 import { t, useT } from "~/i18n";
 import { playAnswerTone, vibrate } from "~/lib/feedback";
 import { useAppState } from "~/state/app-state";
@@ -89,12 +89,12 @@ export function CelebrationOverlay() {
     <Pressable onPress={dismissCelebration} accessibilityRole="button" accessibilityLabel={t("celebrate.dismiss", { title: content.title, text: content.text })} style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>
       {Array.from({ length: pieces }, (_, index) => <Confetti key={index} index={index} width={width} height={height} />)}
       <Animated.View style={[{ width: Math.min(width - 48, 360), borderRadius: 28, overflow: "hidden" }, cardStyle]}>
-        <Gradient className="items-center px-6 py-7">
+        <View className="items-center border-2 border-mint-400/70 bg-night-800 px-6 py-7" style={{ borderRadius: 28 }}>
           {celebration.kind === "streak" ? <Flame /> : <Text className="text-6xl">{content.icon}</Text>}
           <Text className="mt-2 text-center text-2xl font-black text-white">{content.title}</Text>
-          <Text className="mt-1 text-center text-base text-white/90">{content.text}</Text>
-          {content.reward ? <View className="mt-3 rounded-full bg-white/25 px-4 py-1"><Text className="text-base font-bold text-white">🪙 {content.reward}</Text></View> : null}
-        </Gradient>
+          <Text className="mt-1 text-center text-base text-blue-100">{content.text}</Text>
+          {content.reward ? <View className="mt-3 rounded-full bg-mint-400 px-4 py-1"><Text className="text-base font-bold text-night-950">🪙 {content.reward}</Text></View> : null}
+        </View>
       </Animated.View>
     </Pressable>
   );
@@ -103,17 +103,18 @@ export function CelebrationOverlay() {
 /** Compact streak badge for the header: a live flame while today's learning is done, a dimmed one before. */
 export function StreakBadge({ streak, activeToday, onPress }: { streak: number; activeToday: boolean; onPress?: () => void }) {
   const t = useT();
+  const colors = useScreenColors();
   const glow = useSharedValue(0);
   useEffect(() => {
     glow.value = activeToday && streak > 0 ? withRepeat(withSequence(withTiming(1, { duration: 900 }), withTiming(0, { duration: 900 })), -1, true) : withTiming(0);
   }, [activeToday, glow, streak]);
-  const style = useAnimatedStyle(() => ({ backgroundColor: `rgba(255,255,255,${0.15 + glow.value * 0.2})` }));
+  const style = useAnimatedStyle(() => ({ backgroundColor: `rgba(255,255,255,${0.1 + glow.value * 0.2})` }));
   return (
     <Pressable accessibilityRole="button" accessibilityLabel={`${t("header.streakLabel", { n: streak })}${activeToday ? "" : t("header.notLearnedToday")}`} onPress={onPress}>
-      <Animated.View style={[{ flexDirection: "row", alignItems: "center", borderRadius: 10, paddingHorizontal: 8, paddingVertical: 3, gap: 4 }, style]}>
+      <Animated.View style={[{ flexDirection: "row", alignItems: "center", borderRadius: 12, paddingHorizontal: 10, paddingVertical: 6, gap: 6, borderWidth: 1, borderColor: "rgba(255,255,255,0.15)" }, style]}>
         {activeToday && streak > 0 ? <Flame size={16} /> : <Text style={{ fontSize: 16, opacity: 0.6 }}>🔥</Text>}
-        <Text className="text-sm font-semibold text-white">{streak}</Text>
-        {!activeToday && streak > 0 ? <Text className="text-[10px] font-bold text-amber-200">{t("header.learnToday")}</Text> : null}
+        <Text className={`text-sm font-bold ${colors.text}`}>{streak}</Text>
+        {!activeToday && streak > 0 ? <Text className="text-[10px] font-bold text-amber-500 dark:text-amber-200">{t("header.learnToday")}</Text> : null}
       </Animated.View>
     </Pressable>
   );

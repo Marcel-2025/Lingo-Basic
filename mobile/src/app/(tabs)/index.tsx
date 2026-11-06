@@ -1,6 +1,7 @@
 import { router } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import Animated, { FadeIn, useAnimatedStyle, useSharedValue, withSequence, withSpring, withTiming } from "react-native-reanimated";
 import { isWordLearned, isWordMastered, recordLearningInInsights } from "@/app/lib/learning-history";
 import { getVocabFromPack } from "@/app/lib/pack-normalization";
 import { shuffle } from "@/app/lib/utils";
@@ -51,6 +52,12 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
   const [session, setSession] = useState<SessionStats>({ known: 0, practice: 0 });
   const [listOpen, setListOpen] = useState(false);
   const card = queue[index];
+  // Card flip: a quick squeeze on the horizontal axis whenever the card turns or a new word arrives.
+  const flip = useSharedValue(1);
+  useEffect(() => {
+    flip.value = withSequence(withTiming(0.05, { duration: 110 }), withSpring(1, { damping: 14, stiffness: 180 }));
+  }, [flip, isFlipped, card?.id]);
+  const flipStyle = useAnimatedStyle(() => ({ transform: [{ scaleX: flip.value }] }));
   const baseLang = settings.uiLang;
   const langLabel = t(`languages.${pack.lang}`);
   const baseLabel = t(`languages.${baseLang}`);
@@ -140,46 +147,48 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
       </View>
       <ProgressBar value={(index + 1) / queue.length} className="mb-5" />
 
+      <Animated.View style={flipStyle}>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={isFlipped ? t("learn.cardShown", { front: front.text, back: back.text }) : t("learn.cardHidden", { front: front.text })}
         onPress={() => setIsFlipped(true)}
-        className={`items-center justify-center rounded-3xl bg-white p-6 shadow-xl ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200" : ""}`}
+        className={`items-center justify-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-6 shadow-xl ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200 dark:border-mint-400/50" : ""}`}
       >
         {image ? <Image source={image} style={{ width: isTablet ? 112 : 128, height: isTablet ? 112 : 128, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: card.de })} /> : null}
-        <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400">{front.label}</Text>
+        <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-blue-200/60">{front.label}</Text>
         <View className="mb-2 flex-row items-center gap-2">
-          <Text className="text-center text-3xl font-bold text-gray-900">{front.text}</Text>
+          <Text className="text-center text-3xl font-bold text-gray-900 dark:text-white">{front.text}</Text>
           <IconButton icon="🔊" label={t("learn.speak", { text: front.text })} onPress={() => speak(front.text, front.lang, { slow: prefs.slowSpeech })} />
         </View>
         {isFlipped ? (
-          <View className="mt-3 w-full items-center border-t border-gray-100 pt-4">
-            <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-indigo-400">{back.label}</Text>
-            <Text className="mb-3 text-center text-3xl font-bold text-indigo-600">{back.text}</Text>
+          <View className="mt-3 w-full items-center border-t border-gray-100 dark:border-white/10 pt-4">
+            <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-indigo-400 dark:text-mint-300/80">{back.label}</Text>
+            <Text className="mb-3 text-center text-3xl font-bold text-indigo-600 dark:text-mint-300">{back.text}</Text>
             <View className="flex-row gap-2">
               <IconButton icon={`🔊 ${pack.lang}`} label={t("learn.speak", { text: card.x })} onPress={() => speak(card.x, pack.lang)} />
               <IconButton icon="🐢" label={t("learn.speakSlow", { text: card.x })} onPress={() => speak(card.x, pack.lang, { slow: true })} />
               <IconButton icon={`🔊 ${baseLang}`} label={t("learn.speakIn", { text: card.de, language: baseLabel })} onPress={() => speak(card.de, baseLang)} />
             </View>
             {card.ex ? (
-              <View className="mt-4 w-full rounded-xl bg-indigo-50 p-3">
-                <Text className="text-sm italic text-gray-900">{card.ex}</Text>
-                {card.exTr ? <Text className="mt-1 text-sm font-semibold text-gray-900">{card.exTr}</Text> : null}
+              <View className="mt-4 w-full rounded-xl bg-indigo-50 dark:bg-white/10 p-3">
+                <Text className="text-sm italic text-gray-900 dark:text-white">{card.ex}</Text>
+                {card.exTr ? <Text className="mt-1 text-sm font-semibold text-gray-900 dark:text-white">{card.exTr}</Text> : null}
               </View>
             ) : null}
           </View>
         ) : (
-          <Text className="mt-6 text-gray-400">{t("learn.tapToReveal")}</Text>
+          <Text className="mt-6 text-gray-400 dark:text-blue-200/60">{t("learn.tapToReveal")}</Text>
         )}
       </Pressable>
+      </Animated.View>
 
       {isFlipped ? (
-        <View className="mt-6 flex-row gap-4">
-          <Pressable accessibilityRole="button" onPress={() => answer(false)} className="flex-1 items-center rounded-2xl bg-red-100 py-4 active:opacity-70"><Text className="text-base font-bold text-red-700">{t("learn.practice")}</Text></Pressable>
+        <Animated.View entering={FadeIn.duration(250)} className="mt-6 flex-row gap-4">
+          <Pressable accessibilityRole="button" onPress={() => answer(false)} className="flex-1 items-center rounded-2xl bg-red-100 dark:bg-red-500/25 py-4 active:opacity-70"><Text className="text-base font-bold text-red-700 dark:text-red-200">{t("learn.practice")}</Text></Pressable>
           <GradientButton className="flex-1" label={t("learn.known")} onPress={() => answer(true)} />
-        </View>
+        </Animated.View>
       ) : (
-        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700">{t("learn.reveal")}</Text></Pressable>
+        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
       )}
     </View>
   ) : (
@@ -214,9 +223,9 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
             onChange={selectTopic}
             options={[{ value: "all", label: t("learn.allTopicsCount", { n: allVocab.length }) }, ...pack.topics.map((topic) => ({ value: topic.id, label: t("learn.topicOption", { icon: topic.icon ?? "", title: topic.title, n: topic.vocab.length }).trim() }))]}
           />
-          <Pressable accessibilityRole="button" accessibilityState={{ expanded: listOpen }} onPress={() => setListOpen((value) => !value)} className="mt-3 flex-row items-center justify-between rounded-xl bg-indigo-50 px-3 py-2 active:opacity-70">
-            <Text className="text-sm font-bold text-indigo-700">{t("learn.listToggle")}</Text>
-            <Text className="text-sm font-bold text-indigo-700">{listOpen ? "▴" : "▾"}</Text>
+          <Pressable accessibilityRole="button" accessibilityState={{ expanded: listOpen }} onPress={() => setListOpen((value) => !value)} className="mt-3 flex-row items-center justify-between rounded-xl bg-indigo-50 dark:bg-white/10 px-3 py-2 active:opacity-70">
+            <Text className="text-sm font-bold text-indigo-700 dark:text-mint-300">{t("learn.listToggle")}</Text>
+            <Text className="text-sm font-bold text-indigo-700 dark:text-mint-300">{listOpen ? "▴" : "▾"}</Text>
           </Pressable>
         </Card>
         {listOpen ? <View className="mb-4">{panel}</View> : null}

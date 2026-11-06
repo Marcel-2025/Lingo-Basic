@@ -21,7 +21,7 @@ export const getDefaultSettings = (): AppSettings => ({
   difficulty: "all",
   dailyGoal: 20,
   theme: "Ocean",
-  isDarkMode: false,
+  isDarkMode: true,
   soundEnabled: true,
   vibrationEnabled: true,
   timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",

@@ -58,22 +58,22 @@ export default function ProfileScreen() {
   const calendar = (
     <Card>
       <View className="mb-4 flex-row items-center justify-between">
-        <Pressable accessibilityLabel={t("profile.prevMonth")} onPress={() => setCalendarDate(new Date(year, month - 1, 1))} className="rounded-lg bg-gray-100 px-3 py-2">
-          <Text className="text-gray-900">←</Text>
+        <Pressable accessibilityLabel={t("profile.prevMonth")} onPress={() => setCalendarDate(new Date(year, month - 1, 1))} className="rounded-lg bg-gray-100 dark:bg-white/10 px-3 py-2">
+          <Text className="text-gray-900 dark:text-white">←</Text>
         </Pressable>
-        <Text className="font-bold capitalize text-gray-900">{monthLabel}</Text>
+        <Text className="font-bold capitalize text-gray-900 dark:text-white">{monthLabel}</Text>
         <Pressable
           accessibilityLabel={t("profile.nextMonth")}
           disabled={isCurrentMonth}
           onPress={() => setCalendarDate(new Date(year, month + 1, 1))}
-          className={`rounded-lg bg-gray-100 px-3 py-2 ${isCurrentMonth ? "opacity-40" : ""}`}
+          className={`rounded-lg bg-gray-100 dark:bg-white/10 px-3 py-2 ${isCurrentMonth ? "opacity-40" : ""}`}
         >
-          <Text className="text-gray-900">→</Text>
+          <Text className="text-gray-900 dark:text-white">→</Text>
         </Pressable>
       </View>
       <View className="mb-2 flex-row">
         {WEEKDAYS.map((day) => (
-          <Text key={day} className="flex-1 text-center text-xs font-bold text-gray-500">
+          <Text key={day} className="flex-1 text-center text-xs font-bold text-gray-500 dark:text-blue-200/75">
             {day}
           </Text>
         ))}
@@ -84,42 +84,42 @@ export default function ProfileScreen() {
             {cell ? (
               <View
                 accessibilityLabel={cell.count > 0 ? t("profile.dayActivities", { day: cell.day, n: cell.count }) : t("profile.dayNone", { day: cell.day })}
-                className={`items-center rounded-lg py-2 ${cell.count > 0 ? "bg-green-100" : "bg-gray-50"} ${cell.dateKey === todayKey ? "border-2 border-indigo-400" : ""}`}
+                className={`items-center rounded-lg py-2 ${cell.count > 0 ? "bg-green-100 dark:bg-mint-500/25" : "bg-gray-50 dark:bg-white/5"} ${cell.dateKey === todayKey ? "border-2 border-indigo-400 dark:border-mint-400" : ""}`}
               >
-                <Text className={`text-sm ${cell.count > 0 ? "font-bold text-green-800" : "text-gray-500"}`}>{cell.day}</Text>
-                {cell.count > 1 ? <Text className="text-[10px] font-semibold text-green-800">{cell.count}×</Text> : null}
+                <Text className={`text-sm ${cell.count > 0 ? "font-bold text-green-800 dark:text-mint-300" : "text-gray-500 dark:text-blue-200/75"}`}>{cell.day}</Text>
+                {cell.count > 1 ? <Text className="text-[10px] font-semibold text-green-800 dark:text-mint-300">{cell.count}×</Text> : null}
               </View>
             ) : null}
           </View>
         ))}
       </View>
-      <Text className="mt-4 text-xs text-gray-600">
+      <Text className="mt-4 text-xs text-gray-600 dark:text-blue-100/85">
         {t("profile.monthSummary", { active: activeDays, activities, total: Object.keys(insights.learnedDays).length })}
       </Text>
       <Pressable onPress={() => setCalendarDate(new Date())} className="mt-2">
-        <Text className="text-xs font-bold text-indigo-700">{t("profile.toCurrentMonth")}</Text>
+        <Text className="text-xs font-bold text-indigo-700 dark:text-mint-300">{t("profile.toCurrentMonth")}</Text>
       </Pressable>
     </Card>
   );
   const learnedWords = (
     <Card>
-      <Text className="mb-4 text-lg font-bold text-gray-900">{t("profile.byTopic")}</Text>
-      {topicEntries.length === 0 ? <Text className="text-sm text-gray-600">{t("profile.noneYet")}</Text> : null}
+      <Text className="mb-4 text-lg font-bold text-gray-900 dark:text-white">{t("profile.byTopic")}</Text>
+      {topicEntries.length === 0 ? <Text className="text-sm text-gray-600 dark:text-blue-100/85">{t("profile.noneYet")}</Text> : null}
       <View className="gap-4">
         {topicEntries.map(([topicId, words]) => (
           <View key={topicId}>
-            <Text className="mb-2 font-bold text-gray-900">
-              {topicNames.get(topicId) ?? humanizeTopicId(topicId)} <Text className="text-xs font-semibold text-gray-500">({words.length})</Text>
+            <Text className="mb-2 font-bold text-gray-900 dark:text-white">
+              {topicNames.get(topicId) ?? humanizeTopicId(topicId)} <Text className="text-xs font-semibold text-gray-500 dark:text-blue-200/75">({words.length})</Text>
             </Text>
             <View className="flex-row flex-wrap gap-2">
               {words.map((word) => (
-                <View key={`${word.lang ?? "legacy"}:${word.id}`} className="flex-row items-center rounded-lg bg-indigo-50 px-2 py-1">
-                  <Text className="text-xs font-semibold text-indigo-800">
+                <View key={`${word.lang ?? "legacy"}:${word.id}`} className="flex-row items-center rounded-lg bg-indigo-50 dark:bg-white/10 px-2 py-1">
+                  <Text className="text-xs font-semibold text-indigo-800 dark:text-mint-300">
                     {word.de}
                     {word.x ? <Text className="font-normal"> · {word.x}</Text> : null}
                   </Text>
                   {word.lang && word.lang !== pack?.lang ? (
-                    <Text className="ml-1 rounded bg-white px-1 text-[10px] text-gray-600" accessibilityLabel={t(`languages.${word.lang}`)}>
+                    <Text className="ml-1 rounded bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-1 text-[10px] text-gray-600 dark:text-blue-100/85" accessibilityLabel={t(`languages.${word.lang}`)}>
                       {word.lang}
                     </Text>
                   ) : null}
@@ -133,7 +133,7 @@ export default function ProfileScreen() {
   );
   const achievements = (
     <Card>
-      <Text className="mb-4 text-lg font-bold text-gray-900">{t("profile.achievements")}</Text>
+      <Text className="mb-4 text-lg font-bold text-gray-900 dark:text-white">{t("profile.achievements")}</Text>
       <View className="gap-3">
         <Achievement name={t("profile.a1")} done={stats.xp > 0} subtitle={t("profile.a1t")} />
         <Achievement name={t("profile.a2")} done={stats.streak >= 3} subtitle={t("profile.a2t")} />

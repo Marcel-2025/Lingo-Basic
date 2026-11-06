@@ -94,27 +94,27 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   const accuracy = history.length ? Math.round((correctCount / history.length) * 100) : 0;
   const image = prefs.showImages ? WORD_IMAGES[question.word.id] : undefined;
   const optionStyle = (option: string) => {
-    if (!isLocked) return { box: "border-transparent bg-white", text: "text-gray-900" };
-    if (option === question.word.x) return { box: "border-green-400 bg-green-100", text: "text-green-800" };
-    if (option === selected) return { box: "border-red-400 bg-red-100", text: "text-red-800" };
-    return { box: "border-transparent bg-white/70", text: "text-gray-500" };
+    if (!isLocked) return { box: "border-transparent bg-white dark:border dark:border-white/10 dark:bg-night-card/85", text: "text-gray-900 dark:text-white" };
+    if (option === question.word.x) return { box: "border-green-400 dark:border-mint-400 bg-green-100 dark:bg-mint-500/25", text: "text-green-800 dark:text-mint-300" };
+    if (option === selected) return { box: "border-red-400 dark:border-red-300 bg-red-100 dark:bg-red-500/25", text: "text-red-800 dark:text-red-200" };
+    return { box: "border-transparent bg-white/70 dark:bg-white/5", text: "text-gray-500 dark:text-blue-200/75" };
   };
 
   const hearts = (
-    <View className="flex-row items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
+    <View className="flex-row items-center justify-between rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
       <View className="flex-row items-center gap-1">
         {isPremium ? <Text className="text-xl">❤️</Text> : Array.from({ length: MAX_LIVES }, (_, index) => <Text key={index} className="text-xl" style={index >= lives ? { opacity: 0.25 } : null}>❤️</Text>)}
-        {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900">{t("exercises.premiumInfinite")}</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
+        {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900 dark:text-white">{t("exercises.premiumInfinite")}</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
       </View>
-      {!isPremium && lives < MAX_LIVES ? <Text className="text-xs font-semibold text-gray-500">{t("exercises.nextIn", { time: formatCountdown(msUntilNext) })}</Text> : null}
-      {!isPremium ? <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="rounded-full bg-indigo-50 px-2 py-1 active:opacity-70"><Text className="text-xs font-bold text-indigo-700">💎</Text></Pressable> : null}
+      {!isPremium && lives < MAX_LIVES ? <Text className="text-xs font-semibold text-gray-500 dark:text-blue-200/75">{t("exercises.nextIn", { time: formatCountdown(msUntilNext) })}</Text> : null}
+      {!isPremium ? <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="rounded-full bg-indigo-50 dark:bg-white/10 px-2 py-1 active:opacity-70"><Text className="text-xs font-bold text-indigo-700 dark:text-mint-300">💎</Text></Pressable> : null}
     </View>
   );
   const outOfLivesCard = (
-    <View className="w-full items-center rounded-3xl bg-white p-6 shadow-sm" style={{ maxWidth: 448 }}>
+    <View className="w-full items-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-6 shadow-sm" style={{ maxWidth: 448 }}>
       <Text className="text-5xl">💔</Text>
-      <Text className="mt-2 text-xl font-black text-gray-900">{t("exercises.outOfLives")}</Text>
-      <Text className="mt-1 text-center text-sm text-gray-600">{t("exercises.outOfLivesText", { time: formatCountdown(msUntilNext) })}</Text>
+      <Text className="mt-2 text-xl font-black text-gray-900 dark:text-white">{t("exercises.outOfLives")}</Text>
+      <Text className="mt-1 text-center text-sm text-gray-600 dark:text-blue-100/85">{t("exercises.outOfLivesText", { time: formatCountdown(msUntilNext) })}</Text>
       <View className="mt-4 w-full gap-2">
         <SoftButton label={t("exercises.refill", { cost: REFILL_COIN_COST, coins })} disabled={coins < REFILL_COIN_COST} onPress={() => void refillLivesWithCoins()} />
         <GradientButton label={t("exercises.premiumLives")} onPress={() => router.push("/premium")} />
@@ -141,7 +141,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
       <View className="mb-5 min-h-9 flex-row items-center gap-2" accessibilityLiveRegion="assertive">
         {isLocked ? (
           <>
-            <Text className={`rounded-xl px-3 py-2 text-sm font-bold ${isCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+            <Text className={`rounded-xl px-3 py-2 text-sm font-bold ${isCorrect ? "bg-green-100 dark:bg-mint-500/25 text-green-800 dark:text-mint-300" : "bg-red-100 dark:bg-red-500/25 text-red-800 dark:text-red-200"}`}>
               {isCorrect ? t("exercises.correct") : t("exercises.wrong", { answer: question.word.x })}
             </Text>
             <IconButton icon="🔊" label={t("learn.speak", { text: question.word.x })} onPress={() => speak(question.word.x, pack.lang, { slow: prefs.slowSpeech })} />
@@ -170,13 +170,13 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   );
 
   const historyList = (
-    <View className="rounded-3xl bg-white p-4 shadow-sm">
+    <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
       <Label>{t("exercises.lastAnswers")}</Label>
-      {history.length === 0 ? <Text className="text-sm text-gray-500">{t("exercises.noAnswers")}</Text> : null}
+      {history.length === 0 ? <Text className="text-sm text-gray-500 dark:text-blue-200/75">{t("exercises.noAnswers")}</Text> : null}
       {history.map((entry) => (
         <View key={entry.key} className="mb-1 flex-row items-center rounded-xl px-1">
-          <Text className={`mr-2 w-5 text-sm ${entry.correct ? "text-green-600" : "text-red-600"}`}>{entry.correct ? "✓" : "✗"}</Text>
-          <Text className="flex-1 text-sm text-gray-900" numberOfLines={1}><Text className="font-semibold">{entry.word.de}</Text><Text className="text-gray-500"> · {entry.word.x}</Text></Text>
+          <Text className={`mr-2 w-5 text-sm ${entry.correct ? "text-green-600 dark:text-mint-300" : "text-red-600 dark:text-red-300"}`}>{entry.correct ? "✓" : "✗"}</Text>
+          <Text className="flex-1 text-sm text-gray-900 dark:text-white" numberOfLines={1}><Text className="font-semibold">{entry.word.de}</Text><Text className="text-gray-500 dark:text-blue-200/75"> · {entry.word.x}</Text></Text>
           <Pressable accessibilityLabel={t("learn.speak", { text: entry.word.x })} hitSlop={8} onPress={() => speak(entry.word.x, pack.lang, { slow: prefs.slowSpeech })} className="px-2 py-2 active:opacity-50"><Text>🔊</Text></Pressable>
         </View>
       ))}
@@ -207,9 +207,9 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
 
 function MiniStat({ label, value }: { label: string; value: string }) {
   return (
-    <View className="flex-1 items-center rounded-2xl bg-white px-2 py-3 shadow-sm">
-      <Text className="text-lg font-black text-gray-900">{value}</Text>
-      <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500">{label}</Text>
+    <View className="flex-1 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-2 py-3 shadow-sm">
+      <Text className="text-lg font-black text-gray-900 dark:text-white">{value}</Text>
+      <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-blue-200/75">{label}</Text>
     </View>
   );
 }
