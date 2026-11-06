@@ -1,9 +1,9 @@
 import { Pressable, Text, View } from "react-native";
 import { isWordLearned } from "@/app/lib/learning-history";
-import { SUPPORTED_LANGUAGES } from "@/app/lib/languages";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import type { LanguagePack, TopicItem, VocabItem } from "@/app/lib/types";
 import { Label, ProgressBar } from "~/components/ui";
+import { useT } from "~/i18n";
 import { speak } from "~/lib/feedback";
 import { useLearningPrefs } from "~/lib/learning-prefs";
 import { useAppState } from "~/state/app-state";
@@ -38,9 +38,10 @@ export function LearnPanel({
 }) {
   const { insights, settings, todayKey } = useAppState();
   const [prefs] = useLearningPrefs();
+  const t = useT();
   const today = insights.learnedDays[todayKey()] ?? 0;
   const goal = Math.max(1, settings.dailyGoal);
-  const langLabel = SUPPORTED_LANGUAGES[pack.lang].label;
+  const langLabel = t(`languages.${pack.lang}`);
   const learned = (word: VocabItem) => {
     const topic = findTopicForWord(pack, word.id);
     return topic ? isWordLearned(insights, topic.id, word.id, pack.lang) : false;
@@ -51,22 +52,22 @@ export function LearnPanel({
     <View className="gap-4">
       {/* Daily goal + session */}
       <View className="rounded-3xl bg-white p-4 shadow-sm">
-        <Label>Tagesziel</Label>
+        <Label>{t("learn.dailyGoal")}</Label>
         <View className="mb-2 flex-row items-baseline justify-between">
-          <Text className="text-2xl font-black text-gray-900">{Math.min(today, goal)} <Text className="text-sm font-semibold text-gray-500">/ {goal} Karten</Text></Text>
-          <Text className="text-sm font-bold text-gray-600">{today >= goal ? "Geschafft 🎉" : `noch ${goal - today}`}</Text>
+          <Text className="text-2xl font-black text-gray-900">{Math.min(today, goal)} <Text className="text-sm font-semibold text-gray-500">{t("learn.ofGoal", { goal })}</Text></Text>
+          <Text className="text-sm font-bold text-gray-600">{today >= goal ? t("learn.goalDone") : t("learn.goalLeft", { n: goal - today })}</Text>
         </View>
         <ProgressBar value={today / goal} />
         <View className="mt-4 flex-row gap-3">
-          <View className="flex-1 rounded-2xl bg-green-50 p-3"><Text className="text-xs font-bold text-green-800">Gewusst</Text><Text className="text-xl font-black text-green-800">{session.known}</Text></View>
-          <View className="flex-1 rounded-2xl bg-red-50 p-3"><Text className="text-xs font-bold text-red-700">Noch üben</Text><Text className="text-xl font-black text-red-700">{session.practice}</Text></View>
+          <View className="flex-1 rounded-2xl bg-green-50 p-3"><Text className="text-xs font-bold text-green-800">{t("learn.known")}</Text><Text className="text-xl font-black text-green-800">{session.known}</Text></View>
+          <View className="flex-1 rounded-2xl bg-red-50 p-3"><Text className="text-xs font-bold text-red-700">{t("learn.practice")}</Text><Text className="text-xl font-black text-red-700">{session.practice}</Text></View>
         </View>
       </View>
 
       {showTopics ? (
         <View className="rounded-3xl bg-white p-4 shadow-sm">
-          <Label>Themen</Label>
-          <TopicRow icon="🌍" title="Alle Themen" count={allCount} active={activeTopic.id === "all"} onPress={() => onSelectTopic("all")} />
+          <Label>{t("learn.topics")}</Label>
+          <TopicRow icon="🌍" title={t("learn.allTopics")} count={allCount} active={activeTopic.id === "all"} onPress={() => onSelectTopic("all")} />
           {pack.topics.map((topic) => (
             <TopicRow key={topic.id} icon={topic.icon ?? "📘"} title={topic.title} count={topic.vocab.length} active={activeTopic.id === topic.id} onPress={() => onSelectTopic(topic.id)} />
           ))}
@@ -77,22 +78,22 @@ export function LearnPanel({
       <View className="rounded-3xl bg-white p-4 shadow-sm">
         <View className="mb-2 flex-row items-center justify-between">
           <Label>{activeTopic.title}</Label>
-          <Text className="mb-2 text-xs font-bold text-gray-500">{learnedInTopic}/{activeTopic.vocab.length} gelernt</Text>
+          <Text className="mb-2 text-xs font-bold text-gray-500">{t("learn.learnedOf", { learned: learnedInTopic, total: activeTopic.vocab.length })}</Text>
         </View>
-        <Text className="mb-3 text-xs text-gray-500">Tippe ein Wort, um es als Nächstes zu lernen.</Text>
+        <Text className="mb-3 text-xs text-gray-500">{t("learn.tapWord")}</Text>
         {activeTopic.vocab.map((word) => {
           const isCurrent = word.id === currentWordId;
           const done = learned(word);
           return (
             <View key={word.id} className={`mb-1 flex-row items-center rounded-xl px-2 ${isCurrent ? "bg-indigo-50" : ""}`}>
-              <Pressable accessibilityRole="button" accessibilityLabel={`${word.de}, ${langLabel}: ${word.x}. Als Nächstes lernen`} onPress={() => onPickWord(word)} className="flex-1 flex-row items-center py-2 active:opacity-60">
+              <Pressable accessibilityRole="button" accessibilityLabel={t("learn.wordRow", { base: word.de, language: langLabel, target: word.x })} onPress={() => onPickWord(word)} className="flex-1 flex-row items-center py-2 active:opacity-60">
                 <Text className={`mr-2 w-4 text-xs ${done ? "text-green-600" : "text-gray-300"}`}>{done ? "✓" : "•"}</Text>
                 <Text className="flex-1 text-sm text-gray-900" numberOfLines={1}>
                   <Text className="font-semibold">{word.de}</Text>
                   <Text className="text-gray-500"> · {word.x}</Text>
                 </Text>
               </Pressable>
-              <Pressable accessibilityLabel={`${word.x} vorlesen`} hitSlop={8} onPress={() => speak(word.x, pack.lang, { slow: prefs.slowSpeech })} className="px-2 py-2 active:opacity-50">
+              <Pressable accessibilityLabel={t("learn.speak", { text: word.x })} hitSlop={8} onPress={() => speak(word.x, pack.lang, { slow: prefs.slowSpeech })} className="px-2 py-2 active:opacity-50">
                 <Text className="text-base">🔊</Text>
               </Pressable>
             </View>
@@ -102,7 +103,7 @@ export function LearnPanel({
 
       {pack.sentences.length > 0 ? (
         <View className="rounded-3xl bg-white p-4 shadow-sm">
-          <Label>Beispielsätze</Label>
+          <Label>{t("learn.sentences")}</Label>
           {pack.sentences.map((sentence) => {
             const translation = sentence.translations[pack.lang.toLowerCase()] ?? sentence.x;
             return (
@@ -111,8 +112,8 @@ export function LearnPanel({
                 <Text className="mt-1 text-xs text-gray-600">{sentence.de}</Text>
                 {translation ? (
                   <View className="mt-2 flex-row gap-2">
-                    <Pressable accessibilityLabel="Satz vorlesen" onPress={() => speak(translation, pack.lang)} className="rounded-full bg-indigo-50 px-3 py-1 active:opacity-60"><Text className="text-xs font-bold text-indigo-700">🔊 Anhören</Text></Pressable>
-                    <Pressable accessibilityLabel="Satz langsam vorlesen" onPress={() => speak(translation, pack.lang, { slow: true })} className="rounded-full bg-indigo-50 px-3 py-1 active:opacity-60"><Text className="text-xs font-bold text-indigo-700">🐢 Langsam</Text></Pressable>
+                    <Pressable accessibilityLabel={t("learn.listenLabel")} onPress={() => speak(translation, pack.lang)} className="rounded-full bg-indigo-50 px-3 py-1 active:opacity-60"><Text className="text-xs font-bold text-indigo-700">{t("learn.listen")}</Text></Pressable>
+                    <Pressable accessibilityLabel={t("learn.listenSlowLabel")} onPress={() => speak(translation, pack.lang, { slow: true })} className="rounded-full bg-indigo-50 px-3 py-1 active:opacity-60"><Text className="text-xs font-bold text-indigo-700">{t("learn.slow")}</Text></Pressable>
                   </View>
                 ) : null}
               </View>

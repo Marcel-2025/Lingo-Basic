@@ -1,4 +1,4 @@
-export type LanguageCode = "EN" | "ES" | "FR" | "RU" | "IT" | "TR" | "PT" | "NL" | "PL";
+export type LanguageCode = "DE" | "EN" | "ES" | "FR" | "RU" | "IT" | "TR" | "PT" | "NL" | "PL";
 
 export type CefrLevel = "A1" | "A2" | "B1";
 
@@ -10,7 +10,9 @@ export type ThemeName = "Ocean" | "Sunset" | "Lime" | "Grape";
 
 export interface VocabItem {
   id: string;
+  /** Meaning in the learner's base language (historically German, hence the name). */
   de: string;
+  /** Word in the target language. */
   x: string;
   ex?: string;
   exTr?: string;
@@ -56,6 +58,8 @@ export interface UserStats {
 }
 
 export interface AppSettings {
+  /** App language; also the base language the words are learned from (mobile). */
+  uiLang: LanguageCode;
   targetLang: LanguageCode;
   contentLevel: CefrLevel;
   difficulty: "all" | Difficulty;

@@ -21,6 +21,7 @@ import {
 } from "@/app/lib/city";
 import { REFILL_COIN_COST } from "@/app/lib/lives";
 import { DECORATIONS } from "@/app/lib/premium-benefits";
+import { t, type TranslationKey } from "~/i18n";
 import { celebrate } from "~/lib/celebrations";
 import { livesActions } from "~/lib/lives-store";
 import { getDayActivity, updateDayActivity, useDayActivity } from "~/lib/day-activity";
@@ -100,7 +101,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
     for (const quest of quests) {
       if (!quest.done && quest.progress >= quest.target) {
         setCity((previous) => completeQuest(previous, dateKey, quest.id));
-        push({ kind: "quest", title: quest.title, coins: quest.reward });
+        push({ kind: "quest", title: t(`quests.${quest.id}` as TranslationKey), coins: quest.reward });
       }
     }
   }, [dateKey, push, quests, setCity]);
@@ -128,7 +129,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
       const next = upgradeBuilding(city, buildingId, stats, insights);
       if (building && next !== city) {
         setCity(() => next);
-        push({ kind: "building", name: building.name, icon: building.icon, level: before + 1 });
+        push({ kind: "building", name: t(`buildings.${building.id}` as TranslationKey), icon: building.icon, level: before + 1 });
       }
     },
     claimChest: () => {
@@ -141,7 +142,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
       if (next === city) return false;
       const decoration = DECORATIONS.find((entry) => entry.id === decorationId);
       setCity(() => next);
-      if (decoration) push({ kind: "building", name: decoration.name, icon: decoration.icon, level: 1 });
+      if (decoration) push({ kind: "building", name: t(`decorations.${decoration.id}` as TranslationKey), icon: decoration.icon, level: 1 });
       return true;
     },
     refillLivesWithCoins: () => {

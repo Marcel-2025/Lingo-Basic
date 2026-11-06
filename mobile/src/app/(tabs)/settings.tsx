@@ -4,9 +4,10 @@ import * as Sharing from "expo-sharing";
 import { router } from "expo-router";
 import { useState } from "react";
 import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
-import { SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
+import { getDefaultTargetFor, getLearnableLanguages, SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
 import type { AppSettings, Difficulty, LanguageCode } from "@/app/lib/types";
 import { Card, GradientButton, SelectField, SoftButton, Toggle, useScreenColors } from "~/components/ui";
+import { useT } from "~/i18n";
 import { clearImportedPacks, importPack, removeImportedPack } from "~/lib/packs";
 import { THEMES } from "~/lib/theme";
 import { requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
@@ -19,19 +20,22 @@ export default function SettingsScreen() {
   const reminders = useReminderSettings();
   const { source, message: packMessage, pack, reload } = usePackState();
   const colors = useScreenColors();
+  const t = useT();
   const { isWide, contentMaxWidth } = useResponsive();
   const [message, setMessage] = useState("");
   const [isBusy, setIsBusy] = useState(false);
   const [dailyGoal, setDailyGoal] = useState(String(settings.dailyGoal));
 
   const set = <Key extends keyof AppSettings>(key: Key, value: AppSettings[Key]) => updateSettings((previous) => ({ ...previous, [key]: value }));
+  /** Changing the app language also changes the base language, so a target equal to it gets swapped. */
+  const setUiLang = (uiLang: LanguageCode) => updateSettings((previous) => ({ ...previous, uiLang, targetLang: previous.targetLang === uiLang ? getDefaultTargetFor(uiLang) : previous.targetLang }));
 
   const run = async (action: () => Promise<string>) => {
     setIsBusy(true);
     try {
       setMessage(await action());
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Aktion fehlgeschlagen.");
+      setMessage(error instanceof Error ? error.message : t("common.actionFailed"));
     } finally {
       setIsBusy(false);
     }
@@ -46,21 +50,22 @@ export default function SettingsScreen() {
       try {
         json = JSON.parse(await new File(asset.uri).text());
       } catch {
-        throw new Error(`„${asset.name}“ enthält kein gültiges JSON.`);
+        throw new Error(t("settings.invalidJsonFile", { name: asset.name }));
       }
       const imported = await importPack(json);
-      updateSettings((previous) => ({ ...previous, targetLang: imported.pack!.lang, contentLevel: imported.pack!.level }));
+      // Imported packs are German-based, so the app switches to German as base language.
+      updateSettings((previous) => ({ ...previous, uiLang: "DE", targetLang: imported.pack!.lang, contentLevel: imported.pack!.level }));
       reload();
-      return `Paket ${SUPPORTED_LANGUAGES[imported.pack!.lang].label} ${imported.pack!.level} wurde geprüft und offline gespeichert.`;
+      return t("settings.packImported", { language: t(`languages.${imported.pack!.lang}`), level: imported.pack!.level });
     });
 
   const exportBackup = () =>
     run(async () => {
       const file = new File(Paths.cache, `lingo-pro-sicherung-${todayKey()}.json`);
       file.write(JSON.stringify(exportSnapshot(), null, 2));
-      if (!(await Sharing.isAvailableAsync())) return `Sicherung gespeichert unter ${file.uri}`;
-      await Sharing.shareAsync(file.uri, { mimeType: "application/json", dialogTitle: "Lingo-Pro-Sicherung speichern" });
-      return "Sicherung erstellt. Speichere sie z. B. in deiner Cloud oder schicke sie dir selbst.";
+      if (!(await Sharing.isAvailableAsync())) return t("settings.backupSavedAt", { path: file.uri });
+      await Sharing.shareAsync(file.uri, { mimeType: "application/json", dialogTitle: t("settings.backupDialog") });
+      return t("settings.backupDone");
     });
 
   const importBackup = () =>
@@ -71,7 +76,7 @@ export default function SettingsScreen() {
       try {
         json = JSON.parse(await new File(result.assets[0].uri).text());
       } catch {
-        throw new Error("Die Datei enthält kein gültiges JSON.");
+        throw new Error(t("settings.invalidJson"));
       }
       const outcome = importSnapshot(json);
       if (!outcome.ok) throw new Error(outcome.message);
@@ -80,52 +85,61 @@ export default function SettingsScreen() {
     });
 
   const confirmReset = () => {
-    Alert.alert("Alle Daten löschen?", "Fortschritt, Stadt und Einstellungen auf diesem Gerät werden dauerhaft gelöscht. Erstelle vorher eine Sicherung, wenn du sie behalten willst.", [
-      { text: "Abbrechen", style: "cancel" },
+    Alert.alert(t("settings.deleteTitle"), t("settings.deleteText"), [
+      { text: t("common.cancel"), style: "cancel" },
       {
-        text: "Endgültig löschen",
+        text: t("settings.deleteConfirm"),
         style: "destructive",
         onPress: () =>
           void run(async () => {
             await clearImportedPacks();
             resetAll();
             reload();
-            return "Alle Daten wurden gelöscht.";
+            return t("settings.deleted");
           }),
       },
     ]);
   };
 
-  const levelStatus = source === "import" ? "✓ Verfügbar · importiertes Pack" : pack ? "✓ Verfügbar · in der App enthalten" : (packMessage ?? "");
+  const levelStatus = source === "import" ? t("settings.availableImport") : pack ? t("settings.available") : packMessage === "packs.unavailable" ? t("packs.unavailable") : (packMessage ?? "");
 
-  const title = <Text className={`text-3xl font-bold ${colors.text}`}>Einstellungen</Text>;
+  const title = <Text className={`text-3xl font-bold ${colors.text}`}>{t("settings.title")}</Text>;
   const learningCard = (
     <Card className="gap-4">
+      <View>
+        <SelectField<LanguageCode>
+          label={t("settings.appLanguage")}
+          value={settings.uiLang}
+          onChange={setUiLang}
+          options={(Object.keys(SUPPORTED_LANGUAGES) as LanguageCode[]).map((code) => ({ value: code, label: `${t(`languages.${code}`)} · ${SUPPORTED_LANGUAGES[code].label}` }))}
+        />
+        <Text className="mt-2 text-xs text-gray-600">{t("settings.appLanguageHint")}</Text>
+      </View>
       <SelectField<LanguageCode>
-        label="Zielsprache"
+        label={t("settings.targetLanguage")}
         value={settings.targetLang}
         onChange={(value) => set("targetLang", value)}
-        options={(Object.keys(SUPPORTED_LANGUAGES) as LanguageCode[]).map((code) => ({ value: code, label: SUPPORTED_LANGUAGES[code].label }))}
+        options={getLearnableLanguages(settings.uiLang).map((code) => ({ value: code, label: t(`languages.${code}`) }))}
       />
       <View>
-        <SelectField label="Content-Level" value={settings.contentLevel} onChange={(value) => set("contentLevel", value)} options={SUPPORTED_LEVELS.map((level) => ({ value: level, label: level }))} />
+        <SelectField label={t("settings.contentLevel")} value={settings.contentLevel} onChange={(value) => set("contentLevel", value)} options={SUPPORTED_LEVELS.map((level) => ({ value: level, label: level }))} />
         <Text className={`mt-2 text-xs font-semibold ${pack ? "text-gray-600" : "text-red-700"}`} accessibilityLiveRegion="polite">
           {levelStatus}
         </Text>
       </View>
       <SelectField<string>
-        label="Lernmodus"
+        label={t("settings.mode")}
         value={String(settings.difficulty)}
         onChange={(value) => set("difficulty", value === "all" ? "all" : (Number(value) as Difficulty))}
         options={[
-          { value: "all", label: "Alle Schwierigkeiten" },
-          { value: "1", label: "Einfach" },
-          { value: "2", label: "Mittel" },
-          { value: "3", label: "Schwer" },
+          { value: "all", label: t("settings.allDifficulties") },
+          { value: "1", label: t("settings.easy") },
+          { value: "2", label: t("settings.medium") },
+          { value: "3", label: t("settings.hard") },
         ]}
       />
       <View>
-        <Text className="mb-2 text-sm font-bold text-gray-600">Tagesziel (Karten)</Text>
+        <Text className="mb-2 text-sm font-bold text-gray-600">{t("settings.dailyGoal")}</Text>
         <TextInput
           value={dailyGoal}
           onChangeText={setDailyGoal}
@@ -135,12 +149,12 @@ export default function SettingsScreen() {
             set("dailyGoal", value);
           }}
           keyboardType="number-pad"
-          accessibilityLabel="Tagesziel"
+          accessibilityLabel={t("settings.dailyGoalLabel")}
           className="rounded-xl bg-gray-100 p-3 text-gray-900"
         />
       </View>
       <View>
-        <Text className="mb-2 text-sm font-bold text-gray-600">Farbschema</Text>
+        <Text className="mb-2 text-sm font-bold text-gray-600">{t("settings.theme")}</Text>
         <View className="flex-row gap-2">
           {THEMES.map((theme) => (
             <Pressable
@@ -155,63 +169,63 @@ export default function SettingsScreen() {
           ))}
         </View>
       </View>
-      <Toggle label="Dark Mode" value={settings.isDarkMode} onChange={(value) => set("isDarkMode", value)} />
-      <Toggle label="Feedback-Töne" value={settings.soundEnabled} onChange={(value) => set("soundEnabled", value)} />
-      <Toggle label="Vibration" value={settings.vibrationEnabled} onChange={(value) => set("vibrationEnabled", value)} />
+      <Toggle label={t("settings.darkMode")} value={settings.isDarkMode} onChange={(value) => set("isDarkMode", value)} />
+      <Toggle label={t("settings.sounds")} value={settings.soundEnabled} onChange={(value) => set("soundEnabled", value)} />
+      <Toggle label={t("settings.vibration")} value={settings.vibrationEnabled} onChange={(value) => set("vibrationEnabled", value)} />
     </Card>
   );
   const learnedToday = (insights.learnedDays[todayKey()] ?? 0) > 0;
   const applyReminders = (patch: Partial<typeof reminders>) => run(async () => {
     if (patch.enabled) {
       const granted = await requestReminderPermission();
-      if (!granted) return "Benachrichtigungen sind für Lingo Pro nicht erlaubt. Bitte in den Systemeinstellungen freigeben.";
+      if (!granted) return t("settings.notAllowed");
     }
     await setReminderSettings(patch);
     await syncReminders(learnedToday, stats.streak);
-    return patch.enabled === false ? "Erinnerungen ausgeschaltet." : "Erinnerung gespeichert.";
+    return patch.enabled === false ? t("settings.remindersOff") : t("settings.reminderSaved");
   });
   const reminderTime = `${String(reminders.hour).padStart(2, "0")}:${String(reminders.minute).padStart(2, "0")}`;
   const reminderCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">Tägliche Erinnerung</Text>
-      <Text className="text-sm text-gray-600">Eine Nachricht pro Tag zur Wunschzeit – und abends eine Warnung, wenn deine Serie in Gefahr ist. Alles lokal auf dem Gerät.</Text>
-      <Toggle label="Erinnerung aktiv" value={reminders.enabled} onChange={(value) => void applyReminders({ enabled: value })} />
+      <Text className="text-lg font-bold text-gray-900">{t("settings.reminderTitle")}</Text>
+      <Text className="text-sm text-gray-600">{t("settings.reminderText")}</Text>
+      <Toggle label={t("settings.reminderOn")} value={reminders.enabled} onChange={(value) => void applyReminders({ enabled: value })} />
       <SelectField<string>
-        label="Uhrzeit"
+        label={t("settings.time")}
         value={reminderTime}
         onChange={(value) => { const [hour, minute] = value.split(":").map(Number); void applyReminders({ hour, minute }); }}
-        options={Array.from({ length: 16 }, (_, index) => 6 + index).flatMap((hour) => ["00", "30"].map((minute) => ({ value: `${String(hour).padStart(2, "0")}:${minute}`, label: `${String(hour).padStart(2, "0")}:${minute} Uhr` })))}
+        options={Array.from({ length: 16 }, (_, index) => 6 + index).flatMap((hour) => ["00", "30"].map((minute) => ({ value: `${String(hour).padStart(2, "0")}:${minute}`, label: t("settings.timeFormat", { time: `${String(hour).padStart(2, "0")}:${minute}` }) })))}
       />
-      <Toggle label="Serien-Warnung am Abend" value={reminders.streakWarning} onChange={(value) => void applyReminders({ streakWarning: value })} />
+      <Toggle label={t("settings.streakWarning")} value={reminders.streakWarning} onChange={(value) => void applyReminders({ streakWarning: value })} />
     </Card>
   );
   const contentCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">Inhalte verwalten</Text>
-      <Text className="text-sm text-gray-600">Alle Sprachpakete sind in der App enthalten und funktionieren offline. Eigene Pakete (JSON) werden vor dem Speichern geprüft.</Text>
-      <GradientButton label="Aus JSON-Datei importieren" onPress={() => void importFromFile()} disabled={isBusy} />
+      <Text className="text-lg font-bold text-gray-900">{t("settings.contentTitle")}</Text>
+      <Text className="text-sm text-gray-600">{t("settings.contentText")}</Text>
+      <GradientButton label={t("settings.importJson")} onPress={() => void importFromFile()} disabled={isBusy} />
       {source === "import" ? (
         <SoftButton
-          label="Mitgeliefertes Pack wiederherstellen"
+          label={t("settings.restoreBundled")}
           disabled={isBusy}
           onPress={() =>
             void run(async () => {
               await removeImportedPack(settings.targetLang, settings.contentLevel);
               reload();
-              return "Das mitgelieferte Pack wird wieder verwendet.";
+              return t("settings.restoredBundled");
             })
           }
         />
       ) : null}
       <SoftButton
-        label="Alle importierten Packs löschen"
+        label={t("settings.deleteImported")}
         tone="red"
         disabled={isBusy}
         onPress={() =>
           void run(async () => {
             await clearImportedPacks();
             reload();
-            return "Alle importierten Packs wurden gelöscht.";
+            return t("settings.deletedImported");
           })
         }
       />
@@ -219,20 +233,20 @@ export default function SettingsScreen() {
   );
   const premiumCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">{isPremium ? "Premium 💎" : "Premium"}</Text>
-      <Text className="text-sm text-gray-600">{isPremium ? "Unendlich Leben, +50 % XP, Streak-Schutz und Stadt-Extras sind aktiv." : "Unendlich Leben, +50 % XP und Münzen, Streak-Schutz, Stadt-Extras."}</Text>
-      <GradientButton label={isPremium ? "Premium und Käufe verwalten" : "Premium ansehen"} onPress={() => router.push("/premium")} />
+      <Text className="text-lg font-bold text-gray-900">{isPremium ? t("settings.premiumActive") : t("settings.premium")}</Text>
+      <Text className="text-sm text-gray-600">{isPremium ? t("settings.premiumActiveText") : t("settings.premiumText")}</Text>
+      <GradientButton label={isPremium ? t("settings.managePremium") : t("settings.viewPremium")} onPress={() => router.push("/premium")} />
     </Card>
   );
   const accountCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">Deine Daten</Text>
-      <Text className="text-sm text-gray-600">Lingo Pro braucht kein Konto. Dein Fortschritt bleibt auf diesem Gerät. Mit einer Sicherung nimmst du ihn auf ein neues Gerät mit.</Text>
-      <GradientButton label="Sicherung erstellen (Datei teilen)" onPress={() => void exportBackup()} disabled={isBusy} />
-      <SoftButton label="Sicherung wiederherstellen" disabled={isBusy} onPress={() => void importBackup()} />
-      <SoftButton label="Alle Daten löschen" tone="red" disabled={isBusy} onPress={confirmReset} />
+      <Text className="text-lg font-bold text-gray-900">{t("settings.dataTitle")}</Text>
+      <Text className="text-sm text-gray-600">{t("settings.dataText")}</Text>
+      <GradientButton label={t("settings.backup")} onPress={() => void exportBackup()} disabled={isBusy} />
+      <SoftButton label={t("settings.restore")} disabled={isBusy} onPress={() => void importBackup()} />
+      <SoftButton label={t("settings.deleteAll")} tone="red" disabled={isBusy} onPress={confirmReset} />
       <Pressable accessibilityRole="link" onPress={() => router.push("/privacy")} className="py-2">
-        <Text className="text-center text-sm font-bold text-indigo-700">Datenschutzerklärung</Text>
+        <Text className="text-center text-sm font-bold text-indigo-700">{t("settings.privacy")}</Text>
       </Pressable>
     </Card>
   );

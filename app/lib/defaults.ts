@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE, DEFAULT_LEVEL } from "@/app/lib/languages";
+import { DEFAULT_LANGUAGE, DEFAULT_UI_LANGUAGE, DEFAULT_LEVEL } from "@/app/lib/languages";
 import type { AppSettings, LearningInsights, UserStats } from "@/app/lib/types";
 
 export const PROGRESS_SCHEMA_VERSION = 3;
@@ -15,6 +15,7 @@ export const DEFAULT_STATS: UserStats = {
 };
 
 export const getDefaultSettings = (): AppSettings => ({
+  uiLang: DEFAULT_UI_LANGUAGE,
   targetLang: DEFAULT_LANGUAGE,
   contentLevel: DEFAULT_LEVEL,
   difficulty: "all",

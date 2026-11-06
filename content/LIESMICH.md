@@ -33,7 +33,10 @@ node scripts/content.mjs import     # CSV → public/packs + App-Packs neu erzeu
 
 # Bilder mit ComfyUI (START_ComfyUI.bat vorher starten)
 S:\ArtIsFantasy-AI-Studio\app\ComfyUI_windows_portable\python_embeded\python.exe scripts\generate_word_images.py --limit 10
-node scripts/generate-mobile-packs.mjs
+node scripts/generate-mobile-content.mjs   # Inhalte für die native App (alle Sprachen)
+node scripts/generate-mobile-packs.mjs     # Wortbilder-Index
 ```
 
-Eine neue Sprache braucht zusätzlich einen Eintrag in `app/lib/languages.ts` (Name und Sprachausgabe-Code).
+Eine neue Sprache braucht zusätzlich einen Eintrag in `app/lib/languages.ts` (Name und Sprachausgabe-Code), eine Spalte in `themen.csv` und ein Wörterbuch in `mobile/src/i18n/`.
+
+`themen.csv` enthält die Themennamen in allen Sprachen (`thema_id;de;en;…`).

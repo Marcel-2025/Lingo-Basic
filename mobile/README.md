@@ -33,7 +33,7 @@ npm run typecheck && npm run lint
 
 Expo Go reicht nicht (native Module für Audio, Benachrichtigungen, Reanimated) – es wird immer ein Development Build verwendet.
 
-Neue Sprache oder neues Level: JSON unter `public/packs/{lang}/{level}.json` ablegen, dann im Repo-Root `node scripts/generate-mobile-packs.mjs` ausführen.
+Die App bündelt alle Inhalte aus `content/vokabeln.csv`, `content/saetze.csv` und `content/themen.csv` (alle 10 Sprachen) in `mobile/src/content/words.json`. Nach dem Bearbeiten der CSVs im Repo-Root `node scripts/generate-mobile-content.mjs` ausführen. Basis- und Zielsprache werden erst in der App kombiniert (App-Sprache = Basis).
 
 ## Auf dem Mac weiterarbeiten (iOS)
 

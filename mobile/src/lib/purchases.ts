@@ -3,6 +3,7 @@ import { useEffect, useSyncExternalStore } from "react";
 import { Platform } from "react-native";
 import Purchases, { LOG_LEVEL, type CustomerInfo, type PurchasesPackage } from "react-native-purchases";
 import { readJson, writeJson } from "~/lib/storage";
+import { t, type TranslationKey } from "~/i18n";
 
 /**
  * In-app purchases via RevenueCat (Google Play Billing on Android, StoreKit on iOS).
@@ -31,7 +32,8 @@ export type ProductKey = keyof typeof PRODUCT_IDS;
 
 export interface ShopPackage {
   key: ProductKey;
-  title: string;
+  /** Translation key of the product title (premium.coinsPack takes {n}). */
+  title: TranslationKey;
   priceString: string;
   pkg: PurchasesPackage;
 }
@@ -47,12 +49,13 @@ export interface PurchasesState {
 }
 
 const CACHE_KEY = "lingoPremiumCache";
-const TITLES: Record<ProductKey, string> = {
-  monthly: "Premium · Monat",
-  yearly: "Premium · Jahr",
-  lifetime: "Premium · Lebenslang",
-  hearts: "Herzen-Paket (voll + 10 extra)",
-  coins: `Münzpaket (${COIN_PACK_AMOUNT} Münzen)`,
+/** Product titles are translation keys; the screen renders them with t() so they follow the app language. */
+const TITLES: Record<ProductKey, TranslationKey> = {
+  monthly: "premium.monthly",
+  yearly: "premium.yearly",
+  lifetime: "premium.lifetimeProduct",
+  hearts: "premium.heartsPack",
+  coins: "premium.coinsPack",
 };
 
 let state: PurchasesState = { available: false, ready: false, isPremium: false, premiumKind: null, packages: [], error: "" };
@@ -92,7 +95,7 @@ export const initPurchases = async () => {
   }
   const apiKey = readKeys();
   if (!apiKey || Platform.OS === "web") {
-    setState({ available: false, ready: true, error: "Käufe sind in dieser Version noch nicht freigeschaltet." });
+    setState({ available: false, ready: true, error: "premium.notEnabled" });
     return;
   }
   try {
@@ -106,9 +109,9 @@ export const initPurchases = async () => {
       .map((pkg) => ({ key: keyOf(pkg), pkg }))
       .filter((entry): entry is { key: ProductKey; pkg: PurchasesPackage } => entry.key !== null)
       .map(({ key, pkg }) => ({ key, pkg, title: TITLES[key], priceString: pkg.product.priceString }));
-    setState({ ready: true, packages, error: packages.length ? "" : "Keine Produkte gefunden. Produkte in RevenueCat/Play Console prüfen." });
+    setState({ ready: true, packages, error: packages.length ? "" : "premium.noProducts" });
   } catch (error) {
-    setState({ ready: true, error: error instanceof Error ? error.message : "Store nicht erreichbar." });
+    setState({ ready: true, error: error instanceof Error ? error.message : "premium.storeUnreachable" });
   }
 };
 
@@ -121,7 +124,7 @@ export const purchase = async (shopPackage: ShopPackage): Promise<PurchaseOutcom
     return { ok: true, key: shopPackage.key };
   } catch (error) {
     const code = typeof error === "object" && error && "userCancelled" in error ? Boolean((error as { userCancelled: unknown }).userCancelled) : false;
-    return { ok: false, cancelled: code, message: code ? "Kauf abgebrochen." : error instanceof Error ? error.message : "Der Kauf ist fehlgeschlagen." };
+    return { ok: false, cancelled: code, message: code ? t("premium.cancelled") : error instanceof Error ? error.message : t("premium.failed") };
   }
 };
 
@@ -129,9 +132,9 @@ export const restore = async () => {
   try {
     const info = await Purchases.restorePurchases();
     applyCustomerInfo(info);
-    return state.isPremium ? "Premium wiederhergestellt." : "Keine früheren Käufe gefunden.";
+    return state.isPremium ? t("premium.restored") : t("premium.nothingToRestore");
   } catch (error) {
-    return error instanceof Error ? error.message : "Wiederherstellung fehlgeschlagen.";
+    return error instanceof Error ? error.message : t("premium.restoreFailed");
   }
 };
 

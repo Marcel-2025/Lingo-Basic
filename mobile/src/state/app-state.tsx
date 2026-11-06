@@ -4,6 +4,9 @@ import { mergeProgressSnapshots, normalizeInsights, normalizeProgressSnapshot, n
 import { applyStreakFreeze, applyXpBonus } from "@/app/lib/premium-benefits";
 import { getDateKey, getLevelFromXp, reconcileStreak, recordActivity } from "@/app/lib/utils";
 import type { AppSettings, CloudProgressSnapshot, LearningInsights, UserStats } from "@/app/lib/types";
+import { getLocales } from "expo-localization";
+import { getDefaultTargetFor, isLanguageCode } from "@/app/lib/languages";
+import { setLanguage, t } from "~/i18n";
 import { usePurchases } from "~/lib/purchases";
 import { readJson, STORAGE_KEYS, writeJson } from "~/lib/storage";
 
@@ -36,6 +39,12 @@ interface AppState {
 
 const AppStateContext = createContext<AppState | null>(null);
 
+const detectUiLanguage = () => {
+  const code = (getLocales()[0]?.languageCode ?? "").toUpperCase();
+  if (!isLanguageCode(code)) return {};
+  return { uiLang: code, targetLang: getDefaultTargetFor(code) };
+};
+
 export function AppStateProvider({ children }: { children: ReactNode }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [stats, setStats] = useState<UserStats>(DEFAULT_STATS);
@@ -48,7 +57,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let isMounted = true;
     void (async () => {
-      const storedSettings = normalizeSettings(await readJson<unknown>(STORAGE_KEYS.settings, null));
+      const rawSettings = await readJson<unknown>(STORAGE_KEYS.settings, null);
+      // First start: the app speaks the device language when we support it (and learns from it).
+      const storedSettings = rawSettings ? normalizeSettings(rawSettings) : normalizeSettings({ ...getDefaultSettings(), ...detectUiLanguage() });
       const storedStats = reconcileStreak(normalizeStats(await readJson<unknown>(STORAGE_KEYS.stats, null)), storedSettings.timeZone);
       const storedInsights = normalizeInsights(await readJson<unknown>(STORAGE_KEYS.insights, null));
       const storedUpdatedAt = Number(await readJson<unknown>(STORAGE_KEYS.updatedAt, 0)) || 0;
@@ -63,6 +74,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       isMounted = false;
     };
   }, []);
+
+  // Keep the translation layer on the chosen app language (also before the first render finishes loading).
+  useEffect(() => {
+    setLanguage(settings.uiLang);
+  }, [settings.uiLang]);
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -127,7 +143,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
   const importSnapshot = useCallback((input: unknown) => {
     const raw = input && typeof input === "object" ? (input as Record<string, unknown>) : null;
-    if (!raw || !raw.stats || !raw.learningInsights) return { ok: false, message: "Das ist keine Lingo-Pro-Sicherung." };
+    if (!raw || !raw.stats || !raw.learningInsights) return { ok: false, message: t("settings.notBackup") };
     const incoming = normalizeProgressSnapshot(raw);
     const local: CloudProgressSnapshot = { schemaVersion: PROGRESS_SCHEMA_VERSION, stats, settings, learningInsights: insights, updatedAt };
     const merged = mergeProgressSnapshots(local, incoming);
@@ -137,7 +153,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setInsights(normalizeInsights(merged.snapshot.learningInsights));
     setUpdatedAt(Date.now());
     const words = merged.snapshot.stats.learnedWords;
-    return { ok: true, message: merged.localChanged ? `Sicherung übernommen: ${merged.snapshot.stats.xp} XP, ${words} gelernte Wörter.` : "Die Sicherung enthielt nichts Neues." };
+    return { ok: true, message: merged.localChanged ? t("settings.backupImported", { xp: merged.snapshot.stats.xp, words }) : t("settings.backupNothingNew") };
   }, [insights, settings, stats, updatedAt]);
 
   const resetAll = useCallback(() => {

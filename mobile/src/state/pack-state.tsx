@@ -21,18 +21,18 @@ export function PackProvider({ children }: { children: ReactNode }) {
   const { settings, isLoaded } = useAppState();
   const [reloadToken, setReloadToken] = useState(0);
   const [result, setResult] = useState<{ requestKey: string } & PackLoadResult>({ requestKey: "", pack: null });
-  const requestKey = `${settings.targetLang}:${settings.contentLevel}:${reloadToken}`;
+  const requestKey = `${settings.uiLang}:${settings.targetLang}:${settings.contentLevel}:${reloadToken}`;
 
   useEffect(() => {
     if (!isLoaded) return;
     let isCurrent = true;
-    void loadPack(settings.targetLang, settings.contentLevel).then((loaded) => {
+    void loadPack(settings.uiLang, settings.targetLang, settings.contentLevel).then((loaded) => {
       if (isCurrent) setResult({ requestKey, ...loaded });
     });
     return () => {
       isCurrent = false;
     };
-  }, [isLoaded, requestKey, settings.contentLevel, settings.targetLang]);
+  }, [isLoaded, requestKey, settings.contentLevel, settings.targetLang, settings.uiLang]);
 
   // While a new language/level loads, never show the previous pack.
   const isLoading = result.requestKey !== requestKey;

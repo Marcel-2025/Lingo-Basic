@@ -11,6 +11,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { Gradient } from "~/components/ui";
+import { t, useT } from "~/i18n";
 import { playAnswerTone, vibrate } from "~/lib/feedback";
 import { useAppState } from "~/state/app-state";
 import { dismissCelebration, useCelebration, type Celebration } from "~/lib/celebrations";
@@ -56,12 +57,12 @@ export function Flame({ size = 64 }: { size?: number }) {
 
 const describe = (event: Celebration) => {
   switch (event.kind) {
-    case "quest": return { icon: "✅", title: "Aufgabe geschafft!", text: event.title, reward: `+${event.coins} Münzen` };
-    case "level": return { icon: "⭐", title: `Level ${event.level}!`, text: "Du wirst immer besser.", reward: "" };
-    case "goal": return { icon: "🎯", title: "Tagesziel erreicht!", text: `${event.goal} Karten heute. Stark!`, reward: "" };
-    case "streak": return { icon: "🔥", title: `${event.streak} Tage in Folge!`, text: "Deine Serie wächst.", reward: event.coins ? `+${event.coins} Münzen` : "" };
-    case "building": return { icon: event.icon, title: `${event.name} · Stufe ${event.level}`, text: "Deine Stadt wächst!", reward: "" };
-    case "streak-chest": return { icon: "🎁", title: "Streak-Truhe geöffnet!", text: "Belohnung für deine Serie.", reward: `+${event.coins} Münzen` };
+    case "quest": return { icon: "✅", title: t("celebrate.quest"), text: event.title, reward: t("celebrate.reward", { n: event.coins }) };
+    case "level": return { icon: "⭐", title: t("celebrate.level", { n: event.level }), text: t("celebrate.levelText"), reward: "" };
+    case "goal": return { icon: "🎯", title: t("celebrate.goal"), text: t("celebrate.goalText", { n: event.goal }), reward: "" };
+    case "streak": return { icon: "🔥", title: t("celebrate.streak", { n: event.streak }), text: t("celebrate.streakText"), reward: event.coins ? t("celebrate.reward", { n: event.coins }) : "" };
+    case "building": return { icon: event.icon, title: t("celebrate.building", { name: event.name, level: event.level }), text: t("celebrate.buildingText"), reward: "" };
+    case "streak-chest": return { icon: "🎁", title: t("celebrate.chest"), text: t("celebrate.chestText"), reward: t("celebrate.reward", { n: event.coins }) };
   }
 };
 
@@ -85,7 +86,7 @@ export function CelebrationOverlay() {
   const content = describe(celebration);
   const pieces = celebration.kind === "level" || celebration.kind === "goal" || celebration.kind === "building" ? 70 : 36;
   return (
-    <Pressable onPress={dismissCelebration} accessibilityRole="button" accessibilityLabel={`${content.title} ${content.text}. Schließen`} style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>
+    <Pressable onPress={dismissCelebration} accessibilityRole="button" accessibilityLabel={t("celebrate.dismiss", { title: content.title, text: content.text })} style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>
       {Array.from({ length: pieces }, (_, index) => <Confetti key={index} index={index} width={width} height={height} />)}
       <Animated.View style={[{ width: Math.min(width - 48, 360), borderRadius: 28, overflow: "hidden" }, cardStyle]}>
         <Gradient className="items-center px-6 py-7">
@@ -101,17 +102,18 @@ export function CelebrationOverlay() {
 
 /** Compact streak badge for the header: a live flame while today's learning is done, a dimmed one before. */
 export function StreakBadge({ streak, activeToday, onPress }: { streak: number; activeToday: boolean; onPress?: () => void }) {
+  const t = useT();
   const glow = useSharedValue(0);
   useEffect(() => {
     glow.value = activeToday && streak > 0 ? withRepeat(withSequence(withTiming(1, { duration: 900 }), withTiming(0, { duration: 900 })), -1, true) : withTiming(0);
   }, [activeToday, glow, streak]);
   const style = useAnimatedStyle(() => ({ backgroundColor: `rgba(255,255,255,${0.15 + glow.value * 0.2})` }));
   return (
-    <Pressable accessibilityRole="button" accessibilityLabel={`${streak} Tage Serie${activeToday ? "" : ", heute noch nicht gelernt"}`} onPress={onPress}>
+    <Pressable accessibilityRole="button" accessibilityLabel={`${t("header.streakLabel", { n: streak })}${activeToday ? "" : t("header.notLearnedToday")}`} onPress={onPress}>
       <Animated.View style={[{ flexDirection: "row", alignItems: "center", borderRadius: 10, paddingHorizontal: 8, paddingVertical: 3, gap: 4 }, style]}>
         {activeToday && streak > 0 ? <Flame size={16} /> : <Text style={{ fontSize: 16, opacity: 0.6 }}>🔥</Text>}
         <Text className="text-sm font-semibold text-white">{streak}</Text>
-        {!activeToday && streak > 0 ? <Text className="text-[10px] font-bold text-amber-200">heute lernen!</Text> : null}
+        {!activeToday && streak > 0 ? <Text className="text-[10px] font-bold text-amber-200">{t("header.learnToday")}</Text> : null}
       </Animated.View>
     </Pressable>
   );

@@ -3,14 +3,15 @@ import { Image, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AppHeader } from "~/components/app-header";
 import { Gradient, useScreenColors } from "~/components/ui";
+import { useT, type TranslationKey } from "~/i18n";
 import { useResponsive } from "~/lib/responsive";
 
-const TABS: Record<string, { icon: string; label: string }> = {
-  index: { icon: "📚", label: "Heute" },
-  uebungen: { icon: "🎮", label: "Übungen" },
-  stadt: { icon: "🏙️", label: "Stadt" },
-  profil: { icon: "👤", label: "Profil" },
-  settings: { icon: "⚙️", label: "Settings" },
+const TABS: Record<string, { icon: string; label: TranslationKey }> = {
+  index: { icon: "📚", label: "tabs.today" },
+  uebungen: { icon: "🎮", label: "tabs.exercises" },
+  stadt: { icon: "🏙️", label: "tabs.city" },
+  profil: { icon: "👤", label: "tabs.profile" },
+  settings: { icon: "⚙️", label: "tabs.settings" },
 };
 
 /**
@@ -21,6 +22,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
   const colors = useScreenColors();
   const { isWide, isTablet } = useResponsive();
+  const t = useT();
 
   const items = state.routes.map((route, index) => {
     const tab = TABS[route.name];
@@ -29,7 +31,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
     const content = (
       <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-14"} items-center justify-center`}>
         <Text className="mb-1 text-2xl">{tab.icon}</Text>
-        <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500"}`}>{tab.label}</Text>
+        <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500"}`}>{t(tab.label)}</Text>
       </View>
     );
     return (
@@ -37,7 +39,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
         key={route.key}
         accessibilityRole="tab"
         accessibilityState={{ selected: isActive }}
-        accessibilityLabel={tab.label}
+        accessibilityLabel={t(tab.label)}
         onPress={() => {
           const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
           if (!isActive && !event.defaultPrevented) navigation.navigate(route.name);

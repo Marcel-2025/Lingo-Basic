@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { getLegacyPackPath, getPackKey, getPackPath, SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
@@ -136,6 +136,8 @@ describe("shipped packs", () => {
   const root = path.resolve(__dirname, "..");
 
   for (const [code, language] of Object.entries(SUPPORTED_LANGUAGES)) {
+    // German is the web app's source language and has no target pack of its own (the native app builds packs from content/).
+    if (!existsSync(path.join(root, "public", "packs", language.fileName))) continue;
     for (const level of SUPPORTED_LEVELS) {
       const file = path.join(root, "public", "packs", language.fileName, `${level.toLowerCase()}.json`);
       it(`${code} ${level} normalizes without errors or changes to IDs`, () => {

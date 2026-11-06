@@ -3,6 +3,7 @@ import { Image, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { StreakBadge } from "~/components/celebration";
 import { Gradient } from "~/components/ui";
+import { useT } from "~/i18n";
 import { useResponsive } from "~/lib/responsive";
 import { useAppState } from "~/state/app-state";
 import { useCity } from "~/state/city-state";
@@ -13,6 +14,7 @@ export function AppHeader() {
   const activeToday = stats.lastActiveDate === todayKey();
   const { isWide } = useResponsive();
   const { coins } = useCity();
+  const t = useT();
 
   // Tablet landscape: one compact row (the logo already sits in the navigation rail) to keep height for learning.
   if (isWide) {
@@ -21,8 +23,8 @@ export function AppHeader() {
         <Text className="mr-auto text-xl font-bold text-white">Lingo Pro</Text>
         <StreakBadge streak={stats.streak} activeToday={activeToday} onPress={() => router.navigate("/stadt")} />
         <Text className="text-sm font-semibold text-white">⭐ {stats.xp} XP</Text>
-        <Pressable accessibilityRole="button" accessibilityLabel={`${coins} Münzen, zur Stadt`} onPress={() => router.navigate("/stadt")}><Text className="text-sm font-semibold text-white">🪙 {coins}</Text></Pressable>
-        <View className="rounded-lg bg-white/20 px-2 py-1"><Text className="text-sm font-semibold text-white">Lvl {stats.level}</Text></View>
+        <Pressable accessibilityRole="button" accessibilityLabel={t("header.coinsToCity", { n: coins })} onPress={() => router.navigate("/stadt")}><Text className="text-sm font-semibold text-white">🪙 {coins}</Text></Pressable>
+        <View className="rounded-lg bg-white/20 px-2 py-1"><Text className="text-sm font-semibold text-white">{t("common.lvl", { n: stats.level })}</Text></View>
       </Gradient>
     );
   }
@@ -36,8 +38,8 @@ export function AppHeader() {
       <View className="mt-3 flex-row flex-wrap items-center gap-3">
         <StreakBadge streak={stats.streak} activeToday={activeToday} onPress={() => router.navigate("/stadt")} />
         <Text className="text-sm font-semibold text-white">⭐ {stats.xp} XP</Text>
-        <Pressable accessibilityRole="button" accessibilityLabel={`${coins} Münzen, zur Stadt`} onPress={() => router.navigate("/stadt")}><Text className="text-sm font-semibold text-white">🪙 {coins}</Text></Pressable>
-        <View className="rounded-lg bg-white/20 px-2 py-1"><Text className="text-sm font-semibold text-white">Lvl {stats.level}</Text></View>
+        <Pressable accessibilityRole="button" accessibilityLabel={t("header.coinsToCity", { n: coins })} onPress={() => router.navigate("/stadt")}><Text className="text-sm font-semibold text-white">🪙 {coins}</Text></Pressable>
+        <View className="rounded-lg bg-white/20 px-2 py-1"><Text className="text-sm font-semibold text-white">{t("common.lvl", { n: stats.level })}</Text></View>
       </View>
     </Gradient>
   );

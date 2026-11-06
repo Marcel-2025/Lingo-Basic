@@ -7,6 +7,7 @@ import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { isWordLearned, recordLearningInInsights } from "@/app/lib/learning-history";
 import type { LanguagePack, VocabItem } from "@/app/lib/types";
 import { GradientButton, IconButton, Label, SoftButton, useScreenColors } from "~/components/ui";
+import { useT } from "~/i18n";
 import { playAnswerTone, speak, vibrate } from "~/lib/feedback";
 import { useLearningPrefs } from "~/lib/learning-prefs";
 import { livesActions, useLives } from "~/lib/lives-store";
@@ -25,8 +26,9 @@ interface HistoryEntry {
 export default function ExercisesScreen() {
   const { activePack, pack } = usePackState();
   const colors = useScreenColors();
+  const t = useT();
   if (!activePack || !pack) {
-    return <View className={`flex-1 items-center justify-center p-6 ${colors.screen}`}><Text className={`text-center ${colors.muted}`}>Kein Sprachpaket geladen.</Text></View>;
+    return <View className={`flex-1 items-center justify-center p-6 ${colors.screen}`}><Text className={`text-center ${colors.muted}`}>{t("packs.none")}</Text></View>;
   }
   return <MultipleChoice key={`${activePack.lang}:${activePack.level}:${activePack.topics.length}`} pack={activePack} fullPack={pack} />;
 }
@@ -37,6 +39,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   const { lives, extra, msUntilNext } = useLives();
   const outOfLives = !isPremium && lives === 0 && extra === 0;
   const colors = useScreenColors();
+  const t = useT();
   const { isWide, isTablet } = useResponsive();
   const [prefs] = useLearningPrefs();
   const [question, setQuestion] = useState<Question | null>(() => createQuestion(pack));
@@ -84,7 +87,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   };
 
   if (!question) {
-    return <View className={`flex-1 items-center justify-center p-6 ${colors.screen}`}><Text className={`text-center ${colors.muted}`}>Dieses Pack benötigt mindestens vier unterschiedliche Vokabeln für Multiple Choice.</Text></View>;
+    return <View className={`flex-1 items-center justify-center p-6 ${colors.screen}`}><Text className={`text-center ${colors.muted}`}>{t("exercises.needFour")}</Text></View>;
   }
   const isCorrect = selected === question.word.x;
   const correctCount = history.filter((entry) => entry.correct).length;
@@ -98,50 +101,50 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   };
 
   const hearts = (
-    <View className="flex-row items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? "Unendlich Leben" : `${lives} von ${MAX_LIVES} Leben${extra ? `, ${extra} extra` : ""}`}>
+    <View className="flex-row items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
       <View className="flex-row items-center gap-1">
         {isPremium ? <Text className="text-xl">❤️</Text> : Array.from({ length: MAX_LIVES }, (_, index) => <Text key={index} className="text-xl" style={index >= lives ? { opacity: 0.25 } : null}>❤️</Text>)}
-        {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900">∞ Premium</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
+        {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900">{t("exercises.premiumInfinite")}</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
       </View>
-      {!isPremium && lives < MAX_LIVES ? <Text className="text-xs font-semibold text-gray-500">nächstes in {formatCountdown(msUntilNext)}</Text> : null}
+      {!isPremium && lives < MAX_LIVES ? <Text className="text-xs font-semibold text-gray-500">{t("exercises.nextIn", { time: formatCountdown(msUntilNext) })}</Text> : null}
       {!isPremium ? <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="rounded-full bg-indigo-50 px-2 py-1 active:opacity-70"><Text className="text-xs font-bold text-indigo-700">💎</Text></Pressable> : null}
     </View>
   );
   const outOfLivesCard = (
     <View className="w-full items-center rounded-3xl bg-white p-6 shadow-sm" style={{ maxWidth: 448 }}>
       <Text className="text-5xl">💔</Text>
-      <Text className="mt-2 text-xl font-black text-gray-900">Keine Leben mehr</Text>
-      <Text className="mt-1 text-center text-sm text-gray-600">Das nächste Herz kommt in {formatCountdown(msUntilNext)}. Lernkarten kannst du immer weiter üben – die kosten nichts.</Text>
+      <Text className="mt-2 text-xl font-black text-gray-900">{t("exercises.outOfLives")}</Text>
+      <Text className="mt-1 text-center text-sm text-gray-600">{t("exercises.outOfLivesText", { time: formatCountdown(msUntilNext) })}</Text>
       <View className="mt-4 w-full gap-2">
-        <SoftButton label={`🪙 Auffüllen für ${REFILL_COIN_COST} Münzen (du hast ${coins})`} disabled={coins < REFILL_COIN_COST} onPress={() => void refillLivesWithCoins()} />
-        <GradientButton label="💎 Premium: unendlich Leben" onPress={() => router.push("/premium")} />
-        <SoftButton label="Zu den Lernkarten" onPress={() => router.navigate("/")} />
+        <SoftButton label={t("exercises.refill", { cost: REFILL_COIN_COST, coins })} disabled={coins < REFILL_COIN_COST} onPress={() => void refillLivesWithCoins()} />
+        <GradientButton label={t("exercises.premiumLives")} onPress={() => router.push("/premium")} />
+        <SoftButton label={t("exercises.toCards")} onPress={() => router.navigate("/")} />
       </View>
     </View>
   );
   const stats = (
     <View className="flex-row gap-3">
-      <MiniStat label="Serie" value={`🔥 ${streak}`} />
-      <MiniStat label="Beste" value={`🏅 ${bestStreak}`} />
-      <MiniStat label="Treffer" value={history.length ? `${accuracy}%` : "–"} />
+      <MiniStat label={t("exercises.streak")} value={`🔥 ${streak}`} />
+      <MiniStat label={t("exercises.best")} value={`🏅 ${bestStreak}`} />
+      <MiniStat label={t("exercises.accuracy")} value={history.length ? `${accuracy}%` : "–"} />
     </View>
   );
 
   const quiz = (
     <View className="w-full items-center self-center" style={{ maxWidth: isTablet ? 640 : undefined }}>
-      <Text className={`mb-4 text-lg font-bold uppercase tracking-wider ${colors.muted}`}>Welches Wort passt?</Text>
-      {image ? <Image source={image} style={{ width: 112, height: 112, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={`Bild zu ${question.word.de}`} /> : null}
+      <Text className={`mb-4 text-lg font-bold uppercase tracking-wider ${colors.muted}`}>{t("exercises.whichWord")}</Text>
+      {image ? <Image source={image} style={{ width: 112, height: 112, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: question.word.de })} /> : null}
       <View className="mb-4 flex-row items-center gap-3">
         <Text className={`text-center text-4xl font-extrabold ${colors.text}`}>{question.word.de}</Text>
-        <IconButton icon="🔊" label={`${question.word.de} vorlesen`} onPress={() => speak(question.word.de, "DE")} />
+        <IconButton icon="🔊" label={t("learn.speak", { text: question.word.de })} onPress={() => speak(question.word.de, settings.uiLang)} />
       </View>
       <View className="mb-5 min-h-9 flex-row items-center gap-2" accessibilityLiveRegion="assertive">
         {isLocked ? (
           <>
             <Text className={`rounded-xl px-3 py-2 text-sm font-bold ${isCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
-              {isCorrect ? "Richtig! Stark gemacht ✅" : `Nicht ganz. Richtig ist: ${question.word.x}`}
+              {isCorrect ? t("exercises.correct") : t("exercises.wrong", { answer: question.word.x })}
             </Text>
-            <IconButton icon="🔊" label={`${question.word.x} vorlesen`} onPress={() => speak(question.word.x, pack.lang, { slow: prefs.slowSpeech })} />
+            <IconButton icon="🔊" label={t("learn.speak", { text: question.word.x })} onPress={() => speak(question.word.x, pack.lang, { slow: prefs.slowSpeech })} />
           </>
         ) : null}
       </View>
@@ -152,7 +155,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
             <Pressable
               key={option}
               accessibilityRole="button"
-              accessibilityLabel={isLocked && option === question.word.x ? `${option} (richtige Antwort)` : option}
+              accessibilityLabel={isLocked && option === question.word.x ? t("exercises.correctAnswer", { option }) : option}
               disabled={isLocked}
               onPress={() => choose(option)}
               className={`items-center justify-center rounded-2xl border-2 p-5 shadow-sm active:scale-95 ${isTablet ? "min-h-[84px] w-[48.5%]" : ""} ${style.box}`}
@@ -162,19 +165,19 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
           );
         })}
       </View>
-      <Text className={`mt-5 text-xs ${colors.muted}`}>Antwort-Farben: Grün = richtig, Rot = falsch</Text>
+      <Text className={`mt-5 text-xs ${colors.muted}`}>{t("exercises.colors")}</Text>
     </View>
   );
 
   const historyList = (
     <View className="rounded-3xl bg-white p-4 shadow-sm">
-      <Label>Letzte Antworten</Label>
-      {history.length === 0 ? <Text className="text-sm text-gray-500">Noch keine Antworten in dieser Runde.</Text> : null}
+      <Label>{t("exercises.lastAnswers")}</Label>
+      {history.length === 0 ? <Text className="text-sm text-gray-500">{t("exercises.noAnswers")}</Text> : null}
       {history.map((entry) => (
         <View key={entry.key} className="mb-1 flex-row items-center rounded-xl px-1">
           <Text className={`mr-2 w-5 text-sm ${entry.correct ? "text-green-600" : "text-red-600"}`}>{entry.correct ? "✓" : "✗"}</Text>
           <Text className="flex-1 text-sm text-gray-900" numberOfLines={1}><Text className="font-semibold">{entry.word.de}</Text><Text className="text-gray-500"> · {entry.word.x}</Text></Text>
-          <Pressable accessibilityLabel={`${entry.word.x} vorlesen`} hitSlop={8} onPress={() => speak(entry.word.x, pack.lang, { slow: prefs.slowSpeech })} className="px-2 py-2 active:opacity-50"><Text>🔊</Text></Pressable>
+          <Pressable accessibilityLabel={t("learn.speak", { text: entry.word.x })} hitSlop={8} onPress={() => speak(entry.word.x, pack.lang, { slow: prefs.slowSpeech })} className="px-2 py-2 active:opacity-50"><Text>🔊</Text></Pressable>
         </View>
       ))}
     </View>

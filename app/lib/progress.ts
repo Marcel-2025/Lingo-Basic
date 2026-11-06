@@ -1,6 +1,6 @@
 import { mergeCity, normalizeCity } from "@/app/lib/city";
 import { DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
-import { isCefrLevel, isLanguageCode } from "@/app/lib/languages";
+import { getDefaultTargetFor, isCefrLevel, isLanguageCode } from "@/app/lib/languages";
 import { getLevelFromXp } from "@/app/lib/utils";
 import type {
   AppSettings,
@@ -91,10 +91,15 @@ export const normalizeSettings = (input: unknown): AppSettings => {
   const raw = asRecord(input);
   const defaults = getDefaultSettings();
   const dailyGoal = asCount(raw.dailyGoal, defaults.dailyGoal);
-  const targetLang = typeof raw.targetLang === "string" ? raw.targetLang.trim().toUpperCase() : "";
+  const uiLangRaw = typeof raw.uiLang === "string" ? raw.uiLang.trim().toUpperCase() : "";
+  const uiLang = isLanguageCode(uiLangRaw) ? uiLangRaw : defaults.uiLang;
+  const targetLangRaw = typeof raw.targetLang === "string" ? raw.targetLang.trim().toUpperCase() : "";
+  const targetLang = isLanguageCode(targetLangRaw) ? targetLangRaw : defaults.targetLang;
   const contentLevel = typeof raw.contentLevel === "string" ? raw.contentLevel.trim().toUpperCase() : "";
   return {
-    targetLang: isLanguageCode(targetLang) ? targetLang : defaults.targetLang,
+    uiLang,
+    // The target can never be the base language; fall back to the natural pair (DE→EN, otherwise →DE).
+    targetLang: targetLang === uiLang ? getDefaultTargetFor(uiLang) : targetLang,
     contentLevel: isCefrLevel(contentLevel) ? contentLevel : defaults.contentLevel,
     difficulty: normalizeSettingsDifficulty(raw.difficulty),
     dailyGoal: Math.min(200, Math.max(1, dailyGoal || defaults.dailyGoal)),

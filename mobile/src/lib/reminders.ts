@@ -2,6 +2,7 @@ import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import { useSyncExternalStore } from "react";
 import { Platform } from "react-native";
+import { t } from "~/i18n";
 import { readJson, writeJson } from "~/lib/storage";
 
 /**
@@ -22,13 +23,7 @@ const DAILY_ID = "daily-reminder";
 const STREAK_ID = "streak-warning";
 const CHANNEL = "lernen";
 
-const MESSAGES = [
-  "Deine Stadt wartet auf dich. 5 Minuten reichen für heute! 🏙️",
-  "Kleine Schritte, große Wirkung: Lern heute ein paar neue Wörter. 📚",
-  "Die Einwohner deiner Stadt vermissen dich. Zeit für eine Lernrunde! 🦉",
-  "Heute schon gelernt? Deine Serie zählt auf dich. 🔥",
-  "Drei Tagesaufgaben warten – und Münzen für neue Gebäude. 🪙",
-];
+const MESSAGES = ["reminders.m1", "reminders.m2", "reminders.m3", "reminders.m4", "reminders.m5"] as const;
 
 let current = DEFAULTS;
 let loaded = false;
@@ -66,7 +61,7 @@ export const useReminderSettings = (): ReminderSettings => {
 export const requestReminderPermission = async () => {
   if (!Device.isDevice && Platform.OS === "ios") return false;
   if (Platform.OS === "android") {
-    await Notifications.setNotificationChannelAsync(CHANNEL, { name: "Lern-Erinnerungen", importance: Notifications.AndroidImportance.DEFAULT, sound: "default" });
+    await Notifications.setNotificationChannelAsync(CHANNEL, { name: t("reminders.channel"), importance: Notifications.AndroidImportance.DEFAULT, sound: "default" });
   }
   const existing = await Notifications.getPermissionsAsync();
   if (existing.granted) return true;
@@ -88,7 +83,7 @@ export const syncReminders = async (learnedToday: boolean, streak: number) => {
     if (!current.enabled) return;
     const permission = await Notifications.getPermissionsAsync();
     if (!permission.granted) return;
-    const body = MESSAGES[new Date().getDate() % MESSAGES.length];
+    const body = t(MESSAGES[new Date().getDate() % MESSAGES.length]);
     await Notifications.scheduleNotificationAsync({
       identifier: DAILY_ID,
       content: { title: "Lingo Pro", body, sound: "default", ...(Platform.OS === "android" ? { channelId: CHANNEL } : {}) },
@@ -101,7 +96,7 @@ export const syncReminders = async (learnedToday: boolean, streak: number) => {
       if (tonight.getTime() > now.getTime() + 60_000 && (current.hour < 21 || (current.hour === 21 && current.minute === 0))) {
         await Notifications.scheduleNotificationAsync({
           identifier: STREAK_ID,
-          content: { title: `🔥 ${streak}-Tage-Serie in Gefahr`, body: "Eine Lernkarte reicht, um deine Serie zu retten.", sound: "default", ...(Platform.OS === "android" ? { channelId: CHANNEL } : {}) },
+          content: { title: t("reminders.streakTitle", { n: streak }), body: t("reminders.streakBody"), sound: "default", ...(Platform.OS === "android" ? { channelId: CHANNEL } : {}) },
           trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: tonight, ...(Platform.OS === "android" ? { channelId: CHANNEL } : {}) },
         });
       }

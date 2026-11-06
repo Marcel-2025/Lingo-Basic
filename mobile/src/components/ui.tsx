@@ -4,6 +4,7 @@ import { Modal, Pressable, ScrollView, Text, View, type StyleProp, type ViewStyl
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { THEME_GRADIENTS } from "~/lib/theme";
 import { useAppState } from "~/state/app-state";
+import { useT } from "~/i18n";
 
 /** Theme gradient (left → right), the native counterpart of `bg-gradient-to-r from-… to-…`. */
 export function Gradient({ children, className, style }: { children?: ReactNode; className?: string; style?: StyleProp<ViewStyle> }) {
@@ -88,8 +89,9 @@ export function StatBox({ title, value, icon, onPress }: { title: string; value:
 }
 
 export function Achievement({ name, done, subtitle }: { name: string; done: boolean; subtitle?: string }) {
+  const t = useT();
   return (
-    <View className={`flex-row items-center rounded-2xl p-3 ${done ? "bg-green-50" : "opacity-40"}`} accessibilityLabel={`${name}${done ? " (erreicht)" : ""}`}>
+    <View className={`flex-row items-center rounded-2xl p-3 ${done ? "bg-green-50" : "opacity-40"}`} accessibilityLabel={done ? t("profile.achieved", { name }) : name}>
       <View className={`mr-4 h-12 w-12 items-center justify-center rounded-full ${done ? "bg-green-200" : "bg-gray-200"}`}>
         <Text className="text-xl">{done ? "🏆" : "🔒"}</Text>
       </View>
@@ -120,6 +122,7 @@ export interface SelectOption<T extends string | number> {
 
 /** Native replacement for `<select>`: a field that opens a bottom sheet with the options. */
 export function SelectField<T extends string | number>({ label, value, options, onChange }: { label: string; value: T; options: SelectOption<T>[]; onChange: (value: T) => void }) {
+  const t = useT();
   const [isOpen, setIsOpen] = useState(false);
   const insets = useSafeAreaInsets();
   const current = options.find((option) => option.value === value);
@@ -127,11 +130,11 @@ export function SelectField<T extends string | number>({ label, value, options, 
     <View>
       <Text className="mb-2 text-sm font-bold text-gray-600">{label}</Text>
       <Pressable accessibilityRole="button" accessibilityLabel={`${label}: ${current?.label ?? ""}`} onPress={() => setIsOpen(true)} className="flex-row items-center justify-between rounded-xl bg-gray-100 p-3 active:opacity-70">
-        <Text className="flex-1 font-semibold text-gray-900">{current?.label ?? "Bitte wählen"}</Text>
+        <Text className="flex-1 font-semibold text-gray-900">{current?.label ?? t("common.choose")}</Text>
         <Text className="text-gray-500">▾</Text>
       </Pressable>
       <Modal visible={isOpen} transparent animationType="slide" onRequestClose={() => setIsOpen(false)}>
-        <Pressable className="flex-1 bg-black/40" onPress={() => setIsOpen(false)} accessibilityLabel="Auswahl schließen" />
+        <Pressable className="flex-1 bg-black/40" onPress={() => setIsOpen(false)} accessibilityLabel={t("common.closeSelection")} />
         <View className="max-h-[70%] w-full max-w-[560px] self-center rounded-t-3xl bg-white px-4 pt-4" style={{ paddingBottom: insets.bottom + 16 }}>
           <Text className="mb-3 text-lg font-bold text-gray-900">{label}</Text>
           <ScrollView>
