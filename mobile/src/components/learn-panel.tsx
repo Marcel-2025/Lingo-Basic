@@ -51,7 +51,7 @@ export function LearnPanel({
   return (
     <View className="gap-4">
       {/* Daily goal + session */}
-      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
+      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
         <Label>{t("learn.dailyGoal")}</Label>
         <View className="mb-2 flex-row items-baseline justify-between">
           <Text className="text-2xl font-black text-gray-900 dark:text-white">{Math.min(today, goal)} <Text className="text-sm font-semibold text-gray-500 dark:text-blue-200/75">{t("learn.ofGoal", { goal })}</Text></Text>
@@ -65,7 +65,7 @@ export function LearnPanel({
       </View>
 
       {showTopics ? (
-        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
+        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
           <Label>{t("learn.topics")}</Label>
           <TopicRow icon="🌍" title={t("learn.allTopics")} count={allCount} active={activeTopic.id === "all"} onPress={() => onSelectTopic("all")} />
           {pack.topics.map((topic) => (
@@ -75,7 +75,7 @@ export function LearnPanel({
       ) : null}
 
       {/* Word list with translation, pronunciation and "learn this word next" */}
-      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
+      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
         <View className="mb-2 flex-row items-center justify-between">
           <Label>{activeTopic.title}</Label>
           <Text className="mb-2 text-xs font-bold text-gray-500 dark:text-blue-200/75">{t("learn.learnedOf", { learned: learnedInTopic, total: activeTopic.vocab.length })}</Text>
@@ -102,7 +102,7 @@ export function LearnPanel({
       </View>
 
       {pack.sentences.length > 0 ? (
-        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
+        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
           <Label>{t("learn.sentences")}</Label>
           {pack.sentences.map((sentence) => {
             const translation = sentence.translations[pack.lang.toLowerCase()] ?? sentence.x;

@@ -2,6 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useMemo } from "react";
 import { StyleSheet, View, useWindowDimensions } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withRepeat, withSequence, withTiming } from "react-native-reanimated";
+import { SKIES } from "~/lib/theme";
 import { useAppState } from "~/state/app-state";
 
 /**
@@ -9,8 +10,6 @@ import { useAppState } from "~/state/app-state";
  * or a light day sky. Rendered once behind the whole tab navigator, so every screen stays transparent.
  */
 
-const NIGHT = ["#050d2b", "#0b1f63", "#1443b5", "#1b5bd6"] as const;
-const DAY = ["#bfdbfe", "#dbeafe", "#eff6ff", "#f8fbff"] as const;
 
 function Star({ index, width, height, night }: { index: number; width: number; height: number; night: boolean }) {
   const seed = useMemo(() => ({
@@ -36,7 +35,7 @@ function Star({ index, width, height, night }: { index: number; width: number; h
 }
 
 /** A slow-drifting translucent blob that reads as a cloud. */
-function Cloud({ index, width, height, night }: { index: number; width: number; height: number; night: boolean }) {
+function Cloud({ index, width, height, night, color }: { index: number; width: number; height: number; night: boolean; color: string }) {
   const seed = useMemo(() => ({
     x: ((index * 61) % 100) / 100,
     y: 0.45 + (((index * 37) % 50) / 100),
@@ -60,7 +59,7 @@ function Cloud({ index, width, height, night }: { index: number; width: number; 
         width: seed.w,
         height: seed.h,
         borderRadius: seed.h,
-        backgroundColor: night ? "rgba(120, 170, 255, 0.14)" : "rgba(255,255,255,0.75)",
+        backgroundColor: night ? color : "rgba(255,255,255,0.75)",
       }, style]}
     />
   );
@@ -69,11 +68,12 @@ function Cloud({ index, width, height, night }: { index: number; width: number; 
 export function ScreenBackground() {
   const { settings } = useAppState();
   const night = settings.isDarkMode;
+  const sky = SKIES[settings.sky] ?? SKIES.night;
   const { width, height } = useWindowDimensions();
   return (
     <View pointerEvents="none" style={StyleSheet.absoluteFill}>
-      <LinearGradient colors={night ? [...NIGHT] : [...DAY]} start={{ x: 0.2, y: 0 }} end={{ x: 0.8, y: 1 }} style={StyleSheet.absoluteFill} />
-      {Array.from({ length: 5 }, (_, index) => <Cloud key={`cloud-${index}`} index={index} width={width} height={height} night={night} />)}
+      <LinearGradient colors={night ? [...sky.night] : [...sky.day]} start={{ x: 0.2, y: 0 }} end={{ x: 0.8, y: 1 }} style={StyleSheet.absoluteFill} />
+      {Array.from({ length: 5 }, (_, index) => <Cloud key={`cloud-${index}`} index={index} width={width} height={height} night={night} color={sky.cloud} />)}
       {Array.from({ length: night ? 10 : 0 }, (_, index) => <Star key={`star-${index}`} index={index} width={width} height={height} night={night} />)}
     </View>
   );

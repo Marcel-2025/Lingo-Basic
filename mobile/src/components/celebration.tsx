@@ -89,7 +89,7 @@ export function CelebrationOverlay() {
     <Pressable onPress={dismissCelebration} accessibilityRole="button" accessibilityLabel={t("celebrate.dismiss", { title: content.title, text: content.text })} style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" }}>
       {Array.from({ length: pieces }, (_, index) => <Confetti key={index} index={index} width={width} height={height} />)}
       <Animated.View style={[{ width: Math.min(width - 48, 360), borderRadius: 28, overflow: "hidden" }, cardStyle]}>
-        <View className="items-center border-2 border-mint-400/70 bg-night-800 px-6 py-7" style={{ borderRadius: 28 }}>
+        <View className="items-center border-2 border-mint-400/70 bg-[#0f1424] px-6 py-7" style={{ borderRadius: 28 }}>
           {celebration.kind === "streak" ? <Flame /> : <Text className="text-6xl">{content.icon}</Text>}
           <Text className="mt-2 text-center text-2xl font-black text-white">{content.title}</Text>
           <Text className="mt-1 text-center text-base text-blue-100">{content.text}</Text>

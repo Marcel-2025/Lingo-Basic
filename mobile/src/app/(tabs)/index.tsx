@@ -6,6 +6,7 @@ import { isWordLearned, isWordMastered, recordLearningInInsights } from "@/app/l
 import { getVocabFromPack } from "@/app/lib/pack-normalization";
 import { shuffle } from "@/app/lib/utils";
 import type { LanguagePack, TopicItem, VocabItem } from "@/app/lib/types";
+import { FloatingReward, SparkleBurst } from "~/components/effects";
 import { LearnPanel, type SessionStats } from "~/components/learn-panel";
 import { Card, Chip, GradientButton, IconButton, ProgressBar, SelectField, useScreenColors } from "~/components/ui";
 import { useT } from "~/i18n";
@@ -51,14 +52,15 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [session, setSession] = useState<SessionStats>({ known: 0, practice: 0 });
   const [listOpen, setListOpen] = useState(false);
+  const [reward, setReward] = useState({ trigger: 0, text: "" });
   const card = queue[index];
+  const baseLang = settings.uiLang;
   // Card flip: a quick squeeze on the horizontal axis whenever the card turns or a new word arrives.
   const flip = useSharedValue(1);
   useEffect(() => {
     flip.value = withSequence(withTiming(0.05, { duration: 110 }), withSpring(1, { damping: 14, stiffness: 180 }));
   }, [flip, isFlipped, card?.id]);
   const flipStyle = useAnimatedStyle(() => ({ transform: [{ scaleX: flip.value }] }));
-  const baseLang = settings.uiLang;
   const langLabel = t(`languages.${pack.lang}`);
   const baseLabel = t(`languages.${baseLang}`);
   const reverse = prefs.direction === "x-de";
@@ -66,12 +68,17 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
   const back = card ? (reverse ? { text: card.de, lang: baseLang, label: baseLabel } : { text: card.x, lang: pack.lang, label: langLabel }) : null;
   const image = card && prefs.showImages ? WORD_IMAGES[card.id] : undefined;
 
-  // Auto pronunciation: the target-language word is read as soon as it becomes visible.
+  // Auto pronunciation: whatever side is visible is read in its own language (base word first, then the
+  // target word once the card is turned).
   useEffect(() => {
     if (!card || !prefs.autoSpeak) return;
-    if (reverse && !isFlipped) speak(card.x, pack.lang, { slow: prefs.slowSpeech });
-    if (!reverse && isFlipped) speak(card.x, pack.lang, { slow: prefs.slowSpeech });
-  }, [card, isFlipped, reverse, prefs.autoSpeak, prefs.slowSpeech, pack.lang]);
+    const frontIsTarget = reverse !== isFlipped;
+    const timer = setTimeout(() => {
+      if (frontIsTarget) speak(card.x, pack.lang, { slow: prefs.slowSpeech });
+      else speak(card.de, baseLang);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [card, isFlipped, reverse, prefs.autoSpeak, prefs.slowSpeech, pack.lang, baseLang]);
 
   const selectTopic = (nextTopicId: string) => {
     const vocab = nextTopicId === "all" ? allVocab : pack.topics.find((topic) => topic.id === nextTopicId)?.vocab ?? [];
@@ -103,6 +110,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
       updateInsights((previous) => ({ ...previous, learnedDays: { ...previous.learnedDays, [todayKey()]: (previous.learnedDays[todayKey()] ?? 0) + 1 } }));
     }
     awardAnswer(known ? 10 : 2, known, known && !alreadyLearned ? 1 : 0, known && !alreadyMastered ? 1 : 0);
+    setReward((previous) => ({ trigger: previous.trigger + 1, text: known ? "+10 XP ✨" : "+2 XP" }));
     recordCard(known && !alreadyLearned ? 1 : 0);
     setSession((previous) => (known ? { ...previous, known: previous.known + 1 } : { ...previous, practice: previous.practice + 1 }));
     if (settings.vibrationEnabled) vibrate(known);
@@ -152,7 +160,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
         accessibilityRole="button"
         accessibilityLabel={isFlipped ? t("learn.cardShown", { front: front.text, back: back.text }) : t("learn.cardHidden", { front: front.text })}
         onPress={() => setIsFlipped(true)}
-        className={`items-center justify-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-6 shadow-xl ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200 dark:border-mint-400/50" : ""}`}
+        className={`items-center justify-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-xl ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200 dark:border-mint-400/50" : ""}`}
       >
         {image ? <Image source={image} style={{ width: isTablet ? 112 : 128, height: isTablet ? 112 : 128, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: card.de })} /> : null}
         <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-blue-200/60">{front.label}</Text>
@@ -181,6 +189,10 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
         )}
       </Pressable>
       </Animated.View>
+      <View pointerEvents="none" style={{ position: "absolute", left: 0, right: 0, top: 120, alignItems: "center" }}>
+        <FloatingReward text={reward.text} trigger={reward.trigger} color={reward.text.startsWith("+10") ? "#fde68a" : "#bfdbfe"} />
+        {reward.text.startsWith("+10") ? <SparkleBurst trigger={reward.trigger} /> : null}
+      </View>
 
       {isFlipped ? (
         <Animated.View entering={FadeIn.duration(250)} className="mt-6 flex-row gap-4">
@@ -188,7 +200,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
           <GradientButton className="flex-1" label={t("learn.known")} onPress={() => answer(true)} />
         </Animated.View>
       ) : (
-        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
+        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
       )}
     </View>
   ) : (

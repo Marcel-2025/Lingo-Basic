@@ -7,9 +7,10 @@ import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-nativ
 import { getDefaultTargetFor, getLearnableLanguages, SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
 import type { AppSettings, Difficulty, LanguageCode } from "@/app/lib/types";
 import { Card, GradientButton, SelectField, SoftButton, Toggle, useScreenColors } from "~/components/ui";
-import { useT } from "~/i18n";
+import { useT, type TranslationKey } from "~/i18n";
 import { clearImportedPacks, importPack, removeImportedPack } from "~/lib/packs";
-import { THEMES } from "~/lib/theme";
+import { LinearGradient } from "expo-linear-gradient";
+import { SKIES, SKY_NAMES, THEME_GRADIENTS, THEMES } from "~/lib/theme";
 import { requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useResponsive } from "~/lib/responsive";
 import { useAppState } from "~/state/app-state";
@@ -155,21 +156,42 @@ export default function SettingsScreen() {
       </View>
       <View>
         <Text className="mb-2 text-sm font-bold text-gray-600 dark:text-blue-100/85">{t("settings.theme")}</Text>
-        <View className="flex-row gap-2">
+        <View className="flex-row flex-wrap gap-3">
           {THEMES.map((theme) => (
             <Pressable
               key={theme}
               accessibilityRole="button"
+              accessibilityLabel={theme}
               accessibilityState={{ selected: settings.theme === theme }}
               onPress={() => set("theme", theme)}
-              className={`flex-1 items-center rounded-lg bg-gray-100 dark:bg-white/10 py-2 ${settings.theme === theme ? "border-2 border-indigo-500 dark:border-mint-400" : "opacity-50"}`}
+              className={`items-center gap-1 active:opacity-70 ${settings.theme === theme ? "" : "opacity-70"}`}
             >
-              <Text className="text-sm font-bold text-gray-900 dark:text-white">{theme}</Text>
+              <LinearGradient colors={[...THEME_GRADIENTS[theme]]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ width: 44, height: 44, borderRadius: 22, borderWidth: 3, borderColor: settings.theme === theme ? "#ffffff" : "transparent" }} />
+              <Text className="text-[11px] font-bold text-gray-700 dark:text-blue-100">{theme}</Text>
+            </Pressable>
+          ))}
+        </View>
+      </View>
+      <View>
+        <Text className="mb-2 text-sm font-bold text-gray-600 dark:text-blue-100/85">{t("settings.sky")}</Text>
+        <View className="flex-row flex-wrap gap-3">
+          {SKY_NAMES.map((sky) => (
+            <Pressable
+              key={sky}
+              accessibilityRole="button"
+              accessibilityLabel={t(`settings.skies.${sky}` as TranslationKey)}
+              accessibilityState={{ selected: settings.sky === sky }}
+              onPress={() => set("sky", sky)}
+              className={`items-center gap-1 active:opacity-70 ${settings.sky === sky ? "" : "opacity-70"}`}
+            >
+              <LinearGradient colors={[...(settings.isDarkMode ? SKIES[sky].night : SKIES[sky].day)]} start={{ x: 0.2, y: 0 }} end={{ x: 0.8, y: 1 }} style={{ width: 44, height: 44, borderRadius: 22, borderWidth: 3, borderColor: settings.sky === sky ? "#ffffff" : "rgba(255,255,255,0.25)" }} />
+              <Text className="text-[11px] font-bold text-gray-700 dark:text-blue-100">{t(`settings.skies.${sky}` as TranslationKey)}</Text>
             </Pressable>
           ))}
         </View>
       </View>
       <Toggle label={t("settings.darkMode")} value={settings.isDarkMode} onChange={(value) => set("isDarkMode", value)} />
+      <Toggle label={t("settings.music")} value={settings.musicEnabled} onChange={(value) => set("musicEnabled", value)} />
       <Toggle label={t("settings.sounds")} value={settings.soundEnabled} onChange={(value) => set("soundEnabled", value)} />
       <Toggle label={t("settings.vibration")} value={settings.vibrationEnabled} onChange={(value) => set("vibrationEnabled", value)} />
     </Card>

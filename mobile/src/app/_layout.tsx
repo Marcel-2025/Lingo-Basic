@@ -3,6 +3,7 @@ import "~/lib/nativewind-interop";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
 import { useEffect } from "react";
+import { vars } from "nativewind";
 import { Dimensions, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -11,6 +12,7 @@ import { ScreenBackground } from "~/components/screen-background";
 import { AppStateProvider, useAppState } from "~/state/app-state";
 import { CityProvider } from "~/state/city-state";
 import { PackProvider } from "~/state/pack-state";
+import { ACCENTS } from "~/lib/theme";
 
 /** Phones stay in portrait; tablets may rotate freely (landscape is the main tablet layout). */
 function useOrientationPolicy() {
@@ -26,8 +28,10 @@ function Navigation() {
   const { settings } = useAppState();
   const base = settings.isDarkMode ? DarkTheme : DefaultTheme;
   const theme = { ...base, colors: { ...base.colors, background: "transparent", card: "transparent" } };
+  const accent = ACCENTS[settings.theme] ?? ACCENTS.Ocean;
   return (
     <ThemeProvider value={theme}>
+     <View className="flex-1" style={vars({ "--accent": accent.main, "--accent-soft": accent.soft, "--accent-deep": accent.deep })}>
       <StatusBar style={settings.isDarkMode ? "light" : "dark"} />
       <ScreenBackground />
       <Stack
@@ -44,6 +48,7 @@ function Navigation() {
         <Stack.Screen name="premium" options={{ presentation: "modal" }} />
       </Stack>
       <CelebrationOverlay />
+     </View>
     </ThemeProvider>
   );
 }

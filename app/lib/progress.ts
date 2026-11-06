@@ -8,6 +8,7 @@ import type {
   LanguageCode,
   LearnedWord,
   LearningInsights,
+  SkyName,
   ThemeName,
   UserStats,
 } from "@/app/lib/types";
@@ -21,6 +22,7 @@ import type {
 type UnknownRecord = Record<string, unknown>;
 
 const THEMES: readonly ThemeName[] = ["Ocean", "Sunset", "Lime", "Grape"];
+const SKIES: readonly SkyName[] = ["night", "midnight", "forest", "dusk", "rose", "graphite"];
 const DATE_KEY_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 const asRecord = (value: unknown): UnknownRecord =>
@@ -104,10 +106,13 @@ export const normalizeSettings = (input: unknown): AppSettings => {
     difficulty: normalizeSettingsDifficulty(raw.difficulty),
     dailyGoal: Math.min(200, Math.max(1, dailyGoal || defaults.dailyGoal)),
     theme: THEMES.includes(raw.theme as ThemeName) ? (raw.theme as ThemeName) : defaults.theme,
+    sky: SKIES.includes(raw.sky as SkyName) ? (raw.sky as SkyName) : defaults.sky,
     isDarkMode: typeof raw.isDarkMode === "boolean" ? raw.isDarkMode : defaults.isDarkMode,
     soundEnabled: typeof raw.soundEnabled === "boolean" ? raw.soundEnabled : defaults.soundEnabled,
+    musicEnabled: typeof raw.musicEnabled === "boolean" ? raw.musicEnabled : defaults.musicEnabled,
     vibrationEnabled: typeof raw.vibrationEnabled === "boolean" ? raw.vibrationEnabled : defaults.vibrationEnabled,
     timeZone: isValidTimeZone(raw.timeZone) ? raw.timeZone : defaults.timeZone,
+    displayName: typeof raw.displayName === "string" ? raw.displayName.trim().slice(0, 30) : "",
   };
 };
 

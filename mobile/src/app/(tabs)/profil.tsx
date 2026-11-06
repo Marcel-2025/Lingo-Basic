@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { getDateKey } from "@/app/lib/utils";
 import { Achievement, Card, Gradient, StatBox, useScreenColors } from "~/components/ui";
 import { LOCALES, useT } from "~/i18n";
@@ -14,7 +14,7 @@ const humanizeTopicId = (topicId: string) =>
     .replace(/^\w/, (letter) => letter.toUpperCase());
 
 export default function ProfileScreen() {
-  const { stats, insights, settings } = useAppState();
+  const { stats, insights, settings, updateSettings } = useAppState();
   const { pack } = usePackState();
   const colors = useScreenColors();
   const t = useT();
@@ -41,7 +41,44 @@ export default function ProfileScreen() {
   const isCurrentMonth = todayKey.startsWith(monthPrefix);
   const topicNames = new Map(pack?.topics.map((topic) => [topic.id, `${topic.icon ? `${topic.icon} ` : ""}${topic.title}`]) ?? []);
   const topicEntries = Object.entries(insights.learnedWordsByTopic).filter(([, words]) => words.length > 0);
-  const monthLabel = calendarDate.toLocaleDateString(LOCALES[settings.uiLang], { month: "long", year: "numeric" });
+  // Intl may be incomplete on some Android builds; fall back to a plain "MM/YYYY" instead of crashing.
+  const monthLabel = (() => {
+    try {
+      return calendarDate.toLocaleDateString(LOCALES[settings.uiLang], { month: "long", year: "numeric" });
+    } catch {
+      return `${String(month + 1).padStart(2, "0")}/${year}`;
+    }
+  })();
+  const [editingName, setEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState(settings.displayName);
+  const saveName = () => {
+    const displayName = nameDraft.trim().slice(0, 30);
+    updateSettings((previous) => ({ ...previous, displayName }));
+    setNameDraft(displayName);
+    setEditingName(false);
+  };
+  /** Name line under the owl: greeting with the name, or an invitation to enter one; tap to edit inline. */
+  const nameBlock = editingName ? (
+    <View className="mt-1 w-full max-w-[280px] flex-row items-center gap-2">
+      <TextInput
+        value={nameDraft}
+        onChangeText={setNameDraft}
+        onSubmitEditing={saveName}
+        autoFocus
+        maxLength={30}
+        placeholder={t("profile.name")}
+        placeholderTextColor="#94a3b8"
+        accessibilityLabel={t("profile.name")}
+        className="flex-1 rounded-xl bg-gray-100 px-3 py-2 text-gray-900 dark:border dark:border-white/20 dark:bg-white/10 dark:text-white"
+      />
+      <Pressable accessibilityRole="button" onPress={saveName} className="rounded-xl bg-mint-400 px-3 py-2 active:opacity-70"><Text className="font-bold text-night-950">{t("profile.save")}</Text></Pressable>
+    </View>
+  ) : (
+    <Pressable accessibilityRole="button" accessibilityLabel={t("profile.name")} onPress={() => { setNameDraft(settings.displayName); setEditingName(true); }} className="mt-1 flex-row items-center gap-1.5 active:opacity-70">
+      <Text className={`text-base font-semibold ${settings.displayName ? colors.text : "text-indigo-700 dark:text-mint-300"}`}>{settings.displayName ? t("profile.greeting", { name: settings.displayName }) : t("profile.addName")}</Text>
+      <Text className="text-xs">✏️</Text>
+    </Pressable>
+  );
 
   const statBoxes = [
     <StatBox key="xp" title={t("profile.xpTotal")} value={stats.xp} icon="⭐" />,
@@ -119,7 +156,7 @@ export default function ProfileScreen() {
                     {word.x ? <Text className="font-normal"> · {word.x}</Text> : null}
                   </Text>
                   {word.lang && word.lang !== pack?.lang ? (
-                    <Text className="ml-1 rounded bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-1 text-[10px] text-gray-600 dark:text-blue-100/85" accessibilityLabel={t(`languages.${word.lang}`)}>
+                    <Text className="ml-1 rounded bg-white dark:border dark:border-white/10 dark:bg-black/30 px-1 text-[10px] text-gray-600 dark:text-blue-100/85" accessibilityLabel={t(`languages.${word.lang}`)}>
                       {word.lang}
                     </Text>
                   ) : null}
@@ -153,6 +190,7 @@ export default function ProfileScreen() {
             <Text className="text-4xl">🦉</Text>
           </Gradient>
           <View className="mr-4">
+            {nameBlock}
             <Text className={`text-3xl font-bold ${colors.text}`}>{t("common.level")} {stats.level}</Text>
             <Text className={`mt-1 ${colors.muted}`}>{t("profile.rank")}</Text>
           </View>
@@ -176,7 +214,8 @@ export default function ProfileScreen() {
           <Gradient className="mb-4 h-32 w-32 items-center justify-center rounded-full border-4 border-white" style={{ borderRadius: 64 }}>
             <Text className="text-5xl">🦉</Text>
           </Gradient>
-          <Text className={`text-3xl font-bold ${colors.text}`}>{t("common.level")} {stats.level}</Text>
+          {nameBlock}
+          <Text className={`mt-1 text-3xl font-bold ${colors.text}`}>{t("common.level")} {stats.level}</Text>
           <Text className={`mt-1 ${colors.muted}`}>{t("profile.rank")}</Text>
         </View>
         {isTablet ? (

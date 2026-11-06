@@ -6,6 +6,7 @@ import { formatCountdown, MAX_LIVES, REFILL_COIN_COST } from "@/app/lib/lives";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { isWordLearned, recordLearningInInsights } from "@/app/lib/learning-history";
 import type { LanguagePack, VocabItem } from "@/app/lib/types";
+import { FloatingReward, Pop, SparkleBurst } from "~/components/effects";
 import { GradientButton, IconButton, Label, SoftButton, useScreenColors } from "~/components/ui";
 import { useT } from "~/i18n";
 import { playAnswerTone, speak, vibrate } from "~/lib/feedback";
@@ -47,12 +48,20 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [reward, setReward] = useState({ trigger: 0, correct: false });
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isLocked = selected !== null;
 
   useEffect(() => () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
   }, []);
+
+  // Auto pronunciation: each new question is read in the learner's own language; the answer follows in the target language.
+  useEffect(() => {
+    if (!question || !prefs.autoSpeak || outOfLives) return;
+    const timer = setTimeout(() => speak(question.word.de, settings.uiLang), 200);
+    return () => clearTimeout(timer);
+  }, [question, prefs.autoSpeak, outOfLives, settings.uiLang]);
 
   const onAnswer = (word: VocabItem, correct: boolean) => {
     const topic = findTopicForWord(fullPack, word.id);
@@ -73,6 +82,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
     if (!correct) livesActions.lose(isPremium);
     onAnswer(question.word, correct);
     setHistory((previous) => [{ key: Date.now(), word: question.word, correct }, ...previous].slice(0, 12));
+    setReward((previous) => ({ trigger: previous.trigger + 1, correct }));
     const nextStreak = correct ? streak + 1 : 0;
     setStreak(nextStreak);
     setBestStreak((best) => Math.max(best, nextStreak));
@@ -94,14 +104,14 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   const accuracy = history.length ? Math.round((correctCount / history.length) * 100) : 0;
   const image = prefs.showImages ? WORD_IMAGES[question.word.id] : undefined;
   const optionStyle = (option: string) => {
-    if (!isLocked) return { box: "border-transparent bg-white dark:border dark:border-white/10 dark:bg-night-card/85", text: "text-gray-900 dark:text-white" };
+    if (!isLocked) return { box: "border-transparent bg-white dark:border dark:border-white/10 dark:bg-black/30", text: "text-gray-900 dark:text-white" };
     if (option === question.word.x) return { box: "border-green-400 dark:border-mint-400 bg-green-100 dark:bg-mint-500/25", text: "text-green-800 dark:text-mint-300" };
     if (option === selected) return { box: "border-red-400 dark:border-red-300 bg-red-100 dark:bg-red-500/25", text: "text-red-800 dark:text-red-200" };
     return { box: "border-transparent bg-white/70 dark:bg-white/5", text: "text-gray-500 dark:text-blue-200/75" };
   };
 
   const hearts = (
-    <View className="flex-row items-center justify-between rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
+    <View className="flex-row items-center justify-between rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
       <View className="flex-row items-center gap-1">
         {isPremium ? <Text className="text-xl">❤️</Text> : Array.from({ length: MAX_LIVES }, (_, index) => <Text key={index} className="text-xl" style={index >= lives ? { opacity: 0.25 } : null}>❤️</Text>)}
         {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900 dark:text-white">{t("exercises.premiumInfinite")}</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
@@ -111,7 +121,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
     </View>
   );
   const outOfLivesCard = (
-    <View className="w-full items-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-6 shadow-sm" style={{ maxWidth: 448 }}>
+    <View className="w-full items-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-sm" style={{ maxWidth: 448 }}>
       <Text className="text-5xl">💔</Text>
       <Text className="mt-2 text-xl font-black text-gray-900 dark:text-white">{t("exercises.outOfLives")}</Text>
       <Text className="mt-1 text-center text-sm text-gray-600 dark:text-blue-100/85">{t("exercises.outOfLivesText", { time: formatCountdown(msUntilNext) })}</Text>
@@ -135,8 +145,12 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
       <Text className={`mb-4 text-lg font-bold uppercase tracking-wider ${colors.muted}`}>{t("exercises.whichWord")}</Text>
       {image ? <Image source={image} style={{ width: 112, height: 112, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: question.word.de })} /> : null}
       <View className="mb-4 flex-row items-center gap-3">
-        <Text className={`text-center text-4xl font-extrabold ${colors.text}`}>{question.word.de}</Text>
+        <Pop trigger={question.word.id.length + history.length}><Text className={`text-center text-4xl font-extrabold ${colors.text}`}>{question.word.de}</Text></Pop>
         <IconButton icon="🔊" label={t("learn.speak", { text: question.word.de })} onPress={() => speak(question.word.de, settings.uiLang)} />
+      </View>
+      <View pointerEvents="none" style={{ position: "absolute", left: 0, right: 0, top: 40, alignItems: "center" }}>
+        {reward.correct ? <FloatingReward text="+15 XP ✨" trigger={reward.trigger} /> : null}
+        {reward.correct ? <SparkleBurst trigger={reward.trigger} /> : null}
       </View>
       <View className="mb-5 min-h-9 flex-row items-center gap-2" accessibilityLiveRegion="assertive">
         {isLocked ? (
@@ -160,7 +174,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
               onPress={() => choose(option)}
               className={`items-center justify-center rounded-2xl border-2 p-5 shadow-sm active:scale-95 ${isTablet ? "min-h-[84px] w-[48.5%]" : ""} ${style.box}`}
             >
-              <Text className={`text-center text-lg font-semibold ${style.text}`}>{option}</Text>
+              <Pop trigger={isLocked && option === question.word.x ? history.length : 0}><Text className={`text-center text-lg font-semibold ${style.text}`}>{option}</Text></Pop>
             </Pressable>
           );
         })}
@@ -170,7 +184,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   );
 
   const historyList = (
-    <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 p-4 shadow-sm">
+    <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
       <Label>{t("exercises.lastAnswers")}</Label>
       {history.length === 0 ? <Text className="text-sm text-gray-500 dark:text-blue-200/75">{t("exercises.noAnswers")}</Text> : null}
       {history.map((entry) => (
@@ -207,7 +221,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
 
 function MiniStat({ label, value }: { label: string; value: string }) {
   return (
-    <View className="flex-1 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-night-card/85 px-2 py-3 shadow-sm">
+    <View className="flex-1 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-2 py-3 shadow-sm">
       <Text className="text-lg font-black text-gray-900 dark:text-white">{value}</Text>
       <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-blue-200/75">{label}</Text>
     </View>

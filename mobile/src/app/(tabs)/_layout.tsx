@@ -30,9 +30,9 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
     if (!tab) return null;
     const isActive = state.index === index;
     const content = (
-      <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-14"} items-center justify-center`}>
+      <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-[68px]"} items-center justify-center px-1`}>
         <Text className="mb-1 text-2xl">{tab.icon}</Text>
-        <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500 dark:text-blue-200/75"}`}>{t(tab.label)}</Text>
+        <Text numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} className={`text-[10px] font-bold uppercase ${isActive ? "text-white" : "text-gray-500 dark:text-blue-200/75"}`}>{t(tab.label)}</Text>
       </View>
     );
     return (

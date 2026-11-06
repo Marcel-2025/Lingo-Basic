@@ -21,10 +21,13 @@ export const getDefaultSettings = (): AppSettings => ({
   difficulty: "all",
   dailyGoal: 20,
   theme: "Ocean",
+  sky: "night",
   isDarkMode: true,
   soundEnabled: true,
+  musicEnabled: true,
   vibrationEnabled: true,
   timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",
+  displayName: "",
 });
 
 export const DEFAULT_INSIGHTS: LearningInsights = {

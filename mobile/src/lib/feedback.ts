@@ -28,7 +28,35 @@ export const vibrate = (correct: boolean) => {
   void Haptics.notificationAsync(correct ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Error).catch(() => undefined);
 };
 
-export const speak = (text: string, language: "DE" | LanguageCode, options: { slow?: boolean } = {}) => {
+/** Voices the device offers, grouped by language ("de", "en", …). Loaded once; speech falls back to the language code alone. */
+let voicesByLanguage: Map<string, Speech.Voice[]> | null = null;
+let voicesLoading: Promise<void> | null = null;
+const loadVoices = () => {
+  voicesLoading ??= Speech.getAvailableVoicesAsync()
+    .then((voices) => {
+      voicesByLanguage = new Map();
+      for (const voice of voices) {
+        const key = voice.language.toLowerCase().slice(0, 2);
+        voicesByLanguage.set(key, [...(voicesByLanguage.get(key) ?? []), voice]);
+      }
+    })
+    .catch(() => undefined);
+  return voicesLoading;
+};
+void loadVoices();
+
+/** Picks a voice that really speaks `speechCode` (prefers an exact locale match, then enhanced/network quality). */
+const pickVoice = (speechCode: string) => {
+  const candidates = voicesByLanguage?.get(speechCode.toLowerCase().slice(0, 2)) ?? [];
+  if (candidates.length === 0) return undefined;
+  const exact = candidates.filter((voice) => voice.language.toLowerCase().replace("_", "-") === speechCode.toLowerCase());
+  const pool = exact.length ? exact : candidates;
+  return (pool.find((voice) => voice.quality === Speech.VoiceQuality.Enhanced) ?? pool[0]).identifier;
+};
+
+/** Reads `text` in `language` using a matching system voice, so a German word never comes out with an English accent. */
+export const speak = (text: string, language: LanguageCode, options: { slow?: boolean } = {}) => {
+  const speechCode = SUPPORTED_LANGUAGES[language].speechCode;
   Speech.stop();
-  Speech.speak(text, { language: language === "DE" ? "de-DE" : SUPPORTED_LANGUAGES[language].speechCode, rate: options.slow ? 0.55 : 1 });
+  Speech.speak(text, { language: speechCode, voice: pickVoice(speechCode), rate: options.slow ? 0.55 : 0.95 });
 };

@@ -68,14 +68,14 @@ export function ProgressBar({ value, className }: { value: number; className?: s
 /** Glass card: white by day, translucent deep blue with a soft rim at night. Slides in when it appears. */
 export function Card({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   return (
-    <Animated.View entering={FadeInDown.delay(delay).duration(420).springify().damping(18)} className={`rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-night-card/85 ${className ?? ""}`}>
+    <Animated.View entering={FadeInDown.delay(delay).duration(420).springify().damping(18)} className={`rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-black/30 ${className ?? ""}`}>
       {children}
     </Animated.View>
   );
 }
 
 /** Tailwind classes shared by all card-like surfaces (used where a plain View is needed). */
-export const CARD = "rounded-3xl bg-white shadow-sm dark:border dark:border-white/10 dark:bg-night-card/85";
+export const CARD = "rounded-3xl bg-white shadow-sm dark:border dark:border-white/10 dark:bg-black/30";
 
 export function Label({ children }: { children: ReactNode }) {
   return <Text className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-blue-200/80">{children}</Text>;
@@ -144,7 +144,7 @@ export function SelectField<T extends string | number>({ label, value, options, 
       </Pressable>
       <Modal visible={isOpen} transparent animationType="slide" onRequestClose={() => setIsOpen(false)}>
         <Pressable className="flex-1 bg-black/40" onPress={() => setIsOpen(false)} accessibilityLabel={t("common.closeSelection")} />
-        <View className="max-h-[70%] w-full max-w-[560px] self-center rounded-t-3xl bg-white px-4 pt-4 dark:bg-night-900" style={{ paddingBottom: insets.bottom + 16 }}>
+        <View className="max-h-[70%] w-full max-w-[560px] self-center rounded-t-3xl bg-white px-4 pt-4 dark:bg-[#0f1424]" style={{ paddingBottom: insets.bottom + 16 }}>
           <Text className="mb-3 text-lg font-bold text-gray-900 dark:text-white">{label}</Text>
           <ScrollView>
             {options.map((option) => (

@@ -7,6 +7,8 @@ export type Difficulty = 1 | 2 | 3;
 export type LegacyDifficulty = "easy" | "medium" | "hard";
 
 export type ThemeName = "Ocean" | "Sunset" | "Lime" | "Grape";
+/** Background mood of the native app (sky gradient). */
+export type SkyName = "night" | "midnight" | "forest" | "dusk" | "rose" | "graphite";
 
 export interface VocabItem {
   id: string;
@@ -65,10 +67,16 @@ export interface AppSettings {
   difficulty: "all" | Difficulty;
   dailyGoal: number;
   theme: ThemeName;
+  /** Sky/background palette (native app). */
+  sky: SkyName;
   isDarkMode: boolean;
   soundEnabled: boolean;
+  /** Background music (native app). */
+  musicEnabled: boolean;
   vibrationEnabled: boolean;
   timeZone: string;
+  /** Optional name shown on the profile screen (local only). */
+  displayName: string;
 }
 
 export interface LearnedWord {

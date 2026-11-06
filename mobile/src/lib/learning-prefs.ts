@@ -16,7 +16,7 @@ export interface LearningPrefs {
 }
 
 const KEY = "lingoLearningPrefs";
-const DEFAULTS: LearningPrefs = { direction: "de-x", autoSpeak: false, slowSpeech: false, showImages: true, panelOpen: true };
+const DEFAULTS: LearningPrefs = { direction: "de-x", autoSpeak: true, slowSpeech: false, showImages: true, panelOpen: true };
 
 let current: LearningPrefs = DEFAULTS;
 const listeners = new Set<() => void>();

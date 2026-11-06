@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { useEffect } from "react";
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withRepeat, withSequence, withSpring, withTiming } from "react-native-reanimated";
 import { MAX_BUILDING_LEVEL, type BuildingStatus } from "@/app/lib/city";
 import { DECORATIONS } from "@/app/lib/premium-benefits";
@@ -8,6 +8,7 @@ import { Flame } from "~/components/celebration";
 import { Card, GradientButton, Label, ProgressBar, useScreenColors } from "~/components/ui";
 import { useT, type TranslationKey } from "~/i18n";
 import { useResponsive } from "~/lib/responsive";
+import { CITY_IMAGES } from "~/lib/city-images";
 import { useAppState } from "~/state/app-state";
 import { useCity } from "~/state/city-state";
 
@@ -40,7 +41,13 @@ function BuildingTile({ status, index, asleep, onPress, compact }: { status: Bui
       style={{ width: compact ? "31%" : "23%", minHeight: compact ? 108 : 128 }}
     >
       {asleep && built ? <Text className="absolute right-2 top-1 text-xs">💤</Text> : null}
-      <Animated.Text style={[{ fontSize: size, lineHeight: size * 1.25 }, iconStyle, !built ? { opacity: 0.35 } : null]}>{building.icon}</Animated.Text>
+      {CITY_IMAGES[`${building.id}_${Math.max(1, level)}`] ? (
+        <Animated.View style={[iconStyle, !built ? { opacity: 0.35 } : null]}>
+          <Image source={CITY_IMAGES[`${building.id}_${Math.max(1, level)}`]} style={{ width: size * 1.6, height: size * 1.6, borderRadius: 14 }} accessibilityIgnoresInvertColors />
+        </Animated.View>
+      ) : (
+        <Animated.Text style={[{ fontSize: size, lineHeight: size * 1.25 }, iconStyle, !built ? { opacity: 0.35 } : null]}>{building.icon}</Animated.Text>
+      )}
       <Text className="mt-1 text-xs font-bold text-gray-900 dark:text-white" numberOfLines={1}>{name}</Text>
       <Text className="text-[10px] text-amber-500 dark:text-amber-300">{"★".repeat(level)}{"☆".repeat(MAX_BUILDING_LEVEL - level)}</Text>
       <Text className={`text-[10px] font-semibold ${canUpgrade ? "text-amber-700 dark:text-amber-200" : "text-gray-500 dark:text-blue-200/75"}`} numberOfLines={1}>{hint}</Text>
@@ -110,9 +117,13 @@ export default function CityScreen() {
               accessibilityLabel={owned ? t("city.decorationLabel", { name }) : t("city.decorationCost", { name, n: decoration.cost })}
               disabled={owned || !isPremium}
               onPress={() => { if (!buyDecorationWithCoins(decoration.id)) return; }}
-              className={`w-[31%] items-center rounded-2xl p-3 ${owned ? "bg-emerald-100 dark:bg-mint-500/25" : isPremium && affordable ? "border-2 border-amber-400 dark:border-amber-300 bg-white dark:border dark:border-white/10 dark:bg-night-card/85" : "bg-gray-100 dark:bg-white/10"} ${!isPremium ? "opacity-60" : ""}`}
+              className={`w-[31%] items-center rounded-2xl p-3 ${owned ? "bg-emerald-100 dark:bg-mint-500/25" : isPremium && affordable ? "border-2 border-amber-400 dark:border-amber-300 bg-white dark:border dark:border-white/10 dark:bg-black/30" : "bg-gray-100 dark:bg-white/10"} ${!isPremium ? "opacity-60" : ""}`}
             >
-              <Text className="text-3xl">{owned ? decoration.icon : isPremium ? decoration.icon : "🔒"}</Text>
+              {CITY_IMAGES[`${decoration.id}_1`] && (owned || isPremium) ? (
+                <Image source={CITY_IMAGES[`${decoration.id}_1`]} style={{ width: 56, height: 56, borderRadius: 12 }} accessibilityIgnoresInvertColors />
+              ) : (
+                <Text className="text-3xl">{owned ? decoration.icon : isPremium ? decoration.icon : "🔒"}</Text>
+              )}
               <Text className="mt-1 text-xs font-bold text-gray-900 dark:text-white" numberOfLines={1}>{name}</Text>
               <Text className="text-[10px] text-gray-500 dark:text-blue-200/75">{owned ? t("city.built") : `🪙 ${decoration.cost}`}</Text>
             </Pressable>

@@ -8,6 +8,7 @@ import { getLocales } from "expo-localization";
 import { colorScheme } from "nativewind";
 import { getDefaultTargetFor, isLanguageCode } from "@/app/lib/languages";
 import { setLanguage, t } from "~/i18n";
+import { setMusicEnabled } from "~/lib/music";
 import { usePurchases } from "~/lib/purchases";
 import { readJson, STORAGE_KEYS, writeJson } from "~/lib/storage";
 
@@ -84,6 +85,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     colorScheme.set(settings.isDarkMode ? "dark" : "light");
   }, [settings.isDarkMode]);
+  useEffect(() => {
+    if (isLoaded) setMusicEnabled(settings.musicEnabled);
+  }, [isLoaded, settings.musicEnabled]);
 
   useEffect(() => {
     if (!isLoaded) return;
