@@ -9,12 +9,14 @@ import { Card, GradientButton, SelectField, SoftButton, Toggle, useScreenColors 
 import { deleteAccount, signOutEverywhere } from "~/lib/firebase";
 import { clearImportedPacks, importPack, removeImportedPack } from "~/lib/packs";
 import { THEMES } from "~/lib/theme";
+import { requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useResponsive } from "~/lib/responsive";
 import { useAppState } from "~/state/app-state";
 import { usePackState } from "~/state/pack-state";
 
 export default function SettingsScreen() {
-  const { settings, updateSettings, user } = useAppState();
+  const { settings, updateSettings, user, stats, insights, todayKey } = useAppState();
+  const reminders = useReminderSettings();
   const { source, message: packMessage, pack, reload } = usePackState();
   const colors = useScreenColors();
   const { isWide, contentMaxWidth } = useResponsive();
@@ -131,6 +133,31 @@ export default function SettingsScreen() {
       <Toggle label="Vibration" value={settings.vibrationEnabled} onChange={(value) => set("vibrationEnabled", value)} />
     </Card>
   );
+  const learnedToday = (insights.learnedDays[todayKey()] ?? 0) > 0;
+  const applyReminders = (patch: Partial<typeof reminders>) => run(async () => {
+    if (patch.enabled) {
+      const granted = await requestReminderPermission();
+      if (!granted) return "Benachrichtigungen sind für Lingo Pro nicht erlaubt. Bitte in den Systemeinstellungen freigeben.";
+    }
+    await setReminderSettings(patch);
+    await syncReminders(learnedToday, stats.streak);
+    return patch.enabled === false ? "Erinnerungen ausgeschaltet." : "Erinnerung gespeichert.";
+  });
+  const reminderTime = `${String(reminders.hour).padStart(2, "0")}:${String(reminders.minute).padStart(2, "0")}`;
+  const reminderCard = (
+    <Card className="gap-3">
+      <Text className="text-lg font-bold text-gray-900">Tägliche Erinnerung</Text>
+      <Text className="text-sm text-gray-600">Eine Nachricht pro Tag zur Wunschzeit – und abends eine Warnung, wenn deine Serie in Gefahr ist. Alles lokal auf dem Gerät.</Text>
+      <Toggle label="Erinnerung aktiv" value={reminders.enabled} onChange={(value) => void applyReminders({ enabled: value })} />
+      <SelectField<string>
+        label="Uhrzeit"
+        value={reminderTime}
+        onChange={(value) => { const [hour, minute] = value.split(":").map(Number); void applyReminders({ hour, minute }); }}
+        options={Array.from({ length: 16 }, (_, index) => 6 + index).flatMap((hour) => ["00", "30"].map((minute) => ({ value: `${String(hour).padStart(2, "0")}:${minute}`, label: `${String(hour).padStart(2, "0")}:${minute} Uhr` })))}
+      />
+      <Toggle label="Serien-Warnung am Abend" value={reminders.streakWarning} onChange={(value) => void applyReminders({ streakWarning: value })} />
+    </Card>
+  );
   const contentCard = (
     <Card className="gap-3">
       <Text className="text-lg font-bold text-gray-900">Inhalte verwalten</Text>
@@ -206,6 +233,7 @@ export default function SettingsScreen() {
         <View className="flex-row items-start gap-6">
           <View className="flex-1">{learningCard}</View>
           <View className="flex-1 gap-6">
+            {reminderCard}
             {contentCard}
             {accountCard}
             {status}
@@ -220,6 +248,7 @@ export default function SettingsScreen() {
       <View className="w-full gap-6 self-center" style={{ maxWidth: contentMaxWidth }}>
         {title}
         {learningCard}
+        {reminderCard}
         {contentCard}
         {accountCard}
         {status}

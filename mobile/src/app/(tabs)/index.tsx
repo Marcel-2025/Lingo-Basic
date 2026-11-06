@@ -13,6 +13,7 @@ import { useLearningPrefs } from "~/lib/learning-prefs";
 import { useResponsive } from "~/lib/responsive";
 import { WORD_IMAGES } from "~/lib/word-images";
 import { useAppState } from "~/state/app-state";
+import { useCity } from "~/state/city-state";
 import { usePackState } from "~/state/pack-state";
 
 export default function TodayScreen() {
@@ -32,6 +33,7 @@ export default function TodayScreen() {
 
 function Flashcards({ pack }: { pack: LanguagePack }) {
   const { insights, settings, updateInsights, awardAnswer, todayKey } = useAppState();
+  const { recordCard } = useCity();
   const colors = useScreenColors();
   const { isWide, isTablet, cardMaxWidth, contentMaxWidth } = useResponsive();
   const [prefs, setPrefs] = useLearningPrefs();
@@ -90,6 +92,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
       updateInsights((previous) => ({ ...previous, learnedDays: { ...previous.learnedDays, [todayKey()]: (previous.learnedDays[todayKey()] ?? 0) + 1 } }));
     }
     awardAnswer(known ? 10 : 2, known, known && !alreadyLearned ? 1 : 0, known && !alreadyMastered ? 1 : 0);
+    recordCard(known && !alreadyLearned ? 1 : 0);
     setSession((previous) => (known ? { ...previous, known: previous.known + 1 } : { ...previous, practice: previous.practice + 1 }));
     if (settings.vibrationEnabled) vibrate(known);
     if (index + 1 >= queue.length) {

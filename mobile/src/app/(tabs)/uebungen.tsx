@@ -10,6 +10,7 @@ import { useLearningPrefs } from "~/lib/learning-prefs";
 import { useResponsive } from "~/lib/responsive";
 import { WORD_IMAGES } from "~/lib/word-images";
 import { useAppState } from "~/state/app-state";
+import { useCity } from "~/state/city-state";
 import { usePackState } from "~/state/pack-state";
 
 interface HistoryEntry {
@@ -29,6 +30,7 @@ export default function ExercisesScreen() {
 
 function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: LanguagePack }) {
   const { insights, settings, updateInsights, awardAnswer, todayKey } = useAppState();
+  const { recordExercise } = useCity();
   const colors = useScreenColors();
   const { isWide, isTablet } = useResponsive();
   const [prefs] = useLearningPrefs();
@@ -53,6 +55,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
       updateInsights((previous) => ({ ...previous, learnedDays: { ...previous.learnedDays, [todayKey()]: (previous.learnedDays[todayKey()] ?? 0) + 1 } }));
     }
     awardAnswer(correct ? 15 : 0, correct, correct && !alreadyLearned ? 1 : 0, 0);
+    recordExercise(correct);
   };
 
   const choose = (option: string) => {

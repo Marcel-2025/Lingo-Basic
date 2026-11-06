@@ -1,3 +1,4 @@
+import { mergeCity, normalizeCity } from "@/app/lib/city";
 import { DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { isCefrLevel, isLanguageCode } from "@/app/lib/languages";
 import { getLevelFromXp } from "@/app/lib/utils";
@@ -156,7 +157,8 @@ export const normalizeInsights = (input: unknown): LearningInsights => {
   const masteredWordIds = Array.isArray(raw.masteredWordIds)
     ? [...new Set(raw.masteredWordIds.filter((entry): entry is string => typeof entry === "string" && entry.length > 0))]
     : [];
-  return { learnedDays, learnedWordsByTopic, masteredWordIds };
+  const city = raw.city === undefined ? undefined : normalizeCity(raw.city);
+  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}) };
 };
 
 export const normalizeProgressSnapshot = (input: unknown): CloudProgressSnapshot => {
@@ -184,10 +186,12 @@ const mergeInsights = (primary: LearningInsights, secondary: LearningInsights): 
       dedupeWords([...(primary.learnedWordsByTopic[topicId] ?? []), ...(secondary.learnedWordsByTopic[topicId] ?? [])]),
     ]),
   );
+  const city = primary.city || secondary.city ? mergeCity(normalizeCity(primary.city), normalizeCity(secondary.city)) : undefined;
   return {
     learnedDays,
     learnedWordsByTopic,
     masteredWordIds: [...new Set([...primary.masteredWordIds, ...secondary.masteredWordIds])],
+    ...(city ? { city } : {}),
   };
 };
 

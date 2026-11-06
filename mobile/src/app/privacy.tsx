@@ -23,7 +23,7 @@ export default function PrivacyScreen() {
   return (
     <ScrollView className="flex-1 bg-white" contentContainerClassName="p-6" contentContainerStyle={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 24, width: "100%", maxWidth: 560, alignSelf: "center" }}>
       <Text className="text-2xl font-bold text-gray-900">Datenschutzerklärung</Text>
-      <Text className="mt-1 text-xs text-gray-500">Stand: Oktober 2026</Text>
+      <Text className="mt-1 text-xs text-gray-500">Stand: November 2026</Text>
 
       <Section title="Ohne Konto">
         Du kannst Lingo Pro vollständig ohne Konto nutzen. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Einstellungen) wird dann nur auf deinem Gerät gespeichert und nicht übertragen.
@@ -33,6 +33,9 @@ export default function PrivacyScreen() {
       </Section>
       <Section title="Zweck und Rechtsgrundlage">
         Die Daten werden ausschließlich verwendet, um dich anzumelden und deinen Lernfortschritt zu synchronisieren (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO). Es gibt keine Werbung, kein Tracking und keine Weitergabe an Dritte zu Werbezwecken.
+      </Section>
+      <Section title="Erinnerungen">
+        Tägliche Erinnerungen sind optional und werden nur lokal auf deinem Gerät geplant. Es werden dafür keine Daten übertragen und keine Push-Tokens gespeichert.
       </Section>
       <Section title="Löschung">
         Du kannst dein Konto jederzeit in der App unter Settings → Konto → „Konto löschen“ löschen. Dabei werden dein Konto und alle Cloud-Daten dauerhaft entfernt. Alternativ genügt eine E-Mail an {CONTACT_EMAIL}.

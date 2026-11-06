@@ -69,9 +69,16 @@ Vor dem ersten App-Store-Upload:
 - Hochformat: Navigation unten, Inhalt mittig mit maximaler Breite; Lernkarten bleiben bewusst kompakt (max. 520 dp).
 - Lernhilfen: Richtung DE ↔ Zielsprache, automatisches und langsames Vorlesen, Wort aus der Liste als Nächstes lernen, Wortbilder.
 
+## Spiel, Motivation, Erinnerungen
+
+- **Deine Stadt** (Tab „Stadt“, Logik in `app/lib/city.ts`, geteilt mit der Web-App): 13 Gebäude mit je 3 Stufen, jedes an Lernthemen gebunden. Münzen: 5 XP = 1 Münze, jedes gelernte Wort = 3 Münzen, dazu Tagesaufgaben und Streak-Truhe. Gebäude brauchen gelernte Wörter aus ihrem Thema **und** Münzen. Nach 2 Tagen ohne Lernen „schläft“ die Stadt (nur optisch). Stand wird in `learningInsights.city` gespeichert und beim Sync zusammengeführt (höhere Stufe gewinnt).
+- **Tagesaufgaben**: 3 pro Tag, deterministisch aus dem Datum, erledigen sich automatisch.
+- **Feiern** (`src/components/celebration.tsx`, Reanimated): Konfetti und Karte bei Level-Up, Tagesziel, Serie, Aufgabe, Gebäude, Truhe; animierte Streak-Flamme im Kopf.
+- **Erinnerungen** (`src/lib/reminders.ts`, expo-notifications, nur lokal): tägliche Nachricht zur Wunschzeit, abends Serien-Warnung, wenn heute noch nicht gelernt wurde. Einstellungen unter Settings → Tägliche Erinnerung. Android-Kanal „lernen“, Icon `assets/notification-icon.png`.
+
 ## Inhalte und Bilder
 
-Vokabeln, Lernmodus und Level werden in `content/vokabeln.csv` gepflegt (Anleitung: `content/LIESMICH.md`).
+600 Wörter (A1/A2/B1 × 10 Themen × 20) in 9 Sprachen mit Beispielsätzen; Vokabeln, Lernmodus und Level werden in `content/vokabeln.csv` gepflegt (Anleitung: `content/LIESMICH.md`).
 Wortbilder erzeugt `scripts/generate_word_images.py` mit dem lokalen ComfyUI; danach `node scripts/generate-mobile-packs.mjs`.
 
 ## Builds für die Stores

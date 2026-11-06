@@ -80,6 +80,16 @@ export interface LearningInsights {
   learnedWordsByTopic: Record<string, LearnedWord[]>;
   /** Einträge im Format `${lang}:${wordId}`; Legacy-Einträge bestehen nur aus der Word-ID. */
   masteredWordIds: string[];
+  /** Aufbauspiel „Deine Stadt“ (Gebäude, ausgegebene Münzen, erledigte Tagesaufgaben). */
+  city?: CityStateLike;
+}
+
+/** Structural copy of CityState from app/lib/city.ts (kept here to avoid a type cycle). */
+export interface CityStateLike {
+  buildings: Record<string, number>;
+  coinsSpent: number;
+  questsDone: Record<string, string[]>;
+  chestsClaimed: string[];
 }
 
 /** Snapshot of the signed-in Firebase user. The session itself is managed by the Firebase Auth SDK. */

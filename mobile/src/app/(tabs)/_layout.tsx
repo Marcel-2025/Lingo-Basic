@@ -8,6 +8,7 @@ import { useResponsive } from "~/lib/responsive";
 const TABS: Record<string, { icon: string; label: string }> = {
   index: { icon: "📚", label: "Heute" },
   uebungen: { icon: "🎮", label: "Übungen" },
+  stadt: { icon: "🏙️", label: "Stadt" },
   profil: { icon: "👤", label: "Profil" },
   settings: { icon: "⚙️", label: "Settings" },
 };
@@ -26,7 +27,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
     if (!tab) return null;
     const isActive = state.index === index;
     const content = (
-      <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-16"} items-center justify-center`}>
+      <View className={`${isWide ? "h-[68px] w-[76px]" : "h-16 w-14"} items-center justify-center`}>
         <Text className="mb-1 text-2xl">{tab.icon}</Text>
         <Text className={`text-[10px] font-bold uppercase tracking-wider ${isActive ? "text-white" : "text-gray-500"}`}>{tab.label}</Text>
       </View>
@@ -58,7 +59,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
   }
   return (
     <View className={`${colors.nav} px-4 pt-3 shadow-lg`} style={{ paddingBottom: Math.max(insets.bottom, 12) }} accessibilityRole="tablist">
-      <View className={`flex-row ${isTablet ? "justify-center gap-16" : "justify-around"}`}>{items}</View>
+      <View className={`flex-row ${isTablet ? "justify-center gap-10" : "justify-around"}`}>{items}</View>
     </View>
   );
 }
@@ -69,6 +70,7 @@ export default function TabsLayout() {
     <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ header: () => <AppHeader />, tabBarPosition: isWide ? "left" : "bottom" }}>
       <Tabs.Screen name="index" />
       <Tabs.Screen name="uebungen" />
+      <Tabs.Screen name="stadt" />
       <Tabs.Screen name="profil" />
       <Tabs.Screen name="settings" />
     </Tabs>
