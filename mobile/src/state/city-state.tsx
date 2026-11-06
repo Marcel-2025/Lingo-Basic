@@ -52,7 +52,7 @@ interface CityContextValue {
 const CityContext = createContext<CityContextValue | null>(null);
 
 export function CityProvider({ children }: { children: ReactNode }) {
-  const { stats, insights, settings, updateInsights, todayKey } = useAppState();
+  const { stats, insights, settings, updateInsights, todayKey, isLoaded } = useAppState();
   const dateKey = todayKey();
   const activity = useDayActivity(dateKey);
   const city = useMemo(() => (insights.city ? normalizeCity(insights.city) : EMPTY_CITY), [insights.city]);
@@ -65,24 +65,26 @@ export function CityProvider({ children }: { children: ReactNode }) {
   // Level-up and daily-goal celebrations: compare against the last seen values.
   const lastLevelRef = useRef<number | null>(null);
   useEffect(() => {
+    if (!isLoaded) return;
     if (lastLevelRef.current === null) {
       lastLevelRef.current = stats.level;
       return;
     }
     if (stats.level > lastLevelRef.current) push({ kind: "level", level: stats.level });
     lastLevelRef.current = stats.level;
-  }, [push, stats.level]);
+  }, [isLoaded, push, stats.level]);
 
   // Streak celebration whenever the streak grows today.
   const lastStreakRef = useRef<number | null>(null);
   useEffect(() => {
+    if (!isLoaded) return;
     if (lastStreakRef.current === null) {
       lastStreakRef.current = stats.streak;
       return;
     }
     if (stats.streak > lastStreakRef.current && stats.streak >= 2) push({ kind: "streak", streak: stats.streak, coins: 0 });
     lastStreakRef.current = stats.streak;
-  }, [push, stats.streak]);
+  }, [isLoaded, push, stats.streak]);
 
   const goalReached = (insights.learnedDays[dateKey] ?? 0) >= Math.max(1, settings.dailyGoal);
   useEffect(() => {
