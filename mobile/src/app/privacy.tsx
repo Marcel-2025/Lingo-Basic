@@ -25,20 +25,17 @@ export default function PrivacyScreen() {
       <Text className="text-2xl font-bold text-gray-900">Datenschutzerklärung</Text>
       <Text className="mt-1 text-xs text-gray-500">Stand: November 2026</Text>
 
-      <Section title="Ohne Konto">
-        Du kannst Lingo Pro vollständig ohne Konto nutzen. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Einstellungen) wird dann nur auf deinem Gerät gespeichert und nicht übertragen.
+      <Section title="Keine Konten, keine Server">
+        Lingo Pro funktioniert ohne Konto und ohne Anmeldung. Dein Lernfortschritt (XP, Streak, gelernte Wörter, Stadt, Einstellungen) wird ausschließlich auf deinem Gerät gespeichert und nicht an uns oder Dritte übertragen. Die App enthält keine Werbung und kein Tracking.
       </Section>
-      <Section title="Mit Konto (optional)">
-        Wenn du dich anmeldest, verarbeiten wir je nach Anmeldemethode deine E-Mail-Adresse, deine Telefonnummer, deinen Google-Kontonamen oder die von „Mit Apple anmelden“ übermittelten Angaben (Name, ggf. anonymisierte E-Mail) sowie eine Nutzer-ID. Dein Lernfortschritt wird dann zusätzlich in der Cloud gespeichert, damit du ihn auf mehreren Geräten nutzen kannst. Dafür nutzen wir Firebase Authentication und Cloud Firestore von Google (Google Ireland Ltd.); die Daten liegen in der EU (Region eur3).
-      </Section>
-      <Section title="Zweck und Rechtsgrundlage">
-        Die Daten werden ausschließlich verwendet, um dich anzumelden und deinen Lernfortschritt zu synchronisieren (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO). Es gibt keine Werbung, kein Tracking und keine Weitergabe an Dritte zu Werbezwecken.
+      <Section title="Sicherung">
+        Über Settings → Deine Daten kannst du eine Sicherungsdatei erzeugen und selbst speichern oder teilen. Wohin du diese Datei legst, entscheidest allein du; wir erhalten sie nicht.
       </Section>
       <Section title="Erinnerungen">
         Tägliche Erinnerungen sind optional und werden nur lokal auf deinem Gerät geplant. Es werden dafür keine Daten übertragen und keine Push-Tokens gespeichert.
       </Section>
       <Section title="Löschung">
-        Du kannst dein Konto jederzeit in der App unter Settings → Konto → „Konto löschen“ löschen. Dabei werden dein Konto und alle Cloud-Daten dauerhaft entfernt. Alternativ genügt eine E-Mail an {CONTACT_EMAIL}.
+        Unter Settings → Deine Daten → „Alle Daten löschen“ entfernst du den gesamten Fortschritt vom Gerät. Auch das Deinstallieren der App löscht alle Daten.
       </Section>
       <Section title="Deine Rechte">
         Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Beschwerde bei einer Datenschutz-Aufsichtsbehörde.

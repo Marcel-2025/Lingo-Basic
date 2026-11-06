@@ -16,8 +16,6 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.flondy.lingua",
-      "googleServicesFile": "./GoogleService-Info.plist",
-      "usesAppleSignIn": true,
       "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -26,7 +24,6 @@
     "android": {
       "package": "dev.flondy.lingua",
       "versionCode": 1,
-      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0ea5e9"
@@ -39,29 +36,12 @@
     },
     "plugins": [
       "expo-router",
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth",
-      [
-        "@react-native-google-signin/google-signin",
-        {
-          "iosUrlScheme": "com.googleusercontent.apps.788312123831-96vpj7smm3kscif4chgkth1pnp7hbcj8"
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "ios": {
-            "useFrameworks": "dynamic"
-          }
-        }
-      ],
       [
         "expo-audio",
         {
           "microphonePermission": false
         }
       ],
-      "expo-apple-authentication",
       [
         "expo-screen-orientation",
         {
@@ -75,7 +55,8 @@
           "color": "#3b82f6",
           "defaultChannel": "lernen"
         }
-      ]
+      ],
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": false,

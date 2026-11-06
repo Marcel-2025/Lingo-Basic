@@ -10,18 +10,16 @@ mobile/
     (tabs)/index.tsx     Heute – Lernkarten
     (tabs)/uebungen.tsx  Übungen – Multiple Choice
     (tabs)/profil.tsx    Profil – Stats, Kalender, gelernte Wörter, Achievements
-    (tabs)/settings.tsx  Settings – Sprache/Level/Theme, Pack-Import, Konto (inkl. Löschen)
-    login.tsx            Apple (nur iOS), Google, E-Mail/Passwort, Telefon (SMS)
+    (tabs)/settings.tsx  Settings – Sprache/Level/Theme, Erinnerungen, Pack-Import, Sicherung/Löschen
     privacy.tsx          Datenschutzerklärung
   src/state/             App-Zustand (Fortschritt, Sync) und Sprachpaket
-  src/lib/               Firebase (React Native Firebase), Speicher, Feedback, gebündelte Packs
+  src/lib/               Speicher, Feedback, Erinnerungen, gebündelte Packs
 ```
 
 Die Lernlogik wird **nicht dupliziert**: Normalisierung, Packs, Fortschritt/Merge, Übungen und Lernhistorie kommen aus `../app/lib` (gemeinsam mit der Web-App), die Sprachpakete aus `../public/packs` (werden in die App eingebaut → komplett offline).
 
 - App-ID: `dev.flondy.lingua` (Android und iOS), Name „Lingo Pro“ (App-ID bleibt `dev.flondy.lingua`, weil `dev.flondy.lingo` bei Google Play gesperrt ist)
-- Firebase-Projekt `lingo-basic`: Android-App `1:788312123831:android:073de227681704c118e032`, iOS-App `1:788312123831:ios:b19df74cb9cc1c6b18e032`
-- `google-services.json` / `GoogleService-Info.plist` liegen hier und werden beim Prebuild eingebunden.
+- **Kein Login, kein Server:** Fortschritt liegt nur auf dem Gerät (AsyncStorage). Sicherung als JSON-Datei über Settings → Deine Daten (Export per Teilen-Dialog, Import mit Merge). Der frühere Firebase-Login liegt in der Git-Historie (Commit vor „Remove login“), falls er wieder gebraucht wird.
 
 ## Entwickeln
 
@@ -33,7 +31,7 @@ npm start                   # nur Metro starten (Dev-Build schon installiert)
 npm run typecheck && npm run lint
 ```
 
-Expo Go reicht nicht (native Firebase-Module) – es wird immer ein Development Build verwendet.
+Expo Go reicht nicht (native Module für Audio, Benachrichtigungen, Reanimated) – es wird immer ein Development Build verwendet.
 
 Neue Sprache oder neues Level: JSON unter `public/packs/{lang}/{level}.json` ablegen, dann im Repo-Root `node scripts/generate-mobile-packs.mjs` ausführen.
 
@@ -59,7 +57,6 @@ Der Ordner `ios/` wird von `expo prebuild` erzeugt und ist nicht im Repo – Än
 Vor dem ersten App-Store-Upload:
 
 - Apple Developer Program (kostenpflichtig, jährlich) und in App Store Connect eine App mit Bundle-ID `dev.flondy.lingua` anlegen.
-- Firebase: Anbieter **Apple** aktivieren. Für Telefon-Login auf iOS zusätzlich einen APNs-Schlüssel (Apple Developer → Keys) in Firebase → Projekteinstellungen → Cloud Messaging hochladen; ohne ihn fällt Firebase auf eine reCAPTCHA-Prüfung zurück.
 - Build + Upload: `npx eas-cli@latest build --platform ios --profile production` und `npx eas-cli@latest submit --platform ios` – oder in Xcode über Product → Archive.
 
 ## Tablets
@@ -91,12 +88,12 @@ npx eas-cli@latest build --platform android   # AAB für Google Play
 npx eas-cli@latest build --platform ios       # IPA für App Store / TestFlight
 ```
 
-Wichtig: EAS signiert mit eigenen Schlüsseln. Deren SHA-1/SHA-256 (sowie der Play-App-Signing-Schlüssel aus der Play Console) müssen in Firebase bei der Android-App eingetragen werden, sonst funktioniert der Google-Login nur im Debug-Build.
+Ohne Login sind keine Signatur-Hashes in Firebase nötig.
 
 Lokal (Android): `npx expo prebuild --platform android` und dann `cd android && ./gradlew assembleRelease` (Windows: `gradlew.bat`). Der Release-Build ist dabei mit dem Debug-Schlüssel signiert – nur zum Testen, nicht für den Store.
 
 ## Store-Hinweise
 
-- Kontolöschung in der App (Settings → Konto) und Datenschutzerklärung (Settings, Login) sind vorhanden – Pflicht bei Google Play und Apple.
+- Keine Konten: Für die Play-Prüfung ist unter „App-Zugriff“ „Alle Funktionen ohne Anmeldung verfügbar“ anzugeben. Datenlöschung in der App (Settings → Deine Daten) und Datenschutzerklärung sind vorhanden.
 - Keine Käufe, keine Werbung, kein Werbe-ID-Zugriff (`AD_ID` ist blockiert). Store-Eintrag darf nichts anderes versprechen.
-- iOS: „Mit Apple anmelden“ ist eingebaut (Guideline 4.8, Pflicht neben Google-Login). In Firebase muss dafür unter Authentication → Sign-in method der Anbieter **Apple** aktiviert werden.
+- iOS: Ohne Drittanbieter-Login ist „Mit Apple anmelden“ nicht erforderlich.

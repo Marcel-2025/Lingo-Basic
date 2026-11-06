@@ -6,7 +6,6 @@ export const STORAGE_KEYS = {
   settings: "lingoSettings",
   insights: "lingoLearningInsights",
   updatedAt: "lingoProgressUpdatedAt",
-  syncMarker: "lingoCloudSyncMarker",
   importedPacks: "lingoImportedPacks",
 } as const;
 

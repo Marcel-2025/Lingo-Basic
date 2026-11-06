@@ -1,12 +1,12 @@
 import * as DocumentPicker from "expo-document-picker";
-import { File } from "expo-file-system";
+import { File, Paths } from "expo-file-system";
+import * as Sharing from "expo-sharing";
 import { router } from "expo-router";
 import { useState } from "react";
 import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { SUPPORTED_LANGUAGES, SUPPORTED_LEVELS } from "@/app/lib/languages";
 import type { AppSettings, Difficulty, LanguageCode } from "@/app/lib/types";
 import { Card, GradientButton, SelectField, SoftButton, Toggle, useScreenColors } from "~/components/ui";
-import { deleteAccount, signOutEverywhere } from "~/lib/firebase";
 import { clearImportedPacks, importPack, removeImportedPack } from "~/lib/packs";
 import { THEMES } from "~/lib/theme";
 import { requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
@@ -15,7 +15,7 @@ import { useAppState } from "~/state/app-state";
 import { usePackState } from "~/state/pack-state";
 
 export default function SettingsScreen() {
-  const { settings, updateSettings, user, stats, insights, todayKey } = useAppState();
+  const { settings, updateSettings, stats, insights, todayKey, exportSnapshot, importSnapshot, resetAll } = useAppState();
   const reminders = useReminderSettings();
   const { source, message: packMessage, pack, reload } = usePackState();
   const colors = useScreenColors();
@@ -54,16 +54,43 @@ export default function SettingsScreen() {
       return `Paket ${SUPPORTED_LANGUAGES[imported.pack!.lang].label} ${imported.pack!.level} wurde geprüft und offline gespeichert.`;
     });
 
-  const confirmDeleteAccount = () => {
-    Alert.alert("Konto löschen?", "Dein Konto und alle in der Cloud gespeicherten Lerndaten werden dauerhaft gelöscht. Der Fortschritt auf diesem Gerät bleibt erhalten.", [
+  const exportBackup = () =>
+    run(async () => {
+      const file = new File(Paths.cache, `lingo-pro-sicherung-${todayKey()}.json`);
+      file.write(JSON.stringify(exportSnapshot(), null, 2));
+      if (!(await Sharing.isAvailableAsync())) return `Sicherung gespeichert unter ${file.uri}`;
+      await Sharing.shareAsync(file.uri, { mimeType: "application/json", dialogTitle: "Lingo-Pro-Sicherung speichern" });
+      return "Sicherung erstellt. Speichere sie z. B. in deiner Cloud oder schicke sie dir selbst.";
+    });
+
+  const importBackup = () =>
+    run(async () => {
+      const result = await DocumentPicker.getDocumentAsync({ type: ["application/json", "*/*"], copyToCacheDirectory: true });
+      if (result.canceled) return "";
+      let json: unknown;
+      try {
+        json = JSON.parse(await new File(result.assets[0].uri).text());
+      } catch {
+        throw new Error("Die Datei enthält kein gültiges JSON.");
+      }
+      const outcome = importSnapshot(json);
+      if (!outcome.ok) throw new Error(outcome.message);
+      reload();
+      return outcome.message;
+    });
+
+  const confirmReset = () => {
+    Alert.alert("Alle Daten löschen?", "Fortschritt, Stadt und Einstellungen auf diesem Gerät werden dauerhaft gelöscht. Erstelle vorher eine Sicherung, wenn du sie behalten willst.", [
       { text: "Abbrechen", style: "cancel" },
       {
         text: "Endgültig löschen",
         style: "destructive",
         onPress: () =>
           void run(async () => {
-            await deleteAccount();
-            return "Dein Konto wurde gelöscht.";
+            await clearImportedPacks();
+            resetAll();
+            reload();
+            return "Alle Daten wurden gelöscht.";
           }),
       },
     ]);
@@ -192,28 +219,11 @@ export default function SettingsScreen() {
   );
   const accountCard = (
     <Card className="gap-3">
-      <Text className="text-lg font-bold text-gray-900">Konto</Text>
-      {user ? (
-        <>
-          <Text className="text-sm text-gray-600">Angemeldet als {user.email || user.phoneNumber || user.displayName}. Dein Fortschritt wird mit der Cloud synchronisiert.</Text>
-          <SoftButton
-            label="Abmelden"
-            disabled={isBusy}
-            onPress={() =>
-              void run(async () => {
-                await signOutEverywhere();
-                return "Du wurdest abgemeldet. Dein Fortschritt bleibt auf diesem Gerät gespeichert.";
-              })
-            }
-          />
-          <SoftButton label="Konto löschen" tone="red" disabled={isBusy} onPress={confirmDeleteAccount} />
-        </>
-      ) : (
-        <>
-          <Text className="text-sm text-gray-600">Optional: Mit einem Konto wird dein Fortschritt zwischen Geräten synchronisiert. Ohne Konto bleibt alles auf diesem Gerät.</Text>
-          <GradientButton label="Anmelden oder registrieren" onPress={() => router.push("/login")} />
-        </>
-      )}
+      <Text className="text-lg font-bold text-gray-900">Deine Daten</Text>
+      <Text className="text-sm text-gray-600">Lingo Pro braucht kein Konto. Dein Fortschritt bleibt auf diesem Gerät. Mit einer Sicherung nimmst du ihn auf ein neues Gerät mit.</Text>
+      <GradientButton label="Sicherung erstellen (Datei teilen)" onPress={() => void exportBackup()} disabled={isBusy} />
+      <SoftButton label="Sicherung wiederherstellen" disabled={isBusy} onPress={() => void importBackup()} />
+      <SoftButton label="Alle Daten löschen" tone="red" disabled={isBusy} onPress={confirmReset} />
       <Pressable accessibilityRole="link" onPress={() => router.push("/privacy")} className="py-2">
         <Text className="text-center text-sm font-bold text-indigo-700">Datenschutzerklärung</Text>
       </Pressable>
