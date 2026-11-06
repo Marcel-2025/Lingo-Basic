@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "TR",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "food_01_water",
+          "de": "Wasser",
+          "x": "su",
+          "ex": "Her gün çok su içiyorum.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_bread",
+          "de": "Brot",
+          "x": "ekmek",
+          "ex": "Kahvaltıda ekmek yerim.",
+          "exTr": "Zum Frühstück esse ich Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_milk",
+          "de": "Milch",
+          "x": "süt",
+          "ex": "Süt buzdolabında.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_coffee",
+          "de": "Kaffee",
+          "x": "kahve",
+          "ex": "Sabahları kahve içmeyi severim.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_tea",
+          "de": "Tee",
+          "x": "çay",
+          "ex": "Bir çay ister misin?",
+          "exTr": "Möchtest du einen Tee?",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_apple",
+          "de": "Apfel",
+          "x": "elma",
+          "ex": "Elma kırmızı ve tatlıdır.",
+          "exTr": "Der Apfel ist rot und süß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_banana",
+          "de": "Banane",
+          "x": "muz",
+          "ex": "Bir muz yiyorum.",
+          "exTr": "Ich esse eine Banane.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_rice",
+          "de": "Reis",
+          "x": "pirinç",
+          "ex": "Balığın yanında pirinç var.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "peynir",
+          "ex": "Ekmeğin üstünde peynir severim.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "yumurta",
+          "ex": "Kahvaltıda bir yumurta yerim.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "et",
+          "ex": "O et yemiyor.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "balık",
+          "ex": "Bugün pirinçle balık var.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "sebze",
+          "ex": "Çocuklar çok sebze yemeli.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "çorba",
+          "ex": "Çorba hâlâ sıcak.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "tuz",
+          "ex": "Lütfen tuzu uzatır mısın?",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "şeker",
+          "ex": "Çayıma şeker koymuyorum.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "meyve suyu",
+          "ex": "O bir bardak meyve suyu içiyor.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "bira",
+          "ex": "O bir bira sipariş ediyor.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "kek",
+          "ex": "Kek çok lezzetli.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "patates",
+          "ex": "Yemekte patates var.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "travel_02_airport",
+          "de": "Flughafen",
+          "x": "havalimanı",
+          "ex": "Havalimanına gidiyoruz.",
+          "exTr": "Wir fahren zum Flughafen.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train_station",
+          "de": "Bahnhof",
+          "x": "tren istasyonu",
+          "ex": "Tren istasyonu uzak değil.",
+          "exTr": "Der Bahnhof ist nicht weit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_ticket",
+          "de": "Ticket",
+          "x": "bilet",
+          "ex": "Berlin'e bir bilet lazım.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_hotel",
+          "de": "Hotel",
+          "x": "otel",
+          "ex": "Otelimiz plajda.",
+          "exTr": "Unser Hotel liegt am Strand.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_street",
+          "de": "Straße",
+          "x": "sokak",
+          "ex": "Sokak çok gürültülü.",
+          "exTr": "Die Straße ist sehr laut.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_map",
+          "de": "Karte",
+          "x": "harita",
+          "ex": "Şehrin haritası var mı sende?",
+          "exTr": "Hast du eine Karte der Stadt?",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_suitcase",
+          "de": "Koffer",
+          "x": "bavul",
+          "ex": "Bavulum çok ağır.",
+          "exTr": "Mein Koffer ist zu schwer.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_passport",
+          "de": "Pass",
+          "x": "pasaport",
+          "ex": "Pasaportunu unutma!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "tren",
+          "ex": "Tren saat sekizde geliyor.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "otobüs",
+          "ex": "İşe otobüsle gidiyorum.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "araba",
+          "ex": "Arabam yeni.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "uçak",
+          "ex": "Uçak birazdan iniyor.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "bisiklet",
+          "ex": "Bisiklete binmeyi severim.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "yolculuk",
+          "ex": "Yolculuk üç saat sürüyor.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "şehir",
+          "ex": "Berlin büyük bir şehir.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "ülke",
+          "ex": "Hangi ülkede yaşıyorsun?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taksi",
+          "ex": "Otele taksiyle gidiyoruz.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagaj",
+          "ex": "Bagajım nerede?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "durak",
+          "ex": "Durak hemen ileride.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "tatil",
+          "ex": "Yazın tatil yapıyoruz.",
+          "exTr": "Wir machen im Sommer Urlaub.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "home_03_house",
+          "de": "Haus",
+          "x": "ev",
+          "ex": "Evin bir bahçesi var.",
+          "exTr": "Das Haus hat einen Garten.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_room",
+          "de": "Zimmer",
+          "x": "oda",
+          "ex": "Odam küçük.",
+          "exTr": "Mein Zimmer ist klein.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_kitchen",
+          "de": "Küche",
+          "x": "mutfak",
+          "ex": "Mutfakta yemek yapıyoruz.",
+          "exTr": "Wir kochen in der Küche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bathroom",
+          "de": "Badezimmer",
+          "x": "banyo",
+          "ex": "Banyo solda.",
+          "exTr": "Das Badezimmer ist links.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_window",
+          "de": "Fenster",
+          "x": "pencere",
+          "ex": "Lütfen pencereyi aç.",
+          "exTr": "Bitte mach das Fenster auf.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_door",
+          "de": "Tür",
+          "x": "kapı",
+          "ex": "Kapı kapalı.",
+          "exTr": "Die Tür ist zu.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_table",
+          "de": "Tisch",
+          "x": "masa",
+          "ex": "Masa ahşaptan.",
+          "exTr": "Der Tisch ist aus Holz.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_chair",
+          "de": "Stuhl",
+          "x": "sandalye",
+          "ex": "Sandalyeye otur.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "yatak",
+          "ex": "Yatak çok rahat.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "koltuk",
+          "ex": "Koltukta oturuyoruz.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lamba",
+          "ex": "Lamba masanın üstünde.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "anahtar",
+          "ex": "Anahtarımı kaybettim.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "daire",
+          "ex": "Dairemde üç oda var.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "bahçe",
+          "ex": "Bahçede çiçekler büyüyor.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "duvar",
+          "ex": "Resim duvarda asılı.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "duş",
+          "ex": "Her sabah duş alıyorum.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "dolap",
+          "ex": "Elbiseler dolapta.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "bodrum",
+          "ex": "Bisiklet bodrumda.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "merdiven",
+          "ex": "Merdiven çok dik.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "oturma odası",
+          "ex": "Oturma odası büyük ve aydınlık.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "work_04_work",
+          "de": "Arbeit",
+          "x": "iş",
+          "ex": "İş dokuzda başlıyor.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_office",
+          "de": "Büro",
+          "x": "ofis",
+          "ex": "Bugün ofisteyim.",
+          "exTr": "Ich bin heute im Büro.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_boss",
+          "de": "Chef",
+          "x": "patron",
+          "ex": "Patronum çok kibar.",
+          "exTr": "Mein Chef ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_colleague",
+          "de": "Kollege",
+          "x": "iş arkadaşı",
+          "ex": "İş arkadaşım bana sık sık yardım ediyor.",
+          "exTr": "Mein Kollege hilft mir oft.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_meeting",
+          "de": "Meeting",
+          "x": "toplantı",
+          "ex": "Toplantı bir saat sürüyor.",
+          "exTr": "Das Meeting dauert eine Stunde.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_project",
+          "de": "Projekt",
+          "x": "proje",
+          "ex": "Yeni bir projemiz var.",
+          "exTr": "Wir haben ein neues Projekt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_email",
+          "de": "E-Mail",
+          "x": "e-posta",
+          "ex": "Sana bir e-posta yazacağım.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_break",
+          "de": "Pause",
+          "x": "mola",
+          "ex": "Şimdi mola veriyoruz.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "şirket",
+          "ex": "O büyük bir şirkette çalışıyor.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "maaş",
+          "ex": "Maaş ay sonunda yatıyor.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "öğretmen",
+          "ex": "Öğretmen görevi açıklıyor.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "okul",
+          "ex": "Çocuklar okula gidiyor.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "öğrenci",
+          "ex": "Öğrenci ödevini yapıyor.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "kalem",
+          "ex": "Bana verecek bir kalemin var mı?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "kâğıt",
+          "ex": "Bir sayfa kâğıt lazım.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "yazıcı",
+          "ex": "Ofisteki yazıcı bozuk.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "telefon",
+          "ex": "Telefonum çalıyor.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "bilgisayar",
+          "ex": "Bilgisayar çok hızlı.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "meslek",
+          "ex": "Meslek olarak ne yapıyorsun?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "hata",
+          "ex": "Bir hata yaptım.",
+          "exTr": "Ich habe einen Fehler gemacht.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "health_05_doctor",
+          "de": "Arzt",
+          "x": "doktor",
+          "ex": "Doktora gitmem lazım.",
+          "exTr": "Ich muss zum Arzt gehen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_hospital",
+          "de": "Krankenhaus",
+          "x": "hastane",
+          "ex": "O hastanede yatıyor.",
+          "exTr": "Er liegt im Krankenhaus.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_medicine",
+          "de": "Medizin",
+          "x": "ilaç",
+          "ex": "Günde üç kez ilaç al.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pain",
+          "de": "Schmerz",
+          "x": "ağrı",
+          "ex": "Çok şiddetli ağrım var.",
+          "exTr": "Ich habe starke Schmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_fever",
+          "de": "Fieber",
+          "x": "ateş",
+          "ex": "Çocuğun ateşi var.",
+          "exTr": "Das Kind hat Fieber.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_help",
+          "de": "Hilfe",
+          "x": "yardım",
+          "ex": "Yardıma ihtiyacım var!",
+          "exTr": "Ich brauche Hilfe!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_appointment",
+          "de": "Termin",
+          "x": "randevu",
+          "ex": "Yarın bir randevum var.",
+          "exTr": "Ich habe morgen einen Termin.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_prescription",
+          "de": "Rezept",
+          "x": "reçete",
+          "ex": "Doktor reçete yazıyor.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "öksürük",
+          "ex": "Günlerdir öksürük çekiyorum.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "soğuk algınlığı",
+          "ex": "Çok kötü bir soğuk algınlığı geçiriyor.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "eczane",
+          "ex": "Eczane hemen köşede.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "diş hekimi",
+          "ex": "Yarın diş hekimine gidiyorum.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "sağlık",
+          "ex": "Sağlık çok önemlidir.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "hastalık",
+          "ex": "Hastalık bir hafta sürüyor.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "acil durum",
+          "ex": "Bu bir acil durum!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulans",
+          "ex": "Ambulans hemen geliyor.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "hap",
+          "ex": "Her gün bir hap alıyorum.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "yara bandı",
+          "ex": "Bir yara bandına ihtiyacım var.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "uyku",
+          "ex": "Yeterli uyku önemlidir.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "hasta",
+          "ex": "Hasta odada bekliyor.",
+          "exTr": "Der Patient wartet im Zimmer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "shopping_06_shop",
+          "de": "Laden",
+          "x": "dükkân",
+          "ex": "Dükkân sekize kadar açık.",
+          "exTr": "Der Laden ist bis acht offen.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_price",
+          "de": "Preis",
+          "x": "fiyat",
+          "ex": "Fiyat çok iyi.",
+          "exTr": "Der Preis ist sehr gut.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_money",
+          "de": "Geld",
+          "x": "para",
+          "ex": "Yanımda para yok.",
+          "exTr": "Ich habe kein Geld dabei.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_checkout",
+          "de": "Kasse",
+          "x": "kasa",
+          "ex": "Lütfen kasada ödeyin.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_discount",
+          "de": "Rabatt",
+          "x": "indirim",
+          "ex": "Bugün yüzde on indirim var.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_customer",
+          "de": "Kunde",
+          "x": "müşteri",
+          "ex": "Müşteri kasada bekliyor.",
+          "exTr": "Der Kunde wartet an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_seller",
+          "de": "Verkäufer",
+          "x": "satıcı",
+          "ex": "Satıcı çok güler yüzlü.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bag",
+          "de": "Tüte",
+          "x": "poşet",
+          "ex": "Poşet ister misiniz?",
+          "exTr": "Brauchen Sie eine Tüte?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "süpermarket",
+          "ex": "Süpermarkete gidiyorum.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "alışveriş listesi",
+          "ex": "Yarın için bir alışveriş listesi yazıyorum.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "Bu on euro.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "sent",
+          "ex": "Bu sadece elli sent.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "kredi kartı",
+          "ex": "Kredi kartıyla ödeyebilir miyim?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "makbuz",
+          "ex": "Makbuz alabilir miyim lütfen?",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "kampanya",
+          "ex": "Kampanya sadece bugün geçerli.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "beden",
+          "ex": "Kaç beden giyiyorsunuz?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "alışveriş arabası",
+          "ex": "Bir alışveriş arabasına ihtiyacım var.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "fırın",
+          "ex": "Fırından küçük ekmekler alıyorum.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "şişe",
+          "ex": "Bir şişe su, lütfen.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "hediye",
+          "ex": "Hediye senin için.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "family_07_mother",
+          "de": "Mutter",
+          "x": "anne",
+          "ex": "Annem çok güzel yemek yapar.",
+          "exTr": "Meine Mutter kocht sehr gut.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_father",
+          "de": "Vater",
+          "x": "baba",
+          "ex": "Babam ofiste çalışıyor.",
+          "exTr": "Mein Vater arbeitet im Büro.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_brother",
+          "de": "Bruder",
+          "x": "erkek kardeş",
+          "ex": "Erkek kardeşim on yaşında.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_sister",
+          "de": "Schwester",
+          "x": "kız kardeş",
+          "ex": "Kız kardeşim Viyana'da yaşıyor.",
+          "exTr": "Meine Schwester wohnt in Wien.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_friend",
+          "de": "Freund",
+          "x": "arkadaş",
+          "ex": "O benim en iyi arkadaşım.",
+          "exTr": "Er ist mein bester Freund.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_child",
+          "de": "Kind",
+          "x": "çocuk",
+          "ex": "Çocuk bahçede oynuyor.",
+          "exTr": "Das Kind spielt im Garten.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_family",
+          "de": "Familie",
+          "x": "aile",
+          "ex": "Ailem büyük.",
+          "exTr": "Meine Familie ist groß.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_name",
+          "de": "Name",
+          "x": "ad",
+          "ex": "Adın ne?",
+          "exTr": "Wie ist dein Name?",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "anne baba",
+          "ex": "Anne babam Hamburg'da yaşıyor.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "oğul",
+          "ex": "Onun oğlu okula gidiyor.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "kız",
+          "ex": "Onun kızı beş yaşında.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "büyükanne",
+          "ex": "Büyükannem kek yapmayı sever.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "büyükbaba",
+          "ex": "Büyükbabam gazete okuyor.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "adam",
+          "ex": "Adam şapka takıyor.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "kadın",
+          "ex": "Kadın istasyonda bekliyor.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "bebek",
+          "ex": "Bebek yatakta uyuyor.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "amca",
+          "ex": "Amcam Berlin'de yaşıyor.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "teyze",
+          "ex": "Teyzem yarın bizi ziyaret edecek.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "komşu",
+          "ex": "Komşum çok kibar.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "misafir",
+          "ex": "Misafir saat yedide geliyor.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "time_08_today",
+          "de": "Heute",
+          "x": "bugün",
+          "ex": "Bugün güneş parlıyor.",
+          "exTr": "Heute scheint die Sonne.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_tomorrow",
+          "de": "Morgen",
+          "x": "yarın",
+          "ex": "Yarın izinliyim.",
+          "exTr": "Morgen habe ich frei.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_yesterday",
+          "de": "Gestern",
+          "x": "dün",
+          "ex": "Dün sinemadaydım.",
+          "exTr": "Gestern war ich im Kino.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_week",
+          "de": "Woche",
+          "x": "hafta",
+          "ex": "Hafta yedi gündür.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_month",
+          "de": "Monat",
+          "x": "ay",
+          "ex": "Ay otuz gündür.",
+          "exTr": "Der Monat hat dreißig Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_year",
+          "de": "Jahr",
+          "x": "yıl",
+          "ex": "Bir yıl on iki aydır.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_to_learn",
+          "de": "Lernen",
+          "x": "öğrenmek",
+          "ex": "Almanca öğrenmek istiyorum.",
+          "exTr": "Ich möchte Deutsch lernen.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_language",
+          "de": "Sprache",
+          "x": "dil",
+          "ex": "Almanca güzel bir dildir.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "saat",
+          "ex": "Saat duvarda asılı.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "saat",
+          "ex": "Ders bir saat sürüyor.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "dakika",
+          "ex": "Lütfen bir dakika bekle.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "gün",
+          "ex": "Bir gün yirmi dört saattir.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "gece",
+          "ex": "Geceleri hava karanlıktır.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "akşam",
+          "ex": "Akşamları televizyon izleriz.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "pazartesi",
+          "ex": "Okul pazartesi başlıyor.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "hafta sonu",
+          "ex": "Hafta sonu şehir dışına çıkıyoruz.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "kitap",
+          "ex": "Heyecanlı bir kitap okuyorum.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "soru",
+          "ex": "Bir sorum var.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "cevap",
+          "ex": "Cevap doğru.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "kelime",
+          "ex": "Bu kelimeyi bilmiyorum.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "sıfır",
+          "ex": "Sonuç sıfır.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "bir",
+          "ex": "Bir artı bir iki eder.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "iki",
+          "ex": "İki erkek kardeşim var.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "üç",
+          "ex": "Üç kişiyiz.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "dört",
+          "ex": "Arabanın dört tekeri var.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "beş",
+          "ex": "Beş dakika geç kaldım.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "altı",
+          "ex": "Saat altı.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "yedi",
+          "ex": "Hafta yedi gündür.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "on",
+          "ex": "Kitap on euro.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "yüz",
+          "ex": "Ev yüz yıllık.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "kırmızı",
+          "ex": "Domates kırmızı.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "mavi",
+          "ex": "Gökyüzü bugün mavi.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "yeşil",
+          "ex": "Çimen yeşil.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "sarı",
+          "ex": "Güneş sarı.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "siyah",
+          "ex": "Kedim siyah.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "beyaz",
+          "ex": "Kar beyaz.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "çember",
+          "ex": "Lütfen bir çember çiz.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "kare",
+          "ex": "Pencere bir kare.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "üçgen",
+          "ex": "Trafik işareti bir üçgen.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "çizgi",
+          "ex": "Düz bir çizgi çiz.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "baş",
+          "ex": "Başım ağrıyor.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "el",
+          "ex": "Elini ver bana.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "ayak",
+          "ex": "Ayaklarım soğuk.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "kol",
+          "ex": "Kolunu kırdı.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "bacak",
+          "ex": "Bacaklarım ağrıyor.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "göz",
+          "ex": "Onun mavi gözü var.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "kulak",
+          "ex": "Çocuğun kulakları soğuk.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "burun",
+          "ex": "Burun tıkanıklığım var.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "ağız",
+          "ex": "Lütfen ağzını aç.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "saç",
+          "ex": "Onun uzun kahverengi saçları var.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "karın",
+          "ex": "Karnım ağrıyor.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "sırt",
+          "ex": "Sırtımda ağrı var.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "gömlek",
+          "ex": "O beyaz bir gömlek giyiyor.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "pantolon",
+          "ex": "Pantolon çok küçük.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "ceket",
+          "ex": "Ceketini giy.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "ayakkabı",
+          "ex": "Ayakkabılarım yeni.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "elbise",
+          "ex": "O kırmızı bir elbise giyiyor.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "bere",
+          "ex": "Kışın bere takıyorum.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "çorap",
+          "ex": "Çoraplarım sıcak.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "kazak",
+          "ex": "Kazak yünden.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "Her gün 30 dakika çalışıyorum.",
+      "translations": {
+        "tr": "Her gün 30 dakika çalışıyorum."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "Dil öğrenmek sabır ister.",
+      "translations": {
+        "tr": "Dil öğrenmek sabır ister."
+      }
+    }
+  ]
+}

@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "PL",
+  "level": "A2",
+  "topics": [
+    {
+      "id": "daily_01",
+      "title": "Tagesablauf",
+      "icon": "⏰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "daily_01_wake_up",
+          "de": "Aufwachen",
+          "x": "obudzić się",
+          "ex": "Jutro rano muszę się wcześnie obudzić.",
+          "exTr": "Ich muss morgen früh aufwachen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_have_breakfast",
+          "de": "Frühstücken",
+          "x": "jeść śniadanie",
+          "ex": "W niedzielę chcę długo jeść śniadanie.",
+          "exTr": "Am Sonntag will ich lange frühstücken.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_get_dressed",
+          "de": "Sich anziehen",
+          "x": "ubrać się",
+          "ex": "Muszę się szybko ubrać.",
+          "exTr": "Ich muss mich schnell anziehen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_cook",
+          "de": "Kochen",
+          "x": "gotować",
+          "ex": "Wieczorem gotujemy razem.",
+          "exTr": "Abends kochen wir zusammen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_tidy_up",
+          "de": "Aufräumen",
+          "x": "sprzątać",
+          "ex": "Po imprezie musimy sprzątać.",
+          "exTr": "Nach der Party müssen wir aufräumen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_rest",
+          "de": "Sich ausruhen",
+          "x": "odpocząć",
+          "ex": "Po pracy chciałbym odpocząć.",
+          "exTr": "Nach der Arbeit möchte ich mich ausruhen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_take_a_shower",
+          "de": "Duschen",
+          "x": "wziąć prysznic",
+          "ex": "Chcę krótko wziąć prysznic.",
+          "exTr": "Ich möchte kurz duschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_brush_teeth",
+          "de": "Zähne putzen",
+          "x": "myć zęby",
+          "ex": "Przed snem muszę myć zęby.",
+          "exTr": "Vor dem Schlafen muss ich Zähne putzen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_hurry",
+          "de": "Sich beeilen",
+          "x": "spieszyć się",
+          "ex": "Musimy się spieszyć, bo inaczej spóźnimy się na autobus.",
+          "exTr": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_do_laundry",
+          "de": "Wäsche waschen",
+          "x": "prać",
+          "ex": "W sobotę muszę prać.",
+          "exTr": "Am Samstag muss ich Wäsche waschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_wash_the_dishes",
+          "de": "Abwaschen",
+          "x": "zmywać",
+          "ex": "Kto dziś chce zmywać?",
+          "exTr": "Wer will heute abwaschen?",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_fall_asleep",
+          "de": "Einschlafen",
+          "x": "zasypiać",
+          "ex": "Wieczorem ciężko mi zasypiać.",
+          "exTr": "Ich kann abends schlecht einschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_oversleep",
+          "de": "Verschlafen",
+          "x": "zaspać",
+          "ex": "Dziś niestety zaspałem.",
+          "exTr": "Heute habe ich leider verschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_alarm_clock",
+          "de": "Wecker",
+          "x": "budzik",
+          "ex": "Mój budzik dzwoni o szóstej.",
+          "exTr": "Mein Wecker klingelt um sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_habit",
+          "de": "Gewohnheit",
+          "x": "nawyk",
+          "ex": "Kawa rano to mój nawyk.",
+          "exTr": "Kaffee am Morgen ist meine Gewohnheit.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch_break",
+          "de": "Mittagspause",
+          "x": "przerwa obiadowa",
+          "ex": "W przerwie obiadowej chodzę na spacer.",
+          "exTr": "In der Mittagspause gehe ich spazieren.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_end_of_workday",
+          "de": "Feierabend",
+          "x": "koniec pracy",
+          "ex": "O piątej mam koniec pracy.",
+          "exTr": "Um fünf Uhr habe ich Feierabend.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch",
+          "de": "Mittagessen",
+          "x": "obiad",
+          "ex": "Obiad będzie gotowy o dwunastej.",
+          "exTr": "Das Mittagessen ist um zwölf Uhr fertig.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_be_late",
+          "de": "Sich verspäten",
+          "x": "spóźnić się",
+          "ex": "Niestety trochę się spóźnię.",
+          "exTr": "Leider werde ich mich etwas verspäten.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_commute",
+          "de": "Pendeln",
+          "x": "dojeżdżać",
+          "ex": "Muszę codziennie dojeżdżać godzinę.",
+          "exTr": "Ich muss jeden Tag eine Stunde pendeln.",
+          "difficulty": 3,
+          "tags": [
+            "tagesablauf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "city_02",
+      "title": "Stadt & Nachbarschaft",
+      "icon": "🏙️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "city_02_intersection",
+          "de": "Kreuzung",
+          "x": "skrzyżowanie",
+          "ex": "Na skrzyżowaniu musisz skręcić w lewo.",
+          "exTr": "An der Kreuzung musst du links abbiegen.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_traffic_light",
+          "de": "Ampel",
+          "x": "sygnalizacja świetlna",
+          "ex": "Sygnalizacja świetlna jest teraz czerwona.",
+          "exTr": "Die Ampel ist gerade rot.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pavement",
+          "de": "Bürgersteig",
+          "x": "chodnik",
+          "ex": "Dzieci bawią się na chodniku.",
+          "exTr": "Kinder spielen auf dem Bürgersteig.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_neighborhood",
+          "de": "Nachbarschaft",
+          "x": "okolica",
+          "ex": "Nasza okolica jest bardzo spokojna.",
+          "exTr": "Unsere Nachbarschaft ist sehr ruhig.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_library",
+          "de": "Bücherei",
+          "x": "biblioteka",
+          "ex": "W bibliotece można wypożyczać książki.",
+          "exTr": "In der Bücherei kann man Bücher leihen.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_market",
+          "de": "Markt",
+          "x": "targ",
+          "ex": "W soboty kupuję owoce na targu.",
+          "exTr": "Samstags kaufe ich Obst auf dem Markt.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_town_hall",
+          "de": "Rathaus",
+          "x": "ratusz",
+          "ex": "Ratusz stoi w samym środku miasta.",
+          "exTr": "Das Rathaus steht mitten in der Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_fountain",
+          "de": "Brunnen",
+          "x": "fontanna",
+          "ex": "Spotykamy się przy fontannie o trzeciej.",
+          "exTr": "Vor dem Brunnen treffen wir uns um drei.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_monument",
+          "de": "Denkmal",
+          "x": "pomnik",
+          "ex": "Pomnik upamiętnia słynnego poetę.",
+          "exTr": "Das Denkmal erinnert an einen berühmten Dichter.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pedestrian_zone",
+          "de": "Fußgängerzone",
+          "x": "strefa dla pieszych",
+          "ex": "W strefie dla pieszych jest dużo sklepów.",
+          "exTr": "In der Fußgängerzone gibt es viele Geschäfte.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_playground",
+          "de": "Spielplatz",
+          "x": "plac zabaw",
+          "ex": "Plac zabaw jest obok szkoły.",
+          "exTr": "Der Spielplatz ist neben der Schule.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_bridge",
+          "de": "Brücke",
+          "x": "most",
+          "ex": "Most prowadzi przez rzekę.",
+          "exTr": "Die Brücke führt über den Fluss.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_post_office",
+          "de": "Postamt",
+          "x": "poczta",
+          "ex": "Muszę zanieść paczkę na pocztę.",
+          "exTr": "Ich muss ein Paket zum Postamt bringen.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_map",
+          "de": "Stadtplan",
+          "x": "plan miasta",
+          "ex": "Bez planu miasta nie znajdę drogi.",
+          "exTr": "Ohne Stadtplan finde ich den Weg nicht.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_tourist_attraction",
+          "de": "Sehenswürdigkeit",
+          "x": "atrakcja turystyczna",
+          "ex": "Katedra jest najważniejszą atrakcją turystyczną.",
+          "exTr": "Der Dom ist die wichtigste Sehenswürdigkeit.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_center",
+          "de": "Innenstadt",
+          "x": "centrum miasta",
+          "ex": "W weekend w centrum miasta jest bardzo tłoczno.",
+          "exTr": "Die Innenstadt ist am Wochenende sehr voll.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_suburb",
+          "de": "Vorort",
+          "x": "przedmieście",
+          "ex": "Moi rodzice mieszkają na spokojnym przedmieściu.",
+          "exTr": "Meine Eltern wohnen in einem ruhigen Vorort.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_high_rise_building",
+          "de": "Hochhaus",
+          "x": "wieżowiec",
+          "ex": "W wieżowcu mieszka ponad sto rodzin.",
+          "exTr": "Im Hochhaus wohnen über hundert Familien.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_construction_site",
+          "de": "Baustelle",
+          "x": "plac budowy",
+          "ex": "Z powodu placu budowy ulica jest zamknięta.",
+          "exTr": "Wegen der Baustelle ist die Straße gesperrt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_street_lamp",
+          "de": "Straßenlaterne",
+          "x": "latarnia uliczna",
+          "ex": "Latarnia uliczna przed domem jest zepsuta.",
+          "exTr": "Die Straßenlaterne vor dem Haus ist kaputt.",
+          "difficulty": 3,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication_03",
+      "title": "Kommunikation",
+      "icon": "💬",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "communication_03_ask",
+          "de": "Fragen",
+          "x": "pytać",
+          "ex": "Czy mogę cię o coś zapytać?",
+          "exTr": "Darf ich dich etwas fragen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_answer",
+          "de": "Antworten",
+          "x": "odpowiadać",
+          "ex": "Proszę odpowiedzieć do jutra.",
+          "exTr": "Bitte antworten Sie bis morgen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_explain",
+          "de": "Erklären",
+          "x": "wyjaśniać",
+          "ex": "Możesz mi wyjaśnić tę grę?",
+          "exTr": "Kannst du mir das Spiel erklären?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_agree",
+          "de": "Zustimmen",
+          "x": "zgadzać się",
+          "ex": "Mogę się z tobą tylko zgodzić.",
+          "exTr": "Ich kann dir da nur zustimmen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_reject",
+          "de": "Ablehnen",
+          "x": "odrzucić",
+          "ex": "Niestety musiała odrzucić ofertę.",
+          "exTr": "Sie musste das Angebot leider ablehnen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_repeat",
+          "de": "Wiederholen",
+          "x": "powtarzać",
+          "ex": "Czy mógłby Pan to powtórzyć?",
+          "exTr": "Können Sie das bitte wiederholen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_tell",
+          "de": "Erzählen",
+          "x": "opowiadać",
+          "ex": "Chce nam opowiedzieć o podróży.",
+          "exTr": "Er will uns von der Reise erzählen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_suggest",
+          "de": "Vorschlagen",
+          "x": "proponować",
+          "ex": "Chcę zaproponować miejsce spotkania.",
+          "exTr": "Ich möchte einen Treffpunkt vorschlagen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_contradict",
+          "de": "Widersprechen",
+          "x": "zaprzeczać",
+          "ex": "Niestety muszę ci zaprzeczyć.",
+          "exTr": "Ich muss dir leider widersprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_discuss",
+          "de": "Diskutieren",
+          "x": "dyskutować",
+          "ex": "Często dyskutujemy o polityce.",
+          "exTr": "Wir diskutieren oft über Politik.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_inform",
+          "de": "Mitteilen",
+          "x": "poinformować",
+          "ex": "Chciałbym Pana o czymś poinformować.",
+          "exTr": "Ich möchte Ihnen etwas mitteilen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_apologize",
+          "de": "Sich entschuldigen",
+          "x": "przeprosić",
+          "ex": "Chciał ją przeprosić.",
+          "exTr": "Er wollte sich bei ihr entschuldigen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_invite",
+          "de": "Einladen",
+          "x": "zaprosić",
+          "ex": "Chcę cię zaprosić na moją imprezę.",
+          "exTr": "Ich möchte dich zu meiner Party einladen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_promise",
+          "de": "Versprechen",
+          "x": "obiecać",
+          "ex": "Mogę ci to mocno obiecać.",
+          "exTr": "Ich kann dir das fest versprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_listen",
+          "de": "Zuhören",
+          "x": "słuchać",
+          "ex": "Bardzo ważne jest, żeby dobrze słuchać.",
+          "exTr": "Gut zuhören ist sehr wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_message",
+          "de": "Nachricht",
+          "x": "wiadomość",
+          "ex": "Napisałem do ciebie wiadomość.",
+          "exTr": "Ich habe dir eine Nachricht geschrieben.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_conversation",
+          "de": "Gespräch",
+          "x": "rozmowa",
+          "ex": "Rozmowa z szefem była miła.",
+          "exTr": "Das Gespräch mit dem Chef war freundlich.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_letter",
+          "de": "Brief",
+          "x": "list",
+          "ex": "Napisałem babci list.",
+          "exTr": "Ich habe meiner Oma einen Brief geschrieben.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_misunderstanding",
+          "de": "Missverständnis",
+          "x": "nieporozumienie",
+          "ex": "To było tylko małe nieporozumienie.",
+          "exTr": "Das war nur ein kleines Missverständnis.",
+          "difficulty": 3,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_call",
+          "de": "Anrufen",
+          "x": "zadzwonić",
+          "ex": "Zadzwonię do ciebie dziś wieczorem.",
+          "exTr": "Ich werde dich heute Abend anrufen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature_04",
+      "title": "Natur & Wetter",
+      "icon": "🌦️",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "nature_04_weather",
+          "de": "Wetter",
+          "x": "pogoda",
+          "ex": "Dziś jest wspaniała pogoda.",
+          "exTr": "Das Wetter ist heute wunderbar.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_cloud",
+          "de": "Wolke",
+          "x": "chmura",
+          "ex": "Nad górą wisi ciemna chmura.",
+          "exTr": "Eine dunkle Wolke steht über dem Berg.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_wind",
+          "de": "Wind",
+          "x": "wiatr",
+          "ex": "Dziś wieje silny wiatr.",
+          "exTr": "Heute weht ein starker Wind.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_forest",
+          "de": "Wald",
+          "x": "las",
+          "ex": "Idziemy na spacer do lasu.",
+          "exTr": "Wir machen einen Spaziergang im Wald.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_river",
+          "de": "Fluss",
+          "x": "rzeka",
+          "ex": "Rzeka płynie przez całe miasto.",
+          "exTr": "Der Fluss fließt durch die ganze Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_mountain",
+          "de": "Berg",
+          "x": "góra",
+          "ex": "Na górze leży jeszcze śnieg.",
+          "exTr": "Auf dem Berg liegt noch Schnee.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_thunderstorm",
+          "de": "Gewitter",
+          "x": "burza",
+          "ex": "Wieczorem będzie burza.",
+          "exTr": "Am Abend kommt ein Gewitter.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_fog",
+          "de": "Nebel",
+          "x": "mgła",
+          "ex": "We mgle prawie nic nie widać.",
+          "exTr": "Im Nebel sieht man kaum etwas.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_rainbow",
+          "de": "Regenbogen",
+          "x": "tęcza",
+          "ex": "Po deszczu pojawiła się tęcza.",
+          "exTr": "Nach dem Regen erschien ein Regenbogen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_storm",
+          "de": "Sturm",
+          "x": "wichura",
+          "ex": "Wichura przewróciła drzewo.",
+          "exTr": "Der Sturm hat einen Baum umgeworfen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_flood",
+          "de": "Überschwemmung",
+          "x": "powódź",
+          "ex": "Po deszczu była powódź.",
+          "exTr": "Nach dem Regen gab es eine Überschwemmung.",
+          "difficulty": 3,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_valley",
+          "de": "Tal",
+          "x": "dolina",
+          "ex": "W dolinie leży mała wioska.",
+          "exTr": "Im Tal liegt ein kleines Dorf.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_meadow",
+          "de": "Wiese",
+          "x": "łąka",
+          "ex": "Na łące kwitnie wiele kwiatów.",
+          "exTr": "Auf der Wiese blühen viele Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_riverbank",
+          "de": "Ufer",
+          "x": "brzeg",
+          "ex": "Siedzimy na brzegu i łowimy ryby.",
+          "exTr": "Wir sitzen am Ufer und angeln.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_summit",
+          "de": "Gipfel",
+          "x": "szczyt",
+          "ex": "O dwunastej dotrzemy na szczyt.",
+          "exTr": "Um zwölf Uhr erreichen wir den Gipfel.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_lightning",
+          "de": "Blitz",
+          "x": "błyskawica",
+          "ex": "Błyskawica uderzyła w drzewo.",
+          "exTr": "Ein Blitz schlug in den Baum ein.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_puddle",
+          "de": "Pfütze",
+          "x": "kałuża",
+          "ex": "Dziecko skacze do kałuży.",
+          "exTr": "Das Kind springt in die Pfütze.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_environment",
+          "de": "Umwelt",
+          "x": "środowisko",
+          "ex": "Musimy lepiej chronić środowisko.",
+          "exTr": "Wir müssen die Umwelt besser schützen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_plant",
+          "de": "Pflanze",
+          "x": "roślina",
+          "ex": "Ta roślina potrzebuje dużo słońca.",
+          "exTr": "Diese Pflanze braucht viel Sonne.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_sunrise",
+          "de": "Sonnenaufgang",
+          "x": "wschód słońca",
+          "ex": "Wschód słońca nad morzem był wspaniały.",
+          "exTr": "Der Sonnenaufgang am Meer war traumhaft.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "feelings_05",
+      "title": "Gefühle & Charakter",
+      "icon": "✨",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "feelings_05_satisfied",
+          "de": "Zufrieden",
+          "x": "zadowolony",
+          "ex": "Jestem zadowolony ze swojej pracy.",
+          "exTr": "Ich bin mit meiner Arbeit zufrieden.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_nervous",
+          "de": "Nervös",
+          "x": "zdenerwowany",
+          "ex": "Przed egzaminem zawsze jestem zdenerwowany.",
+          "exTr": "Vor der Prüfung bin ich immer nervös.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_surprised",
+          "de": "Überrascht",
+          "x": "zaskoczony",
+          "ex": "Była zaskoczona prezentem.",
+          "exTr": "Sie war von dem Geschenk überrascht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_proud",
+          "de": "Stolz",
+          "x": "dumny",
+          "ex": "Rodzice są dumni ze swojego dziecka.",
+          "exTr": "Die Eltern sind stolz auf ihr Kind.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_relaxed",
+          "de": "Entspannt",
+          "x": "zrelaksowany",
+          "ex": "Po urlopie jestem zupełnie zrelaksowany.",
+          "exTr": "Nach dem Urlaub bin ich total entspannt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_patient",
+          "de": "Geduldig",
+          "x": "cierpliwy",
+          "ex": "Nauczyciel jest bardzo cierpliwy.",
+          "exTr": "Der Lehrer ist sehr geduldig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_jealous",
+          "de": "Eifersüchtig",
+          "x": "zazdrosny",
+          "ex": "Jest zazdrosny o nowego kolegę.",
+          "exTr": "Er ist auf den neuen Kollegen eifersüchtig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_disappointed",
+          "de": "Enttäuscht",
+          "x": "rozczarowany",
+          "ex": "Była bardzo rozczarowana wynikiem.",
+          "exTr": "Sie war vom Ergebnis sehr enttäuscht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_curious",
+          "de": "Neugierig",
+          "x": "ciekawski",
+          "ex": "Dziecko jest ciekawskie i zadaje dużo pytań.",
+          "exTr": "Das Kind ist neugierig und stellt viele Fragen.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_shy",
+          "de": "Schüchtern",
+          "x": "nieśmiały",
+          "ex": "Na początku był dość nieśmiały.",
+          "exTr": "Am Anfang war er ziemlich schüchtern.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_honest",
+          "de": "Ehrlich",
+          "x": "szczery",
+          "ex": "Bądź ze mną szczery.",
+          "exTr": "Sei bitte ehrlich zu mir.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_polite",
+          "de": "Höflich",
+          "x": "uprzejmy",
+          "ex": "Kelner jest zawsze bardzo uprzejmy.",
+          "exTr": "Der Kellner ist immer sehr höflich.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_brave",
+          "de": "Mutig",
+          "x": "odważny",
+          "ex": "To był odważny krok.",
+          "exTr": "Das war ein mutiger Schritt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lazy",
+          "de": "Faul",
+          "x": "leniwy",
+          "ex": "W niedzielę jestem trochę leniwy.",
+          "exTr": "Am Sonntag bin ich ein bisschen faul.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_anxious",
+          "de": "Ängstlich",
+          "x": "lękliwy",
+          "ex": "Pies jest bardzo lękliwy.",
+          "exTr": "Der Hund ist sehr ängstlich.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_stressed",
+          "de": "Gestresst",
+          "x": "zestresowany",
+          "ex": "Przed świętami wszyscy są zestresowani.",
+          "exTr": "Vor Weihnachten sind alle gestresst.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_embarrassed",
+          "de": "Verlegen",
+          "x": "zawstydzony",
+          "ex": "Była zawstydzona i cicho się zaśmiała.",
+          "exTr": "Sie wurde verlegen und lachte leise.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_helpful",
+          "de": "Hilfsbereit",
+          "x": "pomocny",
+          "ex": "Nasi sąsiedzi są bardzo pomocni.",
+          "exTr": "Unsere Nachbarn sind sehr hilfsbereit.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_cheerful",
+          "de": "Fröhlich",
+          "x": "radosny",
+          "ex": "Jest zawsze radosna i dużo się śmieje.",
+          "exTr": "Sie ist immer fröhlich und lacht viel.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lonely",
+          "de": "Einsam",
+          "x": "samotny",
+          "ex": "Po przeprowadzce czuł się samotny.",
+          "exTr": "Nach dem Umzug fühlte er sich einsam.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education_06",
+      "title": "Lernen & Bildung",
+      "icon": "📚",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "education_06_course",
+          "de": "Kurs",
+          "x": "kurs",
+          "ex": "Chodzę na kurs na uniwersytecie ludowym.",
+          "exTr": "Ich besuche einen Kurs an der Volkshochschule.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_task",
+          "de": "Aufgabe",
+          "x": "zadanie",
+          "ex": "To zadanie nie jest trudne.",
+          "exTr": "Diese Aufgabe ist nicht schwer.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_exam",
+          "de": "Prüfung",
+          "x": "egzamin",
+          "ex": "Egzamin zaczyna się o dziewiątej.",
+          "exTr": "Die Prüfung beginnt um neun Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_practise",
+          "de": "Üben",
+          "x": "ćwiczyć",
+          "ex": "Trzeba ćwiczyć codziennie.",
+          "exTr": "Man muss jeden Tag üben.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_understand",
+          "de": "Verstehen",
+          "x": "rozumieć",
+          "ex": "Jeszcze nie do końca rozumiem gramatykę.",
+          "exTr": "Ich verstehe die Grammatik noch nicht ganz.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_progress",
+          "de": "Fortschreiten",
+          "x": "postępować",
+          "ex": "Praca dobrze postępuje.",
+          "exTr": "Die Arbeit schreitet gut fort.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_homework",
+          "de": "Hausaufgabe",
+          "x": "praca domowa",
+          "ex": "Moja praca domowa jest już gotowa.",
+          "exTr": "Meine Hausaufgabe ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_report_card",
+          "de": "Zeugnis",
+          "x": "świadectwo",
+          "ex": "Świadectwo dostaniemy w lipcu.",
+          "exTr": "Das Zeugnis bekommen wir im Juli.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_grade",
+          "de": "Note",
+          "x": "ocena",
+          "ex": "Z matematyki mam dobrą ocenę.",
+          "exTr": "Ich habe in Mathe eine gute Note.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_timetable",
+          "de": "Stundenplan",
+          "x": "plan lekcji",
+          "ex": "W planie lekcji jest dziś wf.",
+          "exTr": "Auf dem Stundenplan steht heute Sport.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_lessons",
+          "de": "Unterricht",
+          "x": "lekcje",
+          "ex": "Lekcje zaczynają się o ósmej.",
+          "exTr": "Der Unterricht beginnt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_textbook",
+          "de": "Lehrbuch",
+          "x": "podręcznik",
+          "ex": "Proszę otworzyć podręcznik na stronie dziesiątej.",
+          "exTr": "Bitte öffnet das Lehrbuch auf Seite zehn.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_dictionary",
+          "de": "Wörterbuch",
+          "x": "słownik",
+          "ex": "Szukam tego słowa w słowniku.",
+          "exTr": "Ich suche das Wort im Wörterbuch.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_class_test",
+          "de": "Klassenarbeit",
+          "x": "sprawdzian",
+          "ex": "Jutro piszemy sprawdzian z matematyki.",
+          "exTr": "Morgen schreiben wir eine Klassenarbeit in Mathe.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_concentrate",
+          "de": "Sich konzentrieren",
+          "x": "koncentrować się",
+          "ex": "Przy hałasie trudno mi się koncentrować.",
+          "exTr": "Bei Lärm kann ich mich schlecht konzentrieren.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_learn_by_heart",
+          "de": "Auswendig lernen",
+          "x": "uczyć się na pamięć",
+          "ex": "Musimy uczyć się tego wiersza na pamięć.",
+          "exTr": "Wir müssen das Gedicht auswendig lernen.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_degree",
+          "de": "Abschluss",
+          "x": "dyplom",
+          "ex": "Po zdobyciu dyplomu szukam pracy.",
+          "exTr": "Nach dem Abschluss suche ich eine Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_university_studies",
+          "de": "Studium",
+          "x": "studia",
+          "ex": "Jesienią zaczyna studia.",
+          "exTr": "Sie beginnt im Herbst ihr Studium.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_presentation",
+          "de": "Referat",
+          "x": "referat",
+          "ex": "Jutro wygłaszam referat o Berlinie.",
+          "exTr": "Morgen halte ich ein Referat über Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_notes",
+          "de": "Notizen",
+          "x": "notatki",
+          "ex": "Robię notatki na lekcji.",
+          "exTr": "Ich mache mir Notizen im Unterricht.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure_07",
+      "title": "Freizeit & Hobbys",
+      "icon": "🎨",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "leisure_07_hike",
+          "de": "Wandern",
+          "x": "wędrować",
+          "ex": "W weekend idziemy wędrować po górach.",
+          "exTr": "Am Wochenende gehen wir in den Bergen wandern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_fish",
+          "de": "Angeln",
+          "x": "łowić ryby",
+          "ex": "Mój dziadek lubi łowić ryby nad jeziorem.",
+          "exTr": "Mein Opa geht gern am See angeln.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_do_crafts",
+          "de": "Basteln",
+          "x": "majsterkować",
+          "ex": "Dzieci lubią majsterkować z papieru.",
+          "exTr": "Die Kinder basteln gern mit Papier.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_paint",
+          "de": "Malen",
+          "x": "malować",
+          "ex": "W niedzielę chciałbym trochę malować.",
+          "exTr": "Ich möchte am Sonntag etwas malen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_take_photos",
+          "de": "Fotografieren",
+          "x": "fotografować",
+          "ex": "Na urlopie bardzo lubię fotografować.",
+          "exTr": "Im Urlaub fotografiere ich sehr gern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_jog",
+          "de": "Joggen",
+          "x": "biegać",
+          "ex": "Rano chodzę biegać do parku.",
+          "exTr": "Morgens gehe ich im Park joggen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_club",
+          "de": "Verein",
+          "x": "klub",
+          "ex": "Mój brat jest w klubie sportowym.",
+          "exTr": "Mein Bruder ist in einem Sportverein.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_team",
+          "de": "Mannschaft",
+          "x": "drużyna",
+          "ex": "Nasza drużyna wygrała wczoraj.",
+          "exTr": "Unsere Mannschaft hat gestern gewonnen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_excursion",
+          "de": "Ausflug",
+          "x": "wycieczka",
+          "ex": "W sobotę jedziemy na wycieczkę.",
+          "exTr": "Am Samstag machen wir einen Ausflug.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_concert",
+          "de": "Konzert",
+          "x": "koncert",
+          "ex": "Dziś wieczorem idziemy na koncert.",
+          "exTr": "Wir gehen heute Abend ins Konzert.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exhibition",
+          "de": "Ausstellung",
+          "x": "wystawa",
+          "ex": "Wystawa jest otwarta do końca maja.",
+          "exTr": "Die Ausstellung ist bis Ende Mai geöffnet.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_collect",
+          "de": "Sammeln",
+          "x": "zbierać",
+          "ex": "Mój syn lubi zbierać stare monety.",
+          "exTr": "Mein Sohn sammelt gern alte Münzen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_knit",
+          "de": "Stricken",
+          "x": "robić na drutach",
+          "ex": "Moja babcia zimą robi skarpetki na drutach.",
+          "exTr": "Meine Oma strickt im Winter Socken.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_board_game",
+          "de": "Brettspiel",
+          "x": "gra planszowa",
+          "ex": "Dziś wieczorem gramy w grę planszową.",
+          "exTr": "Heute Abend spielen wir ein Brettspiel.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_garden",
+          "de": "Gärtnern",
+          "x": "uprawiać ogród",
+          "ex": "Wiosną bardzo lubię uprawiać ogród.",
+          "exTr": "Im Frühling gärtnere ich sehr gern.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_go_out",
+          "de": "Ausgehen",
+          "x": "wyjść na miasto",
+          "ex": "W piątek chcemy wyjść na miasto.",
+          "exTr": "Am Freitag wollen wir ausgehen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_event",
+          "de": "Veranstaltung",
+          "x": "wydarzenie",
+          "ex": "Wydarzenie zaczyna się o ósmej.",
+          "exTr": "Die Veranstaltung beginnt um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_ticket",
+          "de": "Eintrittskarte",
+          "x": "bilet wstępu",
+          "ex": "Bilet wstępu kosztuje dziesięć euro.",
+          "exTr": "Die Eintrittskarte kostet zehn Euro.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_boring",
+          "de": "Langweilig",
+          "x": "nudny",
+          "ex": "Film był dość nudny.",
+          "exTr": "Der Film war ziemlich langweilig.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exciting",
+          "de": "Spannend",
+          "x": "pasjonujący",
+          "ex": "Książka jest niesamowicie pasjonująca.",
+          "exTr": "Das Buch ist unglaublich spannend.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooking_08",
+      "title": "Essen gehen & Kochen",
+      "icon": "🍳",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "cooking_08_menu",
+          "de": "Speisekarte",
+          "x": "karta dań",
+          "ex": "Czy możemy prosić o kartę dań?",
+          "exTr": "Können wir bitte die Speisekarte haben?",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bill",
+          "de": "Rechnung",
+          "x": "rachunek",
+          "ex": "Poproszę rachunek!",
+          "exTr": "Die Rechnung bitte!",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tip",
+          "de": "Trinkgeld",
+          "x": "napiwek",
+          "ex": "Daję kelnerowi dwa euro napiwku.",
+          "exTr": "Ich gebe dem Kellner zwei Euro Trinkgeld.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_waiter",
+          "de": "Kellner",
+          "x": "kelner",
+          "ex": "Kelner przynosi napoje.",
+          "exTr": "Der Kellner bringt die Getränke.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_starter",
+          "de": "Vorspeise",
+          "x": "przystawka",
+          "ex": "Na przystawkę biorę zupę.",
+          "exTr": "Als Vorspeise nehme ich eine Suppe.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_dessert",
+          "de": "Nachtisch",
+          "x": "deser",
+          "ex": "Na deser są lody.",
+          "exTr": "Zum Nachtisch gibt es Eis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_order",
+          "de": "Bestellen",
+          "x": "zamówić",
+          "ex": "Chcielibyśmy teraz zamówić.",
+          "exTr": "Wir möchten jetzt bestellen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_fry",
+          "de": "Braten",
+          "x": "smażyć",
+          "ex": "Mięso trzeba dobrze smażyć.",
+          "exTr": "Man muss das Fleisch gut braten.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bake",
+          "de": "Backen",
+          "x": "piec",
+          "ex": "W weekend piekę ciasto.",
+          "exTr": "Am Wochenende backe ich einen Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_cut",
+          "de": "Schneiden",
+          "x": "kroić",
+          "ex": "Proszę drobno pokroić cebulę.",
+          "exTr": "Bitte schneide die Zwiebeln klein.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_stir",
+          "de": "Rühren",
+          "x": "mieszać",
+          "ex": "Sos trzeba ciągle mieszać.",
+          "exTr": "Die Soße muss man ständig rühren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_ingredient",
+          "de": "Zutat",
+          "x": "składnik",
+          "ex": "W przepisie brakuje jeszcze jednego składnika.",
+          "exTr": "Für das Rezept fehlt noch eine Zutat.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spoon",
+          "de": "Löffel",
+          "x": "łyżka",
+          "ex": "Potrzebuję łyżki do zupy.",
+          "exTr": "Ich brauche einen Löffel für die Suppe.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_frying_pan",
+          "de": "Pfanne",
+          "x": "patelnia",
+          "ex": "Patelnia jest już bardzo gorąca.",
+          "exTr": "Die Pfanne ist schon sehr heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_pot",
+          "de": "Topf",
+          "x": "garnek",
+          "ex": "Wsyp proszę makaron do garnka.",
+          "exTr": "Gib die Nudeln bitte in den Topf.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_season",
+          "de": "Würzen",
+          "x": "przyprawiać",
+          "ex": "Nie zapomnij przyprawić zupy.",
+          "exTr": "Vergiss nicht, die Suppe zu würzen.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tasty",
+          "de": "Lecker",
+          "x": "pyszny",
+          "ex": "Ciasto jest naprawdę pyszne.",
+          "exTr": "Der Kuchen schmeckt richtig lecker.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spicy",
+          "de": "Scharf",
+          "x": "ostry",
+          "ex": "Jedzenie było dla mnie za ostre.",
+          "exTr": "Das Essen war mir zu scharf.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_reserve",
+          "de": "Reservieren",
+          "x": "zarezerwować",
+          "ex": "Chcę zarezerwować stolik dla czterech osób.",
+          "exTr": "Ich möchte einen Tisch für vier reservieren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spice",
+          "de": "Gewürz",
+          "x": "przyprawa",
+          "ex": "Ta przyprawa pochodzi z Indii.",
+          "exTr": "Dieses Gewürz kommt aus Indien.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_09",
+      "title": "Verkehr & Unterwegs",
+      "icon": "🚆",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "transport_09_ticket",
+          "de": "Fahrkarte",
+          "x": "bilet",
+          "ex": "Gdzie mogę kupić bilet?",
+          "exTr": "Wo kann ich eine Fahrkarte kaufen?",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_timetable",
+          "de": "Fahrplan",
+          "x": "rozkład jazdy",
+          "ex": "Według rozkładu jazdy pociąg przyjeżdża o dziesiątej.",
+          "exTr": "Laut Fahrplan kommt der Zug um zehn.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_escalator",
+          "de": "Rolltreppe",
+          "x": "schody ruchome",
+          "ex": "Jedź proszę schodami ruchomymi na górę, na peron.",
+          "exTr": "Nimm bitte die Rolltreppe nach oben zum Bahnsteig.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_pedestrian",
+          "de": "Fußgänger",
+          "x": "pieszy",
+          "ex": "Piesi czekają na czerwonym świetle.",
+          "exTr": "Die Fußgänger warten an der roten Ampel.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_delay",
+          "de": "Verspätung",
+          "x": "opóźnienie",
+          "ex": "Pociąg ma dwadzieścia minut opóźnienia.",
+          "exTr": "Der Zug hat zwanzig Minuten Verspätung.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_platform",
+          "de": "Bahnsteig",
+          "x": "peron",
+          "ex": "Pociąg odjeżdża z peronu czwartego.",
+          "exTr": "Der Zug fährt von Bahnsteig vier ab.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_track",
+          "de": "Gleis",
+          "x": "tor",
+          "ex": "Na torze siódmym stoi ICE.",
+          "exTr": "Auf Gleis sieben steht der ICE.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_departure",
+          "de": "Abfahrt",
+          "x": "odjazd",
+          "ex": "Odjazd jest o wpół do ósmej.",
+          "exTr": "Die Abfahrt ist um halb acht.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_arrival",
+          "de": "Ankunft",
+          "x": "przyjazd",
+          "ex": "Nasz przyjazd jest o dwunastej.",
+          "exTr": "Unsere Ankunft ist um zwölf Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_traffic_jam",
+          "de": "Stau",
+          "x": "korek",
+          "ex": "Na autostradzie jest długi korek.",
+          "exTr": "Auf der Autobahn gibt es einen langen Stau.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driving_license",
+          "de": "Führerschein",
+          "x": "prawo jazdy",
+          "ex": "W wieku osiemnastu lat robię prawo jazdy.",
+          "exTr": "Mit achtzehn mache ich den Führerschein.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_refuel",
+          "de": "Tanken",
+          "x": "tankować",
+          "ex": "Musimy jeszcze zatankować.",
+          "exTr": "Wir müssen noch tanken.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_parking_space",
+          "de": "Parkplatz",
+          "x": "miejsce parkingowe",
+          "ex": "Nie ma tu wolnego miejsca parkingowego.",
+          "exTr": "Hier gibt es keinen freien Parkplatz.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_conductor",
+          "de": "Schaffner",
+          "x": "konduktor",
+          "ex": "Konduktor sprawdza w pociągu wszystkie bilety.",
+          "exTr": "Der Schaffner kontrolliert im Zug alle Fahrkarten.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driver",
+          "de": "Fahrer",
+          "x": "kierowca",
+          "ex": "Kierowca już czeka przed dworcem.",
+          "exTr": "Der Fahrer wartet schon vor dem Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_turn",
+          "de": "Abbiegen",
+          "x": "skręcać",
+          "ex": "Tutaj nie wolno skręcać w lewo.",
+          "exTr": "Hier dürfen Sie nicht links abbiegen.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_highway",
+          "de": "Autobahn",
+          "x": "autostrada",
+          "ex": "Na autostradzie wolno jechać szybko.",
+          "exTr": "Auf der Autobahn darf man schnell fahren.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_detour",
+          "de": "Umleitung",
+          "x": "objazd",
+          "ex": "Z powodu placu budowy jest objazd.",
+          "exTr": "Wegen der Baustelle gibt es eine Umleitung.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_connection",
+          "de": "Anschluss",
+          "x": "połączenie",
+          "ex": "Niestety spóźniliśmy się na połączenie.",
+          "exTr": "Wir haben den Anschluss leider verpasst.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_board",
+          "de": "Einsteigen",
+          "x": "wsiadać",
+          "ex": "Proszę wsiadać tylnymi drzwiami.",
+          "exTr": "Bitte steigen Sie hinten ein.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "household_10",
+      "title": "Wohnen & Haushalt",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "household_10_rent",
+          "de": "Miete",
+          "x": "czynsz",
+          "ex": "Czynsz jest płatny co miesiąc.",
+          "exTr": "Die Miete ist jeden Monat fällig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_landlord",
+          "de": "Vermieter",
+          "x": "właściciel mieszkania",
+          "ex": "Mój właściciel mieszkania jest bardzo miły.",
+          "exTr": "Mein Vermieter ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_move_house",
+          "de": "Umziehen",
+          "x": "przeprowadzić się",
+          "ex": "W przyszłym miesiącu musimy się przeprowadzić.",
+          "exTr": "Nächsten Monat müssen wir umziehen.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_furniture",
+          "de": "Möbel",
+          "x": "meble",
+          "ex": "Kupujemy nowe meble do mieszkania.",
+          "exTr": "Wir kaufen neue Möbel für die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_shelf",
+          "de": "Regal",
+          "x": "regał",
+          "ex": "Regał wisi na ścianie.",
+          "exTr": "Das Regal hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_mirror",
+          "de": "Spiegel",
+          "x": "lustro",
+          "ex": "W przedpokoju wisi duże lustro.",
+          "exTr": "Im Flur hängt ein großer Spiegel.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_carpet",
+          "de": "Teppich",
+          "x": "dywan",
+          "ex": "Dywan w przedpokoju jest nowy.",
+          "exTr": "Der Teppich im Flur ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_curtain",
+          "de": "Vorhang",
+          "x": "zasłona",
+          "ex": "Zasuń proszę zasłonę.",
+          "exTr": "Zieh bitte den Vorhang zu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_heating",
+          "de": "Heizung",
+          "x": "ogrzewanie",
+          "ex": "Zimą ogrzewanie jest ważne.",
+          "exTr": "Im Winter ist die Heizung wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_vacuum_cleaner",
+          "de": "Staubsauger",
+          "x": "odkurzacz",
+          "ex": "Odkurzacz jest niestety zepsuty.",
+          "exTr": "Der Staubsauger ist leider kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_clean",
+          "de": "Putzen",
+          "x": "czyścić",
+          "ex": "W sobotę czyścimy mieszkanie.",
+          "exTr": "Am Samstag putzen wir die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_washing_machine",
+          "de": "Waschmaschine",
+          "x": "pralka",
+          "ex": "Pralka już skończyła.",
+          "exTr": "Die Waschmaschine ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_fridge",
+          "de": "Kühlschrank",
+          "x": "lodówka",
+          "ex": "Mleko stoi w lodówce.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_trash_can",
+          "de": "Mülleimer",
+          "x": "kosz na śmieci",
+          "ex": "Wyrzuć to proszę do kosza na śmieci.",
+          "exTr": "Wirf das bitte in den Mülleimer.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_balcony",
+          "de": "Balkon",
+          "x": "balkon",
+          "ex": "Wieczorem chętnie siedzimy na balkonie.",
+          "exTr": "Abends sitzen wir gern auf dem Balkon.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_attic",
+          "de": "Dachboden",
+          "x": "strych",
+          "ex": "Stare meble stoją na strychu.",
+          "exTr": "Alte Möbel stehen auf dem Dachboden.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_hallway",
+          "de": "Flur",
+          "x": "przedpokój",
+          "ex": "W przedpokoju wisi dużo obrazów.",
+          "exTr": "Im Flur hängen viele Bilder.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_power_outlet",
+          "de": "Steckdose",
+          "x": "gniazdko",
+          "ex": "Niestety nie ma tu gniazdka.",
+          "exTr": "Hier ist leider keine Steckdose.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_utility_costs",
+          "de": "Nebenkosten",
+          "x": "opłaty dodatkowe",
+          "ex": "Opłaty dodatkowe są dość wysokie.",
+          "exTr": "Die Nebenkosten sind ziemlich hoch.",
+          "difficulty": 3,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_repair",
+          "de": "Reparieren",
+          "x": "naprawić",
+          "ex": "Mój ojciec potrafi naprawić krzesło.",
+          "exTr": "Mein Vater kann den Stuhl reparieren.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich möchte meine Meinung klar erklären.",
+      "x": "Chciałbym jasno wyjaśnić swoje zdanie.",
+      "translations": {
+        "pl": "Chciałbym jasno wyjaśnić swoje zdanie."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Am Wochenende gehe ich oft auf den Markt.",
+      "x": "W weekend często chodzę na targ.",
+      "translations": {
+        "pl": "W weekend często chodzę na targ."
+      }
+    }
+  ]
+}

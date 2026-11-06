@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "NL",
+  "level": "B1",
+  "topics": [
+    {
+      "id": "career_01",
+      "title": "Beruf & Karriere",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "career_01_application",
+          "de": "Bewerbung",
+          "x": "sollicitatie",
+          "ex": "Ik heb mijn sollicitatie gisteren per e-mail verstuurd.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_responsibility",
+          "de": "Verantwortung",
+          "x": "verantwoordelijkheid",
+          "ex": "Met deze baan neem je veel verantwoordelijkheid voor het team op je.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_experience",
+          "de": "Erfahrung",
+          "x": "ervaring",
+          "ex": "Ze heeft tien jaar ervaring in de verkoop.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_decide",
+          "de": "Entscheiden",
+          "x": "beslissen",
+          "ex": "We moeten uiterlijk vrijdag beslissen welk aanbod we aannemen.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_negotiate",
+          "de": "Verhandeln",
+          "x": "onderhandelen",
+          "ex": "Hij wil met de baas onderhandelen over zijn salaris.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_reliable",
+          "de": "Zuverlässig",
+          "x": "betrouwbaar",
+          "ex": "Onze collega is altijd op tijd en erg betrouwbaar.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "sollicitatiegesprek",
+          "ex": "Morgen heb ik een sollicitatiegesprek bij een groot bedrijf.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "cv",
+          "ex": "In mijn cv ontbreekt nog een stage.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "ontslag",
+          "ex": "Na haar ontslag zocht ze snel een nieuwe baan.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "arbeidsovereenkomst",
+          "ex": "Lees de arbeidsovereenkomst alstublieft nauwkeurig door voordat u tekent.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "bijscholing",
+          "ex": "Het bedrijf betaalt een bijscholing in projectmanagement.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "leidinggevende",
+          "ex": "Mijn leidinggevende prijst me vaak voor mijn werk.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "promotie",
+          "ex": "Na drie jaar kreeg hij eindelijk promotie.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "teamwork",
+          "ex": "Zonder goed teamwork was het project mislukt.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "deadline",
+          "ex": "De deadline voor het inleveren is maandag.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "werkgever",
+          "ex": "Mijn werkgever biedt flexibele werktijden aan.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "overuren",
+          "ex": "Voor het einde van het jaar moesten we veel overuren maken.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "inwerkperiode",
+          "ex": "De inwerkperiode van nieuwe medewerkers duurt bij ons drie weken.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "concurrentie",
+          "ex": "De concurrentie op de arbeidsmarkt is erg hard.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "kwalificatie",
+          "ex": "Voor deze functie heeft u een bijzondere kwalificatie nodig.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society_02",
+      "title": "Gesellschaft",
+      "icon": "🤝",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "society_02_community",
+          "de": "Gemeinschaft",
+          "x": "gemeenschap",
+          "ex": "In het dorp is een sterke gemeenschap.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_equality",
+          "de": "Gleichberechtigung",
+          "x": "gelijke rechten",
+          "ex": "Gelijke rechten voor mannen en vrouwen is een belangrijk doel.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_support",
+          "de": "Unterstützung",
+          "x": "steun",
+          "ex": "Bedankt voor je steun in deze moeilijke tijd.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_volunteer",
+          "de": "Freiwilliger",
+          "x": "vrijwilliger",
+          "ex": "Als vrijwilliger helpt hij elk weekend in het dierenasiel.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_rule",
+          "de": "Regel",
+          "x": "regel",
+          "ex": "Wie de regel niet kent, kan hem niet volgen.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_trust",
+          "de": "Vertrauen",
+          "x": "vertrouwen",
+          "ex": "Vertrouwen moet je langzaam verdienen.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "burger",
+          "ex": "Elke burger heeft het recht zijn mening te geven.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "integratie",
+          "ex": "Taalcursussen maken de integratie van nieuwe inwoners makkelijker.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "vooroordeel",
+          "ex": "Een vooroordeel ontstaat vaak uit onwetendheid.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "tolerantie",
+          "ex": "Tolerantie betekent andere levenswijzen respecteren.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "vrijwilligerswerk",
+          "ex": "Zijn vrijwilligerswerk bij de brandweer neemt veel tijd in beslag.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "donatie",
+          "ex": "De vereniging bedankt hartelijk voor de donatie.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "wet",
+          "ex": "De nieuwe wet gaat in januari in.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "plicht",
+          "ex": "Gaan stemmen is voor veel mensen een burgerplicht.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "rekening houden",
+          "ex": "Houd alstublieft rekening met uw buren.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "saamhorigheid",
+          "ex": "In crises blijkt de saamhorigheid van de mensen.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "generatie",
+          "ex": "Drie generaties wonen onder één dak.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "immigratie",
+          "ex": "De immigratie heeft het land sterk veranderd.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "rechtvaardigheid",
+          "ex": "Alle burgers hebben recht op rechtvaardigheid.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "meerderheid",
+          "ex": "De meerderheid van de burgers stemde voor het plan.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_03",
+      "title": "Reisen & Erlebnisse",
+      "icon": "🧭",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "travel_03_itinerary",
+          "de": "Reiseroute",
+          "x": "reisroute",
+          "ex": "Onze reisroute voert ons door drie landen.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_accommodation",
+          "de": "Unterkunft",
+          "x": "accommodatie",
+          "ex": "De accommodatie ligt maar vijf minuten van het strand.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_change_trains",
+          "de": "Umsteigen",
+          "x": "overstappen",
+          "ex": "In Keulen moeten we overstappen op de regionale trein.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_discover",
+          "de": "Entdecken",
+          "x": "ontdekken",
+          "ex": "We wilden de oude binnenstad te voet ontdekken.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_recommend",
+          "de": "Empfehlen",
+          "x": "aanbevelen",
+          "ex": "Kun je me een goed restaurant aanbevelen?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_unforgettable",
+          "de": "Unvergesslich",
+          "x": "onvergetelijk",
+          "ex": "De zonsopgang op de berg was onvergetelijk.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "souvenir",
+          "ex": "Als souvenir heb ik een klein beeldje gekocht.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "heenvlucht",
+          "ex": "De heenvlucht was rustig en comfortabel.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "terugvlucht",
+          "ex": "De terugvlucht vertrekt zondagavond om acht uur.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "reislust",
+          "ex": "In de winter krijg ik altijd sterke reislust.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "avontuur",
+          "ex": "De reis door Zuid-Amerika was een echt avontuur.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "rondreis",
+          "ex": "We boeken een rondreis door Schotland.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "douanecontrole",
+          "ex": "Bij de douanecontrole moest ik mijn koffer openmaken.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "reisgids",
+          "ex": "De reisgids geeft veel nuttige tips voor Lissabon.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "verblijf",
+          "ex": "Tijdens mijn verblijf in Wenen bezocht ik veel musea.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "boeking",
+          "ex": "De boeking werd per e-mail aan mij bevestigd.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "annuleren",
+          "ex": "We moesten de reis wegens ziekte annuleren.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "terugbetaling",
+          "ex": "Ik heb de terugbetaling van de vliegticketprijs aangevraagd.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "gastvrijheid",
+          "ex": "We waren enthousiast over de gastvrijheid van de mensen.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "inwoners",
+          "ex": "De inwoners lieten ons hun favoriete strand zien.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opinion_04",
+      "title": "Meinungen & Argumente",
+      "icon": "💡",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "opinion_04_opinion",
+          "de": "Meinung",
+          "x": "mening",
+          "ex": "Naar mijn mening is het aanbod te duur.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_claim",
+          "de": "Behaupten",
+          "x": "beweren",
+          "ex": "Hij beweert nergens van geweten te hebben.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_justify",
+          "de": "Begründen",
+          "x": "motiveren",
+          "ex": "Motiveer uw beslissing alstublieft kort.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compare",
+          "de": "Vergleichen",
+          "x": "vergelijken",
+          "ex": "Voor de aankoop moet je de prijzen vergelijken.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_influence",
+          "de": "Beeinflussen",
+          "x": "beïnvloeden",
+          "ex": "Reclame kan onze beslissingen sterk beïnvloeden.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_convince",
+          "de": "Überzeugen",
+          "x": "overtuigen",
+          "ex": "Ze kon me met goede argumenten overtuigen.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "argument",
+          "ex": "Je argument klinkt logisch, maar ik zie het anders.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "standpunt",
+          "ex": "Vanuit dit standpunt heb ik het nooit bekeken.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "overtuiging",
+          "ex": "Het is mijn vaste overtuiging dat onderwijs belangrijk is.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "tegenspraak",
+          "ex": "In zijn verklaring zit een duidelijke tegenspraak.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "betwijfelen",
+          "ex": "Ik betwijfel of het plan echt werkt.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "voordeel",
+          "ex": "Een groot voordeel van deze methode is de tijdwinst.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "nadeel",
+          "ex": "Het nadeel van de auto zijn de hoge kosten.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "compromis",
+          "ex": "Uiteindelijk vonden we een goed compromis.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "bezwaar",
+          "ex": "Heeft u nog een bezwaar tegen het voorstel?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "conclusie",
+          "ex": "Uit de cijfers trekt hij een duidelijke conclusie.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "inschatting",
+          "ex": "De inschatting van de deskundige was erg nuttig.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "kritiek",
+          "ex": "Ze nam de kritiek gelaten op.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "aanname",
+          "ex": "Je aanname was helaas niet juist.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "beoordelen",
+          "ex": "Je moet een boek niet alleen op de kaft beoordelen.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_05",
+      "title": "Umwelt & Zukunft",
+      "icon": "🌱",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "environment_05_resource",
+          "de": "Ressource",
+          "x": "hulpbron",
+          "ex": "Water is een waardevolle hulpbron.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_avoid",
+          "de": "Vermeiden",
+          "x": "vermijden",
+          "ex": "We moeten onnodig plastic afval vermijden.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_reuse",
+          "de": "Wiederverwenden",
+          "x": "hergebruiken",
+          "ex": "Glazen flessen kun je meerdere keren hergebruiken.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_pollute",
+          "de": "Verschmutzen",
+          "x": "vervuilen",
+          "ex": "Fabrieken vervuilen vaak de rivieren.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_sustainable",
+          "de": "Nachhaltig",
+          "x": "duurzaam",
+          "ex": "Veel mensen willen duurzaam leven.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_protect",
+          "de": "Schützen",
+          "x": "beschermen",
+          "ex": "We moeten de bossen beter beschermen.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "klimaatverandering",
+          "ex": "De klimaatverandering leidt tot meer noodweer.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "opwarming van de aarde",
+          "ex": "De opwarming van de aarde laat de zeespiegel stijgen.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "afval",
+          "ex": "Thuis scheiden we het afval zorgvuldig.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "recycling",
+          "ex": "Door recycling worden veel grondstoffen bespaard.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "milieubescherming",
+          "ex": "Milieubescherming begint in het eigen dagelijks leven.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "hernieuwbare energie",
+          "ex": "Hernieuwbare energie komt van zon, wind en water.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "broeikasgas",
+          "ex": "Koolstofdioxide is een bekend broeikasgas.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "uitsterven",
+          "ex": "Veel diersoorten worden met uitsterven bedreigd.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "verbruik",
+          "ex": "Het stroomverbruik stijgt elk jaar.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "bosbrand",
+          "ex": "De bosbrand verwoestte in de zomer vele hectaren bos.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "droogte",
+          "ex": "De lange droogte heeft de oogst verwoest.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "biodiversiteit",
+          "ex": "De biodiversiteit is in gevaar.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "besparen",
+          "ex": "Bij het verwarmen kun je veel energie besparen.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "leefgebied",
+          "ex": "De ontbossing vernietigt het leefgebied van veel dieren.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital_06",
+      "title": "Digitaler Alltag",
+      "icon": "💻",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "digital_06_data_privacy",
+          "de": "Datenschutz",
+          "x": "gegevensbescherming",
+          "ex": "Gegevensbescherming is bij onlinediensten bijzonder belangrijk.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_notification",
+          "de": "Benachrichtigung",
+          "x": "melding",
+          "ex": "Ik heb de melding op mijn telefoon uitgezet.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_download",
+          "de": "Herunterladen",
+          "x": "downloaden",
+          "ex": "Je kunt de app gratis downloaden.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_upload",
+          "de": "Hochladen",
+          "x": "uploaden",
+          "ex": "Ik moet de foto's nog uploaden.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_update",
+          "de": "Aktualisieren",
+          "x": "updaten",
+          "ex": "Update de software alstublieft regelmatig.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_password",
+          "de": "Passwort",
+          "x": "wachtwoord",
+          "ex": "Kies een veilig wachtwoord met cijfers en speciale tekens.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "inloggen",
+          "ex": "Het inloggen duurt maar een paar seconden.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "opslagruimte",
+          "ex": "Op mijn telefoon is bijna geen opslagruimte meer vrij.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "schermtijd",
+          "ex": "Mijn schermtijd is deze week sterk gestegen.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "versleuteling",
+          "ex": "De versleuteling beschermt uw berichten tegen vreemden.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "back-up",
+          "ex": "Een regelmatige back-up voorkomt gegevensverlies.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "platform",
+          "ex": "Veel leerlingen gebruiken dit platform om te leren.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "algoritme",
+          "ex": "Een algoritme bepaalt welke video's je ziet.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "abonnement",
+          "ex": "Ik heb mijn abonnement op de streamingdienst opgezegd.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "instellingen",
+          "ex": "De instellingen vind je rechtsboven in het menu.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "foutmelding",
+          "ex": "Bij het opstarten verscheen plotseling een foutmelding.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "koppelen",
+          "ex": "Je kunt je account aan je telefoon koppelen.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "zoekmachine",
+          "ex": "Welke zoekmachine gebruik je het liefst?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "cyberaanval",
+          "ex": "De cyberaanval legde het hele netwerk plat.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "kunstmatige intelligentie",
+          "ex": "Kunstmatige intelligentie verandert veel beroepen.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "krantenkop",
+          "ex": "De krantenkop stond vandaag op de voorpagina.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "verslag",
+          "ex": "Het verslag beschrijft de situatie in het crisisgebied.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "journalist",
+          "ex": "De journalist doet al weken onderzoek voor de reportage.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "berichtgeving",
+          "ex": "De berichtgeving over de verkiezingen was erg uitgebreid.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "bron",
+          "ex": "Geef altijd de bron van je informatie op.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "nepnieuws",
+          "ex": "Dit nepnieuws verspreidde zich binnen enkele minuten op internet.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "vrijheid van meningsuiting",
+          "ex": "De vrijheid van meningsuiting is een grondrecht in de democratie.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "reclamecampagne",
+          "ex": "De nieuwe reclamecampagne loopt op alle kanalen.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "uitzending",
+          "ex": "De uitzending wordt vanavond live uitgezonden.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "presentator",
+          "ex": "De presentator begroette de kijkers met een glimlach.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "reportage",
+          "ex": "De reportage laat het leven op een Waddeneiland zien.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "kijker",
+          "ex": "Meer dan een miljoen kijkers zagen de finale.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "ingezonden brief",
+          "ex": "Ze schreef een ingezonden brief aan de krant.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "onthullen",
+          "ex": "De krant wil het schandaal onthullen.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "publiceren",
+          "ex": "De uitgeverij gaat het boek in het najaar publiceren.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "geloofwaardig",
+          "ex": "Een geloofwaardige bron noemt namen en feiten.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "commentaar",
+          "ex": "Het commentaar op de opiniepagina was erg kritisch.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "documentaire",
+          "ex": "Gisteren zag ik een documentaire over walvissen.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "nieuwszender",
+          "ex": "Op de nieuwszender lopen de hele dag verslagen.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "censuur",
+          "ex": "In sommige landen is er nog altijd strenge censuur.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "voeding",
+          "ex": "Een evenwichtige voeding houdt het lichaam fit.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "gebrek aan beweging",
+          "ex": "Gebrek aan beweging kan op den duur tot rugproblemen leiden.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "tegenwicht",
+          "ex": "Yoga is voor mij een goed tegenwicht voor het kantoorleven.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "stress",
+          "ex": "Te veel stress maakt op den duur ziek.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "ontspanning",
+          "ex": "Na het werk heb ik wat ontspanning nodig.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "herstel",
+          "ex": "De vakantie diende vooral om te herstellen.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "preventie",
+          "ex": "Regelmatige preventie bij de dokter kan levens redden.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "uithoudingsvermogen",
+          "ex": "Voor een marathon heb je veel uithoudingsvermogen nodig.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "slaaptekort",
+          "ex": "Slaaptekort verzwakt de concentratie.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "overgewicht",
+          "ex": "Overgewicht verhoogt het risico op hartziekten.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "afvallen",
+          "ex": "Hij wil voor de zomer een paar kilo afvallen.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "blessure",
+          "ex": "Een blessure aan de knie stopte de speler.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "klachten",
+          "ex": "Al dagen heb ik klachten aan mijn rug.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "vaccinatie",
+          "ex": "De vaccinatie beschermt tegen een ernstige ziekte.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "rugpijn",
+          "ex": "Lang zitten veroorzaakt vaak rugpijn.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "mindfulness",
+          "ex": "Mindfulness helpt om het dagelijks leven bewuster te beleven.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "besmettelijk",
+          "ex": "De griep is erg besmettelijk.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "welzijn",
+          "ex": "Beweging verhoogt het algemene welzijn.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "voorkomen",
+          "ex": "Met sport kun je veel ziekten voorkomen.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "behandeling",
+          "ex": "De behandeling in het ziekenhuis duurde twee weken.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "inkomen",
+          "ex": "Het inkomen van het gezin is genoeg voor de huur.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "uitgaven",
+          "ex": "Ik schrijf alle uitgaven in een tabel.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "spaargeld",
+          "ex": "Met mijn spaargeld koop ik een auto.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "schulden",
+          "ex": "Hij heeft nog schulden bij de bank.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "lening",
+          "ex": "Voor het huis namen ze een lening op.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "overschrijving",
+          "ex": "De overschrijving duurt een tot twee dagen.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "contant geld",
+          "ex": "Ik betaal liever met contant geld dan met een pas.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "garantie",
+          "ex": "Op het apparaat zit twee jaar garantie.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "reclamatie",
+          "ex": "Mijn reclamatie werd door de winkel meteen geaccepteerd.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "ruil",
+          "ex": "Ruilen is alleen mogelijk met een kassabon.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "bankafschrift",
+          "ex": "Op het bankafschrift zie ik alle betalingen van de maand.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "consument",
+          "ex": "De consumenten letten steeds meer op kwaliteit.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "prijsvergelijking",
+          "ex": "Een prijsvergelijking op internet loont bijna altijd.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "aanbieding",
+          "ex": "Deze week is er fruit in de aanbieding.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "verzekering",
+          "ex": "De verzekering betaalt de schade aan mijn auto.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "belasting",
+          "ex": "Elk jaar moet ik belastingaangifte doen.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "huishoudbudget",
+          "ex": "Ons huishoudbudget is op dit moment behoorlijk krap.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "investeren",
+          "ex": "Ze wil geld investeren in hernieuwbare energie.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "verspillen",
+          "ex": "Je moet geen geld verspillen aan onnodige dingen.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "zuinig",
+          "ex": "Mijn oma is erg zuinig en koopt alleen het hoogstnodige.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "traditie",
+          "ex": "In onze familie is dat een oude traditie.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "gebruik",
+          "ex": "Het is een gebruik om met Pasen eieren te verstoppen.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "feestdag",
+          "ex": "De Derde Oktober is een officiële feestdag.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "voorstelling",
+          "ex": "De voorstelling in het theater duurde drie uur.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "museum",
+          "ex": "Het museum is helaas op maandag gesloten.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "schilderij",
+          "ex": "Het schilderij hangt al eeuwen in deze zaal.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "festival",
+          "ex": "Op het festival speelden meer dan vijftig bands.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "optocht",
+          "ex": "In de optocht liepen kinderen in kleurrijke kostuums mee.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "kunstwerk",
+          "ex": "Dit kunstwerk is meer dan tweehonderd jaar oud.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "herkenningspunt",
+          "ex": "De Eiffeltoren is het herkenningspunt van Parijs.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "cultureel erfgoed",
+          "ex": "De oude binnenstad behoort tot het werelderfgoed.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "ceremonie",
+          "ex": "De ceremonie begon stipt om elf uur.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "jubileum",
+          "ex": "De vereniging viert haar vijftigjarig jubileum.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "volksfeest",
+          "ex": "Op het volksfeest was er bier en muziek.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "podium",
+          "ex": "De zanger betrad onder groot applaus het podium.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "publiek",
+          "ex": "Het publiek klapte na het concert lang.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "kostuum",
+          "ex": "Voor carnaval naaide ze een kostuum.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "vuurwerk",
+          "ex": "Om middernacht begon het vuurwerk.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "kerstmarkt",
+          "ex": "Op de kerstmarkt drinken we graag glühwein.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "carnaval",
+          "ex": "In het Rijnland viert men carnaval met optochten.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Eine gute Lösung berücksichtigt verschiedene Perspektiven.",
+      "x": "Een goede oplossing houdt rekening met verschillende perspectieven.",
+      "translations": {
+        "nl": "Een goede oplossing houdt rekening met verschillende perspectieven."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Wir sollten unsere Ressourcen verantwortungsvoll nutzen.",
+      "x": "We moeten onze middelen verantwoord gebruiken.",
+      "translations": {
+        "nl": "We moeten onze middelen verantwoord gebruiken."
+      }
+    }
+  ]
+}

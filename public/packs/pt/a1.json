@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "PT",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "food_01_water",
+          "de": "Wasser",
+          "x": "água",
+          "ex": "Bebo muita água todos os dias.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_bread",
+          "de": "Brot",
+          "x": "pão",
+          "ex": "Ao pequeno-almoço como pão.",
+          "exTr": "Zum Frühstück esse ich Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_milk",
+          "de": "Milch",
+          "x": "leite",
+          "ex": "O leite está no frigorífico.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_coffee",
+          "de": "Kaffee",
+          "x": "café",
+          "ex": "Gosto de beber café de manhã.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_tea",
+          "de": "Tee",
+          "x": "chá",
+          "ex": "Queres um chá?",
+          "exTr": "Möchtest du einen Tee?",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_apple",
+          "de": "Apfel",
+          "x": "maçã",
+          "ex": "A maçã é vermelha e doce.",
+          "exTr": "Der Apfel ist rot und süß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_banana",
+          "de": "Banane",
+          "x": "banana",
+          "ex": "Estou a comer uma banana.",
+          "exTr": "Ich esse eine Banane.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_rice",
+          "de": "Reis",
+          "x": "arroz",
+          "ex": "Com o peixe há arroz.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "queijo",
+          "ex": "Gosto de queijo no pão.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "ovo",
+          "ex": "Ao pequeno-almoço como um ovo.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "carne",
+          "ex": "Ele não come carne.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "peixe",
+          "ex": "Hoje há peixe com arroz.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "legumes",
+          "ex": "As crianças devem comer muitos legumes.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "sopa",
+          "ex": "A sopa ainda está quente.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "sal",
+          "ex": "Por favor, passa-me o sal.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "açúcar",
+          "ex": "Não ponho açúcar no chá.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "sumo",
+          "ex": "Ela bebe um copo de sumo.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "cerveja",
+          "ex": "Ele pede uma cerveja.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "bolo",
+          "ex": "O bolo está muito bom.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "batata",
+          "ex": "Para o jantar há batatas.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "travel_02_airport",
+          "de": "Flughafen",
+          "x": "aeroporto",
+          "ex": "Vamos para o aeroporto.",
+          "exTr": "Wir fahren zum Flughafen.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train_station",
+          "de": "Bahnhof",
+          "x": "estação de comboios",
+          "ex": "A estação de comboios não é longe.",
+          "exTr": "Der Bahnhof ist nicht weit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_ticket",
+          "de": "Ticket",
+          "x": "bilhete",
+          "ex": "Preciso de um bilhete para Berlim.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_hotel",
+          "de": "Hotel",
+          "x": "hotel",
+          "ex": "O nosso hotel fica na praia.",
+          "exTr": "Unser Hotel liegt am Strand.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_street",
+          "de": "Straße",
+          "x": "rua",
+          "ex": "A rua é muito barulhenta.",
+          "exTr": "Die Straße ist sehr laut.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_map",
+          "de": "Karte",
+          "x": "mapa",
+          "ex": "Tens um mapa da cidade?",
+          "exTr": "Hast du eine Karte der Stadt?",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_suitcase",
+          "de": "Koffer",
+          "x": "mala",
+          "ex": "A minha mala está demasiado pesada.",
+          "exTr": "Mein Koffer ist zu schwer.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_passport",
+          "de": "Pass",
+          "x": "passaporte",
+          "ex": "Não te esqueças do passaporte!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "comboio",
+          "ex": "O comboio chega às oito horas.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "autocarro",
+          "ex": "Vou de autocarro para o trabalho.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "carro",
+          "ex": "O meu carro é novo.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "avião",
+          "ex": "O avião vai aterrar daqui a pouco.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "bicicleta",
+          "ex": "Gosto de andar de bicicleta.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "viagem",
+          "ex": "A viagem demora três horas.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "cidade",
+          "ex": "Berlim é uma cidade grande.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "país",
+          "ex": "Em que país vives?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "táxi",
+          "ex": "Vamos de táxi para o hotel.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagagem",
+          "ex": "Onde está a minha bagagem?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "paragem",
+          "ex": "A paragem é ali à frente.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "férias",
+          "ex": "No verão vamos de férias.",
+          "exTr": "Wir machen im Sommer Urlaub.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "home_03_house",
+          "de": "Haus",
+          "x": "casa",
+          "ex": "A casa tem um jardim.",
+          "exTr": "Das Haus hat einen Garten.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_room",
+          "de": "Zimmer",
+          "x": "quarto",
+          "ex": "O meu quarto é pequeno.",
+          "exTr": "Mein Zimmer ist klein.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_kitchen",
+          "de": "Küche",
+          "x": "cozinha",
+          "ex": "Cozinhamos na cozinha.",
+          "exTr": "Wir kochen in der Küche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bathroom",
+          "de": "Badezimmer",
+          "x": "casa de banho",
+          "ex": "A casa de banho é à esquerda.",
+          "exTr": "Das Badezimmer ist links.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_window",
+          "de": "Fenster",
+          "x": "janela",
+          "ex": "Por favor, abre a janela.",
+          "exTr": "Bitte mach das Fenster auf.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_door",
+          "de": "Tür",
+          "x": "porta",
+          "ex": "A porta está fechada.",
+          "exTr": "Die Tür ist zu.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_table",
+          "de": "Tisch",
+          "x": "mesa",
+          "ex": "A mesa é de madeira.",
+          "exTr": "Der Tisch ist aus Holz.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_chair",
+          "de": "Stuhl",
+          "x": "cadeira",
+          "ex": "Senta-te na cadeira.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "cama",
+          "ex": "A cama é muito confortável.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "sofá",
+          "ex": "Estamos sentados no sofá.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "candeeiro",
+          "ex": "O candeeiro está em cima da mesa.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "chave",
+          "ex": "Perdi a minha chave.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "apartamento",
+          "ex": "O meu apartamento tem três divisões.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "jardim",
+          "ex": "No jardim crescem flores.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "parede",
+          "ex": "O quadro está pendurado na parede.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "duche",
+          "ex": "Tomo um duche todas as manhãs.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "armário",
+          "ex": "A roupa está no armário.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "cave",
+          "ex": "A bicicleta está na cave.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "escada",
+          "ex": "A escada é muito íngreme.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "sala de estar",
+          "ex": "A sala de estar é grande e luminosa.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "work_04_work",
+          "de": "Arbeit",
+          "x": "trabalho",
+          "ex": "O trabalho começa às nove horas.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_office",
+          "de": "Büro",
+          "x": "escritório",
+          "ex": "Hoje estou no escritório.",
+          "exTr": "Ich bin heute im Büro.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_boss",
+          "de": "Chef",
+          "x": "chefe",
+          "ex": "O meu chefe é muito simpático.",
+          "exTr": "Mein Chef ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_colleague",
+          "de": "Kollege",
+          "x": "colega",
+          "ex": "O meu colega ajuda-me muitas vezes.",
+          "exTr": "Mein Kollege hilft mir oft.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_meeting",
+          "de": "Meeting",
+          "x": "reunião",
+          "ex": "A reunião dura uma hora.",
+          "exTr": "Das Meeting dauert eine Stunde.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_project",
+          "de": "Projekt",
+          "x": "projeto",
+          "ex": "Temos um novo projeto.",
+          "exTr": "Wir haben ein neues Projekt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_email",
+          "de": "E-Mail",
+          "x": "e-mail",
+          "ex": "Vou escrever-te um e-mail.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_break",
+          "de": "Pause",
+          "x": "pausa",
+          "ex": "Agora vamos fazer uma pausa.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "empresa",
+          "ex": "Ele trabalha numa empresa grande.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "salário",
+          "ex": "O salário chega no fim do mês.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "professor",
+          "ex": "O professor explica o exercício.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "escola",
+          "ex": "As crianças vão para a escola.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "aluno",
+          "ex": "O aluno está a fazer os trabalhos de casa.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "caneta",
+          "ex": "Tens uma caneta para mim?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "papel",
+          "ex": "Preciso de uma folha de papel.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "impressora",
+          "ex": "A impressora do escritório está avariada.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "telefone",
+          "ex": "O meu telefone está a tocar.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "computador",
+          "ex": "O computador é muito rápido.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "profissão",
+          "ex": "Qual é a tua profissão?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "erro",
+          "ex": "Cometi um erro.",
+          "exTr": "Ich habe einen Fehler gemacht.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "health_05_doctor",
+          "de": "Arzt",
+          "x": "médico",
+          "ex": "Tenho de ir ao médico.",
+          "exTr": "Ich muss zum Arzt gehen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_hospital",
+          "de": "Krankenhaus",
+          "x": "hospital",
+          "ex": "Ele está no hospital.",
+          "exTr": "Er liegt im Krankenhaus.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_medicine",
+          "de": "Medizin",
+          "x": "medicamento",
+          "ex": "Toma o medicamento três vezes por dia.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pain",
+          "de": "Schmerz",
+          "x": "dor",
+          "ex": "Tenho dores fortes.",
+          "exTr": "Ich habe starke Schmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_fever",
+          "de": "Fieber",
+          "x": "febre",
+          "ex": "A criança tem febre.",
+          "exTr": "Das Kind hat Fieber.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_help",
+          "de": "Hilfe",
+          "x": "ajuda",
+          "ex": "Preciso de ajuda!",
+          "exTr": "Ich brauche Hilfe!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_appointment",
+          "de": "Termin",
+          "x": "consulta",
+          "ex": "Amanhã tenho uma consulta.",
+          "exTr": "Ich habe morgen einen Termin.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_prescription",
+          "de": "Rezept",
+          "x": "receita",
+          "ex": "O médico passa uma receita.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "tosse",
+          "ex": "Tenho tosse há dias.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "constipação",
+          "ex": "Ele tem uma constipação forte.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "farmácia",
+          "ex": "A farmácia fica logo ali ao virar da esquina.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "dentista",
+          "ex": "Amanhã vou ao dentista.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "saúde",
+          "ex": "A saúde é muito importante.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "doença",
+          "ex": "A doença dura uma semana.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "emergência",
+          "ex": "Isto é uma emergência!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulância",
+          "ex": "A ambulância chega já.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "comprimido",
+          "ex": "Tomo um comprimido todos os dias.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "penso rápido",
+          "ex": "Preciso de um penso rápido.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "sono",
+          "ex": "Um bom sono é importante.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "paciente",
+          "ex": "O paciente espera no quarto.",
+          "exTr": "Der Patient wartet im Zimmer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "shopping_06_shop",
+          "de": "Laden",
+          "x": "loja",
+          "ex": "A loja está aberta até às oito.",
+          "exTr": "Der Laden ist bis acht offen.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_price",
+          "de": "Preis",
+          "x": "preço",
+          "ex": "O preço é muito bom.",
+          "exTr": "Der Preis ist sehr gut.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_money",
+          "de": "Geld",
+          "x": "dinheiro",
+          "ex": "Não tenho dinheiro comigo.",
+          "exTr": "Ich habe kein Geld dabei.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_checkout",
+          "de": "Kasse",
+          "x": "caixa",
+          "ex": "Por favor, pague na caixa.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_discount",
+          "de": "Rabatt",
+          "x": "desconto",
+          "ex": "Hoje há dez por cento de desconto.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_customer",
+          "de": "Kunde",
+          "x": "cliente",
+          "ex": "O cliente espera na caixa.",
+          "exTr": "Der Kunde wartet an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_seller",
+          "de": "Verkäufer",
+          "x": "vendedor",
+          "ex": "O vendedor é muito simpático.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bag",
+          "de": "Tüte",
+          "x": "saco",
+          "ex": "Precisa de um saco?",
+          "exTr": "Brauchen Sie eine Tüte?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermercado",
+          "ex": "Vou ao supermercado.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "lista de compras",
+          "ex": "Estou a escrever uma lista de compras para amanhã.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "Isto custa dez euros.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "cêntimo",
+          "ex": "Isto custa só cinquenta cêntimos.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "cartão de crédito",
+          "ex": "Posso pagar com cartão de crédito?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "recibo",
+          "ex": "Queria um recibo, por favor.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "promoção",
+          "ex": "A promoção só é válida hoje.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "tamanho",
+          "ex": "Que tamanho usa?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "carrinho de compras",
+          "ex": "Preciso de um carrinho de compras.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "padaria",
+          "ex": "Na padaria compro pãezinhos.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "garrafa",
+          "ex": "Uma garrafa de água, por favor.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "presente",
+          "ex": "O presente é para ti.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "family_07_mother",
+          "de": "Mutter",
+          "x": "mãe",
+          "ex": "A minha mãe cozinha muito bem.",
+          "exTr": "Meine Mutter kocht sehr gut.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_father",
+          "de": "Vater",
+          "x": "pai",
+          "ex": "O meu pai trabalha num escritório.",
+          "exTr": "Mein Vater arbeitet im Büro.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_brother",
+          "de": "Bruder",
+          "x": "irmão",
+          "ex": "O meu irmão tem dez anos.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_sister",
+          "de": "Schwester",
+          "x": "irmã",
+          "ex": "A minha irmã mora em Viena.",
+          "exTr": "Meine Schwester wohnt in Wien.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_friend",
+          "de": "Freund",
+          "x": "amigo",
+          "ex": "Ele é o meu melhor amigo.",
+          "exTr": "Er ist mein bester Freund.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_child",
+          "de": "Kind",
+          "x": "criança",
+          "ex": "A criança está a brincar no jardim.",
+          "exTr": "Das Kind spielt im Garten.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_family",
+          "de": "Familie",
+          "x": "família",
+          "ex": "A minha família é grande.",
+          "exTr": "Meine Familie ist groß.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_name",
+          "de": "Name",
+          "x": "nome",
+          "ex": "Qual é o teu nome?",
+          "exTr": "Wie ist dein Name?",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "pais",
+          "ex": "Os meus pais moram em Hamburgo.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "filho",
+          "ex": "O filho dela vai à escola.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "filha",
+          "ex": "A filha dele tem cinco anos.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "avó",
+          "ex": "A minha avó gosta de fazer bolos.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "avô",
+          "ex": "O meu avô lê o jornal.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "homem",
+          "ex": "O homem usa um chapéu.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "mulher",
+          "ex": "A mulher espera na estação.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "bebé",
+          "ex": "O bebé dorme na cama.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "tio",
+          "ex": "O meu tio mora em Berlim.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "tia",
+          "ex": "A minha tia visita-nos amanhã.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "vizinho",
+          "ex": "O meu vizinho é muito simpático.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "convidado",
+          "ex": "O convidado chega às sete horas.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "time_08_today",
+          "de": "Heute",
+          "x": "hoje",
+          "ex": "Hoje o sol está a brilhar.",
+          "exTr": "Heute scheint die Sonne.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_tomorrow",
+          "de": "Morgen",
+          "x": "amanhã",
+          "ex": "Amanhã tenho folga.",
+          "exTr": "Morgen habe ich frei.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_yesterday",
+          "de": "Gestern",
+          "x": "ontem",
+          "ex": "Ontem estive no cinema.",
+          "exTr": "Gestern war ich im Kino.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_week",
+          "de": "Woche",
+          "x": "semana",
+          "ex": "A semana tem sete dias.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_month",
+          "de": "Monat",
+          "x": "mês",
+          "ex": "O mês tem trinta dias.",
+          "exTr": "Der Monat hat dreißig Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_year",
+          "de": "Jahr",
+          "x": "ano",
+          "ex": "Um ano tem doze meses.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_to_learn",
+          "de": "Lernen",
+          "x": "aprender",
+          "ex": "Quero aprender alemão.",
+          "exTr": "Ich möchte Deutsch lernen.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_language",
+          "de": "Sprache",
+          "x": "língua",
+          "ex": "O alemão é uma língua bonita.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "relógio",
+          "ex": "O relógio está pendurado na parede.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "hora",
+          "ex": "A aula dura uma hora.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minuto",
+          "ex": "Espera um minuto, por favor.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "dia",
+          "ex": "Um dia tem vinte e quatro horas.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "noite",
+          "ex": "À noite está escuro.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "tarde",
+          "ex": "À tarde vemos televisão.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "segunda-feira",
+          "ex": "Na segunda-feira começa a escola.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "fim de semana",
+          "ex": "No fim de semana vamos viajar.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "livro",
+          "ex": "Estou a ler um livro emocionante.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "pergunta",
+          "ex": "Tenho uma pergunta.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "resposta",
+          "ex": "A resposta está certa.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "palavra",
+          "ex": "Não conheço esta palavra.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "zero",
+          "ex": "O resultado é zero.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "um",
+          "ex": "Um mais um são dois.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "dois",
+          "ex": "Tenho dois irmãos.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "três",
+          "ex": "Somos três pessoas.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "quatro",
+          "ex": "O carro tem quatro rodas.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "cinco",
+          "ex": "Estou cinco minutos atrasado.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "seis",
+          "ex": "São seis horas.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "sete",
+          "ex": "A semana tem sete dias.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "dez",
+          "ex": "O livro custa dez euros.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "cem",
+          "ex": "A casa tem cem anos.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "vermelho",
+          "ex": "O tomate é vermelho.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "azul",
+          "ex": "Hoje o céu está azul.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "verde",
+          "ex": "A relva é verde.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "amarelo",
+          "ex": "O sol é amarelo.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "preto",
+          "ex": "O meu gato é preto.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "branco",
+          "ex": "A neve é branca.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "círculo",
+          "ex": "Desenha um círculo, por favor.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "quadrado",
+          "ex": "A janela é um quadrado.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "triângulo",
+          "ex": "O sinal de trânsito é um triângulo.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "linha",
+          "ex": "Desenha uma linha reta.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "cabeça",
+          "ex": "Dói-me a cabeça.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "mão",
+          "ex": "Dá-me a tua mão.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "pé",
+          "ex": "O meu pé está frio.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "braço",
+          "ex": "Ele partiu o braço.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "perna",
+          "ex": "Dói-me a perna.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "olho",
+          "ex": "Ela tem um olho azul.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "orelha",
+          "ex": "A criança tem a orelha fria.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "nariz",
+          "ex": "Tenho o nariz entupido.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "boca",
+          "ex": "Abre a boca, por favor.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "cabelo",
+          "ex": "Ela tem cabelo comprido e castanho.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "barriga",
+          "ex": "Dói-me a barriga.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "costas",
+          "ex": "Tenho dores nas costas.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "camisa",
+          "ex": "Ele veste uma camisa branca.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "calças",
+          "ex": "As calças são pequenas demais.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "casaco",
+          "ex": "Veste o teu casaco.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "sapatos",
+          "ex": "Os meus sapatos são novos.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "vestido",
+          "ex": "Ela veste um vestido vermelho.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "gorro",
+          "ex": "No inverno uso um gorro.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "meias",
+          "ex": "As minhas meias são quentes.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "camisola",
+          "ex": "A camisola é de lã.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "Estudo 30 minutos todos os dias.",
+      "translations": {
+        "pt": "Estudo 30 minutos todos os dias."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "Aprender uma língua exige paciência.",
+      "translations": {
+        "pt": "Aprender uma língua exige paciência."
+      }
+    }
+  ]
+}

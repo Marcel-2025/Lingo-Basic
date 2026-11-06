@@ -6,6 +6,10 @@ export const SUPPORTED_LANGUAGES: Record<LanguageCode, { label: string; fileName
   FR: { label: "Französisch", fileName: "fr", speechCode: "fr-FR" },
   RU: { label: "Russisch", fileName: "ru", speechCode: "ru-RU" },
   IT: { label: "Italienisch", fileName: "it", speechCode: "it-IT" },
+  TR: { label: "Türkisch", fileName: "tr", speechCode: "tr-TR" },
+  PT: { label: "Portugiesisch", fileName: "pt", speechCode: "pt-PT" },
+  NL: { label: "Niederländisch", fileName: "nl", speechCode: "nl-NL" },
+  PL: { label: "Polnisch", fileName: "pl", speechCode: "pl-PL" },
 };
 
 export const SUPPORTED_LEVELS: CefrLevel[] = ["A1", "A2", "B1"];

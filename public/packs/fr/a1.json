@@ -13,6 +13,8 @@
           "id": "food_01_water",
           "de": "Wasser",
           "x": "eau",
+          "ex": "Je bois beaucoup d'eau tous les jours.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -22,6 +24,8 @@
           "id": "food_01_bread",
           "de": "Brot",
           "x": "pain",
+          "ex": "Au petit-déjeuner, je mange du pain.",
+          "exTr": "Zum Frühstück esse ich Brot.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -31,6 +35,8 @@
           "id": "food_01_milk",
           "de": "Milch",
           "x": "lait",
+          "ex": "Le lait est dans le frigo.",
+          "exTr": "Die Milch steht im Kühlschrank.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -40,6 +46,8 @@
           "id": "food_01_coffee",
           "de": "Kaffee",
           "x": "café",
+          "ex": "J'aime boire du café le matin.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -49,6 +57,8 @@
           "id": "food_01_tea",
           "de": "Tee",
           "x": "thé",
+          "ex": "Veux-tu un thé ?",
+          "exTr": "Möchtest du einen Tee?",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -58,6 +68,8 @@
           "id": "food_01_apple",
           "de": "Apfel",
           "x": "pomme",
+          "ex": "La pomme est rouge et sucrée.",
+          "exTr": "Der Apfel ist rot und süß.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -67,6 +79,8 @@
           "id": "food_01_banana",
           "de": "Banane",
           "x": "banane",
+          "ex": "Je mange une banane.",
+          "exTr": "Ich esse eine Banane.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -76,6 +90,140 @@
           "id": "food_01_rice",
           "de": "Reis",
           "x": "riz",
+          "ex": "Avec le poisson, il y a du riz.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "fromage",
+          "ex": "J'aime le fromage sur le pain.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "œuf",
+          "ex": "Au petit-déjeuner, je mange un œuf.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "viande",
+          "ex": "Il ne mange pas de viande.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "poisson",
+          "ex": "Aujourd'hui, il y a du poisson avec du riz.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "légumes",
+          "ex": "Les enfants doivent manger beaucoup de légumes.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "soupe",
+          "ex": "La soupe est encore chaude.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "sel",
+          "ex": "Passe-moi le sel, s'il te plaît.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "sucre",
+          "ex": "Je ne prends pas de sucre dans mon thé.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "jus",
+          "ex": "Elle boit un verre de jus.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "bière",
+          "ex": "Il commande une bière.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "gâteau",
+          "ex": "Le gâteau est très bon.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "pomme de terre",
+          "ex": "Pour le repas, il y a des pommes de terre.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -93,6 +241,8 @@
           "id": "travel_02_airport",
           "de": "Flughafen",
           "x": "aéroport",
+          "ex": "Nous allons à l'aéroport.",
+          "exTr": "Wir fahren zum Flughafen.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -102,6 +252,8 @@
           "id": "travel_02_train_station",
           "de": "Bahnhof",
           "x": "gare",
+          "ex": "La gare n'est pas loin.",
+          "exTr": "Der Bahnhof ist nicht weit.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -111,6 +263,8 @@
           "id": "travel_02_ticket",
           "de": "Ticket",
           "x": "billet",
+          "ex": "J'ai besoin d'un billet pour Berlin.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -120,6 +274,8 @@
           "id": "travel_02_hotel",
           "de": "Hotel",
           "x": "hôtel",
+          "ex": "Notre hôtel est sur la plage.",
+          "exTr": "Unser Hotel liegt am Strand.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -129,6 +285,8 @@
           "id": "travel_02_street",
           "de": "Straße",
           "x": "rue",
+          "ex": "La rue est très bruyante.",
+          "exTr": "Die Straße ist sehr laut.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -138,6 +296,8 @@
           "id": "travel_02_map",
           "de": "Karte",
           "x": "carte",
+          "ex": "As-tu une carte de la ville ?",
+          "exTr": "Hast du eine Karte der Stadt?",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -147,6 +307,8 @@
           "id": "travel_02_suitcase",
           "de": "Koffer",
           "x": "valise",
+          "ex": "Ma valise est trop lourde.",
+          "exTr": "Mein Koffer ist zu schwer.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -156,6 +318,140 @@
           "id": "travel_02_passport",
           "de": "Pass",
           "x": "passeport",
+          "ex": "N'oublie pas ton passeport !",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "train",
+          "ex": "Le train arrive à huit heures.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "bus",
+          "ex": "Je vais au travail en bus.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "voiture",
+          "ex": "Ma voiture est neuve.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "avion",
+          "ex": "L'avion va bientôt atterrir.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "vélo",
+          "ex": "J'aime faire du vélo.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "voyage",
+          "ex": "Le voyage dure trois heures.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "ville",
+          "ex": "Berlin est une grande ville.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "pays",
+          "ex": "Dans quel pays habites-tu ?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taxi",
+          "ex": "Nous prenons un taxi pour aller à l'hôtel.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagages",
+          "ex": "Où sont mes bagages ?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "arrêt de bus",
+          "ex": "L'arrêt de bus est juste devant.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "vacances",
+          "ex": "Nous partons en vacances en été.",
+          "exTr": "Wir machen im Sommer Urlaub.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -173,6 +469,8 @@
           "id": "home_03_house",
           "de": "Haus",
           "x": "maison",
+          "ex": "La maison a un jardin.",
+          "exTr": "Das Haus hat einen Garten.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -182,6 +480,8 @@
           "id": "home_03_room",
           "de": "Zimmer",
           "x": "chambre",
+          "ex": "Ma chambre est petite.",
+          "exTr": "Mein Zimmer ist klein.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -191,6 +491,8 @@
           "id": "home_03_kitchen",
           "de": "Küche",
           "x": "cuisine",
+          "ex": "Nous cuisinons dans la cuisine.",
+          "exTr": "Wir kochen in der Küche.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -199,7 +501,9 @@
         {
           "id": "home_03_bathroom",
           "de": "Badezimmer",
-          "x": "salle de bain",
+          "x": "salle de bains",
+          "ex": "La salle de bains est à gauche.",
+          "exTr": "Das Badezimmer ist links.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -209,6 +513,8 @@
           "id": "home_03_window",
           "de": "Fenster",
           "x": "fenêtre",
+          "ex": "Ouvre la fenêtre, s'il te plaît.",
+          "exTr": "Bitte mach das Fenster auf.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -218,6 +524,8 @@
           "id": "home_03_door",
           "de": "Tür",
           "x": "porte",
+          "ex": "La porte est fermée.",
+          "exTr": "Die Tür ist zu.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -227,6 +535,8 @@
           "id": "home_03_table",
           "de": "Tisch",
           "x": "table",
+          "ex": "La table est en bois.",
+          "exTr": "Der Tisch ist aus Holz.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -236,6 +546,140 @@
           "id": "home_03_chair",
           "de": "Stuhl",
           "x": "chaise",
+          "ex": "Assieds-toi sur la chaise.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "lit",
+          "ex": "Le lit est très confortable.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "canapé",
+          "ex": "Nous sommes assis sur le canapé.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lampe",
+          "ex": "La lampe est sur la table.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "clé",
+          "ex": "J'ai perdu ma clé.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "appartement",
+          "ex": "Mon appartement a trois pièces.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "jardin",
+          "ex": "Des fleurs poussent dans le jardin.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "mur",
+          "ex": "Le tableau est accroché au mur.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "douche",
+          "ex": "Je prends une douche tous les matins.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "armoire",
+          "ex": "Les vêtements sont dans l'armoire.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "cave",
+          "ex": "Le vélo est à la cave.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "escalier",
+          "ex": "L'escalier est très raide.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "salon",
+          "ex": "Le salon est grand et lumineux.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -253,6 +697,8 @@
           "id": "work_04_work",
           "de": "Arbeit",
           "x": "travail",
+          "ex": "Le travail commence à neuf heures.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -262,6 +708,8 @@
           "id": "work_04_office",
           "de": "Büro",
           "x": "bureau",
+          "ex": "Aujourd'hui, je suis au bureau.",
+          "exTr": "Ich bin heute im Büro.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -271,6 +719,8 @@
           "id": "work_04_boss",
           "de": "Chef",
           "x": "chef",
+          "ex": "Mon chef est très gentil.",
+          "exTr": "Mein Chef ist sehr nett.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -280,6 +730,8 @@
           "id": "work_04_colleague",
           "de": "Kollege",
           "x": "collègue",
+          "ex": "Mon collègue m'aide souvent.",
+          "exTr": "Mein Kollege hilft mir oft.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -289,6 +741,8 @@
           "id": "work_04_meeting",
           "de": "Meeting",
           "x": "réunion",
+          "ex": "La réunion dure une heure.",
+          "exTr": "Das Meeting dauert eine Stunde.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -298,6 +752,8 @@
           "id": "work_04_project",
           "de": "Projekt",
           "x": "projet",
+          "ex": "Nous avons un nouveau projet.",
+          "exTr": "Wir haben ein neues Projekt.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -307,6 +763,8 @@
           "id": "work_04_email",
           "de": "E-Mail",
           "x": "e-mail",
+          "ex": "Je t'écris un e-mail.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -316,6 +774,140 @@
           "id": "work_04_break",
           "de": "Pause",
           "x": "pause",
+          "ex": "Nous faisons une pause maintenant.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "entreprise",
+          "ex": "Il travaille dans une grande entreprise.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "salaire",
+          "ex": "Le salaire arrive à la fin du mois.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "professeur",
+          "ex": "Le professeur explique l'exercice.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "école",
+          "ex": "Les enfants vont à l'école.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "élève",
+          "ex": "L'élève fait ses devoirs.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "stylo",
+          "ex": "As-tu un stylo pour moi ?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "papier",
+          "ex": "J'ai besoin d'une feuille de papier.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "imprimante",
+          "ex": "L'imprimante du bureau est en panne.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "téléphone",
+          "ex": "Mon téléphone sonne.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "ordinateur",
+          "ex": "L'ordinateur est très rapide.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "métier",
+          "ex": "Quel est ton métier ?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "erreur",
+          "ex": "J'ai fait une erreur.",
+          "exTr": "Ich habe einen Fehler gemacht.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -333,6 +925,8 @@
           "id": "health_05_doctor",
           "de": "Arzt",
           "x": "médecin",
+          "ex": "Je dois aller chez le médecin.",
+          "exTr": "Ich muss zum Arzt gehen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -342,6 +936,8 @@
           "id": "health_05_hospital",
           "de": "Krankenhaus",
           "x": "hôpital",
+          "ex": "Il est à l'hôpital.",
+          "exTr": "Er liegt im Krankenhaus.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -351,6 +947,8 @@
           "id": "health_05_medicine",
           "de": "Medizin",
           "x": "médicament",
+          "ex": "Prends le médicament trois fois par jour.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -360,6 +958,8 @@
           "id": "health_05_pain",
           "de": "Schmerz",
           "x": "douleur",
+          "ex": "J'ai de fortes douleurs.",
+          "exTr": "Ich habe starke Schmerzen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -369,6 +969,8 @@
           "id": "health_05_fever",
           "de": "Fieber",
           "x": "fièvre",
+          "ex": "L'enfant a de la fièvre.",
+          "exTr": "Das Kind hat Fieber.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -378,6 +980,8 @@
           "id": "health_05_help",
           "de": "Hilfe",
           "x": "aide",
+          "ex": "J'ai besoin d'aide !",
+          "exTr": "Ich brauche Hilfe!",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -387,6 +991,8 @@
           "id": "health_05_appointment",
           "de": "Termin",
           "x": "rendez-vous",
+          "ex": "J'ai un rendez-vous demain.",
+          "exTr": "Ich habe morgen einen Termin.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -396,6 +1002,140 @@
           "id": "health_05_prescription",
           "de": "Rezept",
           "x": "ordonnance",
+          "ex": "Le médecin écrit une ordonnance.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "toux",
+          "ex": "J'ai de la toux depuis des jours.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "rhume",
+          "ex": "Il a un gros rhume.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "pharmacie",
+          "ex": "La pharmacie est juste au coin de la rue.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "dentiste",
+          "ex": "Demain, je vais chez le dentiste.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "santé",
+          "ex": "La santé est très importante.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "maladie",
+          "ex": "La maladie dure une semaine.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "urgence",
+          "ex": "C'est une urgence !",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulance",
+          "ex": "L'ambulance arrive tout de suite.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "comprimé",
+          "ex": "Je prends un comprimé par jour.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "pansement",
+          "ex": "J'ai besoin d'un pansement.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "sommeil",
+          "ex": "Avoir assez de sommeil est important.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "patient",
+          "ex": "Le patient attend dans la chambre.",
+          "exTr": "Der Patient wartet im Zimmer.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -413,6 +1153,8 @@
           "id": "shopping_06_shop",
           "de": "Laden",
           "x": "magasin",
+          "ex": "Le magasin est ouvert jusqu'à huit heures.",
+          "exTr": "Der Laden ist bis acht offen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -422,6 +1164,8 @@
           "id": "shopping_06_price",
           "de": "Preis",
           "x": "prix",
+          "ex": "Le prix est très bon.",
+          "exTr": "Der Preis ist sehr gut.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -431,6 +1175,8 @@
           "id": "shopping_06_money",
           "de": "Geld",
           "x": "argent",
+          "ex": "Je n'ai pas d'argent sur moi.",
+          "exTr": "Ich habe kein Geld dabei.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -440,6 +1186,8 @@
           "id": "shopping_06_checkout",
           "de": "Kasse",
           "x": "caisse",
+          "ex": "Veuillez payer à la caisse.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -449,6 +1197,8 @@
           "id": "shopping_06_discount",
           "de": "Rabatt",
           "x": "remise",
+          "ex": "Aujourd'hui, il y a dix pour cent de remise.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -458,6 +1208,8 @@
           "id": "shopping_06_customer",
           "de": "Kunde",
           "x": "client",
+          "ex": "Le client attend à la caisse.",
+          "exTr": "Der Kunde wartet an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -467,6 +1219,8 @@
           "id": "shopping_06_seller",
           "de": "Verkäufer",
           "x": "vendeur",
+          "ex": "Le vendeur est très aimable.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -476,7 +1230,141 @@
           "id": "shopping_06_bag",
           "de": "Tüte",
           "x": "sac",
+          "ex": "Avez-vous besoin d'un sac ?",
+          "exTr": "Brauchen Sie eine Tüte?",
           "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermarché",
+          "ex": "Je vais au supermarché.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "liste de courses",
+          "ex": "J'écris une liste de courses pour demain.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "Ça coûte dix euros.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "centime",
+          "ex": "Ça coûte seulement cinquante centimes.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "carte bancaire",
+          "ex": "Puis-je payer par carte bancaire ?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "reçu",
+          "ex": "Je voudrais un reçu, s'il vous plaît.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "offre",
+          "ex": "L'offre n'est valable qu'aujourd'hui.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "taille",
+          "ex": "Quelle taille faites-vous ?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "chariot",
+          "ex": "J'ai besoin d'un chariot.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "boulangerie",
+          "ex": "J'achète des petits pains à la boulangerie.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "bouteille",
+          "ex": "Une bouteille d'eau, s'il vous plaît.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "cadeau",
+          "ex": "Le cadeau est pour toi.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
           "tags": [
             "einkaufen"
           ]
@@ -493,6 +1381,8 @@
           "id": "family_07_mother",
           "de": "Mutter",
           "x": "mère",
+          "ex": "Ma mère cuisine très bien.",
+          "exTr": "Meine Mutter kocht sehr gut.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -502,6 +1392,8 @@
           "id": "family_07_father",
           "de": "Vater",
           "x": "père",
+          "ex": "Mon père travaille dans un bureau.",
+          "exTr": "Mein Vater arbeitet im Büro.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -511,6 +1403,8 @@
           "id": "family_07_brother",
           "de": "Bruder",
           "x": "frère",
+          "ex": "Mon frère a dix ans.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -520,6 +1414,8 @@
           "id": "family_07_sister",
           "de": "Schwester",
           "x": "sœur",
+          "ex": "Ma sœur habite à Vienne.",
+          "exTr": "Meine Schwester wohnt in Wien.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -529,6 +1425,8 @@
           "id": "family_07_friend",
           "de": "Freund",
           "x": "ami",
+          "ex": "C'est mon meilleur ami.",
+          "exTr": "Er ist mein bester Freund.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -538,6 +1436,8 @@
           "id": "family_07_child",
           "de": "Kind",
           "x": "enfant",
+          "ex": "L'enfant joue dans le jardin.",
+          "exTr": "Das Kind spielt im Garten.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -547,6 +1447,8 @@
           "id": "family_07_family",
           "de": "Familie",
           "x": "famille",
+          "ex": "Ma famille est grande.",
+          "exTr": "Meine Familie ist groß.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -556,7 +1458,141 @@
           "id": "family_07_name",
           "de": "Name",
           "x": "nom",
+          "ex": "Quel est ton nom ?",
+          "exTr": "Wie ist dein Name?",
           "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "parents",
+          "ex": "Mes parents habitent à Hambourg.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "fils",
+          "ex": "Son fils va à l'école.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "fille",
+          "ex": "Sa fille a cinq ans.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "grand-mère",
+          "ex": "Ma grand-mère aime faire des gâteaux.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "grand-père",
+          "ex": "Mon grand-père lit le journal.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "homme",
+          "ex": "L'homme porte un chapeau.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "femme",
+          "ex": "La femme attend à la gare.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "bébé",
+          "ex": "Le bébé dort dans son lit.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "oncle",
+          "ex": "Mon oncle habite à Berlin.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "tante",
+          "ex": "Ma tante nous rend visite demain.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "voisin",
+          "ex": "Mon voisin est très gentil.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "invité",
+          "ex": "L'invité arrive à sept heures.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
           "tags": [
             "familie_freunde"
           ]
@@ -573,6 +1609,8 @@
           "id": "time_08_today",
           "de": "Heute",
           "x": "aujourd'hui",
+          "ex": "Aujourd'hui, il y a du soleil.",
+          "exTr": "Heute scheint die Sonne.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -582,6 +1620,8 @@
           "id": "time_08_tomorrow",
           "de": "Morgen",
           "x": "demain",
+          "ex": "Demain, je ne travaille pas.",
+          "exTr": "Morgen habe ich frei.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -591,6 +1631,8 @@
           "id": "time_08_yesterday",
           "de": "Gestern",
           "x": "hier",
+          "ex": "Hier, j'étais au cinéma.",
+          "exTr": "Gestern war ich im Kino.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -600,6 +1642,8 @@
           "id": "time_08_week",
           "de": "Woche",
           "x": "semaine",
+          "ex": "La semaine a sept jours.",
+          "exTr": "Die Woche hat sieben Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -609,6 +1653,8 @@
           "id": "time_08_month",
           "de": "Monat",
           "x": "mois",
+          "ex": "Le mois a trente jours.",
+          "exTr": "Der Monat hat dreißig Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -617,7 +1663,9 @@
         {
           "id": "time_08_year",
           "de": "Jahr",
-          "x": "an",
+          "x": "année",
+          "ex": "Une année a douze mois.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -627,6 +1675,8 @@
           "id": "time_08_to_learn",
           "de": "Lernen",
           "x": "apprendre",
+          "ex": "Je veux apprendre l'allemand.",
+          "exTr": "Ich möchte Deutsch lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -636,9 +1686,599 @@
           "id": "time_08_language",
           "de": "Sprache",
           "x": "langue",
+          "ex": "L'allemand est une belle langue.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "horloge",
+          "ex": "L'horloge est accrochée au mur.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "heure",
+          "ex": "Le cours dure une heure.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minute",
+          "ex": "Attends une minute, s'il te plaît.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "jour",
+          "ex": "Un jour a vingt-quatre heures.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "nuit",
+          "ex": "La nuit, il fait noir.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "soir",
+          "ex": "Le soir, nous regardons la télé.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "lundi",
+          "ex": "L'école commence le lundi.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "week-end",
+          "ex": "Le week-end, nous partons en voyage.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "livre",
+          "ex": "Je lis un livre passionnant.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "question",
+          "ex": "J'ai une question.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "réponse",
+          "ex": "La réponse est correcte.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "mot",
+          "ex": "Je ne connais pas ce mot.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "zéro",
+          "ex": "Le résultat est zéro.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "un",
+          "ex": "Un plus un font deux.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "deux",
+          "ex": "J'ai deux frères.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "trois",
+          "ex": "Nous sommes trois personnes.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "quatre",
+          "ex": "La voiture a quatre roues.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "cinq",
+          "ex": "J'ai cinq minutes de retard.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "six",
+          "ex": "Il est six heures.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "sept",
+          "ex": "La semaine a sept jours.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "dix",
+          "ex": "Le livre coûte dix euros.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "cent",
+          "ex": "La maison a cent ans.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "rouge",
+          "ex": "La tomate est rouge.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "bleu",
+          "ex": "Le ciel est bleu aujourd'hui.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "vert",
+          "ex": "L'herbe est verte.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "jaune",
+          "ex": "Le soleil est jaune.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "noir",
+          "ex": "Mon chat est noir.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "blanc",
+          "ex": "La neige est blanche.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "cercle",
+          "ex": "Dessine un cercle, s'il te plaît.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "carré",
+          "ex": "La fenêtre est un carré.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "triangle",
+          "ex": "Le panneau routier est un triangle.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "ligne",
+          "ex": "Trace une ligne droite.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "tête",
+          "ex": "J'ai mal à la tête.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "main",
+          "ex": "Donne-moi ta main.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "pied",
+          "ex": "J'ai froid au pied.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "bras",
+          "ex": "Il s'est cassé le bras.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "jambe",
+          "ex": "J'ai mal à la jambe.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "œil",
+          "ex": "Elle a un œil bleu.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "oreille",
+          "ex": "L'enfant a l'oreille froide.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "nez",
+          "ex": "J'ai le nez bouché.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "bouche",
+          "ex": "Ouvre la bouche, s'il te plaît.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "cheveux",
+          "ex": "Elle a de longs cheveux bruns.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "ventre",
+          "ex": "J'ai mal au ventre.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "dos",
+          "ex": "J'ai mal au dos.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "chemise",
+          "ex": "Il porte une chemise blanche.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "pantalon",
+          "ex": "Le pantalon est trop petit.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "veste",
+          "ex": "Mets ta veste.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "chaussures",
+          "ex": "Mes chaussures sont neuves.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "robe",
+          "ex": "Elle porte une robe rouge.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "bonnet",
+          "ex": "En hiver, je porte un bonnet.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "chaussettes",
+          "ex": "Mes chaussettes sont chaudes.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "pull",
+          "ex": "Le pull est en laine.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
           ]
         }
       ]

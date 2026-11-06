@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "TR",
+  "level": "B1",
+  "topics": [
+    {
+      "id": "career_01",
+      "title": "Beruf & Karriere",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "career_01_application",
+          "de": "Bewerbung",
+          "x": "başvuru",
+          "ex": "Başvurumu dün e-postayla gönderdim.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_responsibility",
+          "de": "Verantwortung",
+          "x": "sorumluluk",
+          "ex": "Bu pozisyonla ekip için çok büyük bir sorumluluk üstleniyorsun.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_experience",
+          "de": "Erfahrung",
+          "x": "deneyim",
+          "ex": "Satış alanında on yıllık deneyimi var.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_decide",
+          "de": "Entscheiden",
+          "x": "karar vermek",
+          "ex": "Hangi teklifi kabul edeceğimize cuma gününe kadar karar vermeliyiz.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_negotiate",
+          "de": "Verhandeln",
+          "x": "pazarlık etmek",
+          "ex": "Maaşı konusunda patronuyla pazarlık etmek istiyor.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_reliable",
+          "de": "Zuverlässig",
+          "x": "güvenilir",
+          "ex": "İş arkadaşımız her zaman dakik ve çok güvenilir.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "iş görüşmesi",
+          "ex": "Yarın büyük bir şirkette iş görüşmem var.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "özgeçmiş",
+          "ex": "Özgeçmişimde hâlâ bir staj eksik.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "istifa",
+          "ex": "İstifasından sonra çabucak yeni bir iş aradı.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "iş sözleşmesi",
+          "ex": "Lütfen imzalamadan önce iş sözleşmesini dikkatlice okuyun.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "meslek içi eğitim",
+          "ex": "Şirket proje yönetimi alanındaki meslek içi eğitimin ücretini ödüyor.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "amir",
+          "ex": "Amirim çalışmam için beni sık sık övüyor.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "terfi",
+          "ex": "Üç yıl sonra nihayet terfi aldı.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "takım çalışması",
+          "ex": "İyi bir takım çalışması olmasaydı proje başarısız olurdu.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "son tarih",
+          "ex": "Teslim için son tarih pazartesi günü bitiyor.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "işveren",
+          "ex": "İşverenim esnek çalışma saatleri sunuyor.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "fazla mesai",
+          "ex": "Yıl sonundan önce çok fazla mesai yapmak zorunda kaldık.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "uyum süreci",
+          "ex": "Bizde yeni çalışanların uyum süreci üç hafta sürüyor.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "rekabet",
+          "ex": "İş piyasasındaki rekabet çok sert.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "yeterlilik",
+          "ex": "Bu pozisyon için özel bir yeterliliğe ihtiyacınız var.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society_02",
+      "title": "Gesellschaft",
+      "icon": "🤝",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "society_02_community",
+          "de": "Gemeinschaft",
+          "x": "topluluk",
+          "ex": "Köyde güçlü bir topluluk var.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_equality",
+          "de": "Gleichberechtigung",
+          "x": "eşitlik",
+          "ex": "Kadın ve erkek arasındaki eşitlik önemli bir hedeftir.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_support",
+          "de": "Unterstützung",
+          "x": "destek",
+          "ex": "Bu zor zamanda desteğin için teşekkürler.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_volunteer",
+          "de": "Freiwilliger",
+          "x": "gönüllü",
+          "ex": "Gönüllü olarak her hafta sonu hayvan barınağında yardım ediyor.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_rule",
+          "de": "Regel",
+          "x": "kural",
+          "ex": "Kuralı bilmeyen kişi ona uyamaz.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_trust",
+          "de": "Vertrauen",
+          "x": "güven",
+          "ex": "Güveni yavaş yavaş kazanmak gerekir.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "vatandaş",
+          "ex": "Her vatandaşın fikrini söyleme hakkı vardır.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "entegrasyon",
+          "ex": "Dil kursları yeni sakinlerin entegrasyonunu kolaylaştırır.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "önyargı",
+          "ex": "Önyargı çoğu zaman bilgisizlikten doğar.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "hoşgörü",
+          "ex": "Hoşgörü, başka yaşam biçimlerine saygı duymak demektir.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "gönüllü çalışma",
+          "ex": "İtfaiyedeki gönüllü çalışması çok zamanını alıyor.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "bağış",
+          "ex": "Dernek bağış için içtenlikle teşekkür ediyor.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "yasa",
+          "ex": "Yeni yasa ocak ayında yürürlüğe giriyor.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "görev",
+          "ex": "Oy kullanmaya gitmek birçok kişi için bir vatandaşlık görevidir.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "saygı",
+          "ex": "Lütfen komşularınıza saygı gösterin.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "dayanışma",
+          "ex": "İnsanların dayanışması krizlerde kendini gösterir.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "nesil",
+          "ex": "Üç nesil aynı çatı altında yaşıyor.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "göç",
+          "ex": "Göç ülkeyi büyük ölçüde değiştirdi.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "adalet",
+          "ex": "Bütün vatandaşlar adalet talep etme hakkına sahiptir.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "çoğunluk",
+          "ex": "Vatandaşların çoğunluğu plana oy verdi.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_03",
+      "title": "Reisen & Erlebnisse",
+      "icon": "🧭",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "travel_03_itinerary",
+          "de": "Reiseroute",
+          "x": "gezi rotası",
+          "ex": "Gezi rotamız bizi üç ülkeden geçiriyor.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_accommodation",
+          "de": "Unterkunft",
+          "x": "konaklama",
+          "ex": "Konaklama yeri plajdan sadece beş dakika uzaklıkta.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_change_trains",
+          "de": "Umsteigen",
+          "x": "aktarma yapmak",
+          "ex": "Köln'de bölgesel trene aktarma yapmamız gerekiyor.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_discover",
+          "de": "Entdecken",
+          "x": "keşfetmek",
+          "ex": "Eski şehri yürüyerek keşfetmek istedik.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_recommend",
+          "de": "Empfehlen",
+          "x": "tavsiye etmek",
+          "ex": "Bana iyi bir restoran tavsiye edebilir misin?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_unforgettable",
+          "de": "Unvergesslich",
+          "x": "unutulmaz",
+          "ex": "Dağdaki gün doğumu unutulmazdı.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "hediyelik eşya",
+          "ex": "Hediyelik eşya olarak küçük bir figür aldım.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "gidiş uçuşu",
+          "ex": "Gidiş uçuşu sakin ve rahattı.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "dönüş uçuşu",
+          "ex": "Dönüş uçuşu pazar akşamı saat sekizde.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "yurtdışı özlemi",
+          "ex": "Kışın hep çok güçlü bir yurtdışı özlemi duyuyorum.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "macera",
+          "ex": "Güney Amerika'da yaptığımız gezi gerçek bir maceraydı.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "kapsamlı tur",
+          "ex": "İskoçya'ya kapsamlı bir tur ayırtıyoruz.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "gümrük kontrolü",
+          "ex": "Gümrük kontrolünde bavulumu açmak zorunda kaldım.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "gezi rehberi",
+          "ex": "Gezi rehberi Lizbon için birçok yararlı ipucu veriyor.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "kalış",
+          "ex": "Viyana'daki kalışım sırasında birçok müzeyi gezdim.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "rezervasyon",
+          "ex": "Rezervasyonum bana e-postayla onaylandı.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "iptal etmek",
+          "ex": "Hastalık yüzünden geziyi iptal etmek zorunda kaldık.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "iade",
+          "ex": "Uçak bileti ücretinin iadesini talep ettim.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "misafirperverlik",
+          "ex": "İnsanların misafirperverliğine hayran kaldık.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "yerli halk",
+          "ex": "Yerli halk bize en sevdikleri plajı gösterdi.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opinion_04",
+      "title": "Meinungen & Argumente",
+      "icon": "💡",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "opinion_04_opinion",
+          "de": "Meinung",
+          "x": "görüş",
+          "ex": "Bence teklif çok pahalı.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_claim",
+          "de": "Behaupten",
+          "x": "iddia etmek",
+          "ex": "Bunların hiçbirinden haberi olmadığını iddia ediyor.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_justify",
+          "de": "Begründen",
+          "x": "gerekçelendirmek",
+          "ex": "Lütfen kararınızı kısaca gerekçelendirin.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compare",
+          "de": "Vergleichen",
+          "x": "karşılaştırmak",
+          "ex": "Satın almadan önce fiyatları karşılaştırmak gerekir.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_influence",
+          "de": "Beeinflussen",
+          "x": "etkilemek",
+          "ex": "Reklam kararlarımızı çok güçlü biçimde etkileyebilir.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_convince",
+          "de": "Überzeugen",
+          "x": "ikna etmek",
+          "ex": "Beni iyi argümanlarla ikna etmeyi başardı.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "argüman",
+          "ex": "Argümanın mantıklı geliyor ama ben başka türlü görüyorum.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "bakış açısı",
+          "ex": "Buna bu bakış açısından hiç bakmamıştım.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "inanç",
+          "ex": "Eğitimin önemli olduğu benim sarsılmaz inancımdır.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "çelişki",
+          "ex": "İfadesinde belirgin bir çelişki var.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "şüphe etmek",
+          "ex": "Planın gerçekten işe yarayacağından şüphe ediyorum.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "avantaj",
+          "ex": "Bu yöntemin büyük bir avantajı zaman tasarrufudur.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "dezavantaj",
+          "ex": "Arabanın dezavantajı yüksek maliyetleridir.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "uzlaşı",
+          "ex": "Sonunda iyi bir uzlaşıya vardık.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "itiraz",
+          "ex": "Öneriye karşı başka bir itirazınız var mı?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "sonuç",
+          "ex": "Rakamlardan net bir sonuç çıkarıyor.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "değerlendirme",
+          "ex": "Uzmanın değerlendirmesi çok yararlı oldu.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "eleştiri",
+          "ex": "Eleştiriyi sakin karşıladı.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "varsayım",
+          "ex": "Varsayımın maalesef doğru değildi.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "değerlendirmek",
+          "ex": "Bir kitabı sadece kapağına bakarak değerlendirmemek gerekir.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_05",
+      "title": "Umwelt & Zukunft",
+      "icon": "🌱",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "environment_05_resource",
+          "de": "Ressource",
+          "x": "kaynak",
+          "ex": "Su değerli bir kaynaktır.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_avoid",
+          "de": "Vermeiden",
+          "x": "kaçınmak",
+          "ex": "Gereksiz plastik atıktan kaçınmalıyız.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_reuse",
+          "de": "Wiederverwenden",
+          "x": "yeniden kullanmak",
+          "ex": "Cam şişeler birçok kez yeniden kullanılabilir.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_pollute",
+          "de": "Verschmutzen",
+          "x": "kirletmek",
+          "ex": "Fabrikalar nehirleri sık sık kirletiyor.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_sustainable",
+          "de": "Nachhaltig",
+          "x": "sürdürülebilir",
+          "ex": "Birçok insan sürdürülebilir yaşamak istiyor.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_protect",
+          "de": "Schützen",
+          "x": "korumak",
+          "ex": "Ormanları daha iyi korumamız gerekiyor.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "iklim değişikliği",
+          "ex": "İklim değişikliği daha fazla fırtınaya yol açıyor.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "küresel ısınma",
+          "ex": "Küresel ısınma deniz seviyesinin yükselmesine neden oluyor.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "atık",
+          "ex": "Atıkları evde özenle ayırıyoruz.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "geri dönüşüm",
+          "ex": "Geri dönüşümle çok fazla hammadde tasarruf edilir.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "çevre koruma",
+          "ex": "Çevre koruma kendi günlük hayatımızda başlar.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "yenilenebilir enerji",
+          "ex": "Yenilenebilir enerji güneşten, rüzgârdan ve sudan gelir.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "sera gazı",
+          "ex": "Karbondioksit tanınmış bir sera gazıdır.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "yok olmak",
+          "ex": "Birçok hayvan türü yok olma tehlikesiyle karşı karşıya.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "tüketim",
+          "ex": "Elektrik tüketimi her yıl artıyor.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "orman yangını",
+          "ex": "Orman yangını yazın birçok hektar ormanı yok etti.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "kuraklık",
+          "ex": "Uzun süren kuraklık hasadı yok etti.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "biyolojik çeşitlilik",
+          "ex": "Biyolojik çeşitlilik tehlikede.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "tasarruf etmek",
+          "ex": "Isıtmada çok fazla enerji tasarruf edilebilir.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "yaşam alanı",
+          "ex": "Ormanların kesilmesi birçok hayvanın yaşam alanını yok ediyor.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital_06",
+      "title": "Digitaler Alltag",
+      "icon": "💻",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "digital_06_data_privacy",
+          "de": "Datenschutz",
+          "x": "veri gizliliği",
+          "ex": "Çevrimiçi hizmetlerde veri gizliliği özellikle önemlidir.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_notification",
+          "de": "Benachrichtigung",
+          "x": "bildirim",
+          "ex": "Telefonumdaki bildirimi kapattım.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_download",
+          "de": "Herunterladen",
+          "x": "indirmek",
+          "ex": "Uygulamayı ücretsiz indirebilirsin.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_upload",
+          "de": "Hochladen",
+          "x": "yüklemek",
+          "ex": "Fotoğrafları hâlâ yüklemem gerekiyor.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_update",
+          "de": "Aktualisieren",
+          "x": "güncellemek",
+          "ex": "Lütfen yazılımı düzenli olarak güncelleyin.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_password",
+          "de": "Passwort",
+          "x": "parola",
+          "ex": "Rakamlar ve özel karakterler içeren güvenli bir parola seç.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "giriş",
+          "ex": "Giriş yapmak sadece birkaç saniye sürüyor.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "depolama alanı",
+          "ex": "Telefonumda neredeyse hiç depolama alanı kalmadı.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "ekran süresi",
+          "ex": "Ekran sürem bu hafta çok arttı.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "şifreleme",
+          "ex": "Şifreleme mesajlarınızı yabancılardan korur.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "yedekleme",
+          "ex": "Düzenli yedekleme veri kaybını önler.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "platform",
+          "ex": "Bu platformu birçok öğrenci öğrenmek için kullanıyor.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "algoritma",
+          "ex": "Hangi videoları göreceğine bir algoritma karar verir.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "abonelik",
+          "ex": "Yayın hizmeti aboneliğimi iptal ettim.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "ayarlar",
+          "ex": "Ayarları menüde sağ üstte bulabilirsin.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "hata mesajı",
+          "ex": "Başlangıçta aniden bir hata mesajı çıktı.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "bağlamak",
+          "ex": "Hesabını telefonuna bağlayabilirsin.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "arama motoru",
+          "ex": "En çok hangi arama motorunu kullanıyorsun?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "siber saldırı",
+          "ex": "Siber saldırı bütün ağı devre dışı bıraktı.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "yapay zekâ",
+          "ex": "Yapay zekâ birçok mesleği değiştiriyor.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "manşet",
+          "ex": "Manşet bugün ilk sayfadaydı.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "rapor",
+          "ex": "Rapor kriz bölgesindeki durumu anlatıyor.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "gazeteci",
+          "ex": "Gazeteci haftalardır röportaj için araştırma yapıyor.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "haber kapsamı",
+          "ex": "Seçimle ilgili haber kapsamı çok ayrıntılıydı.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "kaynak",
+          "ex": "Bilgilerinin kaynağını her zaman belirt.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "asılsız haber",
+          "ex": "Bu asılsız haber dakikalar içinde internette yayıldı.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "ifade özgürlüğü",
+          "ex": "İfade özgürlüğü demokraside temel bir haktır.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "reklam kampanyası",
+          "ex": "Yeni reklam kampanyası bütün kanallarda yayınlanıyor.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "yayın",
+          "ex": "Yayın bu akşam canlı aktarılacak.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "sunucu",
+          "ex": "Sunucu izleyicileri gülümseyerek karşıladı.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "röportaj",
+          "ex": "Röportaj, bir Kuzey Denizi adasındaki hayatı gösteriyor.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "izleyici",
+          "ex": "Bir milyondan fazla izleyici finali izledi.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "okur mektubu",
+          "ex": "Gazeteye bir okur mektubu yazdı.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "ortaya çıkarmak",
+          "ex": "Gazete skandalı ortaya çıkarmak istiyor.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "yayımlamak",
+          "ex": "Yayınevi kitabı sonbaharda yayımlayacak.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "inandırıcı",
+          "ex": "İnandırıcı bir kaynak isimleri ve gerçekleri verir.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "yorum",
+          "ex": "Görüş sayfasındaki yorum çok eleştireldi.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "belgesel",
+          "ex": "Dün balinalar hakkında bir belgesel izledim.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "haber kanalı",
+          "ex": "Haber kanalında bütün gün haberler yayınlanıyor.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "sansür",
+          "ex": "Bazı ülkelerde hâlâ sıkı bir sansür var.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "beslenme",
+          "ex": "Dengeli beslenme vücudu formda tutar.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "hareketsizlik",
+          "ex": "Hareketsizlik uzun vadede sırt sorunlarına yol açabilir.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "denge unsuru",
+          "ex": "Yoga benim için ofis hayatına karşı iyi bir denge unsuru.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "stres",
+          "ex": "Çok fazla stres uzun vadede hasta eder.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "rahatlama",
+          "ex": "İşten sonra biraz rahatlamaya ihtiyacım var.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "dinlenme",
+          "ex": "Tatil her şeyden önce dinlenmeye yaradı.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "koruyucu sağlık hizmeti",
+          "ex": "Doktorda düzenli koruyucu sağlık kontrolü hayat kurtarabilir.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "dayanıklılık",
+          "ex": "Maraton için çok dayanıklılık gerekir.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "uykusuzluk",
+          "ex": "Uykusuzluk konsantrasyonu zayıflatır.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "fazla kilo",
+          "ex": "Fazla kilo kalp hastalıkları riskini artırır.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "kilo vermek",
+          "ex": "Yazdan önce birkaç kilo vermek istiyor.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "yaralanma",
+          "ex": "Dizindeki bir yaralanma oyuncuyu durdurdu.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "şikâyetler",
+          "ex": "Günlerdir sırtımda şikâyetlerim var.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "aşı",
+          "ex": "Aşı ağır bir hastalıktan korur.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "sırt ağrısı",
+          "ex": "Uzun süre oturmak sık sık sırt ağrısına neden olur.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "farkındalık",
+          "ex": "Farkındalık günlük hayatı daha bilinçli yaşamaya yardımcı olur.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "bulaşıcı",
+          "ex": "Grip çok bulaşıcıdır.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "iyi oluş",
+          "ex": "Hareket genel iyi oluşu artırır.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "önlemek",
+          "ex": "Sporla birçok hastalığın önüne geçilebilir.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "tedavi",
+          "ex": "Hastanedeki tedavi iki hafta sürdü.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "gelir",
+          "ex": "Ailenin geliri kiraya yetiyor.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "giderler",
+          "ex": "Bütün giderlerimi bir tabloya yazıyorum.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "birikim",
+          "ex": "Birikimimle bir araba alacağım.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "borçlar",
+          "ex": "Bankaya hâlâ borçları var.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "kredi",
+          "ex": "Ev için kredi çektiler.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "havale",
+          "ex": "Havale bir iki gün sürüyor.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "nakit",
+          "ex": "Kartla ödemektense nakit ödemeyi tercih ederim.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "garanti",
+          "ex": "Cihazın iki yıl garantisi var.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "şikâyet",
+          "ex": "Şikâyetim mağaza tarafından hemen kabul edildi.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "değişim",
+          "ex": "Değişim ancak fişle mümkündür.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "hesap özeti",
+          "ex": "Hesap özetinde ayın bütün ödemelerini görüyorum.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "tüketici",
+          "ex": "Tüketiciler giderek daha çok kaliteye dikkat ediyor.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "fiyat karşılaştırması",
+          "ex": "İnternette fiyat karşılaştırması yapmak neredeyse her zaman işe yarar.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "indirimli ürün",
+          "ex": "Bu hafta meyveler indirimli.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "sigorta",
+          "ex": "Sigorta arabamdaki hasarı ödüyor.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "vergi",
+          "ex": "Her yıl vergi beyannamesi vermem gerekiyor.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "ev bütçesi",
+          "ex": "Ev bütçemiz şu anda oldukça dar.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "yatırım yapmak",
+          "ex": "Yenilenebilir enerjiye para yatırmak istiyor.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "israf etmek",
+          "ex": "Gereksiz şeylere para israf etmemek gerekir.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "tutumlu",
+          "ex": "Büyükannem çok tutumlu ve sadece gerekli olanı alır.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "gelenek",
+          "ex": "Ailemizde bu eski bir gelenektir.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "âdet",
+          "ex": "Paskalyada yumurta saklamak bir âdettir.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "resmî tatil",
+          "ex": "Üç Ekim resmî bir tatildir.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "gösteri",
+          "ex": "Tiyatrodaki gösteri üç saat sürdü.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "müze",
+          "ex": "Müze maalesef pazartesi günleri kapalı.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "tablo",
+          "ex": "Tablo yüzyıllardır bu salonda asılı duruyor.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "festival",
+          "ex": "Festivalde elliden fazla grup çaldı.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "geçit töreni",
+          "ex": "Geçit töreninde çocuklar rengârenk kostümlerle yürüdü.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "sanat eseri",
+          "ex": "Bu sanat eseri iki yüz yıldan daha eski.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "simge yapı",
+          "ex": "Eyfel Kulesi Paris'in simge yapısıdır.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "kültürel miras",
+          "ex": "Eski şehir Dünya Kültür Mirası'na dahildir.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "tören",
+          "ex": "Tören tam saat on birde başladı.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "yıl dönümü",
+          "ex": "Dernek elli yıl dönümünü kutluyor.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "halk şenliği",
+          "ex": "Halk şenliğinde bira ve müzik vardı.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "sahne",
+          "ex": "Şarkıcı büyük bir alkışla sahneye çıktı.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "seyirci",
+          "ex": "Seyirci konserden sonra uzun süre alkışladı.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "kostüm",
+          "ex": "Karnaval için bir kostüm dikti.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "havai fişek",
+          "ex": "Gece yarısı havai fişek gösterisi başladı.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "Noel pazarı",
+          "ex": "Noel pazarında severek sıcak şarap içiyoruz.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "karnaval",
+          "ex": "Rheinland'da karnaval geçit törenleriyle kutlanır.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Eine gute Lösung berücksichtigt verschiedene Perspektiven.",
+      "x": "İyi bir çözüm farklı bakış açılarını dikkate alır.",
+      "translations": {
+        "tr": "İyi bir çözüm farklı bakış açılarını dikkate alır."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Wir sollten unsere Ressourcen verantwortungsvoll nutzen.",
+      "x": "Kaynaklarımızı sorumlu bir şekilde kullanmalıyız.",
+      "translations": {
+        "tr": "Kaynaklarımızı sorumlu bir şekilde kullanmalıyız."
+      }
+    }
+  ]
+}

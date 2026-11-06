@@ -12,7 +12,9 @@
         {
           "id": "career_01_application",
           "de": "Bewerbung",
-          "x": "заявление о приёме на работу",
+          "x": "заявка",
+          "ex": "Вчера я отправил свою заявку по электронной почте.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -22,6 +24,8 @@
           "id": "career_01_responsibility",
           "de": "Verantwortung",
           "x": "ответственность",
+          "ex": "На этой должности ты берёшь на себя большую ответственность за команду.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -31,6 +35,8 @@
           "id": "career_01_experience",
           "de": "Erfahrung",
           "x": "опыт",
+          "ex": "У неё десять лет опыта в продажах.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -39,7 +45,9 @@
         {
           "id": "career_01_decide",
           "de": "Entscheiden",
-          "x": "решать",
+          "x": "решить",
+          "ex": "Нам нужно до пятницы решить, какое предложение принять.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -49,6 +57,8 @@
           "id": "career_01_negotiate",
           "de": "Verhandeln",
           "x": "вести переговоры",
+          "ex": "Он хочет вести переговоры с начальником о своей зарплате.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -58,7 +68,163 @@
           "id": "career_01_reliable",
           "de": "Zuverlässig",
           "x": "надёжный",
+          "ex": "Наш коллега всегда пунктуален и очень надёжный.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
           "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "собеседование",
+          "ex": "Завтра у меня собеседование в одной крупной фирме.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "резюме",
+          "ex": "В моём резюме пока не хватает стажировки.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "увольнение",
+          "ex": "После увольнения она быстро начала искать новую работу.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "трудовой договор",
+          "ex": "Пожалуйста, внимательно прочитайте трудовой договор перед подписанием.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "повышение квалификации",
+          "ex": "Фирма оплачивает повышение квалификации по управлению проектами.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "начальник",
+          "ex": "Мой начальник часто хвалит меня за работу.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "повышение",
+          "ex": "Через три года он наконец получил повышение.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "командная работа",
+          "ex": "Без хорошей командной работы проект бы провалился.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "срок",
+          "ex": "Срок сдачи заканчивается в понедельник.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "работодатель",
+          "ex": "Мой работодатель предлагает гибкий рабочий график.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "сверхурочные",
+          "ex": "Перед концом года нам пришлось отработать много сверхурочных.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "введение в должность",
+          "ex": "Введение в должность новых сотрудников занимает у нас три недели.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "конкуренция",
+          "ex": "Конкуренция на рынке труда очень жёсткая.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "квалификация",
+          "ex": "Для этой должности вам нужна особая квалификация.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
           "tags": [
             "beruf_karriere"
           ]
@@ -75,6 +241,8 @@
           "id": "society_02_community",
           "de": "Gemeinschaft",
           "x": "сообщество",
+          "ex": "В деревне есть крепкое сообщество.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -83,7 +251,9 @@
         {
           "id": "society_02_equality",
           "de": "Gleichberechtigung",
-          "x": "равенство",
+          "x": "равноправие",
+          "ex": "Равноправие мужчин и женщин — важная цель.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -93,6 +263,8 @@
           "id": "society_02_support",
           "de": "Unterstützung",
           "x": "поддержка",
+          "ex": "Спасибо за твою поддержку в это трудное время.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -102,6 +274,8 @@
           "id": "society_02_volunteer",
           "de": "Freiwilliger",
           "x": "волонтёр",
+          "ex": "Как волонтёр он каждые выходные помогает в приюте для животных.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -111,6 +285,8 @@
           "id": "society_02_rule",
           "de": "Regel",
           "x": "правило",
+          "ex": "Кто не знает правило, тот не может ему следовать.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -120,6 +296,162 @@
           "id": "society_02_trust",
           "de": "Vertrauen",
           "x": "доверие",
+          "ex": "Доверие нужно зарабатывать медленно.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "гражданин",
+          "ex": "Каждый гражданин имеет право высказывать своё мнение.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "интеграция",
+          "ex": "Языковые курсы облегчают интеграцию новых жителей.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "предрассудок",
+          "ex": "Предрассудок часто возникает из-за незнания.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "толерантность",
+          "ex": "Толерантность означает уважать другой образ жизни.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "общественная работа",
+          "ex": "Его общественная работа в пожарной команде отнимает много времени.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "пожертвование",
+          "ex": "Организация сердечно благодарит за пожертвование.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "закон",
+          "ex": "Новый закон вступает в силу в январе.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "обязанность",
+          "ex": "Участвовать в выборах для многих — гражданская обязанность.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "уважение",
+          "ex": "Пожалуйста, проявляйте уважение к своим соседям.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "сплочённость",
+          "ex": "В кризисах проявляется сплочённость людей.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "поколение",
+          "ex": "Три поколения живут под одной крышей.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "иммиграция",
+          "ex": "Иммиграция сильно изменила страну.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "справедливость",
+          "ex": "Все граждане имеют право на справедливость.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "большинство",
+          "ex": "Большинство граждан проголосовало за этот план.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -137,6 +469,8 @@
           "id": "travel_03_itinerary",
           "de": "Reiseroute",
           "x": "маршрут",
+          "ex": "Наш маршрут проходит через три страны.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -146,6 +480,8 @@
           "id": "travel_03_accommodation",
           "de": "Unterkunft",
           "x": "жильё",
+          "ex": "Жильё находится всего в пяти минутах от пляжа.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -154,7 +490,9 @@
         {
           "id": "travel_03_change_trains",
           "de": "Umsteigen",
-          "x": "делать пересадку",
+          "x": "пересесть",
+          "ex": "В Кёльне нам нужно пересесть на региональный поезд.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -163,7 +501,9 @@
         {
           "id": "travel_03_discover",
           "de": "Entdecken",
-          "x": "открывать",
+          "x": "открыть",
+          "ex": "Мы хотели открыть для себя старый город пешком.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -172,7 +512,9 @@
         {
           "id": "travel_03_recommend",
           "de": "Empfehlen",
-          "x": "рекомендовать",
+          "x": "порекомендовать",
+          "ex": "Можешь порекомендовать мне хороший ресторан?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -182,6 +524,162 @@
           "id": "travel_03_unforgettable",
           "de": "Unvergesslich",
           "x": "незабываемый",
+          "ex": "Рассвет в горах был незабываемый.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "сувенир",
+          "ex": "В качестве сувенира я купил маленькую фигурку.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "перелёт туда",
+          "ex": "Перелёт туда был спокойным и приятным.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "обратный перелёт",
+          "ex": "Обратный перелёт в воскресенье вечером, в восемь часов.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "тяга к путешествиям",
+          "ex": "Зимой у меня всегда появляется сильная тяга к путешествиям.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "приключение",
+          "ex": "Путешествие по Южной Америке было настоящим приключением.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "экскурсионный тур",
+          "ex": "Мы бронируем экскурсионный тур по Шотландии.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "таможенный контроль",
+          "ex": "На таможенном контроле мне пришлось открыть чемодан.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "путеводитель",
+          "ex": "Путеводитель даёт много полезных советов по Лиссабону.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "пребывание",
+          "ex": "Во время моего пребывания в Вене я посетил много музеев.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "бронирование",
+          "ex": "Бронирование мне подтвердили по электронной почте.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "отменить",
+          "ex": "Нам пришлось отменить поездку из-за болезни.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "возврат средств",
+          "ex": "Я подал заявку на возврат средств за авиабилет.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "гостеприимство",
+          "ex": "Мы были в восторге от гостеприимства местных жителей.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "местные жители",
+          "ex": "Местные жители показали нам свой любимый пляж.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -199,6 +697,8 @@
           "id": "opinion_04_opinion",
           "de": "Meinung",
           "x": "мнение",
+          "ex": "По моему мнению, предложение слишком дорогое.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -208,6 +708,8 @@
           "id": "opinion_04_claim",
           "de": "Behaupten",
           "x": "утверждать",
+          "ex": "Он утверждает, что ничего об этом не знал.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -216,7 +718,9 @@
         {
           "id": "opinion_04_justify",
           "de": "Begründen",
-          "x": "обосновывать",
+          "x": "обосновать",
+          "ex": "Пожалуйста, коротко обоснуйте своё решение.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -226,6 +730,8 @@
           "id": "opinion_04_compare",
           "de": "Vergleichen",
           "x": "сравнивать",
+          "ex": "Перед покупкой стоит сравнивать цены.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -235,6 +741,8 @@
           "id": "opinion_04_influence",
           "de": "Beeinflussen",
           "x": "влиять",
+          "ex": "Реклама может сильно влиять на наши решения.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -243,7 +751,163 @@
         {
           "id": "opinion_04_convince",
           "de": "Überzeugen",
-          "x": "убеждать",
+          "x": "убедить",
+          "ex": "Она смогла убедить меня хорошими аргументами.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "аргумент",
+          "ex": "Твой аргумент звучит логично, но я вижу это иначе.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "точка зрения",
+          "ex": "С этой точки зрения я никогда на это не смотрел.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "убеждение",
+          "ex": "Это моё твёрдое убеждение, что образование важно.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "противоречие",
+          "ex": "В его заявлении есть явное противоречие.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "сомневаться",
+          "ex": "Я сомневаюсь, что план действительно сработает.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "преимущество",
+          "ex": "Большое преимущество этого метода — экономия времени.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "недостаток",
+          "ex": "Недостаток автомобиля — высокие расходы.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "компромисс",
+          "ex": "В конце концов мы нашли хороший компромисс.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "возражение",
+          "ex": "У вас есть ещё возражение против этого предложения?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "вывод",
+          "ex": "Из этих цифр он делает чёткий вывод.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "оценка",
+          "ex": "Оценка эксперта была очень полезной.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "критика",
+          "ex": "Она спокойно восприняла критику.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "предположение",
+          "ex": "Твоё предположение, к сожалению, было неверным.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "оценивать",
+          "ex": "Не стоит оценивать книгу только по обложке.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -261,6 +925,8 @@
           "id": "environment_05_resource",
           "de": "Ressource",
           "x": "ресурс",
+          "ex": "Вода — ценный ресурс.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -270,6 +936,8 @@
           "id": "environment_05_avoid",
           "de": "Vermeiden",
           "x": "избегать",
+          "ex": "Нам следует избегать ненужного пластикового мусора.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -279,6 +947,8 @@
           "id": "environment_05_reuse",
           "de": "Wiederverwenden",
           "x": "использовать повторно",
+          "ex": "Стеклянные бутылки можно использовать повторно много раз.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -288,6 +958,8 @@
           "id": "environment_05_pollute",
           "de": "Verschmutzen",
           "x": "загрязнять",
+          "ex": "Заводы часто загрязняют реки.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -297,6 +969,8 @@
           "id": "environment_05_sustainable",
           "de": "Nachhaltig",
           "x": "устойчивый",
+          "ex": "Многие хотят вести устойчивый образ жизни.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -306,7 +980,163 @@
           "id": "environment_05_protect",
           "de": "Schützen",
           "x": "защищать",
+          "ex": "Мы должны лучше защищать леса.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
           "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "изменение климата",
+          "ex": "Изменение климата приводит к более частым стихийным бедствиям.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "глобальное потепление",
+          "ex": "Глобальное потепление приводит к подъёму уровня моря.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "отходы",
+          "ex": "Дома мы тщательно сортируем отходы.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "переработка",
+          "ex": "Благодаря переработке экономится много сырья.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "охрана окружающей среды",
+          "ex": "Охрана окружающей среды начинается в повседневной жизни.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "возобновляемая энергия",
+          "ex": "Возобновляемая энергия поступает от солнца, ветра и воды.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "парниковый газ",
+          "ex": "Углекислый газ — известный парниковый газ.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "вымирание",
+          "ex": "Многим видам животных грозит вымирание.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "потребление",
+          "ex": "Потребление электроэнергии растёт с каждым годом.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "лесной пожар",
+          "ex": "Лесной пожар летом уничтожил много гектаров леса.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "засуха",
+          "ex": "Долгая засуха погубила урожай.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "биоразнообразие",
+          "ex": "Биоразнообразие находится в опасности.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "экономить",
+          "ex": "При отоплении можно экономить много энергии.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "среда обитания",
+          "ex": "Вырубка уничтожает среду обитания многих животных.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
           "tags": [
             "umwelt_zukunft"
           ]
@@ -323,6 +1153,8 @@
           "id": "digital_06_data_privacy",
           "de": "Datenschutz",
           "x": "защита данных",
+          "ex": "Защита данных особенно важна для онлайн-сервисов.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -332,6 +1164,8 @@
           "id": "digital_06_notification",
           "de": "Benachrichtigung",
           "x": "уведомление",
+          "ex": "Я отключил это уведомление на своём телефоне.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -340,7 +1174,9 @@
         {
           "id": "digital_06_download",
           "de": "Herunterladen",
-          "x": "скачивать",
+          "x": "скачать",
+          "ex": "Ты можешь скачать приложение бесплатно.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -349,7 +1185,9 @@
         {
           "id": "digital_06_upload",
           "de": "Hochladen",
-          "x": "загружать",
+          "x": "загрузить",
+          "ex": "Мне ещё нужно загрузить фотографии.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -359,6 +1197,8 @@
           "id": "digital_06_update",
           "de": "Aktualisieren",
           "x": "обновлять",
+          "ex": "Программное обеспечение нужно регулярно обновлять.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -368,9 +1208,1077 @@
           "id": "digital_06_password",
           "de": "Passwort",
           "x": "пароль",
+          "ex": "Выбери надёжный пароль с цифрами и специальными символами.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "вход в систему",
+          "ex": "Вход в систему занимает всего несколько секунд.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "место в памяти",
+          "ex": "На моём телефоне почти не осталось свободного места в памяти.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "экранное время",
+          "ex": "Моё экранное время на этой неделе сильно выросло.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "шифрование",
+          "ex": "Шифрование защищает ваши сообщения от посторонних.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "резервное копирование",
+          "ex": "Регулярное резервное копирование предотвращает потерю данных.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "платформа",
+          "ex": "Эту платформу используют многие школьники для учёбы.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "алгоритм",
+          "ex": "Алгоритм решает, какие видео ты видишь.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "подписка",
+          "ex": "Я отменил подписку на стриминговый сервис.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "настройки",
+          "ex": "Настройки ты найдёшь в меню вверху справа.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "сообщение об ошибке",
+          "ex": "При запуске внезапно появилось сообщение об ошибке.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "привязать",
+          "ex": "Ты можешь привязать свой аккаунт к телефону.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "поисковая система",
+          "ex": "Какая поисковая система тебе нравится больше всего?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "кибератака",
+          "ex": "Кибератака парализовала всю сеть.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "искусственный интеллект",
+          "ex": "Искусственный интеллект меняет многие профессии.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "заголовок",
+          "ex": "Заголовок сегодня был на первой полосе.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "отчёт",
+          "ex": "Отчёт описывает ситуацию в кризисном регионе.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "журналист",
+          "ex": "Журналист уже несколько недель собирает материал для репортажа.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "освещение событий",
+          "ex": "Освещение событий вокруг выборов было очень подробным.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "источник",
+          "ex": "Всегда указывай источник своей информации.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "ложное сообщение",
+          "ex": "Это ложное сообщение распространилось в сети за считаные минуты.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "свобода слова",
+          "ex": "Свобода слова — основное право в демократии.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "рекламная кампания",
+          "ex": "Новая рекламная кампания идёт на всех каналах.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "передача",
+          "ex": "Передача сегодня вечером идёт в прямом эфире.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "ведущий",
+          "ex": "Ведущий поприветствовал зрителей с улыбкой.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "репортаж",
+          "ex": "Репортаж показывает жизнь на одном острове в Северном море.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "зритель",
+          "ex": "Финал посмотрело больше миллиона зрителей.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "письмо в редакцию",
+          "ex": "Она написала письмо в редакцию газеты.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "разоблачить",
+          "ex": "Газета хочет разоблачить скандал.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "опубликовать",
+          "ex": "Издательство собирается опубликовать книгу осенью.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "достоверный",
+          "ex": "Достоверный источник называет имена и факты.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "комментарий",
+          "ex": "Комментарий на странице мнений был очень критичным.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "документальный фильм",
+          "ex": "Вчера я посмотрел документальный фильм о китах.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "новостной канал",
+          "ex": "Новостной канал весь день показывает репортажи.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "цензура",
+          "ex": "В некоторых странах до сих пор существует строгая цензура.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "питание",
+          "ex": "Сбалансированное питание поддерживает тело в форме.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "недостаток движения",
+          "ex": "Недостаток движения со временем может привести к проблемам со спиной.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "противовес",
+          "ex": "Йога для меня — хороший противовес офисным будням.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "стресс",
+          "ex": "Слишком много стресса со временем делает человека больным.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "расслабление",
+          "ex": "После работы мне нужно немного расслабления.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "отдых",
+          "ex": "Отпуск был нужен прежде всего для отдыха.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "профилактика",
+          "ex": "Регулярная профилактика у врача может спасти жизнь.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "выносливость",
+          "ex": "Для марафона нужна большая выносливость.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "недосыпание",
+          "ex": "Недосыпание ослабляет концентрацию.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "избыточный вес",
+          "ex": "Избыточный вес повышает риск болезней сердца.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "похудеть",
+          "ex": "Он хочет похудеть на несколько килограммов до лета.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "травма",
+          "ex": "Травма колена остановила игрока.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "боли",
+          "ex": "Уже несколько дней у меня боли в спине.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "прививка",
+          "ex": "Прививка защищает от тяжёлого заболевания.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "боль в спине",
+          "ex": "Долгое сидение часто вызывает боль в спине.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "осознанность",
+          "ex": "Осознанность помогает воспринимать повседневную жизнь более осознанно.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "заразный",
+          "ex": "Грипп очень заразный.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "самочувствие",
+          "ex": "Движение повышает общее самочувствие.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "предотвращать",
+          "ex": "Спортом можно предотвращать многие болезни.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "лечение",
+          "ex": "Лечение в больнице продолжалось две недели.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "доход",
+          "ex": "Доход семьи покрывает аренду.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "расходы",
+          "ex": "Я записываю все расходы в таблицу.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "сбережения",
+          "ex": "На свои сбережения я куплю машину.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "долги",
+          "ex": "У него всё ещё есть долги перед банком.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "кредит",
+          "ex": "Для дома они взяли кредит.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "перевод",
+          "ex": "Перевод занимает один-два дня.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "наличные",
+          "ex": "Я предпочитаю наличные картам.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "гарантия",
+          "ex": "На устройство даётся гарантия два года.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "рекламация",
+          "ex": "Мою рекламацию магазин принял сразу.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "обмен",
+          "ex": "Обмен возможен только при наличии кассового чека.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "выписка со счёта",
+          "ex": "Выписка со счёта показывает все платежи за месяц.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "потребитель",
+          "ex": "Потребители всё больше обращают внимание на качество.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "сравнение цен",
+          "ex": "Сравнение цен в интернете почти всегда стоит того.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "специальное предложение",
+          "ex": "На этой неделе действует специальное предложение на фрукты.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "страховка",
+          "ex": "Страховка оплачивает ущерб моей машине.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "налог",
+          "ex": "Каждый год мне приходится платить налог и подавать декларацию.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "семейный бюджет",
+          "ex": "Наш семейный бюджет сейчас довольно скуден.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "инвестировать",
+          "ex": "Она хочет инвестировать деньги в возобновляемую энергию.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "тратить впустую",
+          "ex": "Не стоит тратить впустую деньги на ненужные вещи.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "бережливый",
+          "ex": "Моя бабушка очень бережливый человек и покупает только самое необходимое.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "традиция",
+          "ex": "В нашей семье это старая традиция.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "обычай",
+          "ex": "Прятать яйца на Пасху — это обычай.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "праздничный день",
+          "ex": "Третье октября — официальный праздничный день.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "представление",
+          "ex": "Представление в театре длилось три часа.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "музей",
+          "ex": "По понедельникам музей, к сожалению, закрыт.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "картина",
+          "ex": "Эта картина висит в этом зале уже веками.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "фестиваль",
+          "ex": "На фестивале выступило более пятидесяти групп.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "шествие",
+          "ex": "В шествии шли дети в разноцветных костюмах.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "произведение искусства",
+          "ex": "Этому произведению искусства более двухсот лет.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "символ",
+          "ex": "Эйфелева башня — символ Парижа.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "культурное наследие",
+          "ex": "Старый город входит в число объектов всемирного культурного наследия.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "церемония",
+          "ex": "Церемония началась ровно в одиннадцать часов.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "юбилей",
+          "ex": "Общество празднует свой пятидесятилетний юбилей.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "народное гулянье",
+          "ex": "Народное гулянье было с пивом и музыкой.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "сцена",
+          "ex": "Певец вышел на сцену под бурные аплодисменты.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "публика",
+          "ex": "Публика долго аплодировала после концерта.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "костюм",
+          "ex": "Для карнавала она сшила костюм.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "фейерверк",
+          "ex": "В полночь начался фейерверк.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "рождественский рынок",
+          "ex": "Рождественский рынок — место, где мы любим пить глинтвейн.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "карнавал",
+          "ex": "В Рейнланде карнавал отмечают шествиями.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
           ]
         }
       ]

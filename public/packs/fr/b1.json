@@ -13,6 +13,8 @@
           "id": "career_01_application",
           "de": "Bewerbung",
           "x": "candidature",
+          "ex": "J'ai envoyé ma candidature par e-mail hier.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -22,6 +24,8 @@
           "id": "career_01_responsibility",
           "de": "Verantwortung",
           "x": "responsabilité",
+          "ex": "Avec ce poste, tu prends beaucoup de responsabilité pour l'équipe.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -31,6 +35,8 @@
           "id": "career_01_experience",
           "de": "Erfahrung",
           "x": "expérience",
+          "ex": "Elle a dix ans d'expérience dans la vente.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -40,6 +46,8 @@
           "id": "career_01_decide",
           "de": "Entscheiden",
           "x": "décider",
+          "ex": "Nous devons décider d'ici vendredi quelle offre accepter.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -49,6 +57,8 @@
           "id": "career_01_negotiate",
           "de": "Verhandeln",
           "x": "négocier",
+          "ex": "Il veut négocier son salaire avec le patron.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
           "difficulty": 2,
           "tags": [
             "beruf_karriere"
@@ -58,7 +68,163 @@
           "id": "career_01_reliable",
           "de": "Zuverlässig",
           "x": "fiable",
+          "ex": "Notre collègue est toujours ponctuel et très fiable.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
           "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "entretien d'embauche",
+          "ex": "Demain, j'ai un entretien d'embauche dans une grande entreprise.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "CV",
+          "ex": "Il manque encore un stage dans mon CV.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "licenciement",
+          "ex": "Après son licenciement, elle a vite cherché un nouvel emploi.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "contrat de travail",
+          "ex": "Veuillez lire attentivement le contrat de travail avant de signer.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "formation continue",
+          "ex": "L'entreprise paie une formation continue en gestion de projet.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "supérieur",
+          "ex": "Mon supérieur me félicite souvent pour mon travail.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "promotion",
+          "ex": "Après trois ans, il a enfin obtenu une promotion.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "travail d'équipe",
+          "ex": "Sans un bon travail d'équipe, le projet aurait échoué.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "délai",
+          "ex": "Le délai de remise se termine lundi.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "employeur",
+          "ex": "Mon employeur propose des horaires flexibles.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "heures supplémentaires",
+          "ex": "Avant la fin de l'année, nous avons dû faire beaucoup d'heures supplémentaires.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "période d'intégration",
+          "ex": "La période d'intégration des nouveaux employés dure trois semaines chez nous.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "concurrence",
+          "ex": "La concurrence sur le marché du travail est très dure.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "qualification",
+          "ex": "Pour ce poste, vous avez besoin d'une qualification particulière.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
           "tags": [
             "beruf_karriere"
           ]
@@ -75,6 +241,8 @@
           "id": "society_02_community",
           "de": "Gemeinschaft",
           "x": "communauté",
+          "ex": "Dans le village, il y a une communauté très soudée.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -84,6 +252,8 @@
           "id": "society_02_equality",
           "de": "Gleichberechtigung",
           "x": "égalité",
+          "ex": "L'égalité entre les hommes et les femmes est un objectif important.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -93,6 +263,8 @@
           "id": "society_02_support",
           "de": "Unterstützung",
           "x": "soutien",
+          "ex": "Merci pour ton soutien en cette période difficile.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -102,6 +274,8 @@
           "id": "society_02_volunteer",
           "de": "Freiwilliger",
           "x": "bénévole",
+          "ex": "En tant que bénévole, il aide chaque week-end au refuge pour animaux.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -111,6 +285,8 @@
           "id": "society_02_rule",
           "de": "Regel",
           "x": "règle",
+          "ex": "Celui qui ne connaît pas la règle ne peut pas la respecter.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -120,6 +296,162 @@
           "id": "society_02_trust",
           "de": "Vertrauen",
           "x": "confiance",
+          "ex": "La confiance, il faut la gagner lentement.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "citoyen",
+          "ex": "Chaque citoyen a le droit d'exprimer son opinion.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "intégration",
+          "ex": "Les cours de langue facilitent l'intégration des nouveaux habitants.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "préjugé",
+          "ex": "Un préjugé naît souvent de l'ignorance.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "tolérance",
+          "ex": "La tolérance, c'est respecter les autres modes de vie.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "bénévolat",
+          "ex": "Son bénévolat chez les pompiers lui prend beaucoup de temps.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "don",
+          "ex": "L'association remercie chaleureusement pour le don.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "loi",
+          "ex": "La nouvelle loi entre en vigueur en janvier.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "devoir",
+          "ex": "Aller voter est un devoir civique pour beaucoup de gens.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "respect",
+          "ex": "Veuillez avoir du respect pour vos voisins.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "cohésion",
+          "ex": "En temps de crise, la cohésion des gens se manifeste.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "génération",
+          "ex": "Trois générations vivent sous le même toit.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "immigration",
+          "ex": "L'immigration a fortement changé le pays.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "justice",
+          "ex": "Tous les citoyens ont droit à la justice.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "majorité",
+          "ex": "La majorité des citoyens a voté pour le plan.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
           "difficulty": 2,
           "tags": [
             "gesellschaft"
@@ -137,6 +469,8 @@
           "id": "travel_03_itinerary",
           "de": "Reiseroute",
           "x": "itinéraire",
+          "ex": "Notre itinéraire nous mène à travers trois pays.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -146,6 +480,8 @@
           "id": "travel_03_accommodation",
           "de": "Unterkunft",
           "x": "hébergement",
+          "ex": "L'hébergement n'est qu'à cinq minutes de la plage.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -154,7 +490,9 @@
         {
           "id": "travel_03_change_trains",
           "de": "Umsteigen",
-          "x": "faire une correspondance",
+          "x": "changer de train",
+          "ex": "À Cologne, nous devons changer de train pour prendre le train régional.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -164,6 +502,8 @@
           "id": "travel_03_discover",
           "de": "Entdecken",
           "x": "découvrir",
+          "ex": "Nous voulions découvrir la vieille ville à pied.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -173,6 +513,8 @@
           "id": "travel_03_recommend",
           "de": "Empfehlen",
           "x": "recommander",
+          "ex": "Peux-tu me recommander un bon restaurant ?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -182,6 +524,162 @@
           "id": "travel_03_unforgettable",
           "de": "Unvergesslich",
           "x": "inoubliable",
+          "ex": "Le lever du soleil sur la montagne était inoubliable.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "souvenir",
+          "ex": "Comme souvenir, j'ai acheté une petite figurine.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "vol aller",
+          "ex": "Le vol aller a été calme et agréable.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "vol retour",
+          "ex": "Le vol retour part dimanche soir à huit heures.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "envie de voyager",
+          "ex": "En hiver, j'ai toujours une forte envie de voyager.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "aventure",
+          "ex": "Le voyage à travers l'Amérique du Sud était une vraie aventure.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "circuit",
+          "ex": "Nous réservons un circuit à travers l'Écosse.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "contrôle douanier",
+          "ex": "Lors du contrôle douanier, j'ai dû ouvrir ma valise.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "guide de voyage",
+          "ex": "Le guide de voyage donne beaucoup de conseils utiles pour Lisbonne.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "séjour",
+          "ex": "Pendant mon séjour à Vienne, j'ai visité beaucoup de musées.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "réservation",
+          "ex": "La réservation m'a été confirmée par e-mail.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "annuler",
+          "ex": "Nous avons dû annuler le voyage à cause d'une maladie.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "remboursement",
+          "ex": "J'ai demandé le remboursement du billet d'avion.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "hospitalité",
+          "ex": "Nous avons été enthousiasmés par l'hospitalité des gens.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "habitants",
+          "ex": "Les habitants nous ont montré leur plage préférée.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
           "difficulty": 2,
           "tags": [
             "reisen_erlebnisse"
@@ -198,7 +696,9 @@
         {
           "id": "opinion_04_opinion",
           "de": "Meinung",
-          "x": "opinion",
+          "x": "avis",
+          "ex": "À mon avis, l'offre est trop chère.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -207,7 +707,9 @@
         {
           "id": "opinion_04_claim",
           "de": "Behaupten",
-          "x": "affirmer",
+          "x": "prétendre",
+          "ex": "Il prétend n'avoir rien su de tout cela.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -217,6 +719,8 @@
           "id": "opinion_04_justify",
           "de": "Begründen",
           "x": "justifier",
+          "ex": "Veuillez justifier brièvement votre décision.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -226,6 +730,8 @@
           "id": "opinion_04_compare",
           "de": "Vergleichen",
           "x": "comparer",
+          "ex": "Avant d'acheter, il faut comparer les prix.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -235,6 +741,8 @@
           "id": "opinion_04_influence",
           "de": "Beeinflussen",
           "x": "influencer",
+          "ex": "La publicité peut fortement influencer nos décisions.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -244,6 +752,162 @@
           "id": "opinion_04_convince",
           "de": "Überzeugen",
           "x": "convaincre",
+          "ex": "Elle a réussi à me convaincre avec de bons arguments.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "argument",
+          "ex": "Ton argument semble logique, mais je vois les choses autrement.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "point de vue",
+          "ex": "Je n'ai jamais envisagé les choses de ce point de vue.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "conviction",
+          "ex": "C'est ma ferme conviction que l'éducation est importante.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "contradiction",
+          "ex": "Il y a une nette contradiction dans sa déclaration.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "douter",
+          "ex": "Je doute que le plan fonctionne vraiment.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "avantage",
+          "ex": "Un grand avantage de cette méthode est le gain de temps.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "inconvénient",
+          "ex": "L'inconvénient de la voiture, ce sont les coûts élevés.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "compromis",
+          "ex": "À la fin, nous avons trouvé un bon compromis.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "objection",
+          "ex": "Avez-vous encore une objection à la proposition ?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "conclusion",
+          "ex": "Il tire une conclusion claire de ces chiffres.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "évaluation",
+          "ex": "L'évaluation de l'expert a été très utile.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "critique",
+          "ex": "Elle a accepté la critique avec calme.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "hypothèse",
+          "ex": "Ton hypothèse n'était malheureusement pas correcte.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "juger",
+          "ex": "On ne devrait pas juger un livre uniquement sur sa couverture.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
           "difficulty": 3,
           "tags": [
             "meinungen_argumente"
@@ -261,6 +925,8 @@
           "id": "environment_05_resource",
           "de": "Ressource",
           "x": "ressource",
+          "ex": "L'eau est une ressource précieuse.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -270,6 +936,8 @@
           "id": "environment_05_avoid",
           "de": "Vermeiden",
           "x": "éviter",
+          "ex": "Nous devrions éviter les déchets plastiques inutiles.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -279,6 +947,8 @@
           "id": "environment_05_reuse",
           "de": "Wiederverwenden",
           "x": "réutiliser",
+          "ex": "On peut réutiliser plusieurs fois les bouteilles en verre.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -288,6 +958,8 @@
           "id": "environment_05_pollute",
           "de": "Verschmutzen",
           "x": "polluer",
+          "ex": "Les usines polluent souvent les rivières.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -297,6 +969,8 @@
           "id": "environment_05_sustainable",
           "de": "Nachhaltig",
           "x": "durable",
+          "ex": "Beaucoup de gens veulent vivre de façon durable.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
           "difficulty": 3,
           "tags": [
             "umwelt_zukunft"
@@ -306,7 +980,163 @@
           "id": "environment_05_protect",
           "de": "Schützen",
           "x": "protéger",
+          "ex": "Nous devons mieux protéger les forêts.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
           "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "changement climatique",
+          "ex": "Le changement climatique provoque davantage d'intempéries.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "réchauffement climatique",
+          "ex": "Le réchauffement climatique fait monter le niveau de la mer.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "déchets",
+          "ex": "À la maison, nous trions soigneusement les déchets.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "recyclage",
+          "ex": "Le recyclage permet d'économiser beaucoup de matières premières.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "protection de l'environnement",
+          "ex": "La protection de l'environnement commence dans la vie quotidienne.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "énergie renouvelable",
+          "ex": "L'énergie renouvelable provient du soleil, du vent et de l'eau.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "gaz à effet de serre",
+          "ex": "Le dioxyde de carbone est un gaz à effet de serre bien connu.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "disparition",
+          "ex": "De nombreuses espèces animales sont menacées de disparition.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "consommation",
+          "ex": "La consommation d'électricité augmente chaque année.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "incendie de forêt",
+          "ex": "L'incendie de forêt a détruit de nombreux hectares de forêt en été.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "sécheresse",
+          "ex": "La longue sécheresse a détruit la récolte.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "biodiversité",
+          "ex": "La biodiversité est en danger.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "économiser",
+          "ex": "On peut économiser beaucoup d'énergie en chauffant.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "habitat",
+          "ex": "Le déboisement détruit l'habitat de nombreux animaux.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
           "tags": [
             "umwelt_zukunft"
           ]
@@ -323,6 +1153,8 @@
           "id": "digital_06_data_privacy",
           "de": "Datenschutz",
           "x": "protection des données",
+          "ex": "La protection des données est particulièrement importante pour les services en ligne.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -332,6 +1164,8 @@
           "id": "digital_06_notification",
           "de": "Benachrichtigung",
           "x": "notification",
+          "ex": "J'ai désactivé la notification sur mon téléphone.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -341,6 +1175,8 @@
           "id": "digital_06_download",
           "de": "Herunterladen",
           "x": "télécharger",
+          "ex": "Tu peux télécharger l'application gratuitement.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -350,6 +1186,8 @@
           "id": "digital_06_upload",
           "de": "Hochladen",
           "x": "téléverser",
+          "ex": "Je dois encore téléverser les photos.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -359,6 +1197,8 @@
           "id": "digital_06_update",
           "de": "Aktualisieren",
           "x": "mettre à jour",
+          "ex": "Veuillez mettre à jour le logiciel régulièrement.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
@@ -368,9 +1208,1077 @@
           "id": "digital_06_password",
           "de": "Passwort",
           "x": "mot de passe",
+          "ex": "Choisis un mot de passe sécurisé avec des chiffres et des caractères spéciaux.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
           "difficulty": 3,
           "tags": [
             "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "connexion",
+          "ex": "La connexion ne prend que quelques secondes.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "espace de stockage",
+          "ex": "Il ne reste presque plus d'espace de stockage sur mon téléphone.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "temps d'écran",
+          "ex": "Mon temps d'écran a fortement augmenté cette semaine.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "chiffrement",
+          "ex": "Le chiffrement protège vos messages des inconnus.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "sauvegarde",
+          "ex": "Une sauvegarde régulière évite la perte de données.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "plateforme",
+          "ex": "Beaucoup d'élèves utilisent cette plateforme pour apprendre.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "algorithme",
+          "ex": "Un algorithme décide quelles vidéos tu vois.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "abonnement",
+          "ex": "J'ai résilié mon abonnement au service de streaming.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "paramètres",
+          "ex": "Tu trouveras les paramètres en haut à droite dans le menu.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "message d'erreur",
+          "ex": "Un message d'erreur est soudain apparu au démarrage.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "associer",
+          "ex": "Tu peux associer ton compte à ton téléphone.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "moteur de recherche",
+          "ex": "Quel moteur de recherche préfères-tu utiliser ?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "cyberattaque",
+          "ex": "La cyberattaque a paralysé tout le réseau.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "intelligence artificielle",
+          "ex": "L'intelligence artificielle transforme de nombreux métiers.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "gros titre",
+          "ex": "Le gros titre était à la une aujourd'hui.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "rapport",
+          "ex": "Le rapport décrit la situation dans la zone de crise.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "journaliste",
+          "ex": "Le journaliste enquête depuis des semaines pour le reportage.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "couverture médiatique",
+          "ex": "La couverture médiatique des élections a été très détaillée.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "source",
+          "ex": "Indique toujours la source de tes informations.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "fausse information",
+          "ex": "Cette fausse information s'est répandue en quelques minutes sur internet.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "liberté d'expression",
+          "ex": "La liberté d'expression est un droit fondamental en démocratie.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "campagne publicitaire",
+          "ex": "La nouvelle campagne publicitaire passe sur tous les canaux.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "émission",
+          "ex": "L'émission est diffusée en direct ce soir.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "présentateur",
+          "ex": "Le présentateur a accueilli les téléspectateurs avec un sourire.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "reportage",
+          "ex": "Le reportage montre la vie sur une île de la mer du Nord.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "téléspectateur",
+          "ex": "Plus d'un million de téléspectateurs ont regardé la finale.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "lettre de lecteur",
+          "ex": "Elle a écrit une lettre de lecteur au journal.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "révéler",
+          "ex": "Le journal veut révéler le scandale.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "publier",
+          "ex": "La maison d'édition va publier le livre à l'automne.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "crédible",
+          "ex": "Une source crédible donne des noms et des faits.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "commentaire",
+          "ex": "Le commentaire de la page opinions était très critique.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "documentaire",
+          "ex": "Hier, j'ai regardé un documentaire sur les baleines.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "chaîne d'information",
+          "ex": "La chaîne d'information diffuse des reportages toute la journée.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "censure",
+          "ex": "Dans certains pays, il existe encore une censure stricte.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "alimentation",
+          "ex": "Une alimentation équilibrée garde le corps en forme.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "manque d'exercice",
+          "ex": "À la longue, le manque d'exercice peut entraîner des problèmes de dos.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "équilibre",
+          "ex": "Le yoga est pour moi un bon équilibre par rapport au travail de bureau.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "stress",
+          "ex": "Trop de stress rend malade à la longue.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "détente",
+          "ex": "Après le travail, j'ai besoin d'un peu de détente.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "repos",
+          "ex": "Les vacances ont surtout servi à se reposer.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "prévention",
+          "ex": "Une prévention régulière chez le médecin peut sauver des vies.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "endurance",
+          "ex": "Pour un marathon, il faut beaucoup d'endurance.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "manque de sommeil",
+          "ex": "Le manque de sommeil affaiblit la concentration.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "surpoids",
+          "ex": "Le surpoids augmente le risque de maladies cardiaques.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "perdre du poids",
+          "ex": "Il voudrait perdre quelques kilos avant l'été.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "blessure",
+          "ex": "Une blessure au genou a stoppé le joueur.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "douleurs",
+          "ex": "Depuis des jours, j'ai des douleurs dans le dos.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "vaccination",
+          "ex": "La vaccination protège contre une maladie grave.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "mal de dos",
+          "ex": "Rester longtemps assis provoque souvent des maux de dos.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "pleine conscience",
+          "ex": "La pleine conscience aide à vivre le quotidien de façon plus consciente.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "contagieux",
+          "ex": "La grippe est très contagieuse.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "bien-être",
+          "ex": "L'exercice augmente le bien-être général.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "prévenir",
+          "ex": "Avec le sport, on peut prévenir de nombreuses maladies.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "traitement",
+          "ex": "Le traitement à l'hôpital a duré deux semaines.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "revenu",
+          "ex": "Le revenu de la famille suffit pour payer le loyer.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "dépenses",
+          "ex": "Je note toutes mes dépenses dans un tableau.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "économies",
+          "ex": "Avec mes économies, j'achète une voiture.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "dettes",
+          "ex": "Il a encore des dettes auprès de la banque.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "crédit",
+          "ex": "Pour la maison, ils ont contracté un crédit.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "virement",
+          "ex": "Le virement prend un à deux jours.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "espèces",
+          "ex": "Je préfère payer en espèces plutôt que par carte.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "garantie",
+          "ex": "L'appareil est sous garantie pendant deux ans.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "réclamation",
+          "ex": "Ma réclamation a été immédiatement acceptée par le magasin.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "échange",
+          "ex": "Un échange n'est possible qu'avec le ticket de caisse.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "relevé de compte",
+          "ex": "Sur le relevé de compte, je vois tous les paiements du mois.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "consommateur",
+          "ex": "Les consommateurs font de plus en plus attention à la qualité.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "comparaison des prix",
+          "ex": "Une comparaison des prix sur internet vaut presque toujours la peine.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "promotion",
+          "ex": "Cette semaine, les fruits sont en promotion.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "assurance",
+          "ex": "L'assurance paie les dégâts sur ma voiture.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "impôt",
+          "ex": "Chaque année, je dois faire ma déclaration d'impôts.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "budget du ménage",
+          "ex": "Notre budget du ménage est assez serré en ce moment.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "investir",
+          "ex": "Elle voudrait investir de l'argent dans les énergies renouvelables.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "gaspiller",
+          "ex": "On ne devrait pas gaspiller de l'argent pour des choses inutiles.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "économe",
+          "ex": "Ma grand-mère est très économe et n'achète que le strict nécessaire.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "tradition",
+          "ex": "Dans notre famille, c'est une vieille tradition.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "coutume",
+          "ex": "C'est la coutume de cacher des œufs à Pâques.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "jour férié",
+          "ex": "Le trois octobre est un jour férié légal.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "représentation",
+          "ex": "La représentation au théâtre a duré trois heures.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "musée",
+          "ex": "Le musée est malheureusement fermé le lundi.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "tableau",
+          "ex": "Le tableau est accroché depuis des siècles dans cette salle.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "festival",
+          "ex": "Plus de cinquante groupes ont joué au festival.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "défilé",
+          "ex": "Pendant le défilé, des enfants en costumes colorés marchaient avec le cortège.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "œuvre d'art",
+          "ex": "Cette œuvre d'art a plus de deux cents ans.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "monument emblématique",
+          "ex": "La tour Eiffel est le monument emblématique de Paris.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "patrimoine culturel",
+          "ex": "La vieille ville fait partie du patrimoine culturel mondial.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "cérémonie",
+          "ex": "La cérémonie a commencé à onze heures précises.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "anniversaire",
+          "ex": "L'association fête son cinquantième anniversaire.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "fête populaire",
+          "ex": "À la fête populaire, il y avait de la bière et de la musique.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "scène",
+          "ex": "Le chanteur est monté sur scène sous de grands applaudissements.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "public",
+          "ex": "Le public a applaudi longuement après le concert.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "costume",
+          "ex": "Elle a cousu un costume pour le carnaval.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "feu d'artifice",
+          "ex": "Le feu d'artifice a commencé à minuit.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "marché de Noël",
+          "ex": "Au marché de Noël, nous aimons boire du vin chaud.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "carnaval",
+          "ex": "En Rhénanie, on fête le carnaval avec des défilés.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
           ]
         }
       ]

@@ -13,6 +13,8 @@
           "id": "daily_01_wake_up",
           "de": "Aufwachen",
           "x": "svegliarsi",
+          "ex": "Domani mattina devo svegliarmi presto.",
+          "exTr": "Ich muss morgen früh aufwachen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -22,6 +24,8 @@
           "id": "daily_01_have_breakfast",
           "de": "Frühstücken",
           "x": "fare colazione",
+          "ex": "Domenica voglio fare colazione con calma.",
+          "exTr": "Am Sonntag will ich lange frühstücken.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -31,6 +35,8 @@
           "id": "daily_01_get_dressed",
           "de": "Sich anziehen",
           "x": "vestirsi",
+          "ex": "Devo vestirmi in fretta.",
+          "exTr": "Ich muss mich schnell anziehen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -40,6 +46,8 @@
           "id": "daily_01_cook",
           "de": "Kochen",
           "x": "cucinare",
+          "ex": "La sera cuciniamo insieme.",
+          "exTr": "Abends kochen wir zusammen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -49,6 +57,8 @@
           "id": "daily_01_tidy_up",
           "de": "Aufräumen",
           "x": "riordinare",
+          "ex": "Dopo la festa dobbiamo riordinare.",
+          "exTr": "Nach der Party müssen wir aufräumen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -57,8 +67,164 @@
         {
           "id": "daily_01_rest",
           "de": "Sich ausruhen",
-          "x": "riposare",
+          "x": "riposarsi",
+          "ex": "Dopo il lavoro voglio riposarmi.",
+          "exTr": "Nach der Arbeit möchte ich mich ausruhen.",
           "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_take_a_shower",
+          "de": "Duschen",
+          "x": "fare la doccia",
+          "ex": "Vorrei fare una doccia veloce.",
+          "exTr": "Ich möchte kurz duschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_brush_teeth",
+          "de": "Zähne putzen",
+          "x": "lavarsi i denti",
+          "ex": "Prima di dormire devo lavarmi i denti.",
+          "exTr": "Vor dem Schlafen muss ich Zähne putzen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_hurry",
+          "de": "Sich beeilen",
+          "x": "sbrigarsi",
+          "ex": "Dobbiamo sbrigarci, altrimenti perdiamo l'autobus.",
+          "exTr": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_do_laundry",
+          "de": "Wäsche waschen",
+          "x": "fare il bucato",
+          "ex": "Sabato devo fare il bucato.",
+          "exTr": "Am Samstag muss ich Wäsche waschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_wash_the_dishes",
+          "de": "Abwaschen",
+          "x": "lavare i piatti",
+          "ex": "Chi vuole lavare i piatti oggi?",
+          "exTr": "Wer will heute abwaschen?",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_fall_asleep",
+          "de": "Einschlafen",
+          "x": "addormentarsi",
+          "ex": "La sera faccio fatica ad addormentarmi.",
+          "exTr": "Ich kann abends schlecht einschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_oversleep",
+          "de": "Verschlafen",
+          "x": "dormire troppo",
+          "ex": "Oggi purtroppo ho dormito troppo.",
+          "exTr": "Heute habe ich leider verschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_alarm_clock",
+          "de": "Wecker",
+          "x": "sveglia",
+          "ex": "La mia sveglia suona alle sei.",
+          "exTr": "Mein Wecker klingelt um sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_habit",
+          "de": "Gewohnheit",
+          "x": "abitudine",
+          "ex": "Il caffè al mattino è la mia abitudine.",
+          "exTr": "Kaffee am Morgen ist meine Gewohnheit.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch_break",
+          "de": "Mittagspause",
+          "x": "pausa pranzo",
+          "ex": "Durante la pausa pranzo vado a fare una passeggiata.",
+          "exTr": "In der Mittagspause gehe ich spazieren.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_end_of_workday",
+          "de": "Feierabend",
+          "x": "fine del lavoro",
+          "ex": "Alle cinque finisco di lavorare.",
+          "exTr": "Um fünf Uhr habe ich Feierabend.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch",
+          "de": "Mittagessen",
+          "x": "pranzo",
+          "ex": "Il pranzo è pronto alle dodici.",
+          "exTr": "Das Mittagessen ist um zwölf Uhr fertig.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_be_late",
+          "de": "Sich verspäten",
+          "x": "fare tardi",
+          "ex": "Purtroppo farò un po' tardi.",
+          "exTr": "Leider werde ich mich etwas verspäten.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_commute",
+          "de": "Pendeln",
+          "x": "fare il pendolare",
+          "ex": "Devo fare il pendolare per un'ora ogni giorno.",
+          "exTr": "Ich muss jeden Tag eine Stunde pendeln.",
+          "difficulty": 3,
           "tags": [
             "tagesablauf"
           ]
@@ -75,6 +241,8 @@
           "id": "city_02_intersection",
           "de": "Kreuzung",
           "x": "incrocio",
+          "ex": "All'incrocio devi girare a sinistra.",
+          "exTr": "An der Kreuzung musst du links abbiegen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -84,6 +252,8 @@
           "id": "city_02_traffic_light",
           "de": "Ampel",
           "x": "semaforo",
+          "ex": "Il semaforo è rosso in questo momento.",
+          "exTr": "Die Ampel ist gerade rot.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -93,6 +263,8 @@
           "id": "city_02_pavement",
           "de": "Bürgersteig",
           "x": "marciapiede",
+          "ex": "I bambini giocano sul marciapiede.",
+          "exTr": "Kinder spielen auf dem Bürgersteig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -102,6 +274,8 @@
           "id": "city_02_neighborhood",
           "de": "Nachbarschaft",
           "x": "quartiere",
+          "ex": "Il nostro quartiere è molto tranquillo.",
+          "exTr": "Unsere Nachbarschaft ist sehr ruhig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -111,6 +285,8 @@
           "id": "city_02_library",
           "de": "Bücherei",
           "x": "biblioteca",
+          "ex": "In biblioteca si possono prendere in prestito i libri.",
+          "exTr": "In der Bücherei kann man Bücher leihen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -120,7 +296,163 @@
           "id": "city_02_market",
           "de": "Markt",
           "x": "mercato",
+          "ex": "Il sabato compro la frutta al mercato.",
+          "exTr": "Samstags kaufe ich Obst auf dem Markt.",
           "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_town_hall",
+          "de": "Rathaus",
+          "x": "municipio",
+          "ex": "Il municipio si trova in pieno centro.",
+          "exTr": "Das Rathaus steht mitten in der Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_fountain",
+          "de": "Brunnen",
+          "x": "fontana",
+          "ex": "Ci vediamo davanti alla fontana alle tre.",
+          "exTr": "Vor dem Brunnen treffen wir uns um drei.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_monument",
+          "de": "Denkmal",
+          "x": "monumento",
+          "ex": "Il monumento ricorda un famoso poeta.",
+          "exTr": "Das Denkmal erinnert an einen berühmten Dichter.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pedestrian_zone",
+          "de": "Fußgängerzone",
+          "x": "zona pedonale",
+          "ex": "Nella zona pedonale ci sono molti negozi.",
+          "exTr": "In der Fußgängerzone gibt es viele Geschäfte.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_playground",
+          "de": "Spielplatz",
+          "x": "parco giochi",
+          "ex": "Il parco giochi è accanto alla scuola.",
+          "exTr": "Der Spielplatz ist neben der Schule.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_bridge",
+          "de": "Brücke",
+          "x": "ponte",
+          "ex": "Il ponte attraversa il fiume.",
+          "exTr": "Die Brücke führt über den Fluss.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_post_office",
+          "de": "Postamt",
+          "x": "ufficio postale",
+          "ex": "Devo portare un pacco all'ufficio postale.",
+          "exTr": "Ich muss ein Paket zum Postamt bringen.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_map",
+          "de": "Stadtplan",
+          "x": "mappa della città",
+          "ex": "Senza una mappa della città non trovo la strada.",
+          "exTr": "Ohne Stadtplan finde ich den Weg nicht.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_tourist_attraction",
+          "de": "Sehenswürdigkeit",
+          "x": "attrazione turistica",
+          "ex": "Il duomo è la principale attrazione turistica.",
+          "exTr": "Der Dom ist die wichtigste Sehenswürdigkeit.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_center",
+          "de": "Innenstadt",
+          "x": "centro città",
+          "ex": "Il centro città nel fine settimana è molto affollato.",
+          "exTr": "Die Innenstadt ist am Wochenende sehr voll.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_suburb",
+          "de": "Vorort",
+          "x": "periferia",
+          "ex": "I miei genitori abitano in una periferia tranquilla.",
+          "exTr": "Meine Eltern wohnen in einem ruhigen Vorort.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_high_rise_building",
+          "de": "Hochhaus",
+          "x": "grattacielo",
+          "ex": "Nel grattacielo abitano più di cento famiglie.",
+          "exTr": "Im Hochhaus wohnen über hundert Familien.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_construction_site",
+          "de": "Baustelle",
+          "x": "cantiere",
+          "ex": "A causa del cantiere la strada è chiusa.",
+          "exTr": "Wegen der Baustelle ist die Straße gesperrt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_street_lamp",
+          "de": "Straßenlaterne",
+          "x": "lampione",
+          "ex": "Il lampione davanti a casa è rotto.",
+          "exTr": "Die Straßenlaterne vor dem Haus ist kaputt.",
+          "difficulty": 3,
           "tags": [
             "stadt_nachbarschaft"
           ]
@@ -137,6 +469,8 @@
           "id": "communication_03_ask",
           "de": "Fragen",
           "x": "chiedere",
+          "ex": "Posso chiederti una cosa?",
+          "exTr": "Darf ich dich etwas fragen?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -146,6 +480,8 @@
           "id": "communication_03_answer",
           "de": "Antworten",
           "x": "rispondere",
+          "ex": "Vi prego di rispondere entro domani.",
+          "exTr": "Bitte antworten Sie bis morgen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -155,6 +491,8 @@
           "id": "communication_03_explain",
           "de": "Erklären",
           "x": "spiegare",
+          "ex": "Puoi spiegarmi il gioco?",
+          "exTr": "Kannst du mir das Spiel erklären?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -164,6 +502,8 @@
           "id": "communication_03_agree",
           "de": "Zustimmen",
           "x": "essere d'accordo",
+          "ex": "Su questo non posso che essere d'accordo con te.",
+          "exTr": "Ich kann dir da nur zustimmen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -173,6 +513,8 @@
           "id": "communication_03_reject",
           "de": "Ablehnen",
           "x": "rifiutare",
+          "ex": "Purtroppo ha dovuto rifiutare l'offerta.",
+          "exTr": "Sie musste das Angebot leider ablehnen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -182,6 +524,162 @@
           "id": "communication_03_repeat",
           "de": "Wiederholen",
           "x": "ripetere",
+          "ex": "Potrebbe ripetere, per favore?",
+          "exTr": "Können Sie das bitte wiederholen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_tell",
+          "de": "Erzählen",
+          "x": "raccontare",
+          "ex": "Vuole raccontarci del viaggio.",
+          "exTr": "Er will uns von der Reise erzählen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_suggest",
+          "de": "Vorschlagen",
+          "x": "proporre",
+          "ex": "Vorrei proporre un punto d'incontro.",
+          "exTr": "Ich möchte einen Treffpunkt vorschlagen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_contradict",
+          "de": "Widersprechen",
+          "x": "contraddire",
+          "ex": "Purtroppo devo contraddirti.",
+          "exTr": "Ich muss dir leider widersprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_discuss",
+          "de": "Diskutieren",
+          "x": "discutere",
+          "ex": "Discutiamo spesso di politica.",
+          "exTr": "Wir diskutieren oft über Politik.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_inform",
+          "de": "Mitteilen",
+          "x": "comunicare",
+          "ex": "Vorrei comunicarle una cosa.",
+          "exTr": "Ich möchte Ihnen etwas mitteilen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_apologize",
+          "de": "Sich entschuldigen",
+          "x": "scusarsi",
+          "ex": "Voleva scusarsi con lei.",
+          "exTr": "Er wollte sich bei ihr entschuldigen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_invite",
+          "de": "Einladen",
+          "x": "invitare",
+          "ex": "Vorrei invitarti alla mia festa.",
+          "exTr": "Ich möchte dich zu meiner Party einladen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_promise",
+          "de": "Versprechen",
+          "x": "promettere",
+          "ex": "Te lo posso promettere con certezza.",
+          "exTr": "Ich kann dir das fest versprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_listen",
+          "de": "Zuhören",
+          "x": "ascoltare",
+          "ex": "Saper ascoltare bene è molto importante.",
+          "exTr": "Gut zuhören ist sehr wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_message",
+          "de": "Nachricht",
+          "x": "messaggio",
+          "ex": "Ti ho scritto un messaggio.",
+          "exTr": "Ich habe dir eine Nachricht geschrieben.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_conversation",
+          "de": "Gespräch",
+          "x": "conversazione",
+          "ex": "La conversazione con il capo è stata cordiale.",
+          "exTr": "Das Gespräch mit dem Chef war freundlich.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_letter",
+          "de": "Brief",
+          "x": "lettera",
+          "ex": "Ho scritto una lettera a mia nonna.",
+          "exTr": "Ich habe meiner Oma einen Brief geschrieben.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_misunderstanding",
+          "de": "Missverständnis",
+          "x": "malinteso",
+          "ex": "Era solo un piccolo malinteso.",
+          "exTr": "Das war nur ein kleines Missverständnis.",
+          "difficulty": 3,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_call",
+          "de": "Anrufen",
+          "x": "telefonare",
+          "ex": "Ti telefonerò stasera.",
+          "exTr": "Ich werde dich heute Abend anrufen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -199,6 +697,8 @@
           "id": "nature_04_weather",
           "de": "Wetter",
           "x": "tempo",
+          "ex": "Oggi il tempo è meraviglioso.",
+          "exTr": "Das Wetter ist heute wunderbar.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -208,6 +708,8 @@
           "id": "nature_04_cloud",
           "de": "Wolke",
           "x": "nuvola",
+          "ex": "Una nuvola scura incombe sulla montagna.",
+          "exTr": "Eine dunkle Wolke steht über dem Berg.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -217,6 +719,8 @@
           "id": "nature_04_wind",
           "de": "Wind",
           "x": "vento",
+          "ex": "Oggi tira un forte vento.",
+          "exTr": "Heute weht ein starker Wind.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -225,7 +729,9 @@
         {
           "id": "nature_04_forest",
           "de": "Wald",
-          "x": "foresta",
+          "x": "bosco",
+          "ex": "Facciamo una passeggiata nel bosco.",
+          "exTr": "Wir machen einen Spaziergang im Wald.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -235,6 +741,8 @@
           "id": "nature_04_river",
           "de": "Fluss",
           "x": "fiume",
+          "ex": "Il fiume attraversa tutta la città.",
+          "exTr": "Der Fluss fließt durch die ganze Stadt.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -244,6 +752,162 @@
           "id": "nature_04_mountain",
           "de": "Berg",
           "x": "montagna",
+          "ex": "Sulla montagna c'è ancora la neve.",
+          "exTr": "Auf dem Berg liegt noch Schnee.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_thunderstorm",
+          "de": "Gewitter",
+          "x": "temporale",
+          "ex": "In serata arriva un temporale.",
+          "exTr": "Am Abend kommt ein Gewitter.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_fog",
+          "de": "Nebel",
+          "x": "nebbia",
+          "ex": "Con la nebbia non si vede quasi niente.",
+          "exTr": "Im Nebel sieht man kaum etwas.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_rainbow",
+          "de": "Regenbogen",
+          "x": "arcobaleno",
+          "ex": "Dopo la pioggia è apparso un arcobaleno.",
+          "exTr": "Nach dem Regen erschien ein Regenbogen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_storm",
+          "de": "Sturm",
+          "x": "tempesta",
+          "ex": "La tempesta ha abbattuto un albero.",
+          "exTr": "Der Sturm hat einen Baum umgeworfen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_flood",
+          "de": "Überschwemmung",
+          "x": "alluvione",
+          "ex": "Dopo la pioggia c'è stata un'alluvione.",
+          "exTr": "Nach dem Regen gab es eine Überschwemmung.",
+          "difficulty": 3,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_valley",
+          "de": "Tal",
+          "x": "valle",
+          "ex": "Nella valle c'è un piccolo villaggio.",
+          "exTr": "Im Tal liegt ein kleines Dorf.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_meadow",
+          "de": "Wiese",
+          "x": "prato",
+          "ex": "Sul prato sbocciano molti fiori.",
+          "exTr": "Auf der Wiese blühen viele Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_riverbank",
+          "de": "Ufer",
+          "x": "riva",
+          "ex": "Siamo seduti sulla riva e peschiamo.",
+          "exTr": "Wir sitzen am Ufer und angeln.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_summit",
+          "de": "Gipfel",
+          "x": "vetta",
+          "ex": "Raggiungiamo la vetta alle dodici.",
+          "exTr": "Um zwölf Uhr erreichen wir den Gipfel.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_lightning",
+          "de": "Blitz",
+          "x": "fulmine",
+          "ex": "Un fulmine ha colpito l'albero.",
+          "exTr": "Ein Blitz schlug in den Baum ein.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_puddle",
+          "de": "Pfütze",
+          "x": "pozzanghera",
+          "ex": "Il bambino salta nella pozzanghera.",
+          "exTr": "Das Kind springt in die Pfütze.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_environment",
+          "de": "Umwelt",
+          "x": "ambiente",
+          "ex": "Dobbiamo proteggere meglio l'ambiente.",
+          "exTr": "Wir müssen die Umwelt besser schützen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_plant",
+          "de": "Pflanze",
+          "x": "pianta",
+          "ex": "Questa pianta ha bisogno di molto sole.",
+          "exTr": "Diese Pflanze braucht viel Sonne.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_sunrise",
+          "de": "Sonnenaufgang",
+          "x": "alba",
+          "ex": "L'alba sul mare era da sogno.",
+          "exTr": "Der Sonnenaufgang am Meer war traumhaft.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -261,6 +925,8 @@
           "id": "feelings_05_satisfied",
           "de": "Zufrieden",
           "x": "soddisfatto",
+          "ex": "Sono soddisfatto del mio lavoro.",
+          "exTr": "Ich bin mit meiner Arbeit zufrieden.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -270,6 +936,8 @@
           "id": "feelings_05_nervous",
           "de": "Nervös",
           "x": "nervoso",
+          "ex": "Prima dell'esame sono sempre nervoso.",
+          "exTr": "Vor der Prüfung bin ich immer nervös.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -279,6 +947,8 @@
           "id": "feelings_05_surprised",
           "de": "Überrascht",
           "x": "sorpreso",
+          "ex": "Era sorpreso dal regalo.",
+          "exTr": "Sie war von dem Geschenk überrascht.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -288,6 +958,8 @@
           "id": "feelings_05_proud",
           "de": "Stolz",
           "x": "orgoglioso",
+          "ex": "I genitori sono orgogliosi del loro bambino.",
+          "exTr": "Die Eltern sind stolz auf ihr Kind.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -297,6 +969,8 @@
           "id": "feelings_05_relaxed",
           "de": "Entspannt",
           "x": "rilassato",
+          "ex": "Dopo le vacanze sono completamente rilassato.",
+          "exTr": "Nach dem Urlaub bin ich total entspannt.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -306,6 +980,162 @@
           "id": "feelings_05_patient",
           "de": "Geduldig",
           "x": "paziente",
+          "ex": "L'insegnante è molto paziente.",
+          "exTr": "Der Lehrer ist sehr geduldig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_jealous",
+          "de": "Eifersüchtig",
+          "x": "geloso",
+          "ex": "È geloso del nuovo collega.",
+          "exTr": "Er ist auf den neuen Kollegen eifersüchtig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_disappointed",
+          "de": "Enttäuscht",
+          "x": "deluso",
+          "ex": "Era molto deluso dal risultato.",
+          "exTr": "Sie war vom Ergebnis sehr enttäuscht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_curious",
+          "de": "Neugierig",
+          "x": "curioso",
+          "ex": "Il bambino è curioso e fa molte domande.",
+          "exTr": "Das Kind ist neugierig und stellt viele Fragen.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_shy",
+          "de": "Schüchtern",
+          "x": "timido",
+          "ex": "All'inizio era piuttosto timido.",
+          "exTr": "Am Anfang war er ziemlich schüchtern.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_honest",
+          "de": "Ehrlich",
+          "x": "onesto",
+          "ex": "Sii onesto con me, per favore.",
+          "exTr": "Sei bitte ehrlich zu mir.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_polite",
+          "de": "Höflich",
+          "x": "educato",
+          "ex": "Il cameriere è sempre molto educato.",
+          "exTr": "Der Kellner ist immer sehr höflich.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_brave",
+          "de": "Mutig",
+          "x": "coraggioso",
+          "ex": "È stato un passo coraggioso.",
+          "exTr": "Das war ein mutiger Schritt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lazy",
+          "de": "Faul",
+          "x": "pigro",
+          "ex": "La domenica sono un po' pigro.",
+          "exTr": "Am Sonntag bin ich ein bisschen faul.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_anxious",
+          "de": "Ängstlich",
+          "x": "pauroso",
+          "ex": "Il cane è molto pauroso.",
+          "exTr": "Der Hund ist sehr ängstlich.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_stressed",
+          "de": "Gestresst",
+          "x": "stressato",
+          "ex": "Prima di Natale sono tutti stressati.",
+          "exTr": "Vor Weihnachten sind alle gestresst.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_embarrassed",
+          "de": "Verlegen",
+          "x": "imbarazzato",
+          "ex": "Lui è diventato imbarazzato e ha riso sommessamente.",
+          "exTr": "Sie wurde verlegen und lachte leise.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_helpful",
+          "de": "Hilfsbereit",
+          "x": "disponibile",
+          "ex": "I nostri vicini sono molto disponibili.",
+          "exTr": "Unsere Nachbarn sind sehr hilfsbereit.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_cheerful",
+          "de": "Fröhlich",
+          "x": "allegro",
+          "ex": "È sempre allegro e ride molto.",
+          "exTr": "Sie ist immer fröhlich und lacht viel.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lonely",
+          "de": "Einsam",
+          "x": "solo",
+          "ex": "Dopo il trasloco si sentiva solo.",
+          "exTr": "Nach dem Umzug fühlte er sich einsam.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -323,6 +1153,8 @@
           "id": "education_06_course",
           "de": "Kurs",
           "x": "corso",
+          "ex": "Frequento un corso all'università popolare.",
+          "exTr": "Ich besuche einen Kurs an der Volkshochschule.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -332,6 +1164,8 @@
           "id": "education_06_task",
           "de": "Aufgabe",
           "x": "compito",
+          "ex": "Questo compito non è difficile.",
+          "exTr": "Diese Aufgabe ist nicht schwer.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -341,6 +1175,8 @@
           "id": "education_06_exam",
           "de": "Prüfung",
           "x": "esame",
+          "ex": "L'esame comincia alle nove.",
+          "exTr": "Die Prüfung beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -350,6 +1186,8 @@
           "id": "education_06_practise",
           "de": "Üben",
           "x": "esercitarsi",
+          "ex": "Bisogna esercitarsi ogni giorno.",
+          "exTr": "Man muss jeden Tag üben.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -359,6 +1197,8 @@
           "id": "education_06_understand",
           "de": "Verstehen",
           "x": "capire",
+          "ex": "Non capisco ancora del tutto la grammatica.",
+          "exTr": "Ich verstehe die Grammatik noch nicht ganz.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -368,9 +1208,1077 @@
           "id": "education_06_progress",
           "de": "Fortschreiten",
           "x": "progredire",
+          "ex": "Il lavoro progredisce bene.",
+          "exTr": "Die Arbeit schreitet gut fort.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_homework",
+          "de": "Hausaufgabe",
+          "x": "compiti a casa",
+          "ex": "I miei compiti a casa sono già finiti.",
+          "exTr": "Meine Hausaufgabe ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_report_card",
+          "de": "Zeugnis",
+          "x": "pagella",
+          "ex": "Riceviamo la pagella a luglio.",
+          "exTr": "Das Zeugnis bekommen wir im Juli.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_grade",
+          "de": "Note",
+          "x": "voto",
+          "ex": "In matematica ho un bel voto.",
+          "exTr": "Ich habe in Mathe eine gute Note.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_timetable",
+          "de": "Stundenplan",
+          "x": "orario",
+          "ex": "Sull'orario di oggi c'è educazione fisica.",
+          "exTr": "Auf dem Stundenplan steht heute Sport.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_lessons",
+          "de": "Unterricht",
+          "x": "lezione",
+          "ex": "La lezione comincia alle otto.",
+          "exTr": "Der Unterricht beginnt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_textbook",
+          "de": "Lehrbuch",
+          "x": "libro di testo",
+          "ex": "Aprite il libro di testo a pagina dieci, per favore.",
+          "exTr": "Bitte öffnet das Lehrbuch auf Seite zehn.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_dictionary",
+          "de": "Wörterbuch",
+          "x": "dizionario",
+          "ex": "Cerco la parola nel dizionario.",
+          "exTr": "Ich suche das Wort im Wörterbuch.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_class_test",
+          "de": "Klassenarbeit",
+          "x": "compito in classe",
+          "ex": "Domani abbiamo un compito in classe di matematica.",
+          "exTr": "Morgen schreiben wir eine Klassenarbeit in Mathe.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_concentrate",
+          "de": "Sich konzentrieren",
+          "x": "concentrarsi",
+          "ex": "Con il rumore faccio fatica a concentrarmi.",
+          "exTr": "Bei Lärm kann ich mich schlecht konzentrieren.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_learn_by_heart",
+          "de": "Auswendig lernen",
+          "x": "imparare a memoria",
+          "ex": "Dobbiamo imparare a memoria la poesia.",
+          "exTr": "Wir müssen das Gedicht auswendig lernen.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_degree",
+          "de": "Abschluss",
+          "x": "diploma",
+          "ex": "Dopo il diploma cerco un lavoro.",
+          "exTr": "Nach dem Abschluss suche ich eine Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_university_studies",
+          "de": "Studium",
+          "x": "studi universitari",
+          "ex": "In autunno inizia gli studi universitari.",
+          "exTr": "Sie beginnt im Herbst ihr Studium.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_presentation",
+          "de": "Referat",
+          "x": "relazione",
+          "ex": "Domani presento una relazione su Berlino.",
+          "exTr": "Morgen halte ich ein Referat über Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_notes",
+          "de": "Notizen",
+          "x": "appunti",
+          "ex": "Prendo appunti a lezione.",
+          "exTr": "Ich mache mir Notizen im Unterricht.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure_07",
+      "title": "Freizeit & Hobbys",
+      "icon": "🎨",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "leisure_07_hike",
+          "de": "Wandern",
+          "x": "fare escursioni",
+          "ex": "Nel fine settimana andiamo a fare escursioni in montagna.",
+          "exTr": "Am Wochenende gehen wir in den Bergen wandern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_fish",
+          "de": "Angeln",
+          "x": "pescare",
+          "ex": "A mio nonno piace andare a pescare al lago.",
+          "exTr": "Mein Opa geht gern am See angeln.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_do_crafts",
+          "de": "Basteln",
+          "x": "fare lavoretti",
+          "ex": "Ai bambini piace fare lavoretti con la carta.",
+          "exTr": "Die Kinder basteln gern mit Papier.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_paint",
+          "de": "Malen",
+          "x": "dipingere",
+          "ex": "Domenica vorrei dipingere qualcosa.",
+          "exTr": "Ich möchte am Sonntag etwas malen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_take_photos",
+          "de": "Fotografieren",
+          "x": "fotografare",
+          "ex": "In vacanza mi piace molto fotografare.",
+          "exTr": "Im Urlaub fotografiere ich sehr gern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_jog",
+          "de": "Joggen",
+          "x": "fare jogging",
+          "ex": "La mattina vado a fare jogging al parco.",
+          "exTr": "Morgens gehe ich im Park joggen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_club",
+          "de": "Verein",
+          "x": "associazione",
+          "ex": "Mio fratello fa parte di un'associazione sportiva.",
+          "exTr": "Mein Bruder ist in einem Sportverein.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_team",
+          "de": "Mannschaft",
+          "x": "squadra",
+          "ex": "Ieri la nostra squadra ha vinto.",
+          "exTr": "Unsere Mannschaft hat gestern gewonnen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_excursion",
+          "de": "Ausflug",
+          "x": "gita",
+          "ex": "Sabato facciamo una gita.",
+          "exTr": "Am Samstag machen wir einen Ausflug.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_concert",
+          "de": "Konzert",
+          "x": "concerto",
+          "ex": "Stasera andiamo a un concerto.",
+          "exTr": "Wir gehen heute Abend ins Konzert.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exhibition",
+          "de": "Ausstellung",
+          "x": "mostra",
+          "ex": "La mostra è aperta fino alla fine di maggio.",
+          "exTr": "Die Ausstellung ist bis Ende Mai geöffnet.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_collect",
+          "de": "Sammeln",
+          "x": "collezionare",
+          "ex": "Mio figlio ama collezionare vecchie monete.",
+          "exTr": "Mein Sohn sammelt gern alte Münzen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_knit",
+          "de": "Stricken",
+          "x": "lavorare a maglia",
+          "ex": "In inverno mia nonna lavora a maglia dei calzini.",
+          "exTr": "Meine Oma strickt im Winter Socken.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_board_game",
+          "de": "Brettspiel",
+          "x": "gioco da tavolo",
+          "ex": "Stasera giochiamo a un gioco da tavolo.",
+          "exTr": "Heute Abend spielen wir ein Brettspiel.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_garden",
+          "de": "Gärtnern",
+          "x": "fare giardinaggio",
+          "ex": "In primavera mi piace molto fare giardinaggio.",
+          "exTr": "Im Frühling gärtnere ich sehr gern.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_go_out",
+          "de": "Ausgehen",
+          "x": "uscire",
+          "ex": "Venerdì vogliamo uscire.",
+          "exTr": "Am Freitag wollen wir ausgehen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_event",
+          "de": "Veranstaltung",
+          "x": "evento",
+          "ex": "L'evento comincia alle otto.",
+          "exTr": "Die Veranstaltung beginnt um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_ticket",
+          "de": "Eintrittskarte",
+          "x": "biglietto d'ingresso",
+          "ex": "Il biglietto d'ingresso costa dieci euro.",
+          "exTr": "Die Eintrittskarte kostet zehn Euro.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_boring",
+          "de": "Langweilig",
+          "x": "noioso",
+          "ex": "Il film era piuttosto noioso.",
+          "exTr": "Der Film war ziemlich langweilig.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exciting",
+          "de": "Spannend",
+          "x": "avvincente",
+          "ex": "Il libro è incredibilmente avvincente.",
+          "exTr": "Das Buch ist unglaublich spannend.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooking_08",
+      "title": "Essen gehen & Kochen",
+      "icon": "🍳",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "cooking_08_menu",
+          "de": "Speisekarte",
+          "x": "menu",
+          "ex": "Possiamo avere il menu, per favore?",
+          "exTr": "Können wir bitte die Speisekarte haben?",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bill",
+          "de": "Rechnung",
+          "x": "conto",
+          "ex": "Il conto, per favore!",
+          "exTr": "Die Rechnung bitte!",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tip",
+          "de": "Trinkgeld",
+          "x": "mancia",
+          "ex": "Do due euro di mancia al cameriere.",
+          "exTr": "Ich gebe dem Kellner zwei Euro Trinkgeld.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_waiter",
+          "de": "Kellner",
+          "x": "cameriere",
+          "ex": "Il cameriere porta le bevande.",
+          "exTr": "Der Kellner bringt die Getränke.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_starter",
+          "de": "Vorspeise",
+          "x": "antipasto",
+          "ex": "Come antipasto prendo una zuppa.",
+          "exTr": "Als Vorspeise nehme ich eine Suppe.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_dessert",
+          "de": "Nachtisch",
+          "x": "dolce",
+          "ex": "Per dolce c'è il gelato.",
+          "exTr": "Zum Nachtisch gibt es Eis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_order",
+          "de": "Bestellen",
+          "x": "ordinare",
+          "ex": "Vorremmo ordinare ora.",
+          "exTr": "Wir möchten jetzt bestellen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_fry",
+          "de": "Braten",
+          "x": "friggere",
+          "ex": "La carne va fritta bene.",
+          "exTr": "Man muss das Fleisch gut braten.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bake",
+          "de": "Backen",
+          "x": "cuocere al forno",
+          "ex": "Nel fine settimana cuocio al forno una torta.",
+          "exTr": "Am Wochenende backe ich einen Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_cut",
+          "de": "Schneiden",
+          "x": "tagliare",
+          "ex": "Per favore, taglia le cipolle a pezzetti.",
+          "exTr": "Bitte schneide die Zwiebeln klein.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_stir",
+          "de": "Rühren",
+          "x": "mescolare",
+          "ex": "La salsa va mescolata di continuo.",
+          "exTr": "Die Soße muss man ständig rühren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_ingredient",
+          "de": "Zutat",
+          "x": "ingrediente",
+          "ex": "Per la ricetta manca ancora un ingrediente.",
+          "exTr": "Für das Rezept fehlt noch eine Zutat.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spoon",
+          "de": "Löffel",
+          "x": "cucchiaio",
+          "ex": "Mi serve un cucchiaio per la zuppa.",
+          "exTr": "Ich brauche einen Löffel für die Suppe.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_frying_pan",
+          "de": "Pfanne",
+          "x": "padella",
+          "ex": "La padella è già molto calda.",
+          "exTr": "Die Pfanne ist schon sehr heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_pot",
+          "de": "Topf",
+          "x": "pentola",
+          "ex": "Metti la pasta nella pentola, per favore.",
+          "exTr": "Gib die Nudeln bitte in den Topf.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_season",
+          "de": "Würzen",
+          "x": "condire",
+          "ex": "Non dimenticare di condire la zuppa.",
+          "exTr": "Vergiss nicht, die Suppe zu würzen.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tasty",
+          "de": "Lecker",
+          "x": "buono",
+          "ex": "La torta è davvero buona.",
+          "exTr": "Der Kuchen schmeckt richtig lecker.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spicy",
+          "de": "Scharf",
+          "x": "piccante",
+          "ex": "Il cibo era troppo piccante per me.",
+          "exTr": "Das Essen war mir zu scharf.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_reserve",
+          "de": "Reservieren",
+          "x": "prenotare",
+          "ex": "Vorrei prenotare un tavolo per quattro.",
+          "exTr": "Ich möchte einen Tisch für vier reservieren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spice",
+          "de": "Gewürz",
+          "x": "spezia",
+          "ex": "Questa spezia viene dall'India.",
+          "exTr": "Dieses Gewürz kommt aus Indien.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_09",
+      "title": "Verkehr & Unterwegs",
+      "icon": "🚆",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "transport_09_ticket",
+          "de": "Fahrkarte",
+          "x": "biglietto",
+          "ex": "Dove posso comprare un biglietto?",
+          "exTr": "Wo kann ich eine Fahrkarte kaufen?",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_timetable",
+          "de": "Fahrplan",
+          "x": "orario",
+          "ex": "Secondo l'orario il treno arriva alle dieci.",
+          "exTr": "Laut Fahrplan kommt der Zug um zehn.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_escalator",
+          "de": "Rolltreppe",
+          "x": "scala mobile",
+          "ex": "Prendi la scala mobile per salire al binario.",
+          "exTr": "Nimm bitte die Rolltreppe nach oben zum Bahnsteig.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_pedestrian",
+          "de": "Fußgänger",
+          "x": "pedone",
+          "ex": "I pedoni aspettano al semaforo rosso.",
+          "exTr": "Die Fußgänger warten an der roten Ampel.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_delay",
+          "de": "Verspätung",
+          "x": "ritardo",
+          "ex": "Il treno ha venti minuti di ritardo.",
+          "exTr": "Der Zug hat zwanzig Minuten Verspätung.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_platform",
+          "de": "Bahnsteig",
+          "x": "banchina",
+          "ex": "Il treno parte dalla banchina quattro.",
+          "exTr": "Der Zug fährt von Bahnsteig vier ab.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_track",
+          "de": "Gleis",
+          "x": "binario",
+          "ex": "Sul binario sette c'è l'ICE.",
+          "exTr": "Auf Gleis sieben steht der ICE.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_departure",
+          "de": "Abfahrt",
+          "x": "partenza",
+          "ex": "La partenza è alle sette e mezza.",
+          "exTr": "Die Abfahrt ist um halb acht.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_arrival",
+          "de": "Ankunft",
+          "x": "arrivo",
+          "ex": "Il nostro arrivo è alle dodici.",
+          "exTr": "Unsere Ankunft ist um zwölf Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_traffic_jam",
+          "de": "Stau",
+          "x": "ingorgo",
+          "ex": "In autostrada c'è un lungo ingorgo.",
+          "exTr": "Auf der Autobahn gibt es einen langen Stau.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driving_license",
+          "de": "Führerschein",
+          "x": "patente",
+          "ex": "A diciotto anni prenderò la patente.",
+          "exTr": "Mit achtzehn mache ich den Führerschein.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_refuel",
+          "de": "Tanken",
+          "x": "fare benzina",
+          "ex": "Dobbiamo ancora fare benzina.",
+          "exTr": "Wir müssen noch tanken.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_parking_space",
+          "de": "Parkplatz",
+          "x": "parcheggio",
+          "ex": "Qui non c'è nessun parcheggio libero.",
+          "exTr": "Hier gibt es keinen freien Parkplatz.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_conductor",
+          "de": "Schaffner",
+          "x": "controllore",
+          "ex": "Il controllore controlla tutti i biglietti sul treno.",
+          "exTr": "Der Schaffner kontrolliert im Zug alle Fahrkarten.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driver",
+          "de": "Fahrer",
+          "x": "autista",
+          "ex": "L'autista aspetta già davanti alla stazione.",
+          "exTr": "Der Fahrer wartet schon vor dem Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_turn",
+          "de": "Abbiegen",
+          "x": "girare",
+          "ex": "Qui non potete girare a sinistra.",
+          "exTr": "Hier dürfen Sie nicht links abbiegen.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_highway",
+          "de": "Autobahn",
+          "x": "autostrada",
+          "ex": "In autostrada si può andare veloci.",
+          "exTr": "Auf der Autobahn darf man schnell fahren.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_detour",
+          "de": "Umleitung",
+          "x": "deviazione",
+          "ex": "A causa del cantiere c'è una deviazione.",
+          "exTr": "Wegen der Baustelle gibt es eine Umleitung.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_connection",
+          "de": "Anschluss",
+          "x": "coincidenza",
+          "ex": "Purtroppo abbiamo perso la coincidenza.",
+          "exTr": "Wir haben den Anschluss leider verpasst.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_board",
+          "de": "Einsteigen",
+          "x": "salire",
+          "ex": "Salite dietro, per favore.",
+          "exTr": "Bitte steigen Sie hinten ein.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "household_10",
+      "title": "Wohnen & Haushalt",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "household_10_rent",
+          "de": "Miete",
+          "x": "affitto",
+          "ex": "L'affitto è dovuto ogni mese.",
+          "exTr": "Die Miete ist jeden Monat fällig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_landlord",
+          "de": "Vermieter",
+          "x": "padrone di casa",
+          "ex": "Il mio padrone di casa è molto gentile.",
+          "exTr": "Mein Vermieter ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_move_house",
+          "de": "Umziehen",
+          "x": "traslocare",
+          "ex": "Il mese prossimo dobbiamo traslocare.",
+          "exTr": "Nächsten Monat müssen wir umziehen.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_furniture",
+          "de": "Möbel",
+          "x": "mobili",
+          "ex": "Compriamo mobili nuovi per l'appartamento.",
+          "exTr": "Wir kaufen neue Möbel für die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_shelf",
+          "de": "Regal",
+          "x": "scaffale",
+          "ex": "Lo scaffale è appeso alla parete.",
+          "exTr": "Das Regal hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_mirror",
+          "de": "Spiegel",
+          "x": "specchio",
+          "ex": "Nel corridoio c'è appeso un grande specchio.",
+          "exTr": "Im Flur hängt ein großer Spiegel.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_carpet",
+          "de": "Teppich",
+          "x": "tappeto",
+          "ex": "Il tappeto nel corridoio è nuovo.",
+          "exTr": "Der Teppich im Flur ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_curtain",
+          "de": "Vorhang",
+          "x": "tenda",
+          "ex": "Chiudi la tenda, per favore.",
+          "exTr": "Zieh bitte den Vorhang zu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_heating",
+          "de": "Heizung",
+          "x": "riscaldamento",
+          "ex": "In inverno il riscaldamento è importante.",
+          "exTr": "Im Winter ist die Heizung wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_vacuum_cleaner",
+          "de": "Staubsauger",
+          "x": "aspirapolvere",
+          "ex": "Purtroppo l'aspirapolvere è rotto.",
+          "exTr": "Der Staubsauger ist leider kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_clean",
+          "de": "Putzen",
+          "x": "pulire",
+          "ex": "Il sabato puliamo l'appartamento.",
+          "exTr": "Am Samstag putzen wir die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_washing_machine",
+          "de": "Waschmaschine",
+          "x": "lavatrice",
+          "ex": "La lavatrice ha già finito.",
+          "exTr": "Die Waschmaschine ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_fridge",
+          "de": "Kühlschrank",
+          "x": "frigorifero",
+          "ex": "Il latte è nel frigorifero.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_trash_can",
+          "de": "Mülleimer",
+          "x": "pattumiera",
+          "ex": "Butta questo nella pattumiera, per favore.",
+          "exTr": "Wirf das bitte in den Mülleimer.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_balcony",
+          "de": "Balkon",
+          "x": "balcone",
+          "ex": "La sera ci piace sederci sul balcone.",
+          "exTr": "Abends sitzen wir gern auf dem Balkon.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_attic",
+          "de": "Dachboden",
+          "x": "soffitta",
+          "ex": "I vecchi mobili stanno in soffitta.",
+          "exTr": "Alte Möbel stehen auf dem Dachboden.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_hallway",
+          "de": "Flur",
+          "x": "corridoio",
+          "ex": "Nel corridoio sono appesi molti quadri.",
+          "exTr": "Im Flur hängen viele Bilder.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_power_outlet",
+          "de": "Steckdose",
+          "x": "presa",
+          "ex": "Purtroppo qui non c'è una presa.",
+          "exTr": "Hier ist leider keine Steckdose.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_utility_costs",
+          "de": "Nebenkosten",
+          "x": "spese condominiali",
+          "ex": "Le spese condominiali sono piuttosto alte.",
+          "exTr": "Die Nebenkosten sind ziemlich hoch.",
+          "difficulty": 3,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_repair",
+          "de": "Reparieren",
+          "x": "riparare",
+          "ex": "Mio padre può riparare la sedia.",
+          "exTr": "Mein Vater kann den Stuhl reparieren.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
           ]
         }
       ]

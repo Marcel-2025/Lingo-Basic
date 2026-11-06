@@ -13,6 +13,8 @@
           "id": "food_01_water",
           "de": "Wasser",
           "x": "acqua",
+          "ex": "Bevo molta acqua ogni giorno.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -22,6 +24,8 @@
           "id": "food_01_bread",
           "de": "Brot",
           "x": "pane",
+          "ex": "A colazione mangio il pane.",
+          "exTr": "Zum Frühstück esse ich Brot.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -31,6 +35,8 @@
           "id": "food_01_milk",
           "de": "Milch",
           "x": "latte",
+          "ex": "Il latte è in frigorifero.",
+          "exTr": "Die Milch steht im Kühlschrank.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -40,6 +46,8 @@
           "id": "food_01_coffee",
           "de": "Kaffee",
           "x": "caffè",
+          "ex": "La mattina mi piace bere il caffè.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -49,6 +57,8 @@
           "id": "food_01_tea",
           "de": "Tee",
           "x": "tè",
+          "ex": "Vuoi un tè?",
+          "exTr": "Möchtest du einen Tee?",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -58,6 +68,8 @@
           "id": "food_01_apple",
           "de": "Apfel",
           "x": "mela",
+          "ex": "La mela è rossa e dolce.",
+          "exTr": "Der Apfel ist rot und süß.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -67,6 +79,8 @@
           "id": "food_01_banana",
           "de": "Banane",
           "x": "banana",
+          "ex": "Mangio una banana.",
+          "exTr": "Ich esse eine Banane.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -76,6 +90,140 @@
           "id": "food_01_rice",
           "de": "Reis",
           "x": "riso",
+          "ex": "Con il pesce c'è il riso.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "formaggio",
+          "ex": "Mi piace il formaggio sul pane.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "uovo",
+          "ex": "A colazione mangio un uovo.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "carne",
+          "ex": "Lui non mangia carne.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "pesce",
+          "ex": "Oggi c'è pesce con riso.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "verdure",
+          "ex": "I bambini devono mangiare molte verdure.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "zuppa",
+          "ex": "La zuppa è ancora calda.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "sale",
+          "ex": "Per favore, passami il sale.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "zucchero",
+          "ex": "Non metto zucchero nel tè.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "succo",
+          "ex": "Lei beve un bicchiere di succo.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "birra",
+          "ex": "Lui ordina una birra.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "torta",
+          "ex": "La torta è molto buona.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "patata",
+          "ex": "Per cena ci sono le patate.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -93,6 +241,8 @@
           "id": "travel_02_airport",
           "de": "Flughafen",
           "x": "aeroporto",
+          "ex": "Andiamo in aeroporto.",
+          "exTr": "Wir fahren zum Flughafen.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -101,7 +251,9 @@
         {
           "id": "travel_02_train_station",
           "de": "Bahnhof",
-          "x": "stazione ferroviaria",
+          "x": "stazione",
+          "ex": "La stazione non è lontana.",
+          "exTr": "Der Bahnhof ist nicht weit.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -111,6 +263,8 @@
           "id": "travel_02_ticket",
           "de": "Ticket",
           "x": "biglietto",
+          "ex": "Mi serve un biglietto per Berlino.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -120,6 +274,8 @@
           "id": "travel_02_hotel",
           "de": "Hotel",
           "x": "hotel",
+          "ex": "Il nostro hotel è sulla spiaggia.",
+          "exTr": "Unser Hotel liegt am Strand.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -129,6 +285,8 @@
           "id": "travel_02_street",
           "de": "Straße",
           "x": "strada",
+          "ex": "La strada è molto rumorosa.",
+          "exTr": "Die Straße ist sehr laut.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -138,6 +296,8 @@
           "id": "travel_02_map",
           "de": "Karte",
           "x": "mappa",
+          "ex": "Hai una mappa della città?",
+          "exTr": "Hast du eine Karte der Stadt?",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -147,6 +307,8 @@
           "id": "travel_02_suitcase",
           "de": "Koffer",
           "x": "valigia",
+          "ex": "La mia valigia è troppo pesante.",
+          "exTr": "Mein Koffer ist zu schwer.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -156,6 +318,140 @@
           "id": "travel_02_passport",
           "de": "Pass",
           "x": "passaporto",
+          "ex": "Non dimenticare il passaporto!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "treno",
+          "ex": "Il treno arriva alle otto.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "autobus",
+          "ex": "Vado al lavoro in autobus.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "macchina",
+          "ex": "La mia macchina è nuova.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "aereo",
+          "ex": "L'aereo sta per atterrare.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "bicicletta",
+          "ex": "Mi piace andare in bicicletta.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "viaggio",
+          "ex": "Il viaggio dura tre ore.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "città",
+          "ex": "Berlino è una grande città.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "paese",
+          "ex": "In quale paese vivi?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taxi",
+          "ex": "Prendiamo un taxi per l'hotel.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagaglio",
+          "ex": "Dov'è il mio bagaglio?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "fermata",
+          "ex": "La fermata è lì davanti.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "vacanza",
+          "ex": "In estate andiamo in vacanza.",
+          "exTr": "Wir machen im Sommer Urlaub.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -173,6 +469,8 @@
           "id": "home_03_house",
           "de": "Haus",
           "x": "casa",
+          "ex": "La casa ha un giardino.",
+          "exTr": "Das Haus hat einen Garten.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -182,6 +480,8 @@
           "id": "home_03_room",
           "de": "Zimmer",
           "x": "stanza",
+          "ex": "La mia stanza è piccola.",
+          "exTr": "Mein Zimmer ist klein.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -191,6 +491,8 @@
           "id": "home_03_kitchen",
           "de": "Küche",
           "x": "cucina",
+          "ex": "Cuciniamo in cucina.",
+          "exTr": "Wir kochen in der Küche.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -200,6 +502,8 @@
           "id": "home_03_bathroom",
           "de": "Badezimmer",
           "x": "bagno",
+          "ex": "Il bagno è a sinistra.",
+          "exTr": "Das Badezimmer ist links.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -209,6 +513,8 @@
           "id": "home_03_window",
           "de": "Fenster",
           "x": "finestra",
+          "ex": "Per favore, apri la finestra.",
+          "exTr": "Bitte mach das Fenster auf.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -218,6 +524,8 @@
           "id": "home_03_door",
           "de": "Tür",
           "x": "porta",
+          "ex": "La porta è chiusa.",
+          "exTr": "Die Tür ist zu.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -227,6 +535,8 @@
           "id": "home_03_table",
           "de": "Tisch",
           "x": "tavolo",
+          "ex": "Il tavolo è di legno.",
+          "exTr": "Der Tisch ist aus Holz.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -236,6 +546,140 @@
           "id": "home_03_chair",
           "de": "Stuhl",
           "x": "sedia",
+          "ex": "Siediti sulla sedia.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "letto",
+          "ex": "Il letto è molto comodo.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "divano",
+          "ex": "Siamo seduti sul divano.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lampada",
+          "ex": "La lampada è sul tavolo.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "chiave",
+          "ex": "Ho perso la mia chiave.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "appartamento",
+          "ex": "Il mio appartamento ha tre stanze.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "giardino",
+          "ex": "Nel giardino crescono i fiori.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "parete",
+          "ex": "Il quadro è appeso alla parete.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "doccia",
+          "ex": "Faccio la doccia ogni mattina.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "armadio",
+          "ex": "I vestiti sono nell'armadio.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "cantina",
+          "ex": "La bicicletta è in cantina.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "scale",
+          "ex": "Le scale sono molto ripide.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "soggiorno",
+          "ex": "Il soggiorno è grande e luminoso.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -253,6 +697,8 @@
           "id": "work_04_work",
           "de": "Arbeit",
           "x": "lavoro",
+          "ex": "Il lavoro inizia alle nove.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -262,6 +708,8 @@
           "id": "work_04_office",
           "de": "Büro",
           "x": "ufficio",
+          "ex": "Oggi sono in ufficio.",
+          "exTr": "Ich bin heute im Büro.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -271,6 +719,8 @@
           "id": "work_04_boss",
           "de": "Chef",
           "x": "capo",
+          "ex": "Il mio capo è molto gentile.",
+          "exTr": "Mein Chef ist sehr nett.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -280,6 +730,8 @@
           "id": "work_04_colleague",
           "de": "Kollege",
           "x": "collega",
+          "ex": "Il mio collega mi aiuta spesso.",
+          "exTr": "Mein Kollege hilft mir oft.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -289,6 +741,8 @@
           "id": "work_04_meeting",
           "de": "Meeting",
           "x": "riunione",
+          "ex": "La riunione dura un'ora.",
+          "exTr": "Das Meeting dauert eine Stunde.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -298,6 +752,8 @@
           "id": "work_04_project",
           "de": "Projekt",
           "x": "progetto",
+          "ex": "Abbiamo un nuovo progetto.",
+          "exTr": "Wir haben ein neues Projekt.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -307,6 +763,8 @@
           "id": "work_04_email",
           "de": "E-Mail",
           "x": "e-mail",
+          "ex": "Ti scrivo un'e-mail.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -316,6 +774,140 @@
           "id": "work_04_break",
           "de": "Pause",
           "x": "pausa",
+          "ex": "Adesso facciamo una pausa.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "azienda",
+          "ex": "Lui lavora in una grande azienda.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "stipendio",
+          "ex": "Lo stipendio arriva a fine mese.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "insegnante",
+          "ex": "L'insegnante spiega l'esercizio.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "scuola",
+          "ex": "I bambini vanno a scuola.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "alunno",
+          "ex": "L'alunno fa i compiti.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "penna",
+          "ex": "Hai una penna per me?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "carta",
+          "ex": "Mi serve un foglio di carta.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "stampante",
+          "ex": "La stampante in ufficio è rotta.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "telefono",
+          "ex": "Il mio telefono squilla.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "computer",
+          "ex": "Il computer è molto veloce.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "professione",
+          "ex": "Qual è la tua professione?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "errore",
+          "ex": "Ho fatto un errore.",
+          "exTr": "Ich habe einen Fehler gemacht.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -333,6 +925,8 @@
           "id": "health_05_doctor",
           "de": "Arzt",
           "x": "medico",
+          "ex": "Devo andare dal medico.",
+          "exTr": "Ich muss zum Arzt gehen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -342,6 +936,8 @@
           "id": "health_05_hospital",
           "de": "Krankenhaus",
           "x": "ospedale",
+          "ex": "Lui è in ospedale.",
+          "exTr": "Er liegt im Krankenhaus.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -351,6 +947,8 @@
           "id": "health_05_medicine",
           "de": "Medizin",
           "x": "medicina",
+          "ex": "Prendi la medicina tre volte al giorno.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -360,6 +958,8 @@
           "id": "health_05_pain",
           "de": "Schmerz",
           "x": "dolore",
+          "ex": "Ho un forte dolore.",
+          "exTr": "Ich habe starke Schmerzen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -369,6 +969,8 @@
           "id": "health_05_fever",
           "de": "Fieber",
           "x": "febbre",
+          "ex": "Il bambino ha la febbre.",
+          "exTr": "Das Kind hat Fieber.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -378,6 +980,8 @@
           "id": "health_05_help",
           "de": "Hilfe",
           "x": "aiuto",
+          "ex": "Ho bisogno di aiuto!",
+          "exTr": "Ich brauche Hilfe!",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -387,6 +991,8 @@
           "id": "health_05_appointment",
           "de": "Termin",
           "x": "appuntamento",
+          "ex": "Domani ho un appuntamento.",
+          "exTr": "Ich habe morgen einen Termin.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -396,6 +1002,140 @@
           "id": "health_05_prescription",
           "de": "Rezept",
           "x": "ricetta",
+          "ex": "Il medico scrive una ricetta.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "tosse",
+          "ex": "Ho la tosse da giorni.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "raffreddore",
+          "ex": "Lui ha un forte raffreddore.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "farmacia",
+          "ex": "La farmacia è qui dietro l'angolo.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "dentista",
+          "ex": "Domani vado dal dentista.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "salute",
+          "ex": "La salute è molto importante.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "malattia",
+          "ex": "La malattia dura una settimana.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "emergenza",
+          "ex": "Questa è un'emergenza!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulanza",
+          "ex": "L'ambulanza arriva subito.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "pastiglia",
+          "ex": "Prendo una pastiglia ogni giorno.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "cerotto",
+          "ex": "Mi serve un cerotto.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "sonno",
+          "ex": "Un sonno sufficiente è importante.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "paziente",
+          "ex": "Il paziente aspetta nella stanza.",
+          "exTr": "Der Patient wartet im Zimmer.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -413,6 +1153,8 @@
           "id": "shopping_06_shop",
           "de": "Laden",
           "x": "negozio",
+          "ex": "Il negozio è aperto fino alle otto.",
+          "exTr": "Der Laden ist bis acht offen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -422,6 +1164,8 @@
           "id": "shopping_06_price",
           "de": "Preis",
           "x": "prezzo",
+          "ex": "Il prezzo è molto buono.",
+          "exTr": "Der Preis ist sehr gut.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -430,7 +1174,9 @@
         {
           "id": "shopping_06_money",
           "de": "Geld",
-          "x": "denaro",
+          "x": "soldi",
+          "ex": "Non ho soldi con me.",
+          "exTr": "Ich habe kein Geld dabei.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -440,6 +1186,8 @@
           "id": "shopping_06_checkout",
           "de": "Kasse",
           "x": "cassa",
+          "ex": "Pagate alla cassa, per favore.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -449,6 +1197,8 @@
           "id": "shopping_06_discount",
           "de": "Rabatt",
           "x": "sconto",
+          "ex": "Oggi c'è il dieci per cento di sconto.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -458,6 +1208,8 @@
           "id": "shopping_06_customer",
           "de": "Kunde",
           "x": "cliente",
+          "ex": "Il cliente aspetta alla cassa.",
+          "exTr": "Der Kunde wartet an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -467,6 +1219,8 @@
           "id": "shopping_06_seller",
           "de": "Verkäufer",
           "x": "venditore",
+          "ex": "Il venditore è molto cordiale.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -475,8 +1229,142 @@
         {
           "id": "shopping_06_bag",
           "de": "Tüte",
-          "x": "borsa",
+          "x": "sacchetto",
+          "ex": "Le serve un sacchetto?",
+          "exTr": "Brauchen Sie eine Tüte?",
           "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermercato",
+          "ex": "Vado al supermercato.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "lista della spesa",
+          "ex": "Scrivo una lista della spesa per domani.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "Costa dieci euro.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "centesimo",
+          "ex": "Costa solo cinquanta centesimi.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "carta di credito",
+          "ex": "Posso pagare con la carta di credito?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "ricevuta",
+          "ex": "Vorrei una ricevuta, per favore.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "offerta",
+          "ex": "L'offerta vale solo oggi.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "taglia",
+          "ex": "Che taglia porta?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "carrello",
+          "ex": "Mi serve un carrello.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "panetteria",
+          "ex": "In panetteria compro i panini.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "bottiglia",
+          "ex": "Una bottiglia d'acqua, per favore.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "regalo",
+          "ex": "Il regalo è per te.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
           "tags": [
             "einkaufen"
           ]
@@ -493,6 +1381,8 @@
           "id": "family_07_mother",
           "de": "Mutter",
           "x": "madre",
+          "ex": "Mia madre cucina molto bene.",
+          "exTr": "Meine Mutter kocht sehr gut.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -502,6 +1392,8 @@
           "id": "family_07_father",
           "de": "Vater",
           "x": "padre",
+          "ex": "Mio padre lavora in ufficio.",
+          "exTr": "Mein Vater arbeitet im Büro.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -511,6 +1403,8 @@
           "id": "family_07_brother",
           "de": "Bruder",
           "x": "fratello",
+          "ex": "Mio fratello ha dieci anni.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -520,6 +1414,8 @@
           "id": "family_07_sister",
           "de": "Schwester",
           "x": "sorella",
+          "ex": "Mia sorella vive a Vienna.",
+          "exTr": "Meine Schwester wohnt in Wien.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -529,6 +1425,8 @@
           "id": "family_07_friend",
           "de": "Freund",
           "x": "amico",
+          "ex": "Lui è il mio migliore amico.",
+          "exTr": "Er ist mein bester Freund.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -538,6 +1436,8 @@
           "id": "family_07_child",
           "de": "Kind",
           "x": "bambino",
+          "ex": "Il bambino gioca in giardino.",
+          "exTr": "Das Kind spielt im Garten.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -547,6 +1447,8 @@
           "id": "family_07_family",
           "de": "Familie",
           "x": "famiglia",
+          "ex": "La mia famiglia è grande.",
+          "exTr": "Meine Familie ist groß.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -556,7 +1458,141 @@
           "id": "family_07_name",
           "de": "Name",
           "x": "nome",
+          "ex": "Qual è il tuo nome?",
+          "exTr": "Wie ist dein Name?",
           "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "genitori",
+          "ex": "I miei genitori vivono ad Amburgo.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "figlio",
+          "ex": "Suo figlio va a scuola.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "figlia",
+          "ex": "Sua figlia ha cinque anni.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "nonna",
+          "ex": "A mia nonna piace fare le torte.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "nonno",
+          "ex": "Mio nonno legge il giornale.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "uomo",
+          "ex": "L'uomo porta un cappello.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "donna",
+          "ex": "La donna aspetta alla stazione.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "bebè",
+          "ex": "Il bebè dorme nel letto.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "zio",
+          "ex": "Mio zio vive a Berlino.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "zia",
+          "ex": "Domani mia zia ci viene a trovare.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "vicino",
+          "ex": "Il mio vicino è molto gentile.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "ospite",
+          "ex": "L'ospite arriva alle sette.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
           "tags": [
             "familie_freunde"
           ]
@@ -573,6 +1609,8 @@
           "id": "time_08_today",
           "de": "Heute",
           "x": "oggi",
+          "ex": "Oggi splende il sole.",
+          "exTr": "Heute scheint die Sonne.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -582,6 +1620,8 @@
           "id": "time_08_tomorrow",
           "de": "Morgen",
           "x": "domani",
+          "ex": "Domani sono libero.",
+          "exTr": "Morgen habe ich frei.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -591,6 +1631,8 @@
           "id": "time_08_yesterday",
           "de": "Gestern",
           "x": "ieri",
+          "ex": "Ieri sono stato al cinema.",
+          "exTr": "Gestern war ich im Kino.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -600,6 +1642,8 @@
           "id": "time_08_week",
           "de": "Woche",
           "x": "settimana",
+          "ex": "La settimana ha sette giorni.",
+          "exTr": "Die Woche hat sieben Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -609,6 +1653,8 @@
           "id": "time_08_month",
           "de": "Monat",
           "x": "mese",
+          "ex": "Il mese ha trenta giorni.",
+          "exTr": "Der Monat hat dreißig Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -618,6 +1664,8 @@
           "id": "time_08_year",
           "de": "Jahr",
           "x": "anno",
+          "ex": "Un anno ha dodici mesi.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -627,6 +1675,8 @@
           "id": "time_08_to_learn",
           "de": "Lernen",
           "x": "imparare",
+          "ex": "Voglio imparare il tedesco.",
+          "exTr": "Ich möchte Deutsch lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -636,9 +1686,599 @@
           "id": "time_08_language",
           "de": "Sprache",
           "x": "lingua",
+          "ex": "Il tedesco è una bella lingua.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "orologio",
+          "ex": "L'orologio è appeso alla parete.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "ora",
+          "ex": "La lezione dura un'ora.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minuto",
+          "ex": "Aspetta un minuto, per favore.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "giorno",
+          "ex": "Un giorno ha ventiquattro ore.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "notte",
+          "ex": "Di notte è buio.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "sera",
+          "ex": "La sera guardiamo la tv.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "lunedì",
+          "ex": "Lunedì comincia la scuola.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "fine settimana",
+          "ex": "Nel fine settimana andiamo via.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "libro",
+          "ex": "Sto leggendo un libro avvincente.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "domanda",
+          "ex": "Ho una domanda.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "risposta",
+          "ex": "La risposta è giusta.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "parola",
+          "ex": "Questa parola non la conosco.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "zero",
+          "ex": "Il risultato è zero.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "uno",
+          "ex": "Uno più uno fa due.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "due",
+          "ex": "Ho due fratelli.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "tre",
+          "ex": "Siamo in tre.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "quattro",
+          "ex": "La macchina ha quattro ruote.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "cinque",
+          "ex": "Sono in ritardo di cinque minuti.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "sei",
+          "ex": "Sono le sei.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "sette",
+          "ex": "La settimana ha sette giorni.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "dieci",
+          "ex": "Il libro costa dieci euro.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "cento",
+          "ex": "La casa ha cento anni.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "rosso",
+          "ex": "Il pomodoro è rosso.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "blu",
+          "ex": "Oggi il cielo è blu.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "verde",
+          "ex": "L'erba è verde.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "giallo",
+          "ex": "Il sole è giallo.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "nero",
+          "ex": "Il mio gatto è nero.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "bianco",
+          "ex": "La neve è bianca.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "cerchio",
+          "ex": "Disegna un cerchio, per favore.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "quadrato",
+          "ex": "La finestra è un quadrato.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "triangolo",
+          "ex": "Il segnale stradale è un triangolo.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "linea",
+          "ex": "Disegna una linea retta.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "testa",
+          "ex": "Mi fa male la testa.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "mano",
+          "ex": "Dammi la mano.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "piede",
+          "ex": "Il mio piede è freddo.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "braccio",
+          "ex": "Si è rotto il braccio.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "gamba",
+          "ex": "Mi fa male la gamba.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "occhio",
+          "ex": "Ha un occhio azzurro.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "orecchio",
+          "ex": "Il bambino ha un orecchio freddo.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "naso",
+          "ex": "Ho il naso chiuso.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "bocca",
+          "ex": "Apri la bocca, per favore.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "capelli",
+          "ex": "Ha i capelli lunghi e castani.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "pancia",
+          "ex": "Mi fa male la pancia.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "schiena",
+          "ex": "Ho dolore alla schiena.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "camicia",
+          "ex": "Indossa una camicia bianca.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "pantaloni",
+          "ex": "I pantaloni sono troppo piccoli.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "giacca",
+          "ex": "Mettiti la giacca.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "scarpe",
+          "ex": "Le mie scarpe sono nuove.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "vestito",
+          "ex": "Indossa un vestito rosso.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "berretto",
+          "ex": "In inverno porto un berretto.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "calzini",
+          "ex": "I miei calzini sono caldi.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "maglione",
+          "ex": "Il maglione è di lana.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
           ]
         }
       ]

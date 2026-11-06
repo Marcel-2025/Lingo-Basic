@@ -13,6 +13,8 @@
           "id": "daily_01_wake_up",
           "de": "Aufwachen",
           "x": "просыпаться",
+          "ex": "Завтра мне нужно рано просыпаться.",
+          "exTr": "Ich muss morgen früh aufwachen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -22,6 +24,8 @@
           "id": "daily_01_have_breakfast",
           "de": "Frühstücken",
           "x": "завтракать",
+          "ex": "В воскресенье я хочу долго завтракать.",
+          "exTr": "Am Sonntag will ich lange frühstücken.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -31,6 +35,8 @@
           "id": "daily_01_get_dressed",
           "de": "Sich anziehen",
           "x": "одеваться",
+          "ex": "Мне нужно быстро одеваться.",
+          "exTr": "Ich muss mich schnell anziehen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -40,6 +46,8 @@
           "id": "daily_01_cook",
           "de": "Kochen",
           "x": "готовить",
+          "ex": "Вечером мы готовим вместе.",
+          "exTr": "Abends kochen wir zusammen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -49,6 +57,8 @@
           "id": "daily_01_tidy_up",
           "de": "Aufräumen",
           "x": "убирать",
+          "ex": "После вечеринки нам нужно убирать.",
+          "exTr": "Nach der Party müssen wir aufräumen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -58,7 +68,163 @@
           "id": "daily_01_rest",
           "de": "Sich ausruhen",
           "x": "отдыхать",
+          "ex": "После работы я хочу отдыхать.",
+          "exTr": "Nach der Arbeit möchte ich mich ausruhen.",
           "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_take_a_shower",
+          "de": "Duschen",
+          "x": "принимать душ",
+          "ex": "Я хочу быстро принять душ.",
+          "exTr": "Ich möchte kurz duschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_brush_teeth",
+          "de": "Zähne putzen",
+          "x": "чистить зубы",
+          "ex": "Перед сном мне нужно чистить зубы.",
+          "exTr": "Vor dem Schlafen muss ich Zähne putzen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_hurry",
+          "de": "Sich beeilen",
+          "x": "торопиться",
+          "ex": "Нам нужно торопиться, иначе мы опоздаем на автобус.",
+          "exTr": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_do_laundry",
+          "de": "Wäsche waschen",
+          "x": "стирать бельё",
+          "ex": "В субботу мне нужно стирать бельё.",
+          "exTr": "Am Samstag muss ich Wäsche waschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_wash_the_dishes",
+          "de": "Abwaschen",
+          "x": "мыть посуду",
+          "ex": "Кто сегодня хочет мыть посуду?",
+          "exTr": "Wer will heute abwaschen?",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_fall_asleep",
+          "de": "Einschlafen",
+          "x": "засыпать",
+          "ex": "Вечером я плохо засыпаю.",
+          "exTr": "Ich kann abends schlecht einschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_oversleep",
+          "de": "Verschlafen",
+          "x": "проспать",
+          "ex": "Сегодня я, к сожалению, проспал.",
+          "exTr": "Heute habe ich leider verschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_alarm_clock",
+          "de": "Wecker",
+          "x": "будильник",
+          "ex": "Мой будильник звонит в шесть часов.",
+          "exTr": "Mein Wecker klingelt um sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_habit",
+          "de": "Gewohnheit",
+          "x": "привычка",
+          "ex": "Кофе по утрам — моя привычка.",
+          "exTr": "Kaffee am Morgen ist meine Gewohnheit.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch_break",
+          "de": "Mittagspause",
+          "x": "обеденный перерыв",
+          "ex": "В обеденный перерыв я гуляю.",
+          "exTr": "In der Mittagspause gehe ich spazieren.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_end_of_workday",
+          "de": "Feierabend",
+          "x": "конец рабочего дня",
+          "ex": "В пять часов у меня конец рабочего дня.",
+          "exTr": "Um fünf Uhr habe ich Feierabend.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch",
+          "de": "Mittagessen",
+          "x": "обед",
+          "ex": "Обед будет готов в двенадцать часов.",
+          "exTr": "Das Mittagessen ist um zwölf Uhr fertig.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_be_late",
+          "de": "Sich verspäten",
+          "x": "опаздывать",
+          "ex": "К сожалению, я немного опоздаю.",
+          "exTr": "Leider werde ich mich etwas verspäten.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_commute",
+          "de": "Pendeln",
+          "x": "ездить на работу",
+          "ex": "Мне приходится каждый день ездить на работу целый час.",
+          "exTr": "Ich muss jeden Tag eine Stunde pendeln.",
+          "difficulty": 3,
           "tags": [
             "tagesablauf"
           ]
@@ -75,6 +241,8 @@
           "id": "city_02_intersection",
           "de": "Kreuzung",
           "x": "перекрёсток",
+          "ex": "На перекрёстке тебе нужно повернуть налево.",
+          "exTr": "An der Kreuzung musst du links abbiegen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -84,6 +252,8 @@
           "id": "city_02_traffic_light",
           "de": "Ampel",
           "x": "светофор",
+          "ex": "Светофор сейчас красный.",
+          "exTr": "Die Ampel ist gerade rot.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -93,6 +263,8 @@
           "id": "city_02_pavement",
           "de": "Bürgersteig",
           "x": "тротуар",
+          "ex": "Дети играют на тротуаре.",
+          "exTr": "Kinder spielen auf dem Bürgersteig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -102,6 +274,8 @@
           "id": "city_02_neighborhood",
           "de": "Nachbarschaft",
           "x": "район",
+          "ex": "Наш район очень тихий.",
+          "exTr": "Unsere Nachbarschaft ist sehr ruhig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -111,6 +285,8 @@
           "id": "city_02_library",
           "de": "Bücherei",
           "x": "библиотека",
+          "ex": "В библиотеке можно брать книги.",
+          "exTr": "In der Bücherei kann man Bücher leihen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -120,7 +296,163 @@
           "id": "city_02_market",
           "de": "Markt",
           "x": "рынок",
+          "ex": "По субботам я покупаю фрукты на рынке.",
+          "exTr": "Samstags kaufe ich Obst auf dem Markt.",
           "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_town_hall",
+          "de": "Rathaus",
+          "x": "ратуша",
+          "ex": "Ратуша стоит в центре города.",
+          "exTr": "Das Rathaus steht mitten in der Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_fountain",
+          "de": "Brunnen",
+          "x": "фонтан",
+          "ex": "Мы встречаемся у фонтана в три часа.",
+          "exTr": "Vor dem Brunnen treffen wir uns um drei.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_monument",
+          "de": "Denkmal",
+          "x": "памятник",
+          "ex": "Памятник напоминает об известном поэте.",
+          "exTr": "Das Denkmal erinnert an einen berühmten Dichter.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pedestrian_zone",
+          "de": "Fußgängerzone",
+          "x": "пешеходная зона",
+          "ex": "В пешеходной зоне много магазинов.",
+          "exTr": "In der Fußgängerzone gibt es viele Geschäfte.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_playground",
+          "de": "Spielplatz",
+          "x": "детская площадка",
+          "ex": "Детская площадка находится рядом со школой.",
+          "exTr": "Der Spielplatz ist neben der Schule.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_bridge",
+          "de": "Brücke",
+          "x": "мост",
+          "ex": "Мост ведёт через реку.",
+          "exTr": "Die Brücke führt über den Fluss.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_post_office",
+          "de": "Postamt",
+          "x": "почта",
+          "ex": "Мне нужно отнести посылку на почту.",
+          "exTr": "Ich muss ein Paket zum Postamt bringen.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_map",
+          "de": "Stadtplan",
+          "x": "план города",
+          "ex": "Без плана города я не найду дорогу.",
+          "exTr": "Ohne Stadtplan finde ich den Weg nicht.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_tourist_attraction",
+          "de": "Sehenswürdigkeit",
+          "x": "достопримечательность",
+          "ex": "Собор — самая важная достопримечательность.",
+          "exTr": "Der Dom ist die wichtigste Sehenswürdigkeit.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_center",
+          "de": "Innenstadt",
+          "x": "центр города",
+          "ex": "В выходные центр города очень многолюден.",
+          "exTr": "Die Innenstadt ist am Wochenende sehr voll.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_suburb",
+          "de": "Vorort",
+          "x": "пригород",
+          "ex": "Мои родители живут в тихом пригороде.",
+          "exTr": "Meine Eltern wohnen in einem ruhigen Vorort.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_high_rise_building",
+          "de": "Hochhaus",
+          "x": "высотное здание",
+          "ex": "В высотном здании живёт больше ста семей.",
+          "exTr": "Im Hochhaus wohnen über hundert Familien.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_construction_site",
+          "de": "Baustelle",
+          "x": "стройка",
+          "ex": "Из-за стройки улица закрыта.",
+          "exTr": "Wegen der Baustelle ist die Straße gesperrt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_street_lamp",
+          "de": "Straßenlaterne",
+          "x": "уличный фонарь",
+          "ex": "Уличный фонарь перед домом сломан.",
+          "exTr": "Die Straßenlaterne vor dem Haus ist kaputt.",
+          "difficulty": 3,
           "tags": [
             "stadt_nachbarschaft"
           ]
@@ -137,6 +469,8 @@
           "id": "communication_03_ask",
           "de": "Fragen",
           "x": "спрашивать",
+          "ex": "Можно тебя кое о чём спросить?",
+          "exTr": "Darf ich dich etwas fragen?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -146,6 +480,8 @@
           "id": "communication_03_answer",
           "de": "Antworten",
           "x": "отвечать",
+          "ex": "Пожалуйста, ответьте до завтра.",
+          "exTr": "Bitte antworten Sie bis morgen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -155,6 +491,8 @@
           "id": "communication_03_explain",
           "de": "Erklären",
           "x": "объяснять",
+          "ex": "Ты можешь объяснить мне эту игру?",
+          "exTr": "Kannst du mir das Spiel erklären?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -164,6 +502,8 @@
           "id": "communication_03_agree",
           "de": "Zustimmen",
           "x": "соглашаться",
+          "ex": "Я могу только согласиться с тобой.",
+          "exTr": "Ich kann dir da nur zustimmen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -173,6 +513,8 @@
           "id": "communication_03_reject",
           "de": "Ablehnen",
           "x": "отклонять",
+          "ex": "К сожалению, ей пришлось отклонить предложение.",
+          "exTr": "Sie musste das Angebot leider ablehnen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -182,6 +524,162 @@
           "id": "communication_03_repeat",
           "de": "Wiederholen",
           "x": "повторять",
+          "ex": "Не могли бы вы повторить это, пожалуйста?",
+          "exTr": "Können Sie das bitte wiederholen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_tell",
+          "de": "Erzählen",
+          "x": "рассказывать",
+          "ex": "Он хочет рассказать нам о поездке.",
+          "exTr": "Er will uns von der Reise erzählen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_suggest",
+          "de": "Vorschlagen",
+          "x": "предлагать",
+          "ex": "Я хочу предложить место встречи.",
+          "exTr": "Ich möchte einen Treffpunkt vorschlagen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_contradict",
+          "de": "Widersprechen",
+          "x": "возражать",
+          "ex": "К сожалению, я должен тебе возразить.",
+          "exTr": "Ich muss dir leider widersprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_discuss",
+          "de": "Diskutieren",
+          "x": "обсуждать",
+          "ex": "Мы часто обсуждаем политику.",
+          "exTr": "Wir diskutieren oft über Politik.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_inform",
+          "de": "Mitteilen",
+          "x": "сообщать",
+          "ex": "Я хочу вам кое-что сообщить.",
+          "exTr": "Ich möchte Ihnen etwas mitteilen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_apologize",
+          "de": "Sich entschuldigen",
+          "x": "извиняться",
+          "ex": "Он хотел извиниться перед ней.",
+          "exTr": "Er wollte sich bei ihr entschuldigen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_invite",
+          "de": "Einladen",
+          "x": "приглашать",
+          "ex": "Я хочу пригласить тебя на мою вечеринку.",
+          "exTr": "Ich möchte dich zu meiner Party einladen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_promise",
+          "de": "Versprechen",
+          "x": "обещать",
+          "ex": "Я могу тебе это твёрдо обещать.",
+          "exTr": "Ich kann dir das fest versprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_listen",
+          "de": "Zuhören",
+          "x": "слушать",
+          "ex": "Хорошо слушать очень важно.",
+          "exTr": "Gut zuhören ist sehr wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_message",
+          "de": "Nachricht",
+          "x": "сообщение",
+          "ex": "Я написал тебе сообщение.",
+          "exTr": "Ich habe dir eine Nachricht geschrieben.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_conversation",
+          "de": "Gespräch",
+          "x": "разговор",
+          "ex": "Разговор с начальником был дружелюбным.",
+          "exTr": "Das Gespräch mit dem Chef war freundlich.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_letter",
+          "de": "Brief",
+          "x": "письмо",
+          "ex": "Я написал бабушке письмо.",
+          "exTr": "Ich habe meiner Oma einen Brief geschrieben.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_misunderstanding",
+          "de": "Missverständnis",
+          "x": "недоразумение",
+          "ex": "Это было всего лишь небольшое недоразумение.",
+          "exTr": "Das war nur ein kleines Missverständnis.",
+          "difficulty": 3,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_call",
+          "de": "Anrufen",
+          "x": "звонить",
+          "ex": "Я позвоню тебе сегодня вечером.",
+          "exTr": "Ich werde dich heute Abend anrufen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -199,6 +697,8 @@
           "id": "nature_04_weather",
           "de": "Wetter",
           "x": "погода",
+          "ex": "Сегодня чудесная погода.",
+          "exTr": "Das Wetter ist heute wunderbar.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -208,6 +708,8 @@
           "id": "nature_04_cloud",
           "de": "Wolke",
           "x": "облако",
+          "ex": "Тёмное облако стоит над горой.",
+          "exTr": "Eine dunkle Wolke steht über dem Berg.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -217,6 +719,8 @@
           "id": "nature_04_wind",
           "de": "Wind",
           "x": "ветер",
+          "ex": "Сегодня дует сильный ветер.",
+          "exTr": "Heute weht ein starker Wind.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -226,6 +730,8 @@
           "id": "nature_04_forest",
           "de": "Wald",
           "x": "лес",
+          "ex": "Мы гуляем по лесу.",
+          "exTr": "Wir machen einen Spaziergang im Wald.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -235,6 +741,8 @@
           "id": "nature_04_river",
           "de": "Fluss",
           "x": "река",
+          "ex": "Река течёт через весь город.",
+          "exTr": "Der Fluss fließt durch die ganze Stadt.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -244,6 +752,162 @@
           "id": "nature_04_mountain",
           "de": "Berg",
           "x": "гора",
+          "ex": "На горе ещё лежит снег.",
+          "exTr": "Auf dem Berg liegt noch Schnee.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_thunderstorm",
+          "de": "Gewitter",
+          "x": "гроза",
+          "ex": "Вечером будет гроза.",
+          "exTr": "Am Abend kommt ein Gewitter.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_fog",
+          "de": "Nebel",
+          "x": "туман",
+          "ex": "В тумане почти ничего не видно.",
+          "exTr": "Im Nebel sieht man kaum etwas.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_rainbow",
+          "de": "Regenbogen",
+          "x": "радуга",
+          "ex": "После дождя появилась радуга.",
+          "exTr": "Nach dem Regen erschien ein Regenbogen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_storm",
+          "de": "Sturm",
+          "x": "буря",
+          "ex": "Буря повалила дерево.",
+          "exTr": "Der Sturm hat einen Baum umgeworfen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_flood",
+          "de": "Überschwemmung",
+          "x": "наводнение",
+          "ex": "После дождя случилось наводнение.",
+          "exTr": "Nach dem Regen gab es eine Überschwemmung.",
+          "difficulty": 3,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_valley",
+          "de": "Tal",
+          "x": "долина",
+          "ex": "В долине лежит маленькая деревня.",
+          "exTr": "Im Tal liegt ein kleines Dorf.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_meadow",
+          "de": "Wiese",
+          "x": "луг",
+          "ex": "На лугу цветёт много цветов.",
+          "exTr": "Auf der Wiese blühen viele Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_riverbank",
+          "de": "Ufer",
+          "x": "берег",
+          "ex": "Мы сидим на берегу и ловим рыбу.",
+          "exTr": "Wir sitzen am Ufer und angeln.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_summit",
+          "de": "Gipfel",
+          "x": "вершина",
+          "ex": "В двенадцать часов мы достигнем вершины.",
+          "exTr": "Um zwölf Uhr erreichen wir den Gipfel.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_lightning",
+          "de": "Blitz",
+          "x": "молния",
+          "ex": "Молния ударила в дерево.",
+          "exTr": "Ein Blitz schlug in den Baum ein.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_puddle",
+          "de": "Pfütze",
+          "x": "лужа",
+          "ex": "Ребёнок прыгает в лужу.",
+          "exTr": "Das Kind springt in die Pfütze.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_environment",
+          "de": "Umwelt",
+          "x": "окружающая среда",
+          "ex": "Нам нужно лучше защищать окружающую среду.",
+          "exTr": "Wir müssen die Umwelt besser schützen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_plant",
+          "de": "Pflanze",
+          "x": "растение",
+          "ex": "Этому растению нужно много солнца.",
+          "exTr": "Diese Pflanze braucht viel Sonne.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_sunrise",
+          "de": "Sonnenaufgang",
+          "x": "восход солнца",
+          "ex": "Восход солнца на море был сказочным.",
+          "exTr": "Der Sonnenaufgang am Meer war traumhaft.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -260,7 +924,9 @@
         {
           "id": "feelings_05_satisfied",
           "de": "Zufrieden",
-          "x": "довольный",
+          "x": "доволен",
+          "ex": "Я доволен своей работой.",
+          "exTr": "Ich bin mit meiner Arbeit zufrieden.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -270,6 +936,8 @@
           "id": "feelings_05_nervous",
           "de": "Nervös",
           "x": "нервный",
+          "ex": "Перед экзаменом я всегда нервный.",
+          "exTr": "Vor der Prüfung bin ich immer nervös.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -279,6 +947,8 @@
           "id": "feelings_05_surprised",
           "de": "Überrascht",
           "x": "удивлённый",
+          "ex": "Она была удивлена подарком.",
+          "exTr": "Sie war von dem Geschenk überrascht.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -288,6 +958,8 @@
           "id": "feelings_05_proud",
           "de": "Stolz",
           "x": "гордый",
+          "ex": "Родители горды своим ребёнком.",
+          "exTr": "Die Eltern sind stolz auf ihr Kind.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -297,6 +969,8 @@
           "id": "feelings_05_relaxed",
           "de": "Entspannt",
           "x": "расслабленный",
+          "ex": "После отпуска я совершенно расслаблен.",
+          "exTr": "Nach dem Urlaub bin ich total entspannt.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -306,6 +980,162 @@
           "id": "feelings_05_patient",
           "de": "Geduldig",
           "x": "терпеливый",
+          "ex": "Учитель очень терпеливый.",
+          "exTr": "Der Lehrer ist sehr geduldig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_jealous",
+          "de": "Eifersüchtig",
+          "x": "ревнивый",
+          "ex": "Он ревнив к новому коллеге.",
+          "exTr": "Er ist auf den neuen Kollegen eifersüchtig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_disappointed",
+          "de": "Enttäuscht",
+          "x": "разочарованный",
+          "ex": "Она была очень разочарована результатом.",
+          "exTr": "Sie war vom Ergebnis sehr enttäuscht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_curious",
+          "de": "Neugierig",
+          "x": "любопытный",
+          "ex": "Ребёнок любопытный и задаёт много вопросов.",
+          "exTr": "Das Kind ist neugierig und stellt viele Fragen.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_shy",
+          "de": "Schüchtern",
+          "x": "застенчивый",
+          "ex": "Вначале он был довольно застенчивым.",
+          "exTr": "Am Anfang war er ziemlich schüchtern.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_honest",
+          "de": "Ehrlich",
+          "x": "честный",
+          "ex": "Пожалуйста, будь честным со мной.",
+          "exTr": "Sei bitte ehrlich zu mir.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_polite",
+          "de": "Höflich",
+          "x": "вежливый",
+          "ex": "Официант всегда очень вежливый.",
+          "exTr": "Der Kellner ist immer sehr höflich.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_brave",
+          "de": "Mutig",
+          "x": "смелый",
+          "ex": "Это был смелый шаг.",
+          "exTr": "Das war ein mutiger Schritt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lazy",
+          "de": "Faul",
+          "x": "ленивый",
+          "ex": "В воскресенье я немного ленивый.",
+          "exTr": "Am Sonntag bin ich ein bisschen faul.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_anxious",
+          "de": "Ängstlich",
+          "x": "боязливый",
+          "ex": "Собака очень боязливая.",
+          "exTr": "Der Hund ist sehr ängstlich.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_stressed",
+          "de": "Gestresst",
+          "x": "напряжённый",
+          "ex": "Перед Рождеством все напряжённые.",
+          "exTr": "Vor Weihnachten sind alle gestresst.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_embarrassed",
+          "de": "Verlegen",
+          "x": "смущённый",
+          "ex": "Она смутилась и тихо засмеялась.",
+          "exTr": "Sie wurde verlegen und lachte leise.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_helpful",
+          "de": "Hilfsbereit",
+          "x": "отзывчивый",
+          "ex": "Наши соседи очень отзывчивые.",
+          "exTr": "Unsere Nachbarn sind sehr hilfsbereit.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_cheerful",
+          "de": "Fröhlich",
+          "x": "весёлый",
+          "ex": "Она всегда весёлая и много смеётся.",
+          "exTr": "Sie ist immer fröhlich und lacht viel.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lonely",
+          "de": "Einsam",
+          "x": "одинокий",
+          "ex": "После переезда он чувствовал себя одиноким.",
+          "exTr": "Nach dem Umzug fühlte er sich einsam.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -323,6 +1153,8 @@
           "id": "education_06_course",
           "de": "Kurs",
           "x": "курс",
+          "ex": "Я хожу на курс в народном университете.",
+          "exTr": "Ich besuche einen Kurs an der Volkshochschule.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -332,6 +1164,8 @@
           "id": "education_06_task",
           "de": "Aufgabe",
           "x": "задание",
+          "ex": "Это задание нетрудное.",
+          "exTr": "Diese Aufgabe ist nicht schwer.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -341,6 +1175,8 @@
           "id": "education_06_exam",
           "de": "Prüfung",
           "x": "экзамен",
+          "ex": "Экзамен начинается в девять часов.",
+          "exTr": "Die Prüfung beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -349,7 +1185,9 @@
         {
           "id": "education_06_practise",
           "de": "Üben",
-          "x": "тренироваться",
+          "x": "упражняться",
+          "ex": "Нужно упражняться каждый день.",
+          "exTr": "Man muss jeden Tag üben.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -359,6 +1197,8 @@
           "id": "education_06_understand",
           "de": "Verstehen",
           "x": "понимать",
+          "ex": "Я ещё не совсем понимаю грамматику.",
+          "exTr": "Ich verstehe die Grammatik noch nicht ganz.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -368,9 +1208,1077 @@
           "id": "education_06_progress",
           "de": "Fortschreiten",
           "x": "продвигаться",
+          "ex": "Работа хорошо продвигается.",
+          "exTr": "Die Arbeit schreitet gut fort.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_homework",
+          "de": "Hausaufgabe",
+          "x": "домашнее задание",
+          "ex": "Моё домашнее задание уже готово.",
+          "exTr": "Meine Hausaufgabe ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_report_card",
+          "de": "Zeugnis",
+          "x": "аттестат",
+          "ex": "Аттестат мы получим в июле.",
+          "exTr": "Das Zeugnis bekommen wir im Juli.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_grade",
+          "de": "Note",
+          "x": "оценка",
+          "ex": "У меня хорошая оценка по математике.",
+          "exTr": "Ich habe in Mathe eine gute Note.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_timetable",
+          "de": "Stundenplan",
+          "x": "расписание",
+          "ex": "В расписании сегодня физкультура.",
+          "exTr": "Auf dem Stundenplan steht heute Sport.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_lessons",
+          "de": "Unterricht",
+          "x": "урок",
+          "ex": "Урок начинается в восемь часов.",
+          "exTr": "Der Unterricht beginnt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_textbook",
+          "de": "Lehrbuch",
+          "x": "учебник",
+          "ex": "Откройте, пожалуйста, учебник на десятой странице.",
+          "exTr": "Bitte öffnet das Lehrbuch auf Seite zehn.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_dictionary",
+          "de": "Wörterbuch",
+          "x": "словарь",
+          "ex": "Я ищу это слово в словаре.",
+          "exTr": "Ich suche das Wort im Wörterbuch.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_class_test",
+          "de": "Klassenarbeit",
+          "x": "контрольная работа",
+          "ex": "Завтра мы пишем контрольную работу по математике.",
+          "exTr": "Morgen schreiben wir eine Klassenarbeit in Mathe.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_concentrate",
+          "de": "Sich konzentrieren",
+          "x": "концентрироваться",
+          "ex": "При шуме мне трудно концентрироваться.",
+          "exTr": "Bei Lärm kann ich mich schlecht konzentrieren.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_learn_by_heart",
+          "de": "Auswendig lernen",
+          "x": "учить наизусть",
+          "ex": "Нам нужно учить стихотворение наизусть.",
+          "exTr": "Wir müssen das Gedicht auswendig lernen.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_degree",
+          "de": "Abschluss",
+          "x": "диплом",
+          "ex": "После получения диплома я ищу работу.",
+          "exTr": "Nach dem Abschluss suche ich eine Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_university_studies",
+          "de": "Studium",
+          "x": "учёба",
+          "ex": "Осенью она начинает учёбу в университете.",
+          "exTr": "Sie beginnt im Herbst ihr Studium.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_presentation",
+          "de": "Referat",
+          "x": "доклад",
+          "ex": "Завтра я делаю доклад о Берлине.",
+          "exTr": "Morgen halte ich ein Referat über Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_notes",
+          "de": "Notizen",
+          "x": "конспекты",
+          "ex": "Я делаю конспекты на уроке.",
+          "exTr": "Ich mache mir Notizen im Unterricht.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure_07",
+      "title": "Freizeit & Hobbys",
+      "icon": "🎨",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "leisure_07_hike",
+          "de": "Wandern",
+          "x": "ходить в походы",
+          "ex": "На выходных мы ходим в походы в горах.",
+          "exTr": "Am Wochenende gehen wir in den Bergen wandern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_fish",
+          "de": "Angeln",
+          "x": "ловить рыбу",
+          "ex": "Мой дедушка любит ловить рыбу на озере.",
+          "exTr": "Mein Opa geht gern am See angeln.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_do_crafts",
+          "de": "Basteln",
+          "x": "мастерить",
+          "ex": "Дети любят мастерить из бумаги.",
+          "exTr": "Die Kinder basteln gern mit Papier.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_paint",
+          "de": "Malen",
+          "x": "рисовать",
+          "ex": "Я хочу в воскресенье что-нибудь порисовать.",
+          "exTr": "Ich möchte am Sonntag etwas malen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_take_photos",
+          "de": "Fotografieren",
+          "x": "фотографировать",
+          "ex": "В отпуске я очень люблю фотографировать.",
+          "exTr": "Im Urlaub fotografiere ich sehr gern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_jog",
+          "de": "Joggen",
+          "x": "бегать трусцой",
+          "ex": "По утрам я бегаю трусцой в парке.",
+          "exTr": "Morgens gehe ich im Park joggen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_club",
+          "de": "Verein",
+          "x": "клуб",
+          "ex": "Мой брат состоит в спортивном клубе.",
+          "exTr": "Mein Bruder ist in einem Sportverein.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_team",
+          "de": "Mannschaft",
+          "x": "команда",
+          "ex": "Наша команда вчера выиграла.",
+          "exTr": "Unsere Mannschaft hat gestern gewonnen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_excursion",
+          "de": "Ausflug",
+          "x": "экскурсия",
+          "ex": "В субботу мы едем на экскурсию.",
+          "exTr": "Am Samstag machen wir einen Ausflug.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_concert",
+          "de": "Konzert",
+          "x": "концерт",
+          "ex": "Сегодня вечером мы идём на концерт.",
+          "exTr": "Wir gehen heute Abend ins Konzert.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exhibition",
+          "de": "Ausstellung",
+          "x": "выставка",
+          "ex": "Выставка открыта до конца мая.",
+          "exTr": "Die Ausstellung ist bis Ende Mai geöffnet.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_collect",
+          "de": "Sammeln",
+          "x": "коллекционировать",
+          "ex": "Мой сын любит коллекционировать старые монеты.",
+          "exTr": "Mein Sohn sammelt gern alte Münzen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_knit",
+          "de": "Stricken",
+          "x": "вязать",
+          "ex": "Моя бабушка зимой вяжет носки.",
+          "exTr": "Meine Oma strickt im Winter Socken.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_board_game",
+          "de": "Brettspiel",
+          "x": "настольная игра",
+          "ex": "Сегодня вечером мы играем в настольную игру.",
+          "exTr": "Heute Abend spielen wir ein Brettspiel.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_garden",
+          "de": "Gärtnern",
+          "x": "заниматься садоводством",
+          "ex": "Весной я очень люблю заниматься садоводством.",
+          "exTr": "Im Frühling gärtnere ich sehr gern.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_go_out",
+          "de": "Ausgehen",
+          "x": "ходить гулять",
+          "ex": "В пятницу мы хотим пойти гулять.",
+          "exTr": "Am Freitag wollen wir ausgehen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_event",
+          "de": "Veranstaltung",
+          "x": "мероприятие",
+          "ex": "Мероприятие начинается в восемь часов.",
+          "exTr": "Die Veranstaltung beginnt um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_ticket",
+          "de": "Eintrittskarte",
+          "x": "билет",
+          "ex": "Билет стоит десять евро.",
+          "exTr": "Die Eintrittskarte kostet zehn Euro.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_boring",
+          "de": "Langweilig",
+          "x": "скучный",
+          "ex": "Фильм был довольно скучным.",
+          "exTr": "Der Film war ziemlich langweilig.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exciting",
+          "de": "Spannend",
+          "x": "захватывающий",
+          "ex": "Книга невероятно захватывающая.",
+          "exTr": "Das Buch ist unglaublich spannend.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooking_08",
+      "title": "Essen gehen & Kochen",
+      "icon": "🍳",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "cooking_08_menu",
+          "de": "Speisekarte",
+          "x": "меню",
+          "ex": "Можно нам, пожалуйста, меню?",
+          "exTr": "Können wir bitte die Speisekarte haben?",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bill",
+          "de": "Rechnung",
+          "x": "счёт",
+          "ex": "Счёт, пожалуйста!",
+          "exTr": "Die Rechnung bitte!",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tip",
+          "de": "Trinkgeld",
+          "x": "чаевые",
+          "ex": "Я даю официанту два евро чаевых.",
+          "exTr": "Ich gebe dem Kellner zwei Euro Trinkgeld.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_waiter",
+          "de": "Kellner",
+          "x": "официант",
+          "ex": "Официант приносит напитки.",
+          "exTr": "Der Kellner bringt die Getränke.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_starter",
+          "de": "Vorspeise",
+          "x": "закуска",
+          "ex": "В качестве закуски я возьму суп.",
+          "exTr": "Als Vorspeise nehme ich eine Suppe.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_dessert",
+          "de": "Nachtisch",
+          "x": "десерт",
+          "ex": "На десерт будет мороженое.",
+          "exTr": "Zum Nachtisch gibt es Eis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_order",
+          "de": "Bestellen",
+          "x": "заказывать",
+          "ex": "Мы хотим сейчас заказать.",
+          "exTr": "Wir möchten jetzt bestellen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_fry",
+          "de": "Braten",
+          "x": "жарить",
+          "ex": "Мясо нужно хорошо жарить.",
+          "exTr": "Man muss das Fleisch gut braten.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bake",
+          "de": "Backen",
+          "x": "печь",
+          "ex": "В выходные я пеку пирог.",
+          "exTr": "Am Wochenende backe ich einen Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_cut",
+          "de": "Schneiden",
+          "x": "резать",
+          "ex": "Пожалуйста, нарежь лук мелко.",
+          "exTr": "Bitte schneide die Zwiebeln klein.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_stir",
+          "de": "Rühren",
+          "x": "помешивать",
+          "ex": "Соус нужно постоянно помешивать.",
+          "exTr": "Die Soße muss man ständig rühren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_ingredient",
+          "de": "Zutat",
+          "x": "ингредиент",
+          "ex": "Для рецепта не хватает ещё одного ингредиента.",
+          "exTr": "Für das Rezept fehlt noch eine Zutat.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spoon",
+          "de": "Löffel",
+          "x": "ложка",
+          "ex": "Мне нужна ложка для супа.",
+          "exTr": "Ich brauche einen Löffel für die Suppe.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_frying_pan",
+          "de": "Pfanne",
+          "x": "сковорода",
+          "ex": "Сковорода уже очень горячая.",
+          "exTr": "Die Pfanne ist schon sehr heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_pot",
+          "de": "Topf",
+          "x": "кастрюля",
+          "ex": "Положи, пожалуйста, макароны в кастрюлю.",
+          "exTr": "Gib die Nudeln bitte in den Topf.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_season",
+          "de": "Würzen",
+          "x": "приправлять",
+          "ex": "Не забудь приправить суп.",
+          "exTr": "Vergiss nicht, die Suppe zu würzen.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tasty",
+          "de": "Lecker",
+          "x": "вкусный",
+          "ex": "Пирог получился очень вкусный.",
+          "exTr": "Der Kuchen schmeckt richtig lecker.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spicy",
+          "de": "Scharf",
+          "x": "острый",
+          "ex": "Еда была для меня слишком острой.",
+          "exTr": "Das Essen war mir zu scharf.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_reserve",
+          "de": "Reservieren",
+          "x": "бронировать",
+          "ex": "Я хочу забронировать столик на четверых.",
+          "exTr": "Ich möchte einen Tisch für vier reservieren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spice",
+          "de": "Gewürz",
+          "x": "специя",
+          "ex": "Эта специя родом из Индии.",
+          "exTr": "Dieses Gewürz kommt aus Indien.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_09",
+      "title": "Verkehr & Unterwegs",
+      "icon": "🚆",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "transport_09_ticket",
+          "de": "Fahrkarte",
+          "x": "билет",
+          "ex": "Где можно купить билет?",
+          "exTr": "Wo kann ich eine Fahrkarte kaufen?",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_timetable",
+          "de": "Fahrplan",
+          "x": "расписание",
+          "ex": "По расписанию поезд приходит в десять.",
+          "exTr": "Laut Fahrplan kommt der Zug um zehn.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_escalator",
+          "de": "Rolltreppe",
+          "x": "эскалатор",
+          "ex": "Поднимись, пожалуйста, на эскалаторе к платформе.",
+          "exTr": "Nimm bitte die Rolltreppe nach oben zum Bahnsteig.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_pedestrian",
+          "de": "Fußgänger",
+          "x": "пешеход",
+          "ex": "Пешеходы ждут у красного светофора.",
+          "exTr": "Die Fußgänger warten an der roten Ampel.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_delay",
+          "de": "Verspätung",
+          "x": "опоздание",
+          "ex": "Поезд опаздывает на двадцать минут.",
+          "exTr": "Der Zug hat zwanzig Minuten Verspätung.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_platform",
+          "de": "Bahnsteig",
+          "x": "платформа",
+          "ex": "Поезд отправляется с платформы четыре.",
+          "exTr": "Der Zug fährt von Bahnsteig vier ab.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_track",
+          "de": "Gleis",
+          "x": "путь",
+          "ex": "На седьмом пути стоит ICE.",
+          "exTr": "Auf Gleis sieben steht der ICE.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_departure",
+          "de": "Abfahrt",
+          "x": "отправление",
+          "ex": "Отправление в половине восьмого.",
+          "exTr": "Die Abfahrt ist um halb acht.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_arrival",
+          "de": "Ankunft",
+          "x": "прибытие",
+          "ex": "Наше прибытие в двенадцать часов.",
+          "exTr": "Unsere Ankunft ist um zwölf Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_traffic_jam",
+          "de": "Stau",
+          "x": "пробка",
+          "ex": "На автобане длинная пробка.",
+          "exTr": "Auf der Autobahn gibt es einen langen Stau.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driving_license",
+          "de": "Führerschein",
+          "x": "водительские права",
+          "ex": "В восемнадцать лет я получу водительские права.",
+          "exTr": "Mit achtzehn mache ich den Führerschein.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_refuel",
+          "de": "Tanken",
+          "x": "заправляться",
+          "ex": "Нам ещё нужно заправиться.",
+          "exTr": "Wir müssen noch tanken.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_parking_space",
+          "de": "Parkplatz",
+          "x": "парковка",
+          "ex": "Здесь нет свободной парковки.",
+          "exTr": "Hier gibt es keinen freien Parkplatz.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_conductor",
+          "de": "Schaffner",
+          "x": "кондуктор",
+          "ex": "Кондуктор проверяет в поезде все билеты.",
+          "exTr": "Der Schaffner kontrolliert im Zug alle Fahrkarten.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driver",
+          "de": "Fahrer",
+          "x": "водитель",
+          "ex": "Водитель уже ждёт перед вокзалом.",
+          "exTr": "Der Fahrer wartet schon vor dem Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_turn",
+          "de": "Abbiegen",
+          "x": "поворачивать",
+          "ex": "Здесь вам нельзя поворачивать налево.",
+          "exTr": "Hier dürfen Sie nicht links abbiegen.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_highway",
+          "de": "Autobahn",
+          "x": "автобан",
+          "ex": "На автобане можно ехать быстро.",
+          "exTr": "Auf der Autobahn darf man schnell fahren.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_detour",
+          "de": "Umleitung",
+          "x": "объезд",
+          "ex": "Из-за стройки есть объезд.",
+          "exTr": "Wegen der Baustelle gibt es eine Umleitung.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_connection",
+          "de": "Anschluss",
+          "x": "пересадка",
+          "ex": "К сожалению, мы пропустили пересадку.",
+          "exTr": "Wir haben den Anschluss leider verpasst.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_board",
+          "de": "Einsteigen",
+          "x": "садиться",
+          "ex": "Пожалуйста, садитесь сзади.",
+          "exTr": "Bitte steigen Sie hinten ein.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "household_10",
+      "title": "Wohnen & Haushalt",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "household_10_rent",
+          "de": "Miete",
+          "x": "арендная плата",
+          "ex": "Арендная плата должна быть внесена каждый месяц.",
+          "exTr": "Die Miete ist jeden Monat fällig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_landlord",
+          "de": "Vermieter",
+          "x": "арендодатель",
+          "ex": "Мой арендодатель очень дружелюбный.",
+          "exTr": "Mein Vermieter ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_move_house",
+          "de": "Umziehen",
+          "x": "переезжать",
+          "ex": "В следующем месяце нам нужно переезжать.",
+          "exTr": "Nächsten Monat müssen wir umziehen.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_furniture",
+          "de": "Möbel",
+          "x": "мебель",
+          "ex": "Мы покупаем новую мебель для квартиры.",
+          "exTr": "Wir kaufen neue Möbel für die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_shelf",
+          "de": "Regal",
+          "x": "полка",
+          "ex": "Полка висит на стене.",
+          "exTr": "Das Regal hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_mirror",
+          "de": "Spiegel",
+          "x": "зеркало",
+          "ex": "В коридоре висит большое зеркало.",
+          "exTr": "Im Flur hängt ein großer Spiegel.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_carpet",
+          "de": "Teppich",
+          "x": "ковёр",
+          "ex": "Ковёр в коридоре новый.",
+          "exTr": "Der Teppich im Flur ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_curtain",
+          "de": "Vorhang",
+          "x": "занавеска",
+          "ex": "Закрой, пожалуйста, занавеску.",
+          "exTr": "Zieh bitte den Vorhang zu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_heating",
+          "de": "Heizung",
+          "x": "отопление",
+          "ex": "Зимой отопление очень важно.",
+          "exTr": "Im Winter ist die Heizung wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_vacuum_cleaner",
+          "de": "Staubsauger",
+          "x": "пылесос",
+          "ex": "Пылесос, к сожалению, сломан.",
+          "exTr": "Der Staubsauger ist leider kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_clean",
+          "de": "Putzen",
+          "x": "убирать",
+          "ex": "В субботу мы убираем квартиру.",
+          "exTr": "Am Samstag putzen wir die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_washing_machine",
+          "de": "Waschmaschine",
+          "x": "стиральная машина",
+          "ex": "Стиральная машина уже закончила.",
+          "exTr": "Die Waschmaschine ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_fridge",
+          "de": "Kühlschrank",
+          "x": "холодильник",
+          "ex": "Молоко стоит в холодильнике.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_trash_can",
+          "de": "Mülleimer",
+          "x": "мусорное ведро",
+          "ex": "Выбрось это, пожалуйста, в мусорное ведро.",
+          "exTr": "Wirf das bitte in den Mülleimer.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_balcony",
+          "de": "Balkon",
+          "x": "балкон",
+          "ex": "Вечером мы любим сидеть на балконе.",
+          "exTr": "Abends sitzen wir gern auf dem Balkon.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_attic",
+          "de": "Dachboden",
+          "x": "чердак",
+          "ex": "Старая мебель стоит на чердаке.",
+          "exTr": "Alte Möbel stehen auf dem Dachboden.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_hallway",
+          "de": "Flur",
+          "x": "коридор",
+          "ex": "В коридоре висит много картин.",
+          "exTr": "Im Flur hängen viele Bilder.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_power_outlet",
+          "de": "Steckdose",
+          "x": "розетка",
+          "ex": "Здесь, к сожалению, нет розетки.",
+          "exTr": "Hier ist leider keine Steckdose.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_utility_costs",
+          "de": "Nebenkosten",
+          "x": "коммунальные платежи",
+          "ex": "Коммунальные платежи довольно высокие.",
+          "exTr": "Die Nebenkosten sind ziemlich hoch.",
+          "difficulty": 3,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_repair",
+          "de": "Reparieren",
+          "x": "чинить",
+          "ex": "Мой отец может починить стул.",
+          "exTr": "Mein Vater kann den Stuhl reparieren.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
           ]
         }
       ]

@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "PL",
+  "level": "B1",
+  "topics": [
+    {
+      "id": "career_01",
+      "title": "Beruf & Karriere",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "career_01_application",
+          "de": "Bewerbung",
+          "x": "podanie",
+          "ex": "Wysłałem wczoraj moje podanie o pracę e-mailem.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_responsibility",
+          "de": "Verantwortung",
+          "x": "odpowiedzialność",
+          "ex": "Na tym stanowisku bierzesz na siebie dużą odpowiedzialność za zespół.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_experience",
+          "de": "Erfahrung",
+          "x": "doświadczenie",
+          "ex": "Ona ma dziesięć lat doświadczenia w sprzedaży.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_decide",
+          "de": "Entscheiden",
+          "x": "decydować",
+          "ex": "Musimy do piątku zdecydować, którą ofertę przyjmiemy.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_negotiate",
+          "de": "Verhandeln",
+          "x": "negocjować",
+          "ex": "On chce negocjować z szefem swoją pensję.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_reliable",
+          "de": "Zuverlässig",
+          "x": "niezawodny",
+          "ex": "Nasz kolega jest zawsze punktualny i bardzo niezawodny.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "rozmowa kwalifikacyjna",
+          "ex": "Jutro mam rozmowę kwalifikacyjną w dużej firmie.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "życiorys",
+          "ex": "W moim życiorysie brakuje jeszcze praktyki zawodowej.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "wypowiedzenie",
+          "ex": "Po wypowiedzeniu szybko szukała nowej pracy.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "umowa o pracę",
+          "ex": "Proszę dokładnie przeczytać umowę o pracę przed podpisaniem.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "szkolenie",
+          "ex": "Firma płaci za szkolenie z zarządzania projektami.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "przełożony",
+          "ex": "Mój przełożony często chwali mnie za pracę.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "awans",
+          "ex": "Po trzech latach w końcu dostał awans.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "praca zespołowa",
+          "ex": "Bez dobrej pracy zespołowej projekt by się nie udał.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "termin",
+          "ex": "Termin składania kończy się w poniedziałek.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "pracodawca",
+          "ex": "Mój pracodawca oferuje elastyczne godziny pracy.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "nadgodziny",
+          "ex": "Przed końcem roku musieliśmy robić dużo nadgodzin.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "wdrożenie",
+          "ex": "Wdrożenie nowych pracowników trwa u nas trzy tygodnie.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "konkurencja",
+          "ex": "Konkurencja na rynku pracy jest bardzo duża.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "kwalifikacje",
+          "ex": "Na to stanowisko potrzebujesz specjalnych kwalifikacji.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society_02",
+      "title": "Gesellschaft",
+      "icon": "🤝",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "society_02_community",
+          "de": "Gemeinschaft",
+          "x": "społeczność",
+          "ex": "We wsi istnieje silna społeczność.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_equality",
+          "de": "Gleichberechtigung",
+          "x": "równouprawnienie",
+          "ex": "Równouprawnienie kobiet i mężczyzn jest ważnym celem.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_support",
+          "de": "Unterstützung",
+          "x": "wsparcie",
+          "ex": "Dziękuję za twoje wsparcie w tym trudnym czasie.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_volunteer",
+          "de": "Freiwilliger",
+          "x": "wolontariusz",
+          "ex": "Jako wolontariusz pomaga w schronisku dla zwierząt w każdy weekend.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_rule",
+          "de": "Regel",
+          "x": "reguła",
+          "ex": "Kto nie zna reguły, nie może jej przestrzegać.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_trust",
+          "de": "Vertrauen",
+          "x": "zaufanie",
+          "ex": "Zaufanie trzeba sobie zdobywać powoli.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "obywatel",
+          "ex": "Każdy obywatel ma prawo wyrażać swoją opinię.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "integracja",
+          "ex": "Kursy językowe ułatwiają integrację nowych mieszkańców.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "uprzedzenie",
+          "ex": "Uprzedzenie często wynika z niewiedzy.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "tolerancja",
+          "ex": "Tolerancja oznacza szanowanie innych stylów życia.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "wolontariat",
+          "ex": "Jego wolontariat w straży pożarnej zajmuje dużo czasu.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "darowizna",
+          "ex": "Stowarzyszenie serdecznie dziękuje za darowiznę.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "ustawa",
+          "ex": "Nowa ustawa wchodzi w życie w styczniu.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "obowiązek",
+          "ex": "Dla wielu osób pójście na wybory jest obowiązkiem obywatelskim.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "wzgląd",
+          "ex": "Proszę mieć wzgląd na swoich sąsiadów.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "solidarność",
+          "ex": "W kryzysach ujawnia się solidarność ludzi.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "pokolenie",
+          "ex": "Trzy pokolenia mieszkają pod jednym dachem.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "imigracja",
+          "ex": "Imigracja bardzo zmieniła kraj.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "sprawiedliwość",
+          "ex": "Wszyscy obywatele mają prawo do sprawiedliwości.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "większość",
+          "ex": "Większość obywateli głosowała za tym planem.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_03",
+      "title": "Reisen & Erlebnisse",
+      "icon": "🧭",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "travel_03_itinerary",
+          "de": "Reiseroute",
+          "x": "trasa podróży",
+          "ex": "Nasza trasa podróży prowadzi przez trzy kraje.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_accommodation",
+          "de": "Unterkunft",
+          "x": "zakwaterowanie",
+          "ex": "Zakwaterowanie znajduje się tylko pięć minut od plaży.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_change_trains",
+          "de": "Umsteigen",
+          "x": "przesiadać się",
+          "ex": "W Kolonii musimy się przesiąść do pociągu regionalnego.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_discover",
+          "de": "Entdecken",
+          "x": "odkrywać",
+          "ex": "Chcieliśmy odkrywać stare miasto na piechotę.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_recommend",
+          "de": "Empfehlen",
+          "x": "polecać",
+          "ex": "Czy możesz mi polecić dobrą restaurację?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_unforgettable",
+          "de": "Unvergesslich",
+          "x": "niezapomniany",
+          "ex": "Wschód słońca w górach był niezapomniany.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "pamiątka",
+          "ex": "Jako pamiątkę kupiłem małą figurkę.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "lot w jedną stronę",
+          "ex": "Lot w jedną stronę był spokojny i przyjemny.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "lot powrotny",
+          "ex": "Lot powrotny odlatuje w niedzielę wieczorem o ósmej.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "tęsknota za podróżami",
+          "ex": "Zimą zawsze dopada mnie silna tęsknota za podróżami.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "przygoda",
+          "ex": "Podróż przez Amerykę Południową była prawdziwą przygodą.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "wycieczka objazdowa",
+          "ex": "Rezerwujemy wycieczkę objazdową po Szkocji.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "kontrola celna",
+          "ex": "Podczas kontroli celnej musiałem otworzyć walizkę.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "przewodnik",
+          "ex": "Przewodnik zawiera wiele przydatnych wskazówek dotyczących Lizbony.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "pobyt",
+          "ex": "Podczas mojego pobytu w Wiedniu odwiedziłem wiele muzeów.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "rezerwacja",
+          "ex": "Rezerwację potwierdzono mi e-mailem.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "anulować",
+          "ex": "Musieliśmy anulować podróż z powodu choroby.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "zwrot pieniędzy",
+          "ex": "Złożyłem wniosek o zwrot pieniędzy za bilet lotniczy.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "gościnność",
+          "ex": "Byliśmy zachwyceni gościnnością tych ludzi.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "miejscowi",
+          "ex": "Miejscowi pokazali nam swoją ulubioną plażę.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opinion_04",
+      "title": "Meinungen & Argumente",
+      "icon": "💡",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "opinion_04_opinion",
+          "de": "Meinung",
+          "x": "opinia",
+          "ex": "Moja opinia jest taka, że ta oferta jest za droga.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_claim",
+          "de": "Behaupten",
+          "x": "twierdzić",
+          "ex": "On twierdzi, że nic o tym nie wiedział.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_justify",
+          "de": "Begründen",
+          "x": "uzasadniać",
+          "ex": "Proszę krótko uzasadnić swoją decyzję.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compare",
+          "de": "Vergleichen",
+          "x": "porównywać",
+          "ex": "Przed zakupem należy porównywać ceny.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_influence",
+          "de": "Beeinflussen",
+          "x": "wpływać",
+          "ex": "Reklama może silnie wpływać na nasze decyzje.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_convince",
+          "de": "Überzeugen",
+          "x": "przekonywać",
+          "ex": "Potrafiła mnie przekonać dobrymi argumentami.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "argument",
+          "ex": "Twój argument brzmi logicznie, ale ja widzę to inaczej.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "punkt widzenia",
+          "ex": "Nigdy nie patrzyłem na to z tego punktu widzenia.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "przekonanie",
+          "ex": "Moje mocne przekonanie jest takie, że edukacja jest ważna.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "sprzeczność",
+          "ex": "W jego wypowiedzi jest wyraźna sprzeczność.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "wątpić",
+          "ex": "Wątpię, czy ten plan naprawdę zadziała.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "zaleta",
+          "ex": "Dużą zaletą tej metody jest oszczędność czasu.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "wada",
+          "ex": "Wadą samochodu są wysokie koszty.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "kompromis",
+          "ex": "W końcu znaleźliśmy dobry kompromis.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "zarzut",
+          "ex": "Czy ma pan jeszcze jakiś zarzut wobec tej propozycji?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "wniosek",
+          "ex": "Z tych liczb wyciąga jasny wniosek.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "ocena",
+          "ex": "Ocena eksperta była bardzo pomocna.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "krytyka",
+          "ex": "Przyjęła krytykę spokojnie.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "założenie",
+          "ex": "Twoje założenie niestety nie było prawidłowe.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "oceniać",
+          "ex": "Nie należy oceniać książki tylko po okładce.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_05",
+      "title": "Umwelt & Zukunft",
+      "icon": "🌱",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "environment_05_resource",
+          "de": "Ressource",
+          "x": "zasób",
+          "ex": "Woda jest cennym zasobem.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_avoid",
+          "de": "Vermeiden",
+          "x": "unikać",
+          "ex": "Powinniśmy unikać niepotrzebnych odpadów z plastiku.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_reuse",
+          "de": "Wiederverwenden",
+          "x": "używać ponownie",
+          "ex": "Szklane butelki można używać ponownie wiele razy.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_pollute",
+          "de": "Verschmutzen",
+          "x": "zanieczyszczać",
+          "ex": "Fabryki często zanieczyszczają rzeki.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_sustainable",
+          "de": "Nachhaltig",
+          "x": "zrównoważony",
+          "ex": "Wiele osób chce żyć w sposób zrównoważony.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_protect",
+          "de": "Schützen",
+          "x": "chronić",
+          "ex": "Musimy lepiej chronić lasy.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "zmiana klimatu",
+          "ex": "Zmiana klimatu prowadzi do większej liczby burz.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "globalne ocieplenie",
+          "ex": "Globalne ocieplenie powoduje podnoszenie się poziomu mórz.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "odpady",
+          "ex": "Odpady starannie segregujemy w domu.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "recykling",
+          "ex": "Dzięki recyklingowi oszczędza się wiele surowców.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "ochrona środowiska",
+          "ex": "Ochrona środowiska zaczyna się w codziennym życiu.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "energia odnawialna",
+          "ex": "Energia odnawialna pochodzi ze słońca, wiatru i wody.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "gaz cieplarniany",
+          "ex": "Dwutlenek węgla jest dobrze znanym gazem cieplarnianym.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "wymierać",
+          "ex": "Wiele gatunków zwierząt jest zagrożonych wymieraniem.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "zużycie",
+          "ex": "Zużycie prądu rośnie z każdym rokiem.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "pożar lasu",
+          "ex": "Pożar lasu zniszczył latem wiele hektarów lasu.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "susza",
+          "ex": "Długa susza zniszczyła zbiory.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "różnorodność biologiczna",
+          "ex": "Różnorodność biologiczna jest zagrożona.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "oszczędzać",
+          "ex": "Podczas ogrzewania można oszczędzać dużo energii.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "siedlisko",
+          "ex": "Wycinka lasu niszczy siedlisko wielu zwierząt.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital_06",
+      "title": "Digitaler Alltag",
+      "icon": "💻",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "digital_06_data_privacy",
+          "de": "Datenschutz",
+          "x": "ochrona danych",
+          "ex": "Ochrona danych jest szczególnie ważna w usługach internetowych.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_notification",
+          "de": "Benachrichtigung",
+          "x": "powiadomienie",
+          "ex": "Wyłączyłem powiadomienie na moim telefonie.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_download",
+          "de": "Herunterladen",
+          "x": "pobierać",
+          "ex": "Możesz pobrać tę aplikację za darmo.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_upload",
+          "de": "Hochladen",
+          "x": "przesyłać",
+          "ex": "Muszę jeszcze przesłać zdjęcia.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_update",
+          "de": "Aktualisieren",
+          "x": "aktualizować",
+          "ex": "Proszę regularnie aktualizować oprogramowanie.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_password",
+          "de": "Passwort",
+          "x": "hasło",
+          "ex": "Wybierz bezpieczne hasło z cyframi i znakami specjalnymi.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "logowanie",
+          "ex": "Logowanie trwa tylko kilka sekund.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "miejsce w pamięci",
+          "ex": "Na moim telefonie prawie nie ma już wolnego miejsca w pamięci.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "czas przed ekranem",
+          "ex": "Mój czas przed ekranem w tym tygodniu mocno wzrósł.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "szyfrowanie",
+          "ex": "Szyfrowanie chroni twoje wiadomości przed obcymi.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "kopia zapasowa",
+          "ex": "Regularna kopia zapasowa zapobiega utracie danych.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "platforma",
+          "ex": "Wielu uczniów korzysta z tej platformy do nauki.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "algorytm",
+          "ex": "Algorytm decyduje, jakie filmy widzisz.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "subskrypcja",
+          "ex": "Anulowałem swoją subskrypcję serwisu streamingowego.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "ustawienia",
+          "ex": "Ustawienia znajdziesz w menu w prawym górnym rogu.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "komunikat o błędzie",
+          "ex": "Przy uruchamianiu nagle pojawił się komunikat o błędzie.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "łączyć",
+          "ex": "Możesz połączyć swoje konto z telefonem.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "wyszukiwarka",
+          "ex": "Której wyszukiwarki lubisz używać najbardziej?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "cyberatak",
+          "ex": "Cyberatak sparaliżował całą sieć.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "sztuczna inteligencja",
+          "ex": "Sztuczna inteligencja zmienia wiele zawodów.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "nagłówek",
+          "ex": "Nagłówek znalazł się dziś na pierwszej stronie.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "raport",
+          "ex": "Raport opisuje sytuację w rejonie kryzysu.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "dziennikarz",
+          "ex": "Dziennikarz od tygodni zbiera materiały do reportażu.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "relacja medialna",
+          "ex": "Relacja medialna z wyborów była bardzo szczegółowa.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "źródło",
+          "ex": "Zawsze podawaj źródło swoich informacji.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "fałszywa wiadomość",
+          "ex": "Ta fałszywa wiadomość rozeszła się w sieci w ciągu kilku minut.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "wolność słowa",
+          "ex": "Wolność słowa jest w demokracji prawem podstawowym.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "kampania reklamowa",
+          "ex": "Nowa kampania reklamowa jest emitowana na wszystkich kanałach.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "audycja",
+          "ex": "Audycja będzie dziś wieczorem transmitowana na żywo.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "prezenter",
+          "ex": "Prezenter powitał widzów z uśmiechem.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "reportaż",
+          "ex": "Reportaż pokazuje życie na wyspie na Morzu Północnym.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "widz",
+          "ex": "Ponad milion widzów obejrzało finał.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "list do redakcji",
+          "ex": "Napisała list do redakcji gazety.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "ujawniać",
+          "ex": "Gazeta chce ujawnić ten skandal.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "publikować",
+          "ex": "Wydawnictwo opublikuje tę książkę jesienią.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "wiarygodny",
+          "ex": "Wiarygodne źródło podaje nazwiska i fakty.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "komentarz",
+          "ex": "Komentarz na stronie z opiniami był bardzo krytyczny.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "film dokumentalny",
+          "ex": "Wczoraj obejrzałem film dokumentalny o wielorybach.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "kanał informacyjny",
+          "ex": "Na kanale informacyjnym przez cały dzień lecą relacje.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "cenzura",
+          "ex": "W niektórych krajach nadal obowiązuje surowa cenzura.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "odżywianie",
+          "ex": "Zrównoważone odżywianie utrzymuje ciało w formie.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "brak ruchu",
+          "ex": "Brak ruchu może na dłuższą metę prowadzić do problemów z plecami.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "równowaga",
+          "ex": "Joga jest dla mnie dobrą równowagą wobec codziennej pracy w biurze.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "stres",
+          "ex": "Zbyt dużo stresu na dłuższą metę powoduje choroby.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "relaks",
+          "ex": "Po pracy potrzebuję trochę relaksu.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "regeneracja",
+          "ex": "Urlop służył przede wszystkim regeneracji.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "profilaktyka",
+          "ex": "Regularna profilaktyka u lekarza może uratować życie.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "wytrzymałość",
+          "ex": "Do maratonu potrzeba dużo wytrzymałości.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "niedobór snu",
+          "ex": "Niedobór snu osłabia koncentrację.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "nadwaga",
+          "ex": "Nadwaga zwiększa ryzyko chorób serca.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "chudnąć",
+          "ex": "On chce przed latem schudnąć kilka kilo.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "kontuzja",
+          "ex": "Kontuzja kolana wyeliminowała zawodnika z gry.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "dolegliwości",
+          "ex": "Od kilku dni mam dolegliwości w plecach.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "szczepienie",
+          "ex": "Szczepienie chroni przed ciężką chorobą.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "ból pleców",
+          "ex": "Długie siedzenie często powoduje ból pleców.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "uważność",
+          "ex": "Uważność pomaga bardziej świadomie przeżywać codzienność.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "zaraźliwy",
+          "ex": "Grypa jest bardzo zaraźliwa.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "samopoczucie",
+          "ex": "Ruch poprawia ogólne samopoczucie.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "zapobiegać",
+          "ex": "Dzięki sportowi można zapobiegać wielu chorobom.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "leczenie",
+          "ex": "Leczenie w szpitalu trwało dwa tygodnie.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "dochód",
+          "ex": "Dochód rodziny wystarcza na czynsz.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "wydatki",
+          "ex": "Wszystkie wydatki zapisuję w tabeli.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "oszczędności",
+          "ex": "Za swoje oszczędności kupuję samochód.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "długi",
+          "ex": "On nadal ma długi w banku.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "kredyt",
+          "ex": "Na dom wzięli kredyt.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "przelew",
+          "ex": "Przelew trwa jeden do dwóch dni.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "gotówka",
+          "ex": "Wolę płacić gotówką niż kartą.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "gwarancja",
+          "ex": "Na to urządzenie jest dwuletnia gwarancja.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "reklamacja",
+          "ex": "Moja reklamacja została od razu uznana przez sklep.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "wymiana",
+          "ex": "Wymiana jest możliwa tylko z paragonem.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "wyciąg bankowy",
+          "ex": "Na wyciągu bankowym widzę wszystkie płatności z miesiąca.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "konsument",
+          "ex": "Konsumenci coraz bardziej zwracają uwagę na jakość.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "porównanie cen",
+          "ex": "Porównanie cen w internecie prawie zawsze się opłaca.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "promocja",
+          "ex": "W tym tygodniu owoce są w promocji.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "ubezpieczenie",
+          "ex": "Ubezpieczenie pokrywa szkodę w moim samochodzie.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "podatek",
+          "ex": "Co roku muszę rozliczyć podatek.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "budżet domowy",
+          "ex": "Nasz budżet domowy jest w tej chwili dość napięty.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "inwestować",
+          "ex": "Ona chce inwestować pieniądze w energię odnawialną.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "marnować",
+          "ex": "Nie należy marnować pieniędzy na niepotrzebne rzeczy.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "oszczędny",
+          "ex": "Moja babcia jest bardzo oszczędna i kupuje tylko to, co niezbędne.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "tradycja",
+          "ex": "W naszej rodzinie to stara tradycja.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "zwyczaj",
+          "ex": "Chowanie jajek na Wielkanoc to zwyczaj.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "święto państwowe",
+          "ex": "Trzeciego października jest ustawowe święto państwowe.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "przedstawienie",
+          "ex": "Przedstawienie w teatrze trwało trzy godziny.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "muzeum",
+          "ex": "Muzeum jest niestety w poniedziałki zamknięte.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "obraz",
+          "ex": "Obraz wisi w tej sali od wieków.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "festiwal",
+          "ex": "Na festiwalu zagrało ponad pięćdziesiąt zespołów.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "pochód",
+          "ex": "W pochodzie szły dzieci w kolorowych kostiumach.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "dzieło sztuki",
+          "ex": "To dzieło sztuki ma ponad dwieście lat.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "symbol miasta",
+          "ex": "Wieża Eiffla jest symbolem miasta Paryża.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "dziedzictwo kulturowe",
+          "ex": "Stare miasto należy do światowego dziedzictwa kulturowego.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "ceremonia",
+          "ex": "Ceremonia rozpoczęła się punktualnie o jedenastej.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "jubileusz",
+          "ex": "Stowarzyszenie obchodzi swój pięćdziesięcioletni jubileusz.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "festyn",
+          "ex": "Na festynie było piwo i muzyka.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "scena",
+          "ex": "Piosenkarz wszedł na scenę wśród głośnych braw.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "publiczność",
+          "ex": "Publiczność długo klaskała po koncercie.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "kostium",
+          "ex": "Na karnawał uszyła sobie kostium.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "fajerwerki",
+          "ex": "O północy zaczęły się fajerwerki.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "jarmark bożonarodzeniowy",
+          "ex": "Na jarmarku bożonarodzeniowym chętnie pijemy grzane wino.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "karnawał",
+          "ex": "W Nadrenii obchodzi się karnawał z pochodami.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Eine gute Lösung berücksichtigt verschiedene Perspektiven.",
+      "x": "Dobre rozwiązanie uwzględnia różne perspektywy.",
+      "translations": {
+        "pl": "Dobre rozwiązanie uwzględnia różne perspektywy."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Wir sollten unsere Ressourcen verantwortungsvoll nutzen.",
+      "x": "Powinniśmy odpowiedzialnie korzystać z naszych zasobów.",
+      "translations": {
+        "pl": "Powinniśmy odpowiedzialnie korzystać z naszych zasobów."
+      }
+    }
+  ]
+}

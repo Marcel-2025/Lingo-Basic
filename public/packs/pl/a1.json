@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "PL",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "food_01_water",
+          "de": "Wasser",
+          "x": "woda",
+          "ex": "Pię codziennie dużo wody.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_bread",
+          "de": "Brot",
+          "x": "chleb",
+          "ex": "Na śniadanie jem chleb.",
+          "exTr": "Zum Frühstück esse ich Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_milk",
+          "de": "Milch",
+          "x": "mleko",
+          "ex": "Mleko stoi w lodówce.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_coffee",
+          "de": "Kaffee",
+          "x": "kawa",
+          "ex": "Rano chętnie piję kawę.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_tea",
+          "de": "Tee",
+          "x": "herbata",
+          "ex": "Chcesz herbatę?",
+          "exTr": "Möchtest du einen Tee?",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_apple",
+          "de": "Apfel",
+          "x": "jabłko",
+          "ex": "Jabłko jest czerwone i słodkie.",
+          "exTr": "Der Apfel ist rot und süß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_banana",
+          "de": "Banane",
+          "x": "banan",
+          "ex": "Jem banana.",
+          "exTr": "Ich esse eine Banane.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_rice",
+          "de": "Reis",
+          "x": "ryż",
+          "ex": "Do ryby jest ryż.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "ser",
+          "ex": "Lubię ser na chlebie.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "jajko",
+          "ex": "Na śniadanie jem jajko.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "mięso",
+          "ex": "On nie je mięsa.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "ryba",
+          "ex": "Dzisiaj jest ryba z ryżem.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "warzywa",
+          "ex": "Dzieci powinny jeść dużo warzyw.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "zupa",
+          "ex": "Zupa jest jeszcze gorąca.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "sól",
+          "ex": "Podaj mi proszę sól.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "cukier",
+          "ex": "Nie słodzę herbaty cukrem.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "sok",
+          "ex": "Ona pije szklankę soku.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "piwo",
+          "ex": "On zamawia piwo.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "ciasto",
+          "ex": "Ciasto jest bardzo smaczne.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "ziemniak",
+          "ex": "Na obiad są ziemniaki.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "travel_02_airport",
+          "de": "Flughafen",
+          "x": "lotnisko",
+          "ex": "Jedziemy na lotnisko.",
+          "exTr": "Wir fahren zum Flughafen.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train_station",
+          "de": "Bahnhof",
+          "x": "dworzec",
+          "ex": "Dworzec nie jest daleko.",
+          "exTr": "Der Bahnhof ist nicht weit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_ticket",
+          "de": "Ticket",
+          "x": "bilet",
+          "ex": "Potrzebuję biletu do Berlina.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_hotel",
+          "de": "Hotel",
+          "x": "hotel",
+          "ex": "Nasz hotel leży przy plaży.",
+          "exTr": "Unser Hotel liegt am Strand.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_street",
+          "de": "Straße",
+          "x": "ulica",
+          "ex": "Ulica jest bardzo głośna.",
+          "exTr": "Die Straße ist sehr laut.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_map",
+          "de": "Karte",
+          "x": "mapa",
+          "ex": "Masz mapę miasta?",
+          "exTr": "Hast du eine Karte der Stadt?",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_suitcase",
+          "de": "Koffer",
+          "x": "walizka",
+          "ex": "Moja walizka jest za ciężka.",
+          "exTr": "Mein Koffer ist zu schwer.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_passport",
+          "de": "Pass",
+          "x": "paszport",
+          "ex": "Nie zapomnij paszportu!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "pociąg",
+          "ex": "Pociąg przyjeżdża o ósmej.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "autobus",
+          "ex": "Jeżdżę autobusem do pracy.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "samochód",
+          "ex": "Mój samochód jest nowy.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "samolot",
+          "ex": "Samolot zaraz wyląduje.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "rower",
+          "ex": "Lubię jeździć na rowerze.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "podróż",
+          "ex": "Podróż trwa trzy godziny.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "miasto",
+          "ex": "Berlin to duże miasto.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "kraj",
+          "ex": "W którym kraju mieszkasz?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taksówka",
+          "ex": "Bierzemy taksówkę do hotelu.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagaż",
+          "ex": "Gdzie jest mój bagaż?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "przystanek",
+          "ex": "Przystanek jest tam, przed nami.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "urlop",
+          "ex": "Latem mamy urlop.",
+          "exTr": "Wir machen im Sommer Urlaub.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "home_03_house",
+          "de": "Haus",
+          "x": "dom",
+          "ex": "Dom ma ogród.",
+          "exTr": "Das Haus hat einen Garten.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_room",
+          "de": "Zimmer",
+          "x": "pokój",
+          "ex": "Mój pokój jest mały.",
+          "exTr": "Mein Zimmer ist klein.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_kitchen",
+          "de": "Küche",
+          "x": "kuchnia",
+          "ex": "Gotujemy w kuchni.",
+          "exTr": "Wir kochen in der Küche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bathroom",
+          "de": "Badezimmer",
+          "x": "łazienka",
+          "ex": "Łazienka jest po lewej.",
+          "exTr": "Das Badezimmer ist links.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_window",
+          "de": "Fenster",
+          "x": "okno",
+          "ex": "Proszę, otwórz okno.",
+          "exTr": "Bitte mach das Fenster auf.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_door",
+          "de": "Tür",
+          "x": "drzwi",
+          "ex": "Drzwi są zamknięte.",
+          "exTr": "Die Tür ist zu.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_table",
+          "de": "Tisch",
+          "x": "stół",
+          "ex": "Stół jest z drewna.",
+          "exTr": "Der Tisch ist aus Holz.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_chair",
+          "de": "Stuhl",
+          "x": "krzesło",
+          "ex": "Usiądź na krześle.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "łóżko",
+          "ex": "Łóżko jest bardzo wygodne.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "sofa",
+          "ex": "Siedzimy na sofie.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lampa",
+          "ex": "Lampa stoi na stole.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "klucz",
+          "ex": "Zgubiłem swój klucz.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "mieszkanie",
+          "ex": "Moje mieszkanie ma trzy pokoje.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "ogród",
+          "ex": "W ogrodzie rosną kwiaty.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "ściana",
+          "ex": "Obraz wisi na ścianie.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "prysznic",
+          "ex": "Co rano biorę prysznic.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "szafa",
+          "ex": "Ubrania są w szafie.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "piwnica",
+          "ex": "Rower stoi w piwnicy.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "schody",
+          "ex": "Schody są bardzo strome.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "salon",
+          "ex": "Salon jest duży i jasny.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "work_04_work",
+          "de": "Arbeit",
+          "x": "praca",
+          "ex": "Praca zaczyna się o dziewiątej.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_office",
+          "de": "Büro",
+          "x": "biuro",
+          "ex": "Dzisiaj jestem w biurze.",
+          "exTr": "Ich bin heute im Büro.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_boss",
+          "de": "Chef",
+          "x": "szef",
+          "ex": "Mój szef jest bardzo miły.",
+          "exTr": "Mein Chef ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_colleague",
+          "de": "Kollege",
+          "x": "kolega z pracy",
+          "ex": "Mój kolega z pracy często mi pomaga.",
+          "exTr": "Mein Kollege hilft mir oft.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_meeting",
+          "de": "Meeting",
+          "x": "spotkanie",
+          "ex": "Spotkanie trwa godzinę.",
+          "exTr": "Das Meeting dauert eine Stunde.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_project",
+          "de": "Projekt",
+          "x": "projekt",
+          "ex": "Mamy nowy projekt.",
+          "exTr": "Wir haben ein neues Projekt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_email",
+          "de": "E-Mail",
+          "x": "e-mail",
+          "ex": "Napiszę do ciebie e-mail.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_break",
+          "de": "Pause",
+          "x": "przerwa",
+          "ex": "Teraz robimy przerwę.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "firma",
+          "ex": "On pracuje w dużej firmie.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "pensja",
+          "ex": "Pensja przychodzi na koniec miesiąca.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "nauczyciel",
+          "ex": "Nauczyciel tłumaczy zadanie.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "szkoła",
+          "ex": "Dzieci idą do szkoły.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "uczeń",
+          "ex": "Uczeń odrabia lekcje.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "długopis",
+          "ex": "Masz dla mnie długopis?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "papier",
+          "ex": "Potrzebuję kartki papieru.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "drukarka",
+          "ex": "Drukarka w biurze jest zepsuta.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "telefon",
+          "ex": "Mój telefon dzwoni.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "komputer",
+          "ex": "Komputer jest bardzo szybki.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "zawód",
+          "ex": "Jaki jest twój zawód?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "błąd",
+          "ex": "Zrobiłem błąd.",
+          "exTr": "Ich habe einen Fehler gemacht.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "health_05_doctor",
+          "de": "Arzt",
+          "x": "lekarz",
+          "ex": "Muszę iść do lekarza.",
+          "exTr": "Ich muss zum Arzt gehen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_hospital",
+          "de": "Krankenhaus",
+          "x": "szpital",
+          "ex": "On leży w szpitalu.",
+          "exTr": "Er liegt im Krankenhaus.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_medicine",
+          "de": "Medizin",
+          "x": "lekarstwo",
+          "ex": "Bierz lekarstwo trzy razy dziennie.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pain",
+          "de": "Schmerz",
+          "x": "ból",
+          "ex": "Mam silne bóle.",
+          "exTr": "Ich habe starke Schmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_fever",
+          "de": "Fieber",
+          "x": "gorączka",
+          "ex": "Dziecko ma gorączkę.",
+          "exTr": "Das Kind hat Fieber.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_help",
+          "de": "Hilfe",
+          "x": "pomoc",
+          "ex": "Potrzebuję pomocy!",
+          "exTr": "Ich brauche Hilfe!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_appointment",
+          "de": "Termin",
+          "x": "wizyta",
+          "ex": "Jutro mam wizytę.",
+          "exTr": "Ich habe morgen einen Termin.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_prescription",
+          "de": "Rezept",
+          "x": "recepta",
+          "ex": "Lekarz wypisuje receptę.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "kaszel",
+          "ex": "Od kilku dni mam kaszel.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "przeziębienie",
+          "ex": "On ma silne przeziębienie.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "apteka",
+          "ex": "Apteka jest tuż za rogiem.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "dentysta",
+          "ex": "Jutro idę do dentysty.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "zdrowie",
+          "ex": "Zdrowie jest bardzo ważne.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "choroba",
+          "ex": "Choroba trwa tydzień.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "nagły wypadek",
+          "ex": "To jest nagły wypadek!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "karetka",
+          "ex": "Karetka przyjedzie natychmiast.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "tabletka",
+          "ex": "Codziennie biorę jedną tabletkę.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "plaster",
+          "ex": "Potrzebuję plastra.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "sen",
+          "ex": "Odpowiednia ilość snu jest ważna.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "pacjent",
+          "ex": "Pacjent czeka w pokoju.",
+          "exTr": "Der Patient wartet im Zimmer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "shopping_06_shop",
+          "de": "Laden",
+          "x": "sklep",
+          "ex": "Sklep jest otwarty do ósmej.",
+          "exTr": "Der Laden ist bis acht offen.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_price",
+          "de": "Preis",
+          "x": "cena",
+          "ex": "Cena jest bardzo dobra.",
+          "exTr": "Der Preis ist sehr gut.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_money",
+          "de": "Geld",
+          "x": "pieniądze",
+          "ex": "Nie mam przy sobie pieniędzy.",
+          "exTr": "Ich habe kein Geld dabei.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_checkout",
+          "de": "Kasse",
+          "x": "kasa",
+          "ex": "Proszę zapłacić przy kasie.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_discount",
+          "de": "Rabatt",
+          "x": "rabat",
+          "ex": "Dzisiaj jest dziesięcioprocentowy rabat.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_customer",
+          "de": "Kunde",
+          "x": "klient",
+          "ex": "Klient czeka przy kasie.",
+          "exTr": "Der Kunde wartet an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_seller",
+          "de": "Verkäufer",
+          "x": "sprzedawca",
+          "ex": "Sprzedawca jest bardzo uprzejmy.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bag",
+          "de": "Tüte",
+          "x": "torba",
+          "ex": "Potrzebuje pan torby?",
+          "exTr": "Brauchen Sie eine Tüte?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermarket",
+          "ex": "Idę do supermarketu.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "lista zakupów",
+          "ex": "Piszę listę zakupów na jutro.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "To kosztuje dziesięć euro.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "cent",
+          "ex": "To kosztuje tylko pięćdziesiąt centów.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "karta kredytowa",
+          "ex": "Czy mogę zapłacić kartą kredytową?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "pokwitowanie",
+          "ex": "Poproszę o pokwitowanie.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "oferta",
+          "ex": "Oferta obowiązuje tylko dzisiaj.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "rozmiar",
+          "ex": "Jaki rozmiar pan nosi?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "wózek na zakupy",
+          "ex": "Potrzebuję wózka na zakupy.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "piekarnia",
+          "ex": "W piekarni kupuję bułki.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "butelka",
+          "ex": "Poproszę butelkę wody.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "prezent",
+          "ex": "Ten prezent jest dla ciebie.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "family_07_mother",
+          "de": "Mutter",
+          "x": "matka",
+          "ex": "Moja matka bardzo dobrze gotuje.",
+          "exTr": "Meine Mutter kocht sehr gut.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_father",
+          "de": "Vater",
+          "x": "ojciec",
+          "ex": "Mój ojciec pracuje w biurze.",
+          "exTr": "Mein Vater arbeitet im Büro.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_brother",
+          "de": "Bruder",
+          "x": "brat",
+          "ex": "Mój brat ma dziesięć lat.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_sister",
+          "de": "Schwester",
+          "x": "siostra",
+          "ex": "Moja siostra mieszka w Wiedniu.",
+          "exTr": "Meine Schwester wohnt in Wien.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_friend",
+          "de": "Freund",
+          "x": "przyjaciel",
+          "ex": "On jest moim najlepszym przyjacielem.",
+          "exTr": "Er ist mein bester Freund.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_child",
+          "de": "Kind",
+          "x": "dziecko",
+          "ex": "Dziecko bawi się w ogrodzie.",
+          "exTr": "Das Kind spielt im Garten.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_family",
+          "de": "Familie",
+          "x": "rodzina",
+          "ex": "Moja rodzina jest duża.",
+          "exTr": "Meine Familie ist groß.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_name",
+          "de": "Name",
+          "x": "imię",
+          "ex": "Jak masz na imię?",
+          "exTr": "Wie ist dein Name?",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "rodzice",
+          "ex": "Moi rodzice mieszkają w Hamburgu.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "syn",
+          "ex": "Jej syn chodzi do szkoły.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "córka",
+          "ex": "Jego córka ma pięć lat.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "babcia",
+          "ex": "Moja babcia lubi piec ciasto.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "dziadek",
+          "ex": "Mój dziadek czyta gazetę.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "mężczyzna",
+          "ex": "Mężczyzna nosi kapelusz.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "kobieta",
+          "ex": "Kobieta czeka na dworcu.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "niemowlę",
+          "ex": "Niemowlę śpi w łóżku.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "wujek",
+          "ex": "Mój wujek mieszka w Berlinie.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "ciocia",
+          "ex": "Moja ciocia odwiedzi nas jutro.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "sąsiad",
+          "ex": "Mój sąsiad jest bardzo miły.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "gość",
+          "ex": "Gość przychodzi o siódmej.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "time_08_today",
+          "de": "Heute",
+          "x": "dzisiaj",
+          "ex": "Dzisiaj świeci słońce.",
+          "exTr": "Heute scheint die Sonne.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_tomorrow",
+          "de": "Morgen",
+          "x": "jutro",
+          "ex": "Jutro mam wolne.",
+          "exTr": "Morgen habe ich frei.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_yesterday",
+          "de": "Gestern",
+          "x": "wczoraj",
+          "ex": "Wczoraj byłem w kinie.",
+          "exTr": "Gestern war ich im Kino.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_week",
+          "de": "Woche",
+          "x": "tydzień",
+          "ex": "Tydzień ma siedem dni.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_month",
+          "de": "Monat",
+          "x": "miesiąc",
+          "ex": "Miesiąc ma trzydzieści dni.",
+          "exTr": "Der Monat hat dreißig Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_year",
+          "de": "Jahr",
+          "x": "rok",
+          "ex": "Rok ma dwanaście miesięcy.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_to_learn",
+          "de": "Lernen",
+          "x": "uczyć się",
+          "ex": "Chcę uczyć się niemieckiego.",
+          "exTr": "Ich möchte Deutsch lernen.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_language",
+          "de": "Sprache",
+          "x": "język",
+          "ex": "Niemiecki to piękny język.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "zegar",
+          "ex": "Zegar wisi na ścianie.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "godzina",
+          "ex": "Lekcja trwa godzinę.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minuta",
+          "ex": "Poczekaj proszę minutę.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "dzień",
+          "ex": "Dzień ma dwadzieścia cztery godziny.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "noc",
+          "ex": "W nocy jest ciemno.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "wieczór",
+          "ex": "Wieczorem oglądamy telewizję.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "poniedziałek",
+          "ex": "W poniedziałek zaczyna się szkoła.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "weekend",
+          "ex": "W weekend wyjeżdżamy.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "książka",
+          "ex": "Czytam pasjonującą książkę.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "pytanie",
+          "ex": "Mam pytanie.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "odpowiedź",
+          "ex": "Odpowiedź jest poprawna.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "słowo",
+          "ex": "Nie znam tego słowa.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "zero",
+          "ex": "Wynik to zero.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "jeden",
+          "ex": "Jeden plus jeden to dwa.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "dwa",
+          "ex": "Mam dwóch braci.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "trzy",
+          "ex": "Jesteśmy w trzy osoby.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "cztery",
+          "ex": "Samochód ma cztery koła.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "pięć",
+          "ex": "Spóźniłem się pięć minut.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "sześć",
+          "ex": "Jest godzina szósta.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "siedem",
+          "ex": "Tydzień ma siedem dni.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "dziesięć",
+          "ex": "Książka kosztuje dziesięć euro.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "sto",
+          "ex": "Dom ma sto lat.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "czerwony",
+          "ex": "Pomidor jest czerwony.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "niebieski",
+          "ex": "Niebo jest dzisiaj niebieskie.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "zielony",
+          "ex": "Trawa jest zielona.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "żółty",
+          "ex": "Słońce jest żółte.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "czarny",
+          "ex": "Mój kot jest czarny.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "biały",
+          "ex": "Śnieg jest biały.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "koło",
+          "ex": "Narysuj proszę koło.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "kwadrat",
+          "ex": "Okno jest kwadratem.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "trójkąt",
+          "ex": "Znak drogowy jest trójkątem.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "linia",
+          "ex": "Narysuj prostą linię.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "głowa",
+          "ex": "Boli mnie głowa.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "ręka",
+          "ex": "Daj mi swoją rękę.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "stopa",
+          "ex": "Moja stopa jest zimna.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "ramię",
+          "ex": "On złamał sobie ramię.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "noga",
+          "ex": "Boli mnie noga.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "oko",
+          "ex": "Ona ma niebieskie oko.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "ucho",
+          "ex": "Dziecko ma zimne ucho.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "nos",
+          "ex": "Mam zatkany nos.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "usta",
+          "ex": "Otwórz proszę usta.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "włosy",
+          "ex": "Ona ma długie brązowe włosy.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "brzuch",
+          "ex": "Boli mnie brzuch.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "plecy",
+          "ex": "Boli mnie w plecach.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "koszula",
+          "ex": "On ma na sobie białą koszulę.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "spodnie",
+          "ex": "Spodnie są za małe.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "kurtka",
+          "ex": "Włóż kurtkę.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "buty",
+          "ex": "Moje buty są nowe.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "sukienka",
+          "ex": "Ona ma na sobie czerwoną sukienkę.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "czapka",
+          "ex": "Zimą noszę czapkę.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "skarpetki",
+          "ex": "Moje skarpetki są ciepłe.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "sweter",
+          "ex": "Sweter jest z wełny.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "Uczę się codziennie przez 30 minut.",
+      "translations": {
+        "pl": "Uczę się codziennie przez 30 minut."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "Nauka języka wymaga cierpliwości.",
+      "translations": {
+        "pl": "Nauka języka wymaga cierpliwości."
+      }
+    }
+  ]
+}

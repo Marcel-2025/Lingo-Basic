@@ -13,6 +13,8 @@
           "id": "daily_01_wake_up",
           "de": "Aufwachen",
           "x": "despertarse",
+          "ex": "Mañana tengo que despertarme temprano.",
+          "exTr": "Ich muss morgen früh aufwachen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -22,6 +24,8 @@
           "id": "daily_01_have_breakfast",
           "de": "Frühstücken",
           "x": "desayunar",
+          "ex": "El domingo quiero desayunar con calma.",
+          "exTr": "Am Sonntag will ich lange frühstücken.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -31,6 +35,8 @@
           "id": "daily_01_get_dressed",
           "de": "Sich anziehen",
           "x": "vestirse",
+          "ex": "Tengo que vestirme rápido.",
+          "exTr": "Ich muss mich schnell anziehen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -40,6 +46,8 @@
           "id": "daily_01_cook",
           "de": "Kochen",
           "x": "cocinar",
+          "ex": "Por la noche cocinamos juntos.",
+          "exTr": "Abends kochen wir zusammen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -48,7 +56,9 @@
         {
           "id": "daily_01_tidy_up",
           "de": "Aufräumen",
-          "x": "ordenar",
+          "x": "recoger",
+          "ex": "Después de la fiesta tenemos que recoger.",
+          "exTr": "Nach der Party müssen wir aufräumen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -58,7 +68,163 @@
           "id": "daily_01_rest",
           "de": "Sich ausruhen",
           "x": "descansar",
+          "ex": "Después del trabajo quiero descansar.",
+          "exTr": "Nach der Arbeit möchte ich mich ausruhen.",
           "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_take_a_shower",
+          "de": "Duschen",
+          "x": "ducharse",
+          "ex": "Quiero ducharme rápido.",
+          "exTr": "Ich möchte kurz duschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_brush_teeth",
+          "de": "Zähne putzen",
+          "x": "cepillarse los dientes",
+          "ex": "Antes de dormir tengo que cepillarme los dientes.",
+          "exTr": "Vor dem Schlafen muss ich Zähne putzen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_hurry",
+          "de": "Sich beeilen",
+          "x": "darse prisa",
+          "ex": "Tenemos que darnos prisa, si no perdemos el autobús.",
+          "exTr": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_do_laundry",
+          "de": "Wäsche waschen",
+          "x": "hacer la colada",
+          "ex": "El sábado tengo que hacer la colada.",
+          "exTr": "Am Samstag muss ich Wäsche waschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_wash_the_dishes",
+          "de": "Abwaschen",
+          "x": "fregar los platos",
+          "ex": "¿Quién quiere fregar los platos hoy?",
+          "exTr": "Wer will heute abwaschen?",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_fall_asleep",
+          "de": "Einschlafen",
+          "x": "dormirse",
+          "ex": "Por la noche me cuesta dormirme.",
+          "exTr": "Ich kann abends schlecht einschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_oversleep",
+          "de": "Verschlafen",
+          "x": "quedarse dormido",
+          "ex": "Hoy, por desgracia, me he quedado dormido.",
+          "exTr": "Heute habe ich leider verschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_alarm_clock",
+          "de": "Wecker",
+          "x": "despertador",
+          "ex": "Mi despertador suena a las seis.",
+          "exTr": "Mein Wecker klingelt um sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_habit",
+          "de": "Gewohnheit",
+          "x": "costumbre",
+          "ex": "El café por la mañana es mi costumbre.",
+          "exTr": "Kaffee am Morgen ist meine Gewohnheit.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch_break",
+          "de": "Mittagspause",
+          "x": "pausa del almuerzo",
+          "ex": "En la pausa del almuerzo salgo a pasear.",
+          "exTr": "In der Mittagspause gehe ich spazieren.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_end_of_workday",
+          "de": "Feierabend",
+          "x": "fin de la jornada",
+          "ex": "A las cinco termino la jornada.",
+          "exTr": "Um fünf Uhr habe ich Feierabend.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch",
+          "de": "Mittagessen",
+          "x": "almuerzo",
+          "ex": "El almuerzo estará listo a las doce.",
+          "exTr": "Das Mittagessen ist um zwölf Uhr fertig.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_be_late",
+          "de": "Sich verspäten",
+          "x": "llegar tarde",
+          "ex": "Por desgracia, voy a llegar un poco tarde.",
+          "exTr": "Leider werde ich mich etwas verspäten.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_commute",
+          "de": "Pendeln",
+          "x": "desplazarse al trabajo",
+          "ex": "Tengo que desplazarme una hora al trabajo todos los días.",
+          "exTr": "Ich muss jeden Tag eine Stunde pendeln.",
+          "difficulty": 3,
           "tags": [
             "tagesablauf"
           ]
@@ -75,6 +241,8 @@
           "id": "city_02_intersection",
           "de": "Kreuzung",
           "x": "cruce",
+          "ex": "En el cruce tienes que girar a la izquierda.",
+          "exTr": "An der Kreuzung musst du links abbiegen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -84,6 +252,8 @@
           "id": "city_02_traffic_light",
           "de": "Ampel",
           "x": "semáforo",
+          "ex": "El semáforo está en rojo ahora mismo.",
+          "exTr": "Die Ampel ist gerade rot.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -93,6 +263,8 @@
           "id": "city_02_pavement",
           "de": "Bürgersteig",
           "x": "acera",
+          "ex": "Los niños juegan en la acera.",
+          "exTr": "Kinder spielen auf dem Bürgersteig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -102,6 +274,8 @@
           "id": "city_02_neighborhood",
           "de": "Nachbarschaft",
           "x": "barrio",
+          "ex": "Nuestro barrio es muy tranquilo.",
+          "exTr": "Unsere Nachbarschaft ist sehr ruhig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -111,6 +285,8 @@
           "id": "city_02_library",
           "de": "Bücherei",
           "x": "biblioteca",
+          "ex": "En la biblioteca se pueden pedir libros prestados.",
+          "exTr": "In der Bücherei kann man Bücher leihen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -120,7 +296,163 @@
           "id": "city_02_market",
           "de": "Markt",
           "x": "mercado",
+          "ex": "Los sábados compro fruta en el mercado.",
+          "exTr": "Samstags kaufe ich Obst auf dem Markt.",
           "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_town_hall",
+          "de": "Rathaus",
+          "x": "ayuntamiento",
+          "ex": "El ayuntamiento está en pleno centro de la ciudad.",
+          "exTr": "Das Rathaus steht mitten in der Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_fountain",
+          "de": "Brunnen",
+          "x": "fuente",
+          "ex": "Quedamos delante de la fuente a las tres.",
+          "exTr": "Vor dem Brunnen treffen wir uns um drei.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_monument",
+          "de": "Denkmal",
+          "x": "monumento",
+          "ex": "El monumento recuerda a un famoso poeta.",
+          "exTr": "Das Denkmal erinnert an einen berühmten Dichter.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pedestrian_zone",
+          "de": "Fußgängerzone",
+          "x": "zona peatonal",
+          "ex": "En la zona peatonal hay muchas tiendas.",
+          "exTr": "In der Fußgängerzone gibt es viele Geschäfte.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_playground",
+          "de": "Spielplatz",
+          "x": "parque infantil",
+          "ex": "El parque infantil está al lado del colegio.",
+          "exTr": "Der Spielplatz ist neben der Schule.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_bridge",
+          "de": "Brücke",
+          "x": "puente",
+          "ex": "El puente cruza el río.",
+          "exTr": "Die Brücke führt über den Fluss.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_post_office",
+          "de": "Postamt",
+          "x": "oficina de correos",
+          "ex": "Tengo que llevar un paquete a la oficina de correos.",
+          "exTr": "Ich muss ein Paket zum Postamt bringen.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_map",
+          "de": "Stadtplan",
+          "x": "plano de la ciudad",
+          "ex": "Sin un plano de la ciudad no encuentro el camino.",
+          "exTr": "Ohne Stadtplan finde ich den Weg nicht.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_tourist_attraction",
+          "de": "Sehenswürdigkeit",
+          "x": "atracción turística",
+          "ex": "La catedral es la atracción turística más importante.",
+          "exTr": "Der Dom ist die wichtigste Sehenswürdigkeit.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_center",
+          "de": "Innenstadt",
+          "x": "centro de la ciudad",
+          "ex": "El centro de la ciudad está muy lleno los fines de semana.",
+          "exTr": "Die Innenstadt ist am Wochenende sehr voll.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_suburb",
+          "de": "Vorort",
+          "x": "barrio periférico",
+          "ex": "Mis padres viven en un barrio periférico tranquilo.",
+          "exTr": "Meine Eltern wohnen in einem ruhigen Vorort.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_high_rise_building",
+          "de": "Hochhaus",
+          "x": "edificio alto",
+          "ex": "En el edificio alto viven más de cien familias.",
+          "exTr": "Im Hochhaus wohnen über hundert Familien.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_construction_site",
+          "de": "Baustelle",
+          "x": "obra",
+          "ex": "Por las obras, la calle está cortada.",
+          "exTr": "Wegen der Baustelle ist die Straße gesperrt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_street_lamp",
+          "de": "Straßenlaterne",
+          "x": "farola",
+          "ex": "La farola de delante de la casa está rota.",
+          "exTr": "Die Straßenlaterne vor dem Haus ist kaputt.",
+          "difficulty": 3,
           "tags": [
             "stadt_nachbarschaft"
           ]
@@ -137,6 +469,8 @@
           "id": "communication_03_ask",
           "de": "Fragen",
           "x": "preguntar",
+          "ex": "¿Puedo preguntarte algo?",
+          "exTr": "Darf ich dich etwas fragen?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -146,6 +480,8 @@
           "id": "communication_03_answer",
           "de": "Antworten",
           "x": "responder",
+          "ex": "Por favor, responda antes de mañana.",
+          "exTr": "Bitte antworten Sie bis morgen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -155,6 +491,8 @@
           "id": "communication_03_explain",
           "de": "Erklären",
           "x": "explicar",
+          "ex": "¿Puedes explicarme el juego?",
+          "exTr": "Kannst du mir das Spiel erklären?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -164,6 +502,8 @@
           "id": "communication_03_agree",
           "de": "Zustimmen",
           "x": "estar de acuerdo",
+          "ex": "Solo puedo estar de acuerdo contigo en eso.",
+          "exTr": "Ich kann dir da nur zustimmen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -173,6 +513,8 @@
           "id": "communication_03_reject",
           "de": "Ablehnen",
           "x": "rechazar",
+          "ex": "Por desgracia, tuvo que rechazar la oferta.",
+          "exTr": "Sie musste das Angebot leider ablehnen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -182,6 +524,162 @@
           "id": "communication_03_repeat",
           "de": "Wiederholen",
           "x": "repetir",
+          "ex": "¿Podría repetir eso, por favor?",
+          "exTr": "Können Sie das bitte wiederholen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_tell",
+          "de": "Erzählen",
+          "x": "contar",
+          "ex": "Quiere contarnos cómo fue el viaje.",
+          "exTr": "Er will uns von der Reise erzählen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_suggest",
+          "de": "Vorschlagen",
+          "x": "proponer",
+          "ex": "Quiero proponer un punto de encuentro.",
+          "exTr": "Ich möchte einen Treffpunkt vorschlagen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_contradict",
+          "de": "Widersprechen",
+          "x": "contradecir",
+          "ex": "Lamentablemente tengo que contradecirte.",
+          "exTr": "Ich muss dir leider widersprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_discuss",
+          "de": "Diskutieren",
+          "x": "discutir",
+          "ex": "A menudo discutimos sobre política.",
+          "exTr": "Wir diskutieren oft über Politik.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_inform",
+          "de": "Mitteilen",
+          "x": "comunicar",
+          "ex": "Quiero comunicarle algo.",
+          "exTr": "Ich möchte Ihnen etwas mitteilen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_apologize",
+          "de": "Sich entschuldigen",
+          "x": "disculparse",
+          "ex": "Quería disculparse con ella.",
+          "exTr": "Er wollte sich bei ihr entschuldigen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_invite",
+          "de": "Einladen",
+          "x": "invitar",
+          "ex": "Quiero invitarte a mi fiesta.",
+          "exTr": "Ich möchte dich zu meiner Party einladen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_promise",
+          "de": "Versprechen",
+          "x": "prometer",
+          "ex": "Te lo puedo prometer con total seguridad.",
+          "exTr": "Ich kann dir das fest versprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_listen",
+          "de": "Zuhören",
+          "x": "escuchar",
+          "ex": "Saber escuchar bien es muy importante.",
+          "exTr": "Gut zuhören ist sehr wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_message",
+          "de": "Nachricht",
+          "x": "mensaje",
+          "ex": "Te he escrito un mensaje.",
+          "exTr": "Ich habe dir eine Nachricht geschrieben.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_conversation",
+          "de": "Gespräch",
+          "x": "conversación",
+          "ex": "La conversación con el jefe fue amistosa.",
+          "exTr": "Das Gespräch mit dem Chef war freundlich.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_letter",
+          "de": "Brief",
+          "x": "carta",
+          "ex": "Le escribí una carta a mi abuela.",
+          "exTr": "Ich habe meiner Oma einen Brief geschrieben.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_misunderstanding",
+          "de": "Missverständnis",
+          "x": "malentendido",
+          "ex": "Solo fue un pequeño malentendido.",
+          "exTr": "Das war nur ein kleines Missverständnis.",
+          "difficulty": 3,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_call",
+          "de": "Anrufen",
+          "x": "llamar",
+          "ex": "Te llamaré esta noche.",
+          "exTr": "Ich werde dich heute Abend anrufen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -199,6 +697,8 @@
           "id": "nature_04_weather",
           "de": "Wetter",
           "x": "tiempo",
+          "ex": "El tiempo es maravilloso hoy.",
+          "exTr": "Das Wetter ist heute wunderbar.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -208,6 +708,8 @@
           "id": "nature_04_cloud",
           "de": "Wolke",
           "x": "nube",
+          "ex": "Hay una nube oscura sobre la montaña.",
+          "exTr": "Eine dunkle Wolke steht über dem Berg.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -217,6 +719,8 @@
           "id": "nature_04_wind",
           "de": "Wind",
           "x": "viento",
+          "ex": "Hoy sopla un viento fuerte.",
+          "exTr": "Heute weht ein starker Wind.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -226,6 +730,8 @@
           "id": "nature_04_forest",
           "de": "Wald",
           "x": "bosque",
+          "ex": "Damos un paseo por el bosque.",
+          "exTr": "Wir machen einen Spaziergang im Wald.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -235,6 +741,8 @@
           "id": "nature_04_river",
           "de": "Fluss",
           "x": "río",
+          "ex": "El río atraviesa toda la ciudad.",
+          "exTr": "Der Fluss fließt durch die ganze Stadt.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -244,6 +752,162 @@
           "id": "nature_04_mountain",
           "de": "Berg",
           "x": "montaña",
+          "ex": "En la montaña todavía hay nieve.",
+          "exTr": "Auf dem Berg liegt noch Schnee.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_thunderstorm",
+          "de": "Gewitter",
+          "x": "tormenta",
+          "ex": "Esta noche viene una tormenta.",
+          "exTr": "Am Abend kommt ein Gewitter.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_fog",
+          "de": "Nebel",
+          "x": "niebla",
+          "ex": "Con la niebla apenas se ve nada.",
+          "exTr": "Im Nebel sieht man kaum etwas.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_rainbow",
+          "de": "Regenbogen",
+          "x": "arcoíris",
+          "ex": "Después de la lluvia apareció un arcoíris.",
+          "exTr": "Nach dem Regen erschien ein Regenbogen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_storm",
+          "de": "Sturm",
+          "x": "temporal",
+          "ex": "El temporal derribó un árbol.",
+          "exTr": "Der Sturm hat einen Baum umgeworfen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_flood",
+          "de": "Überschwemmung",
+          "x": "inundación",
+          "ex": "Después de la lluvia hubo una inundación.",
+          "exTr": "Nach dem Regen gab es eine Überschwemmung.",
+          "difficulty": 3,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_valley",
+          "de": "Tal",
+          "x": "valle",
+          "ex": "En el valle hay un pueblo pequeño.",
+          "exTr": "Im Tal liegt ein kleines Dorf.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_meadow",
+          "de": "Wiese",
+          "x": "prado",
+          "ex": "En el prado florecen muchas flores.",
+          "exTr": "Auf der Wiese blühen viele Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_riverbank",
+          "de": "Ufer",
+          "x": "orilla",
+          "ex": "Estamos sentados en la orilla pescando.",
+          "exTr": "Wir sitzen am Ufer und angeln.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_summit",
+          "de": "Gipfel",
+          "x": "cima",
+          "ex": "A las doce llegamos a la cima.",
+          "exTr": "Um zwölf Uhr erreichen wir den Gipfel.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_lightning",
+          "de": "Blitz",
+          "x": "rayo",
+          "ex": "Un rayo cayó sobre el árbol.",
+          "exTr": "Ein Blitz schlug in den Baum ein.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_puddle",
+          "de": "Pfütze",
+          "x": "charco",
+          "ex": "El niño salta en el charco.",
+          "exTr": "Das Kind springt in die Pfütze.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_environment",
+          "de": "Umwelt",
+          "x": "medio ambiente",
+          "ex": "Tenemos que proteger mejor el medio ambiente.",
+          "exTr": "Wir müssen die Umwelt besser schützen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_plant",
+          "de": "Pflanze",
+          "x": "planta",
+          "ex": "Esta planta necesita mucho sol.",
+          "exTr": "Diese Pflanze braucht viel Sonne.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_sunrise",
+          "de": "Sonnenaufgang",
+          "x": "amanecer",
+          "ex": "El amanecer junto al mar fue de ensueño.",
+          "exTr": "Der Sonnenaufgang am Meer war traumhaft.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -261,6 +925,8 @@
           "id": "feelings_05_satisfied",
           "de": "Zufrieden",
           "x": "satisfecho",
+          "ex": "Estoy satisfecho con mi trabajo.",
+          "exTr": "Ich bin mit meiner Arbeit zufrieden.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -270,6 +936,8 @@
           "id": "feelings_05_nervous",
           "de": "Nervös",
           "x": "nervioso",
+          "ex": "Antes del examen siempre estoy nervioso.",
+          "exTr": "Vor der Prüfung bin ich immer nervös.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -279,6 +947,8 @@
           "id": "feelings_05_surprised",
           "de": "Überrascht",
           "x": "sorprendido",
+          "ex": "Ella estaba sorprendida por el regalo.",
+          "exTr": "Sie war von dem Geschenk überrascht.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -288,6 +958,8 @@
           "id": "feelings_05_proud",
           "de": "Stolz",
           "x": "orgulloso",
+          "ex": "Los padres están orgullosos de su hijo.",
+          "exTr": "Die Eltern sind stolz auf ihr Kind.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -297,6 +969,8 @@
           "id": "feelings_05_relaxed",
           "de": "Entspannt",
           "x": "relajado",
+          "ex": "Después de las vacaciones estoy totalmente relajado.",
+          "exTr": "Nach dem Urlaub bin ich total entspannt.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -306,6 +980,162 @@
           "id": "feelings_05_patient",
           "de": "Geduldig",
           "x": "paciente",
+          "ex": "El profesor es muy paciente.",
+          "exTr": "Der Lehrer ist sehr geduldig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_jealous",
+          "de": "Eifersüchtig",
+          "x": "celoso",
+          "ex": "Está celoso del nuevo compañero.",
+          "exTr": "Er ist auf den neuen Kollegen eifersüchtig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_disappointed",
+          "de": "Enttäuscht",
+          "x": "decepcionado",
+          "ex": "Ella estaba muy decepcionada con el resultado.",
+          "exTr": "Sie war vom Ergebnis sehr enttäuscht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_curious",
+          "de": "Neugierig",
+          "x": "curioso",
+          "ex": "El niño es curioso y hace muchas preguntas.",
+          "exTr": "Das Kind ist neugierig und stellt viele Fragen.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_shy",
+          "de": "Schüchtern",
+          "x": "tímido",
+          "ex": "Al principio era bastante tímido.",
+          "exTr": "Am Anfang war er ziemlich schüchtern.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_honest",
+          "de": "Ehrlich",
+          "x": "sincero",
+          "ex": "Por favor, sé sincero conmigo.",
+          "exTr": "Sei bitte ehrlich zu mir.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_polite",
+          "de": "Höflich",
+          "x": "educado",
+          "ex": "El camarero siempre es muy educado.",
+          "exTr": "Der Kellner ist immer sehr höflich.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_brave",
+          "de": "Mutig",
+          "x": "valiente",
+          "ex": "Fue un paso valiente.",
+          "exTr": "Das war ein mutiger Schritt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lazy",
+          "de": "Faul",
+          "x": "perezoso",
+          "ex": "El domingo estoy un poco perezoso.",
+          "exTr": "Am Sonntag bin ich ein bisschen faul.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_anxious",
+          "de": "Ängstlich",
+          "x": "miedoso",
+          "ex": "El perro es muy miedoso.",
+          "exTr": "Der Hund ist sehr ängstlich.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_stressed",
+          "de": "Gestresst",
+          "x": "estresado",
+          "ex": "Antes de Navidad todo el mundo está estresado.",
+          "exTr": "Vor Weihnachten sind alle gestresst.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_embarrassed",
+          "de": "Verlegen",
+          "x": "avergonzado",
+          "ex": "Ella se quedó avergonzada y se rio en voz baja.",
+          "exTr": "Sie wurde verlegen und lachte leise.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_helpful",
+          "de": "Hilfsbereit",
+          "x": "servicial",
+          "ex": "Nuestros vecinos son muy serviciales.",
+          "exTr": "Unsere Nachbarn sind sehr hilfsbereit.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_cheerful",
+          "de": "Fröhlich",
+          "x": "alegre",
+          "ex": "Siempre está alegre y se ríe mucho.",
+          "exTr": "Sie ist immer fröhlich und lacht viel.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lonely",
+          "de": "Einsam",
+          "x": "solo",
+          "ex": "Después de la mudanza se sentía solo.",
+          "exTr": "Nach dem Umzug fühlte er sich einsam.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -323,6 +1153,8 @@
           "id": "education_06_course",
           "de": "Kurs",
           "x": "curso",
+          "ex": "Asisto a un curso en la escuela de adultos.",
+          "exTr": "Ich besuche einen Kurs an der Volkshochschule.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -332,6 +1164,8 @@
           "id": "education_06_task",
           "de": "Aufgabe",
           "x": "tarea",
+          "ex": "Esta tarea no es difícil.",
+          "exTr": "Diese Aufgabe ist nicht schwer.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -341,6 +1175,8 @@
           "id": "education_06_exam",
           "de": "Prüfung",
           "x": "examen",
+          "ex": "El examen empieza a las nueve.",
+          "exTr": "Die Prüfung beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -350,6 +1186,8 @@
           "id": "education_06_practise",
           "de": "Üben",
           "x": "practicar",
+          "ex": "Hay que practicar todos los días.",
+          "exTr": "Man muss jeden Tag üben.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -358,7 +1196,9 @@
         {
           "id": "education_06_understand",
           "de": "Verstehen",
-          "x": "comprender",
+          "x": "entender",
+          "ex": "Todavía no entiendo del todo la gramática.",
+          "exTr": "Ich verstehe die Grammatik noch nicht ganz.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -367,10 +1207,1078 @@
         {
           "id": "education_06_progress",
           "de": "Fortschreiten",
-          "x": "progresar",
+          "x": "avanzar",
+          "ex": "El trabajo avanza bien.",
+          "exTr": "Die Arbeit schreitet gut fort.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_homework",
+          "de": "Hausaufgabe",
+          "x": "deberes",
+          "ex": "Mis deberes ya están terminados.",
+          "exTr": "Meine Hausaufgabe ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_report_card",
+          "de": "Zeugnis",
+          "x": "boletín de notas",
+          "ex": "Recibimos el boletín de notas en julio.",
+          "exTr": "Das Zeugnis bekommen wir im Juli.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_grade",
+          "de": "Note",
+          "x": "nota",
+          "ex": "Tengo una buena nota en matemáticas.",
+          "exTr": "Ich habe in Mathe eine gute Note.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_timetable",
+          "de": "Stundenplan",
+          "x": "horario",
+          "ex": "En el horario de hoy hay deporte.",
+          "exTr": "Auf dem Stundenplan steht heute Sport.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_lessons",
+          "de": "Unterricht",
+          "x": "clase",
+          "ex": "La clase empieza a las ocho.",
+          "exTr": "Der Unterricht beginnt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_textbook",
+          "de": "Lehrbuch",
+          "x": "libro de texto",
+          "ex": "Abrid el libro de texto por la página diez, por favor.",
+          "exTr": "Bitte öffnet das Lehrbuch auf Seite zehn.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_dictionary",
+          "de": "Wörterbuch",
+          "x": "diccionario",
+          "ex": "Busco la palabra en el diccionario.",
+          "exTr": "Ich suche das Wort im Wörterbuch.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_class_test",
+          "de": "Klassenarbeit",
+          "x": "examen",
+          "ex": "Mañana tenemos un examen de matemáticas.",
+          "exTr": "Morgen schreiben wir eine Klassenarbeit in Mathe.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_concentrate",
+          "de": "Sich konzentrieren",
+          "x": "concentrarse",
+          "ex": "Con ruido me cuesta concentrarme.",
+          "exTr": "Bei Lärm kann ich mich schlecht konzentrieren.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_learn_by_heart",
+          "de": "Auswendig lernen",
+          "x": "aprender de memoria",
+          "ex": "Tenemos que aprender el poema de memoria.",
+          "exTr": "Wir müssen das Gedicht auswendig lernen.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_degree",
+          "de": "Abschluss",
+          "x": "título",
+          "ex": "Después de obtener el título busco trabajo.",
+          "exTr": "Nach dem Abschluss suche ich eine Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_university_studies",
+          "de": "Studium",
+          "x": "estudios universitarios",
+          "ex": "Ella empieza sus estudios universitarios en otoño.",
+          "exTr": "Sie beginnt im Herbst ihr Studium.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_presentation",
+          "de": "Referat",
+          "x": "exposición oral",
+          "ex": "Mañana hago una exposición oral sobre Berlín.",
+          "exTr": "Morgen halte ich ein Referat über Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_notes",
+          "de": "Notizen",
+          "x": "apuntes",
+          "ex": "Tomo apuntes en clase.",
+          "exTr": "Ich mache mir Notizen im Unterricht.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure_07",
+      "title": "Freizeit & Hobbys",
+      "icon": "🎨",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "leisure_07_hike",
+          "de": "Wandern",
+          "x": "hacer senderismo",
+          "ex": "El fin de semana vamos a hacer senderismo a la montaña.",
+          "exTr": "Am Wochenende gehen wir in den Bergen wandern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_fish",
+          "de": "Angeln",
+          "x": "pescar",
+          "ex": "A mi abuelo le gusta pescar en el lago.",
+          "exTr": "Mein Opa geht gern am See angeln.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_do_crafts",
+          "de": "Basteln",
+          "x": "hacer manualidades",
+          "ex": "A los niños les gusta hacer manualidades con papel.",
+          "exTr": "Die Kinder basteln gern mit Papier.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_paint",
+          "de": "Malen",
+          "x": "pintar",
+          "ex": "El domingo quiero pintar algo.",
+          "exTr": "Ich möchte am Sonntag etwas malen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_take_photos",
+          "de": "Fotografieren",
+          "x": "hacer fotos",
+          "ex": "En vacaciones me encanta hacer fotos.",
+          "exTr": "Im Urlaub fotografiere ich sehr gern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_jog",
+          "de": "Joggen",
+          "x": "correr",
+          "ex": "Por las mañanas voy a correr al parque.",
+          "exTr": "Morgens gehe ich im Park joggen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_club",
+          "de": "Verein",
+          "x": "club",
+          "ex": "Mi hermano está en un club deportivo.",
+          "exTr": "Mein Bruder ist in einem Sportverein.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_team",
+          "de": "Mannschaft",
+          "x": "equipo",
+          "ex": "Nuestro equipo ganó ayer.",
+          "exTr": "Unsere Mannschaft hat gestern gewonnen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_excursion",
+          "de": "Ausflug",
+          "x": "excursión",
+          "ex": "El sábado hacemos una excursión.",
+          "exTr": "Am Samstag machen wir einen Ausflug.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_concert",
+          "de": "Konzert",
+          "x": "concierto",
+          "ex": "Esta noche vamos a un concierto.",
+          "exTr": "Wir gehen heute Abend ins Konzert.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exhibition",
+          "de": "Ausstellung",
+          "x": "exposición",
+          "ex": "La exposición está abierta hasta finales de mayo.",
+          "exTr": "Die Ausstellung ist bis Ende Mai geöffnet.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_collect",
+          "de": "Sammeln",
+          "x": "coleccionar",
+          "ex": "A mi hijo le gusta coleccionar monedas antiguas.",
+          "exTr": "Mein Sohn sammelt gern alte Münzen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_knit",
+          "de": "Stricken",
+          "x": "tejer",
+          "ex": "Mi abuela teje calcetines en invierno.",
+          "exTr": "Meine Oma strickt im Winter Socken.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_board_game",
+          "de": "Brettspiel",
+          "x": "juego de mesa",
+          "ex": "Esta noche jugamos a un juego de mesa.",
+          "exTr": "Heute Abend spielen wir ein Brettspiel.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_garden",
+          "de": "Gärtnern",
+          "x": "hacer jardinería",
+          "ex": "En primavera me encanta hacer jardinería.",
+          "exTr": "Im Frühling gärtnere ich sehr gern.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_go_out",
+          "de": "Ausgehen",
+          "x": "salir",
+          "ex": "El viernes queremos salir.",
+          "exTr": "Am Freitag wollen wir ausgehen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_event",
+          "de": "Veranstaltung",
+          "x": "evento",
+          "ex": "El evento empieza a las ocho.",
+          "exTr": "Die Veranstaltung beginnt um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_ticket",
+          "de": "Eintrittskarte",
+          "x": "entrada",
+          "ex": "La entrada cuesta diez euros.",
+          "exTr": "Die Eintrittskarte kostet zehn Euro.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_boring",
+          "de": "Langweilig",
+          "x": "aburrido",
+          "ex": "La película fue bastante aburrida.",
+          "exTr": "Der Film war ziemlich langweilig.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exciting",
+          "de": "Spannend",
+          "x": "emocionante",
+          "ex": "El libro es increíblemente emocionante.",
+          "exTr": "Das Buch ist unglaublich spannend.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooking_08",
+      "title": "Essen gehen & Kochen",
+      "icon": "🍳",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "cooking_08_menu",
+          "de": "Speisekarte",
+          "x": "carta",
+          "ex": "¿Nos puede traer la carta, por favor?",
+          "exTr": "Können wir bitte die Speisekarte haben?",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bill",
+          "de": "Rechnung",
+          "x": "cuenta",
+          "ex": "¡La cuenta, por favor!",
+          "exTr": "Die Rechnung bitte!",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tip",
+          "de": "Trinkgeld",
+          "x": "propina",
+          "ex": "Le doy dos euros de propina al camarero.",
+          "exTr": "Ich gebe dem Kellner zwei Euro Trinkgeld.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_waiter",
+          "de": "Kellner",
+          "x": "camarero",
+          "ex": "El camarero trae las bebidas.",
+          "exTr": "Der Kellner bringt die Getränke.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_starter",
+          "de": "Vorspeise",
+          "x": "entrante",
+          "ex": "De entrante tomaré una sopa.",
+          "exTr": "Als Vorspeise nehme ich eine Suppe.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_dessert",
+          "de": "Nachtisch",
+          "x": "postre",
+          "ex": "De postre hay helado.",
+          "exTr": "Zum Nachtisch gibt es Eis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_order",
+          "de": "Bestellen",
+          "x": "pedir",
+          "ex": "Ahora queremos pedir.",
+          "exTr": "Wir möchten jetzt bestellen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_fry",
+          "de": "Braten",
+          "x": "asar",
+          "ex": "Hay que asar bien la carne.",
+          "exTr": "Man muss das Fleisch gut braten.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bake",
+          "de": "Backen",
+          "x": "hornear",
+          "ex": "El fin de semana horneo un pastel.",
+          "exTr": "Am Wochenende backe ich einen Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_cut",
+          "de": "Schneiden",
+          "x": "cortar",
+          "ex": "Por favor, corta las cebollas pequeñas.",
+          "exTr": "Bitte schneide die Zwiebeln klein.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_stir",
+          "de": "Rühren",
+          "x": "remover",
+          "ex": "La salsa hay que removerla constantemente.",
+          "exTr": "Die Soße muss man ständig rühren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_ingredient",
+          "de": "Zutat",
+          "x": "ingrediente",
+          "ex": "A la receta todavía le falta un ingrediente.",
+          "exTr": "Für das Rezept fehlt noch eine Zutat.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spoon",
+          "de": "Löffel",
+          "x": "cuchara",
+          "ex": "Necesito una cuchara para la sopa.",
+          "exTr": "Ich brauche einen Löffel für die Suppe.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_frying_pan",
+          "de": "Pfanne",
+          "x": "sartén",
+          "ex": "La sartén ya está muy caliente.",
+          "exTr": "Die Pfanne ist schon sehr heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_pot",
+          "de": "Topf",
+          "x": "olla",
+          "ex": "Echa la pasta en la olla, por favor.",
+          "exTr": "Gib die Nudeln bitte in den Topf.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_season",
+          "de": "Würzen",
+          "x": "sazonar",
+          "ex": "No olvides sazonar la sopa.",
+          "exTr": "Vergiss nicht, die Suppe zu würzen.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tasty",
+          "de": "Lecker",
+          "x": "rico",
+          "ex": "El pastel está realmente rico.",
+          "exTr": "Der Kuchen schmeckt richtig lecker.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spicy",
+          "de": "Scharf",
+          "x": "picante",
+          "ex": "La comida me pareció demasiado picante.",
+          "exTr": "Das Essen war mir zu scharf.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_reserve",
+          "de": "Reservieren",
+          "x": "reservar",
+          "ex": "Quiero reservar una mesa para cuatro.",
+          "exTr": "Ich möchte einen Tisch für vier reservieren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spice",
+          "de": "Gewürz",
+          "x": "especia",
+          "ex": "Esta especia viene de la India.",
+          "exTr": "Dieses Gewürz kommt aus Indien.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_09",
+      "title": "Verkehr & Unterwegs",
+      "icon": "🚆",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "transport_09_ticket",
+          "de": "Fahrkarte",
+          "x": "billete",
+          "ex": "¿Dónde puedo comprar un billete?",
+          "exTr": "Wo kann ich eine Fahrkarte kaufen?",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_timetable",
+          "de": "Fahrplan",
+          "x": "horario",
+          "ex": "Según el horario, el tren llega a las diez.",
+          "exTr": "Laut Fahrplan kommt der Zug um zehn.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_escalator",
+          "de": "Rolltreppe",
+          "x": "escalera mecánica",
+          "ex": "Sube por la escalera mecánica hasta el andén, por favor.",
+          "exTr": "Nimm bitte die Rolltreppe nach oben zum Bahnsteig.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_pedestrian",
+          "de": "Fußgänger",
+          "x": "peatón",
+          "ex": "Los peatones esperan en el semáforo en rojo.",
+          "exTr": "Die Fußgänger warten an der roten Ampel.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_delay",
+          "de": "Verspätung",
+          "x": "retraso",
+          "ex": "El tren lleva veinte minutos de retraso.",
+          "exTr": "Der Zug hat zwanzig Minuten Verspätung.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_platform",
+          "de": "Bahnsteig",
+          "x": "andén",
+          "ex": "El tren sale del andén cuatro.",
+          "exTr": "Der Zug fährt von Bahnsteig vier ab.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_track",
+          "de": "Gleis",
+          "x": "vía",
+          "ex": "El AVE está en la vía siete.",
+          "exTr": "Auf Gleis sieben steht der ICE.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_departure",
+          "de": "Abfahrt",
+          "x": "salida",
+          "ex": "La salida es a las siete y media.",
+          "exTr": "Die Abfahrt ist um halb acht.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_arrival",
+          "de": "Ankunft",
+          "x": "llegada",
+          "ex": "Nuestra llegada es a las doce.",
+          "exTr": "Unsere Ankunft ist um zwölf Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_traffic_jam",
+          "de": "Stau",
+          "x": "atasco",
+          "ex": "Hay un atasco largo en la autopista.",
+          "exTr": "Auf der Autobahn gibt es einen langen Stau.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driving_license",
+          "de": "Führerschein",
+          "x": "carné de conducir",
+          "ex": "A los dieciocho me saco el carné de conducir.",
+          "exTr": "Mit achtzehn mache ich den Führerschein.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_refuel",
+          "de": "Tanken",
+          "x": "repostar",
+          "ex": "Todavía tenemos que repostar.",
+          "exTr": "Wir müssen noch tanken.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_parking_space",
+          "de": "Parkplatz",
+          "x": "plaza de aparcamiento",
+          "ex": "Aquí no hay ninguna plaza de aparcamiento libre.",
+          "exTr": "Hier gibt es keinen freien Parkplatz.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_conductor",
+          "de": "Schaffner",
+          "x": "revisor",
+          "ex": "El revisor controla todos los billetes en el tren.",
+          "exTr": "Der Schaffner kontrolliert im Zug alle Fahrkarten.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driver",
+          "de": "Fahrer",
+          "x": "conductor",
+          "ex": "El conductor ya espera delante de la estación.",
+          "exTr": "Der Fahrer wartet schon vor dem Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_turn",
+          "de": "Abbiegen",
+          "x": "girar",
+          "ex": "Aquí no se puede girar a la izquierda.",
+          "exTr": "Hier dürfen Sie nicht links abbiegen.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_highway",
+          "de": "Autobahn",
+          "x": "autopista",
+          "ex": "En la autopista se puede ir rápido.",
+          "exTr": "Auf der Autobahn darf man schnell fahren.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_detour",
+          "de": "Umleitung",
+          "x": "desvío",
+          "ex": "Por las obras hay un desvío.",
+          "exTr": "Wegen der Baustelle gibt es eine Umleitung.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_connection",
+          "de": "Anschluss",
+          "x": "conexión",
+          "ex": "Por desgracia, hemos perdido la conexión.",
+          "exTr": "Wir haben den Anschluss leider verpasst.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_board",
+          "de": "Einsteigen",
+          "x": "subir",
+          "ex": "Por favor, suban por la parte de atrás.",
+          "exTr": "Bitte steigen Sie hinten ein.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "household_10",
+      "title": "Wohnen & Haushalt",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "household_10_rent",
+          "de": "Miete",
+          "x": "alquiler",
+          "ex": "El alquiler vence todos los meses.",
+          "exTr": "Die Miete ist jeden Monat fällig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_landlord",
+          "de": "Vermieter",
+          "x": "casero",
+          "ex": "Mi casero es muy amable.",
+          "exTr": "Mein Vermieter ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_move_house",
+          "de": "Umziehen",
+          "x": "mudarse",
+          "ex": "El mes que viene tenemos que mudarnos.",
+          "exTr": "Nächsten Monat müssen wir umziehen.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_furniture",
+          "de": "Möbel",
+          "x": "muebles",
+          "ex": "Compramos muebles nuevos para el piso.",
+          "exTr": "Wir kaufen neue Möbel für die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_shelf",
+          "de": "Regal",
+          "x": "estantería",
+          "ex": "La estantería está colgada en la pared.",
+          "exTr": "Das Regal hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_mirror",
+          "de": "Spiegel",
+          "x": "espejo",
+          "ex": "En el pasillo hay un espejo grande.",
+          "exTr": "Im Flur hängt ein großer Spiegel.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_carpet",
+          "de": "Teppich",
+          "x": "alfombra",
+          "ex": "La alfombra del pasillo es nueva.",
+          "exTr": "Der Teppich im Flur ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_curtain",
+          "de": "Vorhang",
+          "x": "cortina",
+          "ex": "Corre la cortina, por favor.",
+          "exTr": "Zieh bitte den Vorhang zu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_heating",
+          "de": "Heizung",
+          "x": "calefacción",
+          "ex": "En invierno la calefacción es importante.",
+          "exTr": "Im Winter ist die Heizung wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_vacuum_cleaner",
+          "de": "Staubsauger",
+          "x": "aspiradora",
+          "ex": "Por desgracia, la aspiradora está rota.",
+          "exTr": "Der Staubsauger ist leider kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_clean",
+          "de": "Putzen",
+          "x": "limpiar",
+          "ex": "El sábado limpiamos el piso.",
+          "exTr": "Am Samstag putzen wir die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_washing_machine",
+          "de": "Waschmaschine",
+          "x": "lavadora",
+          "ex": "La lavadora ya ha terminado.",
+          "exTr": "Die Waschmaschine ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_fridge",
+          "de": "Kühlschrank",
+          "x": "nevera",
+          "ex": "La leche está en la nevera.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_trash_can",
+          "de": "Mülleimer",
+          "x": "papelera",
+          "ex": "Tira eso a la papelera, por favor.",
+          "exTr": "Wirf das bitte in den Mülleimer.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_balcony",
+          "de": "Balkon",
+          "x": "balcón",
+          "ex": "Por la noche nos gusta sentarnos en el balcón.",
+          "exTr": "Abends sitzen wir gern auf dem Balkon.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_attic",
+          "de": "Dachboden",
+          "x": "desván",
+          "ex": "Los muebles viejos están en el desván.",
+          "exTr": "Alte Möbel stehen auf dem Dachboden.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_hallway",
+          "de": "Flur",
+          "x": "pasillo",
+          "ex": "En el pasillo hay muchos cuadros.",
+          "exTr": "Im Flur hängen viele Bilder.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_power_outlet",
+          "de": "Steckdose",
+          "x": "enchufe",
+          "ex": "Por desgracia, aquí no hay ningún enchufe.",
+          "exTr": "Hier ist leider keine Steckdose.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_utility_costs",
+          "de": "Nebenkosten",
+          "x": "gastos comunes",
+          "ex": "Los gastos comunes son bastante altos.",
+          "exTr": "Die Nebenkosten sind ziemlich hoch.",
+          "difficulty": 3,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_repair",
+          "de": "Reparieren",
+          "x": "reparar",
+          "ex": "Mi padre puede reparar la silla.",
+          "exTr": "Mein Vater kann den Stuhl reparieren.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
           ]
         }
       ]

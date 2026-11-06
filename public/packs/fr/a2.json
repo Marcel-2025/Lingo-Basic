@@ -13,6 +13,8 @@
           "id": "daily_01_wake_up",
           "de": "Aufwachen",
           "x": "se réveiller",
+          "ex": "Je dois me réveiller tôt demain.",
+          "exTr": "Ich muss morgen früh aufwachen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -22,6 +24,8 @@
           "id": "daily_01_have_breakfast",
           "de": "Frühstücken",
           "x": "prendre le petit-déjeuner",
+          "ex": "Le dimanche, je veux prendre mon petit-déjeuner longuement.",
+          "exTr": "Am Sonntag will ich lange frühstücken.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -31,6 +35,8 @@
           "id": "daily_01_get_dressed",
           "de": "Sich anziehen",
           "x": "s'habiller",
+          "ex": "Je dois m'habiller vite.",
+          "exTr": "Ich muss mich schnell anziehen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -40,6 +46,8 @@
           "id": "daily_01_cook",
           "de": "Kochen",
           "x": "cuisiner",
+          "ex": "Le soir, nous cuisinons ensemble.",
+          "exTr": "Abends kochen wir zusammen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -49,6 +57,8 @@
           "id": "daily_01_tidy_up",
           "de": "Aufräumen",
           "x": "ranger",
+          "ex": "Après la fête, nous devons ranger.",
+          "exTr": "Nach der Party müssen wir aufräumen.",
           "difficulty": 1,
           "tags": [
             "tagesablauf"
@@ -58,7 +68,163 @@
           "id": "daily_01_rest",
           "de": "Sich ausruhen",
           "x": "se reposer",
+          "ex": "Après le travail, je voudrais me reposer.",
+          "exTr": "Nach der Arbeit möchte ich mich ausruhen.",
           "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_take_a_shower",
+          "de": "Duschen",
+          "x": "prendre une douche",
+          "ex": "Je voudrais prendre une douche rapide.",
+          "exTr": "Ich möchte kurz duschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_brush_teeth",
+          "de": "Zähne putzen",
+          "x": "se brosser les dents",
+          "ex": "Avant de dormir, je dois me brosser les dents.",
+          "exTr": "Vor dem Schlafen muss ich Zähne putzen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_hurry",
+          "de": "Sich beeilen",
+          "x": "se dépêcher",
+          "ex": "Nous devons nous dépêcher, sinon nous allons rater le bus.",
+          "exTr": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_do_laundry",
+          "de": "Wäsche waschen",
+          "x": "faire la lessive",
+          "ex": "Le samedi, je dois faire la lessive.",
+          "exTr": "Am Samstag muss ich Wäsche waschen.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_wash_the_dishes",
+          "de": "Abwaschen",
+          "x": "faire la vaisselle",
+          "ex": "Qui veut faire la vaisselle aujourd'hui ?",
+          "exTr": "Wer will heute abwaschen?",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_fall_asleep",
+          "de": "Einschlafen",
+          "x": "s'endormir",
+          "ex": "J'ai du mal à m'endormir le soir.",
+          "exTr": "Ich kann abends schlecht einschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_oversleep",
+          "de": "Verschlafen",
+          "x": "se réveiller en retard",
+          "ex": "Aujourd'hui, malheureusement, je me suis réveillé en retard.",
+          "exTr": "Heute habe ich leider verschlafen.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_alarm_clock",
+          "de": "Wecker",
+          "x": "réveil",
+          "ex": "Mon réveil sonne à six heures.",
+          "exTr": "Mein Wecker klingelt um sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_habit",
+          "de": "Gewohnheit",
+          "x": "habitude",
+          "ex": "Le café du matin est mon habitude.",
+          "exTr": "Kaffee am Morgen ist meine Gewohnheit.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch_break",
+          "de": "Mittagspause",
+          "x": "pause déjeuner",
+          "ex": "Pendant ma pause déjeuner, je vais me promener.",
+          "exTr": "In der Mittagspause gehe ich spazieren.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_end_of_workday",
+          "de": "Feierabend",
+          "x": "fin de journée de travail",
+          "ex": "À cinq heures, j'ai fini ma journée de travail.",
+          "exTr": "Um fünf Uhr habe ich Feierabend.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_lunch",
+          "de": "Mittagessen",
+          "x": "déjeuner",
+          "ex": "Le déjeuner sera prêt à midi.",
+          "exTr": "Das Mittagessen ist um zwölf Uhr fertig.",
+          "difficulty": 1,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_be_late",
+          "de": "Sich verspäten",
+          "x": "être en retard",
+          "ex": "Malheureusement, je vais être un peu en retard.",
+          "exTr": "Leider werde ich mich etwas verspäten.",
+          "difficulty": 2,
+          "tags": [
+            "tagesablauf"
+          ]
+        },
+        {
+          "id": "daily_01_commute",
+          "de": "Pendeln",
+          "x": "faire la navette",
+          "ex": "Je dois faire la navette une heure tous les jours.",
+          "exTr": "Ich muss jeden Tag eine Stunde pendeln.",
+          "difficulty": 3,
           "tags": [
             "tagesablauf"
           ]
@@ -75,6 +241,8 @@
           "id": "city_02_intersection",
           "de": "Kreuzung",
           "x": "carrefour",
+          "ex": "Au carrefour, tu dois tourner à gauche.",
+          "exTr": "An der Kreuzung musst du links abbiegen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -83,7 +251,9 @@
         {
           "id": "city_02_traffic_light",
           "de": "Ampel",
-          "x": "feu de circulation",
+          "x": "feu de signalisation",
+          "ex": "Le feu est rouge en ce moment.",
+          "exTr": "Die Ampel ist gerade rot.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -93,6 +263,8 @@
           "id": "city_02_pavement",
           "de": "Bürgersteig",
           "x": "trottoir",
+          "ex": "Les enfants jouent sur le trottoir.",
+          "exTr": "Kinder spielen auf dem Bürgersteig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -102,6 +274,8 @@
           "id": "city_02_neighborhood",
           "de": "Nachbarschaft",
           "x": "quartier",
+          "ex": "Notre quartier est très calme.",
+          "exTr": "Unsere Nachbarschaft ist sehr ruhig.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -111,6 +285,8 @@
           "id": "city_02_library",
           "de": "Bücherei",
           "x": "bibliothèque",
+          "ex": "À la bibliothèque, on peut emprunter des livres.",
+          "exTr": "In der Bücherei kann man Bücher leihen.",
           "difficulty": 1,
           "tags": [
             "stadt_nachbarschaft"
@@ -120,7 +296,163 @@
           "id": "city_02_market",
           "de": "Markt",
           "x": "marché",
+          "ex": "Le samedi, j'achète des fruits au marché.",
+          "exTr": "Samstags kaufe ich Obst auf dem Markt.",
           "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_town_hall",
+          "de": "Rathaus",
+          "x": "mairie",
+          "ex": "La mairie se trouve au milieu de la ville.",
+          "exTr": "Das Rathaus steht mitten in der Stadt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_fountain",
+          "de": "Brunnen",
+          "x": "fontaine",
+          "ex": "Nous nous retrouvons devant la fontaine à trois heures.",
+          "exTr": "Vor dem Brunnen treffen wir uns um drei.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_monument",
+          "de": "Denkmal",
+          "x": "monument",
+          "ex": "Le monument rappelle un poète célèbre.",
+          "exTr": "Das Denkmal erinnert an einen berühmten Dichter.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_pedestrian_zone",
+          "de": "Fußgängerzone",
+          "x": "zone piétonne",
+          "ex": "Il y a beaucoup de magasins dans la zone piétonne.",
+          "exTr": "In der Fußgängerzone gibt es viele Geschäfte.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_playground",
+          "de": "Spielplatz",
+          "x": "aire de jeux",
+          "ex": "L'aire de jeux est à côté de l'école.",
+          "exTr": "Der Spielplatz ist neben der Schule.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_bridge",
+          "de": "Brücke",
+          "x": "pont",
+          "ex": "Le pont traverse la rivière.",
+          "exTr": "Die Brücke führt über den Fluss.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_post_office",
+          "de": "Postamt",
+          "x": "bureau de poste",
+          "ex": "Je dois apporter un colis au bureau de poste.",
+          "exTr": "Ich muss ein Paket zum Postamt bringen.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_map",
+          "de": "Stadtplan",
+          "x": "plan de la ville",
+          "ex": "Sans plan de la ville, je ne trouve pas mon chemin.",
+          "exTr": "Ohne Stadtplan finde ich den Weg nicht.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_tourist_attraction",
+          "de": "Sehenswürdigkeit",
+          "x": "site touristique",
+          "ex": "La cathédrale est le site touristique le plus important.",
+          "exTr": "Der Dom ist die wichtigste Sehenswürdigkeit.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_city_center",
+          "de": "Innenstadt",
+          "x": "centre-ville",
+          "ex": "Le centre-ville est très bondé le week-end.",
+          "exTr": "Die Innenstadt ist am Wochenende sehr voll.",
+          "difficulty": 1,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_suburb",
+          "de": "Vorort",
+          "x": "banlieue",
+          "ex": "Mes parents habitent dans une banlieue tranquille.",
+          "exTr": "Meine Eltern wohnen in einem ruhigen Vorort.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_high_rise_building",
+          "de": "Hochhaus",
+          "x": "tour",
+          "ex": "Plus de cent familles habitent dans la tour.",
+          "exTr": "Im Hochhaus wohnen über hundert Familien.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_construction_site",
+          "de": "Baustelle",
+          "x": "chantier",
+          "ex": "La rue est fermée à cause du chantier.",
+          "exTr": "Wegen der Baustelle ist die Straße gesperrt.",
+          "difficulty": 2,
+          "tags": [
+            "stadt_nachbarschaft"
+          ]
+        },
+        {
+          "id": "city_02_street_lamp",
+          "de": "Straßenlaterne",
+          "x": "lampadaire",
+          "ex": "Le lampadaire devant la maison est cassé.",
+          "exTr": "Die Straßenlaterne vor dem Haus ist kaputt.",
+          "difficulty": 3,
           "tags": [
             "stadt_nachbarschaft"
           ]
@@ -137,6 +469,8 @@
           "id": "communication_03_ask",
           "de": "Fragen",
           "x": "demander",
+          "ex": "Puis-je te demander quelque chose ?",
+          "exTr": "Darf ich dich etwas fragen?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -146,6 +480,8 @@
           "id": "communication_03_answer",
           "de": "Antworten",
           "x": "répondre",
+          "ex": "Veuillez répondre d'ici demain.",
+          "exTr": "Bitte antworten Sie bis morgen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -155,6 +491,8 @@
           "id": "communication_03_explain",
           "de": "Erklären",
           "x": "expliquer",
+          "ex": "Peux-tu m'expliquer le jeu ?",
+          "exTr": "Kannst du mir das Spiel erklären?",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -164,6 +502,8 @@
           "id": "communication_03_agree",
           "de": "Zustimmen",
           "x": "être d'accord",
+          "ex": "Je ne peux qu'être d'accord avec toi sur ce point.",
+          "exTr": "Ich kann dir da nur zustimmen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -173,6 +513,8 @@
           "id": "communication_03_reject",
           "de": "Ablehnen",
           "x": "refuser",
+          "ex": "Elle a malheureusement dû refuser l'offre.",
+          "exTr": "Sie musste das Angebot leider ablehnen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -182,6 +524,162 @@
           "id": "communication_03_repeat",
           "de": "Wiederholen",
           "x": "répéter",
+          "ex": "Pourriez-vous répéter, s'il vous plaît ?",
+          "exTr": "Können Sie das bitte wiederholen?",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_tell",
+          "de": "Erzählen",
+          "x": "raconter",
+          "ex": "Il veut nous raconter son voyage.",
+          "exTr": "Er will uns von der Reise erzählen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_suggest",
+          "de": "Vorschlagen",
+          "x": "proposer",
+          "ex": "Je voudrais proposer un lieu de rendez-vous.",
+          "exTr": "Ich möchte einen Treffpunkt vorschlagen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_contradict",
+          "de": "Widersprechen",
+          "x": "contredire",
+          "ex": "Je dois malheureusement te contredire.",
+          "exTr": "Ich muss dir leider widersprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_discuss",
+          "de": "Diskutieren",
+          "x": "discuter",
+          "ex": "Nous discutons souvent de politique.",
+          "exTr": "Wir diskutieren oft über Politik.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_inform",
+          "de": "Mitteilen",
+          "x": "informer",
+          "ex": "Je voudrais vous informer de quelque chose.",
+          "exTr": "Ich möchte Ihnen etwas mitteilen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_apologize",
+          "de": "Sich entschuldigen",
+          "x": "s'excuser",
+          "ex": "Il voulait s'excuser auprès d'elle.",
+          "exTr": "Er wollte sich bei ihr entschuldigen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_invite",
+          "de": "Einladen",
+          "x": "inviter",
+          "ex": "Je voudrais t'inviter à ma fête.",
+          "exTr": "Ich möchte dich zu meiner Party einladen.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_promise",
+          "de": "Versprechen",
+          "x": "promettre",
+          "ex": "Je peux te le promettre fermement.",
+          "exTr": "Ich kann dir das fest versprechen.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_listen",
+          "de": "Zuhören",
+          "x": "écouter",
+          "ex": "Bien écouter est très important.",
+          "exTr": "Gut zuhören ist sehr wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_message",
+          "de": "Nachricht",
+          "x": "message",
+          "ex": "Je t'ai écrit un message.",
+          "exTr": "Ich habe dir eine Nachricht geschrieben.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_conversation",
+          "de": "Gespräch",
+          "x": "conversation",
+          "ex": "La conversation avec le patron était sympathique.",
+          "exTr": "Das Gespräch mit dem Chef war freundlich.",
+          "difficulty": 1,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_letter",
+          "de": "Brief",
+          "x": "lettre",
+          "ex": "J'ai écrit une lettre à ma grand-mère.",
+          "exTr": "Ich habe meiner Oma einen Brief geschrieben.",
+          "difficulty": 2,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_misunderstanding",
+          "de": "Missverständnis",
+          "x": "malentendu",
+          "ex": "Ce n'était qu'un petit malentendu.",
+          "exTr": "Das war nur ein kleines Missverständnis.",
+          "difficulty": 3,
+          "tags": [
+            "kommunikation"
+          ]
+        },
+        {
+          "id": "communication_03_call",
+          "de": "Anrufen",
+          "x": "appeler",
+          "ex": "Je vais t'appeler ce soir.",
+          "exTr": "Ich werde dich heute Abend anrufen.",
           "difficulty": 1,
           "tags": [
             "kommunikation"
@@ -198,7 +696,9 @@
         {
           "id": "nature_04_weather",
           "de": "Wetter",
-          "x": "météo",
+          "x": "temps",
+          "ex": "Le temps est magnifique aujourd'hui.",
+          "exTr": "Das Wetter ist heute wunderbar.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -208,6 +708,8 @@
           "id": "nature_04_cloud",
           "de": "Wolke",
           "x": "nuage",
+          "ex": "Un nuage sombre se trouve au-dessus de la montagne.",
+          "exTr": "Eine dunkle Wolke steht über dem Berg.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -217,6 +719,8 @@
           "id": "nature_04_wind",
           "de": "Wind",
           "x": "vent",
+          "ex": "Aujourd'hui, il y a un vent fort.",
+          "exTr": "Heute weht ein starker Wind.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -226,6 +730,8 @@
           "id": "nature_04_forest",
           "de": "Wald",
           "x": "forêt",
+          "ex": "Nous faisons une promenade dans la forêt.",
+          "exTr": "Wir machen einen Spaziergang im Wald.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -235,6 +741,8 @@
           "id": "nature_04_river",
           "de": "Fluss",
           "x": "rivière",
+          "ex": "La rivière traverse toute la ville.",
+          "exTr": "Der Fluss fließt durch die ganze Stadt.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -244,6 +752,162 @@
           "id": "nature_04_mountain",
           "de": "Berg",
           "x": "montagne",
+          "ex": "Il y a encore de la neige sur la montagne.",
+          "exTr": "Auf dem Berg liegt noch Schnee.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_thunderstorm",
+          "de": "Gewitter",
+          "x": "orage",
+          "ex": "Un orage arrive ce soir.",
+          "exTr": "Am Abend kommt ein Gewitter.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_fog",
+          "de": "Nebel",
+          "x": "brouillard",
+          "ex": "Dans le brouillard, on voit à peine quelque chose.",
+          "exTr": "Im Nebel sieht man kaum etwas.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_rainbow",
+          "de": "Regenbogen",
+          "x": "arc-en-ciel",
+          "ex": "Après la pluie, un arc-en-ciel est apparu.",
+          "exTr": "Nach dem Regen erschien ein Regenbogen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_storm",
+          "de": "Sturm",
+          "x": "tempête",
+          "ex": "La tempête a fait tomber un arbre.",
+          "exTr": "Der Sturm hat einen Baum umgeworfen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_flood",
+          "de": "Überschwemmung",
+          "x": "inondation",
+          "ex": "Après la pluie, il y a eu une inondation.",
+          "exTr": "Nach dem Regen gab es eine Überschwemmung.",
+          "difficulty": 3,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_valley",
+          "de": "Tal",
+          "x": "vallée",
+          "ex": "Un petit village se trouve dans la vallée.",
+          "exTr": "Im Tal liegt ein kleines Dorf.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_meadow",
+          "de": "Wiese",
+          "x": "prairie",
+          "ex": "Beaucoup de fleurs fleurissent dans la prairie.",
+          "exTr": "Auf der Wiese blühen viele Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_riverbank",
+          "de": "Ufer",
+          "x": "berge",
+          "ex": "Nous sommes assis sur la berge et nous pêchons.",
+          "exTr": "Wir sitzen am Ufer und angeln.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_summit",
+          "de": "Gipfel",
+          "x": "sommet",
+          "ex": "Nous atteignons le sommet à midi.",
+          "exTr": "Um zwölf Uhr erreichen wir den Gipfel.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_lightning",
+          "de": "Blitz",
+          "x": "éclair",
+          "ex": "Un éclair a frappé l'arbre.",
+          "exTr": "Ein Blitz schlug in den Baum ein.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_puddle",
+          "de": "Pfütze",
+          "x": "flaque",
+          "ex": "L'enfant saute dans la flaque.",
+          "exTr": "Das Kind springt in die Pfütze.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_environment",
+          "de": "Umwelt",
+          "x": "environnement",
+          "ex": "Nous devons mieux protéger l'environnement.",
+          "exTr": "Wir müssen die Umwelt besser schützen.",
+          "difficulty": 2,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_plant",
+          "de": "Pflanze",
+          "x": "plante",
+          "ex": "Cette plante a besoin de beaucoup de soleil.",
+          "exTr": "Diese Pflanze braucht viel Sonne.",
+          "difficulty": 1,
+          "tags": [
+            "natur_wetter"
+          ]
+        },
+        {
+          "id": "nature_04_sunrise",
+          "de": "Sonnenaufgang",
+          "x": "lever du soleil",
+          "ex": "Le lever du soleil au bord de la mer était magnifique.",
+          "exTr": "Der Sonnenaufgang am Meer war traumhaft.",
           "difficulty": 2,
           "tags": [
             "natur_wetter"
@@ -261,6 +925,8 @@
           "id": "feelings_05_satisfied",
           "de": "Zufrieden",
           "x": "satisfait",
+          "ex": "Je suis satisfait de mon travail.",
+          "exTr": "Ich bin mit meiner Arbeit zufrieden.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -270,6 +936,8 @@
           "id": "feelings_05_nervous",
           "de": "Nervös",
           "x": "nerveux",
+          "ex": "Avant l'examen, je suis toujours nerveux.",
+          "exTr": "Vor der Prüfung bin ich immer nervös.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -279,6 +947,8 @@
           "id": "feelings_05_surprised",
           "de": "Überrascht",
           "x": "surpris",
+          "ex": "Elle a été surprise par le cadeau.",
+          "exTr": "Sie war von dem Geschenk überrascht.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -288,6 +958,8 @@
           "id": "feelings_05_proud",
           "de": "Stolz",
           "x": "fier",
+          "ex": "Les parents sont fiers de leur enfant.",
+          "exTr": "Die Eltern sind stolz auf ihr Kind.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -297,6 +969,8 @@
           "id": "feelings_05_relaxed",
           "de": "Entspannt",
           "x": "détendu",
+          "ex": "Après les vacances, je suis complètement détendu.",
+          "exTr": "Nach dem Urlaub bin ich total entspannt.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -306,6 +980,162 @@
           "id": "feelings_05_patient",
           "de": "Geduldig",
           "x": "patient",
+          "ex": "Le professeur est très patient.",
+          "exTr": "Der Lehrer ist sehr geduldig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_jealous",
+          "de": "Eifersüchtig",
+          "x": "jaloux",
+          "ex": "Il est jaloux du nouveau collègue.",
+          "exTr": "Er ist auf den neuen Kollegen eifersüchtig.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_disappointed",
+          "de": "Enttäuscht",
+          "x": "déçu",
+          "ex": "Elle a été très déçue par le résultat.",
+          "exTr": "Sie war vom Ergebnis sehr enttäuscht.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_curious",
+          "de": "Neugierig",
+          "x": "curieux",
+          "ex": "L'enfant est curieux et pose beaucoup de questions.",
+          "exTr": "Das Kind ist neugierig und stellt viele Fragen.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_shy",
+          "de": "Schüchtern",
+          "x": "timide",
+          "ex": "Au début, il était assez timide.",
+          "exTr": "Am Anfang war er ziemlich schüchtern.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_honest",
+          "de": "Ehrlich",
+          "x": "honnête",
+          "ex": "Sois honnête avec moi, s'il te plaît.",
+          "exTr": "Sei bitte ehrlich zu mir.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_polite",
+          "de": "Höflich",
+          "x": "poli",
+          "ex": "Le serveur est toujours très poli.",
+          "exTr": "Der Kellner ist immer sehr höflich.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_brave",
+          "de": "Mutig",
+          "x": "courageux",
+          "ex": "C'était un pas courageux.",
+          "exTr": "Das war ein mutiger Schritt.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lazy",
+          "de": "Faul",
+          "x": "paresseux",
+          "ex": "Le dimanche, je suis un peu paresseux.",
+          "exTr": "Am Sonntag bin ich ein bisschen faul.",
+          "difficulty": 1,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_anxious",
+          "de": "Ängstlich",
+          "x": "anxieux",
+          "ex": "Le chien est très anxieux.",
+          "exTr": "Der Hund ist sehr ängstlich.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_stressed",
+          "de": "Gestresst",
+          "x": "stressé",
+          "ex": "Avant Noël, tout le monde est stressé.",
+          "exTr": "Vor Weihnachten sind alle gestresst.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_embarrassed",
+          "de": "Verlegen",
+          "x": "gêné",
+          "ex": "Elle est devenue gênée et a ri doucement.",
+          "exTr": "Sie wurde verlegen und lachte leise.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_helpful",
+          "de": "Hilfsbereit",
+          "x": "serviable",
+          "ex": "Nos voisins sont très serviables.",
+          "exTr": "Unsere Nachbarn sind sehr hilfsbereit.",
+          "difficulty": 2,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_cheerful",
+          "de": "Fröhlich",
+          "x": "joyeux",
+          "ex": "Elle est toujours joyeuse et rit beaucoup.",
+          "exTr": "Sie ist immer fröhlich und lacht viel.",
+          "difficulty": 3,
+          "tags": [
+            "gef_hle_charakter"
+          ]
+        },
+        {
+          "id": "feelings_05_lonely",
+          "de": "Einsam",
+          "x": "seul",
+          "ex": "Après le déménagement, il se sentait seul.",
+          "exTr": "Nach dem Umzug fühlte er sich einsam.",
           "difficulty": 2,
           "tags": [
             "gef_hle_charakter"
@@ -323,6 +1153,8 @@
           "id": "education_06_course",
           "de": "Kurs",
           "x": "cours",
+          "ex": "Je suis un cours à l'université populaire.",
+          "exTr": "Ich besuche einen Kurs an der Volkshochschule.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -331,7 +1163,9 @@
         {
           "id": "education_06_task",
           "de": "Aufgabe",
-          "x": "tâche",
+          "x": "exercice",
+          "ex": "Cet exercice n'est pas difficile.",
+          "exTr": "Diese Aufgabe ist nicht schwer.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -341,6 +1175,8 @@
           "id": "education_06_exam",
           "de": "Prüfung",
           "x": "examen",
+          "ex": "L'examen commence à neuf heures.",
+          "exTr": "Die Prüfung beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -350,6 +1186,8 @@
           "id": "education_06_practise",
           "de": "Üben",
           "x": "s'entraîner",
+          "ex": "Il faut s'entraîner tous les jours.",
+          "exTr": "Man muss jeden Tag üben.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -359,6 +1197,8 @@
           "id": "education_06_understand",
           "de": "Verstehen",
           "x": "comprendre",
+          "ex": "Je ne comprends pas encore tout à fait la grammaire.",
+          "exTr": "Ich verstehe die Grammatik noch nicht ganz.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
@@ -368,9 +1208,1077 @@
           "id": "education_06_progress",
           "de": "Fortschreiten",
           "x": "progresser",
+          "ex": "Le travail progresse bien.",
+          "exTr": "Die Arbeit schreitet gut fort.",
           "difficulty": 2,
           "tags": [
             "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_homework",
+          "de": "Hausaufgabe",
+          "x": "devoir",
+          "ex": "Mon devoir est déjà fini.",
+          "exTr": "Meine Hausaufgabe ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_report_card",
+          "de": "Zeugnis",
+          "x": "bulletin",
+          "ex": "Nous recevons le bulletin en juillet.",
+          "exTr": "Das Zeugnis bekommen wir im Juli.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_grade",
+          "de": "Note",
+          "x": "note",
+          "ex": "J'ai une bonne note en maths.",
+          "exTr": "Ich habe in Mathe eine gute Note.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_timetable",
+          "de": "Stundenplan",
+          "x": "emploi du temps",
+          "ex": "Sur l'emploi du temps, il y a sport aujourd'hui.",
+          "exTr": "Auf dem Stundenplan steht heute Sport.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_lessons",
+          "de": "Unterricht",
+          "x": "cours",
+          "ex": "Les cours commencent à huit heures.",
+          "exTr": "Der Unterricht beginnt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_textbook",
+          "de": "Lehrbuch",
+          "x": "manuel",
+          "ex": "Ouvrez le manuel à la page dix, s'il vous plaît.",
+          "exTr": "Bitte öffnet das Lehrbuch auf Seite zehn.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_dictionary",
+          "de": "Wörterbuch",
+          "x": "dictionnaire",
+          "ex": "Je cherche le mot dans le dictionnaire.",
+          "exTr": "Ich suche das Wort im Wörterbuch.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_class_test",
+          "de": "Klassenarbeit",
+          "x": "contrôle",
+          "ex": "Demain, nous avons un contrôle de maths.",
+          "exTr": "Morgen schreiben wir eine Klassenarbeit in Mathe.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_concentrate",
+          "de": "Sich konzentrieren",
+          "x": "se concentrer",
+          "ex": "Quand il y a du bruit, j'ai du mal à me concentrer.",
+          "exTr": "Bei Lärm kann ich mich schlecht konzentrieren.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_learn_by_heart",
+          "de": "Auswendig lernen",
+          "x": "apprendre par cœur",
+          "ex": "Nous devons apprendre le poème par cœur.",
+          "exTr": "Wir müssen das Gedicht auswendig lernen.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_degree",
+          "de": "Abschluss",
+          "x": "diplôme",
+          "ex": "Après mon diplôme, je cherche un emploi.",
+          "exTr": "Nach dem Abschluss suche ich eine Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_university_studies",
+          "de": "Studium",
+          "x": "études",
+          "ex": "Elle commence ses études à l'automne.",
+          "exTr": "Sie beginnt im Herbst ihr Studium.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_presentation",
+          "de": "Referat",
+          "x": "exposé",
+          "ex": "Demain, je fais un exposé sur Berlin.",
+          "exTr": "Morgen halte ich ein Referat über Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "lernen_bildung"
+          ]
+        },
+        {
+          "id": "education_06_notes",
+          "de": "Notizen",
+          "x": "notes",
+          "ex": "Je prends des notes en cours.",
+          "exTr": "Ich mache mir Notizen im Unterricht.",
+          "difficulty": 1,
+          "tags": [
+            "lernen_bildung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure_07",
+      "title": "Freizeit & Hobbys",
+      "icon": "🎨",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "leisure_07_hike",
+          "de": "Wandern",
+          "x": "faire de la randonnée",
+          "ex": "Le week-end, nous faisons de la randonnée dans les montagnes.",
+          "exTr": "Am Wochenende gehen wir in den Bergen wandern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_fish",
+          "de": "Angeln",
+          "x": "pêcher",
+          "ex": "Mon grand-père aime pêcher au bord du lac.",
+          "exTr": "Mein Opa geht gern am See angeln.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_do_crafts",
+          "de": "Basteln",
+          "x": "bricoler",
+          "ex": "Les enfants aiment bricoler avec du papier.",
+          "exTr": "Die Kinder basteln gern mit Papier.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_paint",
+          "de": "Malen",
+          "x": "peindre",
+          "ex": "Je voudrais peindre quelque chose dimanche.",
+          "exTr": "Ich möchte am Sonntag etwas malen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_take_photos",
+          "de": "Fotografieren",
+          "x": "photographier",
+          "ex": "En vacances, j'adore photographier.",
+          "exTr": "Im Urlaub fotografiere ich sehr gern.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_jog",
+          "de": "Joggen",
+          "x": "faire du jogging",
+          "ex": "Le matin, je fais du jogging dans le parc.",
+          "exTr": "Morgens gehe ich im Park joggen.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_club",
+          "de": "Verein",
+          "x": "club",
+          "ex": "Mon frère est dans un club de sport.",
+          "exTr": "Mein Bruder ist in einem Sportverein.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_team",
+          "de": "Mannschaft",
+          "x": "équipe",
+          "ex": "Notre équipe a gagné hier.",
+          "exTr": "Unsere Mannschaft hat gestern gewonnen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_excursion",
+          "de": "Ausflug",
+          "x": "excursion",
+          "ex": "Samedi, nous faisons une excursion.",
+          "exTr": "Am Samstag machen wir einen Ausflug.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_concert",
+          "de": "Konzert",
+          "x": "concert",
+          "ex": "Nous allons au concert ce soir.",
+          "exTr": "Wir gehen heute Abend ins Konzert.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exhibition",
+          "de": "Ausstellung",
+          "x": "exposition",
+          "ex": "L'exposition est ouverte jusqu'à fin mai.",
+          "exTr": "Die Ausstellung ist bis Ende Mai geöffnet.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_collect",
+          "de": "Sammeln",
+          "x": "collectionner",
+          "ex": "Mon fils aime collectionner les vieilles pièces.",
+          "exTr": "Mein Sohn sammelt gern alte Münzen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_knit",
+          "de": "Stricken",
+          "x": "tricoter",
+          "ex": "Ma grand-mère tricote des chaussettes en hiver.",
+          "exTr": "Meine Oma strickt im Winter Socken.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_board_game",
+          "de": "Brettspiel",
+          "x": "jeu de société",
+          "ex": "Ce soir, nous jouons à un jeu de société.",
+          "exTr": "Heute Abend spielen wir ein Brettspiel.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_garden",
+          "de": "Gärtnern",
+          "x": "jardiner",
+          "ex": "Au printemps, j'aime beaucoup jardiner.",
+          "exTr": "Im Frühling gärtnere ich sehr gern.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_go_out",
+          "de": "Ausgehen",
+          "x": "sortir",
+          "ex": "Vendredi, nous voulons sortir.",
+          "exTr": "Am Freitag wollen wir ausgehen.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_event",
+          "de": "Veranstaltung",
+          "x": "événement",
+          "ex": "L'événement commence à huit heures.",
+          "exTr": "Die Veranstaltung beginnt um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_ticket",
+          "de": "Eintrittskarte",
+          "x": "billet d'entrée",
+          "ex": "Le billet d'entrée coûte dix euros.",
+          "exTr": "Die Eintrittskarte kostet zehn Euro.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_boring",
+          "de": "Langweilig",
+          "x": "ennuyeux",
+          "ex": "Le film était plutôt ennuyeux.",
+          "exTr": "Der Film war ziemlich langweilig.",
+          "difficulty": 1,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        },
+        {
+          "id": "leisure_07_exciting",
+          "de": "Spannend",
+          "x": "passionnant",
+          "ex": "Le livre est incroyablement passionnant.",
+          "exTr": "Das Buch ist unglaublich spannend.",
+          "difficulty": 2,
+          "tags": [
+            "freizeit_hobbys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooking_08",
+      "title": "Essen gehen & Kochen",
+      "icon": "🍳",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "cooking_08_menu",
+          "de": "Speisekarte",
+          "x": "carte",
+          "ex": "Pouvons-nous avoir la carte, s'il vous plaît ?",
+          "exTr": "Können wir bitte die Speisekarte haben?",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bill",
+          "de": "Rechnung",
+          "x": "addition",
+          "ex": "L'addition, s'il vous plaît !",
+          "exTr": "Die Rechnung bitte!",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tip",
+          "de": "Trinkgeld",
+          "x": "pourboire",
+          "ex": "Je donne deux euros de pourboire au serveur.",
+          "exTr": "Ich gebe dem Kellner zwei Euro Trinkgeld.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_waiter",
+          "de": "Kellner",
+          "x": "serveur",
+          "ex": "Le serveur apporte les boissons.",
+          "exTr": "Der Kellner bringt die Getränke.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_starter",
+          "de": "Vorspeise",
+          "x": "entrée",
+          "ex": "Comme entrée, je prends une soupe.",
+          "exTr": "Als Vorspeise nehme ich eine Suppe.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_dessert",
+          "de": "Nachtisch",
+          "x": "dessert",
+          "ex": "Comme dessert, il y a de la glace.",
+          "exTr": "Zum Nachtisch gibt es Eis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_order",
+          "de": "Bestellen",
+          "x": "commander",
+          "ex": "Nous voudrions commander maintenant.",
+          "exTr": "Wir möchten jetzt bestellen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_fry",
+          "de": "Braten",
+          "x": "faire cuire à la poêle",
+          "ex": "Il faut bien faire cuire la viande à la poêle.",
+          "exTr": "Man muss das Fleisch gut braten.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_bake",
+          "de": "Backen",
+          "x": "faire de la pâtisserie",
+          "ex": "Le week-end, je fais un gâteau.",
+          "exTr": "Am Wochenende backe ich einen Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_cut",
+          "de": "Schneiden",
+          "x": "couper",
+          "ex": "Coupe les oignons en petits morceaux, s'il te plaît.",
+          "exTr": "Bitte schneide die Zwiebeln klein.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_stir",
+          "de": "Rühren",
+          "x": "remuer",
+          "ex": "Il faut remuer la sauce en permanence.",
+          "exTr": "Die Soße muss man ständig rühren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_ingredient",
+          "de": "Zutat",
+          "x": "ingrédient",
+          "ex": "Il manque encore un ingrédient pour la recette.",
+          "exTr": "Für das Rezept fehlt noch eine Zutat.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spoon",
+          "de": "Löffel",
+          "x": "cuillère",
+          "ex": "J'ai besoin d'une cuillère pour la soupe.",
+          "exTr": "Ich brauche einen Löffel für die Suppe.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_frying_pan",
+          "de": "Pfanne",
+          "x": "poêle",
+          "ex": "La poêle est déjà très chaude.",
+          "exTr": "Die Pfanne ist schon sehr heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_pot",
+          "de": "Topf",
+          "x": "casserole",
+          "ex": "Mets les pâtes dans la casserole, s'il te plaît.",
+          "exTr": "Gib die Nudeln bitte in den Topf.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_season",
+          "de": "Würzen",
+          "x": "assaisonner",
+          "ex": "N'oublie pas d'assaisonner la soupe.",
+          "exTr": "Vergiss nicht, die Suppe zu würzen.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_tasty",
+          "de": "Lecker",
+          "x": "délicieux",
+          "ex": "Le gâteau est vraiment délicieux.",
+          "exTr": "Der Kuchen schmeckt richtig lecker.",
+          "difficulty": 1,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spicy",
+          "de": "Scharf",
+          "x": "épicé",
+          "ex": "Le plat était trop épicé pour moi.",
+          "exTr": "Das Essen war mir zu scharf.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_reserve",
+          "de": "Reservieren",
+          "x": "réserver",
+          "ex": "Je voudrais réserver une table pour quatre.",
+          "exTr": "Ich möchte einen Tisch für vier reservieren.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        },
+        {
+          "id": "cooking_08_spice",
+          "de": "Gewürz",
+          "x": "épice",
+          "ex": "Cette épice vient d'Inde.",
+          "exTr": "Dieses Gewürz kommt aus Indien.",
+          "difficulty": 2,
+          "tags": [
+            "essen_gehen_kochen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_09",
+      "title": "Verkehr & Unterwegs",
+      "icon": "🚆",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "transport_09_ticket",
+          "de": "Fahrkarte",
+          "x": "billet",
+          "ex": "Où puis-je acheter un billet ?",
+          "exTr": "Wo kann ich eine Fahrkarte kaufen?",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_timetable",
+          "de": "Fahrplan",
+          "x": "horaire",
+          "ex": "Selon l'horaire, le train arrive à dix heures.",
+          "exTr": "Laut Fahrplan kommt der Zug um zehn.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_escalator",
+          "de": "Rolltreppe",
+          "x": "escalator",
+          "ex": "Prends l'escalator pour monter au quai, s'il te plaît.",
+          "exTr": "Nimm bitte die Rolltreppe nach oben zum Bahnsteig.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_pedestrian",
+          "de": "Fußgänger",
+          "x": "piéton",
+          "ex": "Les piétons attendent au feu rouge.",
+          "exTr": "Die Fußgänger warten an der roten Ampel.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_delay",
+          "de": "Verspätung",
+          "x": "retard",
+          "ex": "Le train a vingt minutes de retard.",
+          "exTr": "Der Zug hat zwanzig Minuten Verspätung.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_platform",
+          "de": "Bahnsteig",
+          "x": "quai",
+          "ex": "Le train part du quai quatre.",
+          "exTr": "Der Zug fährt von Bahnsteig vier ab.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_track",
+          "de": "Gleis",
+          "x": "voie",
+          "ex": "Le TGV est sur la voie sept.",
+          "exTr": "Auf Gleis sieben steht der ICE.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_departure",
+          "de": "Abfahrt",
+          "x": "départ",
+          "ex": "Le départ est à sept heures et demie.",
+          "exTr": "Die Abfahrt ist um halb acht.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_arrival",
+          "de": "Ankunft",
+          "x": "arrivée",
+          "ex": "Notre arrivée est à midi.",
+          "exTr": "Unsere Ankunft ist um zwölf Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_traffic_jam",
+          "de": "Stau",
+          "x": "embouteillage",
+          "ex": "Il y a un long embouteillage sur l'autoroute.",
+          "exTr": "Auf der Autobahn gibt es einen langen Stau.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driving_license",
+          "de": "Führerschein",
+          "x": "permis de conduire",
+          "ex": "À dix-huit ans, je passe le permis de conduire.",
+          "exTr": "Mit achtzehn mache ich den Führerschein.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_refuel",
+          "de": "Tanken",
+          "x": "faire le plein",
+          "ex": "Nous devons encore faire le plein.",
+          "exTr": "Wir müssen noch tanken.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_parking_space",
+          "de": "Parkplatz",
+          "x": "place de parking",
+          "ex": "Il n'y a pas de place de parking libre ici.",
+          "exTr": "Hier gibt es keinen freien Parkplatz.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_conductor",
+          "de": "Schaffner",
+          "x": "contrôleur",
+          "ex": "Le contrôleur vérifie tous les billets dans le train.",
+          "exTr": "Der Schaffner kontrolliert im Zug alle Fahrkarten.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_driver",
+          "de": "Fahrer",
+          "x": "conducteur",
+          "ex": "Le conducteur attend déjà devant la gare.",
+          "exTr": "Der Fahrer wartet schon vor dem Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_turn",
+          "de": "Abbiegen",
+          "x": "tourner",
+          "ex": "Vous ne pouvez pas tourner à gauche ici.",
+          "exTr": "Hier dürfen Sie nicht links abbiegen.",
+          "difficulty": 2,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_highway",
+          "de": "Autobahn",
+          "x": "autoroute",
+          "ex": "Sur l'autoroute, on peut rouler vite.",
+          "exTr": "Auf der Autobahn darf man schnell fahren.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_detour",
+          "de": "Umleitung",
+          "x": "déviation",
+          "ex": "À cause du chantier, il y a une déviation.",
+          "exTr": "Wegen der Baustelle gibt es eine Umleitung.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_connection",
+          "de": "Anschluss",
+          "x": "correspondance",
+          "ex": "Nous avons malheureusement raté la correspondance.",
+          "exTr": "Wir haben den Anschluss leider verpasst.",
+          "difficulty": 3,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        },
+        {
+          "id": "transport_09_board",
+          "de": "Einsteigen",
+          "x": "monter",
+          "ex": "Montez à l'arrière, s'il vous plaît.",
+          "exTr": "Bitte steigen Sie hinten ein.",
+          "difficulty": 1,
+          "tags": [
+            "verkehr_unterwegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "household_10",
+      "title": "Wohnen & Haushalt",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "household_10_rent",
+          "de": "Miete",
+          "x": "loyer",
+          "ex": "Le loyer est dû chaque mois.",
+          "exTr": "Die Miete ist jeden Monat fällig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_landlord",
+          "de": "Vermieter",
+          "x": "propriétaire",
+          "ex": "Mon propriétaire est très sympathique.",
+          "exTr": "Mein Vermieter ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_move_house",
+          "de": "Umziehen",
+          "x": "déménager",
+          "ex": "Le mois prochain, nous devons déménager.",
+          "exTr": "Nächsten Monat müssen wir umziehen.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_furniture",
+          "de": "Möbel",
+          "x": "meubles",
+          "ex": "Nous achetons de nouveaux meubles pour l'appartement.",
+          "exTr": "Wir kaufen neue Möbel für die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_shelf",
+          "de": "Regal",
+          "x": "étagère",
+          "ex": "L'étagère est accrochée au mur.",
+          "exTr": "Das Regal hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_mirror",
+          "de": "Spiegel",
+          "x": "miroir",
+          "ex": "Un grand miroir est accroché dans le couloir.",
+          "exTr": "Im Flur hängt ein großer Spiegel.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_carpet",
+          "de": "Teppich",
+          "x": "tapis",
+          "ex": "Le tapis du couloir est neuf.",
+          "exTr": "Der Teppich im Flur ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_curtain",
+          "de": "Vorhang",
+          "x": "rideau",
+          "ex": "Ferme le rideau, s'il te plaît.",
+          "exTr": "Zieh bitte den Vorhang zu.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_heating",
+          "de": "Heizung",
+          "x": "chauffage",
+          "ex": "En hiver, le chauffage est important.",
+          "exTr": "Im Winter ist die Heizung wichtig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_vacuum_cleaner",
+          "de": "Staubsauger",
+          "x": "aspirateur",
+          "ex": "L'aspirateur est malheureusement en panne.",
+          "exTr": "Der Staubsauger ist leider kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_clean",
+          "de": "Putzen",
+          "x": "nettoyer",
+          "ex": "Le samedi, nous nettoyons l'appartement.",
+          "exTr": "Am Samstag putzen wir die Wohnung.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_washing_machine",
+          "de": "Waschmaschine",
+          "x": "machine à laver",
+          "ex": "La machine à laver a fini.",
+          "exTr": "Die Waschmaschine ist schon fertig.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_fridge",
+          "de": "Kühlschrank",
+          "x": "réfrigérateur",
+          "ex": "Le lait est dans le réfrigérateur.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_trash_can",
+          "de": "Mülleimer",
+          "x": "poubelle",
+          "ex": "Jette ça dans la poubelle, s'il te plaît.",
+          "exTr": "Wirf das bitte in den Mülleimer.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_balcony",
+          "de": "Balkon",
+          "x": "balcon",
+          "ex": "Le soir, nous aimons nous asseoir sur le balcon.",
+          "exTr": "Abends sitzen wir gern auf dem Balkon.",
+          "difficulty": 1,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_attic",
+          "de": "Dachboden",
+          "x": "grenier",
+          "ex": "Les vieux meubles sont dans le grenier.",
+          "exTr": "Alte Möbel stehen auf dem Dachboden.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_hallway",
+          "de": "Flur",
+          "x": "couloir",
+          "ex": "Il y a beaucoup de tableaux dans le couloir.",
+          "exTr": "Im Flur hängen viele Bilder.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_power_outlet",
+          "de": "Steckdose",
+          "x": "prise électrique",
+          "ex": "Il n'y a malheureusement pas de prise électrique ici.",
+          "exTr": "Hier ist leider keine Steckdose.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_utility_costs",
+          "de": "Nebenkosten",
+          "x": "charges",
+          "ex": "Les charges sont assez élevées.",
+          "exTr": "Die Nebenkosten sind ziemlich hoch.",
+          "difficulty": 3,
+          "tags": [
+            "wohnen_haushalt"
+          ]
+        },
+        {
+          "id": "household_10_repair",
+          "de": "Reparieren",
+          "x": "réparer",
+          "ex": "Mon père peut réparer la chaise.",
+          "exTr": "Mein Vater kann den Stuhl reparieren.",
+          "difficulty": 2,
+          "tags": [
+            "wohnen_haushalt"
           ]
         }
       ]

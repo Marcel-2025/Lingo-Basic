@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "NL",
+  "level": "A1",
+  "topics": [
+    {
+      "id": "food_01",
+      "title": "Essen & Trinken",
+      "icon": "🍎",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "food_01_water",
+          "de": "Wasser",
+          "x": "water",
+          "ex": "Ik drink elke dag veel water.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_bread",
+          "de": "Brot",
+          "x": "brood",
+          "ex": "Bij het ontbijt eet ik brood.",
+          "exTr": "Zum Frühstück esse ich Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_milk",
+          "de": "Milch",
+          "x": "melk",
+          "ex": "De melk staat in de koelkast.",
+          "exTr": "Die Milch steht im Kühlschrank.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_coffee",
+          "de": "Kaffee",
+          "x": "koffie",
+          "ex": "Ik drink 's ochtends graag koffie.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_tea",
+          "de": "Tee",
+          "x": "thee",
+          "ex": "Wil je een thee?",
+          "exTr": "Möchtest du einen Tee?",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_apple",
+          "de": "Apfel",
+          "x": "appel",
+          "ex": "De appel is rood en zoet.",
+          "exTr": "Der Apfel ist rot und süß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_banana",
+          "de": "Banane",
+          "x": "banaan",
+          "ex": "Ik eet een banaan.",
+          "exTr": "Ich esse eine Banane.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_rice",
+          "de": "Reis",
+          "x": "rijst",
+          "ex": "Bij de vis is er rijst.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "kaas",
+          "ex": "Ik hou van kaas op mijn brood.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "ei",
+          "ex": "Bij het ontbijt eet ik een ei.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "vlees",
+          "ex": "Hij eet geen vlees.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "vis",
+          "ex": "Vandaag is er vis met rijst.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "groenten",
+          "ex": "Kinderen moeten veel groenten eten.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "soep",
+          "ex": "De soep is nog heet.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "zout",
+          "ex": "Geef me alsjeblieft het zout.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "suiker",
+          "ex": "Ik neem geen suiker in mijn thee.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "sap",
+          "ex": "Ze drinkt een glas sap.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "bier",
+          "ex": "Hij bestelt een bier.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "taart",
+          "ex": "De taart smaakt heel lekker.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "aardappel",
+          "ex": "Bij het eten zijn er aardappelen.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_02",
+      "title": "Reisen & Orientierung",
+      "icon": "✈️",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "travel_02_airport",
+          "de": "Flughafen",
+          "x": "luchthaven",
+          "ex": "We rijden naar de luchthaven.",
+          "exTr": "Wir fahren zum Flughafen.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train_station",
+          "de": "Bahnhof",
+          "x": "station",
+          "ex": "Het station is niet ver.",
+          "exTr": "Der Bahnhof ist nicht weit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_ticket",
+          "de": "Ticket",
+          "x": "kaartje",
+          "ex": "Ik heb een kaartje naar Berlijn nodig.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_hotel",
+          "de": "Hotel",
+          "x": "hotel",
+          "ex": "Ons hotel ligt aan het strand.",
+          "exTr": "Unser Hotel liegt am Strand.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_street",
+          "de": "Straße",
+          "x": "straat",
+          "ex": "De straat is erg lawaaierig.",
+          "exTr": "Die Straße ist sehr laut.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_map",
+          "de": "Karte",
+          "x": "kaart",
+          "ex": "Heb je een kaart van de stad?",
+          "exTr": "Hast du eine Karte der Stadt?",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_suitcase",
+          "de": "Koffer",
+          "x": "koffer",
+          "ex": "Mijn koffer is te zwaar.",
+          "exTr": "Mein Koffer ist zu schwer.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_passport",
+          "de": "Pass",
+          "x": "paspoort",
+          "ex": "Vergeet je paspoort niet!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "trein",
+          "ex": "De trein komt om acht uur.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "bus",
+          "ex": "Ik ga met de bus naar mijn werk.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "auto",
+          "ex": "Mijn auto is nieuw.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "vliegtuig",
+          "ex": "Het vliegtuig landt zo.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "fiets",
+          "ex": "Ik fiets graag.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "reis",
+          "ex": "De reis duurt drie uur.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "stad",
+          "ex": "Berlijn is een grote stad.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "land",
+          "ex": "In welk land woon je?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taxi",
+          "ex": "We nemen een taxi naar het hotel.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "bagage",
+          "ex": "Waar is mijn bagage?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "halte",
+          "ex": "De halte is daar vooraan.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "vakantie",
+          "ex": "In de zomer gaan we op vakantie.",
+          "exTr": "Wir machen im Sommer Urlaub.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home_03",
+      "title": "Zuhause",
+      "icon": "🏠",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "home_03_house",
+          "de": "Haus",
+          "x": "huis",
+          "ex": "Het huis heeft een tuin.",
+          "exTr": "Das Haus hat einen Garten.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_room",
+          "de": "Zimmer",
+          "x": "kamer",
+          "ex": "Mijn kamer is klein.",
+          "exTr": "Mein Zimmer ist klein.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_kitchen",
+          "de": "Küche",
+          "x": "keuken",
+          "ex": "We koken in de keuken.",
+          "exTr": "Wir kochen in der Küche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bathroom",
+          "de": "Badezimmer",
+          "x": "badkamer",
+          "ex": "De badkamer is links.",
+          "exTr": "Das Badezimmer ist links.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_window",
+          "de": "Fenster",
+          "x": "raam",
+          "ex": "Doe alsjeblieft het raam open.",
+          "exTr": "Bitte mach das Fenster auf.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_door",
+          "de": "Tür",
+          "x": "deur",
+          "ex": "De deur is dicht.",
+          "exTr": "Die Tür ist zu.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_table",
+          "de": "Tisch",
+          "x": "tafel",
+          "ex": "De tafel is van hout.",
+          "exTr": "Der Tisch ist aus Holz.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_chair",
+          "de": "Stuhl",
+          "x": "stoel",
+          "ex": "Ga op de stoel zitten.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "bed",
+          "ex": "Het bed is erg comfortabel.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "bank",
+          "ex": "We zitten op de bank.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lamp",
+          "ex": "De lamp staat op de tafel.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "sleutel",
+          "ex": "Ik ben mijn sleutel kwijt.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "appartement",
+          "ex": "Mijn appartement heeft drie kamers.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "tuin",
+          "ex": "In de tuin groeien bloemen.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "muur",
+          "ex": "De foto hangt aan de muur.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "douche",
+          "ex": "Ik neem elke ochtend een douche.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "kast",
+          "ex": "De kleren zitten in de kast.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "kelder",
+          "ex": "De fiets staat in de kelder.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "trap",
+          "ex": "De trap is erg steil.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "woonkamer",
+          "ex": "De woonkamer is groot en licht.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work_04",
+      "title": "Beruf & Alltag",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "work_04_work",
+          "de": "Arbeit",
+          "x": "werk",
+          "ex": "Het werk begint om negen uur.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_office",
+          "de": "Büro",
+          "x": "kantoor",
+          "ex": "Ik ben vandaag op kantoor.",
+          "exTr": "Ich bin heute im Büro.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_boss",
+          "de": "Chef",
+          "x": "baas",
+          "ex": "Mijn baas is erg aardig.",
+          "exTr": "Mein Chef ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_colleague",
+          "de": "Kollege",
+          "x": "collega",
+          "ex": "Mijn collega helpt me vaak.",
+          "exTr": "Mein Kollege hilft mir oft.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_meeting",
+          "de": "Meeting",
+          "x": "vergadering",
+          "ex": "De vergadering duurt een uur.",
+          "exTr": "Das Meeting dauert eine Stunde.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_project",
+          "de": "Projekt",
+          "x": "project",
+          "ex": "We hebben een nieuw project.",
+          "exTr": "Wir haben ein neues Projekt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_email",
+          "de": "E-Mail",
+          "x": "e-mail",
+          "ex": "Ik schrijf je een e-mail.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_break",
+          "de": "Pause",
+          "x": "pauze",
+          "ex": "We nemen nu pauze.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "bedrijf",
+          "ex": "Hij werkt bij een groot bedrijf.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "salaris",
+          "ex": "Het salaris komt aan het einde van de maand.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "leraar",
+          "ex": "De leraar legt de opdracht uit.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "school",
+          "ex": "De kinderen gaan naar school.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "leerling",
+          "ex": "De leerling maakt zijn huiswerk.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "pen",
+          "ex": "Heb je een pen voor me?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "papier",
+          "ex": "Ik heb een vel papier nodig.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "printer",
+          "ex": "De printer op kantoor is kapot.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "telefoon",
+          "ex": "Mijn telefoon gaat over.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "computer",
+          "ex": "De computer is erg snel.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "beroep",
+          "ex": "Wat is jouw beroep?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "fout",
+          "ex": "Ik heb een fout gemaakt.",
+          "exTr": "Ich habe einen Fehler gemacht.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_05",
+      "title": "Gesundheit",
+      "icon": "🩺",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "health_05_doctor",
+          "de": "Arzt",
+          "x": "dokter",
+          "ex": "Ik moet naar de dokter.",
+          "exTr": "Ich muss zum Arzt gehen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_hospital",
+          "de": "Krankenhaus",
+          "x": "ziekenhuis",
+          "ex": "Hij ligt in het ziekenhuis.",
+          "exTr": "Er liegt im Krankenhaus.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_medicine",
+          "de": "Medizin",
+          "x": "medicijn",
+          "ex": "Neem het medicijn drie keer per dag.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pain",
+          "de": "Schmerz",
+          "x": "pijn",
+          "ex": "Ik heb veel pijn.",
+          "exTr": "Ich habe starke Schmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_fever",
+          "de": "Fieber",
+          "x": "koorts",
+          "ex": "Het kind heeft koorts.",
+          "exTr": "Das Kind hat Fieber.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_help",
+          "de": "Hilfe",
+          "x": "hulp",
+          "ex": "Ik heb hulp nodig!",
+          "exTr": "Ich brauche Hilfe!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_appointment",
+          "de": "Termin",
+          "x": "afspraak",
+          "ex": "Ik heb morgen een afspraak.",
+          "exTr": "Ich habe morgen einen Termin.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_prescription",
+          "de": "Rezept",
+          "x": "recept",
+          "ex": "De dokter schrijft een recept uit.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "hoest",
+          "ex": "Ik heb al dagen hoest.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "verkoudheid",
+          "ex": "Hij heeft een flinke verkoudheid.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "apotheek",
+          "ex": "De apotheek is hier om de hoek.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "tandarts",
+          "ex": "Morgen ga ik naar de tandarts.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "gezondheid",
+          "ex": "Gezondheid is erg belangrijk.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "ziekte",
+          "ex": "De ziekte duurt een week.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "noodgeval",
+          "ex": "Dit is een noodgeval!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulance",
+          "ex": "De ambulance komt meteen.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "pil",
+          "ex": "Ik neem elke dag een pil.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "pleister",
+          "ex": "Ik heb een pleister nodig.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "slaap",
+          "ex": "Genoeg slaap is belangrijk.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "patiënt",
+          "ex": "De patiënt wacht in de kamer.",
+          "exTr": "Der Patient wartet im Zimmer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping_06",
+      "title": "Einkaufen",
+      "icon": "🛒",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "shopping_06_shop",
+          "de": "Laden",
+          "x": "winkel",
+          "ex": "De winkel is tot acht uur open.",
+          "exTr": "Der Laden ist bis acht offen.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_price",
+          "de": "Preis",
+          "x": "prijs",
+          "ex": "De prijs is erg goed.",
+          "exTr": "Der Preis ist sehr gut.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_money",
+          "de": "Geld",
+          "x": "geld",
+          "ex": "Ik heb geen geld bij me.",
+          "exTr": "Ich habe kein Geld dabei.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_checkout",
+          "de": "Kasse",
+          "x": "kassa",
+          "ex": "Betaal alstublieft bij de kassa.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_discount",
+          "de": "Rabatt",
+          "x": "korting",
+          "ex": "Vandaag is er tien procent korting.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_customer",
+          "de": "Kunde",
+          "x": "klant",
+          "ex": "De klant wacht bij de kassa.",
+          "exTr": "Der Kunde wartet an der Kasse.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_seller",
+          "de": "Verkäufer",
+          "x": "verkoper",
+          "ex": "De verkoper is erg vriendelijk.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bag",
+          "de": "Tüte",
+          "x": "tas",
+          "ex": "Hebt u een tas nodig?",
+          "exTr": "Brauchen Sie eine Tüte?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermarkt",
+          "ex": "Ik ga naar de supermarkt.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "boodschappenlijst",
+          "ex": "Ik schrijf een boodschappenlijst voor morgen.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "Dat kost tien euro.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "cent",
+          "ex": "Dat kost maar vijftig cent.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "creditcard",
+          "ex": "Kan ik met een creditcard betalen?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "kassabon",
+          "ex": "Ik wil graag een kassabon.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "aanbieding",
+          "ex": "De aanbieding geldt alleen vandaag.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "maat",
+          "ex": "Welke maat heeft u?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "winkelwagen",
+          "ex": "Ik heb een winkelwagen nodig.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "bakkerij",
+          "ex": "In de bakkerij koop ik broodjes.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "fles",
+          "ex": "Een fles water, alstublieft.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "cadeau",
+          "ex": "Het cadeau is voor jou.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family_07",
+      "title": "Familie & Freunde",
+      "icon": "👨‍👩‍👧",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "family_07_mother",
+          "de": "Mutter",
+          "x": "moeder",
+          "ex": "Mijn moeder kookt heel goed.",
+          "exTr": "Meine Mutter kocht sehr gut.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_father",
+          "de": "Vater",
+          "x": "vader",
+          "ex": "Mijn vader werkt op kantoor.",
+          "exTr": "Mein Vater arbeitet im Büro.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_brother",
+          "de": "Bruder",
+          "x": "broer",
+          "ex": "Mijn broer is tien jaar oud.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_sister",
+          "de": "Schwester",
+          "x": "zus",
+          "ex": "Mijn zus woont in Wenen.",
+          "exTr": "Meine Schwester wohnt in Wien.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_friend",
+          "de": "Freund",
+          "x": "vriend",
+          "ex": "Hij is mijn beste vriend.",
+          "exTr": "Er ist mein bester Freund.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_child",
+          "de": "Kind",
+          "x": "kind",
+          "ex": "Het kind speelt in de tuin.",
+          "exTr": "Das Kind spielt im Garten.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_family",
+          "de": "Familie",
+          "x": "familie",
+          "ex": "Mijn familie is groot.",
+          "exTr": "Meine Familie ist groß.",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_name",
+          "de": "Name",
+          "x": "naam",
+          "ex": "Wat is jouw naam?",
+          "exTr": "Wie ist dein Name?",
+          "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "ouders",
+          "ex": "Mijn ouders wonen in Hamburg.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "zoon",
+          "ex": "Haar zoon gaat naar school.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "dochter",
+          "ex": "Zijn dochter is vijf jaar oud.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "oma",
+          "ex": "Mijn oma bakt graag taart.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "opa",
+          "ex": "Mijn opa leest de krant.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "man",
+          "ex": "De man draagt een hoed.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "vrouw",
+          "ex": "De vrouw wacht op het station.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "baby",
+          "ex": "De baby slaapt in bed.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "oom",
+          "ex": "Mijn oom woont in Berlijn.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "tante",
+          "ex": "Mijn tante komt morgen bij ons op bezoek.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "buurman",
+          "ex": "Mijn buurman is erg aardig.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "gast",
+          "ex": "De gast komt om zeven uur.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_08",
+      "title": "Zeit & Lernen",
+      "icon": "⏰",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "time_08_today",
+          "de": "Heute",
+          "x": "vandaag",
+          "ex": "Vandaag schijnt de zon.",
+          "exTr": "Heute scheint die Sonne.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_tomorrow",
+          "de": "Morgen",
+          "x": "morgen",
+          "ex": "Morgen heb ik vrij.",
+          "exTr": "Morgen habe ich frei.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_yesterday",
+          "de": "Gestern",
+          "x": "gisteren",
+          "ex": "Gisteren was ik naar de bioscoop.",
+          "exTr": "Gestern war ich im Kino.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_week",
+          "de": "Woche",
+          "x": "week",
+          "ex": "De week heeft zeven dagen.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_month",
+          "de": "Monat",
+          "x": "maand",
+          "ex": "De maand heeft dertig dagen.",
+          "exTr": "Der Monat hat dreißig Tage.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_year",
+          "de": "Jahr",
+          "x": "jaar",
+          "ex": "Een jaar heeft twaalf maanden.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_to_learn",
+          "de": "Lernen",
+          "x": "leren",
+          "ex": "Ik wil Duits leren.",
+          "exTr": "Ich möchte Deutsch lernen.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_language",
+          "de": "Sprache",
+          "x": "taal",
+          "ex": "Duits is een mooie taal.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
+          "difficulty": 3,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "klok",
+          "ex": "De klok hangt aan de muur.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "uur",
+          "ex": "De les duurt een uur.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minuut",
+          "ex": "Wacht alsjeblieft een minuut.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "dag",
+          "ex": "Een dag heeft vierentwintig uur.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "nacht",
+          "ex": "'s Nachts is het donker.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "avond",
+          "ex": "'s Avonds kijken we tv.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "maandag",
+          "ex": "Op maandag begint de school.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "weekend",
+          "ex": "In het weekend gaan we weg.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "boek",
+          "ex": "Ik lees een spannend boek.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "vraag",
+          "ex": "Ik heb een vraag.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "antwoord",
+          "ex": "Het antwoord is juist.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "woord",
+          "ex": "Dit woord ken ik niet.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "nul",
+          "ex": "Het resultaat is nul.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "een",
+          "ex": "Een plus een is twee.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "twee",
+          "ex": "Ik heb twee broers.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "drie",
+          "ex": "Wij zijn met z'n drieën.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "vier",
+          "ex": "De auto heeft vier wielen.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "vijf",
+          "ex": "Ik ben vijf minuten te laat.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "zes",
+          "ex": "Het is zes uur.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "zeven",
+          "ex": "De week heeft zeven dagen.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "tien",
+          "ex": "Het boek kost tien euro.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "honderd",
+          "ex": "Het huis is honderd jaar oud.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "rood",
+          "ex": "De tomaat is rood.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "blauw",
+          "ex": "De lucht is vandaag blauw.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "groen",
+          "ex": "Het gras is groen.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "geel",
+          "ex": "De zon is geel.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "zwart",
+          "ex": "Mijn kat is zwart.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "wit",
+          "ex": "De sneeuw is wit.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "cirkel",
+          "ex": "Teken alsjeblieft een cirkel.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "vierkant",
+          "ex": "Het raam is een vierkant.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "driehoek",
+          "ex": "Het verkeersbord is een driehoek.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "lijn",
+          "ex": "Teken een rechte lijn.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "hoofd",
+          "ex": "Mijn hoofd doet pijn.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "hand",
+          "ex": "Geef me je hand.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "voet",
+          "ex": "Mijn voet is koud.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "arm",
+          "ex": "Hij heeft zijn arm gebroken.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "been",
+          "ex": "Mijn been doet pijn.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "oog",
+          "ex": "Ze heeft een blauw oog.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "oor",
+          "ex": "Het kind heeft een koud oor.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "neus",
+          "ex": "Mijn neus zit verstopt.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "mond",
+          "ex": "Doe alsjeblieft je mond open.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "haar",
+          "ex": "Ze heeft lang bruin haar.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "buik",
+          "ex": "Mijn buik doet pijn.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "rug",
+          "ex": "Ik heb pijn in mijn rug.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "overhemd",
+          "ex": "Hij draagt een wit overhemd.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "broek",
+          "ex": "De broek is te klein.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "jas",
+          "ex": "Trek je jas aan.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "schoenen",
+          "ex": "Mijn schoenen zijn nieuw.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "jurk",
+          "ex": "Ze draagt een rode jurk.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "muts",
+          "ex": "In de winter draag ik een muts.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "sokken",
+          "ex": "Mijn sokken zijn warm.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "trui",
+          "ex": "De trui is van wol.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Ich lerne jeden Tag 30 Minuten.",
+      "x": "Ik leer elke dag 30 minuten.",
+      "translations": {
+        "nl": "Ik leer elke dag 30 minuten."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Sprache lernen braucht Geduld.",
+      "x": "Een taal leren vraagt geduld.",
+      "translations": {
+        "nl": "Een taal leren vraagt geduld."
+      }
+    }
+  ]
+}

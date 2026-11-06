@@ -1,0 +1,2305 @@
+{
+  "version": 3,
+  "lang": "PT",
+  "level": "B1",
+  "topics": [
+    {
+      "id": "career_01",
+      "title": "Beruf & Karriere",
+      "icon": "💼",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "career_01_application",
+          "de": "Bewerbung",
+          "x": "candidatura",
+          "ex": "Enviei a minha candidatura ontem por e-mail.",
+          "exTr": "Ich habe meine Bewerbung gestern per E-Mail abgeschickt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_responsibility",
+          "de": "Verantwortung",
+          "x": "responsabilidade",
+          "ex": "Com este cargo assumes muita responsabilidade pela equipa.",
+          "exTr": "Mit dieser Stelle übernimmst du viel Verantwortung für das Team.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_experience",
+          "de": "Erfahrung",
+          "x": "experiência",
+          "ex": "Ela tem dez anos de experiência em vendas.",
+          "exTr": "Sie hat zehn Jahre Erfahrung im Verkauf.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_decide",
+          "de": "Entscheiden",
+          "x": "decidir",
+          "ex": "Temos de decidir até sexta-feira que proposta vamos aceitar.",
+          "exTr": "Wir müssen bis Freitag entscheiden, welches Angebot wir annehmen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_negotiate",
+          "de": "Verhandeln",
+          "x": "negociar",
+          "ex": "Ele quer negociar o salário com o chefe.",
+          "exTr": "Er will mit dem Chef über sein Gehalt verhandeln.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_reliable",
+          "de": "Zuverlässig",
+          "x": "fiável",
+          "ex": "O nosso colega é sempre pontual e muito fiável.",
+          "exTr": "Unser Kollege ist immer pünktlich und sehr zuverlässig.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_job_interview",
+          "de": "Vorstellungsgespräch",
+          "x": "entrevista de emprego",
+          "ex": "Amanhã tenho uma entrevista de emprego numa grande empresa.",
+          "exTr": "Morgen habe ich ein Vorstellungsgespräch bei einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_cv",
+          "de": "Lebenslauf",
+          "x": "currículo",
+          "ex": "No meu currículo ainda falta um estágio.",
+          "exTr": "In meinem Lebenslauf fehlt noch ein Praktikum.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_resignation",
+          "de": "Kündigung",
+          "x": "demissão",
+          "ex": "Depois da demissão, ela procurou rapidamente um novo emprego.",
+          "exTr": "Nach der Kündigung suchte sie schnell eine neue Stelle.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employment_contract",
+          "de": "Arbeitsvertrag",
+          "x": "contrato de trabalho",
+          "ex": "Por favor, leia o contrato de trabalho com atenção antes de assinar.",
+          "exTr": "Bitte lesen Sie den Arbeitsvertrag vor der Unterschrift genau durch.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_further_training",
+          "de": "Fortbildung",
+          "x": "formação",
+          "ex": "A empresa paga uma formação em gestão de projetos.",
+          "exTr": "Die Firma bezahlt eine Fortbildung in Projektmanagement.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_supervisor",
+          "de": "Vorgesetzter",
+          "x": "superior",
+          "ex": "O meu superior elogia-me muitas vezes pelo meu trabalho.",
+          "exTr": "Mein Vorgesetzter lobt mich oft für meine Arbeit.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_promotion",
+          "de": "Beförderung",
+          "x": "promoção",
+          "ex": "Ao fim de três anos, ele finalmente teve uma promoção.",
+          "exTr": "Nach drei Jahren bekam er endlich eine Beförderung.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_teamwork",
+          "de": "Teamarbeit",
+          "x": "trabalho de equipa",
+          "ex": "Sem um bom trabalho de equipa, o projeto teria falhado.",
+          "exTr": "Ohne gute Teamarbeit wäre das Projekt gescheitert.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_deadline",
+          "de": "Frist",
+          "x": "prazo",
+          "ex": "O prazo de entrega termina na segunda-feira.",
+          "exTr": "Die Frist für die Abgabe endet am Montag.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_employer",
+          "de": "Arbeitgeber",
+          "x": "empregador",
+          "ex": "O meu empregador oferece horários de trabalho flexíveis.",
+          "exTr": "Mein Arbeitgeber bietet flexible Arbeitszeiten an.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_overtime",
+          "de": "Überstunden",
+          "x": "horas extra",
+          "ex": "Antes do fim do ano tivemos de fazer muitas horas extra.",
+          "exTr": "Vor dem Jahresende mussten wir viele Überstunden machen.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_onboarding",
+          "de": "Einarbeitung",
+          "x": "integração",
+          "ex": "A integração dos novos funcionários demora três semanas aqui.",
+          "exTr": "Die Einarbeitung neuer Mitarbeiter dauert bei uns drei Wochen.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_competition",
+          "de": "Konkurrenz",
+          "x": "concorrência",
+          "ex": "A concorrência no mercado de trabalho é muito dura.",
+          "exTr": "Die Konkurrenz auf dem Arbeitsmarkt ist sehr hart.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_karriere"
+          ]
+        },
+        {
+          "id": "career_01_qualification",
+          "de": "Qualifikation",
+          "x": "qualificação",
+          "ex": "Para este cargo precisa de uma qualificação especial.",
+          "exTr": "Für diese Stelle brauchen Sie eine besondere Qualifikation.",
+          "difficulty": 3,
+          "tags": [
+            "beruf_karriere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society_02",
+      "title": "Gesellschaft",
+      "icon": "🤝",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "society_02_community",
+          "de": "Gemeinschaft",
+          "x": "comunidade",
+          "ex": "Na aldeia existe uma comunidade forte.",
+          "exTr": "Im Dorf gibt es eine starke Gemeinschaft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_equality",
+          "de": "Gleichberechtigung",
+          "x": "igualdade",
+          "ex": "A igualdade entre homens e mulheres é um objetivo importante.",
+          "exTr": "Gleichberechtigung zwischen Männern und Frauen ist ein wichtiges Ziel.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_support",
+          "de": "Unterstützung",
+          "x": "apoio",
+          "ex": "Obrigado pelo teu apoio neste momento difícil.",
+          "exTr": "Danke für deine Unterstützung in dieser schweren Zeit.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_volunteer",
+          "de": "Freiwilliger",
+          "x": "voluntário",
+          "ex": "Como voluntário, ele ajuda no canil todos os fins de semana.",
+          "exTr": "Als Freiwilliger hilft er jedes Wochenende im Tierheim.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_rule",
+          "de": "Regel",
+          "x": "regra",
+          "ex": "Quem não conhece a regra não a pode cumprir.",
+          "exTr": "Wer die Regel nicht kennt, kann sie nicht befolgen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_trust",
+          "de": "Vertrauen",
+          "x": "confiança",
+          "ex": "A confiança tem de ser conquistada lentamente.",
+          "exTr": "Vertrauen muss man sich langsam verdienen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_citizen",
+          "de": "Bürger",
+          "x": "cidadão",
+          "ex": "Todo o cidadão tem o direito de expressar a sua opinião.",
+          "exTr": "Jeder Bürger hat das Recht, seine Meinung zu sagen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_integration",
+          "de": "Integration",
+          "x": "integração",
+          "ex": "Os cursos de língua facilitam a integração dos novos habitantes.",
+          "exTr": "Sprachkurse erleichtern die Integration neuer Einwohner.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_prejudice",
+          "de": "Vorurteil",
+          "x": "preconceito",
+          "ex": "Um preconceito surge muitas vezes da ignorância.",
+          "exTr": "Ein Vorurteil entsteht oft aus Unwissen.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_tolerance",
+          "de": "Toleranz",
+          "x": "tolerância",
+          "ex": "Tolerância significa respeitar outros modos de vida.",
+          "exTr": "Toleranz bedeutet, andere Lebensweisen zu respektieren.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_voluntary_work",
+          "de": "Ehrenamt",
+          "x": "voluntariado",
+          "ex": "O seu voluntariado nos bombeiros ocupa muito tempo.",
+          "exTr": "Sein Ehrenamt bei der Feuerwehr nimmt viel Zeit in Anspruch.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_donation",
+          "de": "Spende",
+          "x": "donativo",
+          "ex": "A associação agradece calorosamente o donativo.",
+          "exTr": "Für die Spende bedankt sich der Verein herzlich.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_law",
+          "de": "Gesetz",
+          "x": "lei",
+          "ex": "A nova lei entra em vigor em janeiro.",
+          "exTr": "Das neue Gesetz tritt im Januar in Kraft.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_duty",
+          "de": "Pflicht",
+          "x": "dever",
+          "ex": "Para muitos, ir votar é um dever cívico.",
+          "exTr": "Wählen zu gehen ist für viele eine Bürgerpflicht.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_consideration",
+          "de": "Rücksicht",
+          "x": "consideração",
+          "ex": "Por favor, tenha consideração pelos seus vizinhos.",
+          "exTr": "Bitte nehmen Sie Rücksicht auf Ihre Nachbarn.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_solidarity",
+          "de": "Zusammenhalt",
+          "x": "coesão",
+          "ex": "Nas crises revela-se a coesão das pessoas.",
+          "exTr": "In Krisen zeigt sich der Zusammenhalt der Menschen.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_generation",
+          "de": "Generation",
+          "x": "geração",
+          "ex": "Três gerações vivem debaixo do mesmo teto.",
+          "exTr": "Drei Generationen leben unter einem Dach.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_immigration",
+          "de": "Einwanderung",
+          "x": "imigração",
+          "ex": "A imigração mudou muito o país.",
+          "exTr": "Die Einwanderung hat das Land stark verändert.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_justice",
+          "de": "Gerechtigkeit",
+          "x": "justiça",
+          "ex": "Todos os cidadãos têm direito à justiça.",
+          "exTr": "Alle Bürger haben Anspruch auf Gerechtigkeit.",
+          "difficulty": 3,
+          "tags": [
+            "gesellschaft"
+          ]
+        },
+        {
+          "id": "society_02_majority",
+          "de": "Mehrheit",
+          "x": "maioria",
+          "ex": "A maioria dos cidadãos votou a favor do plano.",
+          "exTr": "Die Mehrheit der Bürger stimmte für den Plan.",
+          "difficulty": 2,
+          "tags": [
+            "gesellschaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel_03",
+      "title": "Reisen & Erlebnisse",
+      "icon": "🧭",
+      "difficulty": 2,
+      "vocab": [
+        {
+          "id": "travel_03_itinerary",
+          "de": "Reiseroute",
+          "x": "itinerário",
+          "ex": "O nosso itinerário leva-nos através de três países.",
+          "exTr": "Unsere Reiseroute führt uns durch drei Länder.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_accommodation",
+          "de": "Unterkunft",
+          "x": "alojamento",
+          "ex": "O alojamento fica a apenas cinco minutos da praia.",
+          "exTr": "Die Unterkunft liegt nur fünf Minuten vom Strand entfernt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_change_trains",
+          "de": "Umsteigen",
+          "x": "mudar de comboio",
+          "ex": "Em Colónia temos de mudar de comboio e apanhar o regional.",
+          "exTr": "In Köln müssen wir in den Regionalzug umsteigen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_discover",
+          "de": "Entdecken",
+          "x": "descobrir",
+          "ex": "Queríamos descobrir a cidade antiga a pé.",
+          "exTr": "Wir wollten die Altstadt zu Fuß entdecken.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_recommend",
+          "de": "Empfehlen",
+          "x": "recomendar",
+          "ex": "Podes recomendar-me um bom restaurante?",
+          "exTr": "Kannst du mir ein gutes Restaurant empfehlen?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_unforgettable",
+          "de": "Unvergesslich",
+          "x": "inesquecível",
+          "ex": "O nascer do sol na montanha foi inesquecível.",
+          "exTr": "Der Sonnenaufgang auf dem Berg war unvergesslich.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_souvenir",
+          "de": "Souvenir",
+          "x": "lembrança",
+          "ex": "Como lembrança, comprei uma pequena figura.",
+          "exTr": "Als Souvenir habe ich eine kleine Figur gekauft.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_outbound_flight",
+          "de": "Hinflug",
+          "x": "voo de ida",
+          "ex": "O voo de ida foi tranquilo e agradável.",
+          "exTr": "Der Hinflug war ruhig und angenehm.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_return_flight",
+          "de": "Rückflug",
+          "x": "voo de regresso",
+          "ex": "O voo de regresso parte no domingo à noite, às oito horas.",
+          "exTr": "Der Rückflug geht am Sonntagabend um acht Uhr.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_wanderlust",
+          "de": "Fernweh",
+          "x": "desejo de viajar",
+          "ex": "No inverno sinto sempre um forte desejo de viajar.",
+          "exTr": "Im Winter bekomme ich immer starkes Fernweh.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_adventure",
+          "de": "Abenteuer",
+          "x": "aventura",
+          "ex": "A viagem pela América do Sul foi uma verdadeira aventura.",
+          "exTr": "Die Reise durch Südamerika war ein echtes Abenteuer.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_round_trip",
+          "de": "Rundreise",
+          "x": "circuito",
+          "ex": "Vamos reservar um circuito pela Escócia.",
+          "exTr": "Wir buchen eine Rundreise durch Schottland.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_customs_check",
+          "de": "Zollkontrolle",
+          "x": "controlo alfandegário",
+          "ex": "No controlo alfandegário tive de abrir a mala.",
+          "exTr": "Bei der Zollkontrolle musste ich meinen Koffer öffnen.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_travel_guide",
+          "de": "Reiseführer",
+          "x": "guia de viagem",
+          "ex": "O guia de viagem dá muitas dicas úteis sobre Lisboa.",
+          "exTr": "Der Reiseführer gibt viele nützliche Tipps für Lissabon.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_stay",
+          "de": "Aufenthalt",
+          "x": "estadia",
+          "ex": "Durante a minha estadia em Viena visitei muitos museus.",
+          "exTr": "Während meines Aufenthalts in Wien besuchte ich viele Museen.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_booking",
+          "de": "Buchung",
+          "x": "reserva",
+          "ex": "A reserva foi-me confirmada por e-mail.",
+          "exTr": "Die Buchung wurde mir per E-Mail bestätigt.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_cancel",
+          "de": "Stornieren",
+          "x": "cancelar",
+          "ex": "Tivemos de cancelar a viagem por causa de doença.",
+          "exTr": "Wir mussten die Reise wegen Krankheit stornieren.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_refund",
+          "de": "Erstattung",
+          "x": "reembolso",
+          "ex": "Pedi o reembolso do preço do voo.",
+          "exTr": "Ich habe die Erstattung des Flugpreises beantragt.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_hospitality",
+          "de": "Gastfreundschaft",
+          "x": "hospitalidade",
+          "ex": "Ficámos encantados com a hospitalidade das pessoas.",
+          "exTr": "Wir waren von der Gastfreundschaft der Menschen begeistert.",
+          "difficulty": 3,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        },
+        {
+          "id": "travel_03_local_people",
+          "de": "Einheimische",
+          "x": "habitantes locais",
+          "ex": "Os habitantes locais mostraram-nos a sua praia preferida.",
+          "exTr": "Die Einheimischen zeigten uns ihren Lieblingsstrand.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_erlebnisse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opinion_04",
+      "title": "Meinungen & Argumente",
+      "icon": "💡",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "opinion_04_opinion",
+          "de": "Meinung",
+          "x": "opinião",
+          "ex": "Na minha opinião, a oferta é demasiado cara.",
+          "exTr": "Meiner Meinung nach ist das Angebot zu teuer.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_claim",
+          "de": "Behaupten",
+          "x": "afirmar",
+          "ex": "Ele afirma não saber nada disso.",
+          "exTr": "Er behauptet, nichts davon gewusst zu haben.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_justify",
+          "de": "Begründen",
+          "x": "justificar",
+          "ex": "Por favor, justifique brevemente a sua decisão.",
+          "exTr": "Bitte begründen Sie Ihre Entscheidung kurz.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compare",
+          "de": "Vergleichen",
+          "x": "comparar",
+          "ex": "Antes de comprar, deve-se comparar os preços.",
+          "exTr": "Vor dem Kauf sollte man die Preise vergleichen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_influence",
+          "de": "Beeinflussen",
+          "x": "influenciar",
+          "ex": "A publicidade pode influenciar fortemente as nossas decisões.",
+          "exTr": "Werbung kann unsere Entscheidungen stark beeinflussen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_convince",
+          "de": "Überzeugen",
+          "x": "convencer",
+          "ex": "Ela conseguiu convencer-me com bons argumentos.",
+          "exTr": "Sie konnte mich mit guten Argumenten überzeugen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_argument",
+          "de": "Argument",
+          "x": "argumento",
+          "ex": "O teu argumento parece lógico, mas eu vejo de outra forma.",
+          "exTr": "Dein Argument klingt logisch, aber ich sehe es anders.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_viewpoint",
+          "de": "Standpunkt",
+          "x": "ponto de vista",
+          "ex": "Nunca tinha olhado para isto deste ponto de vista.",
+          "exTr": "Von diesem Standpunkt aus habe ich es nie betrachtet.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conviction",
+          "de": "Überzeugung",
+          "x": "convicção",
+          "ex": "É a minha firme convicção que a educação é importante.",
+          "exTr": "Es ist meine feste Überzeugung, dass Bildung wichtig ist.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_contradiction",
+          "de": "Widerspruch",
+          "x": "contradição",
+          "ex": "Há uma clara contradição na sua declaração.",
+          "exTr": "In seiner Aussage steckt ein deutlicher Widerspruch.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_doubt",
+          "de": "Bezweifeln",
+          "x": "duvidar",
+          "ex": "Duvido que o plano realmente funcione.",
+          "exTr": "Ich bezweifle, dass der Plan wirklich funktioniert.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_advantage",
+          "de": "Vorteil",
+          "x": "vantagem",
+          "ex": "Uma grande vantagem deste método é a poupança de tempo.",
+          "exTr": "Ein großer Vorteil dieser Methode ist die Zeitersparnis.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_disadvantage",
+          "de": "Nachteil",
+          "x": "desvantagem",
+          "ex": "A desvantagem do carro são os custos elevados.",
+          "exTr": "Der Nachteil des Autos sind die hohen Kosten.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_compromise",
+          "de": "Kompromiss",
+          "x": "compromisso",
+          "ex": "No fim, encontrámos um bom compromisso.",
+          "exTr": "Am Ende fanden wir einen guten Kompromiss.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_objection",
+          "de": "Einwand",
+          "x": "objeção",
+          "ex": "Tem mais alguma objeção à proposta?",
+          "exTr": "Haben Sie noch einen Einwand gegen den Vorschlag?",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_conclusion",
+          "de": "Schlussfolgerung",
+          "x": "conclusão",
+          "ex": "Ele tira uma conclusão clara dos números.",
+          "exTr": "Aus den Zahlen zieht er eine klare Schlussfolgerung.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assessment",
+          "de": "Einschätzung",
+          "x": "avaliação",
+          "ex": "A avaliação do especialista foi muito útil.",
+          "exTr": "Die Einschätzung des Experten war sehr hilfreich.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_criticism",
+          "de": "Kritik",
+          "x": "crítica",
+          "ex": "Ela aceitou a crítica com calma.",
+          "exTr": "Sie nahm die Kritik gelassen auf.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_assumption",
+          "de": "Annahme",
+          "x": "suposição",
+          "ex": "Infelizmente, a tua suposição não estava correta.",
+          "exTr": "Deine Annahme war leider nicht richtig.",
+          "difficulty": 2,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        },
+        {
+          "id": "opinion_04_judge",
+          "de": "Beurteilen",
+          "x": "julgar",
+          "ex": "Não se deve julgar um livro apenas pela capa.",
+          "exTr": "Man sollte ein Buch nicht nur nach dem Cover beurteilen.",
+          "difficulty": 3,
+          "tags": [
+            "meinungen_argumente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_05",
+      "title": "Umwelt & Zukunft",
+      "icon": "🌱",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "environment_05_resource",
+          "de": "Ressource",
+          "x": "recurso",
+          "ex": "A água é um recurso valioso.",
+          "exTr": "Wasser ist eine wertvolle Ressource.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_avoid",
+          "de": "Vermeiden",
+          "x": "evitar",
+          "ex": "Devemos evitar o lixo de plástico desnecessário.",
+          "exTr": "Wir sollten unnötigen Plastikmüll vermeiden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_reuse",
+          "de": "Wiederverwenden",
+          "x": "reutilizar",
+          "ex": "As garrafas de vidro podem reutilizar-se várias vezes.",
+          "exTr": "Glasflaschen kann man mehrmals wiederverwenden.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_pollute",
+          "de": "Verschmutzen",
+          "x": "poluir",
+          "ex": "As fábricas poluem muitas vezes os rios.",
+          "exTr": "Fabriken verschmutzen oft die Flüsse.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_sustainable",
+          "de": "Nachhaltig",
+          "x": "sustentável",
+          "ex": "Muitas pessoas querem viver de forma sustentável.",
+          "exTr": "Viele Menschen wollen nachhaltig leben.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_protect",
+          "de": "Schützen",
+          "x": "proteger",
+          "ex": "Temos de proteger melhor as florestas.",
+          "exTr": "Wir müssen die Wälder besser schützen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_climate_change",
+          "de": "Klimawandel",
+          "x": "alterações climáticas",
+          "ex": "As alterações climáticas provocam mais tempestades.",
+          "exTr": "Der Klimawandel führt zu mehr Unwettern.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_global_warming",
+          "de": "Erderwärmung",
+          "x": "aquecimento global",
+          "ex": "O aquecimento global faz subir o nível do mar.",
+          "exTr": "Die Erderwärmung lässt den Meeresspiegel steigen.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_waste",
+          "de": "Abfall",
+          "x": "lixo",
+          "ex": "Em casa separamos o lixo com cuidado.",
+          "exTr": "Den Abfall trennen wir zu Hause sorgfältig.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_recycling",
+          "de": "Recycling",
+          "x": "reciclagem",
+          "ex": "Com a reciclagem poupa-se muita matéria-prima.",
+          "exTr": "Durch Recycling wird viel Rohstoff gespart.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_environmental_protection",
+          "de": "Umweltschutz",
+          "x": "proteção do ambiente",
+          "ex": "A proteção do ambiente começa no dia a dia de cada um.",
+          "exTr": "Umweltschutz beginnt im eigenen Alltag.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_renewable_energy",
+          "de": "Erneuerbare Energie",
+          "x": "energia renovável",
+          "ex": "A energia renovável vem do sol, do vento e da água.",
+          "exTr": "Erneuerbare Energie kommt aus Sonne, Wind und Wasser.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_greenhouse_gas",
+          "de": "Treibhausgas",
+          "x": "gás com efeito de estufa",
+          "ex": "O dióxido de carbono é um conhecido gás com efeito de estufa.",
+          "exTr": "Kohlendioxid ist ein bekanntes Treibhausgas.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_become_extinct",
+          "de": "Aussterben",
+          "x": "extinção",
+          "ex": "Muitas espécies animais estão ameaçadas de extinção.",
+          "exTr": "Viele Tierarten sind vom Aussterben bedroht.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_consumption",
+          "de": "Verbrauch",
+          "x": "consumo",
+          "ex": "O consumo de eletricidade aumenta todos os anos.",
+          "exTr": "Der Verbrauch von Strom steigt jedes Jahr.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_forest_fire",
+          "de": "Waldbrand",
+          "x": "incêndio florestal",
+          "ex": "No verão, o incêndio florestal destruiu muitos hectares de floresta.",
+          "exTr": "Der Waldbrand zerstörte im Sommer viele Hektar Wald.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_drought",
+          "de": "Dürre",
+          "x": "seca",
+          "ex": "A longa seca destruiu a colheita.",
+          "exTr": "Die lange Dürre hat die Ernte zerstört.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_biodiversity",
+          "de": "Artenvielfalt",
+          "x": "biodiversidade",
+          "ex": "A biodiversidade está em perigo.",
+          "exTr": "Die Artenvielfalt ist in Gefahr.",
+          "difficulty": 3,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_save",
+          "de": "Einsparen",
+          "x": "poupar",
+          "ex": "É possível poupar muita energia no aquecimento.",
+          "exTr": "Beim Heizen lässt sich viel Energie einsparen.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        },
+        {
+          "id": "environment_05_habitat",
+          "de": "Lebensraum",
+          "x": "habitat",
+          "ex": "O desmatamento destrói o habitat de muitos animais.",
+          "exTr": "Die Rodung zerstört den Lebensraum vieler Tiere.",
+          "difficulty": 2,
+          "tags": [
+            "umwelt_zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital_06",
+      "title": "Digitaler Alltag",
+      "icon": "💻",
+      "difficulty": 3,
+      "vocab": [
+        {
+          "id": "digital_06_data_privacy",
+          "de": "Datenschutz",
+          "x": "proteção de dados",
+          "ex": "A proteção de dados é particularmente importante nos serviços online.",
+          "exTr": "Datenschutz ist bei Online-Diensten besonders wichtig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_notification",
+          "de": "Benachrichtigung",
+          "x": "notificação",
+          "ex": "Desativei a notificação no meu telemóvel.",
+          "exTr": "Ich habe die Benachrichtigung auf meinem Handy ausgeschaltet.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_download",
+          "de": "Herunterladen",
+          "x": "descarregar",
+          "ex": "Podes descarregar a aplicação gratuitamente.",
+          "exTr": "Du kannst die App kostenlos herunterladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_upload",
+          "de": "Hochladen",
+          "x": "carregar",
+          "ex": "Ainda tenho de carregar as fotografias.",
+          "exTr": "Ich muss noch die Fotos hochladen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_update",
+          "de": "Aktualisieren",
+          "x": "atualizar",
+          "ex": "Por favor, atualize o software regularmente.",
+          "exTr": "Bitte aktualisieren Sie die Software regelmäßig.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_password",
+          "de": "Passwort",
+          "x": "palavra-passe",
+          "ex": "Escolhe uma palavra-passe segura com números e caracteres especiais.",
+          "exTr": "Wähle ein sicheres Passwort mit Zahlen und Sonderzeichen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_login",
+          "de": "Anmeldung",
+          "x": "início de sessão",
+          "ex": "O início de sessão demora apenas alguns segundos.",
+          "exTr": "Die Anmeldung dauert nur wenige Sekunden.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_storage_space",
+          "de": "Speicherplatz",
+          "x": "espaço de armazenamento",
+          "ex": "No meu telemóvel quase já não há espaço de armazenamento livre.",
+          "exTr": "Auf meinem Handy ist kaum noch Speicherplatz frei.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_screen_time",
+          "de": "Bildschirmzeit",
+          "x": "tempo de ecrã",
+          "ex": "O meu tempo de ecrã aumentou muito esta semana.",
+          "exTr": "Meine Bildschirmzeit ist diese Woche stark gestiegen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_encryption",
+          "de": "Verschlüsselung",
+          "x": "encriptação",
+          "ex": "A encriptação protege as suas mensagens de estranhos.",
+          "exTr": "Die Verschlüsselung schützt Ihre Nachrichten vor Fremden.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_backup",
+          "de": "Datensicherung",
+          "x": "cópia de segurança",
+          "ex": "Uma cópia de segurança regular evita a perda de dados.",
+          "exTr": "Eine regelmäßige Datensicherung verhindert Datenverlust.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_platform",
+          "de": "Plattform",
+          "x": "plataforma",
+          "ex": "Muitos alunos usam esta plataforma para aprender.",
+          "exTr": "Diese Plattform nutzen viele Schüler zum Lernen.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_algorithm",
+          "de": "Algorithmus",
+          "x": "algoritmo",
+          "ex": "Um algoritmo decide que vídeos vês.",
+          "exTr": "Ein Algorithmus entscheidet, welche Videos du siehst.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_subscription",
+          "de": "Abonnement",
+          "x": "subscrição",
+          "ex": "Cancelei a minha subscrição do serviço de streaming.",
+          "exTr": "Ich habe mein Abonnement für den Streamingdienst gekündigt.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_settings",
+          "de": "Einstellungen",
+          "x": "definições",
+          "ex": "Encontras as definições no menu, em cima à direita.",
+          "exTr": "Die Einstellungen findest du oben rechts im Menü.",
+          "difficulty": 1,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_error_message",
+          "de": "Fehlermeldung",
+          "x": "mensagem de erro",
+          "ex": "Ao arrancar, apareceu de repente uma mensagem de erro.",
+          "exTr": "Beim Start erschien plötzlich eine Fehlermeldung.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_link",
+          "de": "Verknüpfen",
+          "x": "associar",
+          "ex": "Podes associar a tua conta ao telemóvel.",
+          "exTr": "Du kannst dein Konto mit dem Handy verknüpfen.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_search_engine",
+          "de": "Suchmaschine",
+          "x": "motor de busca",
+          "ex": "Que motor de busca preferes usar?",
+          "exTr": "Welche Suchmaschine benutzt du am liebsten?",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_cyberattack",
+          "de": "Cyberangriff",
+          "x": "ciberataque",
+          "ex": "O ciberataque paralisou toda a rede.",
+          "exTr": "Der Cyberangriff legte das ganze Netzwerk lahm.",
+          "difficulty": 3,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        },
+        {
+          "id": "digital_06_artificial_intelligence",
+          "de": "Künstliche Intelligenz",
+          "x": "inteligência artificial",
+          "ex": "A inteligência artificial está a mudar muitas profissões.",
+          "exTr": "Künstliche Intelligenz verändert viele Berufe.",
+          "difficulty": 2,
+          "tags": [
+            "digitaler_alltag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media_07",
+      "title": "Medien & Nachrichten",
+      "icon": "📰",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "media_07_headline",
+          "de": "Schlagzeile",
+          "x": "manchete",
+          "ex": "A manchete estava hoje na primeira página.",
+          "exTr": "Die Schlagzeile stand heute auf der ersten Seite.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_report",
+          "de": "Bericht",
+          "x": "relatório",
+          "ex": "O relatório descreve a situação na zona de crise.",
+          "exTr": "Der Bericht beschreibt die Lage im Krisengebiet.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_journalist",
+          "de": "Journalist",
+          "x": "jornalista",
+          "ex": "O jornalista investiga há semanas para a reportagem.",
+          "exTr": "Der Journalist recherchiert seit Wochen für die Reportage.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_coverage",
+          "de": "Berichterstattung",
+          "x": "cobertura jornalística",
+          "ex": "A cobertura jornalística das eleições foi muito detalhada.",
+          "exTr": "Die Berichterstattung über die Wahl war sehr ausführlich.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_source",
+          "de": "Quelle",
+          "x": "fonte",
+          "ex": "Indica sempre a fonte das tuas informações.",
+          "exTr": "Gib immer die Quelle deiner Informationen an.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_fake_news",
+          "de": "Falschmeldung",
+          "x": "notícia falsa",
+          "ex": "Esta notícia falsa espalhou-se pela internet em minutos.",
+          "exTr": "Diese Falschmeldung verbreitete sich in Minuten im Netz.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_freedom_of_speech",
+          "de": "Meinungsfreiheit",
+          "x": "liberdade de expressão",
+          "ex": "A liberdade de expressão é um direito fundamental na democracia.",
+          "exTr": "Die Meinungsfreiheit ist ein Grundrecht in der Demokratie.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_advertising_campaign",
+          "de": "Werbekampagne",
+          "x": "campanha publicitária",
+          "ex": "A nova campanha publicitária passa em todos os canais.",
+          "exTr": "Die neue Werbekampagne läuft auf allen Kanälen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_broadcast",
+          "de": "Sendung",
+          "x": "programa",
+          "ex": "O programa vai ser transmitido em direto esta noite.",
+          "exTr": "Die Sendung wird heute Abend live übertragen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_host",
+          "de": "Moderator",
+          "x": "apresentador",
+          "ex": "O apresentador cumprimentou os espetadores com um sorriso.",
+          "exTr": "Der Moderator begrüßte die Zuschauer mit einem Lächeln.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_feature_report",
+          "de": "Reportage",
+          "x": "reportagem",
+          "ex": "A reportagem mostra a vida numa ilha do Mar do Norte.",
+          "exTr": "Die Reportage zeigt das Leben auf einer Nordseeinsel.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_viewer",
+          "de": "Zuschauer",
+          "x": "espetador",
+          "ex": "Mais de um milhão de espetadores viram a final.",
+          "exTr": "Mehr als eine Million Zuschauer sahen das Finale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_letter_to_the_editor",
+          "de": "Leserbrief",
+          "x": "carta ao diretor",
+          "ex": "Ela escreveu uma carta ao diretor do jornal.",
+          "exTr": "Sie schrieb einen Leserbrief an die Zeitung.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_reveal",
+          "de": "Enthüllen",
+          "x": "revelar",
+          "ex": "O jornal quer revelar o escândalo.",
+          "exTr": "Die Zeitung will den Skandal enthüllen.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_publish",
+          "de": "Veröffentlichen",
+          "x": "publicar",
+          "ex": "A editora vai publicar o livro no outono.",
+          "exTr": "Der Verlag wird das Buch im Herbst veröffentlichen.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_credible",
+          "de": "Glaubwürdig",
+          "x": "credível",
+          "ex": "Uma fonte credível indica nomes e factos.",
+          "exTr": "Eine glaubwürdige Quelle nennt Namen und Fakten.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_commentary",
+          "de": "Kommentar",
+          "x": "comentário",
+          "ex": "O comentário na página de opinião foi muito crítico.",
+          "exTr": "Der Kommentar auf der Meinungsseite war sehr kritisch.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_documentary",
+          "de": "Dokumentation",
+          "x": "documentário",
+          "ex": "Ontem vi um documentário sobre baleias.",
+          "exTr": "Gestern sah ich eine Dokumentation über Wale.",
+          "difficulty": 2,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_news_channel",
+          "de": "Nachrichtensender",
+          "x": "canal de notícias",
+          "ex": "No canal de notícias passam reportagens o dia inteiro.",
+          "exTr": "Auf dem Nachrichtensender laufen den ganzen Tag Berichte.",
+          "difficulty": 1,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        },
+        {
+          "id": "media_07_censorship",
+          "de": "Zensur",
+          "x": "censura",
+          "ex": "Em alguns países ainda existe uma censura rigorosa.",
+          "exTr": "In manchen Ländern gibt es noch immer strenge Zensur.",
+          "difficulty": 3,
+          "tags": [
+            "medien_nachrichten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle_08",
+      "title": "Gesundheit & Lebensstil",
+      "icon": "🧘",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "lifestyle_08_nutrition",
+          "de": "Ernährung",
+          "x": "alimentação",
+          "ex": "Uma alimentação equilibrada mantém o corpo em forma.",
+          "exTr": "Eine ausgewogene Ernährung hält den Körper fit.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lack_of_exercise",
+          "de": "Bewegungsmangel",
+          "x": "sedentarismo",
+          "ex": "O sedentarismo pode, a longo prazo, levar a problemas de costas.",
+          "exTr": "Bewegungsmangel kann auf Dauer zu Rückenproblemen führen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_balance",
+          "de": "Ausgleich",
+          "x": "equilíbrio",
+          "ex": "O ioga é para mim um bom equilíbrio em relação à rotina do escritório.",
+          "exTr": "Yoga ist für mich ein guter Ausgleich zum Büroalltag.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stress",
+          "de": "Stress",
+          "x": "stresse",
+          "ex": "Demasiado stresse a longo prazo faz adoecer.",
+          "exTr": "Zu viel Stress macht auf Dauer krank.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_relaxation",
+          "de": "Entspannung",
+          "x": "relaxamento",
+          "ex": "Depois do trabalho preciso de algum relaxamento.",
+          "exTr": "Nach der Arbeit brauche ich etwas Entspannung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_recovery",
+          "de": "Erholung",
+          "x": "descanso",
+          "ex": "As férias serviram sobretudo para descansar.",
+          "exTr": "Der Urlaub diente vor allem der Erholung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevention",
+          "de": "Vorsorge",
+          "x": "prevenção",
+          "ex": "A prevenção regular no médico pode salvar vidas.",
+          "exTr": "Regelmäßige Vorsorge beim Arzt kann Leben retten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_stamina",
+          "de": "Ausdauer",
+          "x": "resistência",
+          "ex": "Para uma maratona é preciso muita resistência.",
+          "exTr": "Für einen Marathon braucht man viel Ausdauer.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_sleep_deprivation",
+          "de": "Schlafmangel",
+          "x": "falta de sono",
+          "ex": "A falta de sono enfraquece a concentração.",
+          "exTr": "Schlafmangel schwächt die Konzentration.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_overweight",
+          "de": "Übergewicht",
+          "x": "excesso de peso",
+          "ex": "O excesso de peso aumenta o risco de doenças cardíacas.",
+          "exTr": "Übergewicht erhöht das Risiko für Herzkrankheiten.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_lose_weight",
+          "de": "Abnehmen",
+          "x": "emagrecer",
+          "ex": "Ele quer emagrecer alguns quilos antes do verão.",
+          "exTr": "Er möchte vor dem Sommer ein paar Kilo abnehmen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_injury",
+          "de": "Verletzung",
+          "x": "lesão",
+          "ex": "Uma lesão no joelho travou o jogador.",
+          "exTr": "Eine Verletzung am Knie stoppte den Spieler.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_complaints",
+          "de": "Beschwerden",
+          "x": "queixas",
+          "ex": "Há dias que tenho queixas nas costas.",
+          "exTr": "Seit Tagen habe ich Beschwerden im Rücken.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_vaccination",
+          "de": "Impfung",
+          "x": "vacinação",
+          "ex": "A vacinação protege contra uma doença grave.",
+          "exTr": "Die Impfung schützt vor einer schweren Erkrankung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_back_pain",
+          "de": "Rückenschmerzen",
+          "x": "dores nas costas",
+          "ex": "Estar sentado muito tempo causa muitas vezes dores nas costas.",
+          "exTr": "Langes Sitzen verursacht oft Rückenschmerzen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_mindfulness",
+          "de": "Achtsamkeit",
+          "x": "atenção plena",
+          "ex": "A atenção plena ajuda a viver o dia a dia de forma mais consciente.",
+          "exTr": "Achtsamkeit hilft, den Alltag bewusster zu erleben.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_contagious",
+          "de": "Ansteckend",
+          "x": "contagioso",
+          "ex": "A gripe é muito contagiosa.",
+          "exTr": "Die Grippe ist sehr ansteckend.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_well_being",
+          "de": "Wohlbefinden",
+          "x": "bem-estar",
+          "ex": "O exercício aumenta o bem-estar geral.",
+          "exTr": "Bewegung steigert das allgemeine Wohlbefinden.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_prevent",
+          "de": "Vorbeugen",
+          "x": "prevenir",
+          "ex": "Com desporto é possível prevenir muitas doenças.",
+          "exTr": "Mit Sport kann man vielen Krankheiten vorbeugen.",
+          "difficulty": 3,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        },
+        {
+          "id": "lifestyle_08_treatment",
+          "de": "Behandlung",
+          "x": "tratamento",
+          "ex": "O tratamento no hospital durou duas semanas.",
+          "exTr": "Die Behandlung im Krankenhaus dauerte zwei Wochen.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit_lebensstil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money_09",
+      "title": "Geld & Konsum",
+      "icon": "💶",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "money_09_income",
+          "de": "Einkommen",
+          "x": "rendimento",
+          "ex": "O rendimento da família chega para a renda.",
+          "exTr": "Das Einkommen der Familie reicht für die Miete.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_expenses",
+          "de": "Ausgaben",
+          "x": "despesas",
+          "ex": "Anoto todas as despesas numa tabela.",
+          "exTr": "Ich schreibe alle Ausgaben in eine Tabelle.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_savings",
+          "de": "Ersparnisse",
+          "x": "poupanças",
+          "ex": "Vou comprar um carro com as minhas poupanças.",
+          "exTr": "Mit meinen Ersparnissen kaufe ich ein Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_debts",
+          "de": "Schulden",
+          "x": "dívidas",
+          "ex": "Ele ainda tem dívidas ao banco.",
+          "exTr": "Er hat noch Schulden bei der Bank.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_loan",
+          "de": "Kredit",
+          "x": "crédito",
+          "ex": "Para a casa, eles contraíram um crédito.",
+          "exTr": "Für das Haus nahmen sie einen Kredit auf.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_transfer",
+          "de": "Überweisung",
+          "x": "transferência",
+          "ex": "A transferência demora um a dois dias.",
+          "exTr": "Die Überweisung dauert ein bis zwei Tage.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_cash",
+          "de": "Bargeld",
+          "x": "dinheiro vivo",
+          "ex": "Prefiro pagar com dinheiro vivo do que com cartão.",
+          "exTr": "Ich zahle lieber mit Bargeld als mit Karte.",
+          "difficulty": 1,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_warranty",
+          "de": "Garantie",
+          "x": "garantia",
+          "ex": "O aparelho tem dois anos de garantia.",
+          "exTr": "Auf das Gerät gibt es zwei Jahre Garantie.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_complaint",
+          "de": "Reklamation",
+          "x": "reclamação",
+          "ex": "A minha reclamação foi aceite de imediato pela loja.",
+          "exTr": "Meine Reklamation wurde vom Geschäft sofort akzeptiert.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_exchange",
+          "de": "Umtausch",
+          "x": "troca",
+          "ex": "A troca só é possível com o talão de compra.",
+          "exTr": "Ein Umtausch ist nur mit Kassenbon möglich.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_bank_statement",
+          "de": "Kontoauszug",
+          "x": "extrato bancário",
+          "ex": "No extrato bancário vejo todos os pagamentos do mês.",
+          "exTr": "Auf dem Kontoauszug sehe ich alle Zahlungen des Monats.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_consumer",
+          "de": "Verbraucher",
+          "x": "consumidor",
+          "ex": "Os consumidores dão cada vez mais atenção à qualidade.",
+          "exTr": "Die Verbraucher achten immer mehr auf die Qualität.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_price_comparison",
+          "de": "Preisvergleich",
+          "x": "comparação de preços",
+          "ex": "Uma comparação de preços na internet compensa quase sempre.",
+          "exTr": "Ein Preisvergleich im Internet lohnt sich fast immer.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_special_offer",
+          "de": "Sonderangebot",
+          "x": "promoção",
+          "ex": "Esta semana há fruta em promoção.",
+          "exTr": "Diese Woche gibt es Obst im Sonderangebot.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_insurance",
+          "de": "Versicherung",
+          "x": "seguro",
+          "ex": "O seguro paga os danos do meu carro.",
+          "exTr": "Die Versicherung zahlt den Schaden an meinem Auto.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_tax",
+          "de": "Steuer",
+          "x": "imposto",
+          "ex": "Todos os anos tenho de declarar os impostos.",
+          "exTr": "Jedes Jahr muss ich die Steuer erklären.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_household_budget",
+          "de": "Haushaltsbudget",
+          "x": "orçamento familiar",
+          "ex": "O nosso orçamento familiar está bastante apertado neste momento.",
+          "exTr": "Unser Haushaltsbudget ist im Moment ziemlich knapp.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_invest",
+          "de": "Investieren",
+          "x": "investir",
+          "ex": "Ela quer investir dinheiro em energias renováveis.",
+          "exTr": "Sie möchte Geld in erneuerbare Energien investieren.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_waste",
+          "de": "Verschwenden",
+          "x": "desperdiçar",
+          "ex": "Não se deve desperdiçar dinheiro em coisas desnecessárias.",
+          "exTr": "Man sollte kein Geld für unnötige Dinge verschwenden.",
+          "difficulty": 3,
+          "tags": [
+            "geld_konsum"
+          ]
+        },
+        {
+          "id": "money_09_thrifty",
+          "de": "Sparsam",
+          "x": "poupado",
+          "ex": "A minha avó é muito poupada e só compra o essencial.",
+          "exTr": "Meine Großmutter ist sehr sparsam und kauft nur das Nötigste.",
+          "difficulty": 2,
+          "tags": [
+            "geld_konsum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture_10",
+      "title": "Kultur & Feste",
+      "icon": "🎭",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "culture_10_tradition",
+          "de": "Tradition",
+          "x": "tradição",
+          "ex": "Na nossa família isso é uma velha tradição.",
+          "exTr": "In unserer Familie ist das eine alte Tradition.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_custom",
+          "de": "Brauch",
+          "x": "costume",
+          "ex": "É costume esconder ovos na Páscoa.",
+          "exTr": "Es ist ein Brauch, zu Ostern Eier zu verstecken.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_public_holiday",
+          "de": "Feiertag",
+          "x": "feriado",
+          "ex": "O três de outubro é um feriado oficial.",
+          "exTr": "Der Dritte Oktober ist ein gesetzlicher Feiertag.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_performance",
+          "de": "Aufführung",
+          "x": "espetáculo",
+          "ex": "O espetáculo no teatro durou três horas.",
+          "exTr": "Die Aufführung im Theater dauerte drei Stunden.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_museum",
+          "de": "Museum",
+          "x": "museu",
+          "ex": "Infelizmente, o museu está fechado à segunda-feira.",
+          "exTr": "Das Museum ist montags leider geschlossen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_painting",
+          "de": "Gemälde",
+          "x": "pintura",
+          "ex": "A pintura está pendurada nesta sala há séculos.",
+          "exTr": "Das Gemälde hängt seit Jahrhunderten in diesem Saal.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_festival",
+          "de": "Festival",
+          "x": "festival",
+          "ex": "No festival tocaram mais de cinquenta bandas.",
+          "exTr": "Auf dem Festival spielten über fünfzig Bands.",
+          "difficulty": 1,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_parade",
+          "de": "Umzug",
+          "x": "desfile",
+          "ex": "No desfile, crianças com trajes coloridos caminhavam juntas.",
+          "exTr": "Beim Umzug liefen Kinder in bunten Kostümen mit.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_artwork",
+          "de": "Kunstwerk",
+          "x": "obra de arte",
+          "ex": "Esta obra de arte tem mais de duzentos anos.",
+          "exTr": "Dieses Kunstwerk ist über zweihundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_landmark",
+          "de": "Wahrzeichen",
+          "x": "símbolo",
+          "ex": "A Torre Eiffel é o símbolo de Paris.",
+          "exTr": "Der Eiffelturm ist das Wahrzeichen von Paris.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_cultural_heritage",
+          "de": "Kulturerbe",
+          "x": "património cultural",
+          "ex": "A cidade antiga faz parte do Património Mundial.",
+          "exTr": "Die Altstadt gehört zum Weltkulturerbe.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_ceremony",
+          "de": "Zeremonie",
+          "x": "cerimónia",
+          "ex": "A cerimónia começou pontualmente às onze horas.",
+          "exTr": "Die Zeremonie begann pünktlich um elf Uhr.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_anniversary",
+          "de": "Jubiläum",
+          "x": "aniversário",
+          "ex": "A associação celebra o seu cinquentésimo aniversário.",
+          "exTr": "Der Verein feiert sein fünfzigjähriges Jubiläum.",
+          "difficulty": 3,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_folk_festival",
+          "de": "Volksfest",
+          "x": "festa popular",
+          "ex": "Na festa popular havia cerveja e música.",
+          "exTr": "Auf dem Volksfest gab es Bier und Musik.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_stage",
+          "de": "Bühne",
+          "x": "palco",
+          "ex": "O cantor subiu ao palco sob grandes aplausos.",
+          "exTr": "Der Sänger betrat die Bühne unter großem Applaus.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_audience",
+          "de": "Publikum",
+          "x": "público",
+          "ex": "O público aplaudiu durante muito tempo depois do concerto.",
+          "exTr": "Das Publikum klatschte nach dem Konzert lange.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_costume",
+          "de": "Kostüm",
+          "x": "fantasia",
+          "ex": "Para o Carnaval, ela costurou uma fantasia.",
+          "exTr": "Für den Karneval nähte sie ein Kostüm.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_fireworks",
+          "de": "Feuerwerk",
+          "x": "fogo de artifício",
+          "ex": "À meia-noite começou o fogo de artifício.",
+          "exTr": "Um Mitternacht begann das Feuerwerk.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_christmas_market",
+          "de": "Weihnachtsmarkt",
+          "x": "mercado de Natal",
+          "ex": "No mercado de Natal gostamos de beber vinho quente.",
+          "exTr": "Auf dem Weihnachtsmarkt trinken wir gerne Glühwein.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        },
+        {
+          "id": "culture_10_carnival",
+          "de": "Karneval",
+          "x": "Carnaval",
+          "ex": "Na Renânia celebra-se o Carnaval com desfiles.",
+          "exTr": "Im Rheinland feiert man Karneval mit Umzügen.",
+          "difficulty": 2,
+          "tags": [
+            "kultur_feste"
+          ]
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "sent_001",
+      "de": "Eine gute Lösung berücksichtigt verschiedene Perspektiven.",
+      "x": "Uma boa solução tem em conta diferentes perspetivas.",
+      "translations": {
+        "pt": "Uma boa solução tem em conta diferentes perspetivas."
+      }
+    },
+    {
+      "id": "sent_002",
+      "de": "Wir sollten unsere Ressourcen verantwortungsvoll nutzen.",
+      "x": "Devemos usar os nossos recursos de forma responsável.",
+      "translations": {
+        "pt": "Devemos usar os nossos recursos de forma responsável."
+      }
+    }
+  ]
+}

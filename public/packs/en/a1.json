@@ -13,6 +13,8 @@
           "id": "food_01_water",
           "de": "Wasser",
           "x": "water",
+          "ex": "I drink a lot of water every day.",
+          "exTr": "Ich trinke jeden Tag viel Wasser.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -22,6 +24,8 @@
           "id": "food_01_bread",
           "de": "Brot",
           "x": "bread",
+          "ex": "I eat bread for breakfast.",
+          "exTr": "Zum Frühstück esse ich Brot.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -31,6 +35,8 @@
           "id": "food_01_milk",
           "de": "Milch",
           "x": "milk",
+          "ex": "The milk is in the fridge.",
+          "exTr": "Die Milch steht im Kühlschrank.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -40,6 +46,8 @@
           "id": "food_01_coffee",
           "de": "Kaffee",
           "x": "coffee",
+          "ex": "I like drinking coffee in the morning.",
+          "exTr": "Ich trinke morgens gern Kaffee.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -49,6 +57,8 @@
           "id": "food_01_tea",
           "de": "Tee",
           "x": "tea",
+          "ex": "Would you like a tea?",
+          "exTr": "Möchtest du einen Tee?",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -58,6 +68,8 @@
           "id": "food_01_apple",
           "de": "Apfel",
           "x": "apple",
+          "ex": "The apple is red and sweet.",
+          "exTr": "Der Apfel ist rot und süß.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -67,6 +79,8 @@
           "id": "food_01_banana",
           "de": "Banane",
           "x": "banana",
+          "ex": "I am eating a banana.",
+          "exTr": "Ich esse eine Banane.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -76,6 +90,140 @@
           "id": "food_01_rice",
           "de": "Reis",
           "x": "rice",
+          "ex": "There is rice with the fish.",
+          "exTr": "Zum Fisch gibt es Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cheese",
+          "de": "Käse",
+          "x": "cheese",
+          "ex": "I like cheese on my bread.",
+          "exTr": "Ich mag Käse auf dem Brot.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_egg",
+          "de": "Ei",
+          "x": "egg",
+          "ex": "I eat an egg for breakfast.",
+          "exTr": "Zum Frühstück esse ich ein Ei.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_meat",
+          "de": "Fleisch",
+          "x": "meat",
+          "ex": "He does not eat meat.",
+          "exTr": "Er isst kein Fleisch.",
+          "difficulty": 2,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_fish",
+          "de": "Fisch",
+          "x": "fish",
+          "ex": "Today there is fish with rice.",
+          "exTr": "Heute gibt es Fisch mit Reis.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_vegetables",
+          "de": "Gemüse",
+          "x": "vegetables",
+          "ex": "Children should eat a lot of vegetables.",
+          "exTr": "Kinder sollen viel Gemüse essen.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_soup",
+          "de": "Suppe",
+          "x": "soup",
+          "ex": "The soup is still hot.",
+          "exTr": "Die Suppe ist noch heiß.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_salt",
+          "de": "Salz",
+          "x": "salt",
+          "ex": "Please pass me the salt.",
+          "exTr": "Bitte gib mir das Salz.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_sugar",
+          "de": "Zucker",
+          "x": "sugar",
+          "ex": "I take no sugar in my tea.",
+          "exTr": "Ich nehme keinen Zucker im Tee.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_juice",
+          "de": "Saft",
+          "x": "juice",
+          "ex": "She drinks a glass of juice.",
+          "exTr": "Sie trinkt ein Glas Saft.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_beer",
+          "de": "Bier",
+          "x": "beer",
+          "ex": "He orders a beer.",
+          "exTr": "Er bestellt ein Bier.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_cake",
+          "de": "Kuchen",
+          "x": "cake",
+          "ex": "The cake tastes very good.",
+          "exTr": "Der Kuchen schmeckt sehr gut.",
+          "difficulty": 1,
+          "tags": [
+            "essen_trinken"
+          ]
+        },
+        {
+          "id": "food_01_potato",
+          "de": "Kartoffel",
+          "x": "potato",
+          "ex": "There are potatoes for dinner.",
+          "exTr": "Zum Essen gibt es Kartoffeln.",
           "difficulty": 1,
           "tags": [
             "essen_trinken"
@@ -93,6 +241,8 @@
           "id": "travel_02_airport",
           "de": "Flughafen",
           "x": "airport",
+          "ex": "We are driving to the airport.",
+          "exTr": "Wir fahren zum Flughafen.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -102,6 +252,8 @@
           "id": "travel_02_train_station",
           "de": "Bahnhof",
           "x": "train station",
+          "ex": "The train station is not far.",
+          "exTr": "Der Bahnhof ist nicht weit.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -111,6 +263,8 @@
           "id": "travel_02_ticket",
           "de": "Ticket",
           "x": "ticket",
+          "ex": "I need a ticket to Berlin.",
+          "exTr": "Ich brauche ein Ticket nach Berlin.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -120,6 +274,8 @@
           "id": "travel_02_hotel",
           "de": "Hotel",
           "x": "hotel",
+          "ex": "Our hotel is on the beach.",
+          "exTr": "Unser Hotel liegt am Strand.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -129,6 +285,8 @@
           "id": "travel_02_street",
           "de": "Straße",
           "x": "street",
+          "ex": "The street is very loud.",
+          "exTr": "Die Straße ist sehr laut.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -138,6 +296,8 @@
           "id": "travel_02_map",
           "de": "Karte",
           "x": "map",
+          "ex": "Do you have a map of the city?",
+          "exTr": "Hast du eine Karte der Stadt?",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -147,6 +307,8 @@
           "id": "travel_02_suitcase",
           "de": "Koffer",
           "x": "suitcase",
+          "ex": "My suitcase is too heavy.",
+          "exTr": "Mein Koffer ist zu schwer.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -156,6 +318,140 @@
           "id": "travel_02_passport",
           "de": "Pass",
           "x": "passport",
+          "ex": "Do not forget your passport!",
+          "exTr": "Vergiss deinen Pass nicht!",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_train",
+          "de": "Zug",
+          "x": "train",
+          "ex": "The train arrives at eight o'clock.",
+          "exTr": "Der Zug kommt um acht Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus",
+          "de": "Bus",
+          "x": "bus",
+          "ex": "I take the bus to work.",
+          "exTr": "Ich fahre mit dem Bus zur Arbeit.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_car",
+          "de": "Auto",
+          "x": "car",
+          "ex": "My car is new.",
+          "exTr": "Mein Auto ist neu.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_plane",
+          "de": "Flugzeug",
+          "x": "plane",
+          "ex": "The plane is landing soon.",
+          "exTr": "Das Flugzeug landet gleich.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bicycle",
+          "de": "Fahrrad",
+          "x": "bicycle",
+          "ex": "I like riding a bicycle.",
+          "exTr": "Ich fahre gern Fahrrad.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_trip",
+          "de": "Reise",
+          "x": "trip",
+          "ex": "The trip takes three hours.",
+          "exTr": "Die Reise dauert drei Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_city",
+          "de": "Stadt",
+          "x": "city",
+          "ex": "Berlin is a big city.",
+          "exTr": "Berlin ist eine große Stadt.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_country",
+          "de": "Land",
+          "x": "country",
+          "ex": "Which country do you live in?",
+          "exTr": "In welchem Land wohnst du?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_taxi",
+          "de": "Taxi",
+          "x": "taxi",
+          "ex": "We take a taxi to the hotel.",
+          "exTr": "Wir nehmen ein Taxi zum Hotel.",
+          "difficulty": 1,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_luggage",
+          "de": "Gepäck",
+          "x": "luggage",
+          "ex": "Where is my luggage?",
+          "exTr": "Wo ist mein Gepäck?",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_bus_stop",
+          "de": "Haltestelle",
+          "x": "bus stop",
+          "ex": "The bus stop is up ahead.",
+          "exTr": "Die Haltestelle ist da vorne.",
+          "difficulty": 2,
+          "tags": [
+            "reisen_orientierung"
+          ]
+        },
+        {
+          "id": "travel_02_holiday",
+          "de": "Urlaub",
+          "x": "holiday",
+          "ex": "We are on holiday in summer.",
+          "exTr": "Wir machen im Sommer Urlaub.",
           "difficulty": 1,
           "tags": [
             "reisen_orientierung"
@@ -173,6 +469,8 @@
           "id": "home_03_house",
           "de": "Haus",
           "x": "house",
+          "ex": "The house has a garden.",
+          "exTr": "Das Haus hat einen Garten.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -182,6 +480,8 @@
           "id": "home_03_room",
           "de": "Zimmer",
           "x": "room",
+          "ex": "My room is small.",
+          "exTr": "Mein Zimmer ist klein.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -191,6 +491,8 @@
           "id": "home_03_kitchen",
           "de": "Küche",
           "x": "kitchen",
+          "ex": "We cook in the kitchen.",
+          "exTr": "Wir kochen in der Küche.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -200,6 +502,8 @@
           "id": "home_03_bathroom",
           "de": "Badezimmer",
           "x": "bathroom",
+          "ex": "The bathroom is on the left.",
+          "exTr": "Das Badezimmer ist links.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -209,6 +513,8 @@
           "id": "home_03_window",
           "de": "Fenster",
           "x": "window",
+          "ex": "Please open the window.",
+          "exTr": "Bitte mach das Fenster auf.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -218,6 +524,8 @@
           "id": "home_03_door",
           "de": "Tür",
           "x": "door",
+          "ex": "The door is closed.",
+          "exTr": "Die Tür ist zu.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -227,6 +535,8 @@
           "id": "home_03_table",
           "de": "Tisch",
           "x": "table",
+          "ex": "The table is made of wood.",
+          "exTr": "Der Tisch ist aus Holz.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -236,6 +546,140 @@
           "id": "home_03_chair",
           "de": "Stuhl",
           "x": "chair",
+          "ex": "Sit down on the chair.",
+          "exTr": "Setz dich auf den Stuhl.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_bed",
+          "de": "Bett",
+          "x": "bed",
+          "ex": "The bed is very comfortable.",
+          "exTr": "Das Bett ist sehr bequem.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_sofa",
+          "de": "Sofa",
+          "x": "sofa",
+          "ex": "We are sitting on the sofa.",
+          "exTr": "Wir sitzen auf dem Sofa.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_lamp",
+          "de": "Lampe",
+          "x": "lamp",
+          "ex": "The lamp is on the table.",
+          "exTr": "Die Lampe steht auf dem Tisch.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_key",
+          "de": "Schlüssel",
+          "x": "key",
+          "ex": "I have lost my key.",
+          "exTr": "Ich habe meinen Schlüssel verloren.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_apartment",
+          "de": "Wohnung",
+          "x": "apartment",
+          "ex": "My apartment has three rooms.",
+          "exTr": "Meine Wohnung hat drei Zimmer.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_garden",
+          "de": "Garten",
+          "x": "garden",
+          "ex": "Flowers grow in the garden.",
+          "exTr": "Im Garten wachsen Blumen.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wall",
+          "de": "Wand",
+          "x": "wall",
+          "ex": "The picture hangs on the wall.",
+          "exTr": "Das Bild hängt an der Wand.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_shower",
+          "de": "Dusche",
+          "x": "shower",
+          "ex": "I take a shower every morning.",
+          "exTr": "Ich nehme jeden Morgen eine Dusche.",
+          "difficulty": 1,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_wardrobe",
+          "de": "Schrank",
+          "x": "wardrobe",
+          "ex": "The clothes are in the wardrobe.",
+          "exTr": "Die Kleider sind im Schrank.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_basement",
+          "de": "Keller",
+          "x": "basement",
+          "ex": "The bicycle is in the basement.",
+          "exTr": "Das Fahrrad steht im Keller.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_stairs",
+          "de": "Treppe",
+          "x": "stairs",
+          "ex": "The stairs are very steep.",
+          "exTr": "Die Treppe ist sehr steil.",
+          "difficulty": 2,
+          "tags": [
+            "zuhause"
+          ]
+        },
+        {
+          "id": "home_03_living_room",
+          "de": "Wohnzimmer",
+          "x": "living room",
+          "ex": "The living room is big and bright.",
+          "exTr": "Das Wohnzimmer ist groß und hell.",
           "difficulty": 1,
           "tags": [
             "zuhause"
@@ -253,6 +697,8 @@
           "id": "work_04_work",
           "de": "Arbeit",
           "x": "work",
+          "ex": "Work starts at nine o'clock.",
+          "exTr": "Die Arbeit beginnt um neun Uhr.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -262,6 +708,8 @@
           "id": "work_04_office",
           "de": "Büro",
           "x": "office",
+          "ex": "I am in the office today.",
+          "exTr": "Ich bin heute im Büro.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -271,6 +719,8 @@
           "id": "work_04_boss",
           "de": "Chef",
           "x": "boss",
+          "ex": "My boss is very nice.",
+          "exTr": "Mein Chef ist sehr nett.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -280,6 +730,8 @@
           "id": "work_04_colleague",
           "de": "Kollege",
           "x": "colleague",
+          "ex": "My colleague often helps me.",
+          "exTr": "Mein Kollege hilft mir oft.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -289,6 +741,8 @@
           "id": "work_04_meeting",
           "de": "Meeting",
           "x": "meeting",
+          "ex": "The meeting lasts one hour.",
+          "exTr": "Das Meeting dauert eine Stunde.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -298,6 +752,8 @@
           "id": "work_04_project",
           "de": "Projekt",
           "x": "project",
+          "ex": "We have a new project.",
+          "exTr": "Wir haben ein neues Projekt.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -307,6 +763,8 @@
           "id": "work_04_email",
           "de": "E-Mail",
           "x": "email",
+          "ex": "I will write you an email.",
+          "exTr": "Ich schreibe dir eine E-Mail.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -316,6 +774,140 @@
           "id": "work_04_break",
           "de": "Pause",
           "x": "break",
+          "ex": "We are taking a break now.",
+          "exTr": "Wir machen jetzt Pause.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_company",
+          "de": "Firma",
+          "x": "company",
+          "ex": "He works in a big company.",
+          "exTr": "Er arbeitet in einer großen Firma.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_salary",
+          "de": "Gehalt",
+          "x": "salary",
+          "ex": "The salary arrives at the end of the month.",
+          "exTr": "Das Gehalt kommt am Monatsende.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_teacher",
+          "de": "Lehrer",
+          "x": "teacher",
+          "ex": "The teacher explains the task.",
+          "exTr": "Der Lehrer erklärt die Aufgabe.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_school",
+          "de": "Schule",
+          "x": "school",
+          "ex": "The children go to school.",
+          "exTr": "Die Kinder gehen in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_student",
+          "de": "Schüler",
+          "x": "student",
+          "ex": "The student is doing his homework.",
+          "exTr": "Der Schüler macht seine Hausaufgaben.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_pen",
+          "de": "Stift",
+          "x": "pen",
+          "ex": "Do you have a pen for me?",
+          "exTr": "Hast du einen Stift für mich?",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_paper",
+          "de": "Papier",
+          "x": "paper",
+          "ex": "I need a sheet of paper.",
+          "exTr": "Ich brauche ein Blatt Papier.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_printer",
+          "de": "Drucker",
+          "x": "printer",
+          "ex": "The printer in the office is broken.",
+          "exTr": "Der Drucker im Büro ist kaputt.",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_phone",
+          "de": "Telefon",
+          "x": "phone",
+          "ex": "My phone is ringing.",
+          "exTr": "Mein Telefon klingelt.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_computer",
+          "de": "Computer",
+          "x": "computer",
+          "ex": "The computer is very fast.",
+          "exTr": "Der Computer ist sehr schnell.",
+          "difficulty": 1,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_profession",
+          "de": "Beruf",
+          "x": "profession",
+          "ex": "What is your profession?",
+          "exTr": "Was ist dein Beruf?",
+          "difficulty": 2,
+          "tags": [
+            "beruf_alltag"
+          ]
+        },
+        {
+          "id": "work_04_mistake",
+          "de": "Fehler",
+          "x": "mistake",
+          "ex": "I made a mistake.",
+          "exTr": "Ich habe einen Fehler gemacht.",
           "difficulty": 2,
           "tags": [
             "beruf_alltag"
@@ -333,6 +925,8 @@
           "id": "health_05_doctor",
           "de": "Arzt",
           "x": "doctor",
+          "ex": "I have to go to the doctor.",
+          "exTr": "Ich muss zum Arzt gehen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -342,6 +936,8 @@
           "id": "health_05_hospital",
           "de": "Krankenhaus",
           "x": "hospital",
+          "ex": "He is in the hospital.",
+          "exTr": "Er liegt im Krankenhaus.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -351,6 +947,8 @@
           "id": "health_05_medicine",
           "de": "Medizin",
           "x": "medicine",
+          "ex": "Take the medicine three times a day.",
+          "exTr": "Nimm die Medizin dreimal am Tag.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -360,6 +958,8 @@
           "id": "health_05_pain",
           "de": "Schmerz",
           "x": "pain",
+          "ex": "I have severe pain.",
+          "exTr": "Ich habe starke Schmerzen.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -369,6 +969,8 @@
           "id": "health_05_fever",
           "de": "Fieber",
           "x": "fever",
+          "ex": "The child has a fever.",
+          "exTr": "Das Kind hat Fieber.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -378,6 +980,8 @@
           "id": "health_05_help",
           "de": "Hilfe",
           "x": "help",
+          "ex": "I need help!",
+          "exTr": "Ich brauche Hilfe!",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -387,6 +991,8 @@
           "id": "health_05_appointment",
           "de": "Termin",
           "x": "appointment",
+          "ex": "I have an appointment tomorrow.",
+          "exTr": "Ich habe morgen einen Termin.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -396,6 +1002,140 @@
           "id": "health_05_prescription",
           "de": "Rezept",
           "x": "prescription",
+          "ex": "The doctor writes a prescription.",
+          "exTr": "Der Arzt schreibt ein Rezept.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cough",
+          "de": "Husten",
+          "x": "cough",
+          "ex": "I have had a cough for days.",
+          "exTr": "Ich habe seit Tagen Husten.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_cold",
+          "de": "Erkältung",
+          "x": "cold",
+          "ex": "He has a bad cold.",
+          "exTr": "Er hat eine starke Erkältung.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pharmacy",
+          "de": "Apotheke",
+          "x": "pharmacy",
+          "ex": "The pharmacy is right around the corner.",
+          "exTr": "Die Apotheke ist gleich um die Ecke.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_dentist",
+          "de": "Zahnarzt",
+          "x": "dentist",
+          "ex": "Tomorrow I am going to the dentist.",
+          "exTr": "Morgen gehe ich zum Zahnarzt.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_health",
+          "de": "Gesundheit",
+          "x": "health",
+          "ex": "Health is very important.",
+          "exTr": "Gesundheit ist sehr wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_illness",
+          "de": "Krankheit",
+          "x": "illness",
+          "ex": "The illness lasts a week.",
+          "exTr": "Die Krankheit dauert eine Woche.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_emergency",
+          "de": "Notfall",
+          "x": "emergency",
+          "ex": "This is an emergency!",
+          "exTr": "Das ist ein Notfall!",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_ambulance",
+          "de": "Krankenwagen",
+          "x": "ambulance",
+          "ex": "The ambulance is coming right away.",
+          "exTr": "Der Krankenwagen kommt sofort.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_pill",
+          "de": "Tablette",
+          "x": "pill",
+          "ex": "I take a pill every day.",
+          "exTr": "Ich nehme jeden Tag eine Tablette.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_plaster",
+          "de": "Pflaster",
+          "x": "plaster",
+          "ex": "I need a plaster.",
+          "exTr": "Ich brauche ein Pflaster.",
+          "difficulty": 1,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_sleep",
+          "de": "Schlaf",
+          "x": "sleep",
+          "ex": "Enough sleep is important.",
+          "exTr": "Genug Schlaf ist wichtig.",
+          "difficulty": 2,
+          "tags": [
+            "gesundheit"
+          ]
+        },
+        {
+          "id": "health_05_patient",
+          "de": "Patient",
+          "x": "patient",
+          "ex": "The patient is waiting in the room.",
+          "exTr": "Der Patient wartet im Zimmer.",
           "difficulty": 2,
           "tags": [
             "gesundheit"
@@ -413,6 +1153,8 @@
           "id": "shopping_06_shop",
           "de": "Laden",
           "x": "shop",
+          "ex": "The shop is open until eight.",
+          "exTr": "Der Laden ist bis acht offen.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -422,6 +1164,8 @@
           "id": "shopping_06_price",
           "de": "Preis",
           "x": "price",
+          "ex": "The price is very good.",
+          "exTr": "Der Preis ist sehr gut.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -431,6 +1175,8 @@
           "id": "shopping_06_money",
           "de": "Geld",
           "x": "money",
+          "ex": "I do not have any money with me.",
+          "exTr": "Ich habe kein Geld dabei.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -440,6 +1186,8 @@
           "id": "shopping_06_checkout",
           "de": "Kasse",
           "x": "checkout",
+          "ex": "Please pay at the checkout.",
+          "exTr": "Bitte zahlen Sie an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -449,6 +1197,8 @@
           "id": "shopping_06_discount",
           "de": "Rabatt",
           "x": "discount",
+          "ex": "Today there is ten percent discount.",
+          "exTr": "Heute gibt es zehn Prozent Rabatt.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -458,6 +1208,8 @@
           "id": "shopping_06_customer",
           "de": "Kunde",
           "x": "customer",
+          "ex": "The customer is waiting at the checkout.",
+          "exTr": "Der Kunde wartet an der Kasse.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -467,6 +1219,8 @@
           "id": "shopping_06_seller",
           "de": "Verkäufer",
           "x": "seller",
+          "ex": "The seller is very friendly.",
+          "exTr": "Der Verkäufer ist sehr freundlich.",
           "difficulty": 2,
           "tags": [
             "einkaufen"
@@ -476,7 +1230,141 @@
           "id": "shopping_06_bag",
           "de": "Tüte",
           "x": "bag",
+          "ex": "Do you need a bag?",
+          "exTr": "Brauchen Sie eine Tüte?",
           "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_supermarket",
+          "de": "Supermarkt",
+          "x": "supermarket",
+          "ex": "I am going to the supermarket.",
+          "exTr": "Ich gehe zum Supermarkt.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_list",
+          "de": "Einkaufsliste",
+          "x": "shopping list",
+          "ex": "I am writing a shopping list for tomorrow.",
+          "exTr": "Ich schreibe eine Einkaufsliste für morgen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_euro",
+          "de": "Euro",
+          "x": "euro",
+          "ex": "That costs ten euros.",
+          "exTr": "Das kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_cent",
+          "de": "Cent",
+          "x": "cent",
+          "ex": "That only costs fifty cents.",
+          "exTr": "Das kostet nur fünfzig Cent.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_credit_card",
+          "de": "Kreditkarte",
+          "x": "credit card",
+          "ex": "Can I pay by credit card?",
+          "exTr": "Kann ich mit Kreditkarte zahlen?",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_receipt",
+          "de": "Quittung",
+          "x": "receipt",
+          "ex": "I would like a receipt, please.",
+          "exTr": "Ich möchte bitte eine Quittung.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_offer",
+          "de": "Angebot",
+          "x": "offer",
+          "ex": "The offer is only valid today.",
+          "exTr": "Das Angebot gilt nur heute.",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_size",
+          "de": "Größe",
+          "x": "size",
+          "ex": "What size are you?",
+          "exTr": "Welche Größe haben Sie?",
+          "difficulty": 2,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_shopping_cart",
+          "de": "Einkaufswagen",
+          "x": "shopping cart",
+          "ex": "I need a shopping cart.",
+          "exTr": "Ich brauche einen Einkaufswagen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bakery",
+          "de": "Bäckerei",
+          "x": "bakery",
+          "ex": "I buy rolls at the bakery.",
+          "exTr": "In der Bäckerei kaufe ich Brötchen.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_bottle",
+          "de": "Flasche",
+          "x": "bottle",
+          "ex": "A bottle of water, please.",
+          "exTr": "Eine Flasche Wasser, bitte.",
+          "difficulty": 1,
+          "tags": [
+            "einkaufen"
+          ]
+        },
+        {
+          "id": "shopping_06_gift",
+          "de": "Geschenk",
+          "x": "gift",
+          "ex": "The gift is for you.",
+          "exTr": "Das Geschenk ist für dich.",
+          "difficulty": 1,
           "tags": [
             "einkaufen"
           ]
@@ -493,6 +1381,8 @@
           "id": "family_07_mother",
           "de": "Mutter",
           "x": "mother",
+          "ex": "My mother cooks very well.",
+          "exTr": "Meine Mutter kocht sehr gut.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -502,6 +1392,8 @@
           "id": "family_07_father",
           "de": "Vater",
           "x": "father",
+          "ex": "My father works in an office.",
+          "exTr": "Mein Vater arbeitet im Büro.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -511,6 +1403,8 @@
           "id": "family_07_brother",
           "de": "Bruder",
           "x": "brother",
+          "ex": "My brother is ten years old.",
+          "exTr": "Mein Bruder ist zehn Jahre alt.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -520,6 +1414,8 @@
           "id": "family_07_sister",
           "de": "Schwester",
           "x": "sister",
+          "ex": "My sister lives in Vienna.",
+          "exTr": "Meine Schwester wohnt in Wien.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -529,6 +1425,8 @@
           "id": "family_07_friend",
           "de": "Freund",
           "x": "friend",
+          "ex": "He is my best friend.",
+          "exTr": "Er ist mein bester Freund.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -538,6 +1436,8 @@
           "id": "family_07_child",
           "de": "Kind",
           "x": "child",
+          "ex": "The child is playing in the garden.",
+          "exTr": "Das Kind spielt im Garten.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -547,6 +1447,8 @@
           "id": "family_07_family",
           "de": "Familie",
           "x": "family",
+          "ex": "My family is big.",
+          "exTr": "Meine Familie ist groß.",
           "difficulty": 3,
           "tags": [
             "familie_freunde"
@@ -556,7 +1458,141 @@
           "id": "family_07_name",
           "de": "Name",
           "x": "name",
+          "ex": "What is your name?",
+          "exTr": "Wie ist dein Name?",
           "difficulty": 3,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_parents",
+          "de": "Eltern",
+          "x": "parents",
+          "ex": "My parents live in Hamburg.",
+          "exTr": "Meine Eltern wohnen in Hamburg.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_son",
+          "de": "Sohn",
+          "x": "son",
+          "ex": "Her son goes to school.",
+          "exTr": "Ihr Sohn geht in die Schule.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_daughter",
+          "de": "Tochter",
+          "x": "daughter",
+          "ex": "His daughter is five years old.",
+          "exTr": "Seine Tochter ist fünf Jahre alt.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandmother",
+          "de": "Oma",
+          "x": "grandmother",
+          "ex": "My grandmother likes baking cake.",
+          "exTr": "Meine Oma backt gern Kuchen.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_grandfather",
+          "de": "Opa",
+          "x": "grandfather",
+          "ex": "My grandfather reads the newspaper.",
+          "exTr": "Mein Opa liest die Zeitung.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_man",
+          "de": "Mann",
+          "x": "man",
+          "ex": "The man is wearing a hat.",
+          "exTr": "Der Mann trägt einen Hut.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_woman",
+          "de": "Frau",
+          "x": "woman",
+          "ex": "The woman is waiting at the station.",
+          "exTr": "Die Frau wartet am Bahnhof.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_baby",
+          "de": "Baby",
+          "x": "baby",
+          "ex": "The baby is sleeping in bed.",
+          "exTr": "Das Baby schläft im Bett.",
+          "difficulty": 1,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_uncle",
+          "de": "Onkel",
+          "x": "uncle",
+          "ex": "My uncle lives in Berlin.",
+          "exTr": "Mein Onkel wohnt in Berlin.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_aunt",
+          "de": "Tante",
+          "x": "aunt",
+          "ex": "My aunt is visiting us tomorrow.",
+          "exTr": "Meine Tante besucht uns morgen.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_neighbor",
+          "de": "Nachbar",
+          "x": "neighbor",
+          "ex": "My neighbor is very nice.",
+          "exTr": "Mein Nachbar ist sehr nett.",
+          "difficulty": 2,
+          "tags": [
+            "familie_freunde"
+          ]
+        },
+        {
+          "id": "family_07_guest",
+          "de": "Gast",
+          "x": "guest",
+          "ex": "The guest arrives at seven o'clock.",
+          "exTr": "Der Gast kommt um sieben Uhr.",
+          "difficulty": 2,
           "tags": [
             "familie_freunde"
           ]
@@ -573,6 +1609,8 @@
           "id": "time_08_today",
           "de": "Heute",
           "x": "today",
+          "ex": "Today the sun is shining.",
+          "exTr": "Heute scheint die Sonne.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -582,6 +1620,8 @@
           "id": "time_08_tomorrow",
           "de": "Morgen",
           "x": "tomorrow",
+          "ex": "Tomorrow I have the day off.",
+          "exTr": "Morgen habe ich frei.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -591,6 +1631,8 @@
           "id": "time_08_yesterday",
           "de": "Gestern",
           "x": "yesterday",
+          "ex": "Yesterday I was at the cinema.",
+          "exTr": "Gestern war ich im Kino.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -600,6 +1642,8 @@
           "id": "time_08_week",
           "de": "Woche",
           "x": "week",
+          "ex": "The week has seven days.",
+          "exTr": "Die Woche hat sieben Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -609,6 +1653,8 @@
           "id": "time_08_month",
           "de": "Monat",
           "x": "month",
+          "ex": "The month has thirty days.",
+          "exTr": "Der Monat hat dreißig Tage.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -618,6 +1664,8 @@
           "id": "time_08_year",
           "de": "Jahr",
           "x": "year",
+          "ex": "A year has twelve months.",
+          "exTr": "Ein Jahr hat zwölf Monate.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -627,6 +1675,8 @@
           "id": "time_08_to_learn",
           "de": "Lernen",
           "x": "to learn",
+          "ex": "I want to learn German.",
+          "exTr": "Ich möchte Deutsch lernen.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
@@ -636,9 +1686,599 @@
           "id": "time_08_language",
           "de": "Sprache",
           "x": "language",
+          "ex": "German is a beautiful language.",
+          "exTr": "Deutsch ist eine schöne Sprache.",
           "difficulty": 3,
           "tags": [
             "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_clock",
+          "de": "Uhr",
+          "x": "clock",
+          "ex": "The clock hangs on the wall.",
+          "exTr": "Die Uhr hängt an der Wand.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_hour",
+          "de": "Stunde",
+          "x": "hour",
+          "ex": "The lesson lasts one hour.",
+          "exTr": "Der Unterricht dauert eine Stunde.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_minute",
+          "de": "Minute",
+          "x": "minute",
+          "ex": "Please wait a minute.",
+          "exTr": "Warte bitte eine Minute.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_day",
+          "de": "Tag",
+          "x": "day",
+          "ex": "A day has twenty-four hours.",
+          "exTr": "Ein Tag hat vierundzwanzig Stunden.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_night",
+          "de": "Nacht",
+          "x": "night",
+          "ex": "It is dark at night.",
+          "exTr": "In der Nacht ist es dunkel.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_evening",
+          "de": "Abend",
+          "x": "evening",
+          "ex": "In the evening we watch TV.",
+          "exTr": "Am Abend sehen wir fern.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_monday",
+          "de": "Montag",
+          "x": "Monday",
+          "ex": "School starts on Monday.",
+          "exTr": "Am Montag beginnt die Schule.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_weekend",
+          "de": "Wochenende",
+          "x": "weekend",
+          "ex": "We are going away at the weekend.",
+          "exTr": "Am Wochenende fahren wir weg.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_book",
+          "de": "Buch",
+          "x": "book",
+          "ex": "I am reading an exciting book.",
+          "exTr": "Ich lese ein spannendes Buch.",
+          "difficulty": 1,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_question",
+          "de": "Frage",
+          "x": "question",
+          "ex": "I have a question.",
+          "exTr": "Ich habe eine Frage.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_answer",
+          "de": "Antwort",
+          "x": "answer",
+          "ex": "The answer is correct.",
+          "exTr": "Die Antwort ist richtig.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        },
+        {
+          "id": "time_08_word",
+          "de": "Wort",
+          "x": "word",
+          "ex": "I do not know this word.",
+          "exTr": "Dieses Wort kenne ich nicht.",
+          "difficulty": 2,
+          "tags": [
+            "zeit_lernen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basics_09",
+      "title": "Zahlen, Farben & Formen",
+      "icon": "🔢",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "basics_09_zero",
+          "de": "Null",
+          "x": "zero",
+          "ex": "The result is zero.",
+          "exTr": "Das Ergebnis ist null.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_one",
+          "de": "Eins",
+          "x": "one",
+          "ex": "One plus one is two.",
+          "exTr": "Eins plus eins ist zwei.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_two",
+          "de": "Zwei",
+          "x": "two",
+          "ex": "I have two brothers.",
+          "exTr": "Ich habe zwei Brüder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_three",
+          "de": "Drei",
+          "x": "three",
+          "ex": "We are three people.",
+          "exTr": "Wir sind drei Personen.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_four",
+          "de": "Vier",
+          "x": "four",
+          "ex": "The car has four wheels.",
+          "exTr": "Das Auto hat vier Räder.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_five",
+          "de": "Fünf",
+          "x": "five",
+          "ex": "I am five minutes late.",
+          "exTr": "Ich bin fünf Minuten zu spät.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_six",
+          "de": "Sechs",
+          "x": "six",
+          "ex": "It is six o'clock.",
+          "exTr": "Es ist sechs Uhr.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_seven",
+          "de": "Sieben",
+          "x": "seven",
+          "ex": "The week has seven days.",
+          "exTr": "Die Woche hat sieben Tage.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_ten",
+          "de": "Zehn",
+          "x": "ten",
+          "ex": "The book costs ten euros.",
+          "exTr": "Das Buch kostet zehn Euro.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_hundred",
+          "de": "Hundert",
+          "x": "hundred",
+          "ex": "The house is a hundred years old.",
+          "exTr": "Das Haus ist hundert Jahre alt.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_red",
+          "de": "Rot",
+          "x": "red",
+          "ex": "The tomato is red.",
+          "exTr": "Die Tomate ist rot.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_blue",
+          "de": "Blau",
+          "x": "blue",
+          "ex": "The sky is blue today.",
+          "exTr": "Der Himmel ist heute blau.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_green",
+          "de": "Grün",
+          "x": "green",
+          "ex": "The grass is green.",
+          "exTr": "Das Gras ist grün.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_yellow",
+          "de": "Gelb",
+          "x": "yellow",
+          "ex": "The sun is yellow.",
+          "exTr": "Die Sonne ist gelb.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_black",
+          "de": "Schwarz",
+          "x": "black",
+          "ex": "My cat is black.",
+          "exTr": "Meine Katze ist schwarz.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_white",
+          "de": "Weiß",
+          "x": "white",
+          "ex": "The snow is white.",
+          "exTr": "Der Schnee ist weiß.",
+          "difficulty": 1,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_circle",
+          "de": "Kreis",
+          "x": "circle",
+          "ex": "Please draw a circle.",
+          "exTr": "Zeichne bitte einen Kreis.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_square",
+          "de": "Quadrat",
+          "x": "square",
+          "ex": "The window is a square.",
+          "exTr": "Das Fenster ist ein Quadrat.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_triangle",
+          "de": "Dreieck",
+          "x": "triangle",
+          "ex": "The road sign is a triangle.",
+          "exTr": "Das Verkehrsschild ist ein Dreieck.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        },
+        {
+          "id": "basics_09_line",
+          "de": "Linie",
+          "x": "line",
+          "ex": "Draw a straight line.",
+          "exTr": "Zeichne eine gerade Linie.",
+          "difficulty": 2,
+          "tags": [
+            "zahlen_farben_formen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body_10",
+      "title": "Körper & Kleidung",
+      "icon": "👕",
+      "difficulty": 1,
+      "vocab": [
+        {
+          "id": "body_10_head",
+          "de": "Kopf",
+          "x": "head",
+          "ex": "My head hurts.",
+          "exTr": "Mein Kopf tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hand",
+          "de": "Hand",
+          "x": "hand",
+          "ex": "Give me your hand.",
+          "exTr": "Gib mir deine Hand.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_foot",
+          "de": "Fuß",
+          "x": "foot",
+          "ex": "My foot is cold.",
+          "exTr": "Mein Fuß ist kalt.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_arm",
+          "de": "Arm",
+          "x": "arm",
+          "ex": "He broke his arm.",
+          "exTr": "Er hat sich den Arm gebrochen.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_leg",
+          "de": "Bein",
+          "x": "leg",
+          "ex": "My leg hurts.",
+          "exTr": "Mein Bein tut weh.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_eye",
+          "de": "Auge",
+          "x": "eye",
+          "ex": "She has a blue eye.",
+          "exTr": "Sie hat ein blaues Auge.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_ear",
+          "de": "Ohr",
+          "x": "ear",
+          "ex": "The child has a cold ear.",
+          "exTr": "Das Kind hat ein kaltes Ohr.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_nose",
+          "de": "Nase",
+          "x": "nose",
+          "ex": "My nose is blocked.",
+          "exTr": "Meine Nase ist verstopft.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_mouth",
+          "de": "Mund",
+          "x": "mouth",
+          "ex": "Please open your mouth.",
+          "exTr": "Mach bitte den Mund auf.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hair",
+          "de": "Haare",
+          "x": "hair",
+          "ex": "She has long brown hair.",
+          "exTr": "Sie hat lange braune Haare.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_stomach",
+          "de": "Bauch",
+          "x": "stomach",
+          "ex": "My stomach hurts.",
+          "exTr": "Mein Bauch tut weh.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_back",
+          "de": "Rücken",
+          "x": "back",
+          "ex": "I have pain in my back.",
+          "exTr": "Ich habe Schmerzen im Rücken.",
+          "difficulty": 2,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shirt",
+          "de": "Hemd",
+          "x": "shirt",
+          "ex": "He is wearing a white shirt.",
+          "exTr": "Er trägt ein weißes Hemd.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_trousers",
+          "de": "Hose",
+          "x": "trousers",
+          "ex": "The trousers are too small.",
+          "exTr": "Die Hose ist zu klein.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_jacket",
+          "de": "Jacke",
+          "x": "jacket",
+          "ex": "Put on your jacket.",
+          "exTr": "Zieh deine Jacke an.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_shoes",
+          "de": "Schuhe",
+          "x": "shoes",
+          "ex": "My shoes are new.",
+          "exTr": "Meine Schuhe sind neu.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_dress",
+          "de": "Kleid",
+          "x": "dress",
+          "ex": "She is wearing a red dress.",
+          "exTr": "Sie trägt ein rotes Kleid.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_hat",
+          "de": "Mütze",
+          "x": "hat",
+          "ex": "In winter I wear a hat.",
+          "exTr": "Im Winter trage ich eine Mütze.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_socks",
+          "de": "Socken",
+          "x": "socks",
+          "ex": "My socks are warm.",
+          "exTr": "Meine Socken sind warm.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
+          ]
+        },
+        {
+          "id": "body_10_sweater",
+          "de": "Pullover",
+          "x": "sweater",
+          "ex": "The sweater is made of wool.",
+          "exTr": "Der Pullover ist aus Wolle.",
+          "difficulty": 1,
+          "tags": [
+            "koerper_kleidung"
           ]
         }
       ]
