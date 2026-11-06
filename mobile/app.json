@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Lingo Pro",
-    "slug": "lingua",
-    "scheme": "lingua",
+    "slug": "lingo-pro",
+    "scheme": "lingopro",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
@@ -15,14 +15,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.flondy.lingua",
+      "bundleIdentifier": "dev.flondy.lingo.pro",
       "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "dev.flondy.lingua",
+      "package": "dev.flondy.lingo.pro",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -66,6 +66,9 @@
       "revenueCat": {
         "android": "",
         "ios": ""
+      },
+      "eas": {
+        "projectId": "10c01564-dc86-48ee-adf0-b25649c26132"
       }
     }
   }

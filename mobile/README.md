@@ -18,7 +18,7 @@ mobile/
 
 Die Lernlogik wird **nicht dupliziert**: Normalisierung, Packs, Fortschritt/Merge, Übungen und Lernhistorie kommen aus `../app/lib` (gemeinsam mit der Web-App), die Sprachpakete aus `../public/packs` (werden in die App eingebaut → komplett offline).
 
-- App-ID: `dev.flondy.lingua` (Android und iOS), Name „Lingo Pro“ (App-ID bleibt `dev.flondy.lingua`, weil `dev.flondy.lingo` bei Google Play gesperrt ist)
+- App-ID: `dev.flondy.lingo.pro` (Android und iOS), Name „Lingo Pro“ (`dev.flondy.lingo` ist bei Google Play gesperrt und kann nicht wiederverwendet werden)
 - **Kein Login, kein Server:** Fortschritt liegt nur auf dem Gerät (AsyncStorage). Sicherung als JSON-Datei über Settings → Deine Daten (Export per Teilen-Dialog, Import mit Merge). Der frühere Firebase-Login liegt in der Git-Historie (Commit vor „Remove login“), falls er wieder gebraucht wird.
 
 ## Entwickeln
@@ -56,7 +56,7 @@ Der Ordner `ios/` wird von `expo prebuild` erzeugt und ist nicht im Repo – Än
 
 Vor dem ersten App-Store-Upload:
 
-- Apple Developer Program (kostenpflichtig, jährlich) und in App Store Connect eine App mit Bundle-ID `dev.flondy.lingua` anlegen.
+- Apple Developer Program (kostenpflichtig, jährlich) und in App Store Connect eine App mit Bundle-ID `dev.flondy.lingo.pro` anlegen.
 - Build + Upload: `npx eas-cli@latest build --platform ios --profile production` und `npx eas-cli@latest submit --platform ios` – oder in Xcode über Product → Archive.
 
 ## Tablets
