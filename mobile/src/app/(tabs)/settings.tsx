@@ -15,7 +15,7 @@ import { useAppState } from "~/state/app-state";
 import { usePackState } from "~/state/pack-state";
 
 export default function SettingsScreen() {
-  const { settings, updateSettings, stats, insights, todayKey, exportSnapshot, importSnapshot, resetAll } = useAppState();
+  const { settings, updateSettings, stats, insights, todayKey, exportSnapshot, importSnapshot, resetAll, isPremium } = useAppState();
   const reminders = useReminderSettings();
   const { source, message: packMessage, pack, reload } = usePackState();
   const colors = useScreenColors();
@@ -217,6 +217,13 @@ export default function SettingsScreen() {
       />
     </Card>
   );
+  const premiumCard = (
+    <Card className="gap-3">
+      <Text className="text-lg font-bold text-gray-900">{isPremium ? "Premium 💎" : "Premium"}</Text>
+      <Text className="text-sm text-gray-600">{isPremium ? "Unendlich Leben, +50 % XP, Streak-Schutz und Stadt-Extras sind aktiv." : "Unendlich Leben, +50 % XP und Münzen, Streak-Schutz, Stadt-Extras."}</Text>
+      <GradientButton label={isPremium ? "Premium und Käufe verwalten" : "Premium ansehen"} onPress={() => router.push("/premium")} />
+    </Card>
+  );
   const accountCard = (
     <Card className="gap-3">
       <Text className="text-lg font-bold text-gray-900">Deine Daten</Text>
@@ -243,6 +250,7 @@ export default function SettingsScreen() {
         <View className="flex-row items-start gap-6">
           <View className="flex-1">{learningCard}</View>
           <View className="flex-1 gap-6">
+            {premiumCard}
             {reminderCard}
             {contentCard}
             {accountCard}
@@ -258,6 +266,7 @@ export default function SettingsScreen() {
       <View className="w-full gap-6 self-center" style={{ maxWidth: contentMaxWidth }}>
         {title}
         {learningCard}
+        {premiumCard}
         {reminderCard}
         {contentCard}
         {accountCard}

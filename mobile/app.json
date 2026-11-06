@@ -61,6 +61,12 @@
     "experiments": {
       "typedRoutes": false,
       "tsconfigPaths": true
+    },
+    "extra": {
+      "revenueCat": {
+        "android": "",
+        "ios": ""
+      }
     }
   }
 }

@@ -82,6 +82,8 @@ export interface LearningInsights {
   masteredWordIds: string[];
   /** Aufbauspiel „Deine Stadt“ (Gebäude, ausgegebene Münzen, erledigte Tagesaufgaben). */
   city?: CityStateLike;
+  /** Tage, an denen der Premium-Streak-Schutz gegriffen hat. */
+  frozenDays?: string[];
 }
 
 /** Structural copy of CityState from app/lib/city.ts (kept here to avoid a type cycle). */
@@ -90,6 +92,8 @@ export interface CityStateLike {
   coinsSpent: number;
   questsDone: Record<string, string[]>;
   chestsClaimed: string[];
+  decorations: string[];
+  coinsPurchased: number;
 }
 
 /** Snapshot of the signed-in Firebase user. The session itself is managed by the Firebase Auth SDK. */

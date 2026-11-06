@@ -31,6 +31,7 @@ export default function RootLayout() {
             <Stack screenOptions={{ headerShown: false }}>
               <Stack.Screen name="(tabs)" />
               <Stack.Screen name="privacy" options={{ presentation: "modal" }} />
+              <Stack.Screen name="premium" options={{ presentation: "modal" }} />
             </Stack>
             <CelebrationOverlay />
           </CityProvider>

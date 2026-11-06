@@ -158,7 +158,8 @@ export const normalizeInsights = (input: unknown): LearningInsights => {
     ? [...new Set(raw.masteredWordIds.filter((entry): entry is string => typeof entry === "string" && entry.length > 0))]
     : [];
   const city = raw.city === undefined ? undefined : normalizeCity(raw.city);
-  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}) };
+  const frozenDays = Array.isArray(raw.frozenDays) ? [...new Set(raw.frozenDays.filter((entry): entry is string => typeof entry === "string" && DATE_KEY_PATTERN.test(entry)))].sort() : [];
+  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}), ...(frozenDays.length ? { frozenDays } : {}) };
 };
 
 export const normalizeProgressSnapshot = (input: unknown): CloudProgressSnapshot => {
@@ -192,6 +193,7 @@ const mergeInsights = (primary: LearningInsights, secondary: LearningInsights): 
     learnedWordsByTopic,
     masteredWordIds: [...new Set([...primary.masteredWordIds, ...secondary.masteredWordIds])],
     ...(city ? { city } : {}),
+    ...(primary.frozenDays?.length || secondary.frozenDays?.length ? { frozenDays: [...new Set([...(primary.frozenDays ?? []), ...(secondary.frozenDays ?? [])])].sort() } : {}),
   };
 };
 

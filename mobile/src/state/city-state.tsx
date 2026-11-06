@@ -1,6 +1,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, type ReactNode } from "react";
 import {
+  addPurchasedCoins,
   BUILDINGS,
+  buyDecoration,
   claimStreakChest,
   completeQuest,
   EMPTY_CITY,
@@ -17,7 +19,10 @@ import {
   type CityState,
   type Quest,
 } from "@/app/lib/city";
+import { REFILL_COIN_COST } from "@/app/lib/lives";
+import { DECORATIONS } from "@/app/lib/premium-benefits";
 import { celebrate } from "~/lib/celebrations";
+import { livesActions } from "~/lib/lives-store";
 import { getDayActivity, updateDayActivity, useDayActivity } from "~/lib/day-activity";
 import { syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useAppState } from "~/state/app-state";
@@ -32,6 +37,12 @@ interface CityContextValue {
   chestAvailable: boolean;
   upgrade: (buildingId: string) => void;
   claimChest: () => void;
+  /** Premium: buys a decoration with coins. */
+  buyDecorationWithCoins: (decorationId: string) => boolean;
+  /** Spends coins for a full heart refill. */
+  refillLivesWithCoins: () => boolean;
+  /** Grants purchased coins (after a store purchase). */
+  grantPurchasedCoins: (amount: number) => void;
   /** Called by the learning screens. */
   recordCard: (learnedDelta: number) => void;
   recordExercise: (correct: boolean) => void;
@@ -125,6 +136,21 @@ export function CityProvider({ children }: { children: ReactNode }) {
       setCity((previous) => claimStreakChest(previous, dateKey));
       push({ kind: "streak-chest", coins: STREAK_CHEST_REWARD });
     },
+    buyDecorationWithCoins: (decorationId) => {
+      const next = buyDecoration(city, decorationId, stats);
+      if (next === city) return false;
+      const decoration = DECORATIONS.find((entry) => entry.id === decorationId);
+      setCity(() => next);
+      if (decoration) push({ kind: "building", name: decoration.name, icon: decoration.icon, level: 1 });
+      return true;
+    },
+    refillLivesWithCoins: () => {
+      if (getCoinsAvailable(stats, city) < REFILL_COIN_COST) return false;
+      setCity((previous) => ({ ...previous, coinsSpent: previous.coinsSpent + REFILL_COIN_COST }));
+      livesActions.refill();
+      return true;
+    },
+    grantPurchasedCoins: (amount) => setCity((previous) => addPurchasedCoins(previous, amount)),
     recordCard: (learnedDelta) => updateDayActivity(dateKey, (previous) => ({ ...previous, cards: previous.cards + 1, newWords: previous.newWords + Math.max(0, learnedDelta) })),
     recordExercise: (correct) => updateDayActivity(dateKey, (previous) => ({ ...previous, correctExercises: previous.correctExercises + (correct ? 1 : 0) })),
   }), [chestAvailable, city, dateKey, insights, push, quests, setCity, stats]);

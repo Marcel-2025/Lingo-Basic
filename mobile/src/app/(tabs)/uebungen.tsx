@@ -1,12 +1,15 @@
+import { router } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { ANSWER_LOCK_MS, createQuestion, type Question } from "@/app/lib/exercises";
+import { formatCountdown, MAX_LIVES, REFILL_COIN_COST } from "@/app/lib/lives";
 import { findTopicForWord } from "@/app/lib/pack-normalization";
 import { isWordLearned, recordLearningInInsights } from "@/app/lib/learning-history";
 import type { LanguagePack, VocabItem } from "@/app/lib/types";
-import { IconButton, Label, useScreenColors } from "~/components/ui";
+import { GradientButton, IconButton, Label, SoftButton, useScreenColors } from "~/components/ui";
 import { playAnswerTone, speak, vibrate } from "~/lib/feedback";
 import { useLearningPrefs } from "~/lib/learning-prefs";
+import { livesActions, useLives } from "~/lib/lives-store";
 import { useResponsive } from "~/lib/responsive";
 import { WORD_IMAGES } from "~/lib/word-images";
 import { useAppState } from "~/state/app-state";
@@ -29,8 +32,10 @@ export default function ExercisesScreen() {
 }
 
 function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: LanguagePack }) {
-  const { insights, settings, updateInsights, awardAnswer, todayKey } = useAppState();
-  const { recordExercise } = useCity();
+  const { insights, settings, updateInsights, awardAnswer, todayKey, isPremium } = useAppState();
+  const { recordExercise, refillLivesWithCoins, coins } = useCity();
+  const { lives, extra, msUntilNext } = useLives();
+  const outOfLives = !isPremium && lives === 0 && extra === 0;
   const colors = useScreenColors();
   const { isWide, isTablet } = useResponsive();
   const [prefs] = useLearningPrefs();
@@ -59,9 +64,10 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   };
 
   const choose = (option: string) => {
-    if (!question || isLocked) return;
+    if (!question || isLocked || outOfLives) return;
     const correct = option === question.word.x;
     setSelected(option);
+    if (!correct) livesActions.lose(isPremium);
     onAnswer(question.word, correct);
     setHistory((previous) => [{ key: Date.now(), word: question.word, correct }, ...previous].slice(0, 12));
     const nextStreak = correct ? streak + 1 : 0;
@@ -91,6 +97,28 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
     return { box: "border-transparent bg-white/70", text: "text-gray-500" };
   };
 
+  const hearts = (
+    <View className="flex-row items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? "Unendlich Leben" : `${lives} von ${MAX_LIVES} Leben${extra ? `, ${extra} extra` : ""}`}>
+      <View className="flex-row items-center gap-1">
+        {isPremium ? <Text className="text-xl">❤️</Text> : Array.from({ length: MAX_LIVES }, (_, index) => <Text key={index} className="text-xl" style={index >= lives ? { opacity: 0.25 } : null}>❤️</Text>)}
+        {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900">∞ Premium</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
+      </View>
+      {!isPremium && lives < MAX_LIVES ? <Text className="text-xs font-semibold text-gray-500">nächstes in {formatCountdown(msUntilNext)}</Text> : null}
+      {!isPremium ? <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="rounded-full bg-indigo-50 px-2 py-1 active:opacity-70"><Text className="text-xs font-bold text-indigo-700">💎</Text></Pressable> : null}
+    </View>
+  );
+  const outOfLivesCard = (
+    <View className="w-full items-center rounded-3xl bg-white p-6 shadow-sm" style={{ maxWidth: 448 }}>
+      <Text className="text-5xl">💔</Text>
+      <Text className="mt-2 text-xl font-black text-gray-900">Keine Leben mehr</Text>
+      <Text className="mt-1 text-center text-sm text-gray-600">Das nächste Herz kommt in {formatCountdown(msUntilNext)}. Lernkarten kannst du immer weiter üben – die kosten nichts.</Text>
+      <View className="mt-4 w-full gap-2">
+        <SoftButton label={`🪙 Auffüllen für ${REFILL_COIN_COST} Münzen (du hast ${coins})`} disabled={coins < REFILL_COIN_COST} onPress={() => void refillLivesWithCoins()} />
+        <GradientButton label="💎 Premium: unendlich Leben" onPress={() => router.push("/premium")} />
+        <SoftButton label="Zu den Lernkarten" onPress={() => router.navigate("/")} />
+      </View>
+    </View>
+  );
   const stats = (
     <View className="flex-row gap-3">
       <MiniStat label="Serie" value={`🔥 ${streak}`} />
@@ -155,8 +183,9 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   if (isWide) {
     return (
       <View className={`flex-1 flex-row ${colors.screen}`}>
-        <ScrollView className="flex-1" contentContainerClassName="items-center p-6 pt-10 pb-10">{quiz}</ScrollView>
+        <ScrollView className="flex-1" contentContainerClassName="items-center p-6 pt-10 pb-10">{outOfLives ? outOfLivesCard : quiz}</ScrollView>
         <ScrollView style={{ width: 320, flexGrow: 0 }} contentContainerClassName="gap-4 p-4 pb-10">
+          {hearts}
           {stats}
           {historyList}
         </ScrollView>
@@ -166,8 +195,8 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
 
   return (
     <ScrollView className={`flex-1 ${colors.screen}`} contentContainerClassName="items-center p-4 pt-6 pb-10">
-      <View className="mb-6 w-full self-center" style={{ maxWidth: isTablet ? 640 : 448 }}>{stats}</View>
-      {quiz}
+      <View className="mb-6 w-full gap-3 self-center" style={{ maxWidth: isTablet ? 640 : 448 }}>{hearts}{stats}</View>
+      {outOfLives ? outOfLivesCard : quiz}
       {isTablet ? <View className="mt-8 w-full self-center" style={{ maxWidth: 640 }}>{historyList}</View> : null}
     </ScrollView>
   );

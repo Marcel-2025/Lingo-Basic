@@ -1,8 +1,10 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { DEFAULT_INSIGHTS, DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { mergeProgressSnapshots, normalizeInsights, normalizeProgressSnapshot, normalizeSettings, normalizeStats } from "@/app/lib/progress";
+import { applyStreakFreeze, applyXpBonus } from "@/app/lib/premium-benefits";
 import { getDateKey, getLevelFromXp, reconcileStreak, recordActivity } from "@/app/lib/utils";
 import type { AppSettings, CloudProgressSnapshot, LearningInsights, UserStats } from "@/app/lib/types";
+import { usePurchases } from "~/lib/purchases";
 import { readJson, STORAGE_KEYS, writeJson } from "~/lib/storage";
 
 /**
@@ -19,6 +21,8 @@ interface AppState {
   updateStats: (updater: (previous: UserStats) => UserStats) => void;
   updateSettings: (updater: (previous: AppSettings) => AppSettings) => void;
   updateInsights: (updater: (previous: LearningInsights) => LearningInsights) => void;
+  /** Premium entitlement from the store (RevenueCat). */
+  isPremium: boolean;
   /** XP, streak and answer counters for one answered card/question. */
   awardAnswer: (xp: number, correct: boolean, learnedDelta: number, masteredDelta: number) => void;
   todayKey: () => string;
@@ -38,6 +42,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>(getDefaultSettings);
   const [insights, setInsights] = useState<LearningInsights>(DEFAULT_INSIGHTS);
   const [updatedAt, setUpdatedAt] = useState(0);
+  const { isPremium } = usePurchases();
 
   // Load local progress. Every value is normalized, so corrupt storage falls back to defaults.
   useEffect(() => {
@@ -82,10 +87,25 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   }, [markChanged]);
 
   const timeZone = settings.timeZone;
+
+  // Premium streak protection: forgive a single missed day (twice per month), checked on load and each new day.
+  // Done as a derived "pending fix" that is applied in the next tick, not synchronously inside the effect.
+  const today = getDateKey(new Date(), timeZone);
+  const freeze = isLoaded && isPremium ? applyStreakFreeze(stats, insights.frozenDays ?? [], today, isPremium) : null;
+  useEffect(() => {
+    if (!freeze?.used) return;
+    const id = setTimeout(() => {
+      setStats(freeze.stats);
+      setInsights((previous) => ({ ...previous, frozenDays: freeze.frozenDays }));
+      setUpdatedAt(Date.now());
+    }, 0);
+    return () => clearTimeout(id);
+  }, [freeze]);
+
   const awardAnswer = useCallback((xp: number, correct: boolean, learnedDelta: number, masteredDelta: number) => {
     updateStats((previous) => {
       const active = recordActivity(previous, timeZone);
-      const nextXp = active.xp + xp;
+      const nextXp = active.xp + applyXpBonus(xp, isPremium);
       return {
         ...active,
         xp: nextXp,
@@ -96,7 +116,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
         totalAnswers: active.totalAnswers + 1,
       };
     });
-  }, [timeZone, updateStats]);
+  }, [isPremium, timeZone, updateStats]);
 
   const todayKey = useCallback(() => getDateKey(new Date(), timeZone), [timeZone]);
 
@@ -128,9 +148,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<AppState>(() => ({
-    isLoaded, stats, settings, insights,
+    isLoaded, stats, settings, insights, isPremium,
     updateStats, updateSettings, updateInsights, awardAnswer, todayKey, exportSnapshot, importSnapshot, resetAll,
-  }), [awardAnswer, exportSnapshot, importSnapshot, insights, isLoaded, resetAll, settings, stats, todayKey, updateInsights, updateSettings, updateStats]);
+  }), [awardAnswer, exportSnapshot, importSnapshot, insights, isLoaded, isPremium, resetAll, settings, stats, todayKey, updateInsights, updateSettings, updateStats]);
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;
 }

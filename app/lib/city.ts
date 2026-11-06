@@ -1,3 +1,4 @@
+import { DECORATIONS } from "@/app/lib/premium-benefits";
 import type { LearningInsights, UserStats } from "@/app/lib/types";
 
 /**
@@ -15,9 +16,13 @@ export interface CityState {
   questsDone: Record<string, string[]>;
   /** Date key → claimed daily streak chest. */
   chestsClaimed: string[];
+  /** Premium decorations bought with coins. */
+  decorations: string[];
+  /** Coins from purchased coin packs (real money) – added to the earned coins. */
+  coinsPurchased: number;
 }
 
-export const EMPTY_CITY: CityState = { buildings: {}, coinsSpent: 0, questsDone: {}, chestsClaimed: [] };
+export const EMPTY_CITY: CityState = { buildings: {}, coinsSpent: 0, questsDone: {}, chestsClaimed: [], decorations: [], coinsPurchased: 0 };
 
 export const MAX_BUILDING_LEVEL = 3;
 
@@ -107,7 +112,7 @@ export const getCoinsEarned = (stats: UserStats, city: CityState) => {
     return sum + ids.reduce((inner, id) => inner + (quests.find((quest) => quest.id === id)?.reward ?? 0), 0);
   }, 0);
   const chestCoins = city.chestsClaimed.length * STREAK_CHEST_REWARD;
-  return Math.floor(stats.xp / 5) + stats.learnedWords * 3 + questCoins + chestCoins;
+  return Math.floor(stats.xp / 5) + stats.learnedWords * 3 + questCoins + chestCoins + city.coinsPurchased;
 };
 
 export const STREAK_CHEST_REWARD = 20;
@@ -152,6 +157,14 @@ export const completeQuest = (city: CityState, dateKey: string, questId: string)
   if (done.includes(questId)) return city;
   return { ...city, questsDone: { ...city.questsDone, [dateKey]: [...done, questId] } };
 };
+
+export const buyDecoration = (city: CityState, decorationId: string, stats: UserStats): CityState => {
+  const decoration = DECORATIONS.find((entry) => entry.id === decorationId);
+  if (!decoration || city.decorations.includes(decorationId) || getCoinsAvailable(stats, city) < decoration.cost) return city;
+  return { ...city, decorations: [...city.decorations, decorationId], coinsSpent: city.coinsSpent + decoration.cost };
+};
+
+export const addPurchasedCoins = (city: CityState, amount: number): CityState => ({ ...city, coinsPurchased: city.coinsPurchased + Math.max(0, Math.floor(amount)) });
 
 export const claimStreakChest = (city: CityState, dateKey: string): CityState =>
   city.chestsClaimed.includes(dateKey) ? city : { ...city, chestsClaimed: [...city.chestsClaimed, dateKey] };
@@ -200,7 +213,16 @@ export const normalizeCity = (input: unknown): CityState => {
   );
   const coinsSpent = Number(raw.coinsSpent);
   const chestsClaimed = Array.isArray(raw.chestsClaimed) ? [...new Set(raw.chestsClaimed.filter((entry): entry is string => typeof entry === "string" && /^\d{4}-\d{2}-\d{2}$/.test(entry)))] : [];
-  return { buildings, coinsSpent: Number.isFinite(coinsSpent) && coinsSpent > 0 ? Math.floor(coinsSpent) : 0, questsDone, chestsClaimed };
+  const decorations = Array.isArray(raw.decorations) ? [...new Set(raw.decorations.filter((entry): entry is string => typeof entry === "string" && DECORATIONS.some((d) => d.id === entry)))] : [];
+  const coinsPurchased = Number(raw.coinsPurchased);
+  return {
+    buildings,
+    coinsSpent: Number.isFinite(coinsSpent) && coinsSpent > 0 ? Math.floor(coinsSpent) : 0,
+    questsDone,
+    chestsClaimed,
+    decorations,
+    coinsPurchased: Number.isFinite(coinsPurchased) && coinsPurchased > 0 ? Math.floor(coinsPurchased) : 0,
+  };
 };
 
 /** Union of achievements: higher building level wins, quests/chests are unioned, spent coins follow the buildings. */
@@ -210,7 +232,9 @@ export const mergeCity = (a: CityState, b: CityState): CityState => {
     const level = Math.max(a.buildings[building.id] ?? 0, b.buildings[building.id] ?? 0);
     if (level > 0) buildings[building.id] = level;
   }
-  const spentForBuildings = BUILDINGS.reduce((sum, building) => sum + building.cost.slice(0, buildings[building.id] ?? 0).reduce((inner, cost) => inner + cost, 0), 0);
+  const decorations = [...new Set([...a.decorations, ...b.decorations])];
+  const spentForBuildings = BUILDINGS.reduce((sum, building) => sum + building.cost.slice(0, buildings[building.id] ?? 0).reduce((inner, cost) => inner + cost, 0), 0)
+    + decorations.reduce((sum, id) => sum + (DECORATIONS.find((d) => d.id === id)?.cost ?? 0), 0);
   const dateKeys = new Set([...Object.keys(a.questsDone), ...Object.keys(b.questsDone)]);
   const questsDone = Object.fromEntries([...dateKeys].map((dateKey) => [dateKey, [...new Set([...(a.questsDone[dateKey] ?? []), ...(b.questsDone[dateKey] ?? [])])]]));
   return {
@@ -218,5 +242,7 @@ export const mergeCity = (a: CityState, b: CityState): CityState => {
     coinsSpent: Math.max(spentForBuildings, Math.min(a.coinsSpent, b.coinsSpent)),
     questsDone,
     chestsClaimed: [...new Set([...a.chestsClaimed, ...b.chestsClaimed])].sort(),
+    decorations,
+    coinsPurchased: Math.max(a.coinsPurchased, b.coinsPurchased),
   };
 };

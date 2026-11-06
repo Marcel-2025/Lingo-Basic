@@ -67,6 +67,8 @@ describe("city", () => {
       coinsSpent: 0,
       questsDone: { "2026-01-01": ["q1"] },
       chestsClaimed: [],
+      decorations: [],
+      coinsPurchased: 0,
     });
     const insights = normalizeInsights({ ...DEFAULT_INSIGHTS, city: { buildings: { park: 1 }, coinsSpent: 50 } });
     expect(insights.city?.buildings.park).toBe(1);
@@ -85,5 +87,16 @@ describe("city", () => {
     expect(isCityAsleep({ ...DEFAULT_STATS, lastActiveDate: "2026-11-04" }, "2026-11-06")).toBe(true);
     expect(isCityAsleep({ ...DEFAULT_STATS, lastActiveDate: "2026-11-05" }, "2026-11-06")).toBe(false);
     expect(isCityAsleep(DEFAULT_STATS, "2026-11-06")).toBe(false);
+  });
+});
+
+describe("premium extras", () => {
+  it("buys decorations with coins only once", async () => {
+    const { buyDecoration, addPurchasedCoins } = await import("@/app/lib/city");
+    const rich = { ...EMPTY_CITY, coinsPurchased: 1000 };
+    const once = buyDecoration(rich, "fountain", stats(0, 0));
+    expect(once.decorations).toEqual(["fountain"]);
+    expect(buyDecoration(once, "fountain", stats(0, 0))).toBe(once);
+    expect(getCoinsAvailable(stats(0, 0), addPurchasedCoins(once, 500))).toBe(1000 - 150 + 500);
   });
 });

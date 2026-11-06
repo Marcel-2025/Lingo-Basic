@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withRepeat, withSequence, withSpring, withTiming } from "react-native-reanimated";
 import { MAX_BUILDING_LEVEL, type BuildingStatus } from "@/app/lib/city";
+import { DECORATIONS } from "@/app/lib/premium-benefits";
 import { Flame } from "~/components/celebration";
 import { Card, Gradient, GradientButton, Label, ProgressBar, useScreenColors } from "~/components/ui";
 import { useResponsive } from "~/lib/responsive";
@@ -45,8 +46,8 @@ function BuildingTile({ status, index, asleep, onPress, compact }: { status: Bui
 }
 
 export default function CityScreen() {
-  const { stats } = useAppState();
-  const { coins, overview, asleep, statuses, quests, chestAvailable, upgrade, claimChest } = useCity();
+  const { stats, isPremium } = useAppState();
+  const { coins, overview, asleep, statuses, quests, chestAvailable, upgrade, claimChest, city, buyDecorationWithCoins } = useCity();
   const colors = useScreenColors();
   const { isWide, isTablet, contentMaxWidth } = useResponsive();
   const readyCount = statuses.filter((status) => status.canUpgrade).length;
@@ -87,6 +88,36 @@ export default function CityScreen() {
     </Card>
   );
 
+  const decorations = (
+    <Card>
+      <View className="mb-3 flex-row items-center justify-between">
+        <Label>Stadt-Extras {isPremium ? "" : "· Premium"}</Label>
+        {!isPremium ? <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="mb-2 rounded-full bg-indigo-600 px-3 py-1 active:opacity-70"><Text className="text-xs font-bold text-white">💎 Premium holen</Text></Pressable> : null}
+      </View>
+      <View className="flex-row flex-wrap gap-2">
+        {DECORATIONS.map((decoration) => {
+          const owned = city.decorations.includes(decoration.id);
+          const affordable = coins >= decoration.cost;
+          return (
+            <Pressable
+              key={decoration.id}
+              accessibilityRole="button"
+              accessibilityLabel={`${decoration.name}${owned ? ", gebaut" : `, ${decoration.cost} Münzen`}`}
+              disabled={owned || !isPremium}
+              onPress={() => { if (!buyDecorationWithCoins(decoration.id)) return; }}
+              className={`w-[31%] items-center rounded-2xl p-3 ${owned ? "bg-emerald-100" : isPremium && affordable ? "border-2 border-amber-400 bg-white" : "bg-gray-100"} ${!isPremium ? "opacity-60" : ""}`}
+            >
+              <Text className="text-3xl">{owned ? decoration.icon : isPremium ? decoration.icon : "🔒"}</Text>
+              <Text className="mt-1 text-xs font-bold text-gray-900" numberOfLines={1}>{decoration.name}</Text>
+              <Text className="text-[10px] text-gray-500">{owned ? "gebaut" : `🪙 ${decoration.cost}`}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      {!isPremium ? <Text className="mt-3 text-xs text-gray-500">Mit Premium kaufst du Dekorationen mit deinen Münzen, bekommst +50 % XP, unendlich Leben und Streak-Schutz.</Text> : null}
+    </Card>
+  );
+
   const side = (
     <View className="gap-4">
       <Card>
@@ -121,7 +152,7 @@ export default function CityScreen() {
       <ScrollView className={`flex-1 ${colors.screen}`} contentContainerClassName="gap-6 p-6 pb-10">
         {header}
         <View className="flex-row items-start gap-6">
-          <View className="flex-[1.5]">{grid}</View>
+          <View className="flex-[1.5] gap-6">{grid}{decorations}</View>
           <View className="flex-1">{side}</View>
         </View>
       </ScrollView>
@@ -132,6 +163,7 @@ export default function CityScreen() {
       <View className="w-full gap-4 self-center" style={{ maxWidth: contentMaxWidth }}>
         {header}
         {grid}
+        {decorations}
         {side}
       </View>
     </ScrollView>

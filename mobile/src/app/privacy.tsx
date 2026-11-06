@@ -31,6 +31,9 @@ export default function PrivacyScreen() {
       <Section title="Sicherung">
         Über Settings → Deine Daten kannst du eine Sicherungsdatei erzeugen und selbst speichern oder teilen. Wohin du diese Datei legst, entscheidest allein du; wir erhalten sie nicht.
       </Section>
+      <Section title="Käufe">
+        Premium-Abos und Einmalkäufe laufen über Google Play bzw. den App Store. Zur Prüfung der Käufe nutzen wir RevenueCat (RevenueCat, Inc., USA); dabei werden eine anonyme Geräte-ID und die Kaufbelege verarbeitet, keine Namen oder Zahlungsdaten. Zahlungsdaten sieht nur dein Store-Konto.
+      </Section>
       <Section title="Erinnerungen">
         Tägliche Erinnerungen sind optional und werden nur lokal auf deinem Gerät geplant. Es werden dafür keine Daten übertragen und keine Push-Tokens gespeichert.
       </Section>

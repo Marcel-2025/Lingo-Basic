@@ -73,6 +73,29 @@ Vor dem ersten App-Store-Upload:
 - **Feiern** (`src/components/celebration.tsx`, Reanimated): Konfetti und Karte bei Level-Up, Tagesziel, Serie, Aufgabe, Gebäude, Truhe; animierte Streak-Flamme im Kopf.
 - **Erinnerungen** (`src/lib/reminders.ts`, expo-notifications, nur lokal): tägliche Nachricht zur Wunschzeit, abends Serien-Warnung, wenn heute noch nicht gelernt wurde. Einstellungen unter Settings → Tägliche Erinnerung. Android-Kanal „lernen“, Icon `assets/notification-icon.png`.
 
+## Käufe (Premium, Herzen, Münzen)
+
+Abwicklung über **RevenueCat** (`react-native-purchases`): Google Play Billing auf Android, StoreKit auf iOS. Logik in `src/lib/purchases.ts`, Regeln in `app/lib/lives.ts` und `app/lib/premium-benefits.ts` (getestet).
+
+| Produkt-ID | Typ | Vorschlag |
+| --- | --- | --- |
+| `lingopro_premium_monthly` | Abo, monatlich | 2,99 € |
+| `lingopro_premium_yearly` | Abo, jährlich | 19,99 € |
+| `lingopro_premium_lifetime` | Einmalkauf (nicht verbrauchbar) | 34,99 € |
+| `lingopro_hearts_pack` | Einmalkauf, verbrauchbar | 0,99 € – volle Herzen + 10 extra |
+| `lingopro_coins_pack` | Einmalkauf, verbrauchbar | 1,99 € – 1500 Münzen |
+
+Premium (Entitlement `premium`): unendlich Leben, +50 % XP/Münzen, Streak-Schutz (2 verpasste Tage/Monat), Stadt-Dekorationen (mit Münzen). Leben gibt es nur im Übungsmodus: 5 Herzen, alle 30 Minuten eines zurück; Lernkarten bleiben immer frei.
+
+Einrichtung:
+1. Play Console → Monetarisierung → Produkte: die fünf Produkte mit genau diesen IDs anlegen (Abos mit Basisplan, Einmalkäufe als „In-App-Produkt“); App muss mindestens einmal im internen Test hochgeladen sein.
+2. App Store Connect → In-App-Käufe: dieselben IDs (später, für iOS).
+3. RevenueCat (app.revenuecat.com): Projekt anlegen, Play-Store-App mit Service-Account-JSON verbinden, Produkte importieren, Entitlement `premium` mit den drei Premium-Produkten, Offering `default` mit allen fünf Paketen.
+4. Öffentliche SDK-Keys in `app.json` → `extra.revenueCat.android` / `.ios` eintragen (das sind Public Keys, kein Geheimnis). Ohne Keys zeigt der Shop nur einen Hinweis.
+5. Testen: Lizenztester in der Play Console eintragen, Build aus dem internen Test installieren.
+
+Play-Richtlinien: Preise/Abo-Laufzeit werden im Shop aus dem Store geladen, Kündigungshinweis und „Abo verwalten“ sind eingebaut, Käufe wiederherstellen ebenfalls.
+
 ## Inhalte und Bilder
 
 600 Wörter (A1/A2/B1 × 10 Themen × 20) in 9 Sprachen mit Beispielsätzen; Vokabeln, Lernmodus und Level werden in `content/vokabeln.csv` gepflegt (Anleitung: `content/LIESMICH.md`).
