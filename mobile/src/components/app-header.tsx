@@ -30,7 +30,7 @@ export function Wordmark({ size = 22 }: { size?: number }) {
   return (
     <View className="flex-row items-center gap-1.5">
       <Text className={`font-black ${colors.text}`} style={{ fontSize: size, letterSpacing: -0.5 }}>Lingo</Text>
-      <View className="rounded-lg bg-mint-400 px-1.5 py-0.5 shadow-sm"><Text className="font-black text-night-950" style={{ fontSize: size * 0.72 }}>Pro</Text></View>
+      <View className="rounded-lg bg-mint-400 px-1.5 py-0.5 shadow-sm dark:shadow-none"><Text className="font-black text-night-950" style={{ fontSize: size * 0.72 }}>Pro</Text></View>
     </View>
   );
 }

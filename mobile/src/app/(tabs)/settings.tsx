@@ -112,7 +112,7 @@ export default function SettingsScreen() {
           label={t("settings.appLanguage")}
           value={settings.uiLang}
           onChange={setUiLang}
-          options={(Object.keys(SUPPORTED_LANGUAGES) as LanguageCode[]).map((code) => ({ value: code, label: `${t(`languages.${code}`)} · ${SUPPORTED_LANGUAGES[code].label}` }))}
+          options={(Object.keys(SUPPORTED_LANGUAGES) as LanguageCode[]).map((code) => ({ value: code, label: t(`languages.${code}`) === SUPPORTED_LANGUAGES[code].label ? SUPPORTED_LANGUAGES[code].label : `${t(`languages.${code}`)} · ${SUPPORTED_LANGUAGES[code].label}` }))}
         />
         <Text className="mt-2 text-xs text-gray-600 dark:text-blue-100/85">{t("settings.appLanguageHint")}</Text>
       </View>

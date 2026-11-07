@@ -46,7 +46,7 @@ function ModeSwitch({ mode, onChange }: { mode: "path" | "free"; onChange: (mode
     { value: "free", label: `🃏 ${t("path.modeFree")}` },
   ];
   return (
-    <View className="mb-4 flex-row rounded-2xl bg-white/80 p-1 shadow-sm dark:border dark:border-white/10 dark:bg-black/30" accessibilityRole="tablist">
+    <View className="mb-4 flex-row rounded-2xl bg-white/80 p-1 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30" accessibilityRole="tablist">
       {options.map((option) => {
         const active = mode === option.value;
         return (
@@ -185,7 +185,7 @@ function Flashcards({ pack, header }: { pack: LanguagePack; header: React.ReactN
         accessibilityRole="button"
         accessibilityLabel={isFlipped ? t("learn.cardShown", { front: front.text, back: back.text }) : t("learn.cardHidden", { front: front.text })}
         onPress={() => setIsFlipped(true)}
-        className={`items-center justify-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-xl ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200 dark:border-mint-400/50" : ""}`}
+        className={`items-center justify-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-xl dark:shadow-none ${isTablet ? "min-h-[240px]" : "min-h-[300px]"} ${isFlipped ? "border-2 border-indigo-200 dark:border-mint-400/50" : ""}`}
       >
         {image ? <Image source={image} style={{ width: isTablet ? 112 : 128, height: isTablet ? 112 : 128, borderRadius: 16, marginBottom: 16 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: card.de })} /> : null}
         <Text className="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-blue-200/60">{front.label}</Text>
@@ -225,7 +225,7 @@ function Flashcards({ pack, header }: { pack: LanguagePack; header: React.ReactN
           <GradientButton className="flex-1" label={t("learn.known")} onPress={() => answer(true)} />
         </Appear>
       ) : (
-        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
+        <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 py-4 shadow-sm dark:shadow-none active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
       )}
     </View>
   ) : (

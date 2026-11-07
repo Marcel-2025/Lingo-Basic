@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { useEffect, useMemo, useRef } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
-import Animated, { FadeInDown, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from "react-native-reanimated";
+import Animated, { Easing, FadeInDown, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from "react-native-reanimated";
 import { buildPath, getLessonStars, getPathProgress, type LessonStatus, type PathLesson, type PathSection } from "@/app/lib/lessons";
 import type { LanguagePack } from "@/app/lib/types";
 import { Appear, Gradient, GradientButton, ProgressBar } from "~/components/ui";
@@ -40,7 +40,7 @@ export function LearningPath({ pack, header }: { pack: LanguagePack; header?: Re
     <ScrollView ref={scrollRef} className="flex-1" contentContainerClassName="p-4 pb-16">
       <View className="w-full self-center" style={{ maxWidth: contentMaxWidth }}>
         {header}
-        <Appear entering={FadeInDown.duration(350)} className="mb-5 rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-black/30">
+        <Appear entering={FadeInDown.duration(350)} className="mb-5 rounded-3xl bg-white p-5 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30">
           <View className="flex-row items-center justify-between">
             <Text className="text-lg font-black text-gray-900 dark:text-white">{t("path.title", { level: pack.level })}</Text>
             <Text className="text-sm font-bold text-gray-500 dark:text-blue-200/80">{t("path.lessonsDone", { done: progress.done, total: progress.total })}</Text>
@@ -161,7 +161,7 @@ function LessonNode({ lesson, status, stars, onPress, label }: { lesson: PathLes
   const t = useT();
   const pulse = useSharedValue(1);
   useEffect(() => {
-    pulse.value = status === "current" ? withRepeat(withSequence(withTiming(1.08, { duration: 700 }), withTiming(1, { duration: 700 })), -1, true) : withTiming(1);
+    pulse.value = status === "current" ? withRepeat(withSequence(withTiming(1.03, { duration: 1400, easing: Easing.inOut(Easing.sin) }), withTiming(1, { duration: 1400, easing: Easing.inOut(Easing.sin) })), -1, true) : withTiming(1);
   }, [pulse, status]);
   const pulseStyle = useAnimatedStyle(() => ({ transform: [{ scale: pulse.value }] }));
   const icon = status === "locked" ? "🔒" : status === "done" ? (stars >= 3 ? "👑" : "✓") : "★";
@@ -170,7 +170,7 @@ function LessonNode({ lesson, status, stars, onPress, label }: { lesson: PathLes
   return (
     <View className="items-center">
       {status === "current" ? (
-        <View className="mb-2 rounded-xl bg-white px-3 py-1 shadow-sm dark:bg-white/15">
+        <View className="mb-2 rounded-xl bg-white px-3 py-1 shadow-sm dark:shadow-none dark:bg-white/15">
           <Text className="text-xs font-black uppercase tracking-wider text-indigo-700 dark:text-mint-300">{t("path.startBubble")}</Text>
         </View>
       ) : null}

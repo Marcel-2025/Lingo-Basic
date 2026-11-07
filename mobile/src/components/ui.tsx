@@ -19,7 +19,7 @@ export function Gradient({ children, className, style }: { children?: ReactNode;
 
 export function GradientButton({ label, onPress, disabled, className }: { label: string; onPress: () => void; disabled?: boolean; className?: string }) {
   return (
-    <Pressable accessibilityRole="button" onPress={onPress} disabled={disabled} className={`overflow-hidden rounded-2xl shadow-lg active:scale-[0.98] active:opacity-90 ${disabled ? "opacity-60" : ""} ${className ?? ""}`}>
+    <Pressable accessibilityRole="button" onPress={onPress} disabled={disabled} className={`overflow-hidden rounded-2xl shadow-lg dark:shadow-none active:scale-[0.98] active:opacity-90 ${disabled ? "opacity-60" : ""} ${className ?? ""}`}>
       <Gradient className="items-center px-6 py-4">
         <Text className="text-base font-extrabold text-night-950">{label}</Text>
       </Gradient>
@@ -87,14 +87,14 @@ export function Appear({ entering, exiting, className, style, children, accessib
 /** Glass card: white by day, translucent deep blue with a soft rim at night. Slides in when it appears. */
 export function Card({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   return (
-    <Appear entering={FadeInDown.delay(delay).duration(420).springify().damping(18)} className={`rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-black/30 ${className ?? ""}`}>
+    <Appear entering={FadeInDown.delay(delay).duration(320)} className={`rounded-3xl bg-white p-5 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30 ${className ?? ""}`}>
       {children}
     </Appear>
   );
 }
 
 /** Tailwind classes shared by all card-like surfaces (used where a plain View is needed). */
-export const CARD = "rounded-3xl bg-white shadow-sm dark:border dark:border-white/10 dark:bg-black/30";
+export const CARD = "rounded-3xl bg-white shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30";
 
 export function Label({ children }: { children: ReactNode }) {
   return <Text className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-blue-200/80">{children}</Text>;

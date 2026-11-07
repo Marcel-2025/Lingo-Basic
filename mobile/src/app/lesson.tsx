@@ -161,7 +161,7 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
       </View>
 
       {confirmExit ? (
-        <Appear entering={FadeInDown.duration(200)} className="mx-4 mt-3 rounded-2xl bg-white p-4 shadow-sm dark:border dark:border-white/10 dark:bg-black/40">
+        <Appear entering={FadeInDown.duration(200)} className="mx-4 mt-3 rounded-2xl bg-white p-4 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/40">
           <Text className="text-base font-bold text-gray-900 dark:text-white">{t("lesson.exitTitle")}</Text>
           <Text className="mt-1 text-sm text-gray-600 dark:text-blue-100/85">{t("lesson.exitText")}</Text>
           <View className="mt-3 flex-row gap-3">
@@ -206,7 +206,7 @@ function LearnCard({ step, pack, baseLang, showImage, slow }: { step: Extract<Le
   const t = useT();
   const image = showImage ? WORD_IMAGES[step.word.id] : undefined;
   return (
-    <Appear entering={ZoomIn.springify().damping(14)} className="items-center rounded-3xl bg-white p-6 shadow-xl dark:border dark:border-white/10 dark:bg-black/30">
+    <Appear entering={FadeIn.duration(260)} className="items-center rounded-3xl bg-white p-6 shadow-xl dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30">
       <View className="mb-3 rounded-full bg-amber-100 px-3 py-1 dark:bg-amber-400/20"><Text className="text-xs font-black uppercase tracking-widest text-amber-700 dark:text-amber-200">{t("lesson.newWord")}</Text></View>
       {image ? <Image source={image} style={{ width: 132, height: 132, borderRadius: 18, marginBottom: 14 }} accessibilityIgnoresInvertColors accessibilityLabel={t("learn.imageFor", { word: step.word.de })} /> : null}
       <View className="flex-row items-center gap-2">
@@ -319,7 +319,7 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
   const barStyle = useAnimatedStyle(() => ({ width: `${Math.max(3, Math.min(1, bar.value) * 100)}%` }));
   const trophy = useSharedValue(0);
   useEffect(() => {
-    trophy.value = withSpring(1, { damping: 8, stiffness: 140 });
+    trophy.value = withSpring(1, { damping: 14, stiffness: 120 });
   }, [trophy]);
   const trophyStyle = useAnimatedStyle(() => ({ transform: [{ scale: trophy.value }, { rotate: `${(1 - trophy.value) * -30}deg` }] }));
 
@@ -334,7 +334,7 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
 
           <View className="my-5 flex-row gap-2">
             {[1, 2, 3].map((value) => (
-              <Animated.Text key={value} entering={ZoomIn.delay(350 + value * 220).springify().damping(9)} style={{ fontSize: 54, opacity: value <= result.stars ? 1 : 0.2 }}>⭐</Animated.Text>
+              <Animated.Text key={value} entering={ZoomIn.delay(350 + value * 220).springify().damping(16).stiffness(140)} style={{ fontSize: 54, opacity: value <= result.stars ? 1 : 0.2 }}>⭐</Animated.Text>
             ))}
           </View>
           <Appear entering={FadeIn.delay(1100)}><Text className="mb-5 text-center text-lg font-bold text-indigo-700 dark:text-mint-300">{t(cheer)}</Text></Appear>
@@ -342,14 +342,14 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
           <Appear entering={FadeInUp.delay(500)} style={{ alignSelf: "stretch" }} className="mb-4 w-full flex-row gap-3">
             <ResultTile icon="⚡" value={`+${shownXp}`} label={t("lesson.xp")} />
             <ResultTile icon="🎯" value={`${accuracy}%`} label={t("lesson.accuracy")} />
-            <View className="flex-1 items-center rounded-2xl bg-white px-2 py-3 shadow-sm dark:border dark:border-white/10 dark:bg-black/30">
+            <View className="flex-1 items-center rounded-2xl bg-white px-2 py-3 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30">
               {stats.streak > 0 ? <Flame size={28} /> : <Text style={{ fontSize: 28 }}>🔥</Text>}
               <Text className="text-xl font-black text-gray-900 dark:text-white">{stats.streak}</Text>
               <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-blue-200/75">{t("lesson.streak")}</Text>
             </View>
           </Appear>
 
-          <Appear entering={FadeInUp.delay(650)} style={{ alignSelf: "stretch" }} className="mb-3 w-full rounded-2xl bg-white p-4 shadow-sm dark:border dark:border-white/10 dark:bg-black/30">
+          <Appear entering={FadeInUp.delay(650)} style={{ alignSelf: "stretch" }} className="mb-3 w-full rounded-2xl bg-white p-4 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30">
             <View className="mb-2 flex-row justify-between">
               <Text className="text-sm font-black text-gray-900 dark:text-white">{t("lesson.level", { n: after.level })}</Text>
               <Text className="text-sm font-bold text-gray-500 dark:text-blue-200/75">{stats.xp} / {levelBounds(after.level).to} XP</Text>
@@ -360,10 +360,10 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
           </Appear>
 
           {levelUp ? (
-            <Appear entering={ZoomIn.delay(1500).springify()} className="mb-3 rounded-full bg-amber-300 px-4 py-2"><Text className="text-base font-black text-night-950">⭐ {t("lesson.levelUp", { n: after.level })}</Text></Appear>
+            <Appear entering={ZoomIn.delay(1500).springify().damping(18)} className="mb-3 rounded-full bg-amber-300 px-4 py-2"><Text className="text-base font-black text-night-950">⭐ {t("lesson.levelUp", { n: after.level })}</Text></Appear>
           ) : null}
           {streakUp ? (
-            <Appear entering={ZoomIn.delay(1200).springify()} className="mb-3 rounded-full bg-orange-400 px-4 py-2"><Text className="text-base font-black text-night-950">🔥 {t("lesson.streakUp", { n: stats.streak })}</Text></Appear>
+            <Appear entering={ZoomIn.delay(1200).springify().damping(18)} className="mb-3 rounded-full bg-orange-400 px-4 py-2"><Text className="text-base font-black text-night-950">🔥 {t("lesson.streakUp", { n: stats.streak })}</Text></Appear>
           ) : null}
         </View>
       </ScrollView>
@@ -376,7 +376,7 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
 
 function ResultTile({ icon, value, label }: { icon: string; value: string; label: string }) {
   return (
-    <View className="flex-1 items-center rounded-2xl bg-white px-2 py-3 shadow-sm dark:border dark:border-white/10 dark:bg-black/30">
+    <View className="flex-1 items-center rounded-2xl bg-white px-2 py-3 shadow-sm dark:shadow-none dark:border dark:border-white/10 dark:bg-black/30">
       <Text style={{ fontSize: 26, lineHeight: 34 }}>{icon}</Text>
       <Text className="text-xl font-black text-gray-900 dark:text-white">{value}</Text>
       <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-blue-200/75">{label}</Text>

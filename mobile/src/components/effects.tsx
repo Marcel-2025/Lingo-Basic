@@ -59,7 +59,7 @@ export function Pop({ trigger, children }: { trigger: number; children: React.Re
   const scale = useSharedValue(1);
   useEffect(() => {
     if (!trigger) return;
-    scale.value = withSequence(withTiming(1.08, { duration: 90 }), withSpring(1, { damping: 10, stiffness: 220 }));
+    scale.value = withSequence(withTiming(1.04, { duration: 120 }), withTiming(1, { duration: 180 }));
   }, [scale, trigger]);
   const style = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return <Animated.View style={style}>{children}</Animated.View>;

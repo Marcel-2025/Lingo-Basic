@@ -45,7 +45,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
           const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
           if (!isActive && !event.defaultPrevented) navigation.navigate(route.name);
         }}
-        className={`rounded-2xl ${isActive ? `${isWide ? "translate-x-1" : "-translate-y-2"} overflow-hidden shadow-lg` : ""}`}
+        className={`rounded-2xl ${isActive ? `${isWide ? "translate-x-1" : "-translate-y-2"} overflow-hidden shadow-lg dark:shadow-none` : ""}`}
       >
         {isActive ? <Gradient>{content}</Gradient> : content}
       </Pressable>
@@ -54,14 +54,14 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
 
   if (isWide) {
     return (
-      <View className={`${colors.nav} items-center gap-4 px-3 shadow-lg`} style={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 16, paddingLeft: insets.left + 12 }} accessibilityRole="tablist">
+      <View className={`${colors.nav} items-center gap-4 px-3 shadow-lg dark:shadow-none`} style={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 16, paddingLeft: insets.left + 12 }} accessibilityRole="tablist">
         <Image source={require("../../../assets/icon.png")} style={{ width: 48, height: 48, borderRadius: 16, marginBottom: 8 }} accessibilityLabel="Lingo Pro" />
         {items}
       </View>
     );
   }
   return (
-    <View className={`${colors.nav} px-4 pt-3 shadow-lg`} style={{ paddingBottom: Math.max(insets.bottom, 12) }} accessibilityRole="tablist">
+    <View className={`${colors.nav} px-4 pt-3 shadow-lg dark:shadow-none`} style={{ paddingBottom: Math.max(insets.bottom, 12) }} accessibilityRole="tablist">
       <View className={`flex-row ${isTablet ? "justify-center gap-10" : "justify-around"}`}>{items}</View>
     </View>
   );

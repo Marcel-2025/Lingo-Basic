@@ -99,25 +99,33 @@ export function CityProvider({ children }: { children: ReactNode }) {
 
   const goalReached = (insights.learnedDays[dateKey] ?? 0) >= Math.max(1, settings.dailyGoal);
   useEffect(() => {
+    if (!isLoaded) return;
     if (goalReached && !getDayActivity(dateKey).goalReached) {
       updateDayActivity(dateKey, (previous) => ({ ...previous, goalReached: true }));
       push({ kind: "goal", goal: settings.dailyGoal });
     }
-  }, [dateKey, goalReached, push, settings.dailyGoal]);
+  }, [dateKey, goalReached, isLoaded, push, settings.dailyGoal]);
 
   // Quests complete themselves as soon as the activity counters reach the target.
   const quests = useMemo(() => {
     const done = city.questsDone[dateKey] ?? [];
     return getDailyQuests(dateKey).map((quest) => ({ ...quest, progress: getQuestProgress(quest, activity), done: done.includes(quest.id) }));
   }, [activity, city.questsDone, dateKey]);
+  // Only after the saved progress is loaded (otherwise every app start re-celebrates today's finished quests),
+  // and each quest at most once per day even if the effect runs again before the state update lands.
+  const celebratedQuests = useRef(new Set<string>());
   useEffect(() => {
+    if (!isLoaded) return;
     for (const quest of quests) {
-      if (!quest.done && quest.progress >= quest.target) {
+      const key = `${dateKey}:${quest.id}`;
+      if (quest.done) celebratedQuests.current.add(key);
+      if (!quest.done && quest.progress >= quest.target && !celebratedQuests.current.has(key)) {
+        celebratedQuests.current.add(key);
         setCity((previous) => completeQuest(previous, dateKey, quest.id));
         push({ kind: "quest", title: t(`quests.${quest.id}` as TranslationKey), coins: quest.reward });
       }
     }
-  }, [dateKey, push, quests, setCity]);
+  }, [dateKey, isLoaded, push, quests, setCity]);
 
   // Keep the local reminders in sync with today's learning state (skips the evening nudge once you learned).
   const reminders = useReminderSettings();

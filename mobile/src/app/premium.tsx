@@ -40,12 +40,12 @@ export default function PremiumScreen() {
 
   return (
     <ScrollView className="flex-1" contentContainerStyle={{ paddingTop: insets.top + 8, paddingBottom: insets.bottom + 24, width: "100%", maxWidth: 560, alignSelf: "center" }} contentContainerClassName="gap-4 p-5">
-      <View className="rounded-3xl border-2 border-mint-400/60 bg-white p-6 shadow-sm dark:bg-black/30">
+      <View className="rounded-3xl border-2 border-mint-400/60 bg-white p-6 shadow-sm dark:shadow-none dark:bg-black/30">
         <Text className="text-3xl font-black text-gray-900 dark:text-white">💎 {isPremium ? t("premium.have") : t("premium.title")}</Text>
         <Text className="mt-1 text-base text-gray-600 dark:text-blue-100/85">{isPremium ? (premiumKind === "lifetime" ? t("premium.lifetime") : t("premium.subscribed")) : t("premium.pitch")}</Text>
       </View>
 
-      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-5 shadow-sm">
+      <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-5 shadow-sm dark:shadow-none">
         {PREMIUM_BENEFITS.map((benefit, index) => (
           <View key={benefit.title} className="mb-3 flex-row items-start gap-3">
             <Text className="text-2xl">{benefit.icon}</Text>
@@ -63,7 +63,7 @@ export default function PremiumScreen() {
       {!isPremium && subs.length > 0 ? (
         <View className="gap-3">
           {subs.map((entry) => (
-            <Pressable key={entry.key} accessibilityRole="button" disabled={busy !== null} onPress={() => void buy(entry)} className={`flex-row items-center justify-between rounded-2xl border-2 bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm active:opacity-70 ${entry.key === "yearly" ? "border-indigo-500 dark:border-mint-400" : "border-transparent"}`}>
+            <Pressable key={entry.key} accessibilityRole="button" disabled={busy !== null} onPress={() => void buy(entry)} className={`flex-row items-center justify-between rounded-2xl border-2 bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm dark:shadow-none active:opacity-70 ${entry.key === "yearly" ? "border-indigo-500 dark:border-mint-400" : "border-transparent"}`}>
               <View>
                 <Text className="font-bold text-gray-900 dark:text-white">{title(entry)}</Text>
                 {entry.key === "yearly" ? <Text className="text-xs font-bold text-indigo-700 dark:text-mint-300">{t("premium.popular")}</Text> : null}
@@ -77,7 +77,7 @@ export default function PremiumScreen() {
       ) : null}
 
       {extras.length > 0 ? (
-        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-5 shadow-sm">
+        <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-5 shadow-sm dark:shadow-none">
           <Text className="mb-3 text-lg font-bold text-gray-900 dark:text-white">{t("premium.extras")}</Text>
           {extras.map((entry) => (
             <View key={entry.key} className="mb-2 flex-row items-center justify-between rounded-2xl bg-gray-50 dark:bg-white/5 p-3">

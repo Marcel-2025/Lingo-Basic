@@ -111,7 +111,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   };
 
   const hearts = (
-    <View className="flex-row items-center justify-between rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-4 py-3 shadow-sm" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
+    <View className="flex-row items-center justify-between rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-4 py-3 shadow-sm dark:shadow-none" accessibilityLabel={isPremium ? t("exercises.infiniteLives") : `${t("exercises.livesLabel", { lives, max: MAX_LIVES })}${extra ? t("exercises.extraLives", { n: extra }) : ""}`}>
       <View className="flex-row items-center gap-1">
         {isPremium ? <Text className="text-xl">❤️</Text> : Array.from({ length: MAX_LIVES }, (_, index) => <Text key={index} className="text-xl" style={index >= lives ? { opacity: 0.25 } : null}>❤️</Text>)}
         {isPremium ? <Text className="ml-1 text-sm font-bold text-gray-900 dark:text-white">{t("exercises.premiumInfinite")}</Text> : extra > 0 ? <Text className="ml-1 text-xs font-bold text-pink-700">+{extra}</Text> : null}
@@ -121,7 +121,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
     </View>
   );
   const outOfLivesCard = (
-    <View className="w-full items-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-sm" style={{ maxWidth: 448 }}>
+    <View className="w-full items-center rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-6 shadow-sm dark:shadow-none" style={{ maxWidth: 448 }}>
       <Text className="text-5xl">💔</Text>
       <Text className="mt-2 text-xl font-black text-gray-900 dark:text-white">{t("exercises.outOfLives")}</Text>
       <Text className="mt-1 text-center text-sm text-gray-600 dark:text-blue-100/85">{t("exercises.outOfLivesText", { time: formatCountdown(msUntilNext) })}</Text>
@@ -172,7 +172,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
               accessibilityLabel={isLocked && option === question.word.x ? t("exercises.correctAnswer", { option }) : option}
               disabled={isLocked}
               onPress={() => choose(option)}
-              className={`items-center justify-center rounded-2xl border-2 p-5 shadow-sm active:scale-95 ${isTablet ? "min-h-[84px] w-[48.5%]" : ""} ${style.box}`}
+              className={`items-center justify-center rounded-2xl border-2 p-5 shadow-sm dark:shadow-none active:scale-95 ${isTablet ? "min-h-[84px] w-[48.5%]" : ""} ${style.box}`}
             >
               <Pop trigger={isLocked && option === question.word.x ? history.length : 0}><Text className={`text-center text-lg font-semibold ${style.text}`}>{option}</Text></Pop>
             </Pressable>
@@ -184,7 +184,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
   );
 
   const historyList = (
-    <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm">
+    <View className="rounded-3xl bg-white dark:border dark:border-white/10 dark:bg-black/30 p-4 shadow-sm dark:shadow-none">
       <Label>{t("exercises.lastAnswers")}</Label>
       {history.length === 0 ? <Text className="text-sm text-gray-500 dark:text-blue-200/75">{t("exercises.noAnswers")}</Text> : null}
       {history.map((entry) => (
@@ -221,7 +221,7 @@ function MultipleChoice({ pack, fullPack }: { pack: LanguagePack; fullPack: Lang
 
 function MiniStat({ label, value }: { label: string; value: string }) {
   return (
-    <View className="flex-1 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-2 py-3 shadow-sm">
+    <View className="flex-1 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 px-2 py-3 shadow-sm dark:shadow-none">
       <Text className="text-lg font-black text-gray-900 dark:text-white">{value}</Text>
       <Text className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-blue-200/75">{label}</Text>
     </View>

@@ -119,7 +119,7 @@ export function CelebrationToast() {
   return (
     <View pointerEvents="none" style={{ position: "absolute", left: 0, right: 0, top: insets.top + 8, alignItems: "center" }}>
       <Animated.View key={`${content.title}-${content.text}`} entering={FadeInUp.springify().damping(14)} exiting={FadeOutUp.duration(200)} accessibilityLiveRegion="polite" style={{ maxWidth: 420, marginHorizontal: 16 }}>
-        <View className="flex-row items-center gap-3 rounded-2xl border border-mint-400/60 bg-[#0f1424]/95 px-4 py-3 shadow-lg">
+        <View className="flex-row items-center gap-3 rounded-2xl border border-mint-400/60 bg-[#0f1424]/95 px-4 py-3 shadow-lg dark:shadow-none">
         <Text className="text-2xl">{content.icon}</Text>
         <View className="flex-shrink">
           <Text className="text-sm font-black text-white" numberOfLines={1}>{content.title}</Text>

@@ -22,7 +22,11 @@ let paused = false;
 const listeners = new Set<() => void>();
 const emit = () => listeners.forEach((listener) => listener());
 
+const sameEvent = (a: Celebration, b: Celebration) => JSON.stringify(a) === JSON.stringify(b);
+
 export const celebrate = (event: Celebration) => {
+  // Never queue the same event twice (effects can fire again before state updates land).
+  if ([...queue, ...toasts].some((entry) => sameEvent(entry, event))) return;
   if (isToastCelebration(event)) toasts = [...toasts, event];
   else queue = [...queue, event];
   emit();
@@ -41,6 +45,8 @@ export const dismissToast = () => {
 /** Called by the lesson screen: pause while it is open, resume (dropping what the result screen already showed) when it closes. */
 export const pauseCelebrations = () => {
   paused = true;
+  // A hint that was already on screen is not shown again after the lesson.
+  toasts = [];
   emit();
 };
 export const resumeCelebrations = (drop: Celebration["kind"][] = []) => {
