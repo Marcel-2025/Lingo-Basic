@@ -35,6 +35,9 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
         <Text numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} className={`text-[10px] font-bold uppercase ${isActive ? "text-white" : "text-gray-500 dark:text-blue-200/75"}`}>{t(tab.label)}</Text>
       </View>
     );
+    // Transform and shadow classes set CSS variables (--tw-translate-*, --tw-shadow). NativeWind can only add
+    // variables during the first render, so every tab carries them from the start (neutral when inactive);
+    // otherwise switching tabs remounts the button and crashes NativeWind's dev-only upgrade warning on iOS.
     return (
       <Pressable
         key={route.key}
@@ -45,7 +48,7 @@ function TabBar({ state, navigation }: BottomTabBarProps) {
           const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
           if (!isActive && !event.defaultPrevented) navigation.navigate(route.name);
         }}
-        className={`rounded-2xl ${isActive ? `${isWide ? "translate-x-1" : "-translate-y-2"} overflow-hidden shadow-lg dark:shadow-none` : ""}`}
+        className={`rounded-2xl ${isActive ? `${isWide ? "translate-x-1 translate-y-0" : "translate-x-0 -translate-y-2"} overflow-hidden shadow-lg dark:shadow-none` : "translate-x-0 translate-y-0 shadow-none"}`}
       >
         {isActive ? <Gradient>{content}</Gradient> : content}
       </Pressable>
