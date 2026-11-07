@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
-import Animated, { FadeIn, useAnimatedStyle, useSharedValue, withSequence, withSpring, withTiming } from "react-native-reanimated";
+import Animated, { Easing, FadeIn, useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { isWordLearned, isWordMastered, recordLearningInInsights } from "@/app/lib/learning-history";
 import { getVocabFromPack } from "@/app/lib/pack-normalization";
 import { shuffle } from "@/app/lib/utils";
@@ -80,12 +80,13 @@ function Flashcards({ pack, header }: { pack: LanguagePack; header: React.ReactN
   const [reward, setReward] = useState({ trigger: 0, text: "" });
   const card = queue[index];
   const baseLang = settings.uiLang;
-  // Card flip: a quick squeeze on the horizontal axis whenever the card turns or a new word arrives.
+  // Gentle card change: a short fade with a barely visible zoom when the card turns or a new word arrives.
   const flip = useSharedValue(1);
   useEffect(() => {
-    flip.value = withSequence(withTiming(0.05, { duration: 110 }), withSpring(1, { damping: 14, stiffness: 180 }));
+    flip.value = 0;
+    flip.value = withTiming(1, { duration: 240, easing: Easing.out(Easing.quad) });
   }, [flip, isFlipped, card?.id]);
-  const flipStyle = useAnimatedStyle(() => ({ transform: [{ scaleX: flip.value }] }));
+  const flipStyle = useAnimatedStyle(() => ({ opacity: 0.55 + 0.45 * flip.value, transform: [{ scale: 0.98 + 0.02 * flip.value }] }));
   const langLabel = t(`languages.${pack.lang}`);
   const baseLabel = t(`languages.${baseLang}`);
   const reverse = prefs.direction === "x-de";
