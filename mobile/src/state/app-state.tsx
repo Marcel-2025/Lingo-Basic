@@ -26,7 +26,7 @@ interface AppState {
   updateStats: (updater: (previous: UserStats) => UserStats) => void;
   updateSettings: (updater: (previous: AppSettings) => AppSettings) => void;
   updateInsights: (updater: (previous: LearningInsights) => LearningInsights) => void;
-  /** Premium entitlement from the store (RevenueCat). */
+  /** Premium from the store (Google Play Billing / StoreKit). */
   isPremium: boolean;
   /** XP, streak and answer counters for one answered card/question. */
   awardAnswer: (xp: number, correct: boolean, learnedDelta: number, masteredDelta: number) => void;

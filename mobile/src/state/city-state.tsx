@@ -24,6 +24,7 @@ import { DECORATIONS } from "@/app/lib/premium-benefits";
 import { t, type TranslationKey } from "~/i18n";
 import { celebrate } from "~/lib/celebrations";
 import { livesActions } from "~/lib/lives-store";
+import { COIN_PACK_AMOUNT, setConsumableHandler } from "~/lib/purchases";
 import { getDayActivity, updateDayActivity, useDayActivity } from "~/lib/day-activity";
 import { syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useAppState } from "~/state/app-state";
@@ -61,6 +62,16 @@ export function CityProvider({ children }: { children: ReactNode }) {
   const setCity = useCallback((updater: (previous: CityState) => CityState) => {
     updateInsights((previous) => ({ ...previous, city: updater(previous.city ? normalizeCity(previous.city) : EMPTY_CITY) }));
   }, [updateInsights]);
+
+  // Store purchases of hearts / coins are delivered here (also ones that arrived while the app was closed).
+  useEffect(() => {
+    if (!isLoaded) return;
+    setConsumableHandler((key) => {
+      if (key === "hearts") livesActions.addPack();
+      else setCity((previous) => addPurchasedCoins(previous, COIN_PACK_AMOUNT));
+    });
+    return () => setConsumableHandler(null);
+  }, [isLoaded, setCity]);
 
   // Level-up and daily-goal celebrations: compare against the last seen values.
   const lastLevelRef = useRef<number | null>(null);

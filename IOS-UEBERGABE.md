@@ -1,17 +1,17 @@
 # Lingo Pro – iOS-Release auf dem Mac (Übergabe)
 
-Stand: 7. November 2026, Version **1.2.1**, iOS-Build **1**. Android ist dieselbe Codebasis (Versionscode 4).
+Stand: 7. November 2026, Version **1.2.2**, iOS-Build **2**. Android ist dieselbe Codebasis (Versionscode 5).
 Dieses Dokument ist die Anleitung für den Claude-Chat auf dem Mac. Es beschreibt nur, was dort noch zu tun ist –
 der App-Code ist fertig und für iOS vorbereitet.
 
 ## Projekt
 
 - Repo: `Lingo-Basic`, Branch `live-version`, App im Ordner **`mobile/`** (Expo SDK 57, React Native 0.86, Expo Router, NativeWind, Reanimated).
-- Bundle-ID: **`dev.flondy.lingo.pro`** · Name: **Lingo Pro** · Version 1.2.1 · Build-Nummer in `mobile/app.json` → `expo.ios.buildNumber` (bei jedem Upload +1).
+- Bundle-ID: **`dev.flondy.lingo.pro`** · Name: **Lingo Pro** · Version 1.2.2 · Build-Nummer in `mobile/app.json` → `expo.ios.buildNumber` (bei jedem Upload +1).
 - `eas.json`: `appVersionSource: "local"` – Version und Build-Nummer kommen **immer aus app.json**, nicht von EAS.
-- Kein Login, kein Backend, kein Firebase. Fortschritt nur lokal (AsyncStorage). Käufe über RevenueCat (`react-native-purchases`).
+- Kein Login, kein Backend, kein Firebase. Fortschritt nur lokal (AsyncStorage). Käufe direkt über StoreKit/Google Play mit `expo-iap` – **kein RevenueCat**, kein Server.
 - 10 UI-Sprachen (`mobile/src/i18n/`), `CFBundleLocalizations` ist in app.json gesetzt.
-- Privacy Manifest (`expo.ios.privacyManifests`) ist in app.json gesetzt: UserDefaults CA92.1, FileTimestamp C617.1, SystemBootTime 35F9.1, DiskSpace E174.1; erhobene Daten: Kaufverlauf + Geräte-ID, nicht verknüpft, kein Tracking.
+- Privacy Manifest (`expo.ios.privacyManifests`) ist in app.json gesetzt: UserDefaults CA92.1, FileTimestamp C617.1, SystemBootTime 35F9.1, DiskSpace E174.1; erhobene Daten: nur Kaufverlauf (App-Funktionalität), nicht verknüpft, kein Tracking.
 - `ITSAppUsesNonExemptEncryption: false` ist gesetzt (keine Export-Compliance-Frage).
 - Kein Mikrofon, keine Kamera, kein Standort. Benachrichtigungen nur lokal (expo-notifications, Berechtigung erst beim Einschalten der Erinnerung).
 
@@ -34,7 +34,7 @@ open ios/LingoPro.xcworkspace                 # Name ggf. anders – die .xcwork
 
 In Xcode:
 1. Target **LingoPro** → *Signing & Capabilities* → Team = Marcels Team, „Automatically manage signing“ an. Bundle-ID muss `dev.flondy.lingo.pro` sein.
-2. Capability **In-App Purchase** hinzufügen (für RevenueCat/StoreKit).
+2. Capability **In-App Purchase** hinzufügen (StoreKit, für expo-iap).
 3. Oben Gerät „Any iOS Device (arm64)“ wählen → *Product → Archive*.
 4. Im Organizer: *Distribute App → App Store Connect → Upload*.
 5. Test vorher: einmal auf dem iOS-Simulator starten (`npx expo run:ios`) und Lernkarten, Übungen, Stadt, Einstellungen (Sprache wechseln, Akzent/Himmel), Profil-Name und Sicherung exportieren durchklicken.
@@ -57,7 +57,7 @@ EAS fragt nach dem Apple-Login und legt Zertifikat + Provisioning Profile selbst
 - **Support-URL**: `https://marcel-2025.github.io/Lingo-Pro/` · Marketing-URL optional.
 - **Kategorie**: Bildung (sekundär: Spiele/Lernspiele optional, lieber leer lassen).
 - **Altersfreigabe**: alle Fragen „Nein“/„Keine“ → 4+. Bei „In-App-Käufe“ ja.
-- **App-Datenschutz („Nutritional Label“)**: „Daten werden erhoben“ → *Käufe → Kaufverlauf* (App-Funktionalität, nicht mit Identität verknüpft, kein Tracking) und *Kennungen → Geräte-ID* (App-Funktionalität, nicht verknüpft, kein Tracking). Sonst nichts. Muss zum Privacy Manifest in app.json passen.
+- **App-Datenschutz („Nutritional Label“)**: „Daten werden erhoben“ → nur *Käufe → Kaufverlauf* (App-Funktionalität, nicht mit Identität verknüpft, kein Tracking). Keine Geräte-ID, sonst nichts. Muss zum Privacy Manifest in app.json passen.
 - **Exportkonformität**: entfällt (ITSAppUsesNonExemptEncryption = false).
 - **App-Prüfung**: Kein Login → „Anmeldung erforderlich“ aus. Hinweis an Prüfer: „Keine Anmeldung nötig. Alle Lerninhalte sind kostenlos; Premium ist optional (Abo oder Einmalkauf).“
 
@@ -85,8 +85,9 @@ Produkt-IDs (identisch zu Android):
 | `lingopro_hearts_pack` | Verbrauchbar | 0,99 € |
 | `lingopro_coins_pack` | Verbrauchbar | 1,99 € |
 
-- In RevenueCat: iOS-App mit Bundle-ID anlegen, App-Store-Connect-API-Key / In-App-Purchase-Key hinterlegen, Produkte importieren, Entitlement **`premium`** (monthly, yearly, lifetime), Offering **`default`** (als „current“ markiert) mit allen fünf Produkten als Pakete – die Paketnamen sind egal, die App erkennt die Pakete an der Produkt-ID (`keyOf` in `mobile/src/lib/purchases.ts`).
-- Den **öffentlichen iOS-SDK-Key** (`appl_…`) in `mobile/app.json` → `expo.extra.revenueCat.ios` eintragen, dann neu bauen. Ohne Key zeigt der Shop „Käufe sind in dieser Version noch nicht freigeschaltet“ – die App funktioniert trotzdem komplett.
+- Kein RevenueCat und kein Key nötig: Die App lädt die Produkte direkt per StoreKit (`expo-iap`, `src/lib/purchases.ts`). Die IDs oben müssen exakt so in App Store Connect angelegt sein; solange sie fehlen oder nicht „Bereit zum Einreichen“ sind, zeigt der Shop „Die Angebote sind gerade nicht verfügbar“ – die App funktioniert trotzdem komplett.
+- Testen: in App Store Connect einen **Sandbox-Tester** anlegen, TestFlight-Build installieren, Kauf mit dem Sandbox-Konto ausführen; „Käufe wiederherstellen“ prüfen.
+- Die Abos bei der ersten Einreichung **zusammen mit der App-Version** einreichen (in der Version unter „In-App-Käufe und Abonnements“ auswählen).
 - Abos brauchen in App Store Connect: Lokalisierte Namen, Prüf-Screenshot des Paywalls (Premium-Screen), und den Link zur EULA (Standard-EULA von Apple reicht) + Datenschutz-URL in der App-Beschreibung.
 
 ## Bekannte iOS-Punkte
@@ -94,11 +95,11 @@ Produkt-IDs (identisch zu Android):
 - Sprachausgabe nutzt die iOS-Systemstimmen (`expo-speech`, Auswahl je Sprache in `src/lib/feedback.ts`). Fehlen Stimmen, nimmt iOS die Standardstimme.
 - Hintergrundmusik: `expo-audio`, `playsInSilentMode: false` – bei Stumm-Schalter bleibt sie aus (gewollt).
 - Splash: `expo-splash-screen`-Plugin, Hintergrund #0b1f63.
-- Wenn `pod install` an `react-native-purchases` hängt: `pod repo update` und erneut.
+- Wenn `pod install` an `expo-iap`/`openiap` hängt: `pod repo update` und erneut.
 - Nach jeder Änderung an app.json / Plugins: `npx expo prebuild --platform ios --clean` erneut.
 
 ## Nach dem Upload
 
-1. In App Store Connect den Build der Version 1.2.1 zuordnen, TestFlight intern testen.
+1. In App Store Connect den Build der Version 1.2.2 zuordnen, TestFlight intern testen.
 2. Zur Prüfung einreichen. Versionshinweise (DE/EN) wie bei Android (siehe Chat/Projekt-Doku).
 3. Build-Nummer in app.json für den nächsten Upload erhöhen und committen.

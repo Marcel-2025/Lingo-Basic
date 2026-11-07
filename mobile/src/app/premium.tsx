@@ -5,18 +5,15 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PREMIUM_BENEFITS } from "@/app/lib/premium-benefits";
 import { GradientButton, SoftButton } from "~/components/ui";
 import { useT, type TranslationKey } from "~/i18n";
-import { livesActions } from "~/lib/lives-store";
 import { COIN_PACK_AMOUNT, purchase, restore, usePurchases, type ShopPackage } from "~/lib/purchases";
-import { useCity } from "~/state/city-state";
 
 /**
  * Paywall + shop. Subscriptions and the lifetime purchase unlock the "premium" entitlement; the two
- * consumables are granted locally right after the store confirms the purchase.
+ * consumables are granted by the purchase handler (CityProvider) once the store confirms the purchase.
  */
 export default function PremiumScreen() {
   const insets = useSafeAreaInsets();
   const { available, ready, isPremium, premiumKind, packages, error } = usePurchases();
-  const { grantPurchasedCoins } = useCity();
   const [busy, setBusy] = useState<string | null>(null);
   const [message, setMessage] = useState("");
   const t = useT();
@@ -31,15 +28,10 @@ export default function PremiumScreen() {
       setMessage(outcome.message);
       return;
     }
-    if (outcome.key === "hearts") {
-      livesActions.addPack();
-      setMessage(t("premium.heartsGranted"));
-    } else if (outcome.key === "coins") {
-      grantPurchasedCoins(COIN_PACK_AMOUNT);
-      setMessage(t("premium.coinsGranted", { n: COIN_PACK_AMOUNT }));
-    } else {
-      setMessage(t("premium.welcome"));
-    }
+    // Hearts and coins are granted by the purchase handler in CityProvider (exactly once per store purchase).
+    if (outcome.key === "hearts") setMessage(t("premium.heartsGranted"));
+    else if (outcome.key === "coins") setMessage(t("premium.coinsGranted", { n: COIN_PACK_AMOUNT }));
+    else setMessage(t("premium.welcome"));
   };
 
   const subs = packages.filter((entry) => entry.key === "monthly" || entry.key === "yearly" || entry.key === "lifetime");

@@ -75,7 +75,7 @@ Vor dem ersten App-Store-Upload:
 
 ## Käufe (Premium, Herzen, Münzen)
 
-Abwicklung über **RevenueCat** (`react-native-purchases`): Google Play Billing auf Android, StoreKit auf iOS. Logik in `src/lib/purchases.ts`, Regeln in `app/lib/lives.ts` und `app/lib/premium-benefits.ts` (getestet).
+Abwicklung **direkt über die Stores** mit `expo-iap`: Google Play Billing auf Android, StoreKit auf iOS – kein Drittanbieter, kein eigener Server. Logik in `src/lib/purchases.ts` (Premium = aktives Abo oder Lifetime aus `getAvailablePurchases`, Premium-Käufe werden bestätigt/acknowledged, Herzen/Münzen werden über `setConsumableHandler` im `CityProvider` genau einmal gutgeschrieben und dann verbraucht), Regeln in `app/lib/lives.ts` und `app/lib/premium-benefits.ts` (getestet).
 
 | Produkt-ID | Typ | Vorschlag |
 | --- | --- | --- |
@@ -85,14 +85,13 @@ Abwicklung über **RevenueCat** (`react-native-purchases`): Google Play Billing 
 | `lingopro_hearts_pack` | Einmalkauf, verbrauchbar | 0,99 € – volle Herzen + 10 extra |
 | `lingopro_coins_pack` | Einmalkauf, verbrauchbar | 1,99 € – 1500 Münzen |
 
-Premium (Entitlement `premium`): unendlich Leben, +50 % XP/Münzen, Streak-Schutz (2 verpasste Tage/Monat), Stadt-Dekorationen (mit Münzen). Leben gibt es nur im Übungsmodus: 5 Herzen, alle 30 Minuten eines zurück; Lernkarten bleiben immer frei.
+Premium: unendlich Leben, +50 % XP/Münzen, Streak-Schutz (2 verpasste Tage/Monat), Stadt-Dekorationen (mit Münzen). Leben gibt es nur im Übungsmodus: 5 Herzen, alle 30 Minuten eines zurück; Lernkarten bleiben immer frei.
 
 Einrichtung:
 1. Play Console → Monetarisierung → Produkte: die fünf Produkte mit genau diesen IDs anlegen (Abos mit Basisplan, Einmalkäufe als „In-App-Produkt“); App muss mindestens einmal im internen Test hochgeladen sein.
 2. App Store Connect → In-App-Käufe: dieselben IDs (später, für iOS).
-3. RevenueCat (app.revenuecat.com): Projekt anlegen, Play-Store-App mit Service-Account-JSON verbinden, Produkte importieren, Entitlement `premium` mit den drei Premium-Produkten, Offering `default` mit allen fünf Paketen.
-4. Öffentliche SDK-Keys in `app.json` → `extra.revenueCat.android` / `.ios` eintragen (das sind Public Keys, kein Geheimnis). Ohne Keys zeigt der Shop nur einen Hinweis.
-5. Testen: Lizenztester in der Play Console eintragen, Build aus dem internen Test installieren.
+3. Abos in der Play Console: je ein **Basisplan** (monatlich bzw. jährlich, automatisch verlängernd). Die App nimmt automatisch das Angebot des Basisplans; Einführungsangebote sind optional.
+4. Testen: Lizenztester in der Play Console eintragen, Build aus dem internen Test installieren.
 
 Play-Richtlinien: Preise/Abo-Laufzeit werden im Shop aus dem Store geladen, Kündigungshinweis und „Abo verwalten“ sind eingebaut, Käufe wiederherstellen ebenfalls.
 

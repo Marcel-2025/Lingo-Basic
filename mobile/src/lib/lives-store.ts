@@ -5,17 +5,18 @@ import { readJson, writeJson } from "~/lib/storage";
 /** Device-local hearts for the exercise mode (part of the backup via app state? No: hearts are a session resource and stay local). */
 const KEY = "lingoLives";
 let current: LivesState = FULL_LIVES;
-let loaded = false;
+let loaded: Promise<void> | null = null;
 const listeners = new Set<() => void>();
 const emit = () => listeners.forEach((listener) => listener());
 
 const load = () => {
-  if (loaded) return;
-  loaded = true;
-  void readJson<unknown>(KEY, null).then((stored) => {
-    if (stored) current = normalizeLives(stored);
-    emit();
-  });
+  if (!loaded) {
+    loaded = readJson<unknown>(KEY, null).then((stored) => {
+      if (stored) current = normalizeLives(stored);
+      emit();
+    });
+  }
+  return loaded;
 };
 
 const set = (next: LivesState) => {
@@ -27,7 +28,8 @@ const set = (next: LivesState) => {
 export const livesActions = {
   lose: (isPremium: boolean) => set(loseLife(current, Date.now(), isPremium)),
   refill: () => set(refillLives(current, Date.now())),
-  addPack: () => set(addHeartPack(current, Date.now())),
+  /** Waits for the stored hearts first, so a purchase delivered at app start is not overwritten by the load. */
+  addPack: () => void load().then(() => set(addHeartPack(current, Date.now()))),
 };
 
 /** Live hearts + countdown, ticking once per second while not full. */

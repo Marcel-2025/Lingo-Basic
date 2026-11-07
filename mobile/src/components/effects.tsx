@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withSequence, withSpring, withTiming } from "react-native-reanimated";
 
 /**

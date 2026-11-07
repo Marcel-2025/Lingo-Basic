@@ -3,14 +3,14 @@
     "name": "Lingo Pro",
     "slug": "lingo-pro",
     "scheme": "lingopro",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.flondy.lingo.pro",
-      "buildNumber": "1",
+      "buildNumber": "2",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleLocalizations": [
@@ -65,21 +65,13 @@
             "NSPrivacyCollectedDataTypePurposes": [
               "NSPrivacyCollectedDataTypePurposeAppFunctionality"
             ]
-          },
-          {
-            "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeDeviceID",
-            "NSPrivacyCollectedDataTypeLinked": false,
-            "NSPrivacyCollectedDataTypeTracking": false,
-            "NSPrivacyCollectedDataTypePurposes": [
-              "NSPrivacyCollectedDataTypePurposeAppFunctionality"
-            ]
           }
         ]
       }
     },
     "android": {
       "package": "dev.flondy.lingo.pro",
-      "versionCode": 4,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0ea5e9"
@@ -123,6 +115,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#0b1f63"
         }
+      ],
+      [
+        "expo-iap",
+        {
+          "android": {
+            "store": "play"
+          }
+        }
       ]
     ],
     "experiments": {
@@ -130,10 +130,6 @@
       "tsconfigPaths": true
     },
     "extra": {
-      "revenueCat": {
-        "android": "",
-        "ios": ""
-      },
       "eas": {
         "projectId": "10c01564-dc86-48ee-adf0-b25649c26132"
       }
