@@ -72,7 +72,7 @@
     },
     "android": {
       "package": "dev.flondy.lingo.pro",
-      "versionCode": 8,
+      "versionCode": 9,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0ea5e9"
