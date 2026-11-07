@@ -12,7 +12,7 @@ import { ScreenBackground } from "~/components/screen-background";
 import { AppStateProvider, useAppState } from "~/state/app-state";
 import { CityProvider } from "~/state/city-state";
 import { PackProvider } from "~/state/pack-state";
-import { ACCENTS } from "~/lib/theme";
+import { ACCENTS, rgbChannels } from "~/lib/theme";
 
 /** Phones stay in portrait; tablets may rotate freely (landscape is the main tablet layout). */
 function useOrientationPolicy() {
@@ -31,7 +31,7 @@ function Navigation() {
   const accent = ACCENTS[settings.theme] ?? ACCENTS.Ocean;
   return (
     <ThemeProvider value={theme}>
-     <View className="flex-1" style={vars({ "--accent": accent.main, "--accent-soft": accent.soft, "--accent-deep": accent.deep })}>
+     <View className="flex-1" style={vars({ "--accent": rgbChannels(accent.main), "--accent-soft": rgbChannels(accent.soft), "--accent-deep": rgbChannels(accent.deep) })}>
       <StatusBar style={settings.isDarkMode ? "light" : "dark"} />
       <ScreenBackground />
       <Stack

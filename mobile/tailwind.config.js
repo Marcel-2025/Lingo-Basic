@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         // Night-sky palette (the default look) – deep blues with a mint accent.
         night: { 950: "#050d2b", 900: "#081a4f", 800: "#0d2a7a", 700: "#123a9c", card: "#0f2a6e", soft: "#17398f" },
-        mint: { 300: "var(--accent-soft)", 400: "var(--accent)", 500: "var(--accent-deep)" },
+        mint: { 300: "rgb(var(--accent-soft) / <alpha-value>)", 400: "rgb(var(--accent) / <alpha-value>)", 500: "rgb(var(--accent-deep) / <alpha-value>)" },
       },
       boxShadow: { glow: "0 0 24px rgba(62, 233, 168, 0.35)" },
     },

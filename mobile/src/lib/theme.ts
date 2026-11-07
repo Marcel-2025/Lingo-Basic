@@ -23,6 +23,12 @@ export const ACCENTS: Record<ThemeName, { soft: string; main: string; deep: stri
 
 export const THEMES: ThemeName[] = ["Ocean", "Sunset", "Lime", "Grape"];
 
+/** "#3ee9a8" → "62 233 168": the form Tailwind needs for `rgb(var(--accent) / <alpha-value>)` so opacity modifiers work. */
+export const rgbChannels = (hex: string) => {
+  const value = hex.replace("#", "");
+  return [0, 2, 4].map((offset) => parseInt(value.slice(offset, offset + 2), 16)).join(" ");
+};
+
 export interface Sky {
   /** Night gradient, top → bottom. */
   night: readonly [string, string, string, string];
