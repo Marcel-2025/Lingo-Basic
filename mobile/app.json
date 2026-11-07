@@ -10,6 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.flondy.lingo.pro",
+      "appleTeamId": "B4MS784YX4",
       "buildNumber": "4",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
@@ -123,7 +124,8 @@
             "store": "play"
           }
         }
-      ]
+      ],
+      "./plugins/with-scene-lifecycle"
     ],
     "experiments": {
       "typedRoutes": false,
