@@ -1,13 +1,13 @@
 # Lingo Pro – iOS-Release auf dem Mac (Übergabe)
 
-Stand: 7. November 2026, Version **1.2.2**, iOS-Build **2**. Android ist dieselbe Codebasis (Versionscode 5).
+Stand: 7. November 2026 (spät), Version **1.3.0**, iOS-Build **3**. Android ist dieselbe Codebasis (Versionscode 6).
 Dieses Dokument ist die Anleitung für den Claude-Chat auf dem Mac. Es beschreibt nur, was dort noch zu tun ist –
 der App-Code ist fertig und für iOS vorbereitet.
 
 ## Projekt
 
 - Repo: `Lingo-Basic`, Branch `live-version`, App im Ordner **`mobile/`** (Expo SDK 57, React Native 0.86, Expo Router, NativeWind, Reanimated).
-- Bundle-ID: **`dev.flondy.lingo.pro`** · Name: **Lingo Pro** · Version 1.2.2 · Build-Nummer in `mobile/app.json` → `expo.ios.buildNumber` (bei jedem Upload +1).
+- Bundle-ID: **`dev.flondy.lingo.pro`** · Name: **Lingo Pro** · Version 1.3.0 · Build-Nummer in `mobile/app.json` → `expo.ios.buildNumber` (bei jedem Upload +1).
 - `eas.json`: `appVersionSource: "local"` – Version und Build-Nummer kommen **immer aus app.json**, nicht von EAS.
 - Kein Login, kein Backend, kein Firebase. Fortschritt nur lokal (AsyncStorage). Käufe direkt über StoreKit/Google Play mit `expo-iap` – **kein RevenueCat**, kein Server.
 - 10 UI-Sprachen (`mobile/src/i18n/`), `CFBundleLocalizations` ist in app.json gesetzt.
@@ -37,7 +37,7 @@ In Xcode:
 2. Capability **In-App Purchase** hinzufügen (StoreKit, für expo-iap).
 3. Oben Gerät „Any iOS Device (arm64)“ wählen → *Product → Archive*.
 4. Im Organizer: *Distribute App → App Store Connect → Upload*.
-5. Test vorher: einmal auf dem iOS-Simulator starten (`npx expo run:ios`) und Lernkarten, Übungen, Stadt, Einstellungen (Sprache wechseln, Akzent/Himmel), Profil-Name und Sicherung exportieren durchklicken.
+5. Test vorher: einmal auf dem iOS-Simulator starten (`npx expo run:ios`) und durchklicken: **Lernpfad → Lektion komplett spielen → Abschluss-Animation (Sterne, XP-Balken, Flamme) → zurück, nächste Lektion freigeschaltet**, Umschalter „Freies Üben“, Übungen, Stadt, Einstellungen (Sprache, Akzent/Himmel, Erinnerungen 1–4×), Profil-Name, Sicherung exportieren.
 
 ## Weg B – EAS Build (Cloud, ohne Xcode-Signing-Gefummel)
 
@@ -90,6 +90,13 @@ Produkt-IDs (identisch zu Android):
 - Die Abos bei der ersten Einreichung **zusammen mit der App-Version** einreichen (in der Version unter „In-App-Käufe und Abonnements“ auswählen).
 - Abos brauchen in App Store Connect: Lokalisierte Namen, Prüf-Screenshot des Paywalls (Premium-Screen), und den Link zur EULA (Standard-EULA von Apple reicht) + Datenschutz-URL in der App-Beschreibung.
 
+## Neu in 1.3.0 (für Test und „Neuerungen“)
+
+- **Lernpfad** im ersten Tab (`src/components/learning-path.tsx`, Logik `app/lib/lessons.ts`): Themen als Abschnitte, Lektionen à 5 Wörter, nacheinander freigeschaltet, Sterne.
+- **Lektion** als Vollbild-Modal (`src/app/lesson.tsx`, Route `/lesson?id=…`, `presentation: "fullScreenModal"`, Wischen zum Schließen aus): 5 neue Wörter + Quiz (Wort, Bedeutung, Hören), Abschluss-Animation.
+- Aufgaben/Tagesziel nur noch als kleiner Hinweis oben statt Vollbild.
+- **Erinnerungen 1–4× täglich** (`src/lib/reminders.ts`): die nächsten 7 Tage werden als einzelne lokale Benachrichtigungen geplant (max. 29, iOS-Grenze 64 eingehalten). Berechtigung wird erst über die Karte „Erinnerungen einschalten?“ auf dem Lernpfad oder in den Einstellungen abgefragt. Auf dem Gerät testen: einschalten → System-Dialog → in den Einstellungen 4× wählen → keine Fehlermeldung.
+
 ## Bekannte iOS-Punkte
 
 - Sprachausgabe nutzt die iOS-Systemstimmen (`expo-speech`, Auswahl je Sprache in `src/lib/feedback.ts`). Fehlen Stimmen, nimmt iOS die Standardstimme.
@@ -100,6 +107,10 @@ Produkt-IDs (identisch zu Android):
 
 ## Nach dem Upload
 
-1. In App Store Connect den Build der Version 1.2.2 zuordnen, TestFlight intern testen.
+1. In App Store Connect den Build der Version 1.3.0 zuordnen, TestFlight intern testen.
 2. Zur Prüfung einreichen. Versionshinweise (DE/EN) wie bei Android (siehe Chat/Projekt-Doku).
 3. Build-Nummer in app.json für den nächsten Upload erhöhen und committen.
+
+### Versionshinweise 1.3.0
+- DE: „Neu: Lernpfad mit Lektionen und Sternen · Jede Lektion: neue Wörter und ein kurzes Quiz mit Hören · Abschluss-Animation mit XP, Levelbalken und Serien-Flamme · Tagesaufgaben als dezenter Hinweis · Erinnerungen bis zu 4× täglich · Käufe direkt über den App Store“
+- EN: „New: learning path with lessons and stars · Every lesson: new words and a short quiz with listening · Lesson complete screen with XP, level bar and streak flame · Daily quests as a small notice · Reminders up to 4× a day · Purchases directly through the App Store“
