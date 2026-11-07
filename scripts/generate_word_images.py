@@ -55,7 +55,21 @@ def call(server, path, payload=None):
     return json.loads(body) if body[:1] in (b"{", b"[") else body
 
 
-def render(server, graph):
+def render(server, graph, attempts=4):
+    """Renders one image. ComfyUI's disk streaming sometimes fails while a model is still loading
+    (Windows error 1450 / hostbuf_file_reader_read); those attempts are simply retried."""
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            return render_once(server, graph)
+        except (RuntimeError, TimeoutError) as error:
+            last_error = error
+            if attempt < attempts - 1:
+                time.sleep(3 + attempt * 2)
+    raise last_error
+
+
+def render_once(server, graph):
     prompt_id = call(server, "/prompt", {"prompt": graph, "client_id": "lingopro"})["prompt_id"]
     for _ in range(600):
         history = call(server, f"/history/{prompt_id}")
