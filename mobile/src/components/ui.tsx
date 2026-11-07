@@ -1,5 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { useState, type ReactNode } from "react";
+import { useState, type ComponentProps, type ReactNode } from "react";
 import { Modal, Pressable, ScrollView, Text, View, type StyleProp, type ViewStyle } from "react-native";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -65,12 +65,31 @@ export function ProgressBar({ value, className }: { value: number; className?: s
   );
 }
 
+/**
+ * Entering/exiting animation wrapper. The animation runs on an outer Animated.View and the NativeWind classes sit on
+ * an inner View (on web, Reanimated's layout animations drop className styles of the animated view itself).
+ */
+export function Appear({ entering, exiting, className, style, children, accessibilityLiveRegion }: {
+  entering?: ComponentProps<typeof Animated.View>["entering"];
+  exiting?: ComponentProps<typeof Animated.View>["exiting"];
+  className?: string;
+  style?: StyleProp<ViewStyle>;
+  children?: ReactNode;
+  accessibilityLiveRegion?: "none" | "polite" | "assertive";
+}) {
+  return (
+    <Animated.View entering={entering} exiting={exiting} style={style} accessibilityLiveRegion={accessibilityLiveRegion}>
+      <View className={className}>{children}</View>
+    </Animated.View>
+  );
+}
+
 /** Glass card: white by day, translucent deep blue with a soft rim at night. Slides in when it appears. */
 export function Card({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   return (
-    <Animated.View entering={FadeInDown.delay(delay).duration(420).springify().damping(18)} className={`rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-black/30 ${className ?? ""}`}>
+    <Appear entering={FadeInDown.delay(delay).duration(420).springify().damping(18)} className={`rounded-3xl bg-white p-5 shadow-sm dark:border dark:border-white/10 dark:bg-black/30 ${className ?? ""}`}>
       {children}
-    </Animated.View>
+    </Appear>
   );
 }
 

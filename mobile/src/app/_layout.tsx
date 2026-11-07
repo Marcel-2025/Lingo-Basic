@@ -7,7 +7,7 @@ import { vars } from "nativewind";
 import { Dimensions, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { CelebrationOverlay } from "~/components/celebration";
+import { CelebrationOverlay, CelebrationToast } from "~/components/celebration";
 import { ScreenBackground } from "~/components/screen-background";
 import { AppStateProvider, useAppState } from "~/state/app-state";
 import { CityProvider } from "~/state/city-state";
@@ -46,7 +46,9 @@ function Navigation() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="privacy" options={{ presentation: "modal" }} />
         <Stack.Screen name="premium" options={{ presentation: "modal" }} />
+        <Stack.Screen name="lesson" options={{ presentation: "fullScreenModal", gestureEnabled: false, animation: "slide_from_bottom" }} />
       </Stack>
+      <CelebrationToast />
       <CelebrationOverlay />
      </View>
     </ThemeProvider>

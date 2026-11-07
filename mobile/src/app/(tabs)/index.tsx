@@ -8,7 +8,8 @@ import { shuffle } from "@/app/lib/utils";
 import type { LanguagePack, TopicItem, VocabItem } from "@/app/lib/types";
 import { FloatingReward, SparkleBurst } from "~/components/effects";
 import { LearnPanel, type SessionStats } from "~/components/learn-panel";
-import { Card, Chip, GradientButton, IconButton, ProgressBar, SelectField, useScreenColors } from "~/components/ui";
+import { LearningPath } from "~/components/learning-path";
+import { Appear, Card, Chip, GradientButton, IconButton, ProgressBar, SelectField, useScreenColors } from "~/components/ui";
 import { useT } from "~/i18n";
 import { speak, vibrate } from "~/lib/feedback";
 import { useLearningPrefs } from "~/lib/learning-prefs";
@@ -19,10 +20,11 @@ import { useCity } from "~/state/city-state";
 import { usePackState } from "~/state/pack-state";
 
 export default function TodayScreen() {
-  const { activePack, isLoading, message } = usePackState();
+  const { activePack, pack, isLoading, message } = usePackState();
   const colors = useScreenColors();
   const t = useT();
-  if (!activePack) {
+  const [prefs, setPrefs] = useLearningPrefs();
+  if (!activePack || !pack) {
     return (
       <View className={`flex-1 items-center justify-center p-6 ${colors.screen}`}>
         <Text className={`mb-3 text-center text-2xl font-bold ${colors.text}`}>{isLoading ? t("packs.loading") : t("packs.unavailableTitle")}</Text>
@@ -31,10 +33,33 @@ export default function TodayScreen() {
       </View>
     );
   }
-  return <Flashcards key={`${activePack.lang}:${activePack.level}:${activePack.topics.length}`} pack={activePack} />;
+  const modeSwitch = <ModeSwitch mode={prefs.learnMode} onChange={(learnMode) => setPrefs({ learnMode })} />;
+  if (prefs.learnMode === "path") return <LearningPath key={`${pack.lang}:${pack.level}`} pack={pack} header={modeSwitch} />;
+  return <Flashcards key={`${activePack.lang}:${activePack.level}:${activePack.topics.length}`} pack={activePack} header={modeSwitch} />;
 }
 
-function Flashcards({ pack }: { pack: LanguagePack }) {
+/** Segmented switch between the lesson path and free flashcard practice. */
+function ModeSwitch({ mode, onChange }: { mode: "path" | "free"; onChange: (mode: "path" | "free") => void }) {
+  const t = useT();
+  const options: { value: "path" | "free"; label: string }[] = [
+    { value: "path", label: `🗺️ ${t("path.modePath")}` },
+    { value: "free", label: `🃏 ${t("path.modeFree")}` },
+  ];
+  return (
+    <View className="mb-4 flex-row rounded-2xl bg-white/80 p-1 shadow-sm dark:border dark:border-white/10 dark:bg-black/30" accessibilityRole="tablist">
+      {options.map((option) => {
+        const active = mode === option.value;
+        return (
+          <Pressable key={option.value} accessibilityRole="tab" accessibilityState={{ selected: active }} onPress={() => onChange(option.value)} className={`flex-1 items-center rounded-xl py-2.5 active:opacity-70 ${active ? "bg-indigo-600 dark:bg-mint-400" : ""}`}>
+            <Text className={`text-sm font-black ${active ? "text-white dark:text-night-950" : "text-gray-600 dark:text-blue-100/85"}`}>{option.label}</Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
+function Flashcards({ pack, header }: { pack: LanguagePack; header: React.ReactNode }) {
   const { insights, settings, updateInsights, awardAnswer, todayKey } = useAppState();
   const { recordCard } = useCity();
   const colors = useScreenColors();
@@ -195,10 +220,10 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
       </View>
 
       {isFlipped ? (
-        <Animated.View entering={FadeIn.duration(250)} className="mt-6 flex-row gap-4">
+        <Appear entering={FadeIn.duration(250)} className="mt-6 flex-row gap-4">
           <Pressable accessibilityRole="button" onPress={() => answer(false)} className="flex-1 items-center rounded-2xl bg-red-100 dark:bg-red-500/25 py-4 active:opacity-70"><Text className="text-base font-bold text-red-700 dark:text-red-200">{t("learn.practice")}</Text></Pressable>
           <GradientButton className="flex-1" label={t("learn.known")} onPress={() => answer(true)} />
-        </Animated.View>
+        </Appear>
       ) : (
         <Pressable accessibilityRole="button" onPress={() => setIsFlipped(true)} className="mt-6 items-center rounded-2xl bg-white dark:border dark:border-white/10 dark:bg-black/30 py-4 shadow-sm active:opacity-70"><Text className="font-bold text-indigo-700 dark:text-mint-300">{t("learn.reveal")}</Text></Pressable>
       )}
@@ -216,6 +241,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
         ) : null}
         <ScrollView className="flex-1" contentContainerClassName="p-6 pb-10">
           <View className="w-full self-center" style={{ maxWidth: 620 }}>
+            {header}
             {toolbar}
             {flashcard}
           </View>
@@ -228,6 +254,7 @@ function Flashcards({ pack }: { pack: LanguagePack }) {
   return (
     <ScrollView className={`flex-1 ${colors.screen}`} contentContainerClassName="p-4 pb-10">
       <View className="w-full self-center" style={{ maxWidth: contentMaxWidth }}>
+        {header}
         <Card className="mb-3 p-3">
           <SelectField
             label={t("learn.chooseCategory", { n: pack.topics.length })}

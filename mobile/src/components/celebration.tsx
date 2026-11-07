@@ -2,6 +2,8 @@ import { useEffect, useMemo } from "react";
 import { Pressable, Text, View, useWindowDimensions } from "react-native";
 import Animated, {
   Easing,
+  FadeInUp,
+  FadeOutUp,
   useAnimatedStyle,
   useSharedValue,
   withDelay,
@@ -14,12 +16,13 @@ import { useScreenColors } from "~/components/ui";
 import { t, useT } from "~/i18n";
 import { playAnswerTone, vibrate } from "~/lib/feedback";
 import { useAppState } from "~/state/app-state";
-import { dismissCelebration, useCelebration, type Celebration } from "~/lib/celebrations";
+import { dismissCelebration, dismissToast, useCelebration, useToast, type Celebration } from "~/lib/celebrations";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const COLORS = ["#f59e0b", "#ef4444", "#22c55e", "#3b82f6", "#a855f7", "#ec4899", "#14b8a6"];
 
 /** One falling, tumbling confetti piece. Positions are precomputed so the pieces differ but stay stable per render. */
-function Confetti({ index, width, height }: { index: number; width: number; height: number }) {
+export function Confetti({ index, width, height }: { index: number; width: number; height: number }) {
   const progress = useSharedValue(0);
   const seed = useMemo(() => ({
     x: ((index * 7919) % 100) / 100,
@@ -97,6 +100,35 @@ export function CelebrationOverlay() {
         </View>
       </Animated.View>
     </Pressable>
+  );
+}
+
+/** Small non-blocking toast at the top for quests and the daily goal (the cards stay usable). */
+export function CelebrationToast() {
+  const toast = useToast();
+  const insets = useSafeAreaInsets();
+  const { settings } = useAppState();
+  useEffect(() => {
+    if (!toast) return;
+    if (settings.vibrationEnabled) vibrate(true);
+    const timeout = setTimeout(dismissToast, 2200);
+    return () => clearTimeout(timeout);
+  }, [toast, settings.vibrationEnabled]);
+  if (!toast) return null;
+  const content = describe(toast);
+  return (
+    <View pointerEvents="none" style={{ position: "absolute", left: 0, right: 0, top: insets.top + 8, alignItems: "center" }}>
+      <Animated.View key={`${content.title}-${content.text}`} entering={FadeInUp.springify().damping(14)} exiting={FadeOutUp.duration(200)} accessibilityLiveRegion="polite" style={{ maxWidth: 420, marginHorizontal: 16 }}>
+        <View className="flex-row items-center gap-3 rounded-2xl border border-mint-400/60 bg-[#0f1424]/95 px-4 py-3 shadow-lg">
+        <Text className="text-2xl">{content.icon}</Text>
+        <View className="flex-shrink">
+          <Text className="text-sm font-black text-white" numberOfLines={1}>{content.title}</Text>
+          <Text className="text-xs text-blue-100" numberOfLines={1}>{content.text}</Text>
+        </View>
+        {content.reward ? <View className="rounded-full bg-mint-400 px-2 py-0.5"><Text className="text-xs font-bold text-night-950">🪙 {content.reward}</Text></View> : null}
+      </View>
+      </Animated.View>
+    </View>
   );
 }
 

@@ -13,10 +13,12 @@ export interface LearningPrefs {
   showImages: boolean;
   /** Side panel open on tablets. */
   panelOpen: boolean;
+  /** First tab: the lesson path or free flashcards. */
+  learnMode: "path" | "free";
 }
 
 const KEY = "lingoLearningPrefs";
-const DEFAULTS: LearningPrefs = { direction: "de-x", autoSpeak: true, slowSpeech: false, showImages: true, panelOpen: true };
+const DEFAULTS: LearningPrefs = { direction: "de-x", autoSpeak: true, slowSpeech: false, showImages: true, panelOpen: true, learnMode: "path" };
 
 let current: LearningPrefs = DEFAULTS;
 const listeners = new Set<() => void>();

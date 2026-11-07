@@ -69,9 +69,10 @@ Vor dem ersten App-Store-Upload:
 ## Spiel, Motivation, Erinnerungen
 
 - **Deine Stadt** (Tab „Stadt“, Logik in `app/lib/city.ts`, geteilt mit der Web-App): 13 Gebäude mit je 3 Stufen, jedes an Lernthemen gebunden. Münzen: 5 XP = 1 Münze, jedes gelernte Wort = 3 Münzen, dazu Tagesaufgaben und Streak-Truhe. Gebäude brauchen gelernte Wörter aus ihrem Thema **und** Münzen. Nach 2 Tagen ohne Lernen „schläft“ die Stadt (nur optisch). Stand wird in `learningInsights.city` gespeichert und beim Sync zusammengeführt (höhere Stufe gewinnt).
+- **Lernpfad** (`app/lib/lessons.ts`, getestet; `src/components/learning-path.tsx`, `src/app/lesson.tsx`): jedes Thema in Lektionen à 5 Wörter, die nacheinander freigeschaltet werden. Lektion = 5 neue Wörter + Quiz (Wort wählen, Bedeutung wählen, Hören); Fehler kommen am Ende wieder. Abschluss mit Sternen (0/≤2/mehr Fehler = 3/2/1), +20 XP Bonus, XP-Levelbalken und Serien-Flamme. Sterne in `learningInsights.lessons` (Backup-Merge: beste Wertung). „Freies Üben“ = die bisherigen Lernkarten.
 - **Tagesaufgaben**: 3 pro Tag, deterministisch aus dem Datum, erledigen sich automatisch.
-- **Feiern** (`src/components/celebration.tsx`, Reanimated): Konfetti und Karte bei Level-Up, Tagesziel, Serie, Aufgabe, Gebäude, Truhe; animierte Streak-Flamme im Kopf.
-- **Erinnerungen** (`src/lib/reminders.ts`, expo-notifications, nur lokal): tägliche Nachricht zur Wunschzeit, abends Serien-Warnung, wenn heute noch nicht gelernt wurde. Einstellungen unter Settings → Tägliche Erinnerung. Android-Kanal „lernen“, Icon `assets/notification-icon.png`.
+- **Feiern** (`src/components/celebration.tsx`, Reanimated): Vollbild mit Konfetti bei Level-Up, Serie, Gebäude, Truhe; Aufgaben und Tagesziel nur als kleiner Hinweis oben (blockiert die Karten nicht), während einer Lektion pausiert; animierte Streak-Flamme im Kopf.
+- **Erinnerungen** (`src/lib/reminders.ts`, expo-notifications, nur lokal): 1–4× täglich (Standard 3×: 9:00, 13:00 und Wunschzeit), die nächsten 7 Tage als Einzel-Benachrichtigungen geplant; nach erreichtem Tagesziel ist für heute Ruhe, abends Serien-Warnung. Karte „Erinnerungen einschalten?“ auf dem Lernpfad. Einstellungen unter Settings → Tägliche Erinnerung. Android-Kanal „lernen“, Icon `assets/notification-icon.png`.
 
 ## Käufe (Premium, Herzen, Münzen)
 

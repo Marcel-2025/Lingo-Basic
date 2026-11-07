@@ -123,8 +123,8 @@ export function CityProvider({ children }: { children: ReactNode }) {
   const reminders = useReminderSettings();
   const learnedToday = (insights.learnedDays[dateKey] ?? 0) > 0;
   useEffect(() => {
-    void syncReminders(learnedToday, stats.streak);
-  }, [learnedToday, reminders, stats.streak]);
+    void syncReminders(learnedToday, stats.streak, goalReached);
+  }, [goalReached, learnedToday, reminders, stats.streak]);
 
   const chestAvailable = stats.streak >= 3 && stats.lastActiveDate === dateKey && !city.chestsClaimed.includes(dateKey);
 

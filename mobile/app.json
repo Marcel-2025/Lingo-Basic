@@ -3,14 +3,14 @@
     "name": "Lingo Pro",
     "slug": "lingo-pro",
     "scheme": "lingopro",
-    "version": "1.2.2",
+    "version": "1.3.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.flondy.lingo.pro",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleLocalizations": [
@@ -71,7 +71,7 @@
     },
     "android": {
       "package": "dev.flondy.lingo.pro",
-      "versionCode": 5,
+      "versionCode": 6,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0ea5e9"

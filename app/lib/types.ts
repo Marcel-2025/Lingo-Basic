@@ -96,6 +96,8 @@ export interface LearningInsights {
   city?: CityStateLike;
   /** Tage, an denen der Premium-Streak-Schutz gegriffen hat. */
   frozenDays?: string[];
+  /** Lernpfad: beste Sterne-Wertung (1–3) je Lektion, Schlüssel `${lang}:${level}:${topicId}:${index}`. */
+  lessons?: Record<string, number>;
 }
 
 /** Structural copy of CityState from app/lib/city.ts (kept here to avoid a type cycle). */

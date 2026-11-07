@@ -11,7 +11,7 @@ import { useT, type TranslationKey } from "~/i18n";
 import { clearImportedPacks, importPack, removeImportedPack } from "~/lib/packs";
 import { LinearGradient } from "expo-linear-gradient";
 import { SKIES, SKY_NAMES, THEME_GRADIENTS, THEMES } from "~/lib/theme";
-import { requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
+import { getReminderSlots, requestReminderPermission, setReminderSettings, syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useResponsive } from "~/lib/responsive";
 import { useAppState } from "~/state/app-state";
 import { usePackState } from "~/state/pack-state";
@@ -203,7 +203,7 @@ export default function SettingsScreen() {
       if (!granted) return t("settings.notAllowed");
     }
     await setReminderSettings(patch);
-    await syncReminders(learnedToday, stats.streak);
+    await syncReminders(learnedToday, stats.streak, (insights.learnedDays[todayKey()] ?? 0) >= Math.max(1, settings.dailyGoal));
     return patch.enabled === false ? t("settings.remindersOff") : t("settings.reminderSaved");
   });
   const reminderTime = `${String(reminders.hour).padStart(2, "0")}:${String(reminders.minute).padStart(2, "0")}`;
@@ -213,10 +213,16 @@ export default function SettingsScreen() {
       <Text className="text-sm text-gray-600 dark:text-blue-100/85">{t("settings.reminderText")}</Text>
       <Toggle label={t("settings.reminderOn")} value={reminders.enabled} onChange={(value) => void applyReminders({ enabled: value })} />
       <SelectField<string>
-        label={t("settings.time")}
+        label={t("settings.mainTime")}
         value={reminderTime}
         onChange={(value) => { const [hour, minute] = value.split(":").map(Number); void applyReminders({ hour, minute }); }}
         options={Array.from({ length: 16 }, (_, index) => 6 + index).flatMap((hour) => ["00", "30"].map((minute) => ({ value: `${String(hour).padStart(2, "0")}:${minute}`, label: t("settings.timeFormat", { time: `${String(hour).padStart(2, "0")}:${minute}` }) })))}
+      />
+      <SelectField<number>
+        label={t("settings.timesPerDay")}
+        value={reminders.timesPerDay}
+        onChange={(value) => void applyReminders({ timesPerDay: value })}
+        options={[1, 2, 3, 4].map((n) => ({ value: n, label: t("settings.timesOption", { n, times: getReminderSlots({ ...reminders, timesPerDay: n }).map(([h, m]) => `${h}:${String(m).padStart(2, "0")}`).join(" · ") }) }))}
       />
       <Toggle label={t("settings.streakWarning")} value={reminders.streakWarning} onChange={(value) => void applyReminders({ streakWarning: value })} />
     </Card>

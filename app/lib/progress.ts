@@ -1,3 +1,4 @@
+import { mergeLessons, normalizeLessons } from "@/app/lib/lessons";
 import { mergeCity, normalizeCity } from "@/app/lib/city";
 import { DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { getDefaultTargetFor, isCefrLevel, isLanguageCode } from "@/app/lib/languages";
@@ -169,7 +170,8 @@ export const normalizeInsights = (input: unknown): LearningInsights => {
     : [];
   const city = raw.city === undefined ? undefined : normalizeCity(raw.city);
   const frozenDays = Array.isArray(raw.frozenDays) ? [...new Set(raw.frozenDays.filter((entry): entry is string => typeof entry === "string" && DATE_KEY_PATTERN.test(entry)))].sort() : [];
-  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}), ...(frozenDays.length ? { frozenDays } : {}) };
+  const lessons = normalizeLessons(raw.lessons);
+  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}), ...(frozenDays.length ? { frozenDays } : {}), ...(lessons ? { lessons } : {}) };
 };
 
 export const normalizeProgressSnapshot = (input: unknown): CloudProgressSnapshot => {
@@ -197,6 +199,7 @@ const mergeInsights = (primary: LearningInsights, secondary: LearningInsights): 
       dedupeWords([...(primary.learnedWordsByTopic[topicId] ?? []), ...(secondary.learnedWordsByTopic[topicId] ?? [])]),
     ]),
   );
+  const lessons = mergeLessons(primary.lessons, secondary.lessons);
   const city = primary.city || secondary.city ? mergeCity(normalizeCity(primary.city), normalizeCity(secondary.city)) : undefined;
   return {
     learnedDays,
@@ -204,6 +207,7 @@ const mergeInsights = (primary: LearningInsights, secondary: LearningInsights): 
     masteredWordIds: [...new Set([...primary.masteredWordIds, ...secondary.masteredWordIds])],
     ...(city ? { city } : {}),
     ...(primary.frozenDays?.length || secondary.frozenDays?.length ? { frozenDays: [...new Set([...(primary.frozenDays ?? []), ...(secondary.frozenDays ?? [])])].sort() } : {}),
+    ...(lessons ? { lessons } : {}),
   };
 };
 
