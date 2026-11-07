@@ -62,6 +62,10 @@ def render(server, graph):
         if prompt_id in history:
             entry = history[prompt_id]
             if entry.get("status", {}).get("status_str") == "error":
+                # Show the real reason (e.g. "out of memory"), not the whole event log.
+                for kind, payload in entry["status"].get("messages", []):
+                    if kind == "execution_error":
+                        raise RuntimeError(f"{payload.get('node_type')}: {payload.get('exception_message', '')[:300]}")
                 raise RuntimeError(json.dumps(entry["status"])[:400])
             for output in entry["outputs"].values():
                 for image in output.get("images", []):
