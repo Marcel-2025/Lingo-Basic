@@ -242,7 +242,10 @@ export const initPurchases = async () => {
     const products = [...((subs ?? []) as (Product | ProductSubscription)[]), ...((oneTime ?? []) as (Product | ProductSubscription)[])];
     const packages: ShopPackage[] = (Object.keys(PRODUCT_IDS) as ProductKey[]).flatMap((key) => {
       const product = products.find((entry) => entry.id === PRODUCT_IDS[key]);
-      if (!product) return [];
+      // Play Billing 8 also returns products it could not load (status "not-found" / "no-offers-available") –
+      // those have no price and cannot be bought, so they are not shown.
+      if (!product || !product.displayPrice) return [];
+      if ("productStatusAndroid" in product && product.productStatusAndroid && product.productStatusAndroid !== "ok") return [];
       const offerToken = product.type === "subs" ? offerTokenOf(product as ProductSubscription) : undefined;
       if (Platform.OS === "android" && product.type === "subs" && !offerToken) return [];
       return [{ key, title: TITLES[key], priceString: product.displayPrice, offerToken }];
