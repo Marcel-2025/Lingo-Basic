@@ -34,26 +34,37 @@ export const PRODUCT_IDS = {
   yearly: "lingopro_premium_yearly",
   lifetime: "lingopro_premium_lifetime",
   hearts: "lingopro_hearts_pack",
+  coinsSmall: "lingopro_coins_small",
   coins: "lingopro_coins_pack",
+  coinsLarge: "lingopro_coins_large",
+  streakFreeze: "lingopro_streak_freeze",
 } as const;
 
-export const COIN_PACK_AMOUNT = 1500;
+/** Coins granted per coin pack. */
+export const COIN_AMOUNTS = { coinsSmall: 500, coins: 1500, coinsLarge: 5000 } as const;
+/** Kept for older call sites: the medium pack. */
+export const COIN_PACK_AMOUNT = COIN_AMOUNTS.coins;
+/** Streak protections granted by one "streakFreeze" purchase. */
+export const STREAK_FREEZE_PACK = 2;
 
 export type ProductKey = keyof typeof PRODUCT_IDS;
-type ConsumableKey = "hearts" | "coins";
+export type ConsumableKey = "hearts" | "coinsSmall" | "coins" | "coinsLarge" | "streakFreeze";
 
 const SUBSCRIPTIONS: ProductKey[] = ["monthly", "yearly"];
-const ONE_TIME: ProductKey[] = ["lifetime", "hearts", "coins"];
+const ONE_TIME: ProductKey[] = ["lifetime", "hearts", "coinsSmall", "coins", "coinsLarge", "streakFreeze"];
 const PREMIUM_KEYS: ProductKey[] = ["monthly", "yearly", "lifetime"];
-const isConsumable = (key: ProductKey): key is ConsumableKey => key === "hearts" || key === "coins";
+const CONSUMABLES: ProductKey[] = ["hearts", "coinsSmall", "coins", "coinsLarge", "streakFreeze"];
+export const isConsumable = (key: ProductKey): key is ConsumableKey => CONSUMABLES.includes(key);
 
 export interface ShopPackage {
   key: ProductKey;
   /** Translation key of the product title (premium.coinsPack takes {n}). */
   title: TranslationKey;
   priceString: string;
-  /** Android subscriptions need the offer token of the base plan. */
+  /** Android subscriptions need the offer token of the chosen offer (free trial if eligible, else the base plan). */
   offerToken?: string;
+  /** Free trial length in days when the store offers one to this user. */
+  trialDays?: number;
 }
 
 export interface PurchasesState {
@@ -74,7 +85,10 @@ const TITLES: Record<ProductKey, TranslationKey> = {
   yearly: "premium.yearly",
   lifetime: "premium.lifetimeProduct",
   hearts: "premium.heartsPack",
+  coinsSmall: "premium.coinsPack",
   coins: "premium.coinsPack",
+  coinsLarge: "premium.coinsPack",
+  streakFreeze: "premium.freezePack",
 };
 
 let state: PurchasesState = { available: false, ready: false, isPremium: false, premiumKind: null, packages: [], error: "" };
@@ -208,12 +222,37 @@ const onPurchaseError = (error: { message?: string }) => {
 
 let initialized = false;
 
-const offerTokenOf = (product: ProductSubscription) => {
-  if (!("subscriptionOffers" in product) || !product.subscriptionOffers) return undefined;
+/** ISO-8601 period ("P7D", "P1W", "P1M") → days. */
+const periodDays = (period: string) => {
+  const match = /^P(\d+)([DWMY])$/.exec(period);
+  if (!match) return 0;
+  const value = Number(match[1]);
+  return match[2] === "D" ? value : match[2] === "W" ? value * 7 : match[2] === "M" ? value * 30 : value * 365;
+};
+
+/**
+ * Android: Play only returns offers this user is eligible for. A free-trial offer (first phase costs 0) is
+ * preferred; otherwise the plain base plan (a single pricing phase).
+ */
+const pickOffer = (product: ProductSubscription): { offerToken?: string; trialDays?: number } => {
+  if (!("subscriptionOffers" in product) || !product.subscriptionOffers) return {};
   const offers = product.subscriptionOffers.filter((offer) => offer.offerTokenAndroid);
-  // The plain base plan has a single pricing phase; prefer it over intro offers.
+  const trial = offers.find((offer) => offer.pricingPhasesAndroid?.pricingPhaseList[0]?.priceAmountMicros === "0");
+  if (trial) {
+    const phase = trial.pricingPhasesAndroid!.pricingPhaseList[0];
+    return { offerToken: trial.offerTokenAndroid ?? undefined, trialDays: periodDays(phase.billingPeriod) * Math.max(1, phase.billingCycleCount) };
+  }
   offers.sort((a, b) => (a.pricingPhasesAndroid?.pricingPhaseList.length ?? 1) - (b.pricingPhasesAndroid?.pricingPhaseList.length ?? 1));
-  return offers[0]?.offerTokenAndroid ?? undefined;
+  return { offerToken: offers[0]?.offerTokenAndroid ?? undefined };
+};
+
+/** iOS: introductory free trial from StoreKit (Apple only applies it to eligible users at checkout). */
+const iosTrialDays = (product: ProductSubscription) => {
+  if (!("introductoryPricePaymentModeIOS" in product) || product.introductoryPricePaymentModeIOS !== "free-trial") return undefined;
+  const unit = product.introductoryPriceSubscriptionPeriodIOS;
+  const count = Number(product.introductoryPriceNumberOfPeriodsIOS ?? 1) || 1;
+  const days = unit === "day" ? 1 : unit === "week" ? 7 : unit === "month" ? 30 : unit === "year" ? 365 : 0;
+  return days ? days * count : undefined;
 };
 
 export const initPurchases = async () => {
@@ -246,9 +285,10 @@ export const initPurchases = async () => {
       // those have no price and cannot be bought, so they are not shown.
       if (!product || !product.displayPrice) return [];
       if ("productStatusAndroid" in product && product.productStatusAndroid && product.productStatusAndroid !== "ok") return [];
-      const offerToken = product.type === "subs" ? offerTokenOf(product as ProductSubscription) : undefined;
-      if (Platform.OS === "android" && product.type === "subs" && !offerToken) return [];
-      return [{ key, title: TITLES[key], priceString: product.displayPrice, offerToken }];
+      const offer = product.type === "subs" && Platform.OS === "android" ? pickOffer(product as ProductSubscription) : {};
+      if (Platform.OS === "android" && product.type === "subs" && !offer.offerToken) return [];
+      const trialDays = offer.trialDays ?? (product.type === "subs" && Platform.OS === "ios" ? iosTrialDays(product as ProductSubscription) : undefined);
+      return [{ key, title: TITLES[key], priceString: product.displayPrice, offerToken: offer.offerToken, trialDays }];
     });
     setState({ packages, error: packages.length ? "" : "premium.noProducts" });
     await refreshOwned().catch(() => undefined);

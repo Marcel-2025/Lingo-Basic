@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { DEFAULT_INSIGHTS, DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
 import { mergeProgressSnapshots, normalizeInsights, normalizeProgressSnapshot, normalizeSettings, normalizeStats } from "@/app/lib/progress";
-import { applyStreakFreeze, applyXpBonus } from "@/app/lib/premium-benefits";
+import { applyStreakProtection, applyXpBonus } from "@/app/lib/premium-benefits";
 import { getDateKey, getLevelFromXp, reconcileStreak, recordActivity } from "@/app/lib/utils";
 import type { AppSettings, CloudProgressSnapshot, LearningInsights, UserStats } from "@/app/lib/types";
 import { getLocales } from "expo-localization";
@@ -113,15 +113,16 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
 
   const timeZone = settings.timeZone;
 
-  // Premium streak protection: forgive a single missed day (twice per month), checked on load and each new day.
-  // Done as a derived "pending fix" that is applied in the next tick, not synchronously inside the effect.
+  // Streak protection: Premium's monthly allowance first, then bought protections. Checked on load and each new day,
+  // applied in the next tick (not synchronously inside render).
   const today = getDateKey(new Date(), timeZone);
-  const freeze = isLoaded && isPremium ? applyStreakFreeze(stats, insights.frozenDays ?? [], today, isPremium) : null;
+  const owned = insights.streakFreezes ?? 0;
+  const freeze = isLoaded && (isPremium || owned > 0) ? applyStreakProtection(stats, insights.frozenDays ?? [], today, isPremium, owned) : null;
   useEffect(() => {
     if (!freeze?.used) return;
     const id = setTimeout(() => {
       setStats(freeze.stats);
-      setInsights((previous) => ({ ...previous, frozenDays: freeze.frozenDays }));
+      setInsights((previous) => ({ ...previous, frozenDays: freeze.frozenDays, streakFreezes: freeze.owned }));
       setUpdatedAt(Date.now());
     }, 0);
     return () => clearTimeout(id);

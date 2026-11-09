@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { isWordLearned, isWordMastered, recordLearningInInsights } from "@/app/lib/learning-history";
 import { buildLessonSteps, buildPath, correctOption, createQuizStep, LESSON_BONUS_XP, recordLessonResult, starsForMistakes, type LessonStep, type PathLesson, type QuizStep } from "@/app/lib/lessons";
 import { getVocabFromPack } from "@/app/lib/pack-normalization";
+import { formatCountdown, MAX_LIVES, REFILL_COIN_COST } from "@/app/lib/lives";
 import { getLevelFromXp } from "@/app/lib/utils";
 import type { LanguagePack } from "@/app/lib/types";
 import { Confetti, Flame } from "~/components/celebration";
@@ -15,6 +16,8 @@ import { useT, type TranslationKey } from "~/i18n";
 import { pauseCelebrations, resumeCelebrations } from "~/lib/celebrations";
 import { playAnswerTone, speak, vibrate } from "~/lib/feedback";
 import { useLearningPrefs } from "~/lib/learning-prefs";
+import { livesActions, useLives } from "~/lib/lives-store";
+import { usePurchases } from "~/lib/purchases";
 import { WORD_IMAGES } from "~/lib/word-images";
 import { useAppState } from "~/state/app-state";
 import { useCity } from "~/state/city-state";
@@ -63,8 +66,10 @@ interface Result {
 }
 
 function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson: PathLesson; topicTitle: string }) {
-  const { insights, settings, stats, updateInsights, updateStats, awardAnswer, todayKey } = useAppState();
-  const { recordCard, recordExercise } = useCity();
+  const { insights, settings, stats, updateInsights, updateStats, awardAnswer, todayKey, isPremium } = useAppState();
+  const { recordCard, recordExercise, refillLivesWithCoins, coins } = useCity();
+  const { lives, extra, msUntilNext } = useLives();
+  const outOfLives = !isPremium && lives === 0 && extra === 0;
   const insets = useSafeAreaInsets();
   const t = useT();
   const [prefs] = useLearningPrefs();
@@ -132,6 +137,8 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
     } else {
       updateInsights((previous) => ({ ...previous, learnedDays: { ...previous.learnedDays, [todayKey()]: (previous.learnedDays[todayKey()] ?? 0) + 1 } }));
       awardAnswer(0, false, 0, 0);
+      // Mistakes cost a heart (Premium: unlimited), like in the exercises.
+      livesActions.lose(isPremium);
       setMistakes((value) => value + 1);
       // The word comes back at the end of the lesson (as the "choose the word" task).
       setSteps((previous) => [...previous, createQuizStep(word, "choose-target", topicVocab, allVocab)]);
@@ -146,6 +153,8 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
   if (!step) return null;
 
   const isQuiz = step.kind !== "learn";
+  // Out of hearts: quiz tasks wait until hearts are back (refill, heart pack, Premium or the timer).
+  const blocked = isQuiz && outOfLives && selected === null;
   const answer = isQuiz ? correctOption(step) : "";
   const isRight = selected !== null && selected === answer;
   const learnCount = lesson.words.length;
@@ -157,7 +166,7 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
           <Text className="text-lg font-black text-gray-700 dark:text-white">✕</Text>
         </Pressable>
         <View className="flex-1"><ProgressBar value={index / steps.length} /></View>
-        <Text className="text-sm font-bold text-gray-600 dark:text-blue-100/85">{index < learnCount ? t("lesson.newWords") : t("lesson.quiz")}</Text>
+        <Text accessibilityLabel={isPremium ? t("exercises.infiniteLives") : t("exercises.livesLabel", { lives: lives + extra, max: MAX_LIVES })} className="text-sm font-black text-gray-700 dark:text-white">❤️ {isPremium ? "∞" : lives + extra}</Text>
       </View>
 
       {confirmExit ? (
@@ -173,7 +182,18 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
 
       <ScrollView className="flex-1" contentContainerClassName="flex-grow items-center justify-center p-5">
         <View className="w-full" style={{ maxWidth: 520 }}>
-          {step.kind === "learn" ? (
+          {blocked ? (
+            <Appear entering={FadeIn.duration(250)} className="items-center rounded-3xl bg-white p-6 dark:border dark:border-white/10 dark:bg-black/30">
+              <Text className="text-5xl">💔</Text>
+              <Text className="mt-2 text-center text-xl font-black text-gray-900 dark:text-white">{t("lesson.outTitle")}</Text>
+              <Text className="mt-1 text-center text-sm text-gray-600 dark:text-blue-100/85">{t("lesson.outText", { time: formatCountdown(msUntilNext) })}</Text>
+              <View className="mt-4 w-full gap-2">
+                <GradientButton label={t("lesson.outPremium")} onPress={() => router.push("/premium")} />
+                <SoftButton label={t("exercises.refill", { cost: REFILL_COIN_COST, coins })} disabled={coins < REFILL_COIN_COST} onPress={() => void refillLivesWithCoins()} />
+                <SoftButton tone="red" label={t("lesson.exitYes")} onPress={() => router.back()} />
+              </View>
+            </Appear>
+          ) : step.kind === "learn" ? (
             <LearnCard key={`${index}-${step.word.id}`} step={step} pack={pack} baseLang={baseLang} showImage={prefs.showImages} slow={prefs.slowSpeech} />
           ) : (
             <QuizCard key={`${index}-${step.word.id}`} step={step} pack={pack} baseLang={baseLang} selected={selected} onChoose={choose} reward={reward} showImage={prefs.showImages} slow={prefs.slowSpeech} />
@@ -191,7 +211,7 @@ function LessonRunner({ pack, lesson, topicTitle }: { pack: LanguagePack; lesson
               {!isRight ? <Text className="mb-3 text-base font-bold text-gray-900 dark:text-white">{answer}</Text> : <View className="mb-2" />}
               <GradientButton label={t("lesson.next")} onPress={() => next()} />
             </Appear>
-          ) : (
+          ) : blocked ? null : (
             <Text className="py-4 text-center text-sm font-semibold text-gray-500 dark:text-blue-200/75">{t("lesson.pickOne")}</Text>
           )}
         </View>
@@ -286,7 +306,12 @@ const MOTIVATION: TranslationKey[] = ["lesson.cheer1", "lesson.cheer2", "lesson.
 
 /** Result screen: stars pop in, XP counts up, the level bar fills and the streak flame burns. */
 function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; topicTitle: string; lessonNumber: number }) {
-  const { stats } = useAppState();
+  const { stats, insights, isPremium } = useAppState();
+  const { packages } = usePurchases();
+  const lessonsDone = Object.keys(insights.lessons ?? {}).length;
+  // A gentle Premium hint after every third finished lesson (never during a lesson).
+  const showUpsell = !isPremium && lessonsDone > 0 && lessonsDone % 3 === 0 && packages.some((entry) => entry.key === "yearly" || entry.key === "monthly" || entry.key === "lifetime");
+  const trial = packages.find((entry) => entry.key === "yearly" && entry.trialDays);
   const t = useT();
   const insets = useSafeAreaInsets();
   const { width, height } = useWindowDimensions();
@@ -364,6 +389,15 @@ function LessonComplete({ result, topicTitle, lessonNumber }: { result: Result; 
           ) : null}
           {streakUp ? (
             <Appear entering={ZoomIn.delay(1200).springify().damping(18)} className="mb-3 rounded-full bg-orange-400 px-4 py-2"><Text className="text-base font-black text-night-950">🔥 {t("lesson.streakUp", { n: stats.streak })}</Text></Appear>
+          ) : null}
+          {showUpsell ? (
+            <Appear entering={FadeInUp.delay(1600)} style={{ alignSelf: "stretch" }} className="mt-2 w-full rounded-2xl border border-amber-300/60 bg-amber-50 p-4 dark:bg-amber-400/10">
+              <Text className="text-base font-black text-gray-900 dark:text-white">💎 {t("lesson.upsellTitle")}</Text>
+              <Text className="mt-1 text-sm text-gray-600 dark:text-blue-100/85">{t("lesson.upsellText")}</Text>
+              <Pressable accessibilityRole="button" onPress={() => router.push("/premium")} className="mt-3 self-start rounded-full bg-amber-400 px-4 py-2 active:opacity-70">
+                <Text className="text-sm font-black text-night-950">{trial ? t("premium.trialCta", { n: trial.trialDays ?? 7 }) : t("lesson.upsellButton")}</Text>
+              </Pressable>
+            </Appear>
           ) : null}
         </View>
       </ScrollView>

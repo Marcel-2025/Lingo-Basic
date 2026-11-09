@@ -98,6 +98,8 @@ export interface LearningInsights {
   frozenDays?: string[];
   /** Lernpfad: beste Sterne-Wertung (1–3) je Lektion, Schlüssel `${lang}:${level}:${topicId}:${index}`. */
   lessons?: Record<string, number>;
+  /** Gekaufte/mit Münzen erworbene Serienschutz-Einheiten (verbrauchen sich an einem verpassten Tag). */
+  streakFreezes?: number;
 }
 
 /** Structural copy of CityState from app/lib/city.ts (kept here to avoid a type cycle). */

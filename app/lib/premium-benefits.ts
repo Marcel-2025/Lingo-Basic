@@ -3,7 +3,7 @@ import { shiftDateKey } from "@/app/lib/utils";
 
 /**
  * What Premium changes in the game. Everything here is deterministic and framework-free; the native app
- * passes `isPremium` from the store SDK (RevenueCat entitlement) and the web app from userEntitlements.
+ * passes `isPremium` from the store (Google Play Billing / StoreKit) and the web app from userEntitlements.
  */
 
 /** XP (and therefore coins) multiplier for Premium. */
@@ -33,6 +33,30 @@ export const applyStreakFreeze = (
   const usedThisMonth = frozenDays.filter((day) => day.startsWith(month)).length;
   if (usedThisMonth >= STREAK_FREEZES_PER_MONTH) return { stats, frozenDays, used: false };
   return { stats: { ...stats, lastActiveDate: yesterday }, frozenDays: [...frozenDays, yesterday], used: true };
+};
+
+/** How many bought streak protections can be kept at once. */
+export const MAX_OWNED_FREEZES = 10;
+/** Price of one streak protection in coins. */
+export const FREEZE_COIN_COST = 200;
+
+/**
+ * Streak protection for everyone: Premium's monthly allowance is used first, then a bought protection
+ * (`owned`, from coins or the shop). Returns the remaining owned protections.
+ */
+export const applyStreakProtection = (
+  stats: UserStats,
+  frozenDays: string[],
+  todayKey: string,
+  isPremium: boolean,
+  owned: number,
+): { stats: UserStats; frozenDays: string[]; owned: number; used: boolean } => {
+  const premium = applyStreakFreeze(stats, frozenDays, todayKey, isPremium);
+  if (premium.used) return { ...premium, owned };
+  if (owned <= 0 || !stats.lastActiveDate || stats.streak <= 0) return { stats, frozenDays, owned, used: false };
+  const yesterday = shiftDateKey(todayKey, -1);
+  if (stats.lastActiveDate !== shiftDateKey(todayKey, -2)) return { stats, frozenDays, owned, used: false };
+  return { stats: { ...stats, lastActiveDate: yesterday }, frozenDays: [...frozenDays, yesterday], owned: owned - 1, used: true };
 };
 
 /** Premium-only town decorations, bought with coins (not real money). */

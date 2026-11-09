@@ -20,11 +20,11 @@ import {
   type Quest,
 } from "@/app/lib/city";
 import { REFILL_COIN_COST } from "@/app/lib/lives";
-import { DECORATIONS } from "@/app/lib/premium-benefits";
+import { DECORATIONS, FREEZE_COIN_COST, MAX_OWNED_FREEZES } from "@/app/lib/premium-benefits";
 import { t, type TranslationKey } from "~/i18n";
 import { celebrate } from "~/lib/celebrations";
 import { livesActions } from "~/lib/lives-store";
-import { COIN_PACK_AMOUNT, setConsumableHandler } from "~/lib/purchases";
+import { COIN_AMOUNTS, setConsumableHandler, STREAK_FREEZE_PACK } from "~/lib/purchases";
 import { getDayActivity, updateDayActivity, useDayActivity } from "~/lib/day-activity";
 import { syncReminders, useReminderSettings } from "~/lib/reminders";
 import { useAppState } from "~/state/app-state";
@@ -45,6 +45,8 @@ interface CityContextValue {
   refillLivesWithCoins: () => boolean;
   /** Grants purchased coins (after a store purchase). */
   grantPurchasedCoins: (amount: number) => void;
+  /** Buys one streak protection with coins. Returns false when there are not enough coins or the stock is full. */
+  buyFreezeWithCoins: () => boolean;
   /** Called by the learning screens. */
   recordCard: (learnedDelta: number) => void;
   recordExercise: (correct: boolean) => void;
@@ -68,10 +70,11 @@ export function CityProvider({ children }: { children: ReactNode }) {
     if (!isLoaded) return;
     setConsumableHandler((key) => {
       if (key === "hearts") livesActions.addPack();
-      else setCity((previous) => addPurchasedCoins(previous, COIN_PACK_AMOUNT));
+      else if (key === "streakFreeze") updateInsights((previous) => ({ ...previous, streakFreezes: Math.min(MAX_OWNED_FREEZES, (previous.streakFreezes ?? 0) + STREAK_FREEZE_PACK) }));
+      else setCity((previous) => addPurchasedCoins(previous, COIN_AMOUNTS[key]));
     });
     return () => setConsumableHandler(null);
-  }, [isLoaded, setCity]);
+  }, [isLoaded, setCity, updateInsights]);
 
   // Level-up and daily-goal celebrations: compare against the last seen values.
   const lastLevelRef = useRef<number | null>(null);
@@ -173,9 +176,18 @@ export function CityProvider({ children }: { children: ReactNode }) {
       return true;
     },
     grantPurchasedCoins: (amount) => setCity((previous) => addPurchasedCoins(previous, amount)),
+    buyFreezeWithCoins: () => {
+      if (getCoinsAvailable(stats, city) < FREEZE_COIN_COST || (insights.streakFreezes ?? 0) >= MAX_OWNED_FREEZES) return false;
+      updateInsights((previous) => ({
+        ...previous,
+        city: { ...(previous.city ? normalizeCity(previous.city) : EMPTY_CITY), coinsSpent: (previous.city ? normalizeCity(previous.city) : EMPTY_CITY).coinsSpent + FREEZE_COIN_COST },
+        streakFreezes: Math.min(MAX_OWNED_FREEZES, (previous.streakFreezes ?? 0) + 1),
+      }));
+      return true;
+    },
     recordCard: (learnedDelta) => updateDayActivity(dateKey, (previous) => ({ ...previous, cards: previous.cards + 1, newWords: previous.newWords + Math.max(0, learnedDelta) })),
     recordExercise: (correct) => updateDayActivity(dateKey, (previous) => ({ ...previous, correctExercises: previous.correctExercises + (correct ? 1 : 0) })),
-  }), [chestAvailable, city, dateKey, insights, push, quests, setCity, stats]);
+  }), [chestAvailable, city, dateKey, insights, push, quests, setCity, stats, updateInsights]);
 
   return <CityContext.Provider value={value}>{children}</CityContext.Provider>;
 }

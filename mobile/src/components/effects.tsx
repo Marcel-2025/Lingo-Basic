@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { View } from "react-native";
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withSequence, withSpring, withTiming } from "react-native-reanimated";
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withSequence, withTiming } from "react-native-reanimated";
 
 /**
  * Small, cheap feedback effects for answers: a floating "+10 XP" label and a burst of sparkles.

@@ -1,3 +1,4 @@
+import { MAX_OWNED_FREEZES } from "@/app/lib/premium-benefits";
 import { mergeLessons, normalizeLessons } from "@/app/lib/lessons";
 import { mergeCity, normalizeCity } from "@/app/lib/city";
 import { DEFAULT_STATS, getDefaultSettings, PROGRESS_SCHEMA_VERSION } from "@/app/lib/defaults";
@@ -171,7 +172,8 @@ export const normalizeInsights = (input: unknown): LearningInsights => {
   const city = raw.city === undefined ? undefined : normalizeCity(raw.city);
   const frozenDays = Array.isArray(raw.frozenDays) ? [...new Set(raw.frozenDays.filter((entry): entry is string => typeof entry === "string" && DATE_KEY_PATTERN.test(entry)))].sort() : [];
   const lessons = normalizeLessons(raw.lessons);
-  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}), ...(frozenDays.length ? { frozenDays } : {}), ...(lessons ? { lessons } : {}) };
+  const streakFreezes = Math.max(0, Math.min(MAX_OWNED_FREEZES, Math.floor(Number(raw.streakFreezes) || 0)));
+  return { learnedDays, learnedWordsByTopic, masteredWordIds, ...(city ? { city } : {}), ...(frozenDays.length ? { frozenDays } : {}), ...(lessons ? { lessons } : {}), ...(streakFreezes ? { streakFreezes } : {}) };
 };
 
 export const normalizeProgressSnapshot = (input: unknown): CloudProgressSnapshot => {
@@ -208,6 +210,7 @@ const mergeInsights = (primary: LearningInsights, secondary: LearningInsights): 
     ...(city ? { city } : {}),
     ...(primary.frozenDays?.length || secondary.frozenDays?.length ? { frozenDays: [...new Set([...(primary.frozenDays ?? []), ...(secondary.frozenDays ?? [])])].sort() } : {}),
     ...(lessons ? { lessons } : {}),
+    ...(primary.streakFreezes || secondary.streakFreezes ? { streakFreezes: Math.max(primary.streakFreezes ?? 0, secondary.streakFreezes ?? 0) } : {}),
   };
 };
 

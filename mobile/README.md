@@ -78,13 +78,18 @@ Vor dem ersten App-Store-Upload:
 
 Abwicklung **direkt über die Stores** mit `expo-iap`: Google Play Billing auf Android, StoreKit auf iOS – kein Drittanbieter, kein eigener Server. Logik in `src/lib/purchases.ts` (Premium = aktives Abo oder Lifetime aus `getAvailablePurchases`, Premium-Käufe werden bestätigt/acknowledged, Herzen/Münzen werden über `setConsumableHandler` im `CityProvider` genau einmal gutgeschrieben und dann verbraucht), Regeln in `app/lib/lives.ts` und `app/lib/premium-benefits.ts` (getestet).
 
-| Produkt-ID | Typ | Vorschlag |
+| Produkt-ID | Typ | Preis |
 | --- | --- | --- |
-| `lingopro_premium_monthly` | Abo, monatlich | 2,99 € |
-| `lingopro_premium_yearly` | Abo, jährlich | 19,99 € |
-| `lingopro_premium_lifetime` | Einmalkauf (nicht verbrauchbar) | 34,99 € |
-| `lingopro_hearts_pack` | Einmalkauf, verbrauchbar | 0,99 € – volle Herzen + 10 extra |
-| `lingopro_coins_pack` | Einmalkauf, verbrauchbar | 1,99 € – 1500 Münzen |
+| `lingopro_premium_monthly` | Abo, monatlich (Basisplan `monthly`) | 4,99 € |
+| `lingopro_premium_yearly` | Abo, jährlich (Basisplan `yearly`, Angebot `trial7`: 7 Tage gratis) | 29,99 € |
+| `lingopro_premium_lifetime` | Einmalkauf (nicht verbrauchbar) | 59,99 € |
+| `lingopro_hearts_pack` | verbrauchbar | 0,99 € – volle Herzen + 10 extra |
+| `lingopro_coins_small` | verbrauchbar | 0,99 € – 500 Münzen |
+| `lingopro_coins_pack` | verbrauchbar | 1,99 € – 1500 Münzen |
+| `lingopro_coins_large` | verbrauchbar | 4,99 € – 5000 Münzen |
+| `lingopro_streak_freeze` | verbrauchbar | 0,99 € – 2× Serienschutz |
+
+Serienschutz gibt es auch für 200 Münzen (max. 10 vorrätig, `learningInsights.streakFreezes`); Premium hat zusätzlich 2 automatische pro Monat. Fehler in Lektionen kosten Herzen (Premium: unendlich), ohne Herzen pausiert das Quiz (Auffüllen mit Münzen, Herzen-Paket, Premium). Nach jeder 3. Lektion erscheint ein dezenter Premium-Hinweis im Abschluss. Probezeitraum: Android nimmt automatisch ein Gratis-Angebot, wenn Play es dem Nutzer anbietet; iOS über einen Einführungsangebot „Kostenlos, 1 Woche“ im Abo.
 
 Premium: unendlich Leben, +50 % XP/Münzen, Streak-Schutz (2 verpasste Tage/Monat), Stadt-Dekorationen (mit Münzen). Leben gibt es nur im Übungsmodus: 5 Herzen, alle 30 Minuten eines zurück; Lernkarten bleiben immer frei.
 
